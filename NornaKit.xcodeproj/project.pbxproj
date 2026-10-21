@@ -1,0 +1,979 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		039BC2C8D6D5899020A45FA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07382FA30697D4AE58060954 /* Assets.xcassets */; };
+		0565499A6C24CC425DB3F77F /* GitDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29187FC0D3C2ACB77490E84E /* GitDiagram.swift */; };
+		07117D3E3CDC8D64385B0A73 /* NativeDrawingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70550ABF968ABD2E80FC1E0 /* NativeDrawingTests.swift */; };
+		07545F76B295CC28700DD688 /* DiagramExampleLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E076F6C2AA1E3B53B2C064F4 /* DiagramExampleLanguage.swift */; };
+		0B893B5DE7FE90A79E0652D2 /* ScenePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93104D591745FB248EF1B111 /* ScenePath.swift */; };
+		0FA939D3D7DBF771B813C5B5 /* DiagramExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A0662A64914077770F7A55 /* DiagramExportView.swift */; };
+		1014E80A8363E97C338AFE9F /* InlineText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134A2BBCF7EA7FFF9DEAB79A /* InlineText.swift */; };
+		158B284290B9F95BD499A90B /* MermaidDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2114E2A6043A3CFB43359C56 /* MermaidDocument.swift */; };
+		1928ED80F90878D20756708F /* VectorSceneRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB71E5EC2948EBF9075CCD77 /* VectorSceneRenderer.swift */; };
+		1BA79392FD2ABFE7B73CBBA7 /* RelationshipDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605EF079B06BB8FF5FAB17E8 /* RelationshipDiagram.swift */; };
+		1C9A6CEBEC929C9A2B8A11C9 /* SystemColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52931E21ACBD6B153BC1E32D /* SystemColorPicker.swift */; };
+		1E2B42E76D22FF6A2E20FF90 /* CoreGraphicsDiagramPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7C630A2BB12E0CD230ED25 /* CoreGraphicsDiagramPainter.swift */; };
+		21B9728D7F0116CDAA6A41A6 /* NativeDiagramRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B4CAB7E7B7A1052BA46104 /* NativeDiagramRenderer.swift */; };
+		2394C87FCA07A488E803C053 /* BlockLaneDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A98FE9C352C3EECE71E98B6 /* BlockLaneDiagrams.swift */; };
+		2AA62FE0A3F3AE0DEDE68991 /* DiagramExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FC61355AB97DA35E0DADB8 /* DiagramExporter.swift */; };
+		2B85C35C8F80504BCFFCF509 /* NornaStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FCE2CE589532FBC484B2 /* NornaStudioApp.swift */; };
+		30D3F044A85864BA883C132C /* NodeGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF662344A6CC264DFE41BFE /* NodeGeometry.swift */; };
+		32C1EF667FCBA008FD95D85D /* DiagramRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC55AC827DDC683916FF851 /* DiagramRenderer.swift */; };
+		378BAF9DA53D73ABBDF82760 /* DiagramKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D28669C89EB40D816FD4F48 /* DiagramKind.swift */; };
+		39C894DE483CDB30DAC187F9 /* EdgeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C82C202B6A2B409FE32F4FD /* EdgeLayout.swift */; };
+		3A7FFA80A5D9928D2FCB968D /* RailroadDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6190B0CC5B7E54781801BD81 /* RailroadDiagram.swift */; };
+		3B20DA319F7DC320E9D49780 /* VectorScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FA2DA0D51B9D2783E190EC /* VectorScene.swift */; };
+		3E769B3BA2D333709276E4A4 /* DiagramExportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE925723A14FA7677437231D /* DiagramExportTests.swift */; };
+		3F8E88436E08B8335DA8DC51 /* DiagramTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F660957DD153B2BC06CB5 /* DiagramTheme.swift */; };
+		48B0C83B4AB3E3B078E79136 /* DiagramCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA593D819602CBB4F6FB57 /* DiagramCatalog.swift */; };
+		5F0710A79E438854D9BD177D /* SourceEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0790FE57B0E743E5C683607 /* SourceEditor.swift */; };
+		62EE4A03F4EC216E7EA56AC2 /* DiagramLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D019281E197D2B6686E9DE /* DiagramLibrary.swift */; };
+		64ACC67D7893EECC22875BA5 /* DiagramLayoutOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48DB87201C3B9B2D5A82B3 /* DiagramLayoutOptions.swift */; };
+		68796C3FFAB88E1578ED5E05 /* DiagramExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3183323397B2C6BBBBB823 /* DiagramExample.swift */; };
+		6A8EEACBBDC0889CCC1D32B4 /* TemporalDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B69C1B66BDE1E1890EF1984 /* TemporalDiagrams.swift */; };
+		6E48A90FD2B0061AA404E856 /* OfficialExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73050310F9CC6C4923733847 /* OfficialExampleTests.swift */; };
+		703000DEB3977232BCB093F5 /* ExampleLanguageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D311834E5E1BCA8314982E0 /* ExampleLanguageTests.swift */; };
+		70382E0EDF39E9BFECB63E80 /* MermaidFlowchartParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFADBDC9F36CBF57B1F45D21 /* MermaidFlowchartParser.swift */; };
+		713FB9F7CEA4C9BB14283D54 /* StudioLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C50D8F44744C724CE66FF55 /* StudioLocalization.swift */; };
+		788ADD857F6E2FC1E917B76F /* PacketEventDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F026D3F04696BC09CE51B /* PacketEventDiagrams.swift */; };
+		7A74B3AAD1B43D98EF914A44 /* NornaKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D50D10F47676D4A13196C0BE /* NornaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7CCD53ABB633523996AB47AE /* OfficialExampleCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C7915F08E0A07346EB114 /* OfficialExampleCatalog.swift */; };
+		7F9C61DC580DFEE63E1F9B84 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A55C5592F19C254F580BE40C /* Localizable.strings */; };
+		8063EC70D1B8EC00AF5C9797 /* ScaleExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F707DE411F6073886C5534B6 /* ScaleExampleTests.swift */; };
+		83A4B43FA49C5F829755C1C3 /* NornaKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D50D10F47676D4A13196C0BE /* NornaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8538D07F78256C11D982A85B /* DiagramSemanticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3490153DCE2C62F88A8968 /* DiagramSemanticsTests.swift */; };
+		879823F2A73668D392C3F01A /* CompoundEdgeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B46B2224580DC4651D98AE6 /* CompoundEdgeRouter.swift */; };
+		8A4B6B57C42F7D457856342E /* DiagramCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07576E181CDD90838C919FE /* DiagramCatalogTests.swift */; };
+		8FD31F8A0886BA534601A0FB /* DiagramScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C77B2096A62F791287DCA4 /* DiagramScene.swift */; };
+		90A7AC8E192A57EAF6691160 /* NornaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50D10F47676D4A13196C0BE /* NornaKit.framework */; };
+		985E7ABF175702F44CEE549E /* ArchitectureDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761D64574A6813DD9C39FC93 /* ArchitectureDiagrams.swift */; };
+		9E29FF24EF64762F2F9A05BC /* SequenceDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6DD9D2734BCDB3C45D156 /* SequenceDiagram.swift */; };
+		A3648AF598DC7576048A0371 /* SVGExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D34763A68E207A2340C77 /* SVGExporter.swift */; };
+		AA169686016FC19385AF3244 /* SpatialDataDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC57512DFF4ED2F57E24B4 /* SpatialDataDiagrams.swift */; };
+		B287B7B98BB677FE045155F3 /* ConnectorAuditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC2091B388895C2ACE42AE /* ConnectorAuditTests.swift */; };
+		B378E6E48AE65400DB694A90 /* TextMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9F6DFF752BD1D63CBE265 /* TextMeasurement.swift */; };
+		B5750FE796F9B6F77BF5CC33 /* DiagramSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611358CFE145F9D352E84937 /* DiagramSyntax.swift */; };
+		B84108270EDE8E4483CE478F /* HierarchyDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA661DAFB0C8C8D30EF8534 /* HierarchyDiagrams.swift */; };
+		BAF80474E7668DF8DA99377C /* CompoundLayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA6CBC213E67D2359F47D4 /* CompoundLayoutEngine.swift */; };
+		BD4E20B5EB47EB4521AEAC41 /* NativeFlowchartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4495754BE5FF752BFBE9E6F6 /* NativeFlowchartTests.swift */; };
+		BD9665856BCFD2DB4DD1B655 /* ScaleDiagramExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775AF989307D8502098AD09 /* ScaleDiagramExamples.swift */; };
+		C37192A018BFBBAC44C12236 /* InlineSymbolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B679B5C6F1DD8069F1F52974 /* InlineSymbolTests.swift */; };
+		CAE6912939BD107C75DEB55C /* NornaSculpted.icon in Resources */ = {isa = PBXBuildFile; fileRef = 2C9A2555D02DD367A9F73C0F /* NornaSculpted.icon */; };
+		CC5896983692BE2006A524A6 /* AdvancedDiagramExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F8C7DAD56D0ED4B6318569 /* AdvancedDiagramExamples.swift */; };
+		D165C1091870C441203C34E0 /* AdaptiveLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7C1BA76D06E51BC092BDE /* AdaptiveLayoutTests.swift */; };
+		D34439E3846FAD56796D5D30 /* AppleAppearanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B53A12FD93639DE51D25B5 /* AppleAppearanceTests.swift */; };
+		D5FF61B6DA270A4444F739A0 /* DiagramStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7528F77D170BA6FE737735AA /* DiagramStyle.swift */; };
+		DB58DC93574CCF2B57289179 /* LayeredLayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299F4DF83E7F5F9FF05D64 /* LayeredLayoutEngine.swift */; };
+		E0DDE87C08AAC08BD59C7694 /* AdvancedSyntaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF49A47989827EE84B89DB0 /* AdvancedSyntaxTests.swift */; };
+		E6D5000C0ACA0634E4F7B27B /* StudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C66715DE9A72E62E0682CE /* StudioView.swift */; };
+		EACC1D245F28B609D52B2C02 /* EdgeReadabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E03E9E59B8840050F7A080C /* EdgeReadabilityTests.swift */; };
+		EDCB9B0FCD5756C1F1E7F6EC /* NativeDiagramPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4FC4FB8CE9E91DF2999D1 /* NativeDiagramPreview.swift */; };
+		EFD5C6F202CEDC41BAA215DC /* StudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4707B2E18F8BCB7C21E95E99 /* StudioModel.swift */; };
+		F1E8FF140287640EC43E6E19 /* NornaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50D10F47676D4A13196C0BE /* NornaKit.framework */; };
+		F6E22CE5FA1F89F5C446756A /* DataCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BE8C3952504C181210F85 /* DataCharts.swift */; };
+		F823E6BAA3DE33120EAB8BD4 /* SubgraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EE2138E3E7A073F4573DC1 /* SubgraphTests.swift */; };
+		FE4CC11BA770EC629D5CC796 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 193FA0D3A1C629A2128CE911 /* Resources */; };
+		FEA98F4E9A86C4DA59D81EE6 /* NativeInlineContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D6720543984E5FFA680E4 /* NativeInlineContentTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B78942521D98F8DF7C3AA6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABA64BFA6EA5B459B3A42909 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50933F516B66BBADCCE9F399;
+			remoteInfo = NornaKit;
+		};
+		C833D7BAD8661992893CC672 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABA64BFA6EA5B459B3A42909 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50933F516B66BBADCCE9F399;
+			remoteInfo = NornaKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92EA25A4BC2CA4B4AFFB6CB2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				83A4B43FA49C5F829755C1C3 /* NornaKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FECB7FB5F649A04190E8F367 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7A74B3AAD1B43D98EF914A44 /* NornaKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		03EE2138E3E7A073F4573DC1 /* SubgraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubgraphTests.swift; sourceTree = "<group>"; };
+		07382FA30697D4AE58060954 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A48DB87201C3B9B2D5A82B3 /* DiagramLayoutOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramLayoutOptions.swift; sourceTree = "<group>"; };
+		134A2BBCF7EA7FFF9DEAB79A /* InlineText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineText.swift; sourceTree = "<group>"; };
+		18F1FBD3F53CEB9DDDDCA742 /* Norna Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Norna Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		193FA0D3A1C629A2128CE911 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = Sources/NornaKit/Resources; sourceTree = SOURCE_ROOT; };
+		1AEA6CBC213E67D2359F47D4 /* CompoundLayoutEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundLayoutEngine.swift; sourceTree = "<group>"; };
+		1B69C1B66BDE1E1890EF1984 /* TemporalDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporalDiagrams.swift; sourceTree = "<group>"; };
+		2114E2A6043A3CFB43359C56 /* MermaidDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MermaidDocument.swift; sourceTree = "<group>"; };
+		21C66715DE9A72E62E0682CE /* StudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioView.swift; sourceTree = "<group>"; };
+		2775AF989307D8502098AD09 /* ScaleDiagramExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleDiagramExamples.swift; sourceTree = "<group>"; };
+		27E45FAFB712A7804D5BBDDA /* Studio-Version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Studio-Version.xcconfig"; sourceTree = "<group>"; };
+		29187FC0D3C2ACB77490E84E /* GitDiagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDiagram.swift; sourceTree = "<group>"; };
+		2C9A2555D02DD367A9F73C0F /* NornaSculpted.icon */ = {isa = PBXFileReference; lastKnownFileType = wrapper.icon; path = NornaSculpted.icon; sourceTree = "<group>"; };
+		32FC61355AB97DA35E0DADB8 /* DiagramExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramExporter.swift; sourceTree = "<group>"; };
+		33B4CAB7E7B7A1052BA46104 /* NativeDiagramRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeDiagramRenderer.swift; sourceTree = "<group>"; };
+		34C77B2096A62F791287DCA4 /* DiagramScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramScene.swift; sourceTree = "<group>"; };
+		3BD6DD9D2734BCDB3C45D156 /* SequenceDiagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceDiagram.swift; sourceTree = "<group>"; };
+		3CF49A47989827EE84B89DB0 /* AdvancedSyntaxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSyntaxTests.swift; sourceTree = "<group>"; };
+		3D311834E5E1BCA8314982E0 /* ExampleLanguageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleLanguageTests.swift; sourceTree = "<group>"; };
+		3D7D34763A68E207A2340C77 /* SVGExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGExporter.swift; sourceTree = "<group>"; };
+		4495754BE5FF752BFBE9E6F6 /* NativeFlowchartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeFlowchartTests.swift; sourceTree = "<group>"; };
+		4707B2E18F8BCB7C21E95E99 /* StudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioModel.swift; sourceTree = "<group>"; };
+		47B53A12FD93639DE51D25B5 /* AppleAppearanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAppearanceTests.swift; sourceTree = "<group>"; };
+		4D28669C89EB40D816FD4F48 /* DiagramKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramKind.swift; sourceTree = "<group>"; };
+		501F660957DD153B2BC06CB5 /* DiagramTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramTheme.swift; sourceTree = "<group>"; };
+		52931E21ACBD6B153BC1E32D /* SystemColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemColorPicker.swift; sourceTree = "<group>"; };
+		605EF079B06BB8FF5FAB17E8 /* RelationshipDiagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipDiagram.swift; sourceTree = "<group>"; };
+		611358CFE145F9D352E84937 /* DiagramSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramSyntax.swift; sourceTree = "<group>"; };
+		6190B0CC5B7E54781801BD81 /* RailroadDiagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailroadDiagram.swift; sourceTree = "<group>"; };
+		69F8C7DAD56D0ED4B6318569 /* AdvancedDiagramExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedDiagramExamples.swift; sourceTree = "<group>"; };
+		6BD4FC4FB8CE9E91DF2999D1 /* NativeDiagramPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeDiagramPreview.swift; sourceTree = "<group>"; };
+		6C82C202B6A2B409FE32F4FD /* EdgeLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeLayout.swift; sourceTree = "<group>"; };
+		6CC55AC827DDC683916FF851 /* DiagramRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramRenderer.swift; sourceTree = "<group>"; };
+		6CC7C1BA76D06E51BC092BDE /* AdaptiveLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveLayoutTests.swift; sourceTree = "<group>"; };
+		6E03E9E59B8840050F7A080C /* EdgeReadabilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeReadabilityTests.swift; sourceTree = "<group>"; };
+		6F1BE8C3952504C181210F85 /* DataCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCharts.swift; sourceTree = "<group>"; };
+		73050310F9CC6C4923733847 /* OfficialExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialExampleTests.swift; sourceTree = "<group>"; };
+		7528F77D170BA6FE737735AA /* DiagramStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramStyle.swift; sourceTree = "<group>"; };
+		761D64574A6813DD9C39FC93 /* ArchitectureDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureDiagrams.swift; sourceTree = "<group>"; };
+		7B46B2224580DC4651D98AE6 /* CompoundEdgeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundEdgeRouter.swift; sourceTree = "<group>"; };
+		7BA661DAFB0C8C8D30EF8534 /* HierarchyDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchyDiagrams.swift; sourceTree = "<group>"; };
+		7C04FCE2CE589532FBC484B2 /* NornaStudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NornaStudioApp.swift; sourceTree = "<group>"; };
+		85299F4DF83E7F5F9FF05D64 /* LayeredLayoutEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayeredLayoutEngine.swift; sourceTree = "<group>"; };
+		86FA2DA0D51B9D2783E190EC /* VectorScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorScene.swift; sourceTree = "<group>"; };
+		8A98FE9C352C3EECE71E98B6 /* BlockLaneDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockLaneDiagrams.swift; sourceTree = "<group>"; };
+		93104D591745FB248EF1B111 /* ScenePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenePath.swift; sourceTree = "<group>"; };
+		94AC57512DFF4ED2F57E24B4 /* SpatialDataDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialDataDiagrams.swift; sourceTree = "<group>"; };
+		9C50D8F44744C724CE66FF55 /* StudioLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioLocalization.swift; sourceTree = "<group>"; };
+		9DF662344A6CC264DFE41BFE /* NodeGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeGeometry.swift; sourceTree = "<group>"; };
+		A07576E181CDD90838C919FE /* DiagramCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramCatalogTests.swift; sourceTree = "<group>"; };
+		A8BA593D819602CBB4F6FB57 /* DiagramCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramCatalog.swift; sourceTree = "<group>"; };
+		A98F026D3F04696BC09CE51B /* PacketEventDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketEventDiagrams.swift; sourceTree = "<group>"; };
+		AAE9F6DFF752BD1D63CBE265 /* TextMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMeasurement.swift; sourceTree = "<group>"; };
+		AE925723A14FA7677437231D /* DiagramExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramExportTests.swift; sourceTree = "<group>"; };
+		B37C7915F08E0A07346EB114 /* OfficialExampleCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialExampleCatalog.swift; sourceTree = "<group>"; };
+		B679B5C6F1DD8069F1F52974 /* InlineSymbolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineSymbolTests.swift; sourceTree = "<group>"; };
+		B8D019281E197D2B6686E9DE /* DiagramLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramLibrary.swift; sourceTree = "<group>"; };
+		BD7C630A2BB12E0CD230ED25 /* CoreGraphicsDiagramPainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsDiagramPainter.swift; sourceTree = "<group>"; };
+		C3439918BDBEFD60A44F23C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE3183323397B2C6BBBBB823 /* DiagramExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramExample.swift; sourceTree = "<group>"; };
+		D0790FE57B0E743E5C683607 /* SourceEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditor.swift; sourceTree = "<group>"; };
+		D50D10F47676D4A13196C0BE /* NornaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NornaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA8F42C1346B07E0C3F2FF4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DBF89C08F096A9A5CF5FF17C /* NornaKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NornaKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3490153DCE2C62F88A8968 /* DiagramSemanticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramSemanticsTests.swift; sourceTree = "<group>"; };
+		E076F6C2AA1E3B53B2C064F4 /* DiagramExampleLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramExampleLanguage.swift; sourceTree = "<group>"; };
+		E1A0662A64914077770F7A55 /* DiagramExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramExportView.swift; sourceTree = "<group>"; };
+		E4AC2091B388895C2ACE42AE /* ConnectorAuditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectorAuditTests.swift; sourceTree = "<group>"; };
+		E70550ABF968ABD2E80FC1E0 /* NativeDrawingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeDrawingTests.swift; sourceTree = "<group>"; };
+		EA2D6720543984E5FFA680E4 /* NativeInlineContentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeInlineContentTests.swift; sourceTree = "<group>"; };
+		EB71E5EC2948EBF9075CCD77 /* VectorSceneRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorSceneRenderer.swift; sourceTree = "<group>"; };
+		F707DE411F6073886C5534B6 /* ScaleExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleExampleTests.swift; sourceTree = "<group>"; };
+		FFADBDC9F36CBF57B1F45D21 /* MermaidFlowchartParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MermaidFlowchartParser.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E1052F9612BBADE69BACD49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1E8FF140287640EC43E6E19 /* NornaKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8576BEF4DEE5F1CA22EDE36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90A7AC8E192A57EAF6691160 /* NornaKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FC67EB15A2834AC28D48AA0 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				32FC61355AB97DA35E0DADB8 /* DiagramExporter.swift */,
+				3D7D34763A68E207A2340C77 /* SVGExporter.swift */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		2A043AD94072AA57692CDD67 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				9C50D8F44744C724CE66FF55 /* StudioLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		2D9DB60754B78C68AECDD0CF /* NornaKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				6CC7C1BA76D06E51BC092BDE /* AdaptiveLayoutTests.swift */,
+				3CF49A47989827EE84B89DB0 /* AdvancedSyntaxTests.swift */,
+				47B53A12FD93639DE51D25B5 /* AppleAppearanceTests.swift */,
+				E4AC2091B388895C2ACE42AE /* ConnectorAuditTests.swift */,
+				A07576E181CDD90838C919FE /* DiagramCatalogTests.swift */,
+				AE925723A14FA7677437231D /* DiagramExportTests.swift */,
+				DF3490153DCE2C62F88A8968 /* DiagramSemanticsTests.swift */,
+				6E03E9E59B8840050F7A080C /* EdgeReadabilityTests.swift */,
+				3D311834E5E1BCA8314982E0 /* ExampleLanguageTests.swift */,
+				B679B5C6F1DD8069F1F52974 /* InlineSymbolTests.swift */,
+				E70550ABF968ABD2E80FC1E0 /* NativeDrawingTests.swift */,
+				4495754BE5FF752BFBE9E6F6 /* NativeFlowchartTests.swift */,
+				EA2D6720543984E5FFA680E4 /* NativeInlineContentTests.swift */,
+				73050310F9CC6C4923733847 /* OfficialExampleTests.swift */,
+				F707DE411F6073886C5534B6 /* ScaleExampleTests.swift */,
+				03EE2138E3E7A073F4573DC1 /* SubgraphTests.swift */,
+			);
+			name = NornaKitTests;
+			path = Tests/NornaKitTests;
+			sourceTree = "<group>";
+		};
+		32DF5B88D6A4DA47FFD625EA = {
+			isa = PBXGroup;
+			children = (
+				193FA0D3A1C629A2128CE911 /* Resources */,
+				4ABB42A2BBC761C7828EB340 /* Configuration */,
+				C70032A89D6383CA5911AC9A /* NornaKit */,
+				2D9DB60754B78C68AECDD0CF /* NornaKitTests */,
+				6D666AD3A49C210D60A23C5A /* NornaStudio */,
+				C817652F1B8CDD103A28579B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44C6F284B7F703BD4EF2AA2F /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				611358CFE145F9D352E84937 /* DiagramSyntax.swift */,
+				FFADBDC9F36CBF57B1F45D21 /* MermaidFlowchartParser.swift */,
+			);
+			path = Parsing;
+			sourceTree = "<group>";
+		};
+		4ABB42A2BBC761C7828EB340 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				27E45FAFB712A7804D5BBDDA /* Studio-Version.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		509B9CDE81C00791CC05D0A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07382FA30697D4AE58060954 /* Assets.xcassets */,
+				2C9A2555D02DD367A9F73C0F /* NornaSculpted.icon */,
+				A55C5592F19C254F580BE40C /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		52FF16AF19BBFAD052E3CD51 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				BD7C630A2BB12E0CD230ED25 /* CoreGraphicsDiagramPainter.swift */,
+				6CC55AC827DDC683916FF851 /* DiagramRenderer.swift */,
+				7528F77D170BA6FE737735AA /* DiagramStyle.swift */,
+				501F660957DD153B2BC06CB5 /* DiagramTheme.swift */,
+				134A2BBCF7EA7FFF9DEAB79A /* InlineText.swift */,
+				33B4CAB7E7B7A1052BA46104 /* NativeDiagramRenderer.swift */,
+				93104D591745FB248EF1B111 /* ScenePath.swift */,
+				AAE9F6DFF752BD1D63CBE265 /* TextMeasurement.swift */,
+				EB71E5EC2948EBF9075CCD77 /* VectorSceneRenderer.swift */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
+		654C1ED9F8C1219B4C10C454 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				6BD4FC4FB8CE9E91DF2999D1 /* NativeDiagramPreview.swift */,
+				52931E21ACBD6B153BC1E32D /* SystemColorPicker.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		6D666AD3A49C210D60A23C5A /* NornaStudio */ = {
+			isa = PBXGroup;
+			children = (
+				95BA0CD7D91FBA964D0E285E /* App */,
+				654C1ED9F8C1219B4C10C454 /* Canvas */,
+				BE844A11F51AE791728CEB56 /* Editor */,
+				99B71C46A4DDC248B13A6E90 /* Export */,
+				2A043AD94072AA57692CDD67 /* Localization */,
+				509B9CDE81C00791CC05D0A8 /* Resources */,
+			);
+			name = NornaStudio;
+			path = Sources/NornaStudio;
+			sourceTree = "<group>";
+		};
+		83EE044F0A88DEBDC026A8D2 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				69F8C7DAD56D0ED4B6318569 /* AdvancedDiagramExamples.swift */,
+				A8BA593D819602CBB4F6FB57 /* DiagramCatalog.swift */,
+				CE3183323397B2C6BBBBB823 /* DiagramExample.swift */,
+				E076F6C2AA1E3B53B2C064F4 /* DiagramExampleLanguage.swift */,
+				B8D019281E197D2B6686E9DE /* DiagramLibrary.swift */,
+				B37C7915F08E0A07346EB114 /* OfficialExampleCatalog.swift */,
+				2775AF989307D8502098AD09 /* ScaleDiagramExamples.swift */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		95BA0CD7D91FBA964D0E285E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7C04FCE2CE589532FBC484B2 /* NornaStudioApp.swift */,
+				4707B2E18F8BCB7C21E95E99 /* StudioModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		99B71C46A4DDC248B13A6E90 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				E1A0662A64914077770F7A55 /* DiagramExportView.swift */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		B178874D3F6C2931203BA31C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D28669C89EB40D816FD4F48 /* DiagramKind.swift */,
+				0A48DB87201C3B9B2D5A82B3 /* DiagramLayoutOptions.swift */,
+				34C77B2096A62F791287DCA4 /* DiagramScene.swift */,
+				2114E2A6043A3CFB43359C56 /* MermaidDocument.swift */,
+				86FA2DA0D51B9D2783E190EC /* VectorScene.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B609A06BD13FC2B80190B464 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				7B46B2224580DC4651D98AE6 /* CompoundEdgeRouter.swift */,
+				1AEA6CBC213E67D2359F47D4 /* CompoundLayoutEngine.swift */,
+				6C82C202B6A2B409FE32F4FD /* EdgeLayout.swift */,
+				85299F4DF83E7F5F9FF05D64 /* LayeredLayoutEngine.swift */,
+				9DF662344A6CC264DFE41BFE /* NodeGeometry.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		BE844A11F51AE791728CEB56 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				D0790FE57B0E743E5C683607 /* SourceEditor.swift */,
+				21C66715DE9A72E62E0682CE /* StudioView.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		C70032A89D6383CA5911AC9A /* NornaKit */ = {
+			isa = PBXGroup;
+			children = (
+				E9CAB65A13FCC24C86ACF652 /* Diagrams */,
+				83EE044F0A88DEBDC026A8D2 /* Examples */,
+				1FC67EB15A2834AC28D48AA0 /* Export */,
+				B609A06BD13FC2B80190B464 /* Layout */,
+				B178874D3F6C2931203BA31C /* Models */,
+				44C6F284B7F703BD4EF2AA2F /* Parsing */,
+				52FF16AF19BBFAD052E3CD51 /* Rendering */,
+			);
+			name = NornaKit;
+			path = Sources/NornaKit;
+			sourceTree = "<group>";
+		};
+		C817652F1B8CDD103A28579B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18F1FBD3F53CEB9DDDDCA742 /* Norna Studio.app */,
+				D50D10F47676D4A13196C0BE /* NornaKit.framework */,
+				DBF89C08F096A9A5CF5FF17C /* NornaKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9CAB65A13FCC24C86ACF652 /* Diagrams */ = {
+			isa = PBXGroup;
+			children = (
+				761D64574A6813DD9C39FC93 /* ArchitectureDiagrams.swift */,
+				8A98FE9C352C3EECE71E98B6 /* BlockLaneDiagrams.swift */,
+				6F1BE8C3952504C181210F85 /* DataCharts.swift */,
+				29187FC0D3C2ACB77490E84E /* GitDiagram.swift */,
+				7BA661DAFB0C8C8D30EF8534 /* HierarchyDiagrams.swift */,
+				A98F026D3F04696BC09CE51B /* PacketEventDiagrams.swift */,
+				6190B0CC5B7E54781801BD81 /* RailroadDiagram.swift */,
+				605EF079B06BB8FF5FAB17E8 /* RelationshipDiagram.swift */,
+				3BD6DD9D2734BCDB3C45D156 /* SequenceDiagram.swift */,
+				94AC57512DFF4ED2F57E24B4 /* SpatialDataDiagrams.swift */,
+				1B69C1B66BDE1E1890EF1984 /* TemporalDiagrams.swift */,
+			);
+			path = Diagrams;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2310FBA478388EE32CCE42AC /* NornaKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6214F3CF20C14CFCF0CBD6 /* Build configuration list for PBXNativeTarget "NornaKitTests" */;
+			buildPhases = (
+				444F1C8AEBD457550D1E02F5 /* Sources */,
+				1E1052F9612BBADE69BACD49 /* Frameworks */,
+				FECB7FB5F649A04190E8F367 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08F1C71B663F4E7FD69EF979 /* PBXTargetDependency */,
+			);
+			name = NornaKitTests;
+			packageProductDependencies = (
+			);
+			productName = NornaKitTests;
+			productReference = DBF89C08F096A9A5CF5FF17C /* NornaKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		50933F516B66BBADCCE9F399 /* NornaKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C6AF3229F68A9BC5CFFA893 /* Build configuration list for PBXNativeTarget "NornaKit" */;
+			buildPhases = (
+				B6E616C1A5E9F5AB612993D7 /* Sources */,
+				9D95CCC3F4406C46AABDF766 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NornaKit;
+			packageProductDependencies = (
+			);
+			productName = NornaKit;
+			productReference = D50D10F47676D4A13196C0BE /* NornaKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B75CAE60302947D614F23BC9 /* NornaStudio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE96D640FC62C8B2EEA5568B /* Build configuration list for PBXNativeTarget "NornaStudio" */;
+			buildPhases = (
+				8FDDBF0A34C83BB9F9C50490 /* Sources */,
+				8DD33073D600C3978C566373 /* Resources */,
+				E8576BEF4DEE5F1CA22EDE36 /* Frameworks */,
+				92EA25A4BC2CA4B4AFFB6CB2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51CBE3AAEA6FB9921AB98425 /* PBXTargetDependency */,
+			);
+			name = NornaStudio;
+			packageProductDependencies = (
+			);
+			productName = NornaStudio;
+			productReference = 18F1FBD3F53CEB9DDDDCA742 /* Norna Studio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABA64BFA6EA5B459B3A42909 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					2310FBA478388EE32CCE42AC = {
+						ProvisioningStyle = Automatic;
+					};
+					50933F516B66BBADCCE9F399 = {
+						ProvisioningStyle = Automatic;
+					};
+					B75CAE60302947D614F23BC9 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1B038321DAA4197B0CE59B29 /* Build configuration list for PBXProject "NornaKit" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				"zh-Hans",
+			);
+			mainGroup = 32DF5B88D6A4DA47FFD625EA;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C817652F1B8CDD103A28579B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50933F516B66BBADCCE9F399 /* NornaKit */,
+				2310FBA478388EE32CCE42AC /* NornaKitTests */,
+				B75CAE60302947D614F23BC9 /* NornaStudio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DD33073D600C3978C566373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				039BC2C8D6D5899020A45FA7 /* Assets.xcassets in Resources */,
+				7F9C61DC580DFEE63E1F9B84 /* Localizable.strings in Resources */,
+				CAE6912939BD107C75DEB55C /* NornaSculpted.icon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D95CCC3F4406C46AABDF766 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE4CC11BA770EC629D5CC796 /* Resources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		444F1C8AEBD457550D1E02F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D165C1091870C441203C34E0 /* AdaptiveLayoutTests.swift in Sources */,
+				E0DDE87C08AAC08BD59C7694 /* AdvancedSyntaxTests.swift in Sources */,
+				D34439E3846FAD56796D5D30 /* AppleAppearanceTests.swift in Sources */,
+				B287B7B98BB677FE045155F3 /* ConnectorAuditTests.swift in Sources */,
+				8A4B6B57C42F7D457856342E /* DiagramCatalogTests.swift in Sources */,
+				3E769B3BA2D333709276E4A4 /* DiagramExportTests.swift in Sources */,
+				8538D07F78256C11D982A85B /* DiagramSemanticsTests.swift in Sources */,
+				EACC1D245F28B609D52B2C02 /* EdgeReadabilityTests.swift in Sources */,
+				703000DEB3977232BCB093F5 /* ExampleLanguageTests.swift in Sources */,
+				C37192A018BFBBAC44C12236 /* InlineSymbolTests.swift in Sources */,
+				07117D3E3CDC8D64385B0A73 /* NativeDrawingTests.swift in Sources */,
+				BD4E20B5EB47EB4521AEAC41 /* NativeFlowchartTests.swift in Sources */,
+				FEA98F4E9A86C4DA59D81EE6 /* NativeInlineContentTests.swift in Sources */,
+				6E48A90FD2B0061AA404E856 /* OfficialExampleTests.swift in Sources */,
+				8063EC70D1B8EC00AF5C9797 /* ScaleExampleTests.swift in Sources */,
+				F823E6BAA3DE33120EAB8BD4 /* SubgraphTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FDDBF0A34C83BB9F9C50490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FA939D3D7DBF771B813C5B5 /* DiagramExportView.swift in Sources */,
+				EDCB9B0FCD5756C1F1E7F6EC /* NativeDiagramPreview.swift in Sources */,
+				2B85C35C8F80504BCFFCF509 /* NornaStudioApp.swift in Sources */,
+				5F0710A79E438854D9BD177D /* SourceEditor.swift in Sources */,
+				713FB9F7CEA4C9BB14283D54 /* StudioLocalization.swift in Sources */,
+				EFD5C6F202CEDC41BAA215DC /* StudioModel.swift in Sources */,
+				E6D5000C0ACA0634E4F7B27B /* StudioView.swift in Sources */,
+				1C9A6CEBEC929C9A2B8A11C9 /* SystemColorPicker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6E616C1A5E9F5AB612993D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC5896983692BE2006A524A6 /* AdvancedDiagramExamples.swift in Sources */,
+				985E7ABF175702F44CEE549E /* ArchitectureDiagrams.swift in Sources */,
+				2394C87FCA07A488E803C053 /* BlockLaneDiagrams.swift in Sources */,
+				879823F2A73668D392C3F01A /* CompoundEdgeRouter.swift in Sources */,
+				BAF80474E7668DF8DA99377C /* CompoundLayoutEngine.swift in Sources */,
+				1E2B42E76D22FF6A2E20FF90 /* CoreGraphicsDiagramPainter.swift in Sources */,
+				F6E22CE5FA1F89F5C446756A /* DataCharts.swift in Sources */,
+				48B0C83B4AB3E3B078E79136 /* DiagramCatalog.swift in Sources */,
+				68796C3FFAB88E1578ED5E05 /* DiagramExample.swift in Sources */,
+				07545F76B295CC28700DD688 /* DiagramExampleLanguage.swift in Sources */,
+				2AA62FE0A3F3AE0DEDE68991 /* DiagramExporter.swift in Sources */,
+				378BAF9DA53D73ABBDF82760 /* DiagramKind.swift in Sources */,
+				64ACC67D7893EECC22875BA5 /* DiagramLayoutOptions.swift in Sources */,
+				62EE4A03F4EC216E7EA56AC2 /* DiagramLibrary.swift in Sources */,
+				32C1EF667FCBA008FD95D85D /* DiagramRenderer.swift in Sources */,
+				8FD31F8A0886BA534601A0FB /* DiagramScene.swift in Sources */,
+				D5FF61B6DA270A4444F739A0 /* DiagramStyle.swift in Sources */,
+				B5750FE796F9B6F77BF5CC33 /* DiagramSyntax.swift in Sources */,
+				3F8E88436E08B8335DA8DC51 /* DiagramTheme.swift in Sources */,
+				39C894DE483CDB30DAC187F9 /* EdgeLayout.swift in Sources */,
+				0565499A6C24CC425DB3F77F /* GitDiagram.swift in Sources */,
+				B84108270EDE8E4483CE478F /* HierarchyDiagrams.swift in Sources */,
+				1014E80A8363E97C338AFE9F /* InlineText.swift in Sources */,
+				DB58DC93574CCF2B57289179 /* LayeredLayoutEngine.swift in Sources */,
+				158B284290B9F95BD499A90B /* MermaidDocument.swift in Sources */,
+				70382E0EDF39E9BFECB63E80 /* MermaidFlowchartParser.swift in Sources */,
+				21B9728D7F0116CDAA6A41A6 /* NativeDiagramRenderer.swift in Sources */,
+				30D3F044A85864BA883C132C /* NodeGeometry.swift in Sources */,
+				7CCD53ABB633523996AB47AE /* OfficialExampleCatalog.swift in Sources */,
+				788ADD857F6E2FC1E917B76F /* PacketEventDiagrams.swift in Sources */,
+				3A7FFA80A5D9928D2FCB968D /* RailroadDiagram.swift in Sources */,
+				1BA79392FD2ABFE7B73CBBA7 /* RelationshipDiagram.swift in Sources */,
+				A3648AF598DC7576048A0371 /* SVGExporter.swift in Sources */,
+				BD9665856BCFD2DB4DD1B655 /* ScaleDiagramExamples.swift in Sources */,
+				0B893B5DE7FE90A79E0652D2 /* ScenePath.swift in Sources */,
+				9E29FF24EF64762F2F9A05BC /* SequenceDiagram.swift in Sources */,
+				AA169686016FC19385AF3244 /* SpatialDataDiagrams.swift in Sources */,
+				6A8EEACBBDC0889CCC1D32B4 /* TemporalDiagrams.swift in Sources */,
+				B378E6E48AE65400DB694A90 /* TextMeasurement.swift in Sources */,
+				3B20DA319F7DC320E9D49780 /* VectorScene.swift in Sources */,
+				1928ED80F90878D20756708F /* VectorSceneRenderer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		08F1C71B663F4E7FD69EF979 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50933F516B66BBADCCE9F399 /* NornaKit */;
+			targetProxy = C833D7BAD8661992893CC672 /* PBXContainerItemProxy */;
+		};
+		51CBE3AAEA6FB9921AB98425 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50933F516B66BBADCCE9F399 /* NornaKit */;
+			targetProxy = 2B78942521D98F8DF7C3AA6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A55C5592F19C254F580BE40C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3439918BDBEFD60A44F23C8 /* en */,
+				DA8F42C1346B07E0C3F2FF4C /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1516EED6A3A5CAF5D51A68D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27E45FAFB712A7804D5BBDDA /* Studio-Version.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = NornaSculpted;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Configuration/NornaStudio.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Configuration/NornaStudio-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.norna.studio;
+				PRODUCT_NAME = "Norna Studio";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2B42752E2FDD2CD5B3D2DAA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.norna.NornaKitTests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		41E4111CB1ABAEE920E99147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.norna.kit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		4D800E9DB1D65758AB57BEE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8E780D40E6FAEFCFFA6E50A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.norna.NornaKitTests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CB0FEDDE6E6F582B054E9545 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.norna.kit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		D4D3935CAD7527AC5C997605 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27E45FAFB712A7804D5BBDDA /* Studio-Version.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = NornaSculpted;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Configuration/NornaStudio.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Configuration/NornaStudio-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.norna.studio;
+				PRODUCT_NAME = "Norna Studio";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D98A6DF28C66AC16771CF0D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B038321DAA4197B0CE59B29 /* Build configuration list for PBXProject "NornaKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D98A6DF28C66AC16771CF0D3 /* Debug */,
+				4D800E9DB1D65758AB57BEE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2C6AF3229F68A9BC5CFFA893 /* Build configuration list for PBXNativeTarget "NornaKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB0FEDDE6E6F582B054E9545 /* Debug */,
+				41E4111CB1ABAEE920E99147 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AC6214F3CF20C14CFCF0CBD6 /* Build configuration list for PBXNativeTarget "NornaKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B42752E2FDD2CD5B3D2DAA1 /* Debug */,
+				8E780D40E6FAEFCFFA6E50A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EE96D640FC62C8B2EEA5568B /* Build configuration list for PBXNativeTarget "NornaStudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4D3935CAD7527AC5C997605 /* Debug */,
+				1516EED6A3A5CAF5D51A68D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABA64BFA6EA5B459B3A42909 /* Project object */;
+}

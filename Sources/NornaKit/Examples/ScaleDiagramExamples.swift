@@ -546,7 +546,7 @@ extension DiagramExample {
         """),
         .init(.treeView, "目录数量与嵌套深度增加后，缩进、分支线与画布高度随之扩展。", source: """
         treeView-beta
-            Norna/
+            NornaKit/
                 Sources/
                     NornaKit/
                         Parsing/

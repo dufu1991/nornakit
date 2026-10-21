@@ -1,12 +1,14 @@
-# Norna
+# NornaKit
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-[![CI](https://github.com/dufu1991/norna/actions/workflows/ci.yml/badge.svg)](https://github.com/dufu1991/norna/actions/workflows/ci.yml)
+[![CI](https://github.com/dufu1991/nornakit/actions/workflows/ci.yml/badge.svg)](https://github.com/dufu1991/nornakit/actions/workflows/ci.yml)
 
 **让思路，清晰成形。**
 
-Norna 是纯 Swift 原生图表渲染库，核心产品为 **NornaKit**，用于在 macOS 应用中解析 Mermaid 源码、布局并绘制图表。解析、文本测量、布局、绘制和导出均在原生侧完成，无须浏览器、JavaScript 运行时或网络服务。
+[https://nornakit.com](https://nornakit.com)
+
+**NornaKit** 是纯 Swift 原生图表渲染库，用于在 macOS 应用中解析 Mermaid 源码、布局并绘制图表。解析、文本测量、布局、绘制和导出均在原生侧完成，无须浏览器、JavaScript 运行时或网络服务。
 
 - **NornaKit** 提供解析、布局、原生绘制与导出能力，是本项目的主要内容。
 - **Norna Studio** 是配套的 Mac 演示与开发工具，用于查看渲染效果、临时渲染、调试和导出图表。集成渲染库无须安装该应用。
@@ -14,7 +16,7 @@ Norna 是纯 Swift 原生图表渲染库，核心产品为 **NornaKit**，用于
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/hero-zh-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="website/dist/assets/hero-zh-light.png">
-  <img alt="Norna 原生绘制的图表" src="website/dist/assets/hero-zh-light.png">
+  <img alt="NornaKit 原生绘制的图表" src="website/dist/assets/hero-zh-light.png">
 </picture>
 
 ## 集成 NornaKit
@@ -24,7 +26,7 @@ Norna 是纯 Swift 原生图表渲染库，核心产品为 **NornaKit**，用于
 将本仓库添加为 Swift Package 依赖，链接 **NornaKit** 产品。在渲染库版本标签发布前，使用 `main` 分支或固定到具体提交：
 
 ```swift
-.package(url: "https://github.com/dufu1991/norna.git", branch: "main")
+.package(url: "https://github.com/dufu1991/nornakit.git", branch: "main")
 ```
 
 ```swift
@@ -53,8 +55,8 @@ let svg = diagram.themedSVG(.appleLight)
 ## 开发与验证
 
 ```sh
-git clone https://github.com/dufu1991/norna.git
-cd norna
+git clone https://github.com/dufu1991/nornakit.git
+cd nornakit
 swift build --target NornaKit
 swift test
 ```
@@ -69,7 +71,7 @@ Norna Studio 调用同一套 NornaKit API，用于演示库能力、复现和调
 
 要求 **macOS 14 或更高版本**。仅支持 **Apple Silicon Mac**。
 
-[下载 DMG](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-arm64.dmg) · [下载 ZIP](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-arm64.zip) · [全部版本](https://github.com/dufu1991/norna/releases)
+[下载 DMG](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg) · [下载 ZIP](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.zip) · [全部版本](https://github.com/dufu1991/nornakit/releases)
 
 首次工作台发布流程成功后，下载链接才会生效。打开 DMG，将 **Norna Studio** 拖入 **Applications**，或解压 ZIP 后移动应用。每个版本均附带 SHA-256 校验和与 `release.json` 清单。
 
@@ -97,7 +99,7 @@ Norna Studio 的 Cask 发布到 tap 后，上述命令才会生效。Homebrew �
 完整应用要求 **Xcode 27.1 或更高版本**。打开工程并选择 `NornaStudio` scheme 运行：
 
 ```sh
-open Norna.xcodeproj
+open NornaKit.xcodeproj
 ```
 
 也可以使用 Swift Package 启动配套工具：
@@ -145,7 +147,7 @@ website/               静态网站、发布资源与生成工具
 .github/workflows/     CI 与工作台自动发布
 ```
 
-`Package.swift` 定义 Swift Package，`project.yml` 定义 XcodeGen 工程。生成的 `Norna.xcodeproj` 一并提交，便于直接使用。修改工程定义或增删、移动源码后，执行 `xcodegen generate`。单独修改工作台版本文件不需要重新生成工程。
+`Package.swift` 定义 Swift Package，`project.yml` 定义 XcodeGen 工程。生成的 `NornaKit.xcodeproj` 一并提交，便于直接使用。修改工程定义或增删、移动源码后，执行 `xcodegen generate`。单独修改工作台版本文件不需要重新生成工程。
 
 构建产物和本地设计归档已从 Git 排除。应用与网站共用本仓库。另见[开发指南](Docs/DEVELOPMENT.md)、[网站说明](website/README.md)和[品牌规范](Branding/README.md)。
 

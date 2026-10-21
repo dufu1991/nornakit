@@ -1,11 +1,11 @@
-# Norna 图标使用规范
+# NornaKit 图标使用规范
 
 同一品牌保留曲线 N 和四个端点，根据场景调整材质、细节、底板和留白。
 
 | 使用位置 | 方案 | 实际使用资源 |
 | --- | --- | --- |
 | macOS APP、Dock 和 Finder | 用户选定的立体版，保留曲线、厚度与光泽，适配系统外观 | `Sources/NornaStudio/Resources/NornaSculpted.icon` |
-| 网站导航、页脚和文档 | 无底板的矢量版，通过 CSS 跟随站点主题色；与系统字体的 Norna 文字组合 | `symbol-mono.svg` |
+| 网站导航、页脚和文档 | 无底板的矢量版，通过 CSS 跟随站点主题色；与系统字体的 NornaKit 文字组合 | `symbol-mono.svg` |
 | 独立品牌标识、印刷和演示 | 纯色 SVG；浅底用靛蓝，深底用浅紫，单色环境使用蒙版版 | `symbol.svg`、生成的 `symbol-dark.svg` 和 `symbol-mono.svg` |
 | 浏览器标签页与 ICO | 独立绘制的微型版，减少内凹细节，加粗线条，使用高对比度底板 | `favicon.svg`、16 至 256 像素 PNG 和多尺寸 `favicon.ico` |
 | Safari 固定标签页 | 单色轮廓，由浏览器施加颜色 | `safari-pinned-tab.svg` |

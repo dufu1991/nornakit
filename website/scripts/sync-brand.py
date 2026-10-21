@@ -24,7 +24,7 @@ for current, previous in [('symbol.svg', 'norna-symbol.svg'), ('symbol-mono.svg'
     shutil.copyfile(source / current, site / 'assets' / previous)
 
 manifest = {
-    'id': './', 'name': 'Norna — Native diagrams', 'short_name': 'Norna',
+    'id': './', 'name': 'NornaKit — Native diagrams', 'short_name': 'NornaKit',
     'start_url': './', 'scope': './', 'display': 'browser',
     'background_color': '#fafaf9', 'theme_color': '#5148d8',
     'icons': [

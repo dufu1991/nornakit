@@ -70,7 +70,7 @@ def main():
 {''.join(panels)}<details><summary>原始源码</summary><pre>{html.escape(example['source'])}</pre></details></details>''')
         details.append(f'<section id="{kind}"><h2>{kind} · {passed}/{len(examples)}</h2>{"".join(rows)}</section>')
     (BASE / "REPORT.md").write_text("\n".join(markdown + summary_markdown + detailed_markdown) + "\n", encoding="utf-8")
-    document = f'''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Norna 参考示例基准</title>
+    document = f'''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>NornaKit 参考示例基准</title>
 <style>body{{font:15px/1.7 system-ui,sans-serif;color:#202124;background:#f6f7f9;margin:0}}main{{max-width:1160px;margin:auto;padding:40px 24px}}h1,h2{{letter-spacing:-.03em}}h2{{margin-top:48px}}table{{border-collapse:collapse;width:100%;background:white}}td,th{{border-bottom:1px solid #e3e6eb;padding:8px 16px;text-align:left}}details{{background:white;border:1px solid #e0e3e8;border-radius:8px;margin:10px 0;padding:12px 16px}}summary{{cursor:pointer}}p{{overflow-wrap:anywhere}}a{{color:#315fba}}pre{{white-space:pre-wrap;overflow-wrap:anywhere;padding:16px;background:#f4f5f7;font:13px/1.7 ui-monospace,monospace}}.pass{{color:#267348}}.pending{{color:#9c5a13}}.comparison{{display:grid;grid-template-columns:1fr 1fr;gap:20px}}.comparison>div{{min-width:0;border:1px solid #eceef1;padding:12px}}img{{display:block;max-width:100%;max-height:640px;margin:auto}}code{{font-size:12px}}@media(max-width:720px){{.comparison{{grid-template-columns:1fr}}}}</style>
 <main><h1>官网示例原始基准</h1><p>{display_time}（北京时间） · 33 个页面 · 600 份去重源码 · 659 次官网展示。</p>
 <p>首轮 {old_passing} 份可生成，本轮 {passing} 份可生成，{len(results) - passing} 份待支持。所有源码均尝试自然宽度与 320、480、640 点布局。</p>

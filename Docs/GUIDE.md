@@ -2,7 +2,7 @@
 
 NornaKit 是本项目的核心渲染库。配套的 Norna Studio 用于演示、临时渲染、调试和导出图表。
 
-从解析、文本测量、分层布局到画布绘制，全部在原生侧执行。没有 JavaScriptCore、WKWebView、浏览器或运行时网络依赖。目前支持 33 类图形，每类都有基础语法、专用布局和可运行示例。图形种类覆盖不等于全部语法兼容，逐类范围和差异见 [支持矩阵](SUPPORT.md)。Swift 包名为 `Norna`，渲染库模块为 `NornaKit`，配套演示与调试工具为 Norna Studio。第三方来源与许可见 [第三方声明](../THIRD_PARTY_NOTICES.md)。渲染库以图形类型覆盖、布局可读性和原生集成为方向。
+从解析、文本测量、分层布局到画布绘制，全部在原生侧执行。没有 JavaScriptCore、WKWebView、浏览器或运行时网络依赖。目前支持 33 类图形，每类都有基础语法、专用布局和可运行示例。图形种类覆盖不等于全部语法兼容，逐类范围和差异见 [支持矩阵](SUPPORT.md)。Swift 包名为 `NornaKit`，渲染库模块为 `NornaKit`，配套演示与调试工具为 Norna Studio。第三方来源与许可见 [第三方声明](../THIRD_PARTY_NOTICES.md)。渲染库以图形类型覆盖、布局可读性和原生集成为方向。
 
 所有终端命令均在项目根目录执行。目录分工与提交约定见[开发指南](DEVELOPMENT.md)。
 
@@ -28,7 +28,7 @@ let svg = diagram.themedSVG(.appleLight)
 工作台仅支持 macOS 14 或更高版本的 Apple Silicon Mac。应用工程使用 Xcode 27.1 或更高版本编译原生分层图标，Swift Package 要求 Swift 6。工程和 Swift Package 均已提供，无须安装第三方依赖。
 
 ```sh
-open Norna.xcodeproj
+open NornaKit.xcodeproj
 ```
 
 选择 NornaStudio scheme，点击运行。也可以在终端直接运行：
@@ -41,7 +41,7 @@ swift run NornaStudio
 
 ```sh
 xcodebuild build \
-  -project Norna.xcodeproj \
+  -project NornaKit.xcodeproj \
   -scheme NornaStudio \
   -configuration Debug \
   -destination 'platform=macOS' \
@@ -61,7 +61,7 @@ xcodebuild build \
 - 草稿通过 UserDefaults 自动保存在本机，打开文件后编辑不会自动覆盖原文件。
 - 画布默认跟随系统外观，也可在“显示”菜单中指定浅色或深色；支持系统的增加对比度设置，外观选择会保存在本机。
 - 预览顶部依次提供“无主题色”“主题色”和“自定义”，默认使用主题色，之后保留本机保存的选择。选择“自定义”后直接打开系统颜色选择器，也可点击色块重新打开；颜色实时生效，并按浅色、深色和高对比度外观调整连线明度。切换配色保留布局、缩放、选择和线内标签位置；复制与各格式导出使用当前风格。
-- 应用名称、窗口标题和菜单统一使用 Norna Studio，Dock 与 Finder 使用 Norna 的四节点图标。侧栏、选中按钮、输入焦点和图表主题共用靛蓝强调色，并适配系统浅色、深色和高对比度外观。
+- 应用名称、窗口标题和菜单统一使用 Norna Studio，Dock 与 Finder 使用 NornaKit 的四节点图标。侧栏、选中按钮、输入焦点和图表主题共用靛蓝强调色，并适配系统浅色、深色和高对比度外观。
 - 界面采用系统侧栏、工具栏、菜单、SF Symbols 和语义颜色；图表使用系统字体与动态系统调色板，默认隐藏网格，可按需开启。
 - 工作台支持简体中文与英文，默认跟随系统语言。在工具栏的“显示”菜单中选择“语言”，可切换为“跟随系统”“简体中文”或“English”。选择会保存在本机，切换后立即生效；图表源码与草稿内容保留，侧栏搜索同时支持中英文名称。
 - 拖动画布平移，触控板捏合或按住 Command 滚动缩放，双击适应画布。
@@ -82,7 +82,7 @@ flowchart LR
 
 图标参与文本测量和自动换行，完整标记不会被拆开，支持显式换行和整行左对齐、居中及右对齐。单色图标使用文字的字号、字重与颜色，并采用系统提供的基线信息。此语法适用于可显示的标签文本，不用于标识符或数值字段。
 
-图标可用性取决于渲染时的 macOS 版本，未知名称及不完整标记保留为源码文字。此写法是 Norna 扩展，其他 Mermaid 渲染器可能将其视为普通文字，不改变架构图已有的内置图标语法。
+图标可用性取决于渲染时的 macOS 版本，未知名称及不完整标记保留为源码文字。此写法是 NornaKit 扩展，其他 Mermaid 渲染器可能将其视为普通文字，不改变架构图已有的内置图标语法。
 
 PNG、JPEG、TIFF 和 PDF 使用原生绘制导出图标。SVG 以 4 倍分辨率的透明 PNG 内嵌图标，文字和图形路径保留矢量形式，内嵌图标图片具有有限分辨率。导出文件不依赖外部图标文件或查看设备上的 SF Symbols 字体。
 
@@ -103,7 +103,7 @@ PNG、JPEG、TIFF 和 PDF 使用原生绘制导出图标。SVG 以 4 倍分辨�
 
 ### 原生富文本
 
-支持 `[b]粗体[/b]`、`[i]斜体[/i]`、`[code]等宽[/code]`、`[u]下划线[/u]`、`[s]删除线[/s]` 和 `[color=#2563eb]颜色[/color]`，可以嵌套并跨行使用。未闭合、嵌套不匹配及不支持的标签保留原文。这是 Norna 的配对标签语法，不解释 HTML 或完整 Markdown。
+支持 `[b]粗体[/b]`、`[i]斜体[/i]`、`[code]等宽[/code]`、`[u]下划线[/u]`、`[s]删除线[/s]` 和 `[color=#2563eb]颜色[/color]`，可以嵌套并跨行使用。未闭合、嵌套不匹配及不支持的标签保留原文。这是 NornaKit 的配对标签语法，不解释 HTML 或完整 Markdown。
 
 图标标记整体换行，富文本自动换行后保留样式。显式换行和整行左对齐、居中、右对齐共用同一套测量与绘制数据。
 
@@ -150,7 +150,7 @@ flowchart TD
 
 ## 图表配色风格
 
-`DiagramColorStyle` 与 `DiagramTheme` 分开设置。`.neutral` 保留现有配色，`.themed` 为系统外观使用 Norna 靛蓝强调色，`.custom` 通过 `DiagramAccentColor` 指定颜色，并按当前外观生成节点、边框及连线颜色。数据系列和源码中显式指定的颜色保留，避免配色切换改变数据含义。已有 `paper`、`midnight` 和 `ocean` 主题在主题色风格中使用各自的强调色。
+`DiagramColorStyle` 与 `DiagramTheme` 分开设置。`.neutral` 保留现有配色，`.themed` 为系统外观使用 NornaKit 靛蓝强调色，`.custom` 通过 `DiagramAccentColor` 指定颜色，并按当前外观生成节点、边框及连线颜色。数据系列和源码中显式指定的颜色保留，避免配色切换改变数据含义。已有 `paper`、`midnight` 和 `ocean` 主题在主题色风格中使用各自的强调色。
 
 ```swift
 let artifact = try await NativeDiagramRenderer().render(source)
@@ -195,7 +195,7 @@ try data.write(to: destination)
 
 应用工程使用 `Sources/NornaStudio/Resources/NornaSculpted.icon` 原生 Icon Composer 分层资源。前景使用用户选定的立体 N 原稿，保留曲线、四个端点、厚度和光泽，背景由系统绘制。原稿光照保留在图片图层中，系统再施加原生高光、折射及阴影。透明和染色模式使用自动材质，保留原稿的明暗层次。系统负责生成亮色、暗色、透明亮色、透明暗色、染色亮色和染色暗色外观，实际显示遵循 macOS 的桌面图标设置。
 
-macOS 26 或更高版本使用原生 Liquid Glass 图标。旧版 macOS 保留系统编译的静态兼容图标；`swift run NornaStudio` 使用随包附带的静态 `Norna.icns`，原生多外观图标需运行 Xcode 构建的应用。
+macOS 26 或更高版本使用原生 Liquid Glass 图标。旧版 macOS 保留系统编译的静态兼容图标；`swift run NornaStudio` 使用随包附带的静态 `NornaKit.icns`，原生多外观图标需运行 Xcode 构建的应用。
 
 ```sh
 swift Scripts/render_app_icon.swift
@@ -205,7 +205,7 @@ swift Scripts/render_app_icon.swift
 
 站点和小尺寸图标按场景独立制作。导航与文档使用曲线 N 的纯色 SVG，标签页使用在 16 像素网格设计的微型版，主屏幕图标保留系统裁切空间，站点分享使用横向封面。规范见 [图标使用规范](../Branding/README.md)。执行 `swift Scripts/build_brand_assets.swift` 和 `python3 Scripts/report_icon_system.py` 可生成完整资源包与可视化使用指南，不会修改原生 APP 图标。
 
-布局由 Norna 原生引擎计算。复杂密集图中仍可能出现连线交叉和标签重叠，极端避障场景会明确报告布局错误。节点属于首次将其纳入分组的子图，在其他分组中引用该节点不会移动它。
+布局由 NornaKit 原生引擎计算。复杂密集图中仍可能出现连线交叉和标签重叠，极端避障场景会明确报告布局错误。节点属于首次将其纳入分组的子图，在其他分组中引用该节点不会移动它。
 
 子图示例：
 

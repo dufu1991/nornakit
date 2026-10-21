@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none">
-  <title>Norna monochrome</title>
+  <title>NornaKit monochrome</title>
   <g fill="#000" stroke="#000" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
     <path d="M34 94V34C65 34 63 94 94 94V34" fill="none"/>
     <rect x="18" y="18" width="32" height="32" rx="10" stroke="none"/>

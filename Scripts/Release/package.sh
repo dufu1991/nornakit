@@ -32,7 +32,7 @@ cleanup() {
 trap cleanup EXIT
 
 xcodebuild build \
-    -project Norna.xcodeproj -scheme NornaStudio \
+    -project NornaKit.xcodeproj -scheme NornaStudio \
     -configuration Release -destination 'generic/platform=macOS' \
     -derivedDataPath build \
     ARCHS=arm64 ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO

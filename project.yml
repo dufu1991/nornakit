@@ -1,4 +1,4 @@
-name: Norna
+name: NornaKit
 options:
   developmentLanguage: en
   bundleIdPrefix: dev.norna
@@ -44,7 +44,7 @@ targets:
         LSApplicationCategoryType: public.app-category.developer-tools
     sources:
       - path: Sources/NornaStudio
-        excludes: [Resources/NornaSculpted.icon, Resources/Norna.icns]
+        excludes: [Resources/NornaSculpted.icon, Resources/NornaKit.icns]
       - path: Sources/NornaStudio/Resources/NornaSculpted.icon
         type: file
         buildPhase: resources

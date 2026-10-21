@@ -10,7 +10,7 @@
 
 `Tests/NornaKitTests` 与 `Tests/NornaStudioTests` 分别保存引擎和工作台测试。Swift Package 执行两组测试，Xcode 工程当前配置引擎测试。
 
-`Configuration/` 保存应用构建配置，`project.yml` 是 XcodeGen 工程定义。`Norna.xcodeproj` 一并提交，便于直接打开项目。移动、新增或删除源码后执行：
+`Configuration/` 保存应用构建配置，`project.yml` 是 XcodeGen 工程定义。`NornaKit.xcodeproj` 一并提交，便于直接打开项目。移动、新增或删除源码后执行：
 
 ```sh
 xcodegen generate
@@ -27,7 +27,7 @@ xcodegen generate
 ```sh
 swift test
 xcodebuild build \
-  -project Norna.xcodeproj \
+  -project NornaKit.xcodeproj \
   -scheme NornaStudio \
   -configuration Debug \
   -destination 'platform=macOS' \
@@ -59,7 +59,7 @@ python3 Scripts/report_connector_audit.py
 
 ## 品牌资源
 
-正式应用图标源文件位于 `Sources/NornaStudio/Resources/NornaSculpted.icon`，Swift Package 的静态兼容图标位于同目录的 `Norna.icns`。
+正式应用图标源文件位于 `Sources/NornaStudio/Resources/NornaSculpted.icon`，Swift Package 的静态兼容图标位于同目录的 `NornaKit.icns`。
 
 ```sh
 swift Scripts/render_app_icon.swift
@@ -67,7 +67,7 @@ swift Scripts/build_brand_assets.swift
 python3 Scripts/report_icon_system.py
 ```
 
-上述命令使用 Xcode 自带的 Icon Composer 工具。应用图标预览放在 `build/Branding/AppIcon/`，站点图标与使用指南放在 `build/Branding/IconSystem/`，完整资源包位于 `build/Branding/norna-icon-pack.zip`。`render_app_icon.swift` 还会更新随包分发的 `Norna.icns`，更新后应检查并提交该文件。
+上述命令使用 Xcode 自带的 Icon Composer 工具。应用图标预览放在 `build/Branding/AppIcon/`，站点图标与使用指南放在 `build/Branding/IconSystem/`，完整资源包位于 `build/Branding/nornakit-icon-pack.zip`。`render_app_icon.swift` 还会更新随包分发的 `NornaKit.icns`，更新后应检查并提交该文件。
 
 `build_brand_assets.swift` 直接从正式分层图标生成浅深色图片，可单独运行，不依赖旧设计产物。
 
@@ -81,7 +81,7 @@ python3 Scripts/report_icon_system.py
 - `.local/`：仅供本机保留的资料。原 `outputs/` 已完整移至 `.local/design-archive/`。
 - `.DS_Store`、Xcode 用户状态、工具元数据、环境变量文件及签名证书。
 
-主仓库已在项目根目录初始化，`origin` 指向 `https://github.com/dufu1991/norna.git`，网站与应用一并提交。`website/` 原有的嵌套 Git 元数据已移除，不保留历史备份。项目原创代码采用根目录 `LICENSE` 中的 MIT 许可，第三方许可保留在根目录声明与库资源中。
+主仓库已在项目根目录初始化，`origin` 指向 `https://github.com/dufu1991/nornakit.git`，网站与应用一并提交。`website/` 原有的嵌套 Git 元数据已移除，不保留历史备份。项目原创代码采用根目录 `LICENSE` 中的 MIT 许可，第三方许可保留在根目录声明与库资源中。
 
 ## 工作台发布
 

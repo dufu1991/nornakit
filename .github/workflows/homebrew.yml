@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   publish:
-    if: github.repository == 'dufu1991/norna' && github.ref == 'refs/heads/main'
+    if: github.repository == 'dufu1991/nornakit' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -61,12 +61,12 @@ jobs:
           if not re.fullmatch(r'studio-v(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)', tag):
               raise SystemExit('Expected a stable studio-vX.Y.Z tag')
           release = json.loads(subprocess.check_output([
-              'gh', 'api', f'repos/dufu1991/norna/releases/tags/{tag}'
+              'gh', 'api', f'repos/dufu1991/nornakit/releases/tags/{tag}'
           ], text=True))
           if release['draft'] or release['prerelease'] or release['tag_name'] != tag:
               raise SystemExit('Only a published stable Studio release can be sent to Homebrew')
           PY
-          gh release download "$STUDIO_TAG" --repo dufu1991/norna \
+          gh release download "$STUDIO_TAG" --repo dufu1991/nornakit \
             --pattern Norna-Studio-macOS-arm64.dmg \
             --pattern release.json --pattern SHA256SUMS.txt --dir build/release
           python3 Scripts/Release/homebrew.py render --tag "$STUDIO_TAG"

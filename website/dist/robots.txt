@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nornakit.com/sitemap.xml

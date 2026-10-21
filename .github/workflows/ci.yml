@@ -41,15 +41,12 @@ jobs:
       - name: Build Apple Silicon workbench
         run: |
           xcodebuild build \
-            -project Norna.xcodeproj -scheme NornaStudio \
+            -project NornaKit.xcodeproj -scheme NornaStudio \
             -configuration Release -destination 'generic/platform=macOS' \
             -derivedDataPath build \
             ARCHS=arm64 ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO
       - name: Check website resources
-        run: |
-          python3 website/scripts/verify-brand.py
-          python3 website/scripts/verify-screenshots.py
-          python3 website/scripts/verify-inline-content.py
+        run: python3 website/scripts/build-site.py
       - name: Determine whether the Studio version changed
         id: candidate
         env:
@@ -64,7 +61,7 @@ jobs:
       tag: ${{ steps.version.outputs.tag }}
     if: >-
       needs.checks.outputs.release == 'true' &&
-      github.repository == 'dufu1991/norna' &&
+      github.repository == 'dufu1991/nornakit' &&
       github.ref == 'refs/heads/main'
     runs-on: xcode-27
     timeout-minutes: 45

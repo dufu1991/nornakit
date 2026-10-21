@@ -137,7 +137,7 @@ public enum DiagramExporter {
         let data = NSMutableData()
         var mediaBox = CGRect(origin: .zero, size: size)
         guard let consumer = CGDataConsumer(data: data),
-              let context = CGContext(consumer: consumer, mediaBox: &mediaBox, [kCGPDFContextCreator: "Norna Studio"] as CFDictionary) else {
+              let context = CGContext(consumer: consumer, mediaBox: &mediaBox, [kCGPDFContextCreator: "NornaKit"] as CFDictionary) else {
             throw DiagramRenderError(message: "无法创建 PDF 文档。", code: "export-pdf")
         }
         context.beginPDFPage(nil)

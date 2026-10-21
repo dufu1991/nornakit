@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Norna",
+    name: "NornaKit",
     defaultLocalization: "en",
     platforms: [.macOS(.v14)],
     products: [
@@ -12,7 +12,7 @@ let package = Package(
     targets: [
         .target(name: "NornaKit", resources: [.copy("Resources")]),
         .executableTarget(name: "NornaStudio", dependencies: ["NornaKit"],
-            exclude: ["Resources/Assets.xcassets", "Resources/NornaSculpted.icon"], resources: [.copy("Resources/Norna.icns"), .process("Resources/en.lproj"), .process("Resources/zh-Hans.lproj")]),
+            exclude: ["Resources/Assets.xcassets", "Resources/NornaSculpted.icon"], resources: [.copy("Resources/NornaKit.icns"), .process("Resources/en.lproj"), .process("Resources/zh-Hans.lproj")]),
         .testTarget(name: "NornaKitTests", dependencies: ["NornaKit"]),
         .testTarget(name: "NornaStudioTests", dependencies: ["NornaStudio", "NornaKit"])
     ],

@@ -3,7 +3,7 @@ import { setNativeImage } from './native-images.js';
 export const inlineTranslations = {
   "en": {
     "inlineTitle": "Native content inside labels",
-    "inlineLead": "Mix SF Symbols and native rich text in the same label. These are Norna label extensions. Quote labels when required by the diagram syntax.",
+    "inlineLead": "Mix SF Symbols and native rich text in the same label. These are NornaKit label extensions. Quote labels when required by the diagram syntax.",
     "inlineColorTitle": "SF Symbols rendering modes",
     "inlineColorBody": "Keep :sf:name: for monochrome symbols, or use @monochrome, @hierarchical, @multicolor, or @palette(#2563eb,#f59e0b). Palette mode accepts one to three six-digit hex colors without spaces. Multicolor uses the symbol’s native colors; hierarchical uses the current text color. Available symbols and color layers depend on the rendering macOS version and the symbol. A symbol without native multicolor layers uses monochrome rendering.",
     "inlineRichTitle": "Native rich text",
@@ -17,7 +17,7 @@ export const inlineTranslations = {
   },
   "zh": {
     "inlineTitle": "标签中的原生内容",
-    "inlineLead": "同一标签可以混合 SF Symbols 与原生富文本。这些写法属于 Norna 标签扩展；图表语法要求引号时，请使用带引号的标签。",
+    "inlineLead": "同一标签可以混合 SF Symbols 与原生富文本。这些写法属于 NornaKit 标签扩展；图表语法要求引号时，请使用带引号的标签。",
     "inlineColorTitle": "SF Symbols 渲染模式",
     "inlineColorBody": "保留 :sf:名称: 作为单色写法，也可指定 @monochrome、@hierarchical、@multicolor 或 @palette(#2563eb,#f59e0b)。调色板接受 1 至 3 个六位十六进制颜色，颜色之间不留空格。多色模式使用图标原生颜色，层级模式使用当前文字颜色。图标可用性和颜色层级取决于渲染时的 macOS 版本及图标本身；没有原生多色层级的图标按单色绘制。",
     "inlineRichTitle": "原生富文本",

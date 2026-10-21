@@ -104,7 +104,7 @@ paint(cover) {
     NSColor(calibratedRed: 0.97, green: 0.97, blue: 0.99, alpha: 1).setFill()
     NSRect(x: 0, y: 0, width: 1200, height: 630).fill()
     image(symbol).draw(in: NSRect(x: 750, y: 155, width: 350, height: 350))
-    text("Norna", NSRect(x: 84, y: 389, width: 630, height: 110), 86, .semibold, ink)
+    text("NornaKit", NSRect(x: 84, y: 389, width: 630, height: 110), 86, .semibold, ink)
     text("Native diagrams, clearly.", NSRect(x: 88, y: 305, width: 660, height: 62), 36, .medium, ink)
     text("Pure Swift · 33 diagram families", NSRect(x: 89, y: 110, width: 650, height: 40), 24, .regular, muted)
 }
@@ -114,7 +114,7 @@ let proof = bitmap(1440, 900)
 paint(proof) {
     NSColor(calibratedWhite: 0.97, alpha: 1).setFill()
     NSRect(x: 0, y: 0, width: 1440, height: 900).fill()
-    text("Norna · 按场景使用图标", NSRect(x: 60, y: 802, width: 1320, height: 48), 32, .semibold, ink)
+    text("NornaKit · 按场景使用图标", NSRect(x: 60, y: 802, width: 1320, height: 48), 32, .semibold, ink)
     let app = NSImage(contentsOf: output.appendingPathComponent("app-icon-light.png"))!
     app.draw(in: NSRect(x: 66, y: 453, width: 260, height: 260))
     text("APP · 立体与系统材质", NSRect(x: 68, y: 394, width: 360, height: 35), 22, .medium, ink)

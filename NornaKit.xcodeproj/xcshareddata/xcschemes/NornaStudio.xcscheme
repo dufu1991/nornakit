@@ -15,10 +15,10 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EBCADD76AB35986633E8297B"
+               BlueprintIdentifier = "2310FBA478388EE32CCE42AC"
                BuildableName = "NornaKitTests.xctest"
                BlueprintName = "NornaKitTests"
-               ReferencedContainer = "container:Norna.xcodeproj">
+               ReferencedContainer = "container:NornaKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,10 +29,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7775BE7D329E25D55B1E5C51"
+               BlueprintIdentifier = "B75CAE60302947D614F23BC9"
                BuildableName = "Norna Studio.app"
                BlueprintName = "NornaStudio"
-               ReferencedContainer = "container:Norna.xcodeproj">
+               ReferencedContainer = "container:NornaKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,10 +46,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7775BE7D329E25D55B1E5C51"
+            BlueprintIdentifier = "B75CAE60302947D614F23BC9"
             BuildableName = "Norna Studio.app"
             BlueprintName = "NornaStudio"
-            ReferencedContainer = "container:Norna.xcodeproj">
+            ReferencedContainer = "container:NornaKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -58,10 +58,10 @@
             parallelizable = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EBCADD76AB35986633E8297B"
+               BlueprintIdentifier = "2310FBA478388EE32CCE42AC"
                BuildableName = "NornaKitTests.xctest"
                BlueprintName = "NornaKitTests"
-               ReferencedContainer = "container:Norna.xcodeproj">
+               ReferencedContainer = "container:NornaKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -82,10 +82,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7775BE7D329E25D55B1E5C51"
+            BlueprintIdentifier = "B75CAE60302947D614F23BC9"
             BuildableName = "Norna Studio.app"
             BlueprintName = "NornaStudio"
-            ReferencedContainer = "container:Norna.xcodeproj">
+            ReferencedContainer = "container:NornaKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -99,10 +99,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7775BE7D329E25D55B1E5C51"
+            BlueprintIdentifier = "B75CAE60302947D614F23BC9"
             BuildableName = "Norna Studio.app"
             BlueprintName = "NornaStudio"
-            ReferencedContainer = "container:Norna.xcodeproj">
+            ReferencedContainer = "container:NornaKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

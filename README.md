@@ -1,12 +1,14 @@
-# Norna
+# NornaKit
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-[![CI](https://github.com/dufu1991/norna/actions/workflows/ci.yml/badge.svg)](https://github.com/dufu1991/norna/actions/workflows/ci.yml)
+[![CI](https://github.com/dufu1991/nornakit/actions/workflows/ci.yml/badge.svg)](https://github.com/dufu1991/nornakit/actions/workflows/ci.yml)
 
 **Native diagrams, clearly.**
 
-Norna is a native diagram rendering library written in pure Swift. Its core product, **NornaKit**, parses Mermaid source, lays out diagrams, and renders them in macOS apps. Parsing, text measurement, layout, rendering, and export run natively, without a browser, JavaScript runtime, or network service.
+[https://nornakit.com](https://nornakit.com)
+
+**NornaKit** is a native diagram rendering library written in pure Swift. It parses Mermaid source, lays out diagrams, and renders them in macOS apps. Parsing, text measurement, layout, rendering, and export run natively, without a browser, JavaScript runtime, or network service.
 
 - **NornaKit** provides parsing, layout, native drawing, and export. It is the primary focus of this project.
 - **Norna Studio** is a companion Mac demo and development tool for inspecting output, ad hoc rendering, debugging, and export. The library can be integrated without installing the app.
@@ -14,7 +16,7 @@ Norna is a native diagram rendering library written in pure Swift. Its core prod
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/hero-en-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="website/dist/assets/hero-en-light.png">
-  <img alt="A diagram rendered natively by Norna" src="website/dist/assets/hero-en-light.png">
+  <img alt="A diagram rendered natively by NornaKit" src="website/dist/assets/hero-en-light.png">
 </picture>
 
 ## Use NornaKit
@@ -24,7 +26,7 @@ Requires **macOS 14 or later** and **Swift 6**, with no external package depende
 Add this repository as a Swift Package dependency and link the **NornaKit** product. Until a library version tag is published, use `main` or pin a specific commit:
 
 ```swift
-.package(url: "https://github.com/dufu1991/norna.git", branch: "main")
+.package(url: "https://github.com/dufu1991/nornakit.git", branch: "main")
 ```
 
 ```swift
@@ -48,13 +50,13 @@ let svg = diagram.themedSVG(.appleLight)
 - Inline SF Symbols and native rich text extensions.
 - PNG, JPEG, TIFF, SVG, and PDF export.
 
-Syntax support varies by diagram family. See the [support matrix, in Chinese](Docs/SUPPORT.md) for supported constructs and current limits. Norna does not claim complete Mermaid compatibility.
+Syntax support varies by diagram family. See the [support matrix, in Chinese](Docs/SUPPORT.md) for supported constructs and current limits. NornaKit does not claim complete Mermaid compatibility.
 
 ## Development and validation
 
 ```sh
-git clone https://github.com/dufu1991/norna.git
-cd norna
+git clone https://github.com/dufu1991/nornakit.git
+cd nornakit
 swift build --target NornaKit
 swift test
 ```
@@ -69,7 +71,7 @@ Norna Studio uses the same NornaKit APIs to demonstrate library capabilities, re
 
 Requires **macOS 14 or later**. Supports **Apple Silicon Macs**.
 
-[Download DMG](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-arm64.dmg) · [Download ZIP](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-arm64.zip) · [All releases](https://github.com/dufu1991/norna/releases)
+[Download DMG](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg) · [Download ZIP](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.zip) · [All releases](https://github.com/dufu1991/nornakit/releases)
 
 Packages become available after the first successful Studio release workflow. Open the DMG and drag **Norna Studio** into **Applications**, or extract the ZIP and move the app there. Each release includes SHA-256 checksums and a `release.json` manifest.
 
@@ -97,7 +99,7 @@ These commands become available once the Norna Studio Cask is published to the t
 The complete app requires **Xcode 27.1 or later**. Open the project and run the `NornaStudio` scheme:
 
 ```sh
-open Norna.xcodeproj
+open NornaKit.xcodeproj
 ```
 
 You can also launch the companion tool through Swift Package Manager:
@@ -145,10 +147,10 @@ website/               Static website, published assets, and generation tools
 .github/workflows/     CI and automatic Studio releases
 ```
 
-`Package.swift` defines the package. `project.yml` defines the XcodeGen project; `Norna.xcodeproj` is committed for direct use. After changing the project definition or adding, removing, or moving source files, run `xcodegen generate`. Editing the Studio version file does not require regeneration.
+`Package.swift` defines the package. `project.yml` defines the XcodeGen project; `NornaKit.xcodeproj` is committed for direct use. After changing the project definition or adding, removing, or moving source files, run `xcodegen generate`. Editing the Studio version file does not require regeneration.
 
 Build output and local design archives are excluded from Git. App and website sources share this repository. See the [development guide, in Chinese](Docs/DEVELOPMENT.md), [website guide, in Chinese](website/README.md), and [brand guide, in Chinese](Branding/README.md).
 
 ## Attribution
 
-Norna adapts selected measurement formulas, rendering conventions, and reference examples from Pele. See [third-party notices](THIRD_PARTY_NOTICES.md) and the licenses in the library resources. Norna's original code is distributed under the [MIT License](LICENSE).
+NornaKit adapts selected measurement formulas, rendering conventions, and reference examples from Pele. See [third-party notices](THIRD_PARTY_NOTICES.md) and the licenses in the library resources. NornaKit's original code is distributed under the [MIT License](LICENSE).

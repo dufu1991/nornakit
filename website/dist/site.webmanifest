@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "Norna — Native diagrams",
-  "short_name": "Norna",
+  "name": "NornaKit — Native diagrams",
+  "short_name": "NornaKit",
   "start_url": "./",
   "scope": "./",
   "display": "browser",

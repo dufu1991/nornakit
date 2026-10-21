@@ -114,8 +114,8 @@
     "en" : "Mind map",
     "id" : "mindmap",
     "sources" : {
-      "en" : "mindmap\n    root((Norna))\n        Parsing\n            Mermaid\n            Semantic validation\n        Layout\n            Layers\n            Timeline\n        Drawing\n            CoreGraphics\n            SVG",
-      "zh" : "mindmap\n    root((Norna))\n        解析\n            Mermaid\n            语义校验\n        布局\n            层级\n            时间轴\n        绘制\n            CoreGraphics\n            SVG"
+      "en" : "mindmap\n    root((NornaKit))\n        Parsing\n            Mermaid\n            Semantic validation\n        Layout\n            Layers\n            Timeline\n        Drawing\n            CoreGraphics\n            SVG",
+      "zh" : "mindmap\n    root((NornaKit))\n        解析\n            Mermaid\n            语义校验\n        布局\n            层级\n            时间轴\n        绘制\n            CoreGraphics\n            SVG"
     },
     "zh" : "思维导图"
   },
@@ -294,8 +294,8 @@
     "en" : "Tree view",
     "id" : "treeView",
     "sources" : {
-      "en" : "treeView-beta\n    Norna/\n        Sources/\n            NornaKit/\n                DiagramScene.swift\n            NornaStudio/\n                StudioView.swift\n        Tests/\n        Package.swift",
-      "zh" : "treeView-beta\n    Norna/\n        Sources/\n            NornaKit/\n                DiagramScene.swift\n            NornaStudio/\n                StudioView.swift\n        Tests/\n        Package.swift"
+      "en" : "treeView-beta\n    NornaKit/\n        Sources/\n            NornaKit/\n                DiagramScene.swift\n            NornaStudio/\n                StudioView.swift\n        Tests/\n        Package.swift",
+      "zh" : "treeView-beta\n    NornaKit/\n        Sources/\n            NornaKit/\n                DiagramScene.swift\n            NornaStudio/\n                StudioView.swift\n        Tests/\n        Package.swift"
     },
     "zh" : "目录树"
   },

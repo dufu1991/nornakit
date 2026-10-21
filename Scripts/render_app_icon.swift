@@ -4,7 +4,7 @@ import AppKit
 let root = URL(fileURLWithPath: FileManager.default.currentDirectoryPath, isDirectory: true)
 let icon = root.appendingPathComponent("Sources/NornaStudio/Resources/NornaSculpted.icon")
 let assets = root.appendingPathComponent("build/Branding/AppIcon", isDirectory: true)
-let iconset = assets.appendingPathComponent("Norna-LiquidGlass.iconset", isDirectory: true)
+let iconset = assets.appendingPathComponent("NornaKit-LiquidGlass.iconset", isDirectory: true)
 let designGeneration = CommandLine.arguments.dropFirst().first ?? (ProcessInfo.processInfo.operatingSystemVersion.majorVersion >= 27 ? "27" : "26")
 precondition(["26", "27"].contains(designGeneration), "Design generation must be 26 or 27.")
 let tool = "/Applications/Xcode.app/Contents/Applications/Icon Composer.app/Contents/Executables/ictool"
@@ -37,7 +37,7 @@ for size in [16, 32, 128, 256, 512] {
     }
 }
 try render("Default", assets.appendingPathComponent("norna-liquid-glass.png"), 1024, 1)
-try run("/usr/bin/iconutil", ["-c", "icns", iconset.path, "-o", root.appendingPathComponent("Sources/NornaStudio/Resources/Norna.icns").path])
+try run("/usr/bin/iconutil", ["-c", "icns", iconset.path, "-o", root.appendingPathComponent("Sources/NornaStudio/Resources/NornaKit.icns").path])
 
 // Contact sheet only; each icon is an unmodified native macOS rendition.
 let bitmap = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: 1200, pixelsHigh: 780,

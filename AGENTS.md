@@ -1,10 +1,12 @@
 # 项目定位
 
+- 项目名称与 Swift 包名统一为 NornaKit，源码仓库为 `dufu1991/nornakit`，正式网站为 `https://nornakit.com`。
+- 网站通过 Cloudflare Pages 的 Git 集成发布，静态产物位于 `website/dist`，构建命令为 `python3 website/scripts/build-site.py`。部署监听范围与依赖约定见 `website/README.md`。
 - NornaKit 渲染库是本项目的核心，优先围绕库的接入、解析、布局、原生绘制和导出能力组织开发与文档。
 - Norna Studio 是配套的 Mac 演示与调试工具，用于展示渲染效果、临时渲染、复现问题和导出图表。
 - README 与网站应优先介绍渲染库及其接入方式，工作台作为辅助工具介绍。集成渲染库无须安装或运行工作台。
 - Mac 配套工具通过 GitHub Releases 和个人 `dufu1991/homebrew-tap` 的 Cask 分发，Homebrew 使用已发布的同一份 Apple Silicon 安装包。
-- 本地 tap 仓库位于 `/Users/dufu/Documents/github/dufu1991/homebrew-tap`。新增或更新 Norna 时，同步维护该仓库的 `Casks/norna-studio.rb` 与 `README.md`，并检查本地内容与远程发布结果是否一致，保留已有的未提交修改。
+- 本地 tap 仓库位于 `/Users/dufu/Documents/github/dufu1991/homebrew-tap`。新增或更新 NornaKit 时，同步维护该仓库的 `Casks/norna-studio.rb` 与 `README.md`，并检查本地内容与远程发布结果是否一致，保留已有的未提交修改。
 
 # 工作台调试规则
 

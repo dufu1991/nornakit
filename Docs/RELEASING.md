@@ -2,7 +2,7 @@
 
 [English README](../README.md) · [中文 README](../README.zh-CN.md)
 
-The app, Swift package, and website share [dufu1991/norna](https://github.com/dufu1991/norna). NornaKit is the primary library product. Studio is a companion demo, rendering, debugging, and export tool with an independent release cycle.
+The app, Swift package, and website share [dufu1991/nornakit](https://github.com/dufu1991/nornakit). NornaKit is the primary library product. Studio is a companion demo, rendering, debugging, and export tool with an independent release cycle.
 
 ## Automatic release policy
 
@@ -61,7 +61,7 @@ Every Studio release contains:
 - `SHA256SUMS.txt`: checksums for both packages and the manifest.
 - `release.json`: version, build, commit, architectures, minimum macOS, and signing status.
 
-Stable links are [latest DMG](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-arm64.dmg) and [latest ZIP](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-arm64.zip). The website uses the DMG URL. Before the first successful release these endpoints return 404.
+Stable links are [latest DMG](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg) and [latest ZIP](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.zip). The website uses the DMG URL. Before the first successful release these endpoints return 404.
 
 Download all four files into one directory and run `shasum -a 256 -c SHA256SUMS.txt` to verify them.
 
@@ -77,9 +77,9 @@ brew upgrade --cask dufu1991/tap/norna-studio
 
 NornaKit remains a Swift Package dependency. The Cask installs only the optional Norna Studio app and requires Apple Silicon and macOS 14 or later.
 
-The tap's [Sync Norna Studio workflow](https://github.com/dufu1991/homebrew-tap/blob/main/.github/workflows/norna-studio.yml) runs hourly, when its workflow file changes, and on manual dispatch. It checks out the public Norna release tools, verifies the latest published Studio package, and updates the Cask using the tap's own `GITHUB_TOKEN`. No personal token is needed for this synchronization. Scheduled execution can be delayed by GitHub; use manual dispatch to synchronize immediately.
+The tap's [Sync Norna Studio workflow](https://github.com/dufu1991/homebrew-tap/blob/main/.github/workflows/norna-studio.yml) runs hourly, when its workflow file changes, and on manual dispatch. It checks out the public NornaKit release tools, verifies the latest published Studio package, and updates the Cask using the tap's own `GITHUB_TOKEN`. No personal token is needed for this synchronization. Scheduled execution can be delayed by GitHub; use manual dispatch to synchronize immediately.
 
-For immediate synchronization directly from the Norna release workflow, optionally configure the **Norna repository** Actions secret **`HOMEBREW_TAP_TOKEN`** with a fine-grained personal access token scoped to **`dufu1991/homebrew-tap`**, with **Contents: Read and write**. No workflow or administration permissions are required. GitHub's ordinary `GITHUB_TOKEN` is scoped to the repository running the workflow, so the app release token cannot write to the separate tap.
+For immediate synchronization directly from the NornaKit release workflow, optionally configure the **NornaKit repository** Actions secret **`HOMEBREW_TAP_TOKEN`** with a fine-grained personal access token scoped to **`dufu1991/homebrew-tap`**, with **Contents: Read and write**. No workflow or administration permissions are required. GitHub's ordinary `GITHUB_TOKEN` is scoped to the repository running the workflow, so the app release token cannot write to the separate tap.
 
 After the Studio release job succeeds, it calls [Publish Studio to Homebrew](../.github/workflows/homebrew.yml). The workflow downloads the published DMG, manifest, and checksums for that exact `studio-vX.Y.Z` tag, checks the package architecture and SHA-256, and generates the Cask with [homebrew.py](../Scripts/Release/homebrew.py). It creates or updates only `Casks/norna-studio.rb` on the tap's `main` branch. Existing Casks and the tap's `youran-toolbox` dispatch workflow are unaffected. The Cask points at the versioned Release URL, never the mutable latest-download URL.
 
@@ -87,9 +87,9 @@ The original `studio-v0.1.0` release has universal assets. The initial Cask in t
 
 Subsequent automatic synchronization requires a newer app release with the `macOS-arm64` asset names. For example, use app version `0.1.1` and build `6` or higher. This replaces the initial Cask with the arm64-only download. Published releases are not rewritten to change their package architecture.
 
-If the optional tap token is missing, the Norna workflow reports that immediate synchronization is skipped; the tap-owned workflow still performs publication. Once configured, token permission errors and upload failures fail the immediate Homebrew job. An identical retry does not create another commit, older versions cannot replace newer Casks, and different content for the same version is rejected. Updates use the existing blob SHA so a concurrent edit is rejected rather than overwritten.
+If the optional tap token is missing, the NornaKit workflow reports that immediate synchronization is skipped; the tap-owned workflow still performs publication. Once configured, token permission errors and upload failures fail the immediate Homebrew job. An identical retry does not create another commit, older versions cannot replace newer Casks, and different content for the same version is rejected. Updates use the existing blob SHA so a concurrent edit is rejected rather than overwritten.
 
-To recover a failed tap update without a personal token, run **Sync Norna Studio** in the tap repository or rerun its failed job. With the optional tap token configured, run **Publish Studio to Homebrew** manually on Norna’s `main`, supplying the already published tag, or rerun the failed job. This downloads the existing release and does not rebuild or republish it. Homebrew publication is serialized separately from app publication. Ad-hoc builds retain an explicit Cask caveat about signing and notarization; Homebrew does not change the package's signing status.
+To recover a failed tap update without a personal token, run **Sync Norna Studio** in the tap repository or rerun its failed job. With the optional tap token configured, run **Publish Studio to Homebrew** manually on NornaKit’s `main`, supplying the already published tag, or rerun the failed job. This downloads the existing release and does not rebuild or republish it. Homebrew publication is serialized separately from app publication. Ad-hoc builds retain an explicit Cask caveat about signing and notarization; Homebrew does not change the package's signing status.
 
 Generate and inspect a Cask locally without changing the tap:
 
@@ -100,7 +100,7 @@ ruby -c build/release/norna-studio.rb
 
 The `sync` command is the remote mutation and requires the tap token as `GH_TOKEN`. The normal packaging command does not update Homebrew.
 
-The local tap checkout is `/Users/dufu/Documents/github/dufu1991/homebrew-tap`. Maintain `Casks/norna-studio.rb` and its README together when adding or updating Norna. After an automated remote update, inspect local changes and bring the checkout up to date without discarding them. Keep the README's installation, upgrade, first-launch, and release automation instructions consistent with the Cask.
+The local tap checkout is `/Users/dufu/Documents/github/dufu1991/homebrew-tap`. Maintain `Casks/norna-studio.rb` and its README together when adding or updating NornaKit. After an automated remote update, inspect local changes and bring the checkout up to date without discarding them. Keep the README's installation, upgrade, first-launch, and release automation instructions consistent with the Cask.
 
 ## Recovery
 

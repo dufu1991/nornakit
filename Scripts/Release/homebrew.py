@@ -50,10 +50,10 @@ def render(directory, tag):
   version "{version}"
   sha256 "{digest}"
 
-  url "https://github.com/dufu1991/norna/releases/download/studio-v#{{version}}/{DMG_NAME}"
+  url "https://github.com/dufu1991/nornakit/releases/download/studio-v#{{version}}/{DMG_NAME}"
   name "Norna Studio"
   desc "Companion demo, debugging, and export tool for the NornaKit diagram library"
-  homepage "https://github.com/dufu1991/norna"
+  homepage "https://nornakit.com"
 
   livecheck do
     url :url

@@ -91,7 +91,7 @@ extension DiagramExample {
         """),
         .init(id: "mindmap", title: "思维导图", symbol: "brain", source: """
         mindmap
-            root((Norna))
+            root((NornaKit))
                 解析
                     Mermaid
                     语义校验
@@ -266,7 +266,7 @@ extension DiagramExample {
         """),
         .init(id: "treeView", title: "目录树", symbol: "folder", source: """
         treeView-beta
-            Norna/
+            NornaKit/
                 Sources/
                     NornaKit/
                         DiagramScene.swift

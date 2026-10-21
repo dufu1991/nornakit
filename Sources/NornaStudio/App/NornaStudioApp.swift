@@ -30,7 +30,7 @@ struct NornaStudioApp: App {
 final class StudioAppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         #if SWIFT_PACKAGE
-        if let url = Bundle.module.url(forResource: "Norna", withExtension: "icns") {
+        if let url = Bundle.module.url(forResource: "NornaKit", withExtension: "icns") {
             NSApp.applicationIconImage = NSImage(contentsOf: url)
         }
         #endif

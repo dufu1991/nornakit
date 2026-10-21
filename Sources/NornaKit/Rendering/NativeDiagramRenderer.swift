@@ -61,7 +61,7 @@ public actor NativeDiagramRenderer: DiagramRendering {
         case .info:
             for line in DiagramSyntax.lines(source).dropFirst() where line.text != "showInfo" { throw line.error("info 当前只接受 showInfo。") }
             let builder = SceneBuilder(.info)
-            builder.box("Norna\nPure Swift · CoreGraphics\n33 native diagram families", CGRect(x: 16, y: 16, width: 420, height: 140), fill: .surfaceAlt)
+            builder.box("NornaKit\nPure Swift · CoreGraphics\n33 native diagram families", CGRect(x: 16, y: 16, width: 420, height: 140), fill: .surfaceAlt)
             scene = builder.scene(width: 452, height: 172)
         }
         let lines = DiagramSyntax.lines(source)
