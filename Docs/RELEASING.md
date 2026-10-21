@@ -100,7 +100,7 @@ ruby -c build/release/norna-studio.rb
 
 The `sync` command is the remote mutation and requires the tap token as `GH_TOKEN`. The normal packaging command does not update Homebrew.
 
-The local tap checkout is `/Users/dufu/Documents/github/dufu1991/homebrew-tap`. Maintain `Casks/norna-studio.rb` and its README together when adding or updating NornaKit. After an automated remote update, inspect local changes and bring the checkout up to date without discarding them. Keep the README's installation, upgrade, first-launch, and release automation instructions consistent with the Cask.
+The local tap checkout can be placed alongside this repository at `../homebrew-tap`; use its actual checkout location if it is elsewhere. Maintain `Casks/norna-studio.rb` and its README together when adding or updating NornaKit. After an automated remote update, inspect local changes and bring the checkout up to date without discarding them. Keep the README's installation, upgrade, first-launch, and release automation instructions consistent with the Cask.
 
 ## Recovery
 

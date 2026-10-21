@@ -17,6 +17,7 @@ xcuserdata/
 *.xcscmblueprint
 
 # Local tools and credentials
+/AGENTS.md
 .openai/
 .env
 .env.*
