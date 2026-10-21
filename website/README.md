@@ -95,7 +95,7 @@ xattr -dr com.apple.quarantine "/Applications/Norna Studio.app"
 - 构建命令为 `python3 website/scripts/build-site.py`，输出目录为 `website/dist`。
 - 构建仅同步文档并校验已提交的静态资源，不在 Linux 构建环境中运行 Swift 或重新生成原生截图。
 - Build watch paths 的包含路径为 `website/*`、`README.md`、`README.zh-CN.md`、`Docs/SUPPORT.md` 和 `THIRD_PARTY_NOTICES.md`，排除路径留空。Cloudflare 的 `*` 路径规则包含子目录。
-- 域名绑定 `nornakit.com` 和 `www.nornakit.com`，由 Pages 创建对应 DNS 记录。`www` 通过 `_redirects` 跳转到主域名。
+- 域名绑定 `nornakit.com` 和 `www.nornakit.com`，由 Pages 创建对应 DNS 记录。站点规范链接统一使用主域名 `nornakit.com`。
 - 单独修改库源码、测试、工作台版本或打包脚本不会触发网站部署；更新原生图表截图后，应将 `website/dist` 中的产物一并提交。
 
 预览构建与上线前校验使用同一命令：
