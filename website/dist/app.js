@@ -143,7 +143,7 @@ const showImage = (example) => {
   $('#dialog-title').textContent = nameOf(example);
   setNativeImage($('#dialog-image'), { stem: imageStem(example), alt: screenshotAlt(example), loading: 'eager' });
   $('#download-image').href = screenshot(example);
-  $('#download-image').download = `norna-${imageStem(example)}-${theme}.png`;
+  $('#download-image').download = `nornakit-${imageStem(example)}-${theme}.png`;
   if (!$('#screenshot-dialog').open) $('#screenshot-dialog').showModal();
 };
 const navigateImage = (direction) => {
@@ -205,7 +205,7 @@ const syncAppearance = () => {
   updatePreferencePickers();
   if ($('#screenshot-dialog')?.open) {
     $('#download-image').href = screenshot(imageURL);
-    $('#download-image').download = `norna-${imageStem(imageURL)}-${theme}.png`;
+    $('#download-image').download = `nornakit-${imageStem(imageURL)}-${theme}.png`;
   }
 };
 window.addEventListener('storage', (event) => {
