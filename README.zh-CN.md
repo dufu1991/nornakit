@@ -124,7 +124,8 @@ Apple Silicon 版 DMG 和 ZIP 位于 `build/release/`。打包命令不启动工
 | 推送到 `main`，或向 `main` 提交 PR | 测试、Apple Silicon 版 Release 构建与网站资源校验 |
 | `main` 中的 `Configuration/Studio-Version.xcconfig` 发生变化 | 检查通过后打包，发布 `studio-vX.Y.Z` |
 | 在 `main` 手动运行工作流，并开启 `release` | 发布当前工作台版本，或恢复失败的发布草稿 |
-| 工作台 Release 成功，且已配置 `HOMEBREW_TAP_TOKEN` | 在 `dufu1991/homebrew-tap` 创建或更新 `Casks/norna-studio.rb` |
+| 工作台 Release 成功，且已配置 `HOMEBREW_TAP_TOKEN` | 立即更新 `dufu1991/homebrew-tap` 中的 Cask |
+| tap 仓库每小时执行，或手动运行同步工作流 | 校验最新工作台 Release 并同步 Cask，无须个人令牌 |
 | 推送渲染库的 `vX.Y.Z` 标签 | 不发布工作台应用 |
 
 **NornaKit 是主要的库产品，工作台独立维护版本。** 发布工作台时，修改版本文件中的 `MARKETING_VERSION`，并递增 `CURRENT_PROJECT_VERSION`。包含该文件的首次推送也会触发发布。普通提交不创建新 Release，已发布的工作台版本不会被覆盖。配置和重试方式见[发布指南](Docs/RELEASING.md)。

@@ -36,8 +36,8 @@ jobs:
           HOMEBREW_TAP_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
         run: |
           if [[ -z "$HOMEBREW_TAP_TOKEN" ]]; then
-            echo '::warning::Homebrew publication is not configured. Set HOMEBREW_TAP_TOKEN with Contents write access to dufu1991/homebrew-tap.'
-            echo 'Homebrew was not updated. Configure HOMEBREW_TAP_TOKEN and rerun this workflow for the published Studio tag.' >> "$GITHUB_STEP_SUMMARY"
+            echo 'Immediate cross-repository synchronization is not configured; the tap-owned workflow will synchronize the published release.'
+            echo 'The tap-owned Sync Norna Studio workflow synchronizes published releases hourly and can be run manually. HOMEBREW_TAP_TOKEN optionally enables immediate synchronization.' >> "$GITHUB_STEP_SUMMARY"
             echo 'configured=false' >> "$GITHUB_OUTPUT"
           else
             echo 'configured=true' >> "$GITHUB_OUTPUT"

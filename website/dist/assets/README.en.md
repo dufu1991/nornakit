@@ -124,7 +124,8 @@ Apple Silicon DMG and ZIP packages are written to `build/release/`. Packaging do
 | Push to `main` or PR targeting `main` | Tests, Apple Silicon Release build, and website resource checks |
 | Change `Configuration/Studio-Version.xcconfig` on `main` | After checks pass, package and publish `studio-vX.Y.Z` |
 | Manual workflow on `main`, with `release` enabled | Publish the current Studio version, or recover a failed draft |
-| Studio Release succeeds, with `HOMEBREW_TAP_TOKEN` configured | Create or update `Casks/norna-studio.rb` in `dufu1991/homebrew-tap` |
+| Studio Release succeeds, with `HOMEBREW_TAP_TOKEN` configured | Immediately update the Cask in `dufu1991/homebrew-tap` |
+| Hourly or manual run in the tap repository | Verify the latest Studio Release and synchronize its Cask, without a personal token |
 | Push a library tag such as `vX.Y.Z` | Does not publish the Studio app |
 
 **NornaKit is the primary library product; Studio is versioned independently.** Change `MARKETING_VERSION` and increment `CURRENT_PROJECT_VERSION` in the Studio version file to release the app. This also applies to the initial push containing that file. Ordinary commits do not create a new Release; published Studio versions are immutable. See [release setup and recovery](Docs/RELEASING.md).
