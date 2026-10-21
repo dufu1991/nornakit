@@ -1,6 +1,6 @@
 # Norna 介绍站
 
-简洁的静态站点，沿用 Norna 的标志与靛蓝配色，展示纯 Swift 图表引擎与 Norna Studio。
+简洁的静态站点，沿用 Norna 的标志与靛蓝配色，以纯 Swift 渲染库 NornaKit 的能力、示例和接入方式为主要内容。Norna Studio 作为配套的演示、渲染、调试与导出工具介绍。
 
 - 中英文默认使用浏览器首选语言，其他语言使用英文。可以手动切换并记住选择。
 - 浅深色默认跟随系统，也可以手动循环切换为浅色、深色与自动。
@@ -75,4 +75,14 @@ python3 website/scripts/sync-theme.py
 Native inline-content documentation uses the two built-in examples `sf-symbols-color` and `rich-text`. Their localized sources and light/dark previews live in `dist/assets/inline-*`. Run `scripts/render-inline-content.swift` against the current NornaKit build to generate `build/InlineContent`, then run `python3 website/scripts/sync-inline-content.py` from the native project. Validate the website with `python3 scripts/verify-inline-content.py` from this directory. The documentation follows the page language and appearance controls.
 
 
-顶部导航的 Mac 软件包地址统一配置在 `dist/download-config.js` 的 `workbenchDownloadURL`。当前指向 `https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-universal.dmg`，首页和文档页共用该地址。首次工作台发布成功前，下载地址暂不可用。中英文导航与提示随站点语言切换。
+顶部导航的 Mac 软件包地址统一配置在 `dist/download-config.js` 的 `workbenchDownloadURL`。当前指向 `https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-arm64.dmg`，首页和文档页共用该地址。首次工作台发布成功前，下载地址暂不可用。中英文导航与提示随站点语言切换。
+
+## 工作台首次打开说明
+
+首页的工作台介绍区与文档页均提供中英文首次打开说明。当前工作台尚无 Developer ID 签名与 Apple 公证；确认应用来自本项目的 GitHub Releases 且信任该应用后，将其安装到“应用程序”文件夹。若 macOS 拦截首次打开，可在终端执行：
+
+```sh
+xattr -dr com.apple.quarantine "/Applications/Norna Studio.app"
+```
+
+命令仅移除该应用的下载隔离属性。安装位置不同时，应替换为实际路径；下载不完整或文件实际损坏时，应重新下载并核对校验和。网站不自动执行该命令。

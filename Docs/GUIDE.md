@@ -1,14 +1,31 @@
-# Norna Studio
+# NornaKit 使用指南
 
-使用纯 Swift 实现的图表引擎，以及可运行的 macOS Mermaid 编辑器。
+NornaKit 是本项目的核心渲染库。配套的 Norna Studio 用于演示、临时渲染、调试和导出图表。
 
-从解析、文本测量、分层布局到画布绘制，全部在原生侧执行。没有 JavaScriptCore、WKWebView、浏览器或运行时网络依赖。目前支持 33 类图形，每类都有基础语法、专用布局和可运行示例。图形种类覆盖不等于全部语法兼容，逐类范围和差异见 [支持矩阵](SUPPORT.md)。Swift 包名为 `Norna`，渲染库模块为 `NornaKit`，配套编辑器为 Norna Studio。第三方来源与许可见 [第三方声明](../THIRD_PARTY_NOTICES.md)。产品以图形类型覆盖、可读性和 Apple 平台体验为方向。
+从解析、文本测量、分层布局到画布绘制，全部在原生侧执行。没有 JavaScriptCore、WKWebView、浏览器或运行时网络依赖。目前支持 33 类图形，每类都有基础语法、专用布局和可运行示例。图形种类覆盖不等于全部语法兼容，逐类范围和差异见 [支持矩阵](SUPPORT.md)。Swift 包名为 `Norna`，渲染库模块为 `NornaKit`，配套演示与调试工具为 Norna Studio。第三方来源与许可见 [第三方声明](../THIRD_PARTY_NOTICES.md)。渲染库以图形类型覆盖、布局可读性和原生集成为方向。
 
 所有终端命令均在项目根目录执行。目录分工与提交约定见[开发指南](DEVELOPMENT.md)。
 
-## 运行
+## 集成渲染库
 
-要求 macOS 14 或更高版本。应用工程使用 Xcode 27.1 或更高版本编译原生分层图标，Swift Package 要求 Swift 6。工程和 Swift Package 均已提供，无须安装第三方依赖。
+将本仓库添加为 Swift Package 依赖，并链接 `NornaKit` 库产品。库要求 macOS 14 或更高版本和 Swift 6，没有外部包依赖。
+
+```swift
+import NornaKit
+
+let diagram = try await NativeDiagramRenderer().render(
+    "flowchart LR\n A[源码] --> B[原生图表]",
+    options: DiagramLayoutOptions(maxWidth: 640)
+)
+let scene = diagram.scene
+let svg = diagram.themedSVG(.appleLight)
+```
+
+`scene` 保存用于宿主应用原生绘制的几何数据，`CoreGraphicsDiagramPainter` 负责在 AppKit 图形上下文中绘制，`DiagramExporter` 提供图像、SVG 和 PDF 导出。渲染与导出均可直接调用库 API，无须启动或安装 Norna Studio。
+
+## 配套工作台运行
+
+工作台仅支持 macOS 14 或更高版本的 Apple Silicon Mac。应用工程使用 Xcode 27.1 或更高版本编译原生分层图标，Swift Package 要求 Swift 6。工程和 Swift Package 均已提供，无须安装第三方依赖。
 
 ```sh
 open Norna.xcodeproj
@@ -34,7 +51,7 @@ xcodebuild build \
 
 产物位于 `build/Build/Products/Debug/Norna Studio.app`。修改 `project.yml` 后，可以使用 XcodeGen 重新生成工程；正常打开与编译不需要安装 XcodeGen。
 
-## 使用
+## 配套工作台使用
 
 - 左侧按用途分组显示全部 33 类图形，可按中英文名称搜索；选择类型后载入可编辑的起始示例，中间编辑，右侧实时预览。
 - 29 类可变布局图形在源码上方的横向滚动栏中提供“简单示例”和“复杂示例”，用于比较数据增加后的分层、分支、分区、图例和换行变化。象限图、Wardley 地图、Cynefin 框架和信息图保留单例；流程图、时序图、类图和状态图的原有专题示例继续保留。官网原始语料留作开发回归资料。

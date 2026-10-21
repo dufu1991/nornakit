@@ -1,12 +1,12 @@
 # 开发指南
 
-所有命令均在项目根目录执行。
+本项目以 NornaKit 渲染库为核心，Norna Studio 是用于展示、临时渲染、调试和导出的配套工具。所有命令均在项目根目录执行。
 
 ## 目录约定
 
 `Sources/NornaKit` 是可独立使用的 Swift 图表库，按模型、语法、布局、绘制、导出和示例分组。各图形专用的解析与布局集中在 `Diagrams/`，公共流程图布局和路由位于 `Layout/`。目录分组不改变 `NornaKit` 模块名或公开接口。
 
-`Sources/NornaStudio` 是原生工作台，按应用状态、编辑器、画布、导出和本地化分组。随应用分发的图标、强调色和字符串表保留在 `Resources/`。
+`Sources/NornaStudio` 是调用 NornaKit 的演示与调试工作台，按应用状态、编辑器、画布、导出和本地化分组。随应用分发的图标、强调色和字符串表保留在 `Resources/`。
 
 `Tests/NornaKitTests` 与 `Tests/NornaStudioTests` 分别保存引擎和工作台测试。Swift Package 执行两组测试，Xcode 工程当前配置引擎测试。
 
@@ -21,6 +21,8 @@ xcodegen generate
 `website/` 与原生应用共用一个主仓库。`website/dist/` 是直接发布的静态站点，包含页面、样式、脚本及原生生成的示例图片；`website/scripts/` 保存资源生成和校验工具。这里的 `dist/` 是网站发布内容，需要提交。网站预览与更新步骤见[网站说明](../website/README.md)。
 
 ## 构建与验证
+
+工作台仅面向 Apple Silicon Mac。Xcode 工程与发布脚本均只构建 `arm64` 架构。
 
 ```sh
 swift test

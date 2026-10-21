@@ -2,11 +2,11 @@
 
 [English README](../README.md) · [中文 README](../README.zh-CN.md)
 
-The app, Swift package, and website share [dufu1991/norna](https://github.com/dufu1991/norna). Studio has an independent release cycle.
+The app, Swift package, and website share [dufu1991/norna](https://github.com/dufu1991/norna). NornaKit is the primary library product. Studio is a companion demo, rendering, debugging, and export tool with an independent release cycle.
 
 ## Automatic release policy
 
-The [workflow](../.github/workflows/ci.yml) runs for pushes to `main`, PRs targeting `main`, and manual dispatches. Checks include Swift tests, release automation tests, a universal Release build, and website resource validation. Only successful checks can reach publication.
+The [workflow](../.github/workflows/ci.yml) runs for pushes to `main`, PRs targeting `main`, and manual dispatches. Checks include Swift tests, release automation tests, an Apple Silicon Release build, and website resource validation. Only successful checks can reach publication.
 
 A push to `main` publishes the app when that push changes `Configuration/Studio-Version.xcconfig`. The initial push containing this file also triggers publication. A manual run on `main` with `release` enabled retries the current app version; leaving the checkbox disabled only runs checks. Tag pushes do not start this workflow.
 
@@ -30,7 +30,7 @@ Use a stable three-part app version and increment the positive integer build num
 
 Commit the version file with the app changes and merge or push to `main`. Its version does not need to match a library tag. New app releases must be newer than all published Studio releases. An already published version is skipped; its assets are never overwritten.
 
-The workflow uses the GitHub-hosted `xcode-27` preview runner with Xcode 27.1, cross-compiling `arm64` and `x86_64` for macOS 14. The app icon uses the current Icon Composer document format and requires Xcode 27.1 to compile. Both architectures are checked in the app executable and bundled framework. Tests run on the runner's Apple Silicon architecture; Intel output is cross-compiled. `.github/actionlint.yaml` registers this documented hosted runner label with lint versions that do not yet recognize it.
+The workflow uses the GitHub-hosted `xcode-27` preview runner with Xcode 27.1, building only `arm64` for Apple Silicon Macs running macOS 14 or later. The app icon uses the current Icon Composer document format and requires Xcode 27.1 to compile. The app executable and bundled framework are checked to contain only `arm64`. Tests also run on Apple Silicon. `.github/actionlint.yaml` registers this documented hosted runner label with lint versions that do not yet recognize it.
 
 ## Signing setup
 
@@ -56,14 +56,49 @@ If an ad-hoc release was already published, enable signing and bump the app vers
 
 Every Studio release contains:
 
-- `Norna-Studio-macOS-universal.dmg`: app and Applications shortcut.
-- `Norna-Studio-macOS-universal.zip`: the same app with its bundle layout and signatures preserved.
+- `Norna-Studio-macOS-arm64.dmg`: app and Applications shortcut.
+- `Norna-Studio-macOS-arm64.zip`: the same app with its bundle layout and signatures preserved.
 - `SHA256SUMS.txt`: checksums for both packages and the manifest.
 - `release.json`: version, build, commit, architectures, minimum macOS, and signing status.
 
-Stable links are [latest DMG](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-universal.dmg) and [latest ZIP](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-universal.zip). The website uses the DMG URL. Before the first successful release these endpoints return 404.
+Stable links are [latest DMG](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-arm64.dmg) and [latest ZIP](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-arm64.zip). The website uses the DMG URL. Before the first successful release these endpoints return 404.
 
 Download all four files into one directory and run `shasum -a 256 -c SHA256SUMS.txt` to verify them.
+
+## Homebrew distribution
+
+The companion app can also be installed as a Cask from [dufu1991/homebrew-tap](https://github.com/dufu1991/homebrew-tap):
+
+```sh
+brew install --cask dufu1991/tap/norna-studio
+brew update
+brew upgrade --cask dufu1991/tap/norna-studio
+```
+
+NornaKit remains a Swift Package dependency. The Cask installs only the optional Norna Studio app and requires Apple Silicon and macOS 14 or later.
+
+In the **Norna repository**, configure the Actions secret **`HOMEBREW_TAP_TOKEN`** with a fine-grained personal access token scoped to **`dufu1991/homebrew-tap`**, with **Contents: Read and write**. No workflow or administration permissions are required. GitHub's ordinary `GITHUB_TOKEN` is scoped to the repository running the workflow, so the app release token cannot write to the separate tap.
+
+After the Studio release job succeeds, it calls [Publish Studio to Homebrew](../.github/workflows/homebrew.yml). The workflow downloads the published DMG, manifest, and checksums for that exact `studio-vX.Y.Z` tag, checks the package architecture and SHA-256, and generates the Cask with [homebrew.py](../Scripts/Release/homebrew.py). It creates or updates only `Casks/norna-studio.rb` on the tap's `main` branch. Existing Casks and the tap's `youran-toolbox` dispatch workflow are unaffected. The Cask points at the versioned Release URL, never the mutable latest-download URL.
+
+The original `studio-v0.1.0` release has universal assets. The initial Cask in the local tap references that verified published DMG and restricts installation to Apple Silicon. Publish this Cask to the tap to make the installation command available. Do not substitute a locally rebuilt package or a nonexistent `arm64` URL for the published asset.
+
+Subsequent automatic synchronization requires a newer app release with the `macOS-arm64` asset names. For example, use app version `0.1.1` and build `6` or higher. This replaces the initial Cask with the arm64-only download. Published releases are not rewritten to change their package architecture.
+
+If the tap token is missing, Homebrew publication reports a workflow warning and skips the tap update; GitHub Release publication remains available. Once configured, token permission errors and upload failures fail the Homebrew job. An identical retry does not create another commit, older versions cannot replace newer Casks, and different content for the same version is rejected. Updates use the existing blob SHA so a concurrent edit is rejected rather than overwritten.
+
+To recover a failed tap update, run **Publish Studio to Homebrew** manually on `main`, supplying the already published tag, or rerun the failed job. This downloads the existing release and does not rebuild or republish it. Homebrew publication is serialized separately from app publication. Ad-hoc builds retain an explicit Cask caveat about signing and notarization; Homebrew does not change the package's signing status.
+
+Generate and inspect a Cask locally without changing the tap:
+
+```sh
+python3 Scripts/Release/homebrew.py render --tag "$(python3 Scripts/Release/version.py --field tag)"
+ruby -c build/release/norna-studio.rb
+```
+
+The `sync` command is the remote mutation and requires the tap token as `GH_TOKEN`. The normal packaging command does not update Homebrew.
+
+The local tap checkout is `/Users/dufu/Documents/github/dufu1991/homebrew-tap`. Maintain `Casks/norna-studio.rb` and its README together when adding or updating Norna. After an automated remote update, inspect local changes and bring the checkout up to date without discarding them. Keep the README's installation, upgrade, first-launch, and release automation instructions consistent with the Cask.
 
 ## Recovery
 
@@ -90,3 +125,6 @@ The packaging script writes to `build/release/`. It does not launch the app, cre
 - [GitHub Actions workflow syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax)
 - [GitHub CLI release commands](https://cli.github.com/manual/gh_release)
 - [Apple notarization workflow](https://developer.apple.com/documentation/security/customizing-the-notarization-workflow)
+- [Homebrew Cask Cookbook](https://docs.brew.sh/Cask-Cookbook)
+- [Maintaining a Homebrew tap](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap)
+- [GitHub token scope](https://docs.github.com/en/actions/concepts/security/github_token)

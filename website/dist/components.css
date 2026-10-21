@@ -26,3 +26,8 @@ button{-webkit-appearance:none;appearance:none}.ui-icon{width:16px;height:16px;f
 @media(max-width:760px){.dialog-footer{padding:12px 16px;gap:12px}.dialog-navigation-hint{display:none}.dialog-footer>.text-link{font-size:11px}.dialog-navigation{gap:4px}}
 
 @media(max-width:760px){#screenshot-dialog{width:calc(100vw - 24px);height:calc(100dvh - 24px);max-height:calc(100dvh - 24px)}.dialog-image-wrap{padding:12px}}
+
+.studio-launch-help{margin-top:20px;font-size:12px;line-height:1.8;color:var(--muted)}
+.studio-launch-help summary{cursor:pointer;color:var(--text);font-weight:500}
+.studio-launch-help p{margin:12px 0}
+.studio-launch-help pre{padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--code);white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;line-height:1.8}

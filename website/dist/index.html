@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fafaf9">
-  <meta name="description" content="Norna turns Mermaid source into native diagrams with Swift. Explore 33 diagram families, native screenshots, and a focused Mac editor.">
+  <meta name="description" content="Integrate native Mermaid diagrams into macOS apps with NornaKit, a pure Swift rendering library. Explore 33 diagram families, native output, and export.">
   <title>Norna — Native diagrams, clearly.</title>
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64 128x128 256x256" type="image/vnd.microsoft.icon">
   <link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
@@ -14,7 +14,7 @@
   <link rel="manifest" href="site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Norna — Native diagrams, clearly.">
-  <meta property="og:description" content="A pure Swift diagram engine and a focused Mac editor.">
+  <meta property="og:description" content="A pure Swift diagram rendering library for macOS apps, with a companion demo and debugging tool.">
   <meta property="og:image" content="https://norna-native-diagrams.civillamp6.chatgpt.site/assets/brand/social-cover.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -46,7 +46,7 @@
 <section class="principles wrap" aria-label="Features" data-i18n-aria="features">
   <article><span class="feature-index">01</span><h2 data-i18n="feature1Title">Native, all the way.</h2><p data-i18n="feature1">Parsing, text measurement, layout, and drawing happen in Swift. No browser runtime in your app.</p></article>
   <article><span class="feature-index">02</span><h2 data-i18n="feature2Title">One scene. More possibilities.</h2><p data-i18n="feature2">The native canvas and SVG share the same geometry. Preview your diagram, then take it with you.</p></article>
-  <article><span class="feature-index">03</span><h2 data-i18n="feature3Title">A focused native editor.</h2><p data-i18n="feature3">System typography, light and dark appearances, and a focused editor for your Mermaid files.</p></article>
+  <article><span class="feature-index">03</span><h2 data-i18n="feature3Title">Ready to integrate.</h2><p data-i18n="feature3">Add NornaKit as a Swift Package. Parse, lay out, draw, and export diagrams directly in your app.</p></article>
 </section>
 <section class="examples wrap" id="examples">
   <div class="section-heading"><div><p class="eyebrow" data-i18n="collection">THE NATIVE COLLECTION</p><h2 data-i18n="examplesTitle">A little syntax. A lot of clarity.</h2></div><span class="count" data-i18n="families">33 diagram families · 36 examples</span></div>
@@ -60,7 +60,12 @@
   <details class="gallery-details"><summary><span data-i18n="browseAll">Browse all 36 examples</span><svg class="ui-icon accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="gallery" id="gallery"></div></details>
 </section>
 <section class="getting-started wrap" id="start">
-  <div class="start-intro"><p class="eyebrow" data-i18n="builtFor">NATIVE DIAGRAMS FOR YOUR APP</p><h2 data-i18n-html="startTitle">A native canvas.<br>A familiar language.</h2><p data-i18n="startDescription">Use the rendering library in your app, or open Norna Studio to write, preview, and export diagrams on your Mac.</p><a class="text-link" href="docs.html"><span data-i18n="readDocs">Read the documentation</span><span aria-hidden="true">→</span></a><div class="studio-badge"><span class="studio-app-icon" aria-hidden="true"><img data-image-theme="light" src="assets/brand/app-icon-light.png" width="48" height="48" alt=""><img data-image-theme="dark" src="assets/brand/app-icon-dark.png" width="48" height="48" alt=""></span><div><strong>Norna Studio</strong><span data-i18n="studioSubtitle">The companion Mac editor</span></div></div></div>
+  <div class="start-intro"><p class="eyebrow" data-i18n="builtFor">NATIVE DIAGRAMS FOR YOUR APP</p><h2 data-i18n-html="startTitle">A native canvas.<br>A familiar language.</h2><p data-i18n="startDescription">Add NornaKit to your app for native diagram rendering and export. Norna Studio is an optional Mac tool for demos, rendering checks, debugging, and occasional exports.</p><a class="text-link" href="docs.html"><span data-i18n="readDocs">Read the documentation</span><span aria-hidden="true">→</span></a><div class="studio-badge"><span class="studio-app-icon" aria-hidden="true"><img data-image-theme="light" src="assets/brand/app-icon-light.png" width="48" height="48" alt=""><img data-image-theme="dark" src="assets/brand/app-icon-dark.png" width="48" height="48" alt=""></span><div><strong>Norna Studio</strong><span data-i18n="studioSubtitle">Companion demo and debugging tool</span></div></div><details class="studio-launch-help"><summary data-i18n="studioLaunchTitle">Blocked when opening Norna Studio?</summary>
+<p data-i18n="studioLaunchNotice">Norna Studio currently has no Developer ID signature or Apple notarization. macOS may report that the developer cannot be verified or the app cannot be opened.</p>
+<p data-i18n="studioLaunchSteps">After downloading from this project’s GitHub Releases and verifying that you trust the app, move Norna Studio to Applications. Open Terminal and run:</p>
+<pre><code>xattr -dr com.apple.quarantine "/Applications/Norna Studio.app"</code></pre>
+<p data-i18n="studioLaunchAfter">Then open Norna Studio again. This command removes the download quarantine attribute from this app. If you installed it elsewhere, replace the path with its actual location. It does not repair an incomplete or damaged download.</p>
+<a class="text-link" href="docs.html#studio-first-launch" data-i18n="studioLaunchGuide">Installation and first-launch help</a></details></div>
   <div class="integration"><div class="panel-toolbar"><span>Swift</span><button class="quiet-button" id="copy-swift" data-i18n="copy">Copy</button></div><pre><code id="swift-code"><span class="syntax-keyword">import</span> NornaKit
 
 <span class="syntax-keyword">let</span> renderer = NativeDiagramRenderer()

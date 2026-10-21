@@ -6,68 +6,20 @@
 
 **让思路，清晰成形。**
 
-Norna 是纯 Swift 图表引擎与原生 Mac 工作台。解析、文本测量、布局、绘制和导出均在原生侧完成，无须浏览器、JavaScript 运行时或网络服务。
+Norna 是纯 Swift 原生图表渲染库，核心产品为 **NornaKit**，用于在 macOS 应用中解析 Mermaid 源码、布局并绘制图表。解析、文本测量、布局、绘制和导出均在原生侧完成，无须浏览器、JavaScript 运行时或网络服务。
 
-- **NornaKit** 是用于集成到 macOS 应用的渲染库。
-- **Norna Studio** 是配套的 Mermaid 源码编辑、预览与导出工作台。
+- **NornaKit** 提供解析、布局、原生绘制与导出能力，是本项目的主要内容。
+- **Norna Studio** 是配套的 Mac 演示与开发工具，用于查看渲染效果、临时渲染、调试和导出图表。集成渲染库无须安装该应用。
 
-![Norna 原生绘制的图表](website/dist/assets/hero-zh-light.png)
-
-## 功能
-
-- 支持 33 类图形，覆盖流程图、时序图、类图、状态图、实体关系图、甘特图、思维导图与数据图表。
-- 实时预览、自适应布局、画布平移缩放与源码错误定位。
-- 英文和简体中文界面与示例。
-- 系统浅色、深色与高对比度外观，以及可配置的图表配色。
-- 内联 SF Symbols 与原生富文本扩展。
-- PNG、JPEG、TIFF、SVG 和 PDF 导出。
-
-各类图形的语法支持程度不同，具体范围与限制见[支持矩阵](Docs/SUPPORT.md)。项目不宣称完整兼容 Mermaid 的全部语法。
-
-## 下载 Norna Studio
-
-要求 **macOS 14 或更高版本**。通用应用同时支持 **Apple Silicon 与 Intel Mac**。
-
-[下载 DMG](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-universal.dmg) · [下载 ZIP](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-universal.zip) · [全部版本](https://github.com/dufu1991/norna/releases)
-
-首次工作台发布流程成功后，下载链接才会生效。打开 DMG，将 **Norna Studio** 拖入 **Applications**，或解压 ZIP 后移动应用。每个版本均附带 SHA-256 校验和与 `release.json` 清单。
-
-发布说明会标明签名状态。在仓库配置 Apple 凭据前，软件包使用**临时签名，未经 Apple 公证**，可能被 macOS Gatekeeper 拦截。可在仓库设置中启用 Developer ID 签名与公证，步骤见[发布指南](Docs/RELEASING.md)。
-
-## 从源码构建
-
-完整应用要求 **Xcode 27.1 或更高版本**，Swift Package 要求 **Swift 6**。项目没有外部包依赖。
-
-```sh
-git clone https://github.com/dufu1991/norna.git
-cd norna
-open Norna.xcodeproj
-```
-
-选择 `NornaStudio` scheme 并运行，或启动 Swift Package 可执行程序：
-
-```sh
-swift run NornaStudio
-```
-
-Xcode 应用使用原生分层图标，Swift Package 可执行程序使用随包分发的静态图标。
-
-运行测试：
-
-```sh
-swift test
-python3 -m unittest discover -s Tests/ReleaseTests -p 'test_*.py'
-```
-
-本地构建通用版 DMG 和 ZIP：
-
-```sh
-bash Scripts/Release/package.sh
-```
-
-产物位于 `build/release/`。该命令执行构建和打包，不启动工作台，也不发布到 GitHub。
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/hero-zh-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="website/dist/assets/hero-zh-light.png">
+  <img alt="Norna 原生绘制的图表" src="website/dist/assets/hero-zh-light.png">
+</picture>
 
 ## 集成 NornaKit
+
+要求 **macOS 14 或更高版本**、**Swift 6**，没有外部包依赖。
 
 将本仓库添加为 Swift Package 依赖，链接 **NornaKit** 产品。在渲染库版本标签发布前，使用 `main` 分支或固定到具体提交：
 
@@ -87,16 +39,95 @@ let svg = diagram.themedSVG(.appleLight)
 
 `diagram.scene` 包含原生几何。`CoreGraphicsDiagramPainter` 可将场景绘制到 AppKit 图形上下文，`DiagramExporter` 负责图像与 PDF 导出。详细用法与扩展语法见[使用指南](Docs/GUIDE.md)。
 
+## 功能
+
+- 支持 33 类图形，覆盖流程图、时序图、类图、状态图、实体关系图、甘特图、思维导图与数据图表。
+- Mermaid 源码解析、原生文本测量、自适应布局与源码错误定位。
+- 可供宿主应用绘制的原生场景几何，以及中英文示例源码。
+- 系统浅色、深色与高对比度外观，以及可配置的图表配色。
+- 内联 SF Symbols 与原生富文本扩展。
+- PNG、JPEG、TIFF、SVG 和 PDF 导出。
+
+各类图形的语法支持程度不同，具体范围与限制见[支持矩阵](Docs/SUPPORT.md)。项目不宣称完整兼容 Mermaid 的全部语法。
+
+## 开发与验证
+
+```sh
+git clone https://github.com/dufu1991/norna.git
+cd norna
+swift build --target NornaKit
+swift test
+```
+
+库源码位于 `Sources/NornaKit/`，测试与回归资料分别位于 `Tests/NornaKitTests/` 和 `Baselines/`。目录约定与开发命令见[开发指南](Docs/DEVELOPMENT.md)。
+
+## 配套工具：Norna Studio
+
+Norna Studio 调用同一套 NornaKit API，用于演示库能力、复现和调试渲染问题，以及临时将 Mermaid 源码渲染并导出为图片、SVG 或 PDF。工作台提供源码编辑、实时预览、画布平移缩放与中英文界面。
+
+### 下载与运行
+
+要求 **macOS 14 或更高版本**。仅支持 **Apple Silicon Mac**。
+
+[下载 DMG](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-arm64.dmg) · [下载 ZIP](https://github.com/dufu1991/norna/releases/latest/download/Norna-Studio-macOS-arm64.zip) · [全部版本](https://github.com/dufu1991/norna/releases)
+
+首次工作台发布流程成功后，下载链接才会生效。打开 DMG，将 **Norna Studio** 拖入 **Applications**，或解压 ZIP 后移动应用。每个版本均附带 SHA-256 校验和与 `release.json` 清单。
+
+发布说明会标明签名状态。在仓库配置 Apple 凭据前，软件包使用**临时签名，未经 Apple 公证**，可能被 macOS Gatekeeper 拦截。可在仓库设置中启用 Developer ID 签名与公证，步骤见[发布指南](Docs/RELEASING.md)。
+
+### 通过 Homebrew 安装
+
+配套工作台也通过个人 [dufu1991/tap](https://github.com/dufu1991/homebrew-tap) 仓库中的 Cask 分发：
+
+```sh
+brew install --cask dufu1991/tap/norna-studio
+```
+
+更新命令：
+
+```sh
+brew update
+brew upgrade --cask dufu1991/tap/norna-studio
+```
+
+Norna Studio 的 Cask 发布到 tap 后，上述命令才会生效。Homebrew 安装的是 GitHub Releases 中的同一份应用，签名状态相同。NornaKit 渲染库仍通过 Swift Package Manager 集成。
+
+### 从源码运行
+
+完整应用要求 **Xcode 27.1 或更高版本**。打开工程并选择 `NornaStudio` scheme 运行：
+
+```sh
+open Norna.xcodeproj
+```
+
+也可以使用 Swift Package 启动配套工具：
+
+```sh
+swift run NornaStudio
+```
+
+Xcode 应用使用原生分层图标，Swift Package 可执行程序使用随包分发的静态图标。工作台运行与调试说明见[使用指南](Docs/GUIDE.md)。
+
+### 打包配套工具
+
+```sh
+python3 -m unittest discover -s Tests/ReleaseTests -p 'test_*.py'
+bash Scripts/Release/package.sh
+```
+
+Apple Silicon 版 DMG 和 ZIP 位于 `build/release/`。打包命令不启动工作台，也不发布到 GitHub。
+
 ## CI 与版本发布
 
 | 时机 | 自动执行 |
 | --- | --- |
-| 推送到 `main`，或向 `main` 提交 PR | 测试、通用版 Release 构建与网站资源校验 |
+| 推送到 `main`，或向 `main` 提交 PR | 测试、Apple Silicon 版 Release 构建与网站资源校验 |
 | `main` 中的 `Configuration/Studio-Version.xcconfig` 发生变化 | 检查通过后打包，发布 `studio-vX.Y.Z` |
 | 在 `main` 手动运行工作流，并开启 `release` | 发布当前工作台版本，或恢复失败的发布草稿 |
+| 工作台 Release 成功，且已配置 `HOMEBREW_TAP_TOKEN` | 在 `dufu1991/homebrew-tap` 创建或更新 `Casks/norna-studio.rb` |
 | 推送渲染库的 `vX.Y.Z` 标签 | 不发布工作台应用 |
 
-**工作台与 NornaKit 独立维护版本。** 发布工作台时，修改版本文件中的 `MARKETING_VERSION`，并递增 `CURRENT_PROJECT_VERSION`。包含该文件的首次推送也会触发发布。普通提交不创建新 Release，已发布的工作台版本不会被覆盖。配置和重试方式见[发布指南](Docs/RELEASING.md)。
+**NornaKit 是主要的库产品，工作台独立维护版本。** 发布工作台时，修改版本文件中的 `MARKETING_VERSION`，并递增 `CURRENT_PROJECT_VERSION`。包含该文件的首次推送也会触发发布。普通提交不创建新 Release，已发布的工作台版本不会被覆盖。配置和重试方式见[发布指南](Docs/RELEASING.md)。
 
 ## 目录结构
 
