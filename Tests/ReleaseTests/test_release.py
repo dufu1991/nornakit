@@ -76,7 +76,7 @@ class ReleaseTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory)
             (path / "release.json").write_text(json.dumps(read_version() | {"commit": "a"}))
-            for name in ["Norna-Studio-macOS-universal.dmg", "Norna-Studio-macOS-universal.zip", "SHA256SUMS.txt", "RELEASE_NOTES.md"]:
+            for name in ["Norna-Studio-macOS-arm64.dmg", "Norna-Studio-macOS-arm64.zip", "SHA256SUMS.txt", "RELEASE_NOTES.md"]:
                 (path / name).write_text("fixture")
             publish("owner/repo", "a", path)
             calls = [call.args for call in gh.call_args_list]

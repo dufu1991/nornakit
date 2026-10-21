@@ -1,0 +1,78 @@
+name: Publish Studio to Homebrew
+
+on:
+  workflow_call:
+    inputs:
+      tag:
+        description: Published Studio tag
+        type: string
+        required: true
+    secrets:
+      HOMEBREW_TAP_TOKEN:
+        required: false
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Published Studio tag, for example studio-v0.1.1
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: studio-homebrew
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'dufu1991/norna' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check tap credentials
+        id: credentials
+        env:
+          HOMEBREW_TAP_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+        run: |
+          if [[ -z "$HOMEBREW_TAP_TOKEN" ]]; then
+            echo '::warning::Homebrew publication is not configured. Set HOMEBREW_TAP_TOKEN with Contents write access to dufu1991/homebrew-tap.'
+            echo 'Homebrew was not updated. Configure HOMEBREW_TAP_TOKEN and rerun this workflow for the published Studio tag.' >> "$GITHUB_STEP_SUMMARY"
+            echo 'configured=false' >> "$GITHUB_OUTPUT"
+          else
+            echo 'configured=true' >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v7
+        if: steps.credentials.outputs.configured == 'true'
+        with:
+          persist-credentials: false
+      - name: Download and verify the published Studio package
+        if: steps.credentials.outputs.configured == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STUDIO_TAG: ${{ inputs.tag }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import re
+          import subprocess
+          tag = os.environ['STUDIO_TAG']
+          if not re.fullmatch(r'studio-v(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)', tag):
+              raise SystemExit('Expected a stable studio-vX.Y.Z tag')
+          release = json.loads(subprocess.check_output([
+              'gh', 'api', f'repos/dufu1991/norna/releases/tags/{tag}'
+          ], text=True))
+          if release['draft'] or release['prerelease'] or release['tag_name'] != tag:
+              raise SystemExit('Only a published stable Studio release can be sent to Homebrew')
+          PY
+          gh release download "$STUDIO_TAG" --repo dufu1991/norna \
+            --pattern Norna-Studio-macOS-arm64.dmg \
+            --pattern release.json --pattern SHA256SUMS.txt --dir build/release
+          python3 Scripts/Release/homebrew.py render --tag "$STUDIO_TAG"
+          ruby -c build/release/norna-studio.rb
+      - name: Update the companion app Cask in the personal tap
+        if: steps.credentials.outputs.configured == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+        run: python3 Scripts/Release/homebrew.py sync

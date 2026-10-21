@@ -38,13 +38,13 @@ jobs:
         run: python3 -m unittest discover -s Tests/ReleaseTests -p 'test_*.py'
       - name: Test Swift package
         run: swift test --build-system native
-      - name: Build universal workbench
+      - name: Build Apple Silicon workbench
         run: |
           xcodebuild build \
             -project Norna.xcodeproj -scheme NornaStudio \
             -configuration Release -destination 'generic/platform=macOS' \
             -derivedDataPath build \
-            'ARCHS=arm64 x86_64' ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO
+            ARCHS=arm64 ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO
       - name: Check website resources
         run: |
           python3 website/scripts/verify-brand.py
@@ -60,6 +60,8 @@ jobs:
   release:
     name: Publish Norna Studio
     needs: checks
+    outputs:
+      tag: ${{ steps.version.outputs.tag }}
     if: >-
       needs.checks.outputs.release == 'true' &&
       github.repository == 'dufu1991/norna' &&
@@ -108,3 +110,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 Scripts/Release/github_release.py publish
+
+  homebrew:
+    name: Update Homebrew Cask
+    needs: release
+    if: needs.release.outputs.tag != ''
+    uses: ./.github/workflows/homebrew.yml
+    with:
+      tag: ${{ needs.release.outputs.tag }}
+    secrets:
+      HOMEBREW_TAP_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}

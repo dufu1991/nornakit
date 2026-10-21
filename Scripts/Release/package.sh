@@ -35,15 +35,17 @@ xcodebuild build \
     -project Norna.xcodeproj -scheme NornaStudio \
     -configuration Release -destination 'generic/platform=macOS' \
     -derivedDataPath build \
-    'ARCHS=arm64 x86_64' ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO
+    ARCHS=arm64 ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO
 
 app="$project_root/build/Build/Products/Release/Norna Studio.app"
 app_version="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$app/Contents/Info.plist")"
 app_build="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$app/Contents/Info.plist")"
 [[ "$app_version" == "$version" && "$app_build" == "$build_number" ]]
-for architecture in arm64 x86_64; do
-    lipo "$app/Contents/MacOS/Norna Studio" -verify_arch "$architecture"
-    lipo "$app/Contents/Frameworks/NornaKit.framework/NornaKit" -verify_arch "$architecture"
+for binary in "$app/Contents/MacOS/Norna Studio" "$app/Contents/Frameworks/NornaKit.framework/NornaKit"; do
+    if [[ "$(lipo -archs "$binary")" != arm64 ]]; then
+        echo "Expected only arm64 architecture: $binary" >&2
+        exit 1
+    fi
 done
 
 identity='-'
@@ -101,8 +103,8 @@ if [[ "$signing" == true ]]; then
     spctl --assess --type execute --verbose=2 "$app"
 fi
 
-zip_path="$output/Norna-Studio-macOS-universal.zip"
-dmg_path="$output/Norna-Studio-macOS-universal.dmg"
+zip_path="$output/Norna-Studio-macOS-arm64.zip"
+dmg_path="$output/Norna-Studio-macOS-arm64.dmg"
 rm -f "$zip_path" "$dmg_path"
 ditto -c -k --sequesterRsrc --keepParent "$app" "$zip_path"
 mkdir "$temporary/dmg"
@@ -127,7 +129,7 @@ sys.path.insert(0, 'Scripts/Release')
 from version import read_version
 metadata = read_version() | {
     'commit': os.environ.get('GITHUB_SHA', 'working-tree'),
-    'architectures': ['arm64', 'x86_64'],
+    'architectures': ['arm64'],
     'minimumMacOS': '14.0',
     'signing': 'developer-id-notarized' if os.environ['NORNA_PACKAGE_SIGNING'] == 'true' else 'ad-hoc',
 }
@@ -138,7 +140,7 @@ signing_note = ('Signed with Developer ID and notarized by Apple.' if metadata['
          'macOS Gatekeeper may block it. Review the source and build locally if you require a trusted developer signature.')
 notes = f"""## Norna Studio {metadata['version']}
 
-Build {metadata['build']} · macOS 14 or later · Apple Silicon and Intel
+Build {metadata['build']} · macOS 14 or later · Apple Silicon
 
 Download the DMG, open it, and drag **Norna Studio** to **Applications**. A ZIP containing the same app is also available.
 
@@ -154,6 +156,6 @@ Source commit: `{metadata['commit']}`.
 PY
 (
     cd "$output"
-    shasum -a 256 Norna-Studio-macOS-universal.dmg Norna-Studio-macOS-universal.zip release.json > SHA256SUMS.txt
+    shasum -a 256 Norna-Studio-macOS-arm64.dmg Norna-Studio-macOS-arm64.zip release.json > SHA256SUMS.txt
 )
 echo "Packaged Norna Studio $version ($build_number) in $output"

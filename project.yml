@@ -6,6 +6,7 @@ options:
     macOS: "14.0"
 settings:
   base:
+    ARCHS: arm64
     SWIFT_VERSION: "5.0"
     CODE_SIGN_STYLE: Automatic
 targets:

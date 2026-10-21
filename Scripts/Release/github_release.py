@@ -63,8 +63,8 @@ def publish(repository, sha, directory):
     manifest = json.loads((directory / "release.json").read_text(encoding="utf-8"))
     if any(manifest[key] != value for key, value in metadata.items()) or manifest["commit"] != sha:
         raise ValueError("Package metadata does not match this release")
-    assets = [directory / name for name in ["Norna-Studio-macOS-universal.dmg",
-              "Norna-Studio-macOS-universal.zip", "SHA256SUMS.txt", "release.json"]]
+    assets = [directory / name for name in ["Norna-Studio-macOS-arm64.dmg",
+              "Norna-Studio-macOS-arm64.zip", "SHA256SUMS.txt", "release.json"]]
     if not all(path.is_file() for path in assets):
         raise ValueError("The release package is incomplete")
     pages = json.loads(gh("api", "--paginate", "--slurp", f"repos/{repository}/releases?per_page=100"))
