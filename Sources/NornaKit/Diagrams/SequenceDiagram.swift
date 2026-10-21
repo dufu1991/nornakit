@@ -170,8 +170,19 @@ enum SequenceDiagram {
     static func layout(_ model: SequenceModel, options: DiagramLayoutOptions) throws -> DiagramScene {
         let participants = model.participants
         let indexes = Dictionary(uniqueKeysWithValues: participants.enumerated().map { ($1.id, $0) })
-        let slot = options.maxWidth.map { max(64, ($0 - 32 - CGFloat(max(0, participants.count - 1)) * 28) / CGFloat(participants.count)) } ?? 240
-        let widths = participants.map { max(options.compact ? 64 : 100, min(options.compact ? min(160, slot) : 240, TextMeasurement.width($0.label) + 36)) }
+        let slot: CGFloat
+        if let maxWidth = options.maxWidth {
+            let totalGapWidth = CGFloat(max(0, participants.count - 1)) * 28
+            let availableWidth = maxWidth - 32 - totalGapWidth
+            slot = max(64, availableWidth / CGFloat(participants.count))
+        } else {
+            slot = 240
+        }
+        let widths: [CGFloat] = participants.map { participant in
+            let minimum: CGFloat = options.compact ? 64 : 100
+            let maximum: CGFloat = options.compact ? min(160, slot) : 240
+            return max(minimum, min(maximum, TextMeasurement.width(participant.label) + 36))
+        }
         var gaps = Array(repeating: CGFloat(options.compact ? 28 : 72), count: max(0, participants.count - 1))
         var leftMargin: CGFloat = options.compact ? 16 : 120, rightMargin: CGFloat = options.compact ? 16 : 120
         for event in model.events {
@@ -189,13 +200,21 @@ enum SequenceDiagram {
             }
         }
         var xs: [CGFloat] = [leftMargin + widths[0] / 2]
-        for i in 1..<participants.count { xs.append(xs[i - 1] + widths[i - 1] / 2 + gaps[i - 1] + widths[i] / 2) }
-        let width = xs.last! + widths.last! / 2 + rightMargin
+        for i in 1..<participants.count {
+            let previousRight = xs[i - 1] + widths[i - 1] / 2
+            let center = previousRight + gaps[i - 1] + widths[i] / 2
+            xs.append(center)
+        }
+        let width: CGFloat = xs.last! + widths.last! / 2 + rightMargin
         let content = SceneBuilder(.sequence), backgrounds = SceneBuilder(.sequence), lifelines = SceneBuilder(.sequence), activations = SceneBuilder(.sequence)
         let titleHeight = content.title(model.title, width: width)
-        let actorY = titleHeight + 16
-        let actorHeight = max(50, zip(participants, widths).map { CGFloat(TextMeasurement.lines($0.0.label, maxWidth: $0.1 - 16).count) * 22 + 12 }.max() ?? 50)
-        var y = actorY + max(100, actorHeight + 40)
+        let actorY: CGFloat = titleHeight + 16
+        let actorHeights: [CGFloat] = zip(participants, widths).map { participant, participantWidth in
+            let lines = TextMeasurement.lines(participant.label, maxWidth: participantWidth - 16)
+            return CGFloat(lines.count) * 22 + 12
+        }
+        let actorHeight: CGFloat = max(50, actorHeights.max() ?? 50)
+        var y: CGFloat = actorY + max(100, actorHeight + 40)
         var number = 1, step = 1, numbering = false
         var activationStarts: [String: [CGFloat]] = [:]
         var destroyed: [String: CGFloat] = [:]
@@ -263,7 +282,14 @@ enum SequenceDiagram {
                 messageIndex += 1
                 number += step
                 if change < 0 { closeActivation(from, y) }
-                y += a == b ? loopHeight + labelSize.height / 2 + 26 : max(labelSize.height / 2 + 26, creating == to ? actorHeight / 2 + 18 : 0)
+                let messageSpacing: CGFloat
+                if a == b {
+                    messageSpacing = loopHeight + labelSize.height / 2 + 26
+                } else {
+                    let creationSpacing: CGFloat = creating == to ? actorHeight / 2 + 18 : 0
+                    messageSpacing = max(labelSize.height / 2 + 26, creationSpacing)
+                }
+                y += messageSpacing
                 creating = nil
             case .note(let ids, let placement, let text):
                 let a = xs[indexes[ids[0]]!], b = xs[indexes[ids.last!]!]
@@ -286,7 +312,7 @@ enum SequenceDiagram {
                 y += 24
             }
         }
-        let endY = y + 12
+        let endY: CGFloat = y + 12
         for participant in participants {
             while activationStarts[participant.id]?.isEmpty == false { closeActivation(participant.id, endY) }
         }
@@ -299,7 +325,7 @@ enum SequenceDiagram {
                 drawParticipant(participant, frame: CGRect(x: x - widths[index] / 2, y: top, width: widths[index], height: actorHeight), builder: content)
             }
         }
-        let height = endY + 110
+        let height: CGFloat = endY + 110
         for (box, label) in model.boxes.enumerated() {
             let members = participants.indices.filter { participants[$0].box == box }
             guard let first = members.first, let last = members.last else { continue }

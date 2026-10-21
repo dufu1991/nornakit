@@ -1,3 +1,3 @@
 // Norna Studio has a release cycle independent of the Norna Swift package.
 MARKETING_VERSION = 0.1.0
-CURRENT_PROJECT_VERSION = 2
+CURRENT_PROJECT_VERSION = 3

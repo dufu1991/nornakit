@@ -89,7 +89,7 @@ enum EdgeLabelLayout {
                 let outside = domain.map { $0.contains(r) ? 0 : 1 } ?? 0
                 let clearance = min(length * t, length * (1 - t)) - extent / 2
                 let shortage = max(0, 16 - clearance)
-                let score = CGFloat(collisions) * 100_000 + CGFloat(crossings) * 20_000 + CGFloat(outside) * 10_000
+                let score: CGFloat = CGFloat(collisions) * 100_000 + CGFloat(crossings) * 20_000 + CGFloat(outside) * 10_000
                     + overlap * 10_000 + shortage * 100 + abs(t - 0.5) * 40 - min(length, 300) * 0.02
                 if best == nil || score < best!.1 { best = (r, score) }
             }
