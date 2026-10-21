@@ -1,0 +1,7 @@
+flowchart TB
+    A["[b]粗体重点[/b] 与 [i]斜体说明[/i]"]
+    B["调用 [code]render(source)[/code] 方法"]
+    C["[u]下划线[/u] 与 [s]已取消[/s] 状态"]
+    D["[color=#2563eb][b]这是一段带有颜色和粗体的长标签，自动换行后仍然保留文字样式。[/b][/color]"]
+    A -->|"[b]保留[/b] :sf:checkmark.circle.fill: 样式"| B
+    B --> C --> D

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="101.70" height="62.00" viewBox="0 0 101.70 62.00" role="img" aria-label="状态图">
+<title>状态图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="stateId"><title>stateId</title><rect x="8.00" y="8.00" width="85.70" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="50.85" y="36.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">stateId</text></g>
+</svg>

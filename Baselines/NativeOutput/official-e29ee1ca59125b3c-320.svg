@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680.00" height="96.00" viewBox="0 0 680.00 96.00" role="img" aria-label="块图">
+<title>块图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="block-edge-0"><title></title><path d="M 156.00 48.00 L 524.00 48.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 524.00 48.00 L 516.00 51.36 L 516.00 44.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-block-edge-0"><title></title><rect x="328.20" y="39.00" width="23.61" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="340.00" y="52.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">X</text>
+<g data-id="A"><title></title><path d="M 16.00 8.00 L 148.00 8.00 C 152.42 8.00 156.00 11.58 156.00 16.00 L 156.00 80.00 C 156.00 84.42 152.42 88.00 148.00 88.00 L 16.00 88.00 C 11.58 88.00 8.00 84.42 8.00 80.00 L 8.00 16.00 C 8.00 11.58 11.58 8.00 16.00 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="82.00" y="52.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">A</text>
+<g data-id="B"><title></title><path d="M 532.00 8.00 L 664.00 8.00 C 668.42 8.00 672.00 11.58 672.00 16.00 L 672.00 80.00 C 672.00 84.42 668.42 88.00 664.00 88.00 L 532.00 88.00 C 527.58 88.00 524.00 84.42 524.00 80.00 L 524.00 16.00 C 524.00 11.58 527.58 8.00 532.00 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="598.00" y="52.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">B</text></g>
+</svg>

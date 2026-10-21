@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="370.57" height="396.00" viewBox="0 0 370.57 396.00" role="img" aria-label="状态图">
+<title>状态图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="8.00" y="100.00" width="129.21" height="288.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.50" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="72.61" y="124.50" text-anchor="middle" font-size="15.71" font-weight="400" fill="#808080">First</text>
+<rect x="177.21" y="100.00" width="185.36" height="288.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.50" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="269.89" y="124.50" text-anchor="middle" font-size="15.71" font-weight="400" fill="#808080">NamedComposite</text>
+<g data-id="relation-0"><title></title><path d="M 183.74 38.87 L 180.51 57.43 C 178.51 68.94 170.12 76.00 158.44 76.00 L 84.61 76.00 C 77.17 76.00 72.61 80.56 72.61 88.00 L 72.61 100.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 72.61 100.00 L 69.25 92.00 L 75.97 92.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 72.61 169.00 L 72.61 230.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 72.61 230.00 L 69.25 222.00 L 75.97 222.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-2"><title></title><path d="M 72.61 276.00 L 72.61 337.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 72.61 337.00 L 69.25 329.00 L 75.97 329.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-3"><title></title><path d="M 186.83 38.87 L 190.06 57.43 C 192.06 68.94 200.45 76.00 212.13 76.00 L 257.89 76.00 C 265.33 76.00 269.89 80.56 269.89 88.00 L 269.89 100.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 269.89 100.00 L 266.53 92.00 L 273.25 92.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-4"><title></title><path d="M 269.89 169.00 L 269.89 230.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 269.89 230.00 L 266.53 222.00 L 273.25 222.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-5"><title></title><path d="M 269.89 276.00 L 269.89 337.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 269.89 337.00 L 266.53 329.00 L 273.25 329.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="@initial_First_0"><title></title><ellipse cx="72.61" cy="160.00" rx="9.00" ry="9.00" fill="#272727" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="second"><title>second</title><rect x="28.00" y="230.00" width="89.21" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="72.61" y="258.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">second</text>
+<g data-id="@final_First_0"><title></title><ellipse cx="72.61" cy="346.00" rx="9.00" ry="9.00" fill="#ffffff" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<ellipse cx="72.61" cy="346.00" rx="5.00" ry="5.00" fill="#272727" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="@initial_NamedComposite_0"><title></title><ellipse cx="269.89" cy="160.00" rx="9.00" ry="9.00" fill="#272727" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="namedSimple"><title>Another simple</title><rect x="197.21" y="230.00" width="145.36" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="269.89" y="258.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Another simple</text>
+<g data-id="@final_NamedComposite_0"><title></title><ellipse cx="269.89" cy="346.00" rx="9.00" ry="9.00" fill="#ffffff" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<ellipse cx="269.89" cy="346.00" rx="5.00" ry="5.00" fill="#272727" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="@initial_root"><title></title><ellipse cx="185.29" cy="30.00" rx="9.00" ry="9.00" fill="#272727" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+</svg>

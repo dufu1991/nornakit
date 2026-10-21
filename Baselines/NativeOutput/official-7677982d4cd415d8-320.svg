@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="694.86" height="440.00" viewBox="0 0 694.86 440.00" role="img" aria-label="泳道图">
+<title>泳道图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="8.00" y="8.00" width="244.84" height="424.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.40" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="16.00" y="16.00" width="228.84" height="36.00" rx="8.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="0.12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="130.42" y="38.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Customer</text>
+<rect x="264.84" y="8.00" width="200.00" height="424.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.40" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="272.84" y="16.00" width="184.00" height="36.00" rx="8.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="0.12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="364.84" y="38.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Warehouse</text>
+<rect x="476.84" y="8.00" width="210.02" height="424.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.40" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="484.84" y="16.00" width="194.02" height="36.00" rx="8.00" fill="#ff8d28" stroke="none" stroke-width="1.00" opacity="0.12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="581.85" y="38.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Finance</text>
+<g data-id="lane-edge-0"><title></title><path d="M 130.42 116.00 L 130.42 164.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 130.42 164.00 L 127.06 156.00 L 133.78 156.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="lane-edge-1"><title></title><path d="M 161.48 179.00 L 277.73 179.00 C 290.13 179.00 297.73 186.60 297.73 199.00 L 297.73 275.00 C 297.73 278.72 300.01 281.00 303.73 281.00 L 309.73 281.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 309.73 281.00 L 301.73 284.36 L 301.73 277.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="lane-edge-2"><title></title><path d="M 364.84 304.00 L 364.84 352.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 364.84 352.00 L 361.48 344.00 L 368.20 344.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="lane-edge-3"><title></title><path d="M 161.48 195.00 L 484.84 195.00 C 497.24 195.00 504.84 202.60 504.84 215.00 L 504.84 275.00 C 504.84 278.72 507.12 281.00 510.84 281.00 L 516.84 281.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 516.84 281.00 L 508.84 284.36 L 508.84 277.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="Browse"><title></title><path d="M 56.00 70.00 L 204.84 70.00 C 209.25 70.00 212.84 73.58 212.84 78.00 L 212.84 108.00 C 212.84 112.42 209.25 116.00 204.84 116.00 L 56.00 116.00 C 51.58 116.00 48.00 112.42 48.00 108.00 L 48.00 78.00 C 48.00 73.58 51.58 70.00 56.00 70.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="130.42" y="98.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Browse catalogue</text>
+<g data-id="Pay"><title></title><path d="M 107.36 164.00 L 153.48 164.00 C 157.89 164.00 161.48 167.58 161.48 172.00 L 161.48 202.00 C 161.48 206.42 157.89 210.00 153.48 210.00 L 107.36 210.00 C 102.94 210.00 99.36 206.42 99.36 202.00 L 99.36 172.00 C 99.36 167.58 102.94 164.00 107.36 164.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="130.42" y="192.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Pay</text>
+<g data-id="Pick"><title></title><path d="M 317.73 258.00 L 411.95 258.00 C 416.36 258.00 419.95 261.58 419.95 266.00 L 419.95 296.00 C 419.95 300.42 416.36 304.00 411.95 304.00 L 317.73 304.00 C 313.31 304.00 309.73 300.42 309.73 296.00 L 309.73 266.00 C 309.73 261.58 313.31 258.00 317.73 258.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="364.84" y="286.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Pick items</text>
+<g data-id="Ship"><title></title><path d="M 317.30 352.00 L 412.38 352.00 C 416.79 352.00 420.38 355.58 420.38 360.00 L 420.38 390.00 C 420.38 394.42 416.79 398.00 412.38 398.00 L 317.30 398.00 C 312.88 398.00 309.30 394.42 309.30 390.00 L 309.30 360.00 C 309.30 355.58 312.88 352.00 317.30 352.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="364.84" y="380.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Ship order</text>
+<g data-id="Invoice"><title></title><path d="M 524.84 258.00 L 638.86 258.00 C 643.28 258.00 646.86 261.58 646.86 266.00 L 646.86 296.00 C 646.86 300.42 643.28 304.00 638.86 304.00 L 524.84 304.00 C 520.42 304.00 516.84 300.42 516.84 296.00 L 516.84 266.00 C 516.84 261.58 520.42 258.00 524.84 258.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="581.85" y="286.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Raise invoice</text></g>
+</svg>

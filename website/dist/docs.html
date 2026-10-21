@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#fafaf9"><meta name="description" content="Documentation for Norna, a pure Swift native diagram engine."><title>Documentation — Norna</title><link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64 128x128 256x256" type="image/vnd.microsoft.icon">
+  <link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <link rel="mask-icon" href="assets/brand/safari-pinned-tab.svg" color="#5148d8">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Norna — Native diagrams, clearly.">
+  <meta property="og:description" content="A pure Swift diagram engine and a focused Mac editor.">
+  <meta property="og:image" content="https://norna-native-diagrams.civillamp6.chatgpt.site/assets/brand/social-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://norna-native-diagrams.civillamp6.chatgpt.site/assets/brand/social-cover.png"><script src="preferences.js"></script><link rel="stylesheet" href="style.css?v=workbench-download"><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="components.css"></head>
+<body data-page="docs"><a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<header class="header wrap"><a class="brand" href="index.html"><span class="brand-symbol" aria-hidden="true"></span><span>Norna</span></a><nav aria-label="Main navigation" data-i18n-aria="navigation"><a href="index.html#examples" data-i18n="examples">Examples</a><a href="index.html#start" data-i18n="getStarted">Get started</a><a class="workbench-download" data-workbench-download role="link" tabindex="0" data-i18n="workbench" data-i18n-aria="workbenchDownload">Studio</a></nav><div class="preferences"><div id="language-picker" class="ui-picker"></div><div id="theme-picker" class="ui-picker"></div></div></header>
+<main class="docs-main" id="main"><p class="eyebrow" data-i18n="docs">Docs</p><h1 data-i18n="docsTitle">Small library. Native foundations.</h1><p data-i18n="docsLead">Norna is a pure Swift diagram engine with a companion Mac editor.</p><p class="notice" data-i18n="setupNotice">Source is available at github.com/dufu1991/norna. Packaged app downloads become available after the first successful Studio release.</p><h2 data-i18n="requirementsTitle">Requirements</h2><p data-i18n="requirements"></p><h2 data-i18n="integrateTitle">Render a diagram</h2><p data-i18n="integrate"></p><div class="panel-toolbar"><span>Swift</span><button id="copy-swift" class="quiet-button" data-i18n="copy">Copy</button></div><pre><code id="swift-code">import NornaKit
+
+let renderer = NativeDiagramRenderer()
+let diagram = try await renderer.render(
+    "flowchart LR\n A[Hello] --&gt; B[Norna]"
+)
+
+let scene = diagram.scene
+let svg = diagram.themedSVG(.appleLight)</code></pre><section aria-labelledby="sf-symbols"><h2 id="sf-symbols" data-i18n="symbolsTitle">SF Symbols inside text</h2>
+<p data-i18n="symbolsLead"></p>
+<pre><code id="symbols-source"></code></pre>
+<figure class="docs-symbols"><div id="symbols-preview" class="native-screenshot"></div><figcaption data-i18n="symbolsCaption"></figcaption></figure>
+<p data-i18n="symbolsLayout"></p><p data-i18n="symbolsAvailability"></p><p data-i18n="symbolsExport"></p><p class="notice" data-i18n="symbolsExtension"></p>
+<p><a id="download-symbols" download data-i18n="symbolsDownload">Download the SF Symbols example</a></p></section>
+<section aria-labelledby="native-inline-content"><h2 id="native-inline-content" data-i18n="inlineTitle">Native content inside labels</h2><p data-i18n="inlineLead"></p>
+<section data-inline-example="sf-symbols-color" aria-labelledby="sf-symbols-color"><h3 id="sf-symbols-color" data-i18n="inlineColorTitle"></h3><p data-i18n="inlineColorBody"></p>
+<pre><code>:sf:cloud.sun.fill@monochrome:
+:sf:cloud.sun.fill@hierarchical:
+:sf:cloud.sun.fill@multicolor:
+:sf:cloud.sun.fill@palette(#2563eb,#f59e0b):</code></pre>
+<pre><code data-inline-source></code></pre><figure class="docs-symbols"><div data-inline-preview class="native-screenshot"></div><figcaption data-i18n="inlineCaption"></figcaption></figure><p><a data-inline-download download data-i18n="inlineDownload"></a></p></section>
+<section data-inline-example="rich-text" aria-labelledby="rich-text"><h3 id="rich-text" data-i18n="inlineRichTitle"></h3><p data-i18n="inlineRichBody"></p>
+<pre><code data-inline-source></code></pre><figure class="docs-symbols"><div data-inline-preview class="native-screenshot"></div><figcaption data-i18n="inlineCaption"></figcaption></figure><p><a data-inline-download download data-i18n="inlineDownload"></a></p></section>
+<h3 data-i18n="inlineLayoutTitle"></h3><p data-i18n="inlineLayoutBody"></p></section>
+<h2 data-i18n="studioTitle">Run Norna Studio</h2><p data-i18n="studio"></p><pre><code>open Norna.xcodeproj
+
+swift run NornaStudio</code></pre><h2 id="support" data-i18n="supportTitle">Support and current limits</h2><p data-i18n="supportIntro"></p><ul><li data-i18n="support1"></li><li data-i18n="support2"></li><li data-i18n="support3"></li><li data-i18n="support4"></li></ul><p><a href="assets/SUPPORT.zh.md" download data-i18n="originalSupport">Download the detailed support matrix in Chinese</a></p><h2 data-i18n="screenshotsTitle">About the examples</h2><p data-i18n="screenshots"></p><h2 data-i18n="attributionTitle">Acknowledgments</h2><p data-i18n="attributionDocs"></p><p><a href="assets/THIRD_PARTY_NOTICES.md" data-i18n="notices">Read third-party notices</a></p><p><a href="assets/README.en.md" download data-i18n="originalReadme">Download the project README</a></p><p><a href="index.html" data-i18n="back">Back to Norna</a></p></main><div id="toast" role="status" aria-live="polite"></div><script type="module" src="app.js?v=workbench-download"></script></body></html>

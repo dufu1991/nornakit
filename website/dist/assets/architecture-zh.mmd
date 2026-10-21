@@ -1,0 +1,7 @@
+architecture-beta
+    group backend[服务层]
+    service api(server)[API 网关] in backend
+    service db(database)[数据库] in backend
+    service web(internet)[客户端]
+    web:R --> L:api
+    api:R --> L:db

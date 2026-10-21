@@ -1,0 +1,9 @@
+sequenceDiagram
+    actor User as User :sf:person.fill:
+    participant App as App :sf:app:
+    participant Cloud as Cloud :sf:icloud:
+    User->>App: Select :sf:doc.text: file
+    Note over App,Cloud: Native :sf:sparkles: symbols and text<br/>Share font size, color and baseline
+    App->>+Cloud: Upload :sf:icloud.and.arrow.up: file
+    Cloud-->>-App: Save :sf:checkmark.circle.fill: Success
+    App-->>User: Show :sf:photo: preview

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="326.59" height="523.00" viewBox="0 0 326.59 523.00" role="img" aria-label="需求图">
+<title>需求图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 101.65 98.00 L 101.65 180.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 101.65 180.00 L 98.29 172.00 L 105.01 172.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-0"><title></title><rect x="68.24" y="146.40" width="66.83" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="101.65" y="159.60" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">«satisfies»</text>
+<g data-id="relation-1"><title></title><path d="M 117.65 98.00 L 117.65 119.00 C 117.65 131.40 125.25 139.00 137.65 139.00 L 203.30 139.00 C 215.70 139.00 223.30 146.60 223.30 159.00 L 223.30 313.00 C 223.30 325.40 215.70 333.00 203.30 333.00 L 137.65 333.00 C 125.25 333.00 117.65 340.60 117.65 353.00 L 117.65 374.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 117.65 374.00 L 114.29 366.00 L 121.01 366.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-1"><title></title><rect x="137.06" y="324.00" width="66.83" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="170.48" y="337.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">«satisfies»</text>
+<g data-id="relation-2"><title></title><path d="M 101.65 292.00 L 101.65 374.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 101.65 374.00 L 98.29 366.00 L 105.01 366.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-2"><title></title><rect x="71.13" y="307.60" width="61.05" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="101.65" y="320.80" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">«derives»</text>
+<g data-id="relation-3"><title></title><path d="M 109.65 486.00 L 109.65 500.00 C 109.65 508.68 114.97 514.00 123.65 514.00 L 269.30 514.00 C 281.70 514.00 289.30 506.40 289.30 494.00 L 289.30 256.00 C 289.30 243.60 281.70 236.00 269.30 236.00 L 195.30 236.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 195.30 236.00 L 203.30 232.64 L 203.30 239.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-3"><title></title><rect x="260.02" y="366.00" width="58.57" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="289.30" y="379.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">«refines»</text>
+<g data-id="fast"><title>fast</title><rect x="8.00" y="180.00" width="187.30" height="112.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="101.65" y="205.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">«requirement»</text><text x="101.65" y="226.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">fast</text>
+<path d="M 8.00 238.00 L 195.30 238.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="257.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">id: 1</text><text x="18.00" y="276.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">text: Renders quickly</text>
+<g data-id="small"><title>small</title><rect x="15.81" y="374.00" width="187.68" height="112.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="109.65" y="399.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">«requirement»</text><text x="109.65" y="420.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">small</text>
+<path d="M 15.81 432.00 L 203.49 432.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="25.81" y="451.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">id: 2</text><text x="25.81" y="470.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">text: Ships little code</text>
+<g data-id="layout"><title>layout</title><rect x="44.34" y="8.00" width="130.63" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="109.65" y="33.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">«element»</text><text x="109.65" y="54.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">layout</text>
+<path d="M 44.34 66.00 L 174.97 66.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="54.34" y="84.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">type: module</text></g>
+</svg>

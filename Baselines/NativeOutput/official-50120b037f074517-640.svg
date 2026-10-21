@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1110.00" height="220.00" viewBox="0 0 1110.00 220.00" role="img" aria-label="思维导图">
+<title>思维导图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 475.00 110.00 C 443.50 110.00 443.50 110.00 412.00 110.00" fill="none" stroke="#0088ff" stroke-width="1.50" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="mindmap-1"><title>A</title><rect x="228.00" y="87.00" width="184.00" height="46.00" rx="8.00" fill="#0088ff" stroke="#0088ff" stroke-width="1.00" opacity="0.16" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="320.00" y="114.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">A</text>
+<path d="M 228.00 110.00 C 210.00 110.00 210.00 70.00 192.00 70.00" fill="none" stroke="#0088ff" stroke-width="1.50" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="mindmap-2"><title>B</title><rect x="8.00" y="47.00" width="184.00" height="46.00" rx="8.00" fill="#0088ff" stroke="#0088ff" stroke-width="1.00" opacity="0.16" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="100.00" y="74.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">B</text>
+<path d="M 228.00 110.00 C 210.00 110.00 210.00 150.00 192.00 150.00" fill="none" stroke="#0088ff" stroke-width="1.50" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="mindmap-3"><title>C</title><rect x="8.00" y="127.00" width="184.00" height="46.00" rx="8.00" fill="#0088ff" stroke="#0088ff" stroke-width="1.00" opacity="0.16" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="100.00" y="154.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">C</text>
+<g data-id="mindmap-root"><title>Root</title><rect x="475.00" y="82.00" width="170.00" height="56.00" rx="28.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="560.00" y="115.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Root</text></g>
+</svg>

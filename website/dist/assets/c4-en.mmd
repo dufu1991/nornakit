@@ -1,0 +1,9 @@
+C4Context
+    title Diagram studio
+    Person(user, "User", "Edit diagrams")
+    System_Boundary(studio, "Norna Studio") {
+        System(editor, "Editor", "Mermaid source")
+        System(engine, "Native engine", "Swift geometry layout")
+    }
+    Rel(user, editor, "Editing")
+    Rel(editor, engine, "Render")

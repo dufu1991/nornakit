@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="404.00" height="578.00" viewBox="0 0 404.00 578.00" role="img" aria-label="时序图">
+<title>时序图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="200.00" y="32.00" width="196.00" height="534.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="8.00" y="32.00" width="196.00" height="534.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="lifeline-A"><title></title><path d="M 56.00 94.00 L 56.00 468.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-J"><title></title><path d="M 156.00 94.00 L 156.00 468.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-B"><title></title><path d="M 248.00 94.00 L 248.00 468.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-C"><title></title><path d="M 348.00 94.00 L 348.00 468.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="message-0"><title></title><path d="M 56.00 187.00 L 156.00 187.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 156.00 187.00 L 148.00 190.36 L 148.00 183.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-0"><title>Hello John,
+ how are y
+ou?</title><rect x="72.27" y="160.00" width="67.47" height="54.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="106.00" y="174.40" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Hello John,</text><text x="106.00" y="191.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727"> how are y</text><text x="106.00" y="208.00" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">ou?</text>
+<g data-id="message-1"><title></title><path d="M 156.00 265.00 L 56.00 265.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 56.00 265.00 L 64.00 261.64 L 64.00 268.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-1"><title>Great!</title><rect x="86.54" y="256.00" width="38.92" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="106.00" y="269.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Great!</text>
+<g data-id="message-2"><title></title><path d="M 56.00 325.00 L 248.00 325.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 248.00 325.00 L 240.00 328.36 L 240.00 321.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-2"><title>Hello Bob, how is Charley?</title><rect x="75.02" y="316.00" width="153.95" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="152.00" y="329.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Hello Bob, how is Charley?</text>
+<g data-id="message-3"><title></title><path d="M 248.00 403.00 L 348.00 403.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 348.00 403.00 L 340.00 406.36 L 340.00 399.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-3"><title>Hello Charl
+ey, how are
+ you?</title><rect x="264.12" y="376.00" width="67.77" height="54.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="298.00" y="390.40" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Hello Charl</text><text x="298.00" y="407.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">ey, how are</text><text x="298.00" y="424.00" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727"> you?</text>
+<g data-id="participant-A"><title>A</title><rect x="24.00" y="44.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="56.00" y="74.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">A</text>
+<g data-id="participant-A"><title>A</title><rect x="24.00" y="480.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="56.00" y="510.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">A</text>
+<g data-id="participant-J"><title>J</title><rect x="124.00" y="44.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="156.00" y="74.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">J</text>
+<g data-id="participant-J"><title>J</title><rect x="124.00" y="480.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="156.00" y="510.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">J</text>
+<g data-id="participant-B"><title>B</title><rect x="216.00" y="44.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="248.00" y="74.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">B</text>
+<g data-id="participant-B"><title>B</title><rect x="216.00" y="480.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="248.00" y="510.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">B</text>
+<g data-id="participant-C"><title>C</title><rect x="316.00" y="44.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="348.00" y="74.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">C</text>
+<g data-id="participant-C"><title>C</title><rect x="316.00" y="480.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="348.00" y="510.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">C</text>
+<text x="106.00" y="24.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#808080">Purple Alice &amp; John</text>
+<text x="298.00" y="24.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#808080">Another Group</text></g>
+</svg>

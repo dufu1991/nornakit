@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="492.96" height="656.00" viewBox="0 0 492.96 656.00" role="img" aria-label="架构图">
+<title>架构图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="architecture-edge-0"><title></title><path d="M 122.00 32.00 L 198.77 32.00 C 211.17 32.00 218.77 39.60 218.77 52.00 L 218.77 236.00 C 218.77 243.44 223.33 248.00 230.77 248.00 L 242.77 248.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="architecture-edge-1"><title></title><path d="M 98.00 196.00 L 98.00 200.00 C 98.00 202.48 99.52 204.00 102.00 204.00 L 256.77 204.00 C 262.97 204.00 266.77 207.80 266.77 214.00 L 266.77 224.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="architecture-edge-2"><title></title><path d="M 98.00 288.00 L 98.00 284.00 C 98.00 281.52 99.52 280.00 102.00 280.00 L 262.77 280.00 C 265.25 280.00 266.77 278.48 266.77 276.00 L 266.77 272.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="architecture-edge-3"><title></title><path d="M 290.77 248.00 L 383.96 248.00 C 396.36 248.00 403.96 255.60 403.96 268.00 L 403.96 300.00 C 403.96 307.44 408.52 312.00 415.96 312.00 L 427.96 312.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="architecture-edge-4"><title></title><path d="M 98.00 476.00 L 98.00 480.00 C 98.00 482.48 99.52 484.00 102.00 484.00 L 463.96 484.00 C 476.36 484.00 483.96 476.40 483.96 464.00 L 483.96 280.00 C 483.96 270.08 477.88 264.00 467.96 264.00 L 463.96 264.00 C 456.52 264.00 451.96 268.56 451.96 276.00 L 451.96 288.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="architecture-edge-5"><title></title><path d="M 98.00 568.00 L 98.00 508.00 C 98.00 498.08 91.92 492.00 82.00 492.00 L 82.00 492.00 C 72.08 492.00 66.00 485.92 66.00 476.00 L 66.00 380.00 C 66.00 367.60 73.60 360.00 86.00 360.00 L 439.96 360.00 C 447.40 360.00 451.96 355.44 451.96 348.00 L 451.96 336.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="left_disk"><title>Disk</title><rect x="74.00" y="8.00" width="48.00" height="48.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 84.00 24.00 C 84.00 16.00 112.00 16.00 112.00 24.00 L 112.00 40.00 C 112.00 48.00 84.00 48.00 84.00 40.00 Z" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 84.00 24.00 C 84.00 32.00 112.00 32.00 112.00 24.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="98.00" y="78.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Disk</text>
+<g data-id="top_disk"><title>Disk</title><rect x="74.00" y="148.00" width="48.00" height="48.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 84.00 164.00 C 84.00 156.00 112.00 156.00 112.00 164.00 L 112.00 180.00 C 112.00 188.00 84.00 188.00 84.00 180.00 Z" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 84.00 164.00 C 84.00 172.00 112.00 172.00 112.00 164.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="98.00" y="134.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Disk</text>
+<g data-id="bottom_disk"><title>Disk</title><rect x="74.00" y="288.00" width="48.00" height="48.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 84.00 304.00 C 84.00 296.00 112.00 296.00 112.00 304.00 L 112.00 320.00 C 112.00 328.00 84.00 328.00 84.00 320.00 Z" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 84.00 304.00 C 84.00 312.00 112.00 312.00 112.00 304.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="98.00" y="358.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Disk</text>
+<g data-id="top_gateway"><title>Gateway</title><rect x="74.00" y="428.00" width="48.00" height="48.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<ellipse cx="98.00" cy="452.00" rx="14.00" ry="8.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 98.00 444.00 L 98.00 460.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 84.00 452.00 L 112.00 452.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="98.00" y="414.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Gateway</text>
+<g data-id="bottom_gateway"><title>Gateway</title><rect x="74.00" y="568.00" width="48.00" height="48.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<ellipse cx="98.00" cy="592.00" rx="14.00" ry="8.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 98.00 584.00 L 98.00 600.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 84.00 592.00 L 112.00 592.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="98.00" y="638.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Gateway</text>
+<g data-id="junctionCenter"><title></title><ellipse cx="266.77" cy="248.00" rx="7.00" ry="7.00" fill="#272727" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="junctionRight"><title></title><ellipse cx="451.96" cy="312.00" rx="7.00" ry="7.00" fill="#272727" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+</svg>

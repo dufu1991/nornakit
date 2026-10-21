@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="396.00" height="852.00" viewBox="0 0 396.00 852.00" role="img" aria-label="时序图">
+<title>时序图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="lifeline-Customer"><title></title><path d="M 48.00 118.00 L 48.00 742.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-Web"><title></title><path d="M 148.00 88.00 L 148.00 742.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-API"><title></title><path d="M 248.00 88.00 L 248.00 742.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-Bank"><title></title><path d="M 348.00 88.00 L 348.00 742.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<rect x="243.00" y="288.00" width="10.00" height="264.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="message-0"><title></title><path d="M 48.00 166.00 L 148.00 166.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 148.00 166.00 L 140.00 169.36 L 140.00 162.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-0"><title>1. Place or
+der</title><rect x="66.95" y="148.00" width="62.10" height="36.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="98.00" y="161.80" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">1. Place or</text><text x="98.00" y="178.60" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">der</text>
+<g data-id="message-1"><title></title><path d="M 148.00 244.00 L 248.00 244.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 248.00 244.00 L 240.00 247.36 L 240.00 240.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-1"><title>2. POST /o
+rders</title><rect x="165.87" y="226.00" width="64.26" height="36.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="198.00" y="239.80" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">2. POST /o</text><text x="198.00" y="256.60" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">rders</text>
+<g data-id="message-2"><title></title><path d="M 253.00 343.00 L 348.00 343.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 348.00 343.00 L 340.00 346.36 L 340.00 339.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-2"><title>3. Authori
+se payme
+nt</title><rect x="271.05" y="316.00" width="58.89" height="54.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="300.50" y="330.40" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">3. Authori</text><text x="300.50" y="347.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">se payme</text><text x="300.50" y="364.00" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">nt</text>
+<g data-id="message-3"><title></title><path d="M 348.00 430.00 L 253.00 430.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 253.00 430.00 L 261.00 426.64 L 261.00 433.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-3"><title>4. Approv
+ed</title><rect x="271.13" y="412.00" width="58.74" height="36.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="300.50" y="425.80" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">4. Approv</text><text x="300.50" y="442.60" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">ed</text>
+<g data-id="message-4"><title></title><path d="M 243.00 508.00 L 148.00 508.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 148.00 508.00 L 156.00 504.64 L 156.00 511.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-4"><title>5. 201 Cre
+ated</title><rect x="164.74" y="490.00" width="61.53" height="36.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="195.50" y="503.80" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">5. 201 Cre</text><text x="195.50" y="520.60" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">ated</text>
+<g data-id="message-5"><title></title><path d="M 148.00 598.00 L 48.00 598.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 48.00 598.00 L 56.00 594.64 L 56.00 601.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-5"><title>6. Order co
+nfirmed</title><rect x="64.10" y="580.00" width="67.80" height="36.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="98.00" y="593.80" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">6. Order co</text><text x="98.00" y="610.60" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">nfirmed</text>
+<rect x="98.50" y="642.00" width="199.01" height="68.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="198.00" y="671.10" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">One order, one transacti</text><text x="198.00" y="690.70" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">on</text>
+<g data-id="participant-Customer"><title>Customer</title><ellipse cx="48.00" cy="40.00" rx="8.00" ry="8.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 48.00 48.00 L 48.00 66.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 32.00 55.00 L 64.00 55.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 36.00 80.00 L 42.00 73.00 C 45.72 68.66 50.28 68.66 54.00 73.00 L 60.00 80.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="48.00" y="101.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Customer</text>
+<g data-id="participant-Customer"><title>Customer</title><ellipse cx="48.00" cy="762.00" rx="8.00" ry="8.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 48.00 770.00 L 48.00 788.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 32.00 777.00 L 64.00 777.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 36.00 802.00 L 42.00 795.00 C 45.72 790.66 50.28 790.66 54.00 795.00 L 60.00 802.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="48.00" y="823.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Customer</text>
+<g data-id="participant-Web"><title>Web app</title><rect x="116.00" y="32.00" width="64.00" height="56.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="148.00" y="55.00" text-anchor="middle" font-size="14.29" font-weight="400" fill="#272727">Web a</text><text x="148.00" y="75.00" text-anchor="middle" font-size="14.29" font-weight="400" fill="#272727">pp</text>
+<g data-id="participant-Web"><title>Web app</title><rect x="116.00" y="754.00" width="64.00" height="56.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="148.00" y="777.00" text-anchor="middle" font-size="14.29" font-weight="400" fill="#272727">Web a</text><text x="148.00" y="797.00" text-anchor="middle" font-size="14.29" font-weight="400" fill="#272727">pp</text>
+<g data-id="participant-API"><title>API gateway</title><rect x="216.00" y="32.00" width="64.00" height="56.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="248.00" y="55.00" text-anchor="middle" font-size="14.29" font-weight="400" fill="#272727">API ga</text><text x="248.00" y="75.00" text-anchor="middle" font-size="14.29" font-weight="400" fill="#272727">teway</text>
+<g data-id="participant-API"><title>API gateway</title><rect x="216.00" y="754.00" width="64.00" height="56.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="248.00" y="777.00" text-anchor="middle" font-size="14.29" font-weight="400" fill="#272727">API ga</text><text x="248.00" y="797.00" text-anchor="middle" font-size="14.29" font-weight="400" fill="#272727">teway</text>
+<g data-id="participant-Bank"><title>Bank</title><rect x="316.00" y="32.00" width="64.00" height="56.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="348.00" y="65.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Bank</text>
+<g data-id="participant-Bank"><title>Bank</title><rect x="316.00" y="754.00" width="64.00" height="56.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="348.00" y="787.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Bank</text></g>
+</svg>

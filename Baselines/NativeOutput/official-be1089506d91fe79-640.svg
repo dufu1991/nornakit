@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="965.08" height="156.00" viewBox="0 0 965.08 156.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 49.59 54.00 L 49.59 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 49.59 54.00 L 56.59 68.00 L 42.59 68.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 173.61 54.00 L 173.61 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 173.61 54.00 L 178.61 61.00 L 173.61 68.00 L 168.61 61.00 Z" fill="#808080" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-2"><title></title><path d="M 296.65 54.00 L 296.65 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 296.65 54.00 L 301.65 61.00 L 296.65 68.00 L 291.65 61.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-3"><title></title><path d="M 419.93 54.00 L 419.93 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 419.93 54.00 L 423.29 62.00 L 416.57 62.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-4"><title></title><path d="M 542.72 54.00 L 542.72 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="relation-5"><title></title><path d="M 664.12 54.00 L 664.12 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 664.12 54.00 L 667.48 62.00 L 660.76 62.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-6"><title></title><path d="M 788.93 54.00 L 788.93 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 788.93 54.00 L 795.93 68.00 L 781.93 68.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-7"><title></title><path d="M 914.64 54.00 L 914.64 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="classA"><title>classA</title><rect x="8.00" y="8.00" width="83.17" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="49.59" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classA</text>
+<g data-id="classB"><title>classB</title><rect x="8.05" y="102.00" width="83.06" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="49.59" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classB</text>
+<g data-id="classC"><title>classC</title><rect x="131.61" y="8.00" width="84.00" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="173.61" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classC</text>
+<g data-id="classD"><title>classD</title><rect x="131.52" y="102.00" width="84.17" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="173.61" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classD</text>
+<g data-id="classE"><title>classE</title><rect x="255.61" y="8.00" width="82.08" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="296.65" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classE</text>
+<g data-id="classF"><title>classF</title><rect x="255.80" y="102.00" width="81.70" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="296.65" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classF</text>
+<g data-id="classG"><title>classG</title><rect x="377.69" y="8.00" width="84.49" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="419.93" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classG</text>
+<g data-id="classH"><title>classH</title><rect x="377.72" y="102.00" width="84.42" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="419.93" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classH</text>
+<g data-id="classI"><title>classI</title><rect x="504.31" y="8.00" width="76.83" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="542.72" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classI</text>
+<g data-id="classJ"><title>classJ</title><rect x="502.14" y="102.00" width="81.16" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="542.72" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classJ</text>
+<g data-id="classK"><title>classK</title><rect x="622.57" y="8.00" width="83.09" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="664.12" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classK</text>
+<g data-id="classL"><title>classL</title><rect x="623.30" y="102.00" width="81.63" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="664.12" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classL</text>
+<g data-id="classM"><title>classM</title><rect x="745.66" y="8.00" width="86.53" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="788.93" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classM</text>
+<g data-id="classN"><title>classN</title><rect x="746.71" y="102.00" width="84.42" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="788.93" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classN</text>
+<g data-id="classO"><title>classO</title><rect x="872.19" y="8.00" width="84.89" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="914.64" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classO</text>
+<g data-id="classP"><title>classP</title><rect x="873.28" y="102.00" width="82.71" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="914.64" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classP</text></g>
+</svg>

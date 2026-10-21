@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="952.12" height="564.00" viewBox="0 0 952.12 564.00" role="img" aria-label="时序图">
+<title>时序图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="24.00" y="252.00" width="904.12" height="114.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.22" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="lifeline-Consumer"><title></title><path d="M 175.30 82.00 L 175.30 454.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-API"><title></title><path d="M 352.61 82.00 L 352.61 454.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-BookingService"><title></title><path d="M 552.17 82.00 L 552.17 454.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-BillingService"><title></title><path d="M 765.40 82.00 L 765.40 454.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="message-0"><title></title><path d="M 175.30 157.00 L 352.61 157.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="edge-label-message-0"><title>Book something</title><rect x="216.29" y="148.00" width="95.32" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="263.96" y="161.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Book something</text>
+<g data-id="message-1"><title></title><path d="M 352.61 217.00 L 552.17 217.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="edge-label-message-1"><title>Start booking process</title><rect x="388.09" y="208.00" width="128.59" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="452.39" y="221.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Start booking process</text>
+<g data-id="message-2"><title></title><path d="M 352.61 323.00 L 175.30 323.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="edge-label-message-2"><title>show failure</title><rect x="228.00" y="314.00" width="71.90" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="263.96" y="327.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">show failure</text>
+<rect x="24.00" y="252.00" width="54.30" height="26.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="51.15" y="268.50" text-anchor="middle" font-size="10.00" font-weight="400" fill="#272727">break</text>
+<text x="106.00" y="271.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">when the booking process fails</text>
+<g data-id="message-3"><title></title><path d="M 352.61 407.00 L 765.40 407.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="edge-label-message-3"><title>Start billing process</title><rect x="500.54" y="398.00" width="116.93" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="559.00" y="411.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Start billing process</text>
+<g data-id="participant-Consumer"><title>Consumer</title><rect x="120.00" y="32.00" width="110.61" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="175.30" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Consumer</text>
+<g data-id="participant-Consumer"><title>Consumer</title><rect x="120.00" y="466.00" width="110.61" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="175.30" y="496.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Consumer</text>
+<g data-id="participant-API"><title>API</title><rect x="302.61" y="32.00" width="100.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="352.61" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">API</text>
+<g data-id="participant-API"><title>API</title><rect x="302.61" y="466.00" width="100.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="352.61" y="496.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">API</text>
+<g data-id="participant-BookingService"><title>BookingService</title><rect x="477.67" y="32.00" width="149.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="552.17" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">BookingService</text>
+<g data-id="participant-BookingService"><title>BookingService</title><rect x="477.67" y="466.00" width="149.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="552.17" y="496.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">BookingService</text>
+<g data-id="participant-BillingService"><title>BillingService</title><rect x="698.67" y="32.00" width="133.45" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="765.40" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">BillingService</text>
+<g data-id="participant-BillingService"><title>BillingService</title><rect x="698.67" y="466.00" width="133.45" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="765.40" y="496.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">BillingService</text></g>
+</svg>

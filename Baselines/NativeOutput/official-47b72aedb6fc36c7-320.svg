@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420.00" height="164.00" viewBox="0 0 420.00 164.00" role="img" aria-label="目录树">
+<title>目录树</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="tree-0"><title>packages</title><rect x="32.00" y="24.00" width="11.00" height="16.00" rx="1.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="54.00" y="38.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">packages</text>
+<path d="M 40.00 46.00 L 40.00 57.50 C 40.00 61.53 42.47 64.00 46.50 64.00 L 53.00 64.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="tree-1"><title>mermaid</title><rect x="60.00" y="54.00" width="11.00" height="16.00" rx="1.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="82.00" y="68.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">mermaid</text>
+<path d="M 68.00 76.00 L 68.00 87.50 C 68.00 91.53 70.47 94.00 74.50 94.00 L 81.00 94.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="tree-2"><title>src</title><rect x="88.00" y="84.00" width="11.00" height="16.00" rx="1.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="110.00" y="98.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">src</text>
+<path d="M 40.00 46.00 L 40.00 117.50 C 40.00 121.53 42.47 124.00 46.50 124.00 L 53.00 124.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="tree-3"><title>parser</title><rect x="60.00" y="114.00" width="11.00" height="16.00" rx="1.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="82.00" y="128.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">parser</text></g>
+</svg>

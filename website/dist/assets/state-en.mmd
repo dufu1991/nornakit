@@ -1,0 +1,7 @@
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> Parsing: Edit source
+    Parsing --> Ready: Success
+    Parsing --> Error: Syntax error
+    Error --> Parsing: Fix
+    Ready --> [*]

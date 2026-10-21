@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800.00" height="294.00" viewBox="0 0 800.00 294.00" role="img" aria-label="数据包图">
+<title>数据包图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="400.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">UDP Packet</text>
+<text x="28.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">0</text>
+<text x="52.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">1</text>
+<text x="76.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">2</text>
+<text x="100.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">3</text>
+<text x="124.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">4</text>
+<text x="148.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">5</text>
+<text x="172.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">6</text>
+<text x="196.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">7</text>
+<text x="220.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">8</text>
+<text x="244.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">9</text>
+<text x="268.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">10</text>
+<text x="292.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">11</text>
+<text x="316.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">12</text>
+<text x="340.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">13</text>
+<text x="364.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">14</text>
+<text x="388.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">15</text>
+<text x="412.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">16</text>
+<text x="436.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">17</text>
+<text x="460.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">18</text>
+<text x="484.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">19</text>
+<text x="508.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">20</text>
+<text x="532.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">21</text>
+<text x="556.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">22</text>
+<text x="580.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">23</text>
+<text x="604.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">24</text>
+<text x="628.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">25</text>
+<text x="652.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">26</text>
+<text x="676.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">27</text>
+<text x="700.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">28</text>
+<text x="724.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">29</text>
+<text x="748.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">30</text>
+<text x="772.00" y="73.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">31</text>
+<text x="28.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">32</text>
+<text x="52.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">33</text>
+<text x="76.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">34</text>
+<text x="100.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">35</text>
+<text x="124.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">36</text>
+<text x="148.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">37</text>
+<text x="172.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">38</text>
+<text x="196.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">39</text>
+<text x="220.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">40</text>
+<text x="244.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">41</text>
+<text x="268.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">42</text>
+<text x="292.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">43</text>
+<text x="316.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">44</text>
+<text x="340.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">45</text>
+<text x="364.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">46</text>
+<text x="388.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">47</text>
+<text x="412.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">48</text>
+<text x="436.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">49</text>
+<text x="460.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">50</text>
+<text x="484.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">51</text>
+<text x="508.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">52</text>
+<text x="532.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">53</text>
+<text x="556.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">54</text>
+<text x="580.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">55</text>
+<text x="604.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">56</text>
+<text x="628.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">57</text>
+<text x="652.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">58</text>
+<text x="676.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">59</text>
+<text x="700.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">60</text>
+<text x="724.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">61</text>
+<text x="748.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">62</text>
+<text x="772.00" y="147.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">63</text>
+<text x="28.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">64</text>
+<text x="52.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">65</text>
+<text x="76.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">66</text>
+<text x="100.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">67</text>
+<text x="124.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">68</text>
+<text x="148.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">69</text>
+<text x="172.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">70</text>
+<text x="196.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">71</text>
+<text x="220.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">72</text>
+<text x="244.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">73</text>
+<text x="268.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">74</text>
+<text x="292.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">75</text>
+<text x="316.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">76</text>
+<text x="340.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">77</text>
+<text x="364.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">78</text>
+<text x="388.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">79</text>
+<text x="412.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">80</text>
+<text x="436.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">81</text>
+<text x="460.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">82</text>
+<text x="484.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">83</text>
+<text x="508.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">84</text>
+<text x="532.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">85</text>
+<text x="556.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">86</text>
+<text x="580.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">87</text>
+<text x="604.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">88</text>
+<text x="628.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">89</text>
+<text x="652.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">90</text>
+<text x="676.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">91</text>
+<text x="700.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">92</text>
+<text x="724.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">93</text>
+<text x="748.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">94</text>
+<text x="772.00" y="221.15" text-anchor="middle" font-size="9.00" font-weight="400" fill="#808080">95</text>
+<g data-id="packet-0-0"><title>Source Port</title><rect x="16.00" y="82.00" width="382.00" height="42.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="207.00" y="107.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Source Port</text>
+<g data-id="packet-16-16"><title>Destination Port</title><rect x="400.00" y="82.00" width="382.00" height="42.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="591.00" y="107.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Destination Port</text>
+<g data-id="packet-32-32"><title>Length</title><rect x="16.00" y="156.00" width="382.00" height="42.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="207.00" y="181.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Length</text>
+<g data-id="packet-48-48"><title>Checksum</title><rect x="400.00" y="156.00" width="382.00" height="42.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="591.00" y="181.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Checksum</text>
+<g data-id="packet-64-64"><title>Data (variable length)</title><rect x="16.00" y="230.00" width="766.00" height="42.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="399.00" y="255.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Data (variable length)</text></g>
+</svg>

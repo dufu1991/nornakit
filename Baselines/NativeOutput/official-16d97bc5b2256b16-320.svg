@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="775.75" height="371.00" viewBox="0 0 775.75 371.00" role="img" aria-label="状态图">
+<title>状态图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 363.38 39.00 L 363.38 100.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 363.38 100.00 L 360.02 92.00 L 366.74 92.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 344.24 146.00 L 344.24 158.00 C 344.24 165.44 339.68 170.00 332.24 170.00 L 57.67 170.00 C 50.23 170.00 45.67 174.56 45.67 182.00 L 45.67 194.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 45.67 194.00 L 42.31 186.00 L 49.03 186.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-2"><title></title><path d="M 350.62 146.00 L 350.62 158.00 C 350.62 165.44 346.06 170.00 338.62 170.00 L 158.82 170.00 C 151.38 170.00 146.82 174.56 146.82 182.00 L 146.82 194.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 146.82 194.00 L 143.46 186.00 L 150.18 186.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-3"><title></title><path d="M 357.00 146.00 L 357.00 158.00 C 357.00 165.44 352.44 170.00 345.00 170.00 L 263.96 170.00 C 256.52 170.00 251.96 174.56 251.96 182.00 L 251.96 194.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 251.96 194.00 L 248.60 186.00 L 255.32 186.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-4"><title></title><path d="M 363.38 146.00 L 363.38 194.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 363.38 194.00 L 360.02 186.00 L 366.74 186.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-5"><title></title><path d="M 369.75 146.00 L 369.75 158.00 C 369.75 165.44 374.31 170.00 381.75 170.00 L 446.36 170.00 C 453.80 170.00 458.36 174.56 458.36 182.00 L 458.36 194.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 458.36 194.00 L 455.00 186.00 L 461.72 186.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-6"><title></title><path d="M 376.13 146.00 L 376.13 158.00 C 376.13 165.44 380.69 170.00 388.13 170.00 L 561.23 170.00 C 568.67 170.00 573.23 174.56 573.23 182.00 L 573.23 194.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 573.23 194.00 L 569.87 186.00 L 576.59 186.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-7"><title></title><path d="M 382.51 146.00 L 382.51 158.00 C 382.51 165.44 387.07 170.00 394.51 170.00 L 671.96 170.00 C 679.40 170.00 683.96 174.56 683.96 182.00 L 683.96 194.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 683.96 194.00 L 680.60 186.00 L 687.32 186.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-8"><title></title><path d="M 45.67 240.00 L 45.67 252.00 C 45.67 259.44 50.23 264.00 57.67 264.00 L 332.80 264.00 C 340.24 264.00 344.80 268.56 344.80 276.00 L 344.80 288.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 344.80 288.00 L 341.44 280.00 L 348.16 280.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-9"><title></title><path d="M 146.82 240.00 L 146.82 252.00 C 146.82 259.44 151.38 264.00 158.82 264.00 L 338.99 264.00 C 346.43 264.00 350.99 268.56 350.99 276.00 L 350.99 288.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 350.99 288.00 L 347.63 280.00 L 354.35 280.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-10"><title></title><path d="M 251.96 240.00 L 251.96 252.00 C 251.96 259.44 256.52 264.00 263.96 264.00 L 345.18 264.00 C 352.62 264.00 357.18 268.56 357.18 276.00 L 357.18 288.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 357.18 288.00 L 353.82 280.00 L 360.54 280.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-11"><title></title><path d="M 363.38 240.00 L 363.38 288.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 363.38 288.00 L 360.02 280.00 L 366.74 280.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-12"><title></title><path d="M 458.36 240.00 L 458.36 252.00 C 458.36 259.44 453.80 264.00 446.36 264.00 L 381.57 264.00 C 374.13 264.00 369.57 268.56 369.57 276.00 L 369.57 288.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 369.57 288.00 L 366.21 280.00 L 372.93 280.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-13"><title></title><path d="M 573.23 240.00 L 573.23 252.00 C 573.23 259.44 568.67 264.00 561.23 264.00 L 387.76 264.00 C 380.32 264.00 375.76 268.56 375.76 276.00 L 375.76 288.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 375.76 288.00 L 372.40 280.00 L 379.12 280.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-14"><title></title><path d="M 683.96 240.00 L 683.96 252.00 C 683.96 259.44 679.40 264.00 671.96 264.00 L 393.95 264.00 C 386.51 264.00 381.95 268.56 381.95 276.00 L 381.95 288.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 381.95 288.00 L 378.59 280.00 L 385.31 280.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-15"><title></title><path d="M 363.38 334.00 L 363.38 348.00 C 363.38 356.68 368.70 362.00 377.38 362.00 L 746.75 362.00 C 759.15 362.00 766.75 354.40 766.75 342.00 L 766.75 143.00 C 766.75 130.60 759.15 123.00 746.75 123.00 L 401.65 123.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 401.65 123.00 L 409.65 119.64 L 409.65 126.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="@initial_root"><title></title><ellipse cx="363.38" cy="30.00" rx="9.00" ry="9.00" fill="#272727" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="Menu"><title>Menu</title><rect x="325.10" y="100.00" width="76.55" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="363.38" y="128.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Menu</text>
+<g data-id="Open"><title>Open</title><rect x="8.00" y="194.00" width="75.34" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="45.67" y="222.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Open</text>
+<g data-id="Save"><title>Save</title><rect x="111.34" y="194.00" width="70.96" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="146.82" y="222.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Save</text>
+<g data-id="Export"><title>Export</title><rect x="210.30" y="194.00" width="83.33" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="251.96" y="222.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Export</text>
+<g data-id="Print"><title>Print</title><rect x="328.48" y="194.00" width="69.80" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="363.38" y="222.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Print</text>
+<g data-id="Share"><title>Share</title><rect x="419.42" y="194.00" width="77.88" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="458.36" y="222.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Share</text>
+<g data-id="Settings"><title>Settings</title><rect x="525.30" y="194.00" width="95.88" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="573.23" y="222.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Settings</text>
+<g data-id="Help"><title>Help</title><rect x="649.17" y="194.00" width="69.58" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="683.96" y="222.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Help</text>
+<g data-id="Done"><title>Done</title><rect x="326.22" y="288.00" width="74.30" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="363.38" y="316.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Done</text></g>
+</svg>

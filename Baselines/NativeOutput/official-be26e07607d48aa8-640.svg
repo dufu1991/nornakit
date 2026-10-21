@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="763.92" height="494.00" viewBox="0 0 763.92 494.00" role="img" aria-label="时序图">
+<title>时序图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="lifeline-API"><title></title><path d="M 174.44 118.00 L 174.44 384.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-DB"><title></title><path d="M 372.44 82.00 L 372.44 384.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-Svc"><title></title><path d="M 579.96 118.00 L 579.96 384.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="message-0"><title></title><path d="M 174.44 157.00 L 579.96 157.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 579.96 157.00 L 571.96 160.36 L 571.96 153.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-0"><title>Authenticate</title><rect x="339.27" y="148.00" width="75.86" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="377.20" y="161.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Authenticate</text>
+<g data-id="message-1"><title></title><path d="M 579.96 217.00 L 372.44 217.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 372.44 217.00 L 380.44 213.64 L 380.44 220.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-1"><title>Query user</title><rect x="443.03" y="208.00" width="66.34" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="476.20" y="221.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Query user</text>
+<g data-id="message-2"><title></title><path d="M 372.44 277.00 L 579.96 277.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 579.96 277.00 L 571.96 280.36 L 571.96 273.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-2"><title>User data</title><rect x="446.75" y="268.00" width="58.90" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="476.20" y="281.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">User data</text>
+<g data-id="message-3"><title></title><path d="M 579.96 337.00 L 174.44 337.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 174.44 337.00 L 182.44 333.64 L 182.44 340.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-3"><title>Token</title><rect x="358.40" y="328.00" width="37.60" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="377.20" y="341.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Token</text>
+<g data-id="participant-API"><title>Public API</title><ellipse cx="174.44" cy="58.00" rx="18.00" ry="18.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 142.44 38.00 L 142.44 78.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 142.44 58.00 L 156.44 58.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="174.44" y="101.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Public API</text>
+<g data-id="participant-API"><title>Public API</title><ellipse cx="174.44" cy="422.00" rx="18.00" ry="18.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 142.44 402.00 L 142.44 442.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 142.44 422.00 L 156.44 422.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="174.44" y="465.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Public API</text>
+<g data-id="participant-DB"><title></title><path d="M 300.88 42.22 C 300.88 28.59 443.99 28.59 443.99 42.22 L 443.99 71.78 C 443.99 85.41 300.88 85.41 300.88 71.78 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 300.88 42.22 C 300.88 55.85 443.99 55.85 443.99 42.22" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="372.44" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">User Database</text>
+<g data-id="participant-DB"><title></title><path d="M 300.88 406.22 C 300.88 392.59 443.99 392.59 443.99 406.22 L 443.99 435.78 C 443.99 449.41 300.88 449.41 300.88 435.78 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 300.88 406.22 C 300.88 419.85 443.99 419.85 443.99 406.22" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="372.44" y="426.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">User Database</text>
+<g data-id="participant-Svc"><title>Auth Service</title><ellipse cx="579.96" cy="58.00" rx="18.00" ry="18.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 577.96 34.00 L 582.96 37.00 C 586.06 38.86 586.06 41.14 582.96 43.00 L 577.96 46.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="579.96" y="101.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Auth Service</text>
+<g data-id="participant-Svc"><title>Auth Service</title><ellipse cx="579.96" cy="422.00" rx="18.00" ry="18.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 577.96 398.00 L 582.96 401.00 C 586.06 402.86 586.06 405.14 582.96 407.00 L 577.96 410.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="579.96" y="465.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Auth Service</text></g>
+</svg>

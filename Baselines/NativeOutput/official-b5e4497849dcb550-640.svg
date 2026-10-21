@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="343.82" height="472.00" viewBox="0 0 343.82 472.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 171.91 98.00 L 171.91 180.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 171.91 180.00 L 168.55 172.00 L 175.27 172.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="multiplicity-0-from"><title>1</title><rect x="157.74" y="108.00" width="9.17" height="16.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="162.33" y="119.85" text-anchor="middle" font-size="11.00" font-weight="400" fill="#272727">1</text>
+<g data-id="multiplicity-0-to"><title>*</title><rect x="176.91" y="154.00" width="9.25" height="16.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="181.54" y="165.85" text-anchor="middle" font-size="11.00" font-weight="400" fill="#272727">*</text>
+<g data-id="edge-label-relation-0"><title></title><rect x="151.49" y="130.00" width="40.83" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="171.91" y="143.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">places</text>
+<g data-id="relation-1"><title></title><path d="M 163.91 292.00 L 163.91 313.00 C 163.91 325.40 156.31 333.00 143.91 333.00 L 91.57 333.00 C 79.17 333.00 71.57 340.60 71.57 353.00 L 71.57 385.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 163.91 292.00 L 168.91 299.00 L 163.91 306.00 L 158.91 299.00 Z" fill="#808080" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="multiplicity-1-from"><title>1</title><rect x="149.74" y="302.00" width="9.17" height="16.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="154.33" y="313.85" text-anchor="middle" font-size="11.00" font-weight="400" fill="#272727">1</text>
+<g data-id="multiplicity-1-to"><title>*</title><rect x="108.57" y="359.00" width="9.25" height="16.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="113.19" y="370.85" text-anchor="middle" font-size="11.00" font-weight="400" fill="#272727">*</text>
+<g data-id="edge-label-relation-1"><title></title><rect x="45.55" y="360.00" width="52.04" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="71.57" y="373.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">contains</text>
+<g data-id="relation-2"><title></title><path d="M 179.91 292.00 L 179.91 313.00 C 179.91 325.40 187.51 333.00 199.91 333.00 L 235.48 333.00 C 247.88 333.00 255.48 340.60 255.48 353.00 L 255.48 374.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 255.48 374.00 L 252.12 366.00 L 258.84 366.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-2"><title></title><rect x="225.40" y="351.35" width="60.14" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="255.48" y="364.55" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">settled by</text>
+<g data-id="Customer"><title>Customer</title><rect x="105.31" y="8.00" width="133.20" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="171.91" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Customer</text>
+<path d="M 105.31 46.00 L 238.51 46.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="115.31" y="65.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+String name</text><text x="115.31" y="84.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+String email</text>
+<g data-id="Order"><title>Order</title><rect x="97.82" y="180.00" width="148.18" height="112.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="171.91" y="206.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Order</text>
+<path d="M 97.82 218.00 L 246.00 218.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="107.82" y="237.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+String id</text><text x="107.82" y="256.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+Date placedAt</text>
+<path d="M 97.82 266.00 L 246.00 266.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="107.82" y="284.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+total() Money</text>
+<g data-id="LineItem"><title>LineItem</title><rect x="8.00" y="385.00" width="127.13" height="68.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="71.57" y="411.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">LineItem</text>
+<path d="M 8.00 423.00 L 135.13 423.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="441.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+int quantity</text>
+<g data-id="Payment"><title>Payment</title><rect x="175.13" y="374.00" width="160.69" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="255.48" y="399.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">«interface»</text><text x="255.48" y="420.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Payment</text>
+<path d="M 175.13 432.00 L 335.82 432.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="185.13" y="450.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+authorize() bool</text></g>
+</svg>

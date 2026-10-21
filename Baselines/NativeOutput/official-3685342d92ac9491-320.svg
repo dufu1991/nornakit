@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="328.00" height="582.00" viewBox="0 0 328.00 582.00" role="img" aria-label="XY 坐标图">
+<title>XY 坐标图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="164.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">An Example Chart</text>
+<path d="M 86.00 396.00 L 288.00 396.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="400.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">0</text>
+<path d="M 86.00 332.00 L 288.00 332.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="336.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">40</text>
+<path d="M 86.00 268.00 L 288.00 268.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="272.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">79</text>
+<path d="M 86.00 204.00 L 288.00 204.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="208.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">1.2e+02</text>
+<path d="M 86.00 140.00 L 288.00 140.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="144.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">1.6e+02</text>
+<path d="M 86.00 76.00 L 288.00 76.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="80.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">2e+02</text>
+<path d="M 102.83 318.34 L 120.13 323.82 C 130.28 327.03 142.90 327.71 153.33 325.61 L 153.33 325.61 C 163.77 323.50 174.15 317.04 180.64 308.61 L 193.27 292.20 C 199.82 283.68 210.23 280.03 220.67 282.58 L 220.67 282.58 C 231.10 285.13 243.67 289.00 253.73 292.77 L 271.17 299.29" fill="none" stroke="#0088ff" stroke-width="2.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="point-0-0"><title>90d: 48</title><ellipse cx="102.83" cy="318.34" rx="3.00" ry="3.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-0-1"><title>60d: 42</title><ellipse cx="136.50" cy="329.00" rx="3.00" ry="3.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-0-2"><title>30d: 46</title><ellipse cx="170.17" cy="322.22" rx="3.00" ry="3.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-0-3"><title>7d: 73</title><ellipse cx="203.83" cy="278.46" rx="3.00" ry="3.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-0-4"><title>1d: 68</title><ellipse cx="237.50" cy="286.70" rx="3.00" ry="3.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-0-5"><title>Current: 60</title><ellipse cx="271.17" cy="299.29" rx="3.00" ry="3.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 102.83 334.32 L 119.67 335.46 C 130.10 336.16 142.85 335.70 153.21 334.26 L 153.33 334.24 C 163.77 332.79 175.43 328.17 184.03 322.07 L 189.64 318.08 C 198.44 311.84 210.23 309.70 220.67 312.45 L 220.67 312.45 C 231.10 315.20 243.40 319.89 253.02 324.78 L 271.17 334.00" fill="none" stroke="#34c759" stroke-width="2.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="point-1-0"><title>90d: 38</title><ellipse cx="102.83" cy="334.32" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-1"><title>60d: 37</title><ellipse cx="136.50" cy="336.59" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-2"><title>30d: 40</title><ellipse cx="170.17" cy="331.90" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-3"><title>7d: 54</title><ellipse cx="203.83" cy="308.01" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-4"><title>1d: 49</title><ellipse cx="237.50" cy="316.89" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-5"><title>Current: 38</title><ellipse cx="271.17" cy="334.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 102.83 214.85 L 126.66 257.01 C 132.76 267.81 141.07 268.35 148.53 258.45 L 158.14 245.68 C 165.60 235.78 172.23 222.39 175.59 210.45 L 199.21 126.62 C 202.08 116.46 210.23 109.25 220.67 107.64 L 220.67 107.64 C 231.10 106.04 239.33 111.27 242.31 121.40 L 271.17 219.37" fill="none" stroke="#ff8d28" stroke-width="2.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="point-2-0"><title>90d: 1.1e+02</title><ellipse cx="102.83" cy="214.85" rx="3.00" ry="3.00" fill="#ff8d28" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-2-1"><title>60d: 75</title><ellipse cx="136.50" cy="274.43" rx="3.00" ry="3.00" fill="#ff8d28" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-2-2"><title>30d: 103</title><ellipse cx="170.17" cy="229.70" rx="3.00" ry="3.00" fill="#ff8d28" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-2-3"><title>7d: 177</title><ellipse cx="203.83" cy="110.23" rx="3.00" ry="3.00" fill="#ff8d28" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-2-4"><title>1d: 1.8e+02</title><ellipse cx="237.50" cy="105.06" rx="3.00" ry="3.00" fill="#ff8d28" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-2-5"><title>Current: 1.1e+02</title><ellipse cx="271.17" cy="219.37" rx="3.00" ry="3.00" fill="#ff8d28" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 86.00 76.00 L 86.00 376.00 C 86.00 388.40 93.60 396.00 106.00 396.00 L 288.00 396.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="102.83" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">90d</text>
+<text x="136.50" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">60d</text>
+<text x="170.17" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">30d</text>
+<text x="203.83" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">7d</text>
+<text x="237.50" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">1d</text>
+<text x="271.17" y="417.80" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Curr</text><text x="271.17" y="434.60" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">ent</text>
+<text x="187.00" y="464.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727"></text>
+<text x="8.00" y="66.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">Seconds</text>
+<rect x="84.00" y="492.00" width="14.00" height="12.00" rx="8.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="106.00" y="502.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">avg</text>
+<rect x="84.00" y="522.00" width="14.00" height="12.00" rx="8.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="106.00" y="532.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">p50</text>
+<rect x="84.00" y="552.00" width="14.00" height="12.00" rx="8.00" fill="#ff8d28" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="106.00" y="562.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">p95</text></g>
+</svg>

@@ -1,0 +1,7 @@
+flowchart TD
+    A([User input]) --> B{Valid input?}
+    B -->|Valid| C[Call API]
+    B -->|Invalid| D[Show error]
+    C --> E[Handle response]
+    E --> F([Output result])
+    D --> A

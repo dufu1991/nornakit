@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="196.00" height="428.00" viewBox="0 0 196.00 428.00" role="img" aria-label="时序图">
+<title>时序图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="lifeline-A"><title></title><path d="M 48.00 82.00 L 48.00 318.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-B"><title></title><path d="M 148.00 82.00 L 148.00 318.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="message-0"><title></title><path d="M 48.00 166.00 L 148.00 166.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 148.00 166.00 L 140.00 169.36 L 140.00 162.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-0"><title>I #9829; y
+ou!</title><rect x="67.11" y="148.00" width="61.79" height="36.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="98.00" y="161.80" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">I #9829; y</text><text x="98.00" y="178.60" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">ou!</text>
+<g data-id="message-1"><title></title><path d="M 148.00 253.00 L 48.00 253.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 48.00 253.00 L 56.00 249.64 L 56.00 256.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-1"><title>I #9829; y
+ou #infin; ti
+mes more!</title><rect x="64.22" y="226.00" width="67.56" height="54.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="98.00" y="240.40" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">I #9829; y</text><text x="98.00" y="257.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">ou #infin; ti</text><text x="98.00" y="274.00" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">mes more!</text>
+<g data-id="participant-A"><title>A</title><rect x="16.00" y="32.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="48.00" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">A</text>
+<g data-id="participant-A"><title>A</title><rect x="16.00" y="330.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="48.00" y="360.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">A</text>
+<g data-id="participant-B"><title>B</title><rect x="116.00" y="32.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="148.00" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">B</text>
+<g data-id="participant-B"><title>B</title><rect x="116.00" y="330.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="148.00" y="360.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">B</text></g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <title>Norna</title>
+  <style>.tile{fill:#5148d8}.mark{fill:#fff;stroke:#fff}@media(prefers-color-scheme:dark){.tile{fill:#aaa4ff}.mark{fill:#171719;stroke:#171719}}</style>
+  <rect class="tile" width="16" height="16" rx="3.25"/>
+  <g class="mark" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 12V4C8 4 8 12 12 12V4" fill="none"/>
+    <rect x="2.5" y="2.5" width="3" height="3" rx=".8" stroke="none"/>
+    <rect x="10.5" y="2.5" width="3" height="3" rx=".8" stroke="none"/>
+    <rect x="2.5" y="10.5" width="3" height="3" rx=".8" stroke="none"/>
+    <rect x="10.5" y="10.5" width="3" height="3" rx=".8" stroke="none"/>
+  </g>
+</svg>

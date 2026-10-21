@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="516.78" height="321.00" viewBox="0 0 516.78 321.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 188.64 54.00 L 188.64 66.00 C 188.64 73.44 184.08 78.00 176.64 78.00 L 58.84 78.00 C 51.40 78.00 46.84 82.56 46.84 90.00 L 46.84 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 188.64 54.00 L 195.64 68.00 L 181.64 68.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 202.81 54.00 L 202.81 66.00 C 202.81 73.44 198.25 78.00 190.81 78.00 L 163.68 78.00 C 151.28 78.00 143.68 85.60 143.68 98.00 L 143.68 169.00 C 143.68 181.40 151.28 189.00 163.68 189.00 L 197.89 189.00 C 210.29 189.00 217.89 196.60 217.89 209.00 L 217.89 230.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 202.81 54.00 L 209.81 68.00 L 195.81 68.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-2"><title></title><path d="M 216.97 54.00 L 216.97 66.00 C 216.97 73.44 221.53 78.00 228.97 78.00 L 230.36 78.00 C 237.80 78.00 242.36 82.56 242.36 90.00 L 242.36 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 216.97 54.00 L 223.97 68.00 L 209.97 68.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-3"><title></title><path d="M 231.14 54.00 L 231.14 66.00 C 231.14 73.44 235.70 78.00 243.14 78.00 L 355.41 78.00 C 362.85 78.00 367.41 82.56 367.41 90.00 L 367.41 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 231.14 54.00 L 236.14 61.00 L 231.14 68.00 L 226.14 61.00 Z" fill="#808080" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-4"><title></title><path d="M 367.41 148.00 L 367.41 162.00 C 367.41 170.68 372.73 176.00 381.41 176.00 L 439.78 176.00 C 452.18 176.00 459.78 168.40 459.78 156.00 L 459.78 51.00 C 459.78 38.60 452.18 31.00 439.78 31.00 L 252.39 31.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 367.41 148.00 L 372.41 155.00 L 367.41 162.00 L 362.41 155.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-5"><title></title><path d="M 46.84 148.00 L 46.84 169.00 C 46.84 181.40 54.44 189.00 66.84 189.00 L 181.89 189.00 C 194.29 189.00 201.89 196.60 201.89 209.00 L 201.89 230.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 201.89 230.00 L 198.53 222.00 L 205.25 222.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-5"><title></title><rect x="90.96" y="180.00" width="32.29" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="107.11" y="193.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">fears</text>
+<g data-id="relation-6"><title></title><path d="M 209.89 276.00 L 209.89 290.00 C 209.89 298.68 215.21 304.00 223.89 304.00 L 487.78 304.00 C 500.18 304.00 507.78 296.40 507.78 284.00 L 507.78 94.00 C 507.78 81.60 500.18 74.00 487.78 74.00 L 60.84 74.00 C 52.16 74.00 46.84 79.32 46.84 88.00 L 46.84 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 46.84 102.00 L 43.48 94.00 L 50.20 94.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-6"><title></title><rect x="338.04" y="295.00" width="35.59" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="355.84" y="308.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">hunts</text>
+<g data-id="Animal"><title>Animal</title><rect x="167.39" y="8.00" width="84.99" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="209.89" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Animal</text>
+<g data-id="Turtle"><title>Turtle</title><rect x="8.00" y="102.00" width="77.68" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="46.84" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Turtle</text>
+<g data-id="Shark"><title>Shark</title><rect x="171.06" y="230.00" width="77.66" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="209.89" y="256.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Shark</text>
+<g data-id="Whale"><title>Whale</title><rect x="201.68" y="102.00" width="81.35" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="242.36" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Whale</text>
+<g data-id="Habitat"><title>Habitat</title><rect x="323.03" y="102.00" width="88.75" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="367.41" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Habitat</text></g>
+</svg>

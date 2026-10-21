@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="407.30" height="292.85" viewBox="0 0 407.30 292.85" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 188.30 86.85 L 188.30 131.85 C 188.30 144.25 180.70 151.85 168.30 151.85 L 118.30 151.85 C 105.90 151.85 98.30 159.45 98.30 171.85 L 98.30 201.85" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 98.30 201.85 L 94.94 193.85 L 101.66 193.85 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 204.30 96.85 L 204.30 136.85 C 204.30 146.15 198.60 151.85 189.30 151.85 L 189.30 151.85 C 180.00 151.85 174.30 157.55 174.30 166.85 L 174.30 201.85" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 174.30 201.85 L 170.94 193.85 L 177.66 193.85 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 220.30 96.85 L 220.30 136.85 C 220.30 146.15 226.00 151.85 235.30 151.85 L 235.30 151.85 C 244.60 151.85 250.30 157.55 250.30 166.85 L 250.30 201.85" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 250.30 201.85 L 246.94 193.85 L 253.66 193.85 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 236.30 86.85 L 236.30 131.85 C 236.30 144.25 243.90 151.85 256.30 151.85 L 306.30 151.85 C 318.70 151.85 326.30 159.45 326.30 171.85 L 326.30 201.85" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 326.30 201.85 L 322.94 193.85 L 329.66 193.85 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 98.30 247.85 L 98.30 261.85 C 98.30 270.53 103.62 275.85 112.30 275.85 L 378.30 275.85 C 390.70 275.85 398.30 268.25 398.30 255.85 L 398.30 74.92 C 398.30 62.52 390.70 54.92 378.30 54.92 L 287.38 54.92" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 287.38 54.92 L 295.38 51.56 L 295.38 58.28 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<g><title>A</title>
+<path d="M 212.30 8.00 L 287.38 54.92 L 212.30 101.85 L 137.22 54.92 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="212.30" y="60.52" text-anchor="middle" font-size="16.00" fill="#272727">Which way?</text>
+</g>
+<g><title>B</title>
+<path d="M 82.30 201.85 L 114.30 201.85 C 118.72 201.85 122.30 205.43 122.30 209.85 L 122.30 239.85 C 122.30 244.27 118.72 247.85 114.30 247.85 L 82.30 247.85 C 77.88 247.85 74.30 244.27 74.30 239.85 L 74.30 209.85 C 74.30 205.43 77.88 201.85 82.30 201.85 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="98.30" y="230.45" text-anchor="middle" font-size="16.00" fill="#272727">B</text>
+</g>
+<g><title>C</title>
+<path d="M 158.30 201.85 L 190.30 201.85 C 194.72 201.85 198.30 205.43 198.30 209.85 L 198.30 239.85 C 198.30 244.27 194.72 247.85 190.30 247.85 L 158.30 247.85 C 153.88 247.85 150.30 244.27 150.30 239.85 L 150.30 209.85 C 150.30 205.43 153.88 201.85 158.30 201.85 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="174.30" y="230.45" text-anchor="middle" font-size="16.00" fill="#272727">C</text>
+</g>
+<g><title>D</title>
+<path d="M 234.30 201.85 L 266.30 201.85 C 270.72 201.85 274.30 205.43 274.30 209.85 L 274.30 239.85 C 274.30 244.27 270.72 247.85 266.30 247.85 L 234.30 247.85 C 229.88 247.85 226.30 244.27 226.30 239.85 L 226.30 209.85 C 226.30 205.43 229.88 201.85 234.30 201.85 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="250.30" y="230.45" text-anchor="middle" font-size="16.00" fill="#272727">D</text>
+</g>
+<g><title>E</title>
+<path d="M 310.30 201.85 L 342.30 201.85 C 346.72 201.85 350.30 205.43 350.30 209.85 L 350.30 239.85 C 350.30 244.27 346.72 247.85 342.30 247.85 L 310.30 247.85 C 305.88 247.85 302.30 244.27 302.30 239.85 L 302.30 209.85 C 302.30 205.43 305.88 201.85 310.30 201.85 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="326.30" y="230.45" text-anchor="middle" font-size="16.00" fill="#272727">E</text>
+</g>
+<path d="M 11.00 161.35 L 185.60 161.35 C 187.25 161.35 188.60 162.69 188.60 164.35 L 188.60 194.35 C 188.60 196.00 187.25 197.35 185.60 197.35 L 11.00 197.35 C 9.34 197.35 8.00 196.00 8.00 194.35 L 8.00 164.35 C 8.00 162.69 9.34 161.35 11.00 161.35 Z" fill="#ffffff"/>
+<text x="98.30" y="174.55" text-anchor="middle" font-size="12.00" fill="#272727">The first and longest of the ans</text><text x="98.30" y="192.55" text-anchor="middle" font-size="12.00" fill="#272727">wers</text>
+<path d="M 183.96 107.85 L 224.64 107.85 C 226.29 107.85 227.64 109.19 227.64 110.85 L 227.64 122.85 C 227.64 124.50 226.29 125.85 224.64 125.85 L 183.96 125.85 C 182.30 125.85 180.96 124.50 180.96 122.85 L 180.96 110.85 C 180.96 109.19 182.30 107.85 183.96 107.85 Z" fill="#ffffff"/>
+<text x="204.30" y="121.05" text-anchor="middle" font-size="12.00" fill="#272727">Second</text>
+<path d="M 210.70 175.35 L 289.90 175.35 C 291.55 175.35 292.90 176.69 292.90 178.35 L 292.90 190.35 C 292.90 192.00 291.55 193.35 289.90 193.35 L 210.70 193.35 C 209.04 193.35 207.70 192.00 207.70 190.35 L 207.70 178.35 C 207.70 176.69 209.04 175.35 210.70 175.35 Z" fill="#ffffff"/>
+<text x="250.30" y="188.55" text-anchor="middle" font-size="12.00" fill="#272727">A third answer</text>
+<path d="M 308.76 177.85 L 343.83 177.85 C 345.49 177.85 346.83 179.19 346.83 180.85 L 346.83 192.85 C 346.83 194.50 345.49 195.85 343.83 195.85 L 308.76 195.85 C 307.11 195.85 305.76 194.50 305.76 192.85 L 305.76 180.85 C 305.76 179.19 307.11 177.85 308.76 177.85 Z" fill="#ffffff"/>
+<text x="326.30" y="191.05" text-anchor="middle" font-size="12.00" fill="#272727">Fourth</text>
+<path d="M 232.43 266.85 L 258.17 266.85 C 259.82 266.85 261.17 268.19 261.17 269.85 L 261.17 281.85 C 261.17 283.50 259.82 284.85 258.17 284.85 L 232.43 284.85 C 230.77 284.85 229.43 283.50 229.43 281.85 L 229.43 269.85 C 229.43 268.19 230.77 266.85 232.43 266.85 Z" fill="#ffffff"/>
+<text x="245.30" y="280.05" text-anchor="middle" font-size="12.00" fill="#272727">Back</text></g>
+</svg>

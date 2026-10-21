@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="224.75" height="294.00" viewBox="0 0 224.75 294.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 160.17 192.00 L 160.17 204.00 C 160.17 211.44 155.61 216.00 148.17 216.00 L 132.38 216.00 C 124.94 216.00 120.38 220.56 120.38 228.00 L 120.38 240.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<ellipse cx="120.38" cy="234.00" rx="6.00" ry="6.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 55.23 54.00 L 55.23 196.00 C 55.23 208.40 62.83 216.00 75.23 216.00 L 92.38 216.00 C 99.82 216.00 104.38 220.56 104.38 228.00 L 104.38 240.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<ellipse cx="104.38" cy="234.00" rx="6.00" ry="6.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-2"><title></title><path d="M 160.17 54.00 L 160.17 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<ellipse cx="160.17" cy="60.00" rx="6.00" ry="6.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="Class01"><title>Class01</title><rect x="103.59" y="102.00" width="113.16" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="160.17" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Class01</text>
+<path d="M 103.59 140.00 L 216.75 140.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="113.59" y="158.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">int amount</text>
+<path d="M 103.59 168.00 L 216.75 168.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="113.59" y="186.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">draw()</text>
+<g data-id="bar"><title>bar</title><rect x="82.47" y="240.00" width="59.81" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="112.38" y="266.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">bar</text>
+<g data-id="Class02"><title>Class02</title><rect x="8.00" y="8.00" width="94.47" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="55.23" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Class02</text>
+<g data-id="foo"><title>foo</title><rect x="130.47" y="8.00" width="59.41" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="160.17" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">foo</text></g>
+</svg>

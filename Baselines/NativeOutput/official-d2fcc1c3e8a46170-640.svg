@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="229.64" height="439.14" viewBox="0 0 229.64 439.14" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 90.32 385.14 L 90.32 337.14" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 90.32 337.14 L 93.68 345.14 L 86.96 345.14 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 82.32 269.00 L 82.32 243.00 C 82.32 230.60 74.72 223.00 62.32 223.00 L 62.04 223.00 C 49.64 223.00 42.04 215.40 42.04 203.00 L 42.04 182.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 42.04 182.00 L 45.40 190.00 L 38.68 190.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 98.32 269.00 L 98.32 243.00 C 98.32 230.60 105.92 223.00 118.32 223.00 L 124.36 223.00 C 136.76 223.00 144.36 215.40 144.36 203.00 L 144.36 182.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 144.36 182.00 L 147.72 190.00 L 141.00 190.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 144.36 136.00 L 144.36 122.00 C 144.36 113.32 149.68 108.00 158.36 108.00 L 200.64 108.00 C 213.04 108.00 220.64 115.60 220.64 128.00 L 220.64 280.57 C 220.64 292.97 213.04 300.57 200.64 300.57 L 148.84 300.57" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 148.84 300.57 L 156.84 297.21 L 156.84 303.93 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 42.04 136.00 L 42.04 115.00 C 42.04 102.60 49.64 95.00 62.04 95.00 L 62.32 95.00 C 74.72 95.00 82.32 87.40 82.32 75.00 L 82.32 54.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 82.32 54.00 L 85.68 62.00 L 78.96 62.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 144.36 136.00 L 144.36 115.00 C 144.36 102.60 136.76 95.00 124.36 95.00 L 118.32 95.00 C 105.92 95.00 98.32 87.40 98.32 75.00 L 98.32 54.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 98.32 54.00 L 101.68 62.00 L 94.96 62.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<g><title>A</title>
+<path d="M 62.65 385.14 L 117.99 385.14 C 122.41 385.14 125.99 388.73 125.99 393.14 L 125.99 423.14 C 125.99 427.56 122.41 431.14 117.99 431.14 L 62.65 431.14 C 58.23 431.14 54.65 427.56 54.65 423.14 L 54.65 393.14 C 54.65 388.73 58.23 385.14 62.65 385.14 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="90.32" y="413.74" text-anchor="middle" font-size="16.00" fill="#272727">Start</text>
+</g>
+<g><title>B</title>
+<path d="M 90.32 264.00 L 148.84 300.57 L 90.32 337.14 L 31.80 300.57 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="90.32" y="306.17" text-anchor="middle" font-size="16.00" fill="#272727">Ready?</text>
+</g>
+<g><title>C</title>
+<path d="M 16.00 136.00 L 68.08 136.00 C 72.50 136.00 76.08 139.58 76.08 144.00 L 76.08 174.00 C 76.08 178.42 72.50 182.00 68.08 182.00 L 16.00 182.00 C 11.58 182.00 8.00 178.42 8.00 174.00 L 8.00 144.00 C 8.00 139.58 11.58 136.00 16.00 136.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="42.04" y="164.60" text-anchor="middle" font-size="16.00" fill="#272727">Ship</text>
+</g>
+<g><title>D</title>
+<path d="M 124.08 136.00 L 164.64 136.00 C 169.06 136.00 172.64 139.58 172.64 144.00 L 172.64 174.00 C 172.64 178.42 169.06 182.00 164.64 182.00 L 124.08 182.00 C 119.66 182.00 116.08 178.42 116.08 174.00 L 116.08 144.00 C 116.08 139.58 119.66 136.00 124.08 136.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="144.36" y="164.60" text-anchor="middle" font-size="16.00" fill="#272727">Fix</text>
+</g>
+<g><title>E</title>
+<path d="M 68.67 8.00 L 111.97 8.00 C 124.68 8.00 134.97 18.30 134.97 31.00 L 134.97 31.00 C 134.97 43.70 124.68 54.00 111.97 54.00 L 68.67 54.00 C 55.97 54.00 45.67 43.70 45.67 31.00 L 45.67 31.00 C 45.67 18.30 55.97 8.00 68.67 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="90.32" y="36.60" text-anchor="middle" font-size="16.00" fill="#272727">Done</text>
+</g>
+<path d="M 33.04 186.65 L 51.04 186.65 C 52.70 186.65 54.04 187.99 54.04 189.65 L 54.04 201.65 C 54.04 203.31 52.70 204.65 51.04 204.65 L 33.04 204.65 C 31.38 204.65 30.04 203.31 30.04 201.65 L 30.04 189.65 C 30.04 187.99 31.38 186.65 33.04 186.65 Z" fill="#ffffff"/>
+<text x="42.04" y="199.85" text-anchor="middle" font-size="12.00" fill="#272727">Yes</text>
+<path d="M 91.32 241.80 L 105.32 241.80 C 106.98 241.80 108.32 243.14 108.32 244.80 L 108.32 256.80 C 108.32 258.46 106.98 259.80 105.32 259.80 L 91.32 259.80 C 89.67 259.80 88.32 258.46 88.32 256.80 L 88.32 244.80 C 88.32 243.14 89.67 241.80 91.32 241.80 Z" fill="#ffffff"/>
+<text x="98.32" y="255.00" text-anchor="middle" font-size="12.00" fill="#272727">No</text>
+<path d="M 100.06 86.00 L 140.81 86.00 C 142.47 86.00 143.81 87.34 143.81 89.00 L 143.81 101.00 C 143.81 102.66 142.47 104.00 140.81 104.00 L 100.06 104.00 C 98.40 104.00 97.06 102.66 97.06 101.00 L 97.06 89.00 C 97.06 87.34 98.40 86.00 100.06 86.00 Z" fill="#ffffff"/>
+<text x="120.43" y="99.20" text-anchor="middle" font-size="12.00" fill="#272727">Give up</text></g>
+</svg>

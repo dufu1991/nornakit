@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="251.01" height="178.00" viewBox="0 0 251.01 178.00" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 125.50 54.00 L 125.50 102.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 125.50 102.00 L 122.14 94.00 L 128.86 94.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<g><title>B</title>
+<path d="M 36.37 8.00 L 214.64 8.00 C 219.06 8.00 222.64 11.58 222.64 16.00 L 222.64 46.00 C 222.64 50.42 219.06 54.00 214.64 54.00 L 36.37 54.00 C 31.95 54.00 28.37 50.42 28.37 46.00 L 28.37 16.00 C 28.37 11.58 31.95 8.00 36.37 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="125.50" y="36.60" text-anchor="middle" font-size="16.00" fill="#272727">fa:fa-twitter for peace</text>
+</g>
+<g><title>C</title>
+<path d="M 16.00 102.00 L 235.01 102.00 C 239.43 102.00 243.01 105.58 243.01 110.00 L 243.01 162.00 C 243.01 166.42 239.43 170.00 235.01 170.00 L 16.00 170.00 C 11.58 170.00 8.00 166.42 8.00 162.00 L 8.00 110.00 C 8.00 105.58 11.58 102.00 16.00 102.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="125.50" y="130.60" text-anchor="middle" font-size="16.00" fill="#272727">fab:fa-truck-bold a custom </text><text x="125.50" y="152.60" text-anchor="middle" font-size="16.00" fill="#272727">icon</text>
+</g></g>
+</svg>

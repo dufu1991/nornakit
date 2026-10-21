@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200.09" height="410.00" viewBox="0 0 200.09 410.00" role="img" aria-label="时序图">
+<title>时序图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="lifeline-Alice"><title></title><path d="M 51.66 118.00 L 51.66 300.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-Bob"><title></title><path d="M 151.66 82.00 L 151.66 300.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="message-0"><title></title><path d="M 51.66 166.00 L 151.66 166.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 151.66 166.00 L 143.66 169.36 L 143.66 162.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-0"><title>Control req
+uest</title><rect x="67.91" y="148.00" width="67.50" height="36.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="101.66" y="161.80" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Control req</text><text x="101.66" y="178.60" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">uest</text>
+<g data-id="message-1"><title></title><path d="M 151.66 244.00 L 51.66 244.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 51.66 244.00 L 59.66 240.64 L 59.66 247.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-1"><title>Control res
+ponse</title><rect x="68.42" y="226.00" width="66.47" height="36.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="101.66" y="239.80" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Control res</text><text x="101.66" y="256.60" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">ponse</text>
+<g data-id="participant-Alice"><title>Alice</title><ellipse cx="51.66" cy="58.00" rx="18.00" ry="18.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 49.66 34.00 L 54.66 37.00 C 57.76 38.86 57.76 41.14 54.66 43.00 L 49.66 46.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="51.66" y="101.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Alice</text>
+<g data-id="participant-Alice"><title>Alice</title><ellipse cx="51.66" cy="338.00" rx="18.00" ry="18.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 49.66 314.00 L 54.66 317.00 C 57.76 318.86 57.76 321.14 54.66 323.00 L 49.66 326.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="51.66" y="381.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Alice</text>
+<g data-id="participant-Bob"><title>Bob</title><rect x="119.23" y="32.00" width="64.86" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="151.66" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Bob</text>
+<g data-id="participant-Bob"><title>Bob</title><rect x="119.23" y="312.00" width="64.86" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="151.66" y="342.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Bob</text></g>
+</svg>

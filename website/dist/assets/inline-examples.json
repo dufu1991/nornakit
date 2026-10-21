@@ -1,0 +1,16 @@
+[
+  {
+    "id" : "sf-symbols-color",
+    "sources" : {
+      "en" : "flowchart TB\n    A[\"Monochrome :sf:cloud.sun.fill: follows text\"]\n    B[\"Native multicolor :sf:cloud.sun.fill@multicolor: weather\"]\n    C[\"Hierarchical :sf:cloud.sun.fill@hierarchical: shading\"]\n    D[\"Palette :sf:cloud.sun.fill@palette(#2563eb,#f59e0b): custom colors\"]\n    A --> B --> C --> D",
+      "zh" : "flowchart TB\n    A[\"单色 :sf:cloud.sun.fill: 跟随文字\"]\n    B[\"原生多色 :sf:cloud.sun.fill@multicolor: 天气\"]\n    C[\"分层 :sf:cloud.sun.fill@hierarchical: 明暗层次\"]\n    D[\"调色板 :sf:cloud.sun.fill@palette(#2563eb,#f59e0b): 自定义颜色\"]\n    A --> B --> C --> D"
+    }
+  },
+  {
+    "id" : "rich-text",
+    "sources" : {
+      "en" : "flowchart TB\n    A[\"[b]Bold emphasis[/b] and [i]italic details[/i]\"]\n    B[\"Call the [code]render(source)[/code] method\"]\n    C[\"[u]Underlined[/u] and [s]cancelled[/s] states\"]\n    D[\"[color=#2563eb][b]This longer label keeps its color and bold styling when the text automatically wraps onto several lines.[/b][/color]\"]\n    A -->|\"[b]Keep[/b] :sf:checkmark.circle.fill: styling\"| B\n    B --> C --> D",
+      "zh" : "flowchart TB\n    A[\"[b]粗体重点[/b] 与 [i]斜体说明[/i]\"]\n    B[\"调用 [code]render(source)[/code] 方法\"]\n    C[\"[u]下划线[/u] 与 [s]已取消[/s] 状态\"]\n    D[\"[color=#2563eb][b]这是一段带有颜色和粗体的长标签，自动换行后仍然保留文字样式。[/b][/color]\"]\n    A -->|\"[b]保留[/b] :sf:checkmark.circle.fill: 样式\"| B\n    B --> C --> D"
+    }
+  }
+]

@@ -1,0 +1,8 @@
+!/.gitignore
+.DS_Store
+.openai/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example

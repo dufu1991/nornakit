@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640.00" height="468.00" viewBox="0 0 640.00 468.00" role="img" aria-label="矩形树图">
+<title>矩形树图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="treemap-0"><title>Products: 180</title><rect x="14.00" y="18.00" width="612.00" height="436.00" rx="2.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="0.18" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="20.00" y="37.90" text-anchor="start" font-size="14.00" font-weight="600" fill="#272727">Products</text>
+<g data-id="treemap-1"><title>Electronics: 100</title><rect x="20.00" y="50.00" width="331.56" height="398.00" rx="2.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="0.18" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="26.00" y="69.90" text-anchor="start" font-size="14.00" font-weight="600" fill="#272727">Electronics</text>
+<g data-id="treemap-2"><title>Phones: 50</title><rect x="26.00" y="82.00" width="319.56" height="178.00" rx="2.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="185.78" y="166.45" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Phones</text><text x="185.78" y="184.65" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">50</text>
+<g data-id="treemap-3"><title>Computers: 30</title><rect x="26.00" y="264.00" width="319.56" height="105.20" rx="2.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="185.78" y="312.05" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Computers</text><text x="185.78" y="330.25" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">30</text>
+<g data-id="treemap-4"><title>Accessories: 20</title><rect x="26.00" y="373.20" width="319.56" height="68.80" rx="2.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="185.78" y="403.05" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Accessories</text><text x="185.78" y="421.25" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">20</text>
+<g data-id="treemap-5"><title>Clothing: 80</title><rect x="355.56" y="50.00" width="264.44" height="398.00" rx="2.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="0.18" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="361.56" y="69.90" text-anchor="start" font-size="14.00" font-weight="600" fill="#272727">Clothing</text>
+<g data-id="treemap-6"><title>Men&apos;s: 40</title><rect x="361.56" y="82.00" width="252.44" height="178.00" rx="2.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="487.78" y="166.45" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Men&apos;s</text><text x="487.78" y="184.65" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">40</text>
+<g data-id="treemap-7"><title>Women&apos;s: 40</title><rect x="361.56" y="264.00" width="252.44" height="178.00" rx="2.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="487.78" y="348.45" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Women&apos;s</text><text x="487.78" y="366.65" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">40</text></g>
+</svg>

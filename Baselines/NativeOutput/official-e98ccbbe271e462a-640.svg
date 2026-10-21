@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="484.00" height="148.00" viewBox="0 0 484.00 148.00" role="img" aria-label="状态图">
+<title>状态图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="196.00" y="22.00" width="184.00" height="104.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.50" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="288.00" y="46.50" text-anchor="middle" font-size="15.71" font-weight="400" fill="#808080">B</text>
+<g data-id="relation-0"><title></title><path d="M 39.00 74.00 L 100.00 74.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 100.00 74.00 L 92.00 77.36 L 92.00 70.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 148.00 74.00 L 196.00 74.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 196.00 74.00 L 188.00 77.36 L 188.00 70.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-2"><title></title><path d="M 380.00 66.00 L 392.00 66.00 C 399.44 66.00 404.00 61.44 404.00 54.00 L 404.00 43.00 C 404.00 35.56 408.56 31.00 416.00 31.00 L 428.00 31.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 428.00 31.00 L 420.00 34.36 L 420.00 27.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-3"><title></title><path d="M 264.00 83.00 L 312.00 83.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 312.00 83.00 L 304.00 86.36 L 304.00 79.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-4"><title></title><path d="M 380.00 82.00 L 392.00 82.00 C 399.44 82.00 404.00 86.56 404.00 94.00 L 404.00 105.00 C 404.00 112.44 408.56 117.00 416.00 117.00 L 428.00 117.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 428.00 117.00 L 420.00 120.36 L 420.00 113.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="a"><title>a</title><rect x="216.00" y="60.00" width="48.00" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="240.00" y="88.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">a</text>
+<g data-id="b"><title>b</title><rect x="312.00" y="60.00" width="48.00" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="336.00" y="88.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">b</text>
+<g data-id="@initial_root"><title></title><ellipse cx="30.00" cy="74.00" rx="9.00" ry="9.00" fill="#272727" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="A"><title>A</title><rect x="100.00" y="51.00" width="48.00" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="124.00" y="79.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">A</text>
+<g data-id="C"><title>C</title><rect x="428.00" y="8.00" width="48.00" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="452.00" y="36.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">C</text>
+<g data-id="D"><title>D</title><rect x="428.00" y="94.00" width="48.00" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="452.00" y="122.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">D</text></g>
+</svg>

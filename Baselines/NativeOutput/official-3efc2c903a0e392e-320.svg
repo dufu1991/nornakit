@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="146.80" height="128.00" viewBox="0 0 146.80 128.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="Shape"><title>Shape</title><rect x="8.00" y="8.00" width="130.80" height="112.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="73.40" y="33.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">«interface»</text><text x="73.40" y="54.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Shape</text>
+<path d="M 8.00 66.00 L 138.80 66.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="84.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">noOfVertices</text>
+<path d="M 8.00 94.00 L 138.80 94.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="112.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">draw()</text></g>
+</svg>

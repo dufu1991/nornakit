@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="408.21" height="236.00" viewBox="0 0 408.21 236.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 248.09 110.00 L 216.74 110.00 C 204.34 110.00 196.74 102.40 196.74 90.00 L 196.74 73.00 C 196.74 60.60 189.14 53.00 176.74 53.00 L 145.39 53.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 145.39 53.00 L 152.39 48.00 L 159.39 53.00 L 152.39 58.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="multiplicity-0-from"><title>1</title><rect x="225.50" y="89.00" width="9.17" height="16.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="230.09" y="100.85" text-anchor="middle" font-size="11.00" font-weight="400" fill="#272727">1</text>
+<g data-id="multiplicity-0-to"><title>1</title><rect x="158.81" y="58.00" width="9.17" height="16.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="163.39" y="69.85" text-anchor="middle" font-size="11.00" font-weight="400" fill="#272727">1</text>
+<g data-id="edge-label-relation-0"><title></title><rect x="175.39" y="72.50" width="42.70" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="196.74" y="85.70" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">carries</text>
+<g data-id="relation-1"><title></title><path d="M 248.09 126.00 L 216.74 126.00 C 204.34 126.00 196.74 133.60 196.74 146.00 L 196.74 163.00 C 196.74 175.40 189.14 183.00 176.74 183.00 L 145.39 183.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 145.39 183.00 L 152.39 178.00 L 159.39 183.00 L 152.39 188.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="multiplicity-1-from"><title>1</title><rect x="225.50" y="131.00" width="9.17" height="16.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="230.09" y="142.85" text-anchor="middle" font-size="11.00" font-weight="400" fill="#272727">1</text>
+<g data-id="multiplicity-1-to"><title>1</title><rect x="158.81" y="188.00" width="9.17" height="16.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="163.39" y="199.85" text-anchor="middle" font-size="11.00" font-weight="400" fill="#272727">1</text>
+<g data-id="edge-label-relation-1"><title></title><rect x="180.72" y="145.50" width="32.04" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="196.74" y="158.70" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">rides</text>
+<g data-id="Student"><title>Student</title><rect x="248.09" y="84.00" width="152.12" height="68.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="324.15" y="110.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Student</text>
+<path d="M 248.09 122.00 L 400.21 122.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="258.09" y="140.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">-idCard : IdCard</text>
+<g data-id="IdCard"><title>IdCard</title><rect x="8.00" y="8.00" width="137.39" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="76.70" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">IdCard</text>
+<path d="M 8.00 46.00 L 145.39 46.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="65.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">-id : int</text><text x="18.00" y="84.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">-name : string</text>
+<g data-id="Bike"><title>Bike</title><rect x="8.00" y="138.00" width="137.39" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="76.70" y="164.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Bike</text>
+<path d="M 8.00 176.00 L 145.39 176.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="195.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">-id : int</text><text x="18.00" y="214.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">-name : string</text></g>
+</svg>

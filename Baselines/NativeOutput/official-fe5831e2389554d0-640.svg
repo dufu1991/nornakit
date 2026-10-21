@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="248.80" height="62.00" viewBox="0 0 248.80 62.00" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g><title>id1</title>
+<path d="M 16.00 8.00 L 232.80 8.00 C 237.22 8.00 240.80 11.58 240.80 16.00 L 240.80 46.00 C 240.80 50.42 237.22 54.00 232.80 54.00 L 16.00 54.00 C 11.58 54.00 8.00 50.42 8.00 46.00 L 8.00 16.00 C 8.00 11.58 11.58 8.00 16.00 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="M 16.00 8.00 L 16.00 54.00 M 232.80 8.00 L 232.80 54.00" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="124.40" y="36.60" text-anchor="middle" font-size="16.00" fill="#272727">This is the text in the box</text>
+</g></g>
+</svg>

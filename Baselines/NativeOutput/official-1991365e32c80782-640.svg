@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="433.66" height="62.00" viewBox="0 0 433.66 62.00" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 206.16 31.00 L 254.16 31.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 254.16 31.00 L 246.16 34.36 L 246.16 27.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<g><title>A</title>
+<path d="M 16.00 8.00 L 198.16 8.00 C 202.57 8.00 206.16 11.58 206.16 16.00 L 206.16 46.00 C 206.16 50.42 202.57 54.00 198.16 54.00 L 16.00 54.00 C 11.58 54.00 8.00 50.42 8.00 46.00 L 8.00 16.00 C 8.00 11.58 11.58 8.00 16.00 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="107.08" y="36.60" text-anchor="middle" font-size="16.00" fill="#272727">A double quote:#quot;</text>
+</g>
+<g><title>B</title>
+<path d="M 262.16 8.00 L 417.66 8.00 C 422.08 8.00 425.66 11.58 425.66 16.00 L 425.66 46.00 C 425.66 50.42 422.08 54.00 417.66 54.00 L 262.16 54.00 C 257.74 54.00 254.16 50.42 254.16 46.00 L 254.16 16.00 C 254.16 11.58 257.74 8.00 262.16 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="339.91" y="36.60" text-anchor="middle" font-size="16.00" fill="#272727">A dec char:#9829;</text>
+</g></g>
+</svg>

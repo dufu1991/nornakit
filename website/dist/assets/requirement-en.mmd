@@ -1,0 +1,12 @@
+requirementDiagram
+    requirement Native {
+        id: REQ-001
+        text: Pure Swift native drawing
+        risk: medium
+        verifymethod: test
+    }
+    element Engine {
+        type: software
+        docRef: NornaKit
+    }
+    Engine - satisfies -> Native

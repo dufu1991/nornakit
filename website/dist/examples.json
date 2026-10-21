@@ -1,0 +1,362 @@
+[
+  {
+    "builtinID" : "flowchart",
+    "en" : "Flowchart",
+    "id" : "flowchart",
+    "sources" : {
+      "en" : "flowchart TD\n    A([User input]) --> B{Valid input?}\n    B -->|Valid| C[Call API]\n    B -->|Invalid| D[Show error]\n    C --> E[Handle response]\n    E --> F([Output result])\n    D --> A",
+      "zh" : "flowchart TD\n    A([用户输入]) --> B{验证通过？}\n    B -->|通过| C[调用 API]\n    B -->|失败| D[显示错误]\n    C --> E[处理响应]\n    E --> F([输出结果])\n    D --> A"
+    },
+    "zh" : "流程图"
+  },
+  {
+    "builtinID" : "sf-symbols",
+    "en" : "SF Symbols Icons",
+    "id" : "example-sf-symbols",
+    "sources" : {
+      "en" : "flowchart TB\n    subgraph App[\"SF Symbols :sf:sparkles: Native icons\"]\n        A[\"Select :sf:doc.text: file\"]\n        B[\"Upload :sf:icloud.and.arrow.up: to cloud\"]\n        C[\"Complete :sf:checkmark.circle.fill: sync\"]\n        A -->|\"Read :sf:externaldrive: content\"| B\n        B -->|\"Confirm :sf:checkmark.seal: result\"| C\n    end",
+      "zh" : "flowchart TB\n    subgraph App[\"SF Symbols :sf:sparkles: 原生图标\"]\n        A[\"选择 :sf:doc.text: 文件\"]\n        B[\"上传 :sf:icloud.and.arrow.up: 到云端\"]\n        C[\"完成 :sf:checkmark.circle.fill: 同步\"]\n        A -->|\"读取 :sf:externaldrive: 内容\"| B\n        B -->|\"确认 :sf:checkmark.seal: 结果\"| C\n    end"
+    },
+    "zh" : "SF Symbols 图标"
+  },
+  {
+    "builtinID" : "sf-symbols-wrapping",
+    "en" : "SF Symbols Wrapping",
+    "id" : "example-sf-symbols-wrapping",
+    "sources" : {
+      "en" : "flowchart TB\n    A[\"Before :sf:icloud.and.arrow.up: after\"]\n    B[\"First line :sf:person.fill: User<br/>Second line :sf:checkmark.circle.fill: Done<br/>Third line :sf:arrow.right: Continue\"]\n    C[\"This longer label demonstrates automatic wrapping. The :sf:externaldrive: symbol stays together with the surrounding text as the label wraps.\"]\n    A -->|\"Explicit :sf:text.aligncenter: line break\"| B\n    B -->|\"Automatic :sf:arrow.turn.down.left: line break\"| C",
+      "zh" : "flowchart TB\n    A[\"文字前 :sf:icloud.and.arrow.up: 文字后\"]\n    B[\"第一行 :sf:person.fill: 用户<br/>第二行 :sf:checkmark.circle.fill: 完成<br/>第三行 :sf:arrow.right: 继续\"]\n    C[\"这是一段用于观察自动换行的较长文本，其中的 :sf:externaldrive: 图标会作为整体参与排版，并继续显示后面的文字。\"]\n    A -->|\"显式 :sf:text.aligncenter: 换行\"| B\n    B -->|\"自动 :sf:arrow.turn.down.left: 换行\"| C"
+    },
+    "zh" : "SF Symbols 换行"
+  },
+  {
+    "builtinID" : "sequence-sf-symbols",
+    "en" : "SF Symbols Messages",
+    "id" : "example-sequence-sf-symbols",
+    "sources" : {
+      "en" : "sequenceDiagram\n    actor User as User :sf:person.fill:\n    participant App as App :sf:app:\n    participant Cloud as Cloud :sf:icloud:\n    User->>App: Select :sf:doc.text: file\n    Note over App,Cloud: Native :sf:sparkles: symbols and text<br/>Share font size, color and baseline\n    App->>+Cloud: Upload :sf:icloud.and.arrow.up: file\n    Cloud-->>-App: Save :sf:checkmark.circle.fill: Success\n    App-->>User: Show :sf:photo: preview",
+      "zh" : "sequenceDiagram\n    actor User as 用户 :sf:person.fill:\n    participant App as 应用 :sf:app:\n    participant Cloud as 云端 :sf:icloud:\n    User->>App: 选择 :sf:doc.text: 文件\n    Note over App,Cloud: 原生 :sf:sparkles: 图标与文字<br/>共享字号、颜色和基线\n    App->>+Cloud: 上传 :sf:icloud.and.arrow.up: 文件\n    Cloud-->>-App: 保存 :sf:checkmark.circle.fill: 成功\n    App-->>User: 展示 :sf:photo: 预览"
+    },
+    "zh" : "SF Symbols 消息"
+  },
+  {
+    "builtinID" : "sequence",
+    "en" : "Sequence",
+    "id" : "sequence",
+    "sources" : {
+      "en" : "sequenceDiagram\n    autonumber\n    actor User as User\n    participant App as App\n    participant API as Server\n    User->>App: Submit request\n    App->>+API: Validate and process\n    Note over App,API: Native messages, activations and branches\n    alt Valid request\n        API-->>App: Return result\n    else Invalid request\n        API-->>App: Return error\n    end\n    deactivate API\n    App-->>User: Show response",
+      "zh" : "sequenceDiagram\n    autonumber\n    actor User as 用户\n    participant App as 应用\n    participant API as 服务端\n    User->>App: 提交请求\n    App->>+API: 校验并处理\n    Note over App,API: 原生消息、激活与分支\n    alt 请求有效\n        API-->>App: 返回结果\n    else 请求无效\n        API-->>App: 返回错误\n    end\n    deactivate API\n    App-->>User: 展示响应"
+    },
+    "zh" : "时序图"
+  },
+  {
+    "builtinID" : "class",
+    "en" : "Class",
+    "id" : "class",
+    "sources" : {
+      "en" : "classDiagram\n    direction LR\n    class Renderer {\n        +render(source)\n    }\n    class NativeRenderer {\n        -scene DiagramScene\n        +render(source)\n    }\n    class SVGExporter {\n        +export(scene)\n    }\n    Renderer <|.. NativeRenderer\n    NativeRenderer --> SVGExporter : exports",
+      "zh" : "classDiagram\n    direction LR\n    class Renderer {\n        +render(source)\n    }\n    class NativeRenderer {\n        -scene DiagramScene\n        +render(source)\n    }\n    class SVGExporter {\n        +export(scene)\n    }\n    Renderer <|.. NativeRenderer\n    NativeRenderer --> SVGExporter : exports"
+    },
+    "zh" : "类图"
+  },
+  {
+    "builtinID" : "state",
+    "en" : "State",
+    "id" : "state",
+    "sources" : {
+      "en" : "stateDiagram-v2\n    [*] --> Idle\n    Idle --> Parsing: Edit source\n    Parsing --> Ready: Success\n    Parsing --> Error: Syntax error\n    Error --> Parsing: Fix\n    Ready --> [*]",
+      "zh" : "stateDiagram-v2\n    [*] --> Idle\n    Idle --> Parsing: 编辑源码\n    Parsing --> Ready: 成功\n    Parsing --> Error: 语法错误\n    Error --> Parsing: 修正\n    Ready --> [*]"
+    },
+    "zh" : "状态图"
+  },
+  {
+    "builtinID" : "er",
+    "en" : "Entity relationship",
+    "id" : "er",
+    "sources" : {
+      "en" : "erDiagram\n    PROJECT ||--o{ DIAGRAM : contains\n    DIAGRAM ||--o{ EXPORT : produces\n    PROJECT {\n        string id PK\n        string name\n    }\n    DIAGRAM {\n        string id PK\n        string source\n    }\n    EXPORT {\n        string format\n        string path\n    }",
+      "zh" : "erDiagram\n    PROJECT ||--o{ DIAGRAM : contains\n    DIAGRAM ||--o{ EXPORT : produces\n    PROJECT {\n        string id PK\n        string name\n    }\n    DIAGRAM {\n        string id PK\n        string source\n    }\n    EXPORT {\n        string format\n        string path\n    }"
+    },
+    "zh" : "实体关系图"
+  },
+  {
+    "builtinID" : "pie",
+    "en" : "Pie",
+    "id" : "pie",
+    "sources" : {
+      "en" : "pie showData title Diagram usage\n    \"Flowcharts\" : 46\n    \"Sequence diagrams\" : 28\n    \"Relationship diagrams\" : 16\n    \"Other\" : 10",
+      "zh" : "pie showData title 图形使用分布\n    \"流程图\" : 46\n    \"时序图\" : 28\n    \"关系图\" : 16\n    \"其他\" : 10"
+    },
+    "zh" : "饼图"
+  },
+  {
+    "builtinID" : "gantt",
+    "en" : "Gantt",
+    "id" : "gantt",
+    "sources" : {
+      "en" : "gantt\n    title Native engine development\n    dateFormat YYYY-MM-DD\n    section Core\n    Scene model :done, scene, 2026-10-01, 5d\n    Sequence diagrams :active, seq, after scene, 7d\n    section Diagrams\n    Data charts :charts, 2026-10-06, 10d\n    Regression tests :crit, tests, after charts, 4d",
+      "zh" : "gantt\n    title 原生引擎开发计划\n    dateFormat YYYY-MM-DD\n    section 核心\n    场景模型 :done, scene, 2026-10-01, 5d\n    时序图 :active, seq, after scene, 7d\n    section 图形\n    数据图表 :charts, 2026-10-06, 10d\n    回归测试 :crit, tests, after charts, 4d"
+    },
+    "zh" : "甘特图"
+  },
+  {
+    "builtinID" : "gitGraph",
+    "en" : "Git graph",
+    "id" : "gitGraph",
+    "sources" : {
+      "en" : "gitGraph\n    commit id: \"init\"\n    branch develop\n    commit id: \"native\"\n    commit id: \"sequence\"\n    checkout main\n    commit id: \"docs\"\n    merge develop id: \"release\" tag: \"v0.2\"",
+      "zh" : "gitGraph\n    commit id: \"init\"\n    branch develop\n    commit id: \"native\"\n    commit id: \"sequence\"\n    checkout main\n    commit id: \"docs\"\n    merge develop id: \"release\" tag: \"v0.2\""
+    },
+    "zh" : "Git 分支图"
+  },
+  {
+    "builtinID" : "mindmap",
+    "en" : "Mind map",
+    "id" : "mindmap",
+    "sources" : {
+      "en" : "mindmap\n    root((Norna))\n        Parsing\n            Mermaid\n            Semantic validation\n        Layout\n            Layers\n            Timeline\n        Drawing\n            CoreGraphics\n            SVG",
+      "zh" : "mindmap\n    root((Norna))\n        解析\n            Mermaid\n            语义校验\n        布局\n            层级\n            时间轴\n        绘制\n            CoreGraphics\n            SVG"
+    },
+    "zh" : "思维导图"
+  },
+  {
+    "builtinID" : "timeline",
+    "en" : "Timeline",
+    "id" : "timeline",
+    "sources" : {
+      "en" : "timeline\n    title Native rendering roadmap\n    section Foundation\n        Phase 1 : Flowcharts : Subgraphs\n        Phase 2 : Sequence diagrams : Relationship diagrams\n    section Expansion\n        Phase 3 : Data charts : Advanced layouts",
+      "zh" : "timeline\n    title 原生渲染路线\n    section 基础\n        第一阶段 : 流程图 : 子图\n        第二阶段 : 时序图 : 关系图\n    section 扩展\n        第三阶段 : 数据图表 : 高级布局"
+    },
+    "zh" : "时间线"
+  },
+  {
+    "builtinID" : "journey",
+    "en" : "User journey",
+    "id" : "journey",
+    "sources" : {
+      "en" : "journey\n    title From idea to diagram\n    section Editing\n        Enter source: 4: User\n        View preview: 5: User, Engine\n    section Refinement\n        Fix syntax: 2: User\n        Export result: 5: User, Engine",
+      "zh" : "journey\n    title 从想法到图表\n    section 编辑\n        输入源码: 4: 用户\n        查看预览: 5: 用户, 引擎\n    section 调整\n        修正语法: 2: 用户\n        导出结果: 5: 用户, 引擎"
+    },
+    "zh" : "用户旅程"
+  },
+  {
+    "builtinID" : "xychart",
+    "en" : "XY chart",
+    "id" : "xychart",
+    "sources" : {
+      "en" : "xychart-beta\n    title \"Weekly diagram count\"\n    x-axis [Week 1, Week 2, Week 3, Week 4]\n    y-axis \"Count\" 0 --> 100\n    bar \"Created\" [24, 48, 62, 85]\n    line \"Export\" [16, 35, 54, 72]",
+      "zh" : "xychart-beta\n    title \"每周图表数量\"\n    x-axis [第一周, 第二周, 第三周, 第四周]\n    y-axis \"数量\" 0 --> 100\n    bar \"创建\" [24, 48, 62, 85]\n    line \"导出\" [16, 35, 54, 72]"
+    },
+    "zh" : "XY 坐标图"
+  },
+  {
+    "builtinID" : "quadrantChart",
+    "en" : "Quadrant",
+    "id" : "quadrantChart",
+    "sources" : {
+      "en" : "quadrantChart\n    title Priority assessment\n    x-axis Low cost --> High cost\n    y-axis Low value --> High value\n    quadrant-1 Invest\n    quadrant-2 Prioritize\n    quadrant-3 Defer\n    quadrant-4 Reassess\n    Sequence diagrams: [0.3, 0.8]\n    Full compatibility: [0.85, 0.85]\n    Custom animation: [0.7, 0.25]",
+      "zh" : "quadrantChart\n    title 优先级评估\n    x-axis 低成本 --> 高成本\n    y-axis 低价值 --> 高价值\n    quadrant-1 重点投入\n    quadrant-2 优先实现\n    quadrant-3 暂缓\n    quadrant-4 重新评估\n    时序图: [0.3, 0.8]\n    全量兼容: [0.85, 0.85]\n    自定义动画: [0.7, 0.25]"
+    },
+    "zh" : "象限图"
+  },
+  {
+    "builtinID" : "requirement",
+    "en" : "Requirement",
+    "id" : "requirement",
+    "sources" : {
+      "en" : "requirementDiagram\n    requirement Native {\n        id: REQ-001\n        text: Pure Swift native drawing\n        risk: medium\n        verifymethod: test\n    }\n    element Engine {\n        type: software\n        docRef: NornaKit\n    }\n    Engine - satisfies -> Native",
+      "zh" : "requirementDiagram\n    requirement Native {\n        id: REQ-001\n        text: 纯 Swift 原生绘制\n        risk: medium\n        verifymethod: test\n    }\n    element Engine {\n        type: software\n        docRef: NornaKit\n    }\n    Engine - satisfies -> Native"
+    },
+    "zh" : "需求图"
+  },
+  {
+    "builtinID" : "c4",
+    "en" : "C4 architecture",
+    "id" : "c4",
+    "sources" : {
+      "en" : "C4Context\n    title Diagram studio\n    Person(user, \"User\", \"Edit diagrams\")\n    System_Boundary(studio, \"Norna Studio\") {\n        System(editor, \"Editor\", \"Mermaid source\")\n        System(engine, \"Native engine\", \"Swift geometry layout\")\n    }\n    Rel(user, editor, \"Editing\")\n    Rel(editor, engine, \"Render\")",
+      "zh" : "C4Context\n    title 图表工作台\n    Person(user, \"用户\", \"编辑图表\")\n    System_Boundary(studio, \"Norna Studio\") {\n        System(editor, \"编辑器\", \"Mermaid 源码\")\n        System(engine, \"原生引擎\", \"Swift 几何布局\")\n    }\n    Rel(user, editor, \"编辑\")\n    Rel(editor, engine, \"渲染\")"
+    },
+    "zh" : "C4 架构图"
+  },
+  {
+    "builtinID" : "sankey",
+    "en" : "Sankey",
+    "id" : "sankey",
+    "sources" : {
+      "en" : "sankey-beta\nInput,Flowcharts,46\nInput,Sequence diagrams,28\nInput,Relationship diagrams,26\nFlowcharts,Native canvas,30\nFlowcharts,SVG,16\nSequence diagrams,Native canvas,20\nSequence diagrams,SVG,8\nRelationship diagrams,SVG,26",
+      "zh" : "sankey-beta\n输入,流程图,46\n输入,时序图,28\n输入,关系图,26\n流程图,原生画布,30\n流程图,SVG,16\n时序图,原生画布,20\n时序图,SVG,8\n关系图,SVG,26"
+    },
+    "zh" : "桑基图"
+  },
+  {
+    "builtinID" : "block",
+    "en" : "Block",
+    "id" : "block",
+    "sources" : {
+      "en" : "block-beta\n    columns 3\n    A[Parsing] B[Layout] C[Drawing]\n    D[Model] E[Scene] F[Export]\n    A --> B\n    B --> C\n    D --> E\n    E --> F",
+      "zh" : "block-beta\n    columns 3\n    A[解析] B[布局] C[绘制]\n    D[模型] E[场景] F[导出]\n    A --> B\n    B --> C\n    D --> E\n    E --> F"
+    },
+    "zh" : "块图"
+  },
+  {
+    "builtinID" : "packet",
+    "en" : "Packet",
+    "id" : "packet",
+    "sources" : {
+      "en" : "packet-beta\n    title TCP header\n    0-15: \"Source Port\"\n    16-31: \"Destination Port\"\n    32-63: \"Sequence Number\"\n    64-95: \"Acknowledgment\"\n    96-99: \"Offset\"\n    100-105: \"Reserved\"\n    106-111: \"Flags\"\n    112-127: \"Window\"",
+      "zh" : "packet-beta\n    title TCP 报文头\n    0-15: \"Source Port\"\n    16-31: \"Destination Port\"\n    32-63: \"Sequence Number\"\n    64-95: \"Acknowledgment\"\n    96-99: \"Offset\"\n    100-105: \"Reserved\"\n    106-111: \"Flags\"\n    112-127: \"Window\""
+    },
+    "zh" : "数据包图"
+  },
+  {
+    "builtinID" : "kanban",
+    "en" : "Kanban",
+    "id" : "kanban",
+    "sources" : {
+      "en" : "kanban\n    todo[To do]\n        a[Expand syntax support]\n        b[Improve complex layouts]\n    doing[In progress]\n        c[Native diagram engine]\n    done[Done]\n        d[Flowcharts and subgraphs]\n        e[Shared vector scene]",
+      "zh" : "kanban\n    todo[待处理]\n        a[扩展语法兼容]\n        b[优化复杂布局]\n    doing[进行中]\n        c[原生图形引擎]\n    done[已完成]\n        d[流程图与子图]\n        e[通用矢量场景]"
+    },
+    "zh" : "看板"
+  },
+  {
+    "builtinID" : "architecture",
+    "en" : "Architecture",
+    "id" : "architecture",
+    "sources" : {
+      "en" : "architecture-beta\n    group backend[Service layer]\n    service api(server)[API gateway] in backend\n    service db(database)[Database] in backend\n    service web(internet)[Client]\n    web:R --> L:api\n    api:R --> L:db",
+      "zh" : "architecture-beta\n    group backend[服务层]\n    service api(server)[API 网关] in backend\n    service db(database)[数据库] in backend\n    service web(internet)[客户端]\n    web:R --> L:api\n    api:R --> L:db"
+    },
+    "zh" : "架构图"
+  },
+  {
+    "builtinID" : "radar",
+    "en" : "Radar",
+    "id" : "radar",
+    "sources" : {
+      "en" : "radar-beta\n    title Rendering capabilities\n    axis Parsing, Layout, Drawing, Export, Interaction\n    curve native[\"Native implementation\"]{8,7,9,8,9}\n    curve reference[\"Target\"]{10,10,10,10,10}\n    max 10",
+      "zh" : "radar-beta\n    title 渲染能力\n    axis 解析, 布局, 绘制, 导出, 交互\n    curve native[\"原生实现\"]{8,7,9,8,9}\n    curve reference[\"目标\"]{10,10,10,10,10}\n    max 10"
+    },
+    "zh" : "雷达图"
+  },
+  {
+    "builtinID" : "treemap",
+    "en" : "Treemap",
+    "id" : "treemap",
+    "sources" : {
+      "en" : "treemap-beta\n    \"Diagram engine\"\n        \"Parsing\": 32\n        \"Layout\": 44\n        \"Drawing\": 24\n    \"App\"\n        \"Editing\": 18\n        \"Interaction\": 12",
+      "zh" : "treemap-beta\n    \"图形引擎\"\n        \"解析\": 32\n        \"布局\": 44\n        \"绘制\": 24\n    \"应用\"\n        \"编辑\": 18\n        \"交互\": 12"
+    },
+    "zh" : "矩形树图"
+  },
+  {
+    "builtinID" : "info",
+    "en" : "Info",
+    "id" : "info",
+    "sources" : {
+      "en" : "info\nshowInfo",
+      "zh" : "info\nshowInfo"
+    },
+    "zh" : "信息图"
+  },
+  {
+    "builtinID" : "agentflow",
+    "en" : "Agent flow",
+    "id" : "agentflow",
+    "sources" : {
+      "en" : "agentflow-beta LR\n    A[User request] --> B{Route}\n    B --> C[Research agent]\n    B --> D[Coding agent]\n    C --> E[Summarize response]\n    D --> E",
+      "zh" : "agentflow-beta LR\n    A[用户请求] --> B{路由}\n    B --> C[研究智能体]\n    B --> D[编码智能体]\n    C --> E[汇总响应]\n    D --> E"
+    },
+    "zh" : "智能体流程"
+  },
+  {
+    "builtinID" : "usecase",
+    "en" : "Use case",
+    "id" : "usecase",
+    "sources" : {
+      "en" : "usecase-beta\n    actor User[User]\n    systemBoundary Studio[Diagram studio]\n        Edit(Edit source)\n        Preview(View preview)\n        Export(Export diagram)\n    end\n    User --> Edit\n    User --> Preview\n    User --> Export",
+      "zh" : "usecase-beta\n    actor User[用户]\n    systemBoundary Studio[图表工作台]\n        Edit(编辑源码)\n        Preview(查看预览)\n        Export(导出图表)\n    end\n    User --> Edit\n    User --> Preview\n    User --> Export"
+    },
+    "zh" : "用例图"
+  },
+  {
+    "builtinID" : "railroad",
+    "en" : "Railroad",
+    "id" : "railroad",
+    "sources" : {
+      "en" : "railroad-ebnf-beta\n    diagram = \"flowchart\" direction [ node ] { edge node } ;\n    direction = \"TD\" | \"LR\" | \"BT\" | \"RL\" ;",
+      "zh" : "railroad-ebnf-beta\n    diagram = \"flowchart\" direction [ node ] { edge node } ;\n    direction = \"TD\" | \"LR\" | \"BT\" | \"RL\" ;"
+    },
+    "zh" : "语法铁路图"
+  },
+  {
+    "builtinID" : "treeView",
+    "en" : "Tree view",
+    "id" : "treeView",
+    "sources" : {
+      "en" : "treeView-beta\n    Norna/\n        Sources/\n            NornaKit/\n                DiagramScene.swift\n            NornaStudio/\n                StudioView.swift\n        Tests/\n        Package.swift",
+      "zh" : "treeView-beta\n    Norna/\n        Sources/\n            NornaKit/\n                DiagramScene.swift\n            NornaStudio/\n                StudioView.swift\n        Tests/\n        Package.swift"
+    },
+    "zh" : "目录树"
+  },
+  {
+    "builtinID" : "venn",
+    "en" : "Venn",
+    "id" : "venn",
+    "sources" : {
+      "en" : "venn-beta\n    title Capability overlap\n    set Swift[Swift]: 60\n    set Graphics[Graphics]: 45\n    union Swift,Graphics: 20",
+      "zh" : "venn-beta\n    title 能力交集\n    set Swift[Swift]: 60\n    set Graphics[Graphics]: 45\n    union Swift,Graphics: 20"
+    },
+    "zh" : "韦恩图"
+  },
+  {
+    "builtinID" : "cynefin",
+    "en" : "Cynefin",
+    "id" : "cynefin",
+    "sources" : {
+      "en" : "cynefin-beta\n    title Problem solving approaches\n    complex\n        \"Explore new layouts\"\n    complicated\n        \"Analyze compatibility gaps\"\n    clear\n        \"Fix known syntax issues\"\n    chaotic\n        \"Handle runtime crashes\"\n    confusion\n        \"Identify the problem domain\"",
+      "zh" : "cynefin-beta\n    title 问题处理方式\n    complex\n        \"探索新的布局方法\"\n    complicated\n        \"分析兼容性差异\"\n    clear\n        \"修复确定的语法问题\"\n    chaotic\n        \"处理运行时崩溃\"\n    confusion\n        \"识别问题所属领域\""
+    },
+    "zh" : "Cynefin 框架"
+  },
+  {
+    "builtinID" : "wardley",
+    "en" : "Wardley map",
+    "id" : "wardley",
+    "sources" : {
+      "en" : "wardley-beta\n    title Diagram product map\n    anchor User value [0.95, 0.4]\n    component Editing experience [0.75, 0.6]\n    component Native engine [0.5, 0.35]\n    component System frameworks [0.15, 0.9]\n    User value -> Editing experience\n    Editing experience -> Native engine\n    Native engine -> System frameworks",
+      "zh" : "wardley-beta\n    title 图表产品地图\n    anchor 用户价值 [0.95, 0.4]\n    component 编辑体验 [0.75, 0.6]\n    component 原生引擎 [0.5, 0.35]\n    component 系统框架 [0.15, 0.9]\n    用户价值 -> 编辑体验\n    编辑体验 -> 原生引擎\n    原生引擎 -> 系统框架"
+    },
+    "zh" : "Wardley 地图"
+  },
+  {
+    "builtinID" : "swimlane",
+    "en" : "Swimlane",
+    "id" : "swimlane",
+    "sources" : {
+      "en" : "swimlane-beta LR\n    subgraph User[User]\n        A[Submit request] --> B[Confirm result]\n    end\n    subgraph Service[Service]\n        C[Process request] --> D[Return response]\n    end\n    A --> C\n    D --> B",
+      "zh" : "swimlane-beta LR\n    subgraph User[用户]\n        A[提交请求] --> B[确认结果]\n    end\n    subgraph Service[服务]\n        C[处理请求] --> D[返回响应]\n    end\n    A --> C\n    D --> B"
+    },
+    "zh" : "泳道图"
+  },
+  {
+    "builtinID" : "ishikawa",
+    "en" : "Fishbone",
+    "id" : "ishikawa",
+    "sources" : {
+      "en" : "ishikawa-beta\n    Rendering quality\n        Parsing\n            Syntax coverage\n            Error locations\n        Layout\n            Node layering\n            Edge routing\n        Drawing\n            Font measurement\n            Path precision\n        Validation\n            Regression tests\n            Visual checks",
+      "zh" : "ishikawa-beta\n    渲染质量\n        解析\n            语法覆盖\n            错误定位\n        布局\n            节点分层\n            连线避障\n        绘制\n            字体测量\n            路径精度\n        验证\n            回归测试\n            视觉检查"
+    },
+    "zh" : "鱼骨图"
+  },
+  {
+    "builtinID" : "eventmodeling",
+    "en" : "Event modeling",
+    "id" : "eventmodeling",
+    "sources" : {
+      "en" : "eventmodeling\n    tf 01 ui Editor\n    tf 02 cmd Submit source\n    tf 03 evt Source updated\n    tf 04 rmo Diagram scene\n    tf 05 ui Preview canvas",
+      "zh" : "eventmodeling\n    tf 01 ui 编辑器\n    tf 02 cmd 提交源码\n    tf 03 evt 源码已更新\n    tf 04 rmo 图表场景\n    tf 05 ui 预览画布"
+    },
+    "zh" : "事件建模"
+  }
+]

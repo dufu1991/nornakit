@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="508.00" height="96.00" viewBox="0 0 508.00 96.00" role="img" aria-label="块图">
+<title>块图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="a"><title></title><path d="M 16.00 8.00 L 148.00 8.00 C 152.42 8.00 156.00 11.58 156.00 16.00 L 156.00 80.00 C 156.00 84.42 152.42 88.00 148.00 88.00 L 16.00 88.00 C 11.58 88.00 8.00 84.42 8.00 80.00 L 8.00 16.00 C 8.00 11.58 11.58 8.00 16.00 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="82.00" y="52.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">a</text>
+<g data-id="b"><title></title><path d="M 188.00 8.00 L 320.00 8.00 C 324.42 8.00 328.00 11.58 328.00 16.00 L 328.00 80.00 C 328.00 84.42 324.42 88.00 320.00 88.00 L 188.00 88.00 C 183.58 88.00 180.00 84.42 180.00 80.00 L 180.00 16.00 C 180.00 11.58 183.58 8.00 188.00 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="254.00" y="52.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">b</text>
+<g data-id="c"><title></title><path d="M 360.00 8.00 L 492.00 8.00 C 496.42 8.00 500.00 11.58 500.00 16.00 L 500.00 80.00 C 500.00 84.42 496.42 88.00 492.00 88.00 L 360.00 88.00 C 355.58 88.00 352.00 84.42 352.00 80.00 L 352.00 16.00 C 352.00 11.58 355.58 8.00 360.00 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="426.00" y="52.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">c</text></g>
+</svg>

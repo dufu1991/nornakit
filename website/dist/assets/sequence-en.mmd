@@ -1,0 +1,15 @@
+sequenceDiagram
+    autonumber
+    actor User as User
+    participant App as App
+    participant API as Server
+    User->>App: Submit request
+    App->>+API: Validate and process
+    Note over App,API: Native messages, activations and branches
+    alt Valid request
+        API-->>App: Return result
+    else Invalid request
+        API-->>App: Return error
+    end
+    deactivate API
+    App-->>User: Show response

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900.00" height="580.00" viewBox="0 0 900.00 580.00" role="img" aria-label="Cynefin 框架">
+<title>Cynefin 框架</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="450.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">Cynefin Framework</text>
+<rect x="20.00" y="60.00" width="420.00" height="230.00" rx="12.00" fill="#0088ff" stroke="#e6e6e6" stroke-width="1.00" opacity="0.08" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="230.00" y="87.95" text-anchor="middle" font-size="17.00" font-weight="600" fill="#272727">Complex</text>
+<text x="230.00" y="111.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Probe → Sense → Respond</text>
+<rect x="460.00" y="60.00" width="420.00" height="230.00" rx="12.00" fill="#34c759" stroke="#e6e6e6" stroke-width="1.00" opacity="0.08" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="670.00" y="87.95" text-anchor="middle" font-size="17.00" font-weight="600" fill="#272727">Complicated</text>
+<text x="670.00" y="111.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Sense → Analyze → Respond</text>
+<rect x="460.00" y="330.00" width="420.00" height="230.00" rx="12.00" fill="#ff8d28" stroke="#e6e6e6" stroke-width="1.00" opacity="0.08" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="670.00" y="357.95" text-anchor="middle" font-size="17.00" font-weight="600" fill="#272727">Clear</text>
+<text x="670.00" y="381.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Sense → Categorize → Respond</text>
+<rect x="20.00" y="330.00" width="420.00" height="230.00" rx="12.00" fill="#cb30e0" stroke="#e6e6e6" stroke-width="1.00" opacity="0.08" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="230.00" y="357.95" text-anchor="middle" font-size="17.00" font-weight="600" fill="#272727">Chaotic</text>
+<text x="230.00" y="381.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Act → Sense → Respond</text>
+<rect x="310.00" y="274.00" width="280.00" height="72.00" rx="12.00" fill="#00c3d0" stroke="#e6e6e6" stroke-width="1.00" opacity="0.60" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="450.00" y="301.95" text-anchor="middle" font-size="17.00" font-weight="600" fill="#272727">Confusion</text>
+<text x="450.00" y="325.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Disorder</text></g>
+</svg>

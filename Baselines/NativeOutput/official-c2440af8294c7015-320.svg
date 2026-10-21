@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320.00" height="1156.00" viewBox="0 0 320.00 1156.00" role="img" aria-label="时间线">
+<title>时间线</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 36.00 72.00 L 36.00 258.00" fill="none" stroke="#e6e6e6" stroke-width="2.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 36.00 270.00 L 36.00 476.00" fill="none" stroke="#e6e6e6" stroke-width="2.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 36.00 488.00 L 36.00 784.00" fill="none" stroke="#e6e6e6" stroke-width="2.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 36.00 796.00 L 36.00 1132.00" fill="none" stroke="#e6e6e6" stroke-width="2.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="160.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">England&apos;s History Timeline</text>
+<text x="72.00" y="88.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">Stone Age</text>
+<rect x="72.00" y="100.00" width="224.00" height="42.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="184.00" y="126.25" text-anchor="middle" font-size="15.00" font-weight="400" fill="#272727">7600 BC</text>
+<ellipse cx="36.00" cy="121.00" rx="5.00" ry="5.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="event-0-0"><title>Britain&apos;s oldest known hous
+e was built in Orkney, Scotl
+and</title><rect x="72.00" y="156.00" width="224.00" height="80.00" rx="8.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="0.15" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="184.00" y="181.30" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Britain&apos;s oldest known hous</text><text x="184.00" y="200.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">e was built in Orkney, Scotl</text><text x="184.00" y="220.50" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">and</text>
+<text x="72.00" y="286.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">Stone Age</text>
+<rect x="72.00" y="298.00" width="224.00" height="42.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="184.00" y="324.25" text-anchor="middle" font-size="15.00" font-weight="400" fill="#272727">6000 BC</text>
+<ellipse cx="36.00" cy="319.00" rx="5.00" ry="5.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="event-1-0"><title>Sea levels rise and Britain b
+ecomes an island.
+ The people who live here a
+re hunter-gatherers.</title><rect x="72.00" y="354.00" width="224.00" height="100.00" rx="8.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="0.15" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="184.00" y="379.50" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Sea levels rise and Britain b</text><text x="184.00" y="399.10" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">ecomes an island.</text><text x="184.00" y="418.70" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727"> The people who live here a</text><text x="184.00" y="438.30" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">re hunter-gatherers.</text>
+<text x="72.00" y="504.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">Bronze Age</text>
+<rect x="72.00" y="516.00" width="224.00" height="42.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="184.00" y="542.25" text-anchor="middle" font-size="15.00" font-weight="400" fill="#272727">2300 BC</text>
+<ellipse cx="36.00" cy="537.00" rx="5.00" ry="5.00" fill="#ff8d28" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="event-2-0"><title>People arrive from Europe 
+and settle in Britain. 
+They bring farming and me
+talworking.</title><rect x="72.00" y="572.00" width="224.00" height="100.00" rx="8.00" fill="#ff8d28" stroke="none" stroke-width="1.00" opacity="0.15" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="184.00" y="597.50" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">People arrive from Europe </text><text x="184.00" y="617.10" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">and settle in Britain. </text><text x="184.00" y="636.70" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">They bring farming and me</text><text x="184.00" y="656.30" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">talworking.</text>
+<g data-id="event-2-1"><title>New styles of pottery and 
+ways of burying the dead a
+ppear.</title><rect x="72.00" y="682.00" width="224.00" height="80.00" rx="8.00" fill="#ff8d28" stroke="none" stroke-width="1.00" opacity="0.15" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="184.00" y="707.30" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">New styles of pottery and </text><text x="184.00" y="726.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">ways of burying the dead a</text><text x="184.00" y="746.50" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">ppear.</text>
+<text x="72.00" y="812.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">Bronze Age</text>
+<rect x="72.00" y="824.00" width="224.00" height="42.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="184.00" y="850.25" text-anchor="middle" font-size="15.00" font-weight="400" fill="#272727">2200 BC</text>
+<ellipse cx="36.00" cy="845.00" rx="5.00" ry="5.00" fill="#cb30e0" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="event-3-0"><title>The last major building wor
+ks are completed at Stoneh
+enge.
+ People now bury their dea
+d in stone circles.</title><rect x="72.00" y="880.00" width="224.00" height="120.00" rx="8.00" fill="#cb30e0" stroke="none" stroke-width="1.00" opacity="0.15" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="184.00" y="905.70" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">The last major building wor</text><text x="184.00" y="925.30" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">ks are completed at Stoneh</text><text x="184.00" y="944.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">enge.</text><text x="184.00" y="964.50" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727"> People now bury their dea</text><text x="184.00" y="984.10" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">d in stone circles.</text>
+<g data-id="event-3-1"><title>The first metal objects are 
+made in Britain.Some other
+ nice things happen. it is a 
+good time to be alive.</title><rect x="72.00" y="1010.00" width="224.00" height="100.00" rx="8.00" fill="#cb30e0" stroke="none" stroke-width="1.00" opacity="0.15" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="184.00" y="1035.50" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">The first metal objects are </text><text x="184.00" y="1055.10" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">made in Britain.Some other</text><text x="184.00" y="1074.70" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727"> nice things happen. it is a </text><text x="184.00" y="1094.30" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">good time to be alive.</text></g>
+</svg>

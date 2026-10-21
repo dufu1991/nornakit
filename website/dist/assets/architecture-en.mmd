@@ -1,0 +1,7 @@
+architecture-beta
+    group backend[Service layer]
+    service api(server)[API gateway] in backend
+    service db(database)[Database] in backend
+    service web(internet)[Client]
+    web:R --> L:api
+    api:R --> L:db

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="205.30" height="790.00" viewBox="0 0 205.30 790.00" role="img" aria-label="状态图">
+<title>状态图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="8.00" y="100.00" width="189.30" height="682.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.50" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="102.65" y="124.50" text-anchor="middle" font-size="15.71" font-weight="400" fill="#808080">First</text>
+<rect x="28.00" y="230.00" width="149.30" height="532.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.50" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="102.65" y="254.50" text-anchor="middle" font-size="15.71" font-weight="400" fill="#808080">Second</text>
+<rect x="48.00" y="454.00" width="109.30" height="288.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.50" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="102.65" y="478.50" text-anchor="middle" font-size="15.71" font-weight="400" fill="#808080">Third</text>
+<g data-id="relation-0"><title></title><path d="M 102.65 39.00 L 102.65 100.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 102.65 100.00 L 99.29 92.00 L 106.01 92.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 102.65 169.00 L 102.65 230.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 102.65 230.00 L 99.29 222.00 L 106.01 222.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-2"><title></title><path d="M 102.65 299.00 L 102.65 360.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 102.65 360.00 L 99.29 352.00 L 106.01 352.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-3"><title></title><path d="M 102.65 406.00 L 102.65 454.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 102.65 454.00 L 99.29 446.00 L 106.01 446.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-4"><title></title><path d="M 102.65 523.00 L 102.65 584.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 102.65 584.00 L 99.29 576.00 L 106.01 576.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-5"><title></title><path d="M 102.65 630.00 L 102.65 691.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 102.65 691.00 L 99.29 683.00 L 106.01 683.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="@initial_Third_0"><title></title><ellipse cx="102.65" cy="514.00" rx="9.00" ry="9.00" fill="#272727" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="third"><title>third</title><rect x="68.00" y="584.00" width="69.30" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="102.65" y="612.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">third</text>
+<g data-id="@final_Third_0"><title></title><ellipse cx="102.65" cy="700.00" rx="9.00" ry="9.00" fill="#ffffff" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<ellipse cx="102.65" cy="700.00" rx="5.00" ry="5.00" fill="#272727" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="@initial_Second_0"><title></title><ellipse cx="102.65" cy="290.00" rx="9.00" ry="9.00" fill="#272727" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="second"><title>second</title><rect x="58.05" y="360.00" width="89.21" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="102.65" y="388.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">second</text>
+<g data-id="@initial_First_0"><title></title><ellipse cx="102.65" cy="160.00" rx="9.00" ry="9.00" fill="#272727" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="@initial_root"><title></title><ellipse cx="102.65" cy="30.00" rx="9.00" ry="9.00" fill="#272727" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+</svg>

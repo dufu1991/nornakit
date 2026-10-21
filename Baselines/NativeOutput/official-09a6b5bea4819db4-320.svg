@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200.09" height="446.00" viewBox="0 0 200.09 446.00" role="img" aria-label="时序图">
+<title>时序图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="lifeline-Alice"><title></title><path d="M 51.66 118.00 L 51.66 336.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-Bob"><title></title><path d="M 151.66 82.00 L 151.66 336.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="message-0"><title></title><path d="M 51.66 175.00 L 151.66 175.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 151.66 175.00 L 143.66 178.36 L 143.66 171.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-0"><title>Request fr
+om bounda
+ry</title><rect x="67.97" y="148.00" width="67.36" height="54.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="101.66" y="162.40" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Request fr</text><text x="101.66" y="179.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">om bounda</text><text x="101.66" y="196.00" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">ry</text>
+<g data-id="message-1"><title></title><path d="M 151.66 271.00 L 51.66 271.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 51.66 271.00 L 59.66 267.64 L 59.66 274.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-1"><title>Response t
+o boundar
+y</title><rect x="68.11" y="244.00" width="67.09" height="54.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="101.66" y="258.40" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Response t</text><text x="101.66" y="275.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">o boundar</text><text x="101.66" y="292.00" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">y</text>
+<g data-id="participant-Alice"><title>Alice</title><ellipse cx="51.66" cy="58.00" rx="18.00" ry="18.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 19.66 38.00 L 19.66 78.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 19.66 58.00 L 33.66 58.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="51.66" y="101.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Alice</text>
+<g data-id="participant-Alice"><title>Alice</title><ellipse cx="51.66" cy="374.00" rx="18.00" ry="18.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 19.66 354.00 L 19.66 394.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 19.66 374.00 L 33.66 374.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="51.66" y="417.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Alice</text>
+<g data-id="participant-Bob"><title>Bob</title><rect x="119.23" y="32.00" width="64.86" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="151.66" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Bob</text>
+<g data-id="participant-Bob"><title>Bob</title><rect x="119.23" y="348.00" width="64.86" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="151.66" y="378.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Bob</text></g>
+</svg>

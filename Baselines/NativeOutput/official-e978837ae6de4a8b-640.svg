@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="932.00" height="440.00" viewBox="0 0 932.00 440.00" role="img" aria-label="用户旅程">
+<title>用户旅程</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 100.00 200.00 L 261.72 271.88 C 273.06 276.91 286.94 283.09 298.28 288.12 L 441.72 351.88 C 453.06 356.91 465.68 354.95 474.95 346.71 L 625.05 213.29 C 634.32 205.05 647.60 200.00 660.00 200.00 L 820.00 200.00" fill="none" stroke="#007aff" stroke-width="1.50" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="466.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">My working day</text>
+<path d="M 16.00 360.00 L 916.00 360.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="100.00" y="78.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Go to work</text>
+<rect x="20.00" y="94.00" width="160.00" height="74.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="100.00" y="135.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Make tea</text>
+<g data-id="journey-0"><title>Make tea: 5</title><ellipse cx="100.00" cy="200.00" rx="14.00" ry="14.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="100.00" y="204.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">5</text>
+<ellipse cx="35.00" cy="181.00" rx="5.00" ry="5.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="280.00" y="78.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Go to work</text>
+<rect x="200.00" y="94.00" width="160.00" height="74.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="280.00" y="135.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Go upstairs</text>
+<g data-id="journey-1"><title>Go upstairs: 3</title><ellipse cx="280.00" cy="280.00" rx="14.00" ry="14.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="280.00" y="284.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">3</text>
+<ellipse cx="215.00" cy="181.00" rx="5.00" ry="5.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="460.00" y="78.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Go to work</text>
+<rect x="380.00" y="94.00" width="160.00" height="74.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="460.00" y="135.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Do work</text>
+<g data-id="journey-2"><title>Do work: 1</title><ellipse cx="460.00" cy="360.00" rx="14.00" ry="14.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="460.00" y="364.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">1</text>
+<ellipse cx="395.00" cy="181.00" rx="5.00" ry="5.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="413.00" cy="181.00" rx="5.00" ry="5.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="640.00" y="78.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Go home</text>
+<rect x="560.00" y="94.00" width="160.00" height="74.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="640.00" y="135.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Go downstairs</text>
+<g data-id="journey-3"><title>Go downstairs: 5</title><ellipse cx="640.00" cy="200.00" rx="14.00" ry="14.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="640.00" y="204.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">5</text>
+<ellipse cx="575.00" cy="181.00" rx="5.00" ry="5.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="820.00" y="78.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Go home</text>
+<rect x="740.00" y="94.00" width="160.00" height="74.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="820.00" y="135.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Sit down</text>
+<g data-id="journey-4"><title>Sit down: 5</title><ellipse cx="820.00" cy="200.00" rx="14.00" ry="14.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="820.00" y="204.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">5</text>
+<ellipse cx="755.00" cy="181.00" rx="5.00" ry="5.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="25.00" cy="410.00" rx="5.00" ry="5.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="38.00" y="414.55" text-anchor="start" font-size="13.00" font-weight="400" fill="#272727">Me</text>
+<ellipse cx="175.00" cy="410.00" rx="5.00" ry="5.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="188.00" y="414.55" text-anchor="start" font-size="13.00" font-weight="400" fill="#272727">Cat</text></g>
+</svg>

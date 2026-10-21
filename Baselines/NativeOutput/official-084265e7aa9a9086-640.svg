@@ -1,0 +1,396 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="345.79" height="2425.00" viewBox="0 0 345.79 2425.00" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 56.00 31.00 L 68.00 31.00 C 75.44 31.00 80.00 35.56 80.00 43.00 L 80.00 644.77 C 80.00 657.17 87.60 664.77 100.00 664.77 L 126.06 664.77" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 126.06 664.77 L 118.06 668.13 L 118.06 661.41 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 117.00 L 68.00 117.00 C 75.44 117.00 80.00 121.56 80.00 129.00 L 80.00 656.27 C 80.00 668.67 87.60 676.27 100.00 676.27 L 126.06 676.27" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 126.06 676.27 L 118.06 679.63 L 118.06 672.91 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 203.00 L 68.00 203.00 C 75.44 203.00 80.00 207.56 80.00 215.00 L 80.00 667.77 C 80.00 680.17 87.60 687.77 100.00 687.77 L 126.06 687.77" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 126.06 687.77 L 118.06 691.13 L 118.06 684.41 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 190.73 664.77 L 216.79 664.77 C 229.19 664.77 236.79 657.17 236.79 644.77 L 236.79 43.00 C 236.79 35.56 241.35 31.00 248.79 31.00 L 260.79 31.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 31.00 L 252.79 34.36 L 252.79 27.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 190.73 676.27 L 216.79 676.27 C 229.19 676.27 236.79 668.67 236.79 656.27 L 236.79 129.00 C 236.79 121.56 241.35 117.00 248.79 117.00 L 260.79 117.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 117.00 L 252.79 120.36 L 252.79 113.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 190.73 687.77 L 216.79 687.77 C 229.19 687.77 236.79 680.17 236.79 667.77 L 236.79 215.00 C 236.79 207.56 241.35 203.00 248.79 203.00 L 260.79 203.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 203.00 L 252.79 206.36 L 252.79 199.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 308.79 31.00 L 322.79 31.00 C 331.47 31.00 336.79 36.32 336.79 45.00 L 336.79 2060.00 C 336.79 2072.40 329.19 2080.00 316.79 2080.00 L 118.06 2080.00 C 105.66 2080.00 98.06 2072.40 98.06 2060.00 L 98.06 690.27 C 98.06 681.59 103.38 676.27 112.06 676.27 L 126.06 676.27" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 126.06 676.27 L 118.06 679.63 L 118.06 672.91 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 289.00 L 68.00 289.00 C 75.44 289.00 80.00 293.56 80.00 301.00 L 80.00 735.72 C 80.00 745.05 85.72 750.77 95.05 750.77 L 110.11 750.77" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 110.11 750.77 L 102.11 754.13 L 102.11 747.41 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 375.00 L 68.00 375.00 C 75.44 375.00 80.00 379.56 80.00 387.00 L 80.00 747.22 C 80.00 756.55 85.72 762.27 95.05 762.27 L 110.10 762.27" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 110.10 762.27 L 102.10 765.63 L 102.10 758.91 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 461.00 L 68.00 461.00 C 75.44 461.00 80.00 465.56 80.00 473.00 L 80.00 758.72 C 80.00 768.05 85.72 773.77 95.05 773.77 L 110.11 773.77" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 110.11 773.77 L 102.11 777.13 L 102.11 770.41 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 206.68 750.77 L 221.74 750.77 C 231.07 750.77 236.79 745.05 236.79 735.72 L 236.79 301.00 C 236.79 293.56 241.35 289.00 248.79 289.00 L 260.79 289.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 289.00 L 252.79 292.36 L 252.79 285.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 206.69 762.27 L 221.74 762.27 C 231.07 762.27 236.79 756.55 236.79 747.22 L 236.79 387.00 C 236.79 379.56 241.35 375.00 248.79 375.00 L 260.79 375.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 375.00 L 252.79 378.36 L 252.79 371.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 206.68 773.77 L 221.74 773.77 C 231.07 773.77 236.79 768.05 236.79 758.72 L 236.79 473.00 C 236.79 465.56 241.35 461.00 248.79 461.00 L 260.79 461.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 461.00 L 252.79 464.36 L 252.79 457.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 308.79 289.00 L 322.79 289.00 C 331.47 289.00 336.79 294.32 336.79 303.00 L 336.79 2108.00 C 336.79 2120.40 329.19 2128.00 316.79 2128.00 L 102.10 2128.00 C 89.70 2128.00 82.10 2120.40 82.10 2108.00 L 82.10 776.27 C 82.10 767.59 87.42 762.27 96.10 762.27 L 110.10 762.27" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 110.10 762.27 L 102.10 765.63 L 102.10 758.91 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 547.00 L 68.00 547.00 C 75.44 547.00 80.00 551.56 80.00 559.00 L 80.00 823.23 C 80.00 831.63 85.15 836.77 93.54 836.77 L 107.08 836.77" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 107.08 836.77 L 99.08 840.13 L 99.08 833.41 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 633.00 L 68.00 633.00 C 75.44 633.00 80.00 637.56 80.00 645.00 L 80.00 836.27 C 80.00 843.71 84.56 848.27 92.00 848.27 L 104.00 848.27" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 104.00 848.27 L 96.00 851.63 L 96.00 844.91 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 719.00 L 68.00 719.00 C 75.44 719.00 80.00 723.56 80.00 731.00 L 80.00 846.23 C 80.00 854.63 85.15 859.77 93.54 859.77 L 107.08 859.77" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 107.08 859.77 L 99.08 863.13 L 99.08 856.41 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 209.71 836.77 L 223.25 836.77 C 231.64 836.77 236.79 831.63 236.79 823.23 L 236.79 559.00 C 236.79 551.56 241.35 547.00 248.79 547.00 L 260.79 547.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 547.00 L 252.79 550.36 L 252.79 543.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 212.79 848.27 L 224.79 848.27 C 232.23 848.27 236.79 843.71 236.79 836.27 L 236.79 645.00 C 236.79 637.56 241.35 633.00 248.79 633.00 L 260.79 633.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 633.00 L 252.79 636.36 L 252.79 629.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 209.71 859.77 L 223.25 859.77 C 231.64 859.77 236.79 854.63 236.79 846.23 L 236.79 731.00 C 236.79 723.56 241.35 719.00 248.79 719.00 L 260.79 719.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 719.00 L 252.79 722.36 L 252.79 715.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 308.79 547.00 L 322.79 547.00 C 331.47 547.00 336.79 552.32 336.79 561.00 L 336.79 2156.00 C 336.79 2168.40 329.19 2176.00 316.79 2176.00 L 96.00 2176.00 C 83.60 2176.00 76.00 2168.40 76.00 2156.00 L 76.00 862.27 C 76.00 853.59 81.32 848.27 90.00 848.27 L 104.00 848.27" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 104.00 848.27 L 96.00 851.63 L 96.00 844.91 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 805.00 L 68.00 805.00 C 75.44 805.00 80.00 809.56 80.00 817.00 L 80.00 908.21 C 80.00 917.24 85.53 922.77 94.56 922.77 L 109.12 922.77" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 109.12 922.77 L 101.12 926.13 L 101.12 919.41 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 891.00 L 68.00 891.00 C 75.44 891.00 80.00 895.56 80.00 903.00 L 80.00 919.71 C 80.00 928.74 85.53 934.27 94.56 934.27 L 109.12 934.27" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 109.12 934.27 L 101.12 937.63 L 101.12 930.91 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 977.00 L 68.00 977.00 C 75.44 977.00 80.00 972.44 80.00 965.00 L 80.00 960.33 C 80.00 951.30 85.53 945.77 94.56 945.77 L 109.12 945.77" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 109.12 945.77 L 101.12 949.13 L 101.12 942.41 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 207.66 922.77 L 222.23 922.77 C 231.26 922.77 236.79 917.24 236.79 908.21 L 236.79 817.00 C 236.79 809.56 241.35 805.00 248.79 805.00 L 260.79 805.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 805.00 L 252.79 808.36 L 252.79 801.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 207.66 934.27 L 222.23 934.27 C 231.26 934.27 236.79 928.74 236.79 919.71 L 236.79 903.00 C 236.79 895.56 241.35 891.00 248.79 891.00 L 260.79 891.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 891.00 L 252.79 894.36 L 252.79 887.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 207.66 945.77 L 222.23 945.77 C 231.26 945.77 236.79 951.30 236.79 960.33 L 236.79 965.00 C 236.79 972.44 241.35 977.00 248.79 977.00 L 260.79 977.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 977.00 L 252.79 980.36 L 252.79 973.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 308.79 805.00 L 322.79 805.00 C 331.47 805.00 336.79 810.32 336.79 819.00 L 336.79 2204.00 C 336.79 2216.40 329.19 2224.00 316.79 2224.00 L 101.12 2224.00 C 88.72 2224.00 81.12 2216.40 81.12 2204.00 L 81.12 948.27 C 81.12 939.59 86.44 934.27 95.12 934.27 L 109.12 934.27" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 109.12 934.27 L 101.12 937.63 L 101.12 930.91 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 1063.00 L 68.00 1063.00 C 75.44 1063.00 80.00 1058.44 80.00 1051.00 L 80.00 1031.77 C 80.00 1019.37 87.60 1011.77 100.00 1011.77 L 130.02 1011.77" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 130.02 1011.77 L 122.02 1015.13 L 122.02 1008.41 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 1149.00 L 68.00 1149.00 C 75.44 1149.00 80.00 1144.44 80.00 1137.00 L 80.00 1046.27 C 80.00 1033.87 87.60 1026.27 100.00 1026.27 L 130.02 1026.27" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 130.02 1026.27 L 122.02 1029.63 L 122.02 1022.91 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 1235.00 L 68.00 1235.00 C 75.44 1235.00 80.00 1230.44 80.00 1223.00 L 80.00 1060.77 C 80.00 1048.37 87.60 1040.77 100.00 1040.77 L 130.02 1040.77" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 130.02 1040.77 L 122.02 1044.13 L 122.02 1037.41 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 186.77 1011.77 L 216.79 1011.77 C 229.19 1011.77 236.79 1019.37 236.79 1031.77 L 236.79 1051.00 C 236.79 1058.44 241.35 1063.00 248.79 1063.00 L 260.79 1063.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 1063.00 L 252.79 1066.36 L 252.79 1059.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 186.77 1026.27 L 216.79 1026.27 C 229.19 1026.27 236.79 1033.87 236.79 1046.27 L 236.79 1137.00 C 236.79 1144.44 241.35 1149.00 248.79 1149.00 L 260.79 1149.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 1149.00 L 252.79 1152.36 L 252.79 1145.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 186.77 1040.77 L 216.79 1040.77 C 229.19 1040.77 236.79 1048.37 236.79 1060.77 L 236.79 1223.00 C 236.79 1230.44 241.35 1235.00 248.79 1235.00 L 260.79 1235.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 1235.00 L 252.79 1238.36 L 252.79 1231.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 308.79 1063.00 L 322.79 1063.00 C 331.47 1063.00 336.79 1068.32 336.79 1077.00 L 336.79 2252.00 C 336.79 2264.40 329.19 2272.00 316.79 2272.00 L 122.02 2272.00 C 109.62 2272.00 102.02 2264.40 102.02 2252.00 L 102.02 1040.27 C 102.02 1031.59 107.34 1026.27 116.02 1026.27 L 130.02 1026.27" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 130.02 1026.27 L 122.02 1029.63 L 122.02 1022.91 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 1321.00 L 68.00 1321.00 C 75.44 1321.00 80.00 1316.44 80.00 1309.00 L 80.00 1130.47 C 80.00 1118.07 87.60 1110.47 100.00 1110.47 L 132.07 1110.47" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 132.07 1110.47 L 124.07 1113.83 L 124.07 1107.11 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 1407.00 L 68.00 1407.00 C 75.44 1407.00 80.00 1402.44 80.00 1395.00 L 80.00 1145.67 C 80.00 1133.27 87.60 1125.67 100.00 1125.67 L 127.99 1125.67" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 127.99 1125.67 L 119.99 1129.03 L 119.99 1122.31 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 1493.00 L 68.00 1493.00 C 75.44 1493.00 80.00 1488.44 80.00 1481.00 L 80.00 1160.87 C 80.00 1148.47 87.60 1140.87 100.00 1140.87 L 132.07 1140.87" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 132.07 1140.87 L 124.07 1144.23 L 124.07 1137.51 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 184.72 1110.47 L 216.79 1110.47 C 229.19 1110.47 236.79 1118.07 236.79 1130.47 L 236.79 1309.00 C 236.79 1316.44 241.35 1321.00 248.79 1321.00 L 260.79 1321.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 1321.00 L 252.79 1324.36 L 252.79 1317.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 188.80 1125.67 L 216.79 1125.67 C 229.19 1125.67 236.79 1133.27 236.79 1145.67 L 236.79 1395.00 C 236.79 1402.44 241.35 1407.00 248.79 1407.00 L 260.79 1407.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 1407.00 L 252.79 1410.36 L 252.79 1403.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 184.72 1140.87 L 216.79 1140.87 C 229.19 1140.87 236.79 1148.47 236.79 1160.87 L 236.79 1481.00 C 236.79 1488.44 241.35 1493.00 248.79 1493.00 L 260.79 1493.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 1493.00 L 252.79 1496.36 L 252.79 1489.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 308.79 1321.00 L 322.79 1321.00 C 331.47 1321.00 336.79 1326.32 336.79 1335.00 L 336.79 2300.00 C 336.79 2312.40 329.19 2320.00 316.79 2320.00 L 119.99 2320.00 C 107.59 2320.00 99.99 2312.40 99.99 2300.00 L 99.99 1139.67 C 99.99 1130.99 105.31 1125.67 113.99 1125.67 L 127.99 1125.67" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 127.99 1125.67 L 119.99 1129.03 L 119.99 1122.31 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 1579.00 L 68.00 1579.00 C 75.44 1579.00 80.00 1574.44 80.00 1567.00 L 80.00 1242.92 C 80.00 1231.42 87.05 1224.38 98.54 1224.38 L 117.08 1224.38" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 117.08 1224.38 L 109.08 1227.74 L 109.08 1221.02 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 1665.00 L 68.00 1665.00 C 75.44 1665.00 80.00 1660.44 80.00 1653.00 L 80.00 1257.42 C 80.00 1246.85 86.48 1240.38 97.05 1240.38 L 114.09 1240.38" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 114.09 1240.38 L 106.09 1243.74 L 106.09 1237.02 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 1751.00 L 68.00 1751.00 C 75.44 1751.00 80.00 1746.44 80.00 1739.00 L 80.00 1274.92 C 80.00 1263.42 87.05 1256.38 98.54 1256.38 L 117.08 1256.38" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 117.08 1256.38 L 109.08 1259.74 L 109.08 1253.02 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 199.71 1224.38 L 218.25 1224.38 C 229.74 1224.38 236.79 1231.42 236.79 1242.92 L 236.79 1567.00 C 236.79 1574.44 241.35 1579.00 248.79 1579.00 L 260.79 1579.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 1579.00 L 252.79 1582.36 L 252.79 1575.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 202.70 1240.38 L 219.74 1240.38 C 230.31 1240.38 236.79 1246.85 236.79 1257.42 L 236.79 1653.00 C 236.79 1660.44 241.35 1665.00 248.79 1665.00 L 260.79 1665.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 1665.00 L 252.79 1668.36 L 252.79 1661.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 199.71 1256.38 L 218.25 1256.38 C 229.74 1256.38 236.79 1263.42 236.79 1274.92 L 236.79 1739.00 C 236.79 1746.44 241.35 1751.00 248.79 1751.00 L 260.79 1751.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 1751.00 L 252.79 1754.36 L 252.79 1747.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 308.79 1579.00 L 322.79 1579.00 C 331.47 1579.00 336.79 1584.32 336.79 1593.00 L 336.79 2348.00 C 336.79 2360.40 329.19 2368.00 316.79 2368.00 L 106.09 2368.00 C 93.69 2368.00 86.09 2360.40 86.09 2348.00 L 86.09 1254.38 C 86.09 1245.70 91.41 1240.38 100.09 1240.38 L 114.09 1240.38" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 114.09 1240.38 L 106.09 1243.74 L 106.09 1237.02 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 1837.00 L 68.00 1837.00 C 75.44 1837.00 80.00 1832.44 80.00 1825.00 L 80.00 1360.19 C 80.00 1347.79 87.60 1340.19 100.00 1340.19 L 133.57 1340.19" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 133.57 1340.19 L 125.57 1343.55 L 125.57 1336.83 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 1923.00 L 68.00 1923.00 C 75.44 1923.00 80.00 1918.44 80.00 1911.00 L 80.00 1370.08 C 80.00 1361.17 85.46 1355.70 94.38 1355.70 L 108.75 1355.70" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 108.75 1355.70 L 100.75 1359.06 L 100.75 1352.34 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 56.00 2009.00 L 68.00 2009.00 C 75.44 2009.00 80.00 2004.44 80.00 1997.00 L 80.00 1391.22 C 80.00 1378.82 87.60 1371.22 100.00 1371.22 L 133.57 1371.22" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 133.57 1371.22 L 125.57 1374.58 L 125.57 1367.86 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 183.21 1340.19 L 216.79 1340.19 C 229.19 1340.19 236.79 1347.79 236.79 1360.19 L 236.79 1825.00 C 236.79 1832.44 241.35 1837.00 248.79 1837.00 L 260.79 1837.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 1837.00 L 252.79 1840.36 L 252.79 1833.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 208.04 1355.70 L 222.41 1355.70 C 231.33 1355.70 236.79 1361.17 236.79 1370.08 L 236.79 1911.00 C 236.79 1918.44 241.35 1923.00 248.79 1923.00 L 260.79 1923.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 1923.00 L 252.79 1926.36 L 252.79 1919.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 183.21 1371.22 L 216.79 1371.22 C 229.19 1371.22 236.79 1378.82 236.79 1391.22 L 236.79 1997.00 C 236.79 2004.44 241.35 2009.00 248.79 2009.00 L 260.79 2009.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260.79 2009.00 L 252.79 2012.36 L 252.79 2005.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 308.79 1837.00 L 322.79 1837.00 C 331.47 1837.00 336.79 1842.32 336.79 1851.00 L 336.79 2396.00 C 336.79 2408.40 329.19 2416.00 316.79 2416.00 L 178.39 2416.00 C 165.99 2416.00 158.39 2408.40 158.39 2396.00 L 158.39 1386.73" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 158.39 1386.73 L 161.75 1394.73 L 155.03 1394.73 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<g><title>a0</title>
+<path d="M 16.00 8.00 L 48.00 8.00 C 52.42 8.00 56.00 11.58 56.00 16.00 L 56.00 46.00 C 56.00 50.42 52.42 54.00 48.00 54.00 L 16.00 54.00 C 11.58 54.00 8.00 50.42 8.00 46.00 L 8.00 16.00 C 8.00 11.58 11.58 8.00 16.00 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="36.60" text-anchor="middle" font-size="16.00" fill="#272727">a</text>
+</g>
+<g><title>b0</title>
+<path d="M 16.00 94.00 L 48.00 94.00 C 52.42 94.00 56.00 97.58 56.00 102.00 L 56.00 132.00 C 56.00 136.42 52.42 140.00 48.00 140.00 L 16.00 140.00 C 11.58 140.00 8.00 136.42 8.00 132.00 L 8.00 102.00 C 8.00 97.58 11.58 94.00 16.00 94.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="122.60" text-anchor="middle" font-size="16.00" fill="#272727">b</text>
+</g>
+<g><title>c0</title>
+<path d="M 16.00 180.00 L 48.00 180.00 C 52.42 180.00 56.00 183.58 56.00 188.00 L 56.00 218.00 C 56.00 222.42 52.42 226.00 48.00 226.00 L 16.00 226.00 C 11.58 226.00 8.00 222.42 8.00 218.00 L 8.00 188.00 C 8.00 183.58 11.58 180.00 16.00 180.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="208.60" text-anchor="middle" font-size="16.00" fill="#272727">c</text>
+</g>
+<g><title>n0</title>
+<path d="M 134.06 653.27 L 182.73 653.27 C 187.15 653.27 190.73 656.85 190.73 661.27 L 190.73 691.27 C 190.73 695.69 187.15 699.27 182.73 699.27 L 134.06 699.27 C 129.64 699.27 126.06 695.69 126.06 691.27 L 126.06 661.27 C 126.06 656.85 129.64 653.27 134.06 653.27 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="158.39" y="681.87" text-anchor="middle" font-size="16.00" fill="#272727">rect</text>
+</g>
+<g><title>x0</title>
+<path d="M 268.79 8.00 L 300.79 8.00 C 305.21 8.00 308.79 11.58 308.79 16.00 L 308.79 46.00 C 308.79 50.42 305.21 54.00 300.79 54.00 L 268.79 54.00 C 264.37 54.00 260.79 50.42 260.79 46.00 L 260.79 16.00 C 260.79 11.58 264.37 8.00 268.79 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="36.60" text-anchor="middle" font-size="16.00" fill="#272727">x</text>
+</g>
+<g><title>y0</title>
+<path d="M 268.79 94.00 L 300.79 94.00 C 305.21 94.00 308.79 97.58 308.79 102.00 L 308.79 132.00 C 308.79 136.42 305.21 140.00 300.79 140.00 L 268.79 140.00 C 264.37 140.00 260.79 136.42 260.79 132.00 L 260.79 102.00 C 260.79 97.58 264.37 94.00 268.79 94.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="122.60" text-anchor="middle" font-size="16.00" fill="#272727">y</text>
+</g>
+<g><title>z0</title>
+<path d="M 268.79 180.00 L 300.79 180.00 C 305.21 180.00 308.79 183.58 308.79 188.00 L 308.79 218.00 C 308.79 222.42 305.21 226.00 300.79 226.00 L 268.79 226.00 C 264.37 226.00 260.79 222.42 260.79 218.00 L 260.79 188.00 C 260.79 183.58 264.37 180.00 268.79 180.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="208.60" text-anchor="middle" font-size="16.00" fill="#272727">z</text>
+</g>
+<g><title>a1</title>
+<path d="M 16.00 266.00 L 48.00 266.00 C 52.42 266.00 56.00 269.58 56.00 274.00 L 56.00 304.00 C 56.00 308.42 52.42 312.00 48.00 312.00 L 16.00 312.00 C 11.58 312.00 8.00 308.42 8.00 304.00 L 8.00 274.00 C 8.00 269.58 11.58 266.00 16.00 266.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="294.60" text-anchor="middle" font-size="16.00" fill="#272727">a</text>
+</g>
+<g><title>b1</title>
+<path d="M 16.00 352.00 L 48.00 352.00 C 52.42 352.00 56.00 355.58 56.00 360.00 L 56.00 390.00 C 56.00 394.42 52.42 398.00 48.00 398.00 L 16.00 398.00 C 11.58 398.00 8.00 394.42 8.00 390.00 L 8.00 360.00 C 8.00 355.58 11.58 352.00 16.00 352.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="380.60" text-anchor="middle" font-size="16.00" fill="#272727">b</text>
+</g>
+<g><title>c1</title>
+<path d="M 16.00 438.00 L 48.00 438.00 C 52.42 438.00 56.00 441.58 56.00 446.00 L 56.00 476.00 C 56.00 480.42 52.42 484.00 48.00 484.00 L 16.00 484.00 C 11.58 484.00 8.00 480.42 8.00 476.00 L 8.00 446.00 C 8.00 441.58 11.58 438.00 16.00 438.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="466.60" text-anchor="middle" font-size="16.00" fill="#272727">c</text>
+</g>
+<g><title>n1</title>
+<path d="M 122.10 739.27 L 194.69 739.27 C 201.32 739.27 206.69 744.64 206.69 751.27 L 206.69 773.27 C 206.69 779.90 201.32 785.27 194.69 785.27 L 122.10 785.27 C 115.47 785.27 110.10 779.90 110.10 773.27 L 110.10 751.27 C 110.10 744.64 115.47 739.27 122.10 739.27 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="158.39" y="767.87" text-anchor="middle" font-size="16.00" fill="#272727">rounded</text>
+</g>
+<g><title>x1</title>
+<path d="M 268.79 266.00 L 300.79 266.00 C 305.21 266.00 308.79 269.58 308.79 274.00 L 308.79 304.00 C 308.79 308.42 305.21 312.00 300.79 312.00 L 268.79 312.00 C 264.37 312.00 260.79 308.42 260.79 304.00 L 260.79 274.00 C 260.79 269.58 264.37 266.00 268.79 266.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="294.60" text-anchor="middle" font-size="16.00" fill="#272727">x</text>
+</g>
+<g><title>y1</title>
+<path d="M 268.79 352.00 L 300.79 352.00 C 305.21 352.00 308.79 355.58 308.79 360.00 L 308.79 390.00 C 308.79 394.42 305.21 398.00 300.79 398.00 L 268.79 398.00 C 264.37 398.00 260.79 394.42 260.79 390.00 L 260.79 360.00 C 260.79 355.58 264.37 352.00 268.79 352.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="380.60" text-anchor="middle" font-size="16.00" fill="#272727">y</text>
+</g>
+<g><title>z1</title>
+<path d="M 268.79 438.00 L 300.79 438.00 C 305.21 438.00 308.79 441.58 308.79 446.00 L 308.79 476.00 C 308.79 480.42 305.21 484.00 300.79 484.00 L 268.79 484.00 C 264.37 484.00 260.79 480.42 260.79 476.00 L 260.79 446.00 C 260.79 441.58 264.37 438.00 268.79 438.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="466.60" text-anchor="middle" font-size="16.00" fill="#272727">z</text>
+</g>
+<g><title>a2</title>
+<path d="M 16.00 524.00 L 48.00 524.00 C 52.42 524.00 56.00 527.58 56.00 532.00 L 56.00 562.00 C 56.00 566.42 52.42 570.00 48.00 570.00 L 16.00 570.00 C 11.58 570.00 8.00 566.42 8.00 562.00 L 8.00 532.00 C 8.00 527.58 11.58 524.00 16.00 524.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="552.60" text-anchor="middle" font-size="16.00" fill="#272727">a</text>
+</g>
+<g><title>b2</title>
+<path d="M 16.00 610.00 L 48.00 610.00 C 52.42 610.00 56.00 613.58 56.00 618.00 L 56.00 648.00 C 56.00 652.42 52.42 656.00 48.00 656.00 L 16.00 656.00 C 11.58 656.00 8.00 652.42 8.00 648.00 L 8.00 618.00 C 8.00 613.58 11.58 610.00 16.00 610.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="638.60" text-anchor="middle" font-size="16.00" fill="#272727">b</text>
+</g>
+<g><title>c2</title>
+<path d="M 16.00 696.00 L 48.00 696.00 C 52.42 696.00 56.00 699.58 56.00 704.00 L 56.00 734.00 C 56.00 738.42 52.42 742.00 48.00 742.00 L 16.00 742.00 C 11.58 742.00 8.00 738.42 8.00 734.00 L 8.00 704.00 C 8.00 699.58 11.58 696.00 16.00 696.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="724.60" text-anchor="middle" font-size="16.00" fill="#272727">c</text>
+</g>
+<g><title>n2</title>
+<path d="M 127.00 825.27 L 189.79 825.27 C 202.49 825.27 212.79 835.57 212.79 848.27 L 212.79 848.27 C 212.79 860.97 202.49 871.27 189.79 871.27 L 127.00 871.27 C 114.30 871.27 104.00 860.97 104.00 848.27 L 104.00 848.27 C 104.00 835.57 114.30 825.27 127.00 825.27 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="158.39" y="853.87" text-anchor="middle" font-size="16.00" fill="#272727">stadium</text>
+</g>
+<g><title>x2</title>
+<path d="M 268.79 524.00 L 300.79 524.00 C 305.21 524.00 308.79 527.58 308.79 532.00 L 308.79 562.00 C 308.79 566.42 305.21 570.00 300.79 570.00 L 268.79 570.00 C 264.37 570.00 260.79 566.42 260.79 562.00 L 260.79 532.00 C 260.79 527.58 264.37 524.00 268.79 524.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="552.60" text-anchor="middle" font-size="16.00" fill="#272727">x</text>
+</g>
+<g><title>y2</title>
+<path d="M 268.79 610.00 L 300.79 610.00 C 305.21 610.00 308.79 613.58 308.79 618.00 L 308.79 648.00 C 308.79 652.42 305.21 656.00 300.79 656.00 L 268.79 656.00 C 264.37 656.00 260.79 652.42 260.79 648.00 L 260.79 618.00 C 260.79 613.58 264.37 610.00 268.79 610.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="638.60" text-anchor="middle" font-size="16.00" fill="#272727">y</text>
+</g>
+<g><title>z2</title>
+<path d="M 268.79 696.00 L 300.79 696.00 C 305.21 696.00 308.79 699.58 308.79 704.00 L 308.79 734.00 C 308.79 738.42 305.21 742.00 300.79 742.00 L 268.79 742.00 C 264.37 742.00 260.79 738.42 260.79 734.00 L 260.79 704.00 C 260.79 699.58 264.37 696.00 268.79 696.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="724.60" text-anchor="middle" font-size="16.00" fill="#272727">z</text>
+</g>
+<g><title>a3</title>
+<path d="M 16.00 782.00 L 48.00 782.00 C 52.42 782.00 56.00 785.58 56.00 790.00 L 56.00 820.00 C 56.00 824.42 52.42 828.00 48.00 828.00 L 16.00 828.00 C 11.58 828.00 8.00 824.42 8.00 820.00 L 8.00 790.00 C 8.00 785.58 11.58 782.00 16.00 782.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="810.60" text-anchor="middle" font-size="16.00" fill="#272727">a</text>
+</g>
+<g><title>b3</title>
+<path d="M 16.00 868.00 L 48.00 868.00 C 52.42 868.00 56.00 871.58 56.00 876.00 L 56.00 906.00 C 56.00 910.42 52.42 914.00 48.00 914.00 L 16.00 914.00 C 11.58 914.00 8.00 910.42 8.00 906.00 L 8.00 876.00 C 8.00 871.58 11.58 868.00 16.00 868.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="896.60" text-anchor="middle" font-size="16.00" fill="#272727">b</text>
+</g>
+<g><title>c3</title>
+<path d="M 16.00 954.00 L 48.00 954.00 C 52.42 954.00 56.00 957.58 56.00 962.00 L 56.00 992.00 C 56.00 996.42 52.42 1000.00 48.00 1000.00 L 16.00 1000.00 C 11.58 1000.00 8.00 996.42 8.00 992.00 L 8.00 962.00 C 8.00 957.58 11.58 954.00 16.00 954.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="982.60" text-anchor="middle" font-size="16.00" fill="#272727">c</text>
+</g>
+<g><title>n3</title>
+<path d="M 117.12 911.27 L 199.66 911.27 C 204.08 911.27 207.66 914.85 207.66 919.27 L 207.66 949.27 C 207.66 953.69 204.08 957.27 199.66 957.27 L 117.12 957.27 C 112.71 957.27 109.12 953.69 109.12 949.27 L 109.12 919.27 C 109.12 914.85 112.71 911.27 117.12 911.27 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="M 117.12 911.27 L 117.12 957.27 M 199.66 911.27 L 199.66 957.27" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="158.39" y="939.87" text-anchor="middle" font-size="16.00" fill="#272727">fr-rect</text>
+</g>
+<g><title>x3</title>
+<path d="M 268.79 782.00 L 300.79 782.00 C 305.21 782.00 308.79 785.58 308.79 790.00 L 308.79 820.00 C 308.79 824.42 305.21 828.00 300.79 828.00 L 268.79 828.00 C 264.37 828.00 260.79 824.42 260.79 820.00 L 260.79 790.00 C 260.79 785.58 264.37 782.00 268.79 782.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="810.60" text-anchor="middle" font-size="16.00" fill="#272727">x</text>
+</g>
+<g><title>y3</title>
+<path d="M 268.79 868.00 L 300.79 868.00 C 305.21 868.00 308.79 871.58 308.79 876.00 L 308.79 906.00 C 308.79 910.42 305.21 914.00 300.79 914.00 L 268.79 914.00 C 264.37 914.00 260.79 910.42 260.79 906.00 L 260.79 876.00 C 260.79 871.58 264.37 868.00 268.79 868.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="896.60" text-anchor="middle" font-size="16.00" fill="#272727">y</text>
+</g>
+<g><title>z3</title>
+<path d="M 268.79 954.00 L 300.79 954.00 C 305.21 954.00 308.79 957.58 308.79 962.00 L 308.79 992.00 C 308.79 996.42 305.21 1000.00 300.79 1000.00 L 268.79 1000.00 C 264.37 1000.00 260.79 996.42 260.79 992.00 L 260.79 962.00 C 260.79 957.58 264.37 954.00 268.79 954.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="982.60" text-anchor="middle" font-size="16.00" fill="#272727">z</text>
+</g>
+<g><title>a4</title>
+<path d="M 16.00 1040.00 L 48.00 1040.00 C 52.42 1040.00 56.00 1043.58 56.00 1048.00 L 56.00 1078.00 C 56.00 1082.42 52.42 1086.00 48.00 1086.00 L 16.00 1086.00 C 11.58 1086.00 8.00 1082.42 8.00 1078.00 L 8.00 1048.00 C 8.00 1043.58 11.58 1040.00 16.00 1040.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="1068.60" text-anchor="middle" font-size="16.00" fill="#272727">a</text>
+</g>
+<g><title>b4</title>
+<path d="M 16.00 1126.00 L 48.00 1126.00 C 52.42 1126.00 56.00 1129.58 56.00 1134.00 L 56.00 1164.00 C 56.00 1168.42 52.42 1172.00 48.00 1172.00 L 16.00 1172.00 C 11.58 1172.00 8.00 1168.42 8.00 1164.00 L 8.00 1134.00 C 8.00 1129.58 11.58 1126.00 16.00 1126.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="1154.60" text-anchor="middle" font-size="16.00" fill="#272727">b</text>
+</g>
+<g><title>c4</title>
+<path d="M 16.00 1212.00 L 48.00 1212.00 C 52.42 1212.00 56.00 1215.58 56.00 1220.00 L 56.00 1250.00 C 56.00 1254.42 52.42 1258.00 48.00 1258.00 L 16.00 1258.00 C 11.58 1258.00 8.00 1254.42 8.00 1250.00 L 8.00 1220.00 C 8.00 1215.58 11.58 1212.00 16.00 1212.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="1240.60" text-anchor="middle" font-size="16.00" fill="#272727">c</text>
+</g>
+<g><title>n4</title>
+<path d="M 130.02 1003.27 C 130.02 995.27 186.77 995.27 186.77 1003.27 L 186.77 1049.27 C 186.77 1057.27 130.02 1057.27 130.02 1049.27 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="M 130.02 1003.27 C 130.02 1011.27 186.77 1011.27 186.77 1003.27" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="158.39" y="1034.87" text-anchor="middle" font-size="16.00" fill="#272727">cyl</text>
+</g>
+<g><title>x4</title>
+<path d="M 268.79 1040.00 L 300.79 1040.00 C 305.21 1040.00 308.79 1043.58 308.79 1048.00 L 308.79 1078.00 C 308.79 1082.42 305.21 1086.00 300.79 1086.00 L 268.79 1086.00 C 264.37 1086.00 260.79 1082.42 260.79 1078.00 L 260.79 1048.00 C 260.79 1043.58 264.37 1040.00 268.79 1040.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="1068.60" text-anchor="middle" font-size="16.00" fill="#272727">x</text>
+</g>
+<g><title>y4</title>
+<path d="M 268.79 1126.00 L 300.79 1126.00 C 305.21 1126.00 308.79 1129.58 308.79 1134.00 L 308.79 1164.00 C 308.79 1168.42 305.21 1172.00 300.79 1172.00 L 268.79 1172.00 C 264.37 1172.00 260.79 1168.42 260.79 1164.00 L 260.79 1134.00 C 260.79 1129.58 264.37 1126.00 268.79 1126.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="1154.60" text-anchor="middle" font-size="16.00" fill="#272727">y</text>
+</g>
+<g><title>z4</title>
+<path d="M 268.79 1212.00 L 300.79 1212.00 C 305.21 1212.00 308.79 1215.58 308.79 1220.00 L 308.79 1250.00 C 308.79 1254.42 305.21 1258.00 300.79 1258.00 L 268.79 1258.00 C 264.37 1258.00 260.79 1254.42 260.79 1250.00 L 260.79 1220.00 C 260.79 1215.58 264.37 1212.00 268.79 1212.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="1240.60" text-anchor="middle" font-size="16.00" fill="#272727">z</text>
+</g>
+<g><title>a5</title>
+<path d="M 16.00 1298.00 L 48.00 1298.00 C 52.42 1298.00 56.00 1301.58 56.00 1306.00 L 56.00 1336.00 C 56.00 1340.42 52.42 1344.00 48.00 1344.00 L 16.00 1344.00 C 11.58 1344.00 8.00 1340.42 8.00 1336.00 L 8.00 1306.00 C 8.00 1301.58 11.58 1298.00 16.00 1298.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="1326.60" text-anchor="middle" font-size="16.00" fill="#272727">a</text>
+</g>
+<g><title>b5</title>
+<path d="M 16.00 1384.00 L 48.00 1384.00 C 52.42 1384.00 56.00 1387.58 56.00 1392.00 L 56.00 1422.00 C 56.00 1426.42 52.42 1430.00 48.00 1430.00 L 16.00 1430.00 C 11.58 1430.00 8.00 1426.42 8.00 1422.00 L 8.00 1392.00 C 8.00 1387.58 11.58 1384.00 16.00 1384.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="1412.60" text-anchor="middle" font-size="16.00" fill="#272727">b</text>
+</g>
+<g><title>c5</title>
+<path d="M 16.00 1470.00 L 48.00 1470.00 C 52.42 1470.00 56.00 1473.58 56.00 1478.00 L 56.00 1508.00 C 56.00 1512.42 52.42 1516.00 48.00 1516.00 L 16.00 1516.00 C 11.58 1516.00 8.00 1512.42 8.00 1508.00 L 8.00 1478.00 C 8.00 1473.58 11.58 1470.00 16.00 1470.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="1498.60" text-anchor="middle" font-size="16.00" fill="#272727">c</text>
+</g>
+<g><title>n5</title>
+<path d="M 158.39 1095.27 C 175.19 1095.27 188.80 1108.88 188.80 1125.67 C 188.80 1142.46 175.19 1156.08 158.39 1156.08 C 141.60 1156.08 127.99 1142.46 127.99 1125.67 C 127.99 1108.88 141.60 1095.27 158.39 1095.27 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="158.39" y="1131.27" text-anchor="middle" font-size="16.00" fill="#272727">circle</text>
+</g>
+<g><title>x5</title>
+<path d="M 268.79 1298.00 L 300.79 1298.00 C 305.21 1298.00 308.79 1301.58 308.79 1306.00 L 308.79 1336.00 C 308.79 1340.42 305.21 1344.00 300.79 1344.00 L 268.79 1344.00 C 264.37 1344.00 260.79 1340.42 260.79 1336.00 L 260.79 1306.00 C 260.79 1301.58 264.37 1298.00 268.79 1298.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="1326.60" text-anchor="middle" font-size="16.00" fill="#272727">x</text>
+</g>
+<g><title>y5</title>
+<path d="M 268.79 1384.00 L 300.79 1384.00 C 305.21 1384.00 308.79 1387.58 308.79 1392.00 L 308.79 1422.00 C 308.79 1426.42 305.21 1430.00 300.79 1430.00 L 268.79 1430.00 C 264.37 1430.00 260.79 1426.42 260.79 1422.00 L 260.79 1392.00 C 260.79 1387.58 264.37 1384.00 268.79 1384.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="1412.60" text-anchor="middle" font-size="16.00" fill="#272727">y</text>
+</g>
+<g><title>z5</title>
+<path d="M 268.79 1470.00 L 300.79 1470.00 C 305.21 1470.00 308.79 1473.58 308.79 1478.00 L 308.79 1508.00 C 308.79 1512.42 305.21 1516.00 300.79 1516.00 L 268.79 1516.00 C 264.37 1516.00 260.79 1512.42 260.79 1508.00 L 260.79 1478.00 C 260.79 1473.58 264.37 1470.00 268.79 1470.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="1498.60" text-anchor="middle" font-size="16.00" fill="#272727">z</text>
+</g>
+<g><title>a6</title>
+<path d="M 16.00 1556.00 L 48.00 1556.00 C 52.42 1556.00 56.00 1559.58 56.00 1564.00 L 56.00 1594.00 C 56.00 1598.42 52.42 1602.00 48.00 1602.00 L 16.00 1602.00 C 11.58 1602.00 8.00 1598.42 8.00 1594.00 L 8.00 1564.00 C 8.00 1559.58 11.58 1556.00 16.00 1556.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="1584.60" text-anchor="middle" font-size="16.00" fill="#272727">a</text>
+</g>
+<g><title>b6</title>
+<path d="M 16.00 1642.00 L 48.00 1642.00 C 52.42 1642.00 56.00 1645.58 56.00 1650.00 L 56.00 1680.00 C 56.00 1684.42 52.42 1688.00 48.00 1688.00 L 16.00 1688.00 C 11.58 1688.00 8.00 1684.42 8.00 1680.00 L 8.00 1650.00 C 8.00 1645.58 11.58 1642.00 16.00 1642.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="1670.60" text-anchor="middle" font-size="16.00" fill="#272727">b</text>
+</g>
+<g><title>c6</title>
+<path d="M 16.00 1728.00 L 48.00 1728.00 C 52.42 1728.00 56.00 1731.58 56.00 1736.00 L 56.00 1766.00 C 56.00 1770.42 52.42 1774.00 48.00 1774.00 L 16.00 1774.00 C 11.58 1774.00 8.00 1770.42 8.00 1766.00 L 8.00 1736.00 C 8.00 1731.58 11.58 1728.00 16.00 1728.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="1756.60" text-anchor="middle" font-size="16.00" fill="#272727">c</text>
+</g>
+<g><title>n6</title>
+<path d="M 158.39 1196.08 C 182.86 1196.08 202.70 1215.91 202.70 1240.38 C 202.70 1264.84 182.86 1284.68 158.39 1284.68 C 133.93 1284.68 114.09 1264.84 114.09 1240.38 C 114.09 1215.91 133.93 1196.08 158.39 1196.08 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="M 158.39 1201.08 C 180.10 1201.08 197.70 1218.67 197.70 1240.38 C 197.70 1262.08 180.10 1279.68 158.39 1279.68 C 136.69 1279.68 119.09 1262.08 119.09 1240.38 C 119.09 1218.67 136.69 1201.08 158.39 1201.08 Z" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="158.39" y="1245.98" text-anchor="middle" font-size="16.00" fill="#272727">dbl-circ</text>
+</g>
+<g><title>x6</title>
+<path d="M 268.79 1556.00 L 300.79 1556.00 C 305.21 1556.00 308.79 1559.58 308.79 1564.00 L 308.79 1594.00 C 308.79 1598.42 305.21 1602.00 300.79 1602.00 L 268.79 1602.00 C 264.37 1602.00 260.79 1598.42 260.79 1594.00 L 260.79 1564.00 C 260.79 1559.58 264.37 1556.00 268.79 1556.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="1584.60" text-anchor="middle" font-size="16.00" fill="#272727">x</text>
+</g>
+<g><title>y6</title>
+<path d="M 268.79 1642.00 L 300.79 1642.00 C 305.21 1642.00 308.79 1645.58 308.79 1650.00 L 308.79 1680.00 C 308.79 1684.42 305.21 1688.00 300.79 1688.00 L 268.79 1688.00 C 264.37 1688.00 260.79 1684.42 260.79 1680.00 L 260.79 1650.00 C 260.79 1645.58 264.37 1642.00 268.79 1642.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="1670.60" text-anchor="middle" font-size="16.00" fill="#272727">y</text>
+</g>
+<g><title>z6</title>
+<path d="M 268.79 1728.00 L 300.79 1728.00 C 305.21 1728.00 308.79 1731.58 308.79 1736.00 L 308.79 1766.00 C 308.79 1770.42 305.21 1774.00 300.79 1774.00 L 268.79 1774.00 C 264.37 1774.00 260.79 1770.42 260.79 1766.00 L 260.79 1736.00 C 260.79 1731.58 264.37 1728.00 268.79 1728.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="1756.60" text-anchor="middle" font-size="16.00" fill="#272727">z</text>
+</g>
+<g><title>a7</title>
+<path d="M 16.00 1814.00 L 48.00 1814.00 C 52.42 1814.00 56.00 1817.58 56.00 1822.00 L 56.00 1852.00 C 56.00 1856.42 52.42 1860.00 48.00 1860.00 L 16.00 1860.00 C 11.58 1860.00 8.00 1856.42 8.00 1852.00 L 8.00 1822.00 C 8.00 1817.58 11.58 1814.00 16.00 1814.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="1842.60" text-anchor="middle" font-size="16.00" fill="#272727">a</text>
+</g>
+<g><title>b7</title>
+<path d="M 16.00 1900.00 L 48.00 1900.00 C 52.42 1900.00 56.00 1903.58 56.00 1908.00 L 56.00 1938.00 C 56.00 1942.42 52.42 1946.00 48.00 1946.00 L 16.00 1946.00 C 11.58 1946.00 8.00 1942.42 8.00 1938.00 L 8.00 1908.00 C 8.00 1903.58 11.58 1900.00 16.00 1900.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="1928.60" text-anchor="middle" font-size="16.00" fill="#272727">b</text>
+</g>
+<g><title>c7</title>
+<path d="M 16.00 1986.00 L 48.00 1986.00 C 52.42 1986.00 56.00 1989.58 56.00 1994.00 L 56.00 2024.00 C 56.00 2028.42 52.42 2032.00 48.00 2032.00 L 16.00 2032.00 C 11.58 2032.00 8.00 2028.42 8.00 2024.00 L 8.00 1994.00 C 8.00 1989.58 11.58 1986.00 16.00 1986.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="2014.60" text-anchor="middle" font-size="16.00" fill="#272727">c</text>
+</g>
+<g><title>n7</title>
+<path d="M 158.39 1324.68 L 208.04 1355.70 L 158.39 1386.73 L 108.75 1355.70 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="158.39" y="1361.30" text-anchor="middle" font-size="16.00" fill="#272727">diam</text>
+</g>
+<g><title>x7</title>
+<path d="M 268.79 1814.00 L 300.79 1814.00 C 305.21 1814.00 308.79 1817.58 308.79 1822.00 L 308.79 1852.00 C 308.79 1856.42 305.21 1860.00 300.79 1860.00 L 268.79 1860.00 C 264.37 1860.00 260.79 1856.42 260.79 1852.00 L 260.79 1822.00 C 260.79 1817.58 264.37 1814.00 268.79 1814.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="1842.60" text-anchor="middle" font-size="16.00" fill="#272727">x</text>
+</g>
+<g><title>y7</title>
+<path d="M 268.79 1900.00 L 300.79 1900.00 C 305.21 1900.00 308.79 1903.58 308.79 1908.00 L 308.79 1938.00 C 308.79 1942.42 305.21 1946.00 300.79 1946.00 L 268.79 1946.00 C 264.37 1946.00 260.79 1942.42 260.79 1938.00 L 260.79 1908.00 C 260.79 1903.58 264.37 1900.00 268.79 1900.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="1928.60" text-anchor="middle" font-size="16.00" fill="#272727">y</text>
+</g>
+<g><title>z7</title>
+<path d="M 268.79 1986.00 L 300.79 1986.00 C 305.21 1986.00 308.79 1989.58 308.79 1994.00 L 308.79 2024.00 C 308.79 2028.42 305.21 2032.00 300.79 2032.00 L 268.79 2032.00 C 264.37 2032.00 260.79 2028.42 260.79 2024.00 L 260.79 1994.00 C 260.79 1989.58 264.37 1986.00 268.79 1986.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="284.79" y="2014.60" text-anchor="middle" font-size="16.00" fill="#272727">z</text>
+</g></g>
+</svg>

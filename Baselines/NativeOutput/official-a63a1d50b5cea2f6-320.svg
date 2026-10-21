@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="344.22" height="587.38" viewBox="0 0 344.22 587.38" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g class="pele-cluster" data-id="Client"><title>Client</title>
+<path d="M 98.95 8.00 L 245.27 8.00 C 249.69 8.00 253.27 11.58 253.27 16.00 L 253.27 215.48 C 253.27 219.89 249.69 223.48 245.27 223.48 L 98.95 223.48 C 94.53 223.48 90.95 219.89 90.95 215.48 L 90.95 16.00 C 90.95 11.58 94.53 8.00 98.95 8.00 Z" fill="#dcdcdc" fill-opacity="0.5" stroke="#e6e6e6" stroke-width="1"/>
+</g>
+<g class="pele-cluster" data-id="Services"><title>Services</title>
+<path d="M 16.00 271.48 L 328.22 271.48 C 332.64 271.48 336.22 275.06 336.22 279.48 L 336.22 461.48 C 336.22 465.89 332.64 469.48 328.22 469.48 L 16.00 469.48 C 11.58 469.48 8.00 465.89 8.00 461.48 L 8.00 279.48 C 8.00 275.06 11.58 271.48 16.00 271.48 Z" fill="#dcdcdc" fill-opacity="0.5" stroke="#e6e6e6" stroke-width="1"/>
+</g>
+<path d="M 156.11 355.48 L 156.11 367.48 C 156.11 374.92 151.55 379.48 144.11 379.48 L 107.05 379.48 C 99.61 379.48 95.05 384.04 95.05 391.48 L 95.05 403.48" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 95.05 403.48 L 91.69 395.48 L 98.41 395.48 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 188.11 355.48 L 188.11 367.48 C 188.11 374.92 192.67 379.48 200.11 379.48 L 241.16 379.48 C 248.60 379.48 253.16 384.04 253.16 391.48 L 253.16 403.48" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 253.16 403.48 L 249.80 395.48 L 256.52 395.48 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 164.11 92.00 L 164.11 118.00 C 164.11 120.48 165.63 122.00 168.11 122.00 L 168.11 122.00 C 170.59 122.00 172.11 123.52 172.11 126.00 L 172.11 140.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 172.11 140.00 L 168.75 132.00 L 175.47 132.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 121.94 77.00 L 109.76 77.00 C 102.21 77.00 97.58 81.63 97.58 89.18 L 97.58 326.48 C 97.58 330.20 99.86 332.48 103.58 332.48 L 109.58 332.48" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 109.58 332.48 L 101.58 335.84 L 101.58 329.12 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 109.58 320.98 L 103.76 320.98 C 100.15 320.98 97.94 318.76 97.94 315.16 L 97.94 69.50 C 97.94 62.06 102.50 57.50 109.94 57.50 L 121.94 57.50" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 121.94 57.50 L 113.94 60.86 L 113.94 54.14 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 253.16 403.48 L 253.16 95.94 C 253.16 86.37 247.30 80.50 237.72 80.50 L 222.28 80.50" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<path d="M 222.28 80.50 L 230.28 77.14 L 230.28 83.86 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 95.05 449.48 L 95.05 466.48 C 95.05 477.02 101.51 483.48 112.05 483.48 L 155.11 483.48 C 165.65 483.48 172.11 489.94 172.11 500.48 L 172.11 517.48" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 172.11 517.48 L 168.75 509.48 L 175.47 509.48 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<text x="172.11" y="32.60" text-anchor="middle" font-size="16.00" fill="#808080">Client</text>
+<text x="172.11" y="296.08" text-anchor="middle" font-size="16.00" fill="#808080">Services</text>
+<g><title>UI</title>
+<path d="M 129.94 46.00 L 214.28 46.00 C 218.70 46.00 222.28 49.58 222.28 54.00 L 222.28 84.00 C 222.28 88.42 218.70 92.00 214.28 92.00 L 129.94 92.00 C 125.52 92.00 121.94 88.42 121.94 84.00 L 121.94 54.00 C 121.94 49.58 125.52 46.00 129.94 46.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="172.11" y="74.60" text-anchor="middle" font-size="16.00" fill="#272727">Web app</text>
+</g>
+<g><title>Cache</title>
+<path d="M 110.95 148.74 C 110.95 137.09 233.27 137.09 233.27 148.74 L 233.27 194.74 C 233.27 206.39 110.95 206.39 110.95 194.74 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="M 110.95 148.74 C 110.95 160.39 233.27 160.39 233.27 148.74" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="172.11" y="181.71" text-anchor="middle" font-size="16.00" fill="#272727">Local cache</text>
+</g>
+<g><title>API</title>
+<path d="M 117.58 309.48 L 226.64 309.48 C 231.06 309.48 234.64 313.06 234.64 317.48 L 234.64 347.48 C 234.64 351.89 231.06 355.48 226.64 355.48 L 117.58 355.48 C 113.16 355.48 109.58 351.89 109.58 347.48 L 109.58 317.48 C 109.58 313.06 113.16 309.48 117.58 309.48 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="172.11" y="338.08" text-anchor="middle" font-size="16.00" fill="#272727">API gateway</text>
+</g>
+<g><title>Orders</title>
+<path d="M 36.00 403.48 L 154.11 403.48 C 158.53 403.48 162.11 407.06 162.11 411.48 L 162.11 441.48 C 162.11 445.89 158.53 449.48 154.11 449.48 L 36.00 449.48 C 31.58 449.48 28.00 445.89 28.00 441.48 L 28.00 411.48 C 28.00 407.06 31.58 403.48 36.00 403.48 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="95.05" y="432.08" text-anchor="middle" font-size="16.00" fill="#272727">Order service</text>
+</g>
+<g><title>Auth</title>
+<path d="M 198.11 403.48 L 308.22 403.48 C 312.64 403.48 316.22 407.06 316.22 411.48 L 316.22 441.48 C 316.22 445.89 312.64 449.48 308.22 449.48 L 198.11 449.48 C 193.69 449.48 190.11 445.89 190.11 441.48 L 190.11 411.48 C 190.11 407.06 193.69 403.48 198.11 403.48 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="253.16" y="432.08" text-anchor="middle" font-size="16.00" fill="#272727">Auth service</text>
+</g>
+<g><title>DB</title>
+<path d="M 116.45 525.43 C 116.45 514.83 227.77 514.83 227.77 525.43 L 227.77 571.43 C 227.77 582.03 116.45 582.03 116.45 571.43 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="M 116.45 525.43 C 116.45 536.03 227.77 536.03 227.77 525.43" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="172.11" y="558.00" text-anchor="middle" font-size="16.00" fill="#272727">Orders DB</text>
+</g>
+<path d="M 238.44 240.71 L 267.88 240.71 C 269.54 240.71 270.88 242.05 270.88 243.71 L 270.88 255.71 C 270.88 257.37 269.54 258.71 267.88 258.71 L 238.44 258.71 C 236.79 258.71 235.44 257.37 235.44 255.71 L 235.44 243.71 C 235.44 242.05 236.79 240.71 238.44 240.71 Z" fill="#ffffff"/>
+<text x="253.16" y="253.91" text-anchor="middle" font-size="12.00" fill="#272727">token</text></g>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="881.16" height="206.00" viewBox="0 0 881.16 206.00" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g class="pele-cluster" data-id="Client"><title>Client</title>
+<path d="M 16.00 42.26 L 310.67 42.26 C 315.09 42.26 318.67 45.84 318.67 50.26 L 318.67 155.74 C 318.67 160.16 315.09 163.74 310.67 163.74 L 16.00 163.74 C 11.58 163.74 8.00 160.16 8.00 155.74 L 8.00 50.26 C 8.00 45.84 11.58 42.26 16.00 42.26 Z" fill="#dcdcdc" fill-opacity="0.5" stroke="#e6e6e6" stroke-width="1"/>
+</g>
+<g class="pele-cluster" data-id="Services"><title>Services</title>
+<path d="M 374.67 8.00 L 705.84 8.00 C 710.26 8.00 713.84 11.58 713.84 16.00 L 713.84 190.00 C 713.84 194.42 710.26 198.00 705.84 198.00 L 374.67 198.00 C 370.25 198.00 366.67 194.42 366.67 190.00 L 366.67 16.00 C 366.67 11.58 370.25 8.00 374.67 8.00 Z" fill="#dcdcdc" fill-opacity="0.5" stroke="#e6e6e6" stroke-width="1"/>
+</g>
+<path d="M 511.73 100.50 L 523.73 100.50 C 531.17 100.50 535.73 95.94 535.73 88.50 L 535.73 81.00 C 535.73 73.56 540.29 69.00 547.73 69.00 L 559.73 69.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 559.73 69.00 L 551.73 72.36 L 551.73 65.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 511.73 123.50 L 524.73 123.50 C 532.79 123.50 537.73 128.44 537.73 136.50 L 537.73 142.00 C 537.73 150.06 542.67 155.00 550.73 155.00 L 563.73 155.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 563.73 155.00 L 555.73 158.36 L 555.73 151.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 128.34 104.00 L 154.34 104.00 C 156.82 104.00 158.34 105.52 158.34 108.00 L 158.34 108.00 C 158.34 110.48 159.86 112.00 162.34 112.00 L 176.34 112.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 176.34 112.00 L 168.34 115.36 L 168.34 108.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 128.34 120.00 L 152.47 120.00 C 162.31 120.00 168.34 126.03 168.34 135.87 L 168.34 135.87 C 168.34 145.71 174.37 151.74 184.21 151.74 L 354.80 151.74 C 367.12 151.74 374.67 144.19 374.67 131.87 L 374.67 118.00 C 374.67 114.28 376.95 112.00 380.67 112.00 L 386.67 112.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 386.67 112.00 L 378.67 115.36 L 378.67 108.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 386.67 112.00 L 326.54 112.00 C 314.22 112.00 306.67 119.55 306.67 131.87 L 306.67 131.87 C 306.67 144.19 299.12 151.74 286.80 151.74 L 172.34 151.74 C 159.94 151.74 152.34 144.14 152.34 131.74 L 152.34 112.50 C 152.34 105.06 147.78 100.50 140.34 100.50 L 128.34 100.50" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 128.34 100.50 L 136.34 97.14 L 136.34 103.86 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 563.73 155.00 L 156.09 155.00 C 146.33 155.00 140.34 149.02 140.34 139.25 L 140.34 129.50 C 140.34 125.78 138.06 123.50 134.34 123.50 L 128.34 123.50" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<path d="M 128.34 123.50 L 136.34 120.14 L 136.34 126.86 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 693.84 69.00 L 710.84 69.00 C 721.38 69.00 727.84 75.46 727.84 86.00 L 727.84 86.00 C 727.84 96.54 734.30 103.00 744.84 103.00 L 761.84 103.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 761.84 103.00 L 753.84 106.36 L 753.84 99.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<text x="163.34" y="66.86" text-anchor="middle" font-size="16.00" fill="#808080">Client</text>
+<text x="540.26" y="32.60" text-anchor="middle" font-size="16.00" fill="#808080">Services</text>
+<g><title>UI</title>
+<path d="M 36.00 89.00 L 120.34 89.00 C 124.76 89.00 128.34 92.58 128.34 97.00 L 128.34 127.00 C 128.34 131.42 124.76 135.00 120.34 135.00 L 36.00 135.00 C 31.58 135.00 28.00 131.42 28.00 127.00 L 28.00 97.00 C 28.00 92.58 31.58 89.00 36.00 89.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="78.17" y="117.60" text-anchor="middle" font-size="16.00" fill="#272727">Web app</text>
+</g>
+<g><title>Cache</title>
+<path d="M 176.34 89.00 C 176.34 77.35 298.67 77.35 298.67 89.00 L 298.67 135.00 C 298.67 146.65 176.34 146.65 176.34 135.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="M 176.34 89.00 C 176.34 100.65 298.67 100.65 298.67 89.00" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="237.51" y="121.97" text-anchor="middle" font-size="16.00" fill="#272727">Local cache</text>
+</g>
+<g><title>API</title>
+<path d="M 394.67 89.00 L 503.73 89.00 C 508.15 89.00 511.73 92.58 511.73 97.00 L 511.73 127.00 C 511.73 131.42 508.15 135.00 503.73 135.00 L 394.67 135.00 C 390.25 135.00 386.67 131.42 386.67 127.00 L 386.67 97.00 C 386.67 92.58 390.25 89.00 394.67 89.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="449.20" y="117.60" text-anchor="middle" font-size="16.00" fill="#272727">API gateway</text>
+</g>
+<g><title>Orders</title>
+<path d="M 567.73 46.00 L 685.84 46.00 C 690.26 46.00 693.84 49.58 693.84 54.00 L 693.84 84.00 C 693.84 88.42 690.26 92.00 685.84 92.00 L 567.73 92.00 C 563.32 92.00 559.73 88.42 559.73 84.00 L 559.73 54.00 C 559.73 49.58 563.32 46.00 567.73 46.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="626.79" y="74.60" text-anchor="middle" font-size="16.00" fill="#272727">Order service</text>
+</g>
+<g><title>Auth</title>
+<path d="M 571.73 132.00 L 681.84 132.00 C 686.26 132.00 689.84 135.58 689.84 140.00 L 689.84 170.00 C 689.84 174.42 686.26 178.00 681.84 178.00 L 571.73 178.00 C 567.32 178.00 563.73 174.42 563.73 170.00 L 563.73 140.00 C 563.73 135.58 567.32 132.00 571.73 132.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="626.79" y="160.60" text-anchor="middle" font-size="16.00" fill="#272727">Auth service</text>
+</g>
+<g><title>DB</title>
+<path d="M 761.84 80.00 C 761.84 69.40 873.16 69.40 873.16 80.00 L 873.16 126.00 C 873.16 136.60 761.84 136.60 761.84 126.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="M 761.84 80.00 C 761.84 90.60 873.16 90.60 873.16 80.00" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="817.50" y="112.58" text-anchor="middle" font-size="16.00" fill="#272727">Orders DB</text>
+</g>
+<path d="M 406.34 146.00 L 435.78 146.00 C 437.44 146.00 438.78 147.34 438.78 149.00 L 438.78 161.00 C 438.78 162.66 437.44 164.00 435.78 164.00 L 406.34 164.00 C 404.68 164.00 403.34 162.66 403.34 161.00 L 403.34 149.00 C 403.34 147.34 404.68 146.00 406.34 146.00 Z" fill="#ffffff"/>
+<text x="421.06" y="159.20" text-anchor="middle" font-size="12.00" fill="#272727">token</text></g>
+</svg>

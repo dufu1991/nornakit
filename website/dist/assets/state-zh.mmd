@@ -1,0 +1,7 @@
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> Parsing: 编辑源码
+    Parsing --> Ready: 成功
+    Parsing --> Error: 语法错误
+    Error --> Parsing: 修正
+    Ready --> [*]

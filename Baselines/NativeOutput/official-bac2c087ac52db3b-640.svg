@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640.00" height="468.00" viewBox="0 0 640.00 468.00" role="img" aria-label="矩形树图">
+<title>矩形树图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="treemap-0"><title>Category A: 30</title><rect x="14.00" y="18.00" width="260.00" height="436.00" rx="2.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="0.18" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="20.00" y="37.90" text-anchor="start" font-size="14.00" font-weight="600" fill="#272727">Category A</text>
+<g data-id="treemap-1"><title>Item A1: 10</title><rect x="20.00" y="50.00" width="248.00" height="130.00" rx="2.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="144.00" y="110.45" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Item A1</text><text x="144.00" y="128.65" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">10</text>
+<g data-id="treemap-2"><title>Item A2: 20</title><rect x="20.00" y="184.00" width="248.00" height="264.00" rx="2.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="144.00" y="311.45" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Item A2</text><text x="144.00" y="329.65" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">20</text>
+<g data-id="treemap-3"><title>Category B: 40</title><rect x="278.00" y="18.00" width="348.00" height="436.00" rx="2.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="0.18" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="284.00" y="37.90" text-anchor="start" font-size="14.00" font-weight="600" fill="#272727">Category B</text>
+<g data-id="treemap-4"><title>Item B1: 15</title><rect x="284.00" y="50.00" width="336.00" height="146.75" rx="2.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="452.00" y="118.82" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Item B1</text><text x="452.00" y="137.02" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">15</text>
+<g data-id="treemap-5"><title>Item B2: 25</title><rect x="284.00" y="200.75" width="336.00" height="247.25" rx="2.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="452.00" y="319.82" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Item B2</text><text x="452.00" y="338.02" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">25</text></g>
+</svg>

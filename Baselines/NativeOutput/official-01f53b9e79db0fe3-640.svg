@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="748.66" height="358.00" viewBox="0 0 748.66 358.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 250.14 190.00 L 250.14 202.00 C 250.14 209.44 245.58 214.00 238.14 214.00 L 103.70 214.00 C 96.26 214.00 91.70 218.56 91.70 226.00 L 91.70 238.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 250.14 190.00 L 257.14 204.00 L 243.14 204.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 266.14 190.00 L 266.14 204.58 C 266.14 210.42 269.72 214.00 275.56 214.00 L 275.56 214.00 C 281.40 214.00 284.98 217.58 284.98 223.42 L 284.98 249.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 266.14 190.00 L 273.14 204.00 L 259.14 204.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-2"><title></title><path d="M 282.14 190.00 L 282.14 202.00 C 282.14 209.44 286.70 214.00 294.14 214.00 L 441.93 214.00 C 452.78 214.00 459.43 220.65 459.43 231.50 L 459.43 249.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 282.14 190.00 L 289.14 204.00 L 275.14 204.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="Animal"><title>Animal</title><rect x="193.82" y="56.00" width="144.63" height="134.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="266.14" y="82.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Animal</text>
+<path d="M 193.82 94.00 L 338.45 94.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="203.82" y="113.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+int age</text><text x="203.82" y="132.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+String gender</text>
+<path d="M 193.82 142.00 L 338.45 142.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="203.82" y="161.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+isMammal()</text><text x="203.82" y="180.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+mate()</text>
+<g data-id="Duck"><title>Duck</title><rect x="8.00" y="238.00" width="167.39" height="112.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="91.70" y="264.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Duck</text>
+<path d="M 8.00 276.00 L 175.39 276.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="294.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+String beakColor</text>
+<path d="M 8.00 304.00 L 175.39 304.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="322.25" text-anchor="start" font-size="13.57" font-weight="400" fill="#272727">+swim()</text><text x="18.00" y="341.25" text-anchor="start" font-size="13.57" font-weight="400" fill="#272727">+quack()</text>
+<g data-id="Fish"><title>Fish</title><rect x="215.39" y="249.00" width="139.19" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="284.98" y="275.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Fish</text>
+<path d="M 215.39 287.00 L 354.58 287.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="225.39" y="305.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">-int sizeInFeet</text>
+<path d="M 215.39 315.00 L 354.58 315.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="225.39" y="333.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">-canEat()</text>
+<g data-id="Zebra"><title>Zebra</title><rect x="394.58" y="249.00" width="129.70" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="459.43" y="275.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Zebra</text>
+<path d="M 394.58 287.00 L 524.27 287.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="404.58" y="305.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+bool is_wild</text>
+<path d="M 394.58 315.00 L 524.27 315.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="404.58" y="333.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+run()</text>
+<g data-id="note-0"><title>From Duck till Zebra</title><rect x="556.27" y="56.00" width="170.34" height="46.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="568.27" y="83.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">From Duck till Zebra</text>
+<path d="M 556.27 294.00 L 175.39 294.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.00 4.00"/>
+<g data-id="note-1"><title>can fly
+can swim
+can dive
+can help in debugging</title><rect x="556.27" y="238.00" width="184.38" height="112.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="568.27" y="269.50" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">can fly</text><text x="568.27" y="289.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">can swim</text><text x="568.27" y="308.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">can dive</text><text x="568.27" y="328.30" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">can help in debugging</text>
+<text x="374.33" y="31.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">Animal example</text></g>
+</svg>

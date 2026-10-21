@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="484.86" height="370.00" viewBox="0 0 484.86 370.00" role="img" aria-label="架构图">
+<title>架构图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="31.52" y="8.00" width="416.96" height="322.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.40" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="240.00" y="32.50" text-anchor="middle" font-size="15.71" font-weight="400" fill="#808080">API</text>
+<g data-id="architecture-edge-0"><title></title><path d="M 220.87 254.00 L 216.87 254.00 C 214.39 254.00 212.87 252.48 212.87 250.00 L 212.87 230.00 C 212.87 217.60 220.47 210.00 232.87 210.00 L 418.86 210.00 C 428.78 210.00 434.86 203.92 434.86 194.00 L 434.86 190.00 C 434.86 182.56 430.30 178.00 422.86 178.00 L 410.86 178.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="architecture-edge-1"><title></title><path d="M 98.00 78.00 L 98.00 74.00 C 98.00 71.52 99.52 70.00 102.00 70.00 L 422.86 70.00 C 435.26 70.00 442.86 77.60 442.86 90.00 L 442.86 206.00 C 442.86 218.40 435.26 226.00 422.86 226.00 L 398.86 226.00 C 391.42 226.00 386.86 221.44 386.86 214.00 L 386.86 202.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="architecture-edge-2"><title></title><path d="M 98.00 230.00 L 98.00 226.00 C 98.00 223.52 99.52 222.00 102.00 222.00 L 192.87 222.00 C 205.27 222.00 212.87 229.60 212.87 242.00 L 212.87 286.00 C 212.87 295.92 218.95 302.00 228.87 302.00 L 232.87 302.00 C 240.31 302.00 244.87 297.44 244.87 290.00 L 244.87 278.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="db"><title>Database</title><rect x="220.87" y="230.00" width="48.00" height="48.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 230.87 246.00 C 230.87 238.00 258.87 238.00 258.87 246.00 L 258.87 262.00 C 258.87 270.00 230.87 270.00 230.87 262.00 Z" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 230.87 246.00 C 230.87 254.00 258.87 254.00 258.87 246.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="244.87" y="216.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Database</text>
+<g data-id="disk1"><title>Storage</title><rect x="74.00" y="78.00" width="48.00" height="48.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 84.00 94.00 C 84.00 86.00 112.00 86.00 112.00 94.00 L 112.00 110.00 C 112.00 118.00 84.00 118.00 84.00 110.00 Z" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 84.00 94.00 C 84.00 102.00 112.00 102.00 112.00 94.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="98.00" y="148.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Storage</text>
+<g data-id="disk2"><title>Storage</title><rect x="74.00" y="230.00" width="48.00" height="48.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 84.00 246.00 C 84.00 238.00 112.00 238.00 112.00 246.00 L 112.00 262.00 C 112.00 270.00 84.00 270.00 84.00 262.00 Z" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 84.00 246.00 C 84.00 254.00 112.00 254.00 112.00 246.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="98.00" y="300.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Storage</text>
+<g data-id="server"><title>Server</title><rect x="362.86" y="154.00" width="48.00" height="48.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="372.86" y="164.00" width="28.00" height="7.00" rx="1.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="372.86" y="173.00" width="28.00" height="7.00" rx="1.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="372.86" y="182.00" width="28.00" height="7.00" rx="1.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="386.86" y="140.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Server</text></g>
+</svg>

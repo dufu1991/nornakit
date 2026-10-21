@@ -1,0 +1,4569 @@
+[
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-c574652df330f12f",
+    "kind" : "block",
+    "line" : 2,
+    "message" : "块图暂不支持嵌套块或这条布局指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-7ddc40305625dcd5",
+    "kind" : "block",
+    "line" : 4,
+    "message" : "块图暂不支持嵌套块或这条布局指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-2c37fb813bb3cd99",
+    "kind" : "c4",
+    "line" : 27,
+    "message" : "暂不支持 C4 宏 UpdateRelStyle。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-be113905a27fe612",
+    "kind" : "class",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-a43edf6f2250127a",
+    "kind" : "class",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-7b827b95e8846857",
+    "kind" : "er",
+    "line" : 2,
+    "message" : "暂不支持这条实体关系图语法：subgraph title1",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-fc39dc2a89974e1c",
+    "kind" : "er",
+    "line" : 2,
+    "message" : "暂不支持这条实体关系图语法：CAR ||--o{ NAMED-DRIVER : allows",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-60ed88ab0a168f78",
+    "kind" : "eventmodeling",
+    "line" : 3,
+    "message" : "事件建模当前支持 tf、rf 帧和显式来源引用。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-106d6b780f0ab5fe",
+    "kind" : "eventmodeling",
+    "line" : 3,
+    "message" : "事件建模当前支持 tf、rf 帧和显式来源引用。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-4b7f53d8caa034dd",
+    "kind" : "flowchart",
+    "line" : 16,
+    "message" : "此处需要节点标识符。第一版支持字母、数字、中文和下划线。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-80b86f15a9c2e222",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-eb63c5df30e42f5d",
+    "kind" : "gantt",
+    "line" : 3,
+    "message" : "甘特图暂不支持这个日期格式。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 390,
+    "id" : "official-caed15f5cf495e64",
+    "kind" : "gantt",
+    "status" : "rendered",
+    "width" : 1000
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-1e4751fdc7cf19be",
+    "kind" : "gitGraph",
+    "line" : 14,
+    "message" : "暂不支持这条提交属性：parent:\"B\"",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-9ecf12a72dac0389",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-6a07fd6d17bc2fcc",
+    "kind" : "kanban",
+    "line" : 3,
+    "message" : "树形图暂不支持图标、样式或元数据指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-1463e787daaa07b2",
+    "kind" : "kanban",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-c7e65154315ddffe",
+    "kind" : "mindmap",
+    "line" : 5,
+    "message" : "树形图暂不支持图标、样式或元数据指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "semantic",
+    "id" : "official-68b700854711a93f",
+    "kind" : "mindmap",
+    "message" : "思维导图必须只有一个根节点。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-48358a7c12b012d9",
+    "kind" : "packet",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-16d2b45d5aab2633",
+    "kind" : "packet",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 440,
+    "id" : "official-ae29388222377629",
+    "kind" : "pie",
+    "status" : "rendered",
+    "width" : 620
+  },
+  {
+    "height" : 570,
+    "id" : "official-19ab9ebf1e76dde2",
+    "kind" : "quadrantChart",
+    "status" : "rendered",
+    "width" : 648
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-767a13512a7a7467",
+    "kind" : "requirement",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 172,
+    "id" : "official-4bff091ab718b957",
+    "kind" : "requirement",
+    "status" : "rendered",
+    "width" : 430.4833984375
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-b2407cbd8da61671",
+    "kind" : "sankey",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 380,
+    "id" : "official-9c049429c8fe41b1",
+    "kind" : "sankey",
+    "status" : "rendered",
+    "width" : 780
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-d3a60a7a57394be9",
+    "kind" : "sequence",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-a6b0082ad10a3227",
+    "kind" : "sequence",
+    "line" : 4,
+    "message" : "暂不支持这条时序图语法：link Alice: Dashboard @ https://dashboard.contoso.com/alice",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-9921022022234a8b",
+    "kind" : "state",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-17d68bbfe39896a1",
+    "kind" : "state",
+    "line" : 8,
+    "message" : "暂不支持这条状态图语法：--",
+    "status" : "rejected"
+  },
+  {
+    "height" : 274,
+    "id" : "official-66c69b29e13b8450",
+    "kind" : "timeline",
+    "status" : "rendered",
+    "width" : 1040
+  },
+  {
+    "height" : 404,
+    "id" : "official-fa1cfcc5b78e3a4c",
+    "kind" : "timeline",
+    "status" : "rendered",
+    "width" : 840
+  },
+  {
+    "height" : 440,
+    "id" : "official-e978837ae6de4a8b",
+    "kind" : "journey",
+    "status" : "rendered",
+    "width" : 932
+  },
+  {
+    "height" : 516,
+    "id" : "official-2cd11b0877977c24",
+    "kind" : "xychart",
+    "status" : "rendered",
+    "width" : 896
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-250da2c7e81d1f0a",
+    "kind" : "xychart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-d0feca50d6211e21",
+    "kind" : "agentflow",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-4c546d7812fae4ab",
+    "kind" : "agentflow",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 704,
+    "id" : "official-9d6b42afa3299dfe",
+    "kind" : "architecture",
+    "status" : "rendered",
+    "width" : 483.95703125
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-35afb2a472e38d68",
+    "kind" : "architecture",
+    "line" : 24,
+    "message" : "暂不支持这条架构图语法。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 580,
+    "id" : "official-1065e06731e40265",
+    "kind" : "cynefin",
+    "status" : "rendered",
+    "width" : 900
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-b3ea7b01b554303d",
+    "kind" : "ishikawa",
+    "message" : "鱼骨图当前支持一个结果、主因和次因三级结构。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-39b48990c83837bf",
+    "kind" : "radar",
+    "line" : 11,
+    "message" : "暂不支持这条雷达图语法：graticule polygon",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-3e866a35e9ee4a7a",
+    "kind" : "radar",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-cef5806e4a73cac6",
+    "kind" : "railroad",
+    "line" : 2,
+    "message" : "铁路图规则需要名称和 = 或 <-。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-013df6171827f1de",
+    "kind" : "railroad",
+    "line" : 2,
+    "message" : "铁路图规则需要名称和 = 或 <-。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 640,
+    "id" : "official-867cca281590bce5",
+    "kind" : "swimlane",
+    "status" : "rendered",
+    "width" : 1366.189453125
+  },
+  {
+    "height" : 640,
+    "id" : "official-eaf819cfb8594d42",
+    "kind" : "swimlane",
+    "status" : "rendered",
+    "width" : 1606.9912109375
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-713fb18511ddb1cc",
+    "kind" : "treeView",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-1d23e1ff0c7afdda",
+    "kind" : "treeView",
+    "line" : 4,
+    "message" : "树形图暂不支持图标、样式或元数据指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-19c01aaa93ab7b48",
+    "kind" : "treemap",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 468,
+    "id" : "official-20b3fefc8d096e4c",
+    "kind" : "treemap",
+    "status" : "rendered",
+    "width" : 820
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-38e641131baa1707",
+    "kind" : "usecase",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-1d13bb4851a2b199",
+    "kind" : "usecase",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-7401455503e883e6",
+    "kind" : "venn",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-cd2ead2b0d04ca5f",
+    "kind" : "venn",
+    "line" : 2,
+    "message" : "韦恩图当前支持 set 和 union 数值声明。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-8a4d5669a9f5d506",
+    "kind" : "wardley",
+    "line" : 20,
+    "message" : "暂不支持这条 Wardley 图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-6ac86d29b6ee9eca",
+    "kind" : "wardley",
+    "line" : 5,
+    "message" : "暂不支持这条 Wardley 图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-78e30a8aaf7fb9a0",
+    "kind" : "block",
+    "line" : 4,
+    "message" : "块图暂不支持嵌套块或这条布局指令。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 112,
+    "id" : "official-24e2536fc7a02abb",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 524
+  },
+  {
+    "height" : 216,
+    "id" : "official-50dc2ed1ddf81876",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 524
+  },
+  {
+    "height" : 216,
+    "id" : "official-6fbaef0c0b994cc3",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 524
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-bd54fe8aea77a0c8",
+    "kind" : "block",
+    "line" : 2,
+    "message" : "end 没有对应的 subgraph。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-8c1f8d5387a4888c",
+    "kind" : "block",
+    "line" : 2,
+    "message" : "end 没有对应的 subgraph。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 112,
+    "id" : "official-2a2aedc0e1a70079",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 180
+  },
+  {
+    "height" : 112,
+    "id" : "official-a5a467c814bf0c94",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 180
+  },
+  {
+    "height" : 112,
+    "id" : "official-3eeec690367a6d71",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 180
+  },
+  {
+    "height" : 112,
+    "id" : "official-fd481f6b76858a8b",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 180
+  },
+  {
+    "height" : 112,
+    "id" : "official-1493c7342a308ca2",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 180
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-7134441c41f218d3",
+    "kind" : "block",
+    "line" : 2,
+    "message" : "块图暂不支持嵌套块或这条布局指令。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 112,
+    "id" : "official-66fde5799aa4c0f7",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 180
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-6dd28f68976ab76a",
+    "kind" : "block",
+    "line" : 2,
+    "message" : "块图暂不支持嵌套块或这条布局指令。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 112,
+    "id" : "official-0c75f48188937507",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 696
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-1d2ef9d1ea44d352",
+    "kind" : "block",
+    "line" : 2,
+    "message" : "块图暂不支持嵌套块或这条布局指令。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 216,
+    "id" : "official-ab04e71554b0a34c",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 524
+  },
+  {
+    "height" : 112,
+    "id" : "official-7c6756e88c82bb95",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 1040
+  },
+  {
+    "height" : 112,
+    "id" : "official-f84186409cf32f76",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 524
+  },
+  {
+    "height" : 112,
+    "id" : "official-e29ee1ca59125b3c",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 696
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-0eeed10abc3140de",
+    "kind" : "block",
+    "line" : 4,
+    "message" : "块图暂不支持嵌套块或这条布局指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-b6eebb8cba7e7a58",
+    "kind" : "block",
+    "line" : 4,
+    "message" : "块图暂不支持嵌套块或这条布局指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-f3c3e654997c3a54",
+    "kind" : "block",
+    "line" : 4,
+    "message" : "块图暂不支持嵌套块或这条布局指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-c1690d0b0e175012",
+    "kind" : "block",
+    "line" : 3,
+    "message" : "块图暂不支持嵌套块或这条布局指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-668adabdd9df94a6",
+    "kind" : "block",
+    "line" : 4,
+    "message" : "块图暂不支持嵌套块或这条布局指令。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 112,
+    "id" : "official-fddacaac62f065cc",
+    "kind" : "block",
+    "status" : "rendered",
+    "width" : 524
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-6a5c5e673d9bdb2e",
+    "kind" : "block",
+    "line" : 3,
+    "message" : "块图暂不支持嵌套块或这条布局指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-9636dee43e31f64c",
+    "kind" : "block",
+    "line" : 3,
+    "message" : "块图暂不支持嵌套块或这条布局指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-3a8fd915f7952f8c",
+    "kind" : "c4",
+    "line" : 36,
+    "message" : "暂不支持 C4 宏 UpdateElementStyle。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-6da24ed5cded0058",
+    "kind" : "c4",
+    "line" : 36,
+    "message" : "暂不支持 C4 宏 UpdateElementStyle。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-87baedf88b6688ce",
+    "kind" : "c4",
+    "line" : 19,
+    "message" : "暂不支持 C4 宏 UpdateRelStyle。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-78a9531bbd743e92",
+    "kind" : "c4",
+    "line" : 14,
+    "message" : "暂不支持 C4 宏 UpdateRelStyle。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-303a34d8423cf50e",
+    "kind" : "c4",
+    "line" : 39,
+    "message" : "暂不支持 C4 宏 Rel_U。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 307,
+    "id" : "official-3d132bfb3376ac4b",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 500.78125
+  },
+  {
+    "height" : 307,
+    "id" : "official-fe97e849dbea718b",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 954.6953125
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-01f53b9e79db0fe3",
+    "kind" : "class",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-b5e4497849dcb550",
+    "kind" : "class",
+    "line" : 18,
+    "message" : "暂不支持这条类图语法：Customer \"1\" --> \"*\" Order : places",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-8d92da500c497c53",
+    "kind" : "class",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-618353c4e48dac71",
+    "kind" : "class",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 156,
+    "id" : "official-498d9363ba8ed96f",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 229.453125
+  },
+  {
+    "height" : 156,
+    "id" : "official-cb3671b844c32248",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 192.484375
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-01f18827962a86cd",
+    "kind" : "class",
+    "line" : 2,
+    "message" : "暂不支持这条类图语法：class `Animal Class!`",
+    "status" : "rejected"
+  },
+  {
+    "height" : 150,
+    "id" : "official-53b5bb9ec41a4729",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 205.8515625
+  },
+  {
+    "height" : 150,
+    "id" : "official-e8b9c18297d18e58",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 205.8515625
+  },
+  {
+    "height" : 150,
+    "id" : "official-f0aa236caedfd3b0",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 228.203125
+  },
+  {
+    "height" : 216,
+    "id" : "official-ae91d8c13908d53c",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 518.9140625
+  },
+  {
+    "height" : 156,
+    "id" : "official-be1089506d91fe79",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 961.078125
+  },
+  {
+    "height" : 156,
+    "id" : "official-5bf186aeaa81d334",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 965.69580078125
+  },
+  {
+    "height" : 156,
+    "id" : "official-029e13c779ccef5e",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 346.96044921875
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-534a9ea547b5f63e",
+    "kind" : "class",
+    "line" : 2,
+    "message" : "暂不支持这条类图语法：Animal <|--|> Zebra",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-bc06236e060fb614",
+    "kind" : "class",
+    "line" : 2,
+    "message" : "暂不支持这条类图语法：bar ()-- foo",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-b06c5b3c31557767",
+    "kind" : "class",
+    "line" : 6,
+    "message" : "暂不支持这条类图语法：Class01 --() bar",
+    "status" : "rejected"
+  },
+  {
+    "height" : 164,
+    "id" : "official-570ea6adde22d184",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 325.171875
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-09461b572f3e64fd",
+    "kind" : "class",
+    "line" : 2,
+    "message" : "暂不支持这条类图语法：namespace Auth[\"Authentication Service\"] {",
+    "status" : "rejected"
+  },
+  {
+    "height" : 316,
+    "id" : "official-0d65c6d0a5ad4ca1",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 589.078125
+  },
+  {
+    "height" : 338,
+    "id" : "official-f609930d3f256adb",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 413.984375
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-6ae0bb98620e85b7",
+    "kind" : "class",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-389b20dbb0e53539",
+    "kind" : "class",
+    "line" : 2,
+    "message" : "暂不支持这条类图语法：Customer \"1\" --> \"*\" Ticket",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-ffa1285b52b93c7e",
+    "kind" : "class",
+    "line" : 2,
+    "message" : "类声明包含未识别的内容。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-463be631e2f87726",
+    "kind" : "class",
+    "line" : 3,
+    "message" : "暂不支持这条类图语法：<<interface>> Shape",
+    "status" : "rejected"
+  },
+  {
+    "height" : 194,
+    "id" : "official-612be9621bc21023",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 361.390625
+  },
+  {
+    "height" : 128,
+    "id" : "official-3efc2c903a0e392e",
+    "kind" : "class",
+    "status" : "rendered",
+    "width" : 155.4140625
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-0a59646c6c1de9af",
+    "kind" : "class",
+    "line" : 14,
+    "message" : "暂不支持这条类图语法：Student \"1\" --o \"1\" IdCard : carries",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-594dbbe914ff48d5",
+    "kind" : "class",
+    "line" : 2,
+    "message" : "暂不支持这条类图语法：note \"This is a general note\"",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-2d2e70a6d4d7aef6",
+    "kind" : "class",
+    "line" : 3,
+    "message" : "暂不支持这条类图语法：link Shape \"https://www.github.com\" \"This is a tooltip for a link\"",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-500154a2ebe2ea23",
+    "kind" : "class",
+    "line" : 3,
+    "message" : "暂不支持这条类图语法：callback Shape \"callbackFunction\" \"This is a tooltip for a callback\"",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-73500fcfdc6ba76a",
+    "kind" : "class",
+    "line" : 4,
+    "message" : "暂不支持这条类图语法：callback Class01 \"callbackFunction\" \"Callback tooltip\"",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-35072ea890247cd8",
+    "kind" : "class",
+    "line" : 4,
+    "message" : "暂不支持这条类图语法：style Animal fill:#f9f,stroke:#333,stroke-width:4px",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-f91449deb55589d8",
+    "kind" : "class",
+    "line" : 2,
+    "message" : "类声明包含未识别的内容。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-b748773195c45c55",
+    "kind" : "class",
+    "line" : 2,
+    "message" : "类声明包含未识别的内容。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-4fa7040920669722",
+    "kind" : "class",
+    "line" : 2,
+    "message" : "类声明包含未识别的内容。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-8b617777a9ad567d",
+    "kind" : "class",
+    "line" : 2,
+    "message" : "类声明包含未识别的内容。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-d8142d901771e849",
+    "kind" : "class",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 250,
+    "id" : "official-a0bf1cab82de84b4",
+    "kind" : "er",
+    "status" : "rendered",
+    "width" : 293.14697265625
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-973dfeffadbed6ce",
+    "kind" : "er",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-421f7b70668e1fe6",
+    "kind" : "er",
+    "line" : 8,
+    "message" : "暂不支持这条实体关系图语法：ORDER ||--|{ LINE-ITEM : contains",
+    "status" : "rejected"
+  },
+  {
+    "height" : 382,
+    "id" : "official-97d409b3f28fbd92",
+    "kind" : "er",
+    "status" : "rendered",
+    "width" : 290.328125
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-28d45c0741343f4e",
+    "kind" : "er",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-99e1dfb4c158699e",
+    "kind" : "er",
+    "line" : 2,
+    "message" : "暂不支持这条实体关系图语法：\"This ❤ Unicode\"",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-d5199c1220398e92",
+    "kind" : "er",
+    "line" : 2,
+    "message" : "暂不支持这条实体关系图语法：\"This **is** _Markdown_\"",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-719e355f1c64ad84",
+    "kind" : "er",
+    "line" : 2,
+    "message" : "暂不支持这条实体关系图语法：CAR ||--o{ NAMED-DRIVER : allows",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-fff06d91b2ed0ed8",
+    "kind" : "er",
+    "line" : 2,
+    "message" : "暂不支持这条实体关系图语法：CAR 1 to zero or more NAMED-DRIVER : allows",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-38d6e4a4399d6bef",
+    "kind" : "er",
+    "line" : 2,
+    "message" : "暂不支持这条实体关系图语法：CAR ||--o{ NAMED-DRIVER : allows",
+    "status" : "rejected"
+  },
+  {
+    "height" : 128,
+    "id" : "official-64765bbdf6549438",
+    "kind" : "er",
+    "status" : "rendered",
+    "width" : 196.8046875
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-48baec41314cb4f5",
+    "kind" : "er",
+    "line" : 9,
+    "message" : "实体关系基数标记无效。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-84744d9ec428f780",
+    "kind" : "er",
+    "line" : 9,
+    "message" : "暂不支持这条实体关系图语法：ORDER ||--|{ LINE-ITEM : contains",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-4accb2527f09e89b",
+    "kind" : "er",
+    "line" : 9,
+    "message" : "暂不支持这条实体关系图语法：ORDER ||--|{ LINE-ITEM : contains",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-33d261ba8ae1b647",
+    "kind" : "er",
+    "line" : 2,
+    "message" : "暂不支持这条实体关系图语法：subgraph title1",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-13b0f9ca3d8532da",
+    "kind" : "er",
+    "line" : 2,
+    "message" : "暂不支持这条实体关系图语法：subgraph \"Customer Domain\"",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-aef1ac587e4aaaee",
+    "kind" : "er",
+    "line" : 2,
+    "message" : "暂不支持这条实体关系图语法：subgraph id1 [title 1]",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-cb5e089f3dc8d91b",
+    "kind" : "er",
+    "line" : 2,
+    "message" : "暂不支持这条实体关系图语法：subgraph title1",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-3bffcd114da1c5a6",
+    "kind" : "er",
+    "line" : 3,
+    "message" : "暂不支持这条实体关系图语法：subgraph TOP",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-2090df21742496c1",
+    "kind" : "er",
+    "line" : 3,
+    "message" : "暂不支持这条实体关系图语法：style id1 fill:#f9f,stroke:#333,stroke-width:4px",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-685e5730a5e743fa",
+    "kind" : "er",
+    "line" : 3,
+    "message" : "暂不支持这条实体关系图语法：CAR:::someclass {",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-cd17cfb2345a33fb",
+    "kind" : "er",
+    "line" : 12,
+    "message" : "暂不支持这条实体关系图语法：PERSON:::foo ||--|| CAR : owns",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-1838b7a479e51100",
+    "kind" : "er",
+    "line" : 12,
+    "message" : "暂不支持这条实体关系图语法：PERSON:::foo ||--|| CAR : owns",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-59995f5cd6f4cfc7",
+    "kind" : "er",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-16482e95f341dafd",
+    "kind" : "eventmodeling",
+    "line" : 4,
+    "message" : "帧标识符重复，或使用了尚未支持的数据块。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 454,
+    "id" : "official-8bc30355f050add9",
+    "kind" : "eventmodeling",
+    "status" : "rendered",
+    "width" : 740
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-7af74f9e828ebc30",
+    "kind" : "eventmodeling",
+    "line" : 4,
+    "message" : "帧标识符重复，或使用了尚未支持的数据块。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-10ff19b737311e89",
+    "kind" : "eventmodeling",
+    "line" : 3,
+    "message" : "事件建模当前支持 tf、rf 帧和显式来源引用。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 454,
+    "id" : "official-af1099fbb284b4ec",
+    "kind" : "eventmodeling",
+    "status" : "rendered",
+    "width" : 1500
+  },
+  {
+    "height" : 454,
+    "id" : "official-39056a94a65db550",
+    "kind" : "eventmodeling",
+    "status" : "rendered",
+    "width" : 740
+  },
+  {
+    "height" : 454,
+    "id" : "official-420a8b823865365e",
+    "kind" : "eventmodeling",
+    "status" : "rendered",
+    "width" : 1120
+  },
+  {
+    "height" : 454,
+    "id" : "official-697ff74e11854d94",
+    "kind" : "eventmodeling",
+    "status" : "rendered",
+    "width" : 740
+  },
+  {
+    "height" : 454,
+    "id" : "official-65f1af911f10492c",
+    "kind" : "eventmodeling",
+    "status" : "rendered",
+    "width" : 930
+  },
+  {
+    "height" : 454,
+    "id" : "official-73bc66ae906e75f1",
+    "kind" : "eventmodeling",
+    "status" : "rendered",
+    "width" : 600
+  },
+  {
+    "height" : 213,
+    "id" : "official-205ffca8b17765de",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 113
+  },
+  {
+    "height" : 307,
+    "id" : "official-e79dcb1cf43646f7",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 177
+  },
+  {
+    "height" : 348.3310546875,
+    "id" : "official-f4c11b4ae7e28778",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 355.1296875
+  },
+  {
+    "height" : 450.7275390625,
+    "id" : "official-b1a86eb4d3ddd767",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 410.7421875
+  },
+  {
+    "height" : 344,
+    "id" : "official-473503ae919a4459",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 334.8515625
+  },
+  {
+    "height" : 156,
+    "id" : "official-c845199fdb0cae08",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 347.4765625
+  },
+  {
+    "height" : 156,
+    "id" : "official-5b213c539aca8c49",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 846.1171875
+  },
+  {
+    "height" : 156,
+    "id" : "official-d8f42ce884ca6e26",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 347.4765625
+  },
+  {
+    "height" : 156,
+    "id" : "official-4b930f38170c815c",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 846.1171875
+  },
+  {
+    "height" : 307,
+    "id" : "official-2a836390a7e361a2",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 353
+  },
+  {
+    "height" : 250,
+    "id" : "official-367c9f044e93ca09",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 74.7056640625
+  },
+  {
+    "height" : 278,
+    "id" : "official-a29fa225b0510ee6",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 209
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-bee4f0e7a6f09db2",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 371.14453125,
+    "id" : "official-804516d3947f1f4c",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 229.640625
+  },
+  {
+    "height" : 371.14453125,
+    "id" : "official-d2fcc1c3e8a46170",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 229.640625
+  },
+  {
+    "height" : 197,
+    "id" : "official-24fa6f8f0a46e91f",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 530.572265625
+  },
+  {
+    "height" : 197,
+    "id" : "official-a2675cb9b035eb76",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 530.572265625
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-34ef5b9aef8a604e",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-fb69454bcb92930a",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-9334cad70180d663",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-cdc2dbda9c3897e4",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-ec2aede73454d590",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-219718738a2e5e26",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-084265e7aa9a9086",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-0de019e610f30ca1",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-e5dd23004adc8249",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-4c008390386b819f",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-1e5aaf27a8b96aa3",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-f30d24d8fe943d4d",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 648,
+    "id" : "official-d9875485a148cf13",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 243.7421875
+  },
+  {
+    "height" : 206,
+    "id" : "official-a63a1d50b5cea2f6",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 881.15625
+  },
+  {
+    "height" : 705,
+    "id" : "official-e3b987c0101e4ddd",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 193
+  },
+  {
+    "height" : 317,
+    "id" : "official-6606abb8e03414a5",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 615.5625
+  },
+  {
+    "height" : 272,
+    "id" : "official-70fc79788b7a6edf",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 203.09375
+  },
+  {
+    "height" : 178,
+    "id" : "official-a9c271f53aa87abc",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 1861.4140625
+  },
+  {
+    "height" : 156,
+    "id" : "official-36749f10893c74f8",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 1283.1328125
+  },
+  {
+    "height" : 156,
+    "id" : "official-c102b3a25ea3b367",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 3884.921875
+  },
+  {
+    "height" : 2556,
+    "id" : "official-ba4a854268a3d0fa",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 224.6875
+  },
+  {
+    "height" : 156,
+    "id" : "official-599ede39e4d6e1b5",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 414.78125
+  },
+  {
+    "height" : 777,
+    "id" : "official-7d18bca1aae80fa0",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 408.5859375
+  },
+  {
+    "height" : 222,
+    "id" : "official-7e14e3c0e2cb44ee",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 798.484375
+  },
+  {
+    "height" : 250,
+    "id" : "official-661d0b11d13deb3a",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 988.21875
+  },
+  {
+    "height" : 285.84765625,
+    "id" : "official-ed258e38dcf0e183",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 385.36181640625
+  },
+  {
+    "height" : 166.96651785714286,
+    "id" : "official-1607e7c62788b6d5",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 495.537109375
+  },
+  {
+    "height" : 417,
+    "id" : "official-d366d4eb195dfca4",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 446.453125
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-2d57b5027d8772f2",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-59755f0029f21cfb",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-ca4e0a268bb6226a",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-87c41ad0a9435d7e",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-02ac901fc5372a73",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-7e24db31e25ca1b2",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-7f9d6a7b716f89f8",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-8f91772821001588",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-f63352092df12275",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-8c7dfe6b59664744",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-48edfc752e15b47e",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-dcb17579a45018f1",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-1facf2ef981243c6",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-e56e876a9b68eee8",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-8c9864c9048436e2",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-ff9a1774bb7e9a41",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-f4db835df6afe3f2",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 62,
+    "id" : "official-f70aed641f746c2a",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 165.84375
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-c73fdea4fca45502",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 156,
+    "id" : "official-6686c2010c31ba66",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 87.3359375
+  },
+  {
+    "height" : 62,
+    "id" : "official-9221e419f59c0a81",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 205.1953125
+  },
+  {
+    "height" : 206,
+    "id" : "official-db4aa3083cae19b2",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 933.0859375
+  },
+  {
+    "height" : 62,
+    "id" : "official-c8329226c7005848",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 232.8046875
+  },
+  {
+    "height" : 62,
+    "id" : "official-848620f02e99e05d",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 247.8046875
+  },
+  {
+    "height" : 62,
+    "id" : "official-fe5831e2389554d0",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 248.8046875
+  },
+  {
+    "height" : 76.96651785714286,
+    "id" : "official-c57732f4dea61398",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 120.765625
+  },
+  {
+    "height" : 226.73886777819973,
+    "id" : "official-6b39e85e8e60c32e",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 226.73886777819973
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-bb15e35a39985eb4",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "节点括号不匹配。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 169.0029296875,
+    "id" : "official-306e952eea6e380b",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 260.8046875
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-dcf721a3f4beee64",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 62,
+    "id" : "official-832a1ec82f995ef8",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 242.1640625
+  },
+  {
+    "height" : 62,
+    "id" : "official-a51d852be5d3bbed",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 241.3046875
+  },
+  {
+    "height" : 62,
+    "id" : "official-6b1ad0dda6c60bab",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 134.4609375
+  },
+  {
+    "height" : 62,
+    "id" : "official-2f0bf28294a31aec",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 153.1640625
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-2d81e8b9d03f23ed",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-8f6bee2432ba9b4b",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-cfb3b33ba4ec000c",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-520a982ac547b084",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-26d721957df8d7a3",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-4a2ae373f0d2498d",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-c63dbcd17538c2ad",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-7b261343fbfaf308",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-a4bed0a9c19df28f",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-753ca710b1ac1dee",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-6f8583b8b0e2f07e",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-b920fc09d3e79f52",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-89a471241f408285",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-d47a9e81b902e765",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-b153dad4f8ca0655",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-de84549bf410270e",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-a60f1b1f561afa1f",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-82e0f657dc5d85d7",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-85b0a8dd09d11b3b",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-50674ff2e8365bec",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-eefd96427a777eb2",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-839363fa35f716c9",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-62c7e909d6f6d2c0",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-2406ad02ae7265c8",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-bf6938b0951c8f37",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-1f8f0a5158f1bd14",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-77b6694cfcf57783",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-7634b95b0a83f5a7",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-a2ce1eed42a80214",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-3a814849f81b02e1",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-ca8d8066bf48b5a3",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-4638fffcd951ca61",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-07f75620ccb9e4d1",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-06e5dd63714486cd",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-9fde480c3c89b388",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-9256ec4395374c55",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-f67ac6d593083853",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-59f0daf6279490b4",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-8106d06596bb16c0",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-df37b14d183fcdc5",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-b595757319467b19",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-12a1109775b51abe",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-4a6522e28377d094",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-12232e66b8e521b2",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-022e2327ceeaa8cf",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-4dc7b8e96f70cc6c",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-d42a5304c164faa6",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-d6fe112460599283",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-302d8d0973b8d245",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-9a39031c41fcb0e6",
+    "kind" : "flowchart",
+    "line" : 3,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 62,
+    "id" : "official-85a2f8b3229ec602",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 160
+  },
+  {
+    "height" : 62,
+    "id" : "official-9733d593d7c58fd4",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 160
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-39f13d6306c2997c",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "连线标签尚未闭合。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 62,
+    "id" : "official-d2f58af55ba28028",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 230.5478515625
+  },
+  {
+    "height" : 62,
+    "id" : "official-d5d4d42882dee089",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 160.5341796875
+  },
+  {
+    "height" : 62,
+    "id" : "official-6a86b6e0b7cb8bb5",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 160.5341796875
+  },
+  {
+    "height" : 62,
+    "id" : "official-1bb084024e89e351",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 160
+  },
+  {
+    "height" : 62,
+    "id" : "official-3dcfb621c76053c4",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 160.5341796875
+  },
+  {
+    "height" : 62,
+    "id" : "official-2b838b9975e215d2",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 160
+  },
+  {
+    "height" : 62,
+    "id" : "official-235e40b72637d036",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 160.5341796875
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-30e40d14fabfa9e9",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 62,
+    "id" : "official-9806df4622bb2d0f",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 265.3671875
+  },
+  {
+    "height" : 148,
+    "id" : "official-583da5e48ac9e2ca",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 256
+  },
+  {
+    "height" : 156,
+    "id" : "official-daedeeb47874c4e5",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 152
+  },
+  {
+    "height" : 156,
+    "id" : "official-69cadca59319ddac",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 152
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-e1068d4490409d3c",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-fa96150719680e00",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-4d814bb7de2a5933",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-b03ea11e4f024eb7",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-fab31634d01ab87e",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "连线标签尚未闭合。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-217131610d97964f",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "连线标签尚未闭合。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-cf2bb1f7c453d5e4",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-49d93245842947c3",
+    "kind" : "flowchart",
+    "line" : 6,
+    "message" : "此处需要节点标识符。第一版支持字母、数字、中文和下划线。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 387.78125,
+    "id" : "official-96d66977bb2506fd",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 227.015625
+  },
+  {
+    "height" : 62,
+    "id" : "official-0b5f81881322a47d",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 244.3984375
+  },
+  {
+    "height" : 62,
+    "id" : "official-1991365e32c80782",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 433.6640625
+  },
+  {
+    "height" : 460,
+    "id" : "official-b9675066f5fb1cb7",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 244.84375
+  },
+  {
+    "height" : 308,
+    "id" : "official-8af2741f77e4425f",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 109.859375
+  },
+  {
+    "height" : 706,
+    "id" : "official-1c231ae5c6296a88",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 118.859375
+  },
+  {
+    "height" : 424,
+    "id" : "official-6897cf10b879aea9",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 432.5859375
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-011362669b9324c8",
+    "kind" : "flowchart",
+    "line" : 8,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-14571e1d97419b3c",
+    "kind" : "flowchart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-91b6b817ef7138b7",
+    "kind" : "flowchart",
+    "line" : 5,
+    "message" : "暂不支持样式指令和交互指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-708f9d59a147723b",
+    "kind" : "flowchart",
+    "line" : 6,
+    "message" : "暂不支持样式指令和交互指令。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 62,
+    "id" : "official-d4a0fe2fb1e21a59",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 265.3671875
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-9ed74c540b8e1189",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-f4ddc73bd88be46e",
+    "kind" : "flowchart",
+    "line" : 3,
+    "message" : "暂不支持样式指令和交互指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-f76e6573d220a56a",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-2f558b7a3d584673",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-53bb4045f74d8c9d",
+    "kind" : "flowchart",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 178,
+    "id" : "official-e5ab6951896e8d3c",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 632.9140625
+  },
+  {
+    "height" : 178,
+    "id" : "official-a18dbc06d2617b03",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 251.0078125
+  },
+  {
+    "height" : 148,
+    "id" : "official-46c4d04542ff7c8e",
+    "kind" : "flowchart",
+    "status" : "rendered",
+    "width" : 667.283203125
+  },
+  {
+    "height" : 390,
+    "id" : "official-9994b276372df6ec",
+    "kind" : "gantt",
+    "status" : "rendered",
+    "width" : 1000
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-b854a6f49b60d200",
+    "kind" : "gantt",
+    "line" : 2,
+    "message" : "甘特图暂不支持这个日期格式。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-c79e89c00972e73f",
+    "kind" : "gantt",
+    "line" : 5,
+    "message" : "无法解析任务日期或时长。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-908a1947f25e930b",
+    "kind" : "gantt",
+    "line" : 5,
+    "message" : "甘特任务需要冒号和时间定义。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-4cd3811ad968ce17",
+    "kind" : "gantt",
+    "line" : 2,
+    "message" : "甘特图暂不支持这个日期格式。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-9bf761ee7c35a4d8",
+    "kind" : "gantt",
+    "line" : 2,
+    "message" : "甘特图暂不支持这个日期格式。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-b651c090529ba2c6",
+    "kind" : "gantt",
+    "line" : 2,
+    "message" : "甘特任务需要冒号和时间定义。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-c4f89c3ee4131419",
+    "kind" : "gantt",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-2705bc263a5778c5",
+    "kind" : "gantt",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-d28b30afdeb64f84",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 206,
+    "id" : "official-37651ecf35070f3d",
+    "kind" : "gitGraph",
+    "status" : "rendered",
+    "width" : 440
+  },
+  {
+    "height" : 206,
+    "id" : "official-014ef174b0d395b7",
+    "kind" : "gitGraph",
+    "status" : "rendered",
+    "width" : 440
+  },
+  {
+    "height" : 206,
+    "id" : "official-c86bfe00a1c3a284",
+    "kind" : "gitGraph",
+    "status" : "rendered",
+    "width" : 740
+  },
+  {
+    "height" : 206,
+    "id" : "official-cc5aab199637d7bc",
+    "kind" : "gitGraph",
+    "status" : "rendered",
+    "width" : 840
+  },
+  {
+    "height" : 296,
+    "id" : "official-39e8da00bc00c7c6",
+    "kind" : "gitGraph",
+    "status" : "rendered",
+    "width" : 640
+  },
+  {
+    "height" : 296,
+    "id" : "official-ac1b918a3402075d",
+    "kind" : "gitGraph",
+    "status" : "rendered",
+    "width" : 840
+  },
+  {
+    "height" : 296,
+    "id" : "official-f6fcc0446da1b8c4",
+    "kind" : "gitGraph",
+    "status" : "rendered",
+    "width" : 1140
+  },
+  {
+    "height" : 386,
+    "id" : "official-3347d92631a07bc2",
+    "kind" : "gitGraph",
+    "status" : "rendered",
+    "width" : 1140
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-2b5676bb24021917",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-9db160f1ea2da2a3",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-654c165edb80bec8",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-c24fff4aa6e688a0",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-2ea996869e041ddf",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-5249bf30205cf685",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-e5d172db98243b16",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 296,
+    "id" : "official-69f5b8199e78050f",
+    "kind" : "gitGraph",
+    "status" : "rendered",
+    "width" : 1040
+  },
+  {
+    "height" : 1056,
+    "id" : "official-5a05d6be65b2b583",
+    "kind" : "gitGraph",
+    "status" : "rendered",
+    "width" : 280
+  },
+  {
+    "height" : 1056,
+    "id" : "official-d143f4d6a3ee24e3",
+    "kind" : "gitGraph",
+    "status" : "rendered",
+    "width" : 280
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-5375a7af420cc1b6",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-de1e3eeca8d4a60c",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-2e6d85f337707401",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-c71743cecb2dabd7",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-5e3445f0fc879faa",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-18580869f46e70b9",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-0dd68e5f46812c9c",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-d598a6f6d8055bc8",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-34f436ae88876391",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-05ddd198c9c03bca",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-32211c1ef5aae521",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-79fc3314444f16a4",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-a54589c703299306",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-8e25ca4d90ecae9d",
+    "kind" : "gitGraph",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 212,
+    "id" : "official-64d471958b3a3c6b",
+    "kind" : "kanban",
+    "status" : "rendered",
+    "width" : 320
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-93fe6d456e63e3bc",
+    "kind" : "mindmap",
+    "line" : 5,
+    "message" : "树形图暂不支持图标、样式或元数据指令。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 220,
+    "id" : "official-50120b037f074517",
+    "kind" : "mindmap",
+    "status" : "rendered",
+    "width" : 1110
+  },
+  {
+    "height" : 130,
+    "id" : "official-43863c877bb21c72",
+    "kind" : "mindmap",
+    "status" : "rendered",
+    "width" : 420
+  },
+  {
+    "height" : 130,
+    "id" : "official-b34484235942c5c0",
+    "kind" : "mindmap",
+    "status" : "rendered",
+    "width" : 420
+  },
+  {
+    "height" : 130,
+    "id" : "official-cc31217d41be20e6",
+    "kind" : "mindmap",
+    "status" : "rendered",
+    "width" : 420
+  },
+  {
+    "height" : 130,
+    "id" : "official-19a347a297bd5484",
+    "kind" : "mindmap",
+    "status" : "rendered",
+    "width" : 420
+  },
+  {
+    "height" : 130,
+    "id" : "official-25d14aaf879efe22",
+    "kind" : "mindmap",
+    "status" : "rendered",
+    "width" : 420
+  },
+  {
+    "height" : 130,
+    "id" : "official-53d07cd0b16d68dc",
+    "kind" : "mindmap",
+    "status" : "rendered",
+    "width" : 420
+  },
+  {
+    "height" : 130,
+    "id" : "official-85604c1294449e7d",
+    "kind" : "mindmap",
+    "status" : "rendered",
+    "width" : 420
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-3a13884fa1743ddb",
+    "kind" : "mindmap",
+    "line" : 4,
+    "message" : "树形图暂不支持图标、样式或元数据指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-7d02f0df9d19c3f3",
+    "kind" : "mindmap",
+    "line" : 4,
+    "message" : "树形图暂不支持图标、样式或元数据指令。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 220,
+    "id" : "official-5106c1aa1c30fe90",
+    "kind" : "mindmap",
+    "status" : "rendered",
+    "width" : 1110
+  },
+  {
+    "code" : "semantic",
+    "id" : "official-d34688197fc3593a",
+    "kind" : "mindmap",
+    "message" : "思维导图必须只有一个根节点。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 294,
+    "id" : "official-fb4fdb7915186d14",
+    "kind" : "packet",
+    "status" : "rendered",
+    "width" : 800
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-3567105d88bb41a5",
+    "kind" : "packet",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 440,
+    "id" : "official-f41484cd94dd8483",
+    "kind" : "pie",
+    "status" : "rendered",
+    "width" : 620
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-0618966cc9f61ec4",
+    "kind" : "pie",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-ba45a7442b75146f",
+    "kind" : "quadrantChart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-cb0348713c1706e9",
+    "kind" : "quadrantChart",
+    "line" : 9,
+    "message" : "暂不支持这条象限图语法：Campaign A: [0.9, 0.0] radius: 12",
+    "status" : "rejected"
+  },
+  {
+    "height" : 455,
+    "id" : "official-c95f5d8a69f02ce3",
+    "kind" : "requirement",
+    "status" : "rendered",
+    "width" : 362.462890625
+  },
+  {
+    "height" : 310,
+    "id" : "official-7919bd6c635cc68d",
+    "kind" : "requirement",
+    "status" : "rendered",
+    "width" : 184.1640625
+  },
+  {
+    "height" : 420,
+    "id" : "official-5045f117e286cf38",
+    "kind" : "requirement",
+    "status" : "rendered",
+    "width" : 452.4296875
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-6aee0ba9c47a09ff",
+    "kind" : "requirement",
+    "line" : 3,
+    "message" : "暂不支持这条需求图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-b9d0e63b6c8ae816",
+    "kind" : "requirement",
+    "line" : 67,
+    "message" : "暂不支持这条需求图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-eead694e962481bf",
+    "kind" : "requirement",
+    "line" : 14,
+    "message" : "暂不支持这条需求图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-fe43760d819f1555",
+    "kind" : "requirement",
+    "line" : 14,
+    "message" : "暂不支持这条需求图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-20800df0cf5254ab",
+    "kind" : "requirement",
+    "line" : 3,
+    "message" : "暂不支持这条需求图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-c6739c6a83029fbe",
+    "kind" : "sankey",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 380,
+    "id" : "official-2134589c75e25712",
+    "kind" : "sankey",
+    "status" : "rendered",
+    "width" : 780
+  },
+  {
+    "height" : 380,
+    "id" : "official-9cc115a6cef2e767",
+    "kind" : "sankey",
+    "status" : "rendered",
+    "width" : 780
+  },
+  {
+    "height" : 380,
+    "id" : "official-0b3aede151cc98dc",
+    "kind" : "sankey",
+    "status" : "rendered",
+    "width" : 780
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-57a2dc77e55611cf",
+    "kind" : "sankey",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-1bafcf479a9a4573",
+    "kind" : "sankey",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 738,
+    "id" : "official-b46ca8f030ae22c7",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 888.296875
+  },
+  {
+    "height" : 440,
+    "id" : "official-b2066a62d878a2b2",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 560.765625
+  },
+  {
+    "height" : 738,
+    "id" : "official-4a0634e0703e2b37",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 888.296875
+  },
+  {
+    "height" : 378,
+    "id" : "official-469a26df510d0cc0",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 512
+  },
+  {
+    "height" : 378,
+    "id" : "official-2ae466706c787aa9",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 512
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-09a6b5bea4819db4",
+    "kind" : "sequence",
+    "line" : 2,
+    "message" : "暂不支持这条时序图语法：participant Alice@{ \"type\" : \"boundary\" }",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-969bb3ce641248b4",
+    "kind" : "sequence",
+    "line" : 2,
+    "message" : "暂不支持这条时序图语法：participant Alice@{ \"type\" : \"control\" }",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-c1a1ef0597c2a313",
+    "kind" : "sequence",
+    "line" : 2,
+    "message" : "暂不支持这条时序图语法：participant Alice@{ \"type\" : \"entity\" }",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-f158c3d82a5bf4f7",
+    "kind" : "sequence",
+    "line" : 2,
+    "message" : "暂不支持这条时序图语法：participant Alice@{ \"type\" : \"database\" }",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-bbb78a10baa2dc83",
+    "kind" : "sequence",
+    "line" : 2,
+    "message" : "暂不支持这条时序图语法：participant Alice@{ \"type\" : \"collections\" }",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-c7329c9b4aba72a7",
+    "kind" : "sequence",
+    "line" : 2,
+    "message" : "暂不支持这条时序图语法：participant Alice@{ \"type\" : \"queue\" }",
+    "status" : "rejected"
+  },
+  {
+    "height" : 378,
+    "id" : "official-b833048175d5418f",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 560.765625
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-be26e07607d48aa8",
+    "kind" : "sequence",
+    "line" : 2,
+    "message" : "暂不支持这条时序图语法：participant API@{ \"type\": \"boundary\" } as Public API",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-ed25c7aa66b7d018",
+    "kind" : "sequence",
+    "line" : 2,
+    "message" : "暂不支持这条时序图语法：participant API@{ \"type\": \"boundary\", \"alias\": \"Public API\" }",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-1371ae9ae607217a",
+    "kind" : "sequence",
+    "line" : 2,
+    "message" : "暂不支持这条时序图语法：participant API@{ \"type\": \"boundary\", \"alias\": \"Internal Name\" } as External Name",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-5fa9f1e6f236b76b",
+    "kind" : "sequence",
+    "line" : 4,
+    "message" : "暂不支持这条时序图语法：create participant Carl",
+    "status" : "rejected"
+  },
+  {
+    "height" : 514,
+    "id" : "official-93d3c0ff3d5d384a",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 972.1171875
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-a013ca4947e10afb",
+    "kind" : "sequence",
+    "line" : 4,
+    "message" : "暂不支持这条时序图语法：Alice->>()John: Hello John",
+    "status" : "rejected"
+  },
+  {
+    "height" : 402,
+    "id" : "official-4a26f3e25a184539",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 560.765625
+  },
+  {
+    "height" : 378,
+    "id" : "official-028189a67587cce2",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 560.765625
+  },
+  {
+    "height" : 502,
+    "id" : "official-8a0283b4e38a5069",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 560.765625
+  },
+  {
+    "height" : 320,
+    "id" : "official-592325d675379703",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 440
+  },
+  {
+    "height" : 382,
+    "id" : "official-a9915542fa20e2bf",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 560.765625
+  },
+  {
+    "height" : 424,
+    "id" : "official-c68e948fd0030ddd",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 556.578125
+  },
+  {
+    "height" : 424,
+    "id" : "official-40a5ae34a0899545",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 573.12890625
+  },
+  {
+    "height" : 448,
+    "id" : "official-d042768225fc2a2c",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 560.765625
+  },
+  {
+    "height" : 682,
+    "id" : "official-5ba07f36cdf08b28",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 556.6796875
+  },
+  {
+    "height" : 612,
+    "id" : "official-6c0cb8e242cbf8bd",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 684
+  },
+  {
+    "height" : 722,
+    "id" : "official-af802c7e61fb4116",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 1055.4921875
+  },
+  {
+    "height" : 638,
+    "id" : "official-201a0912328e98f2",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 552
+  },
+  {
+    "height" : 386,
+    "id" : "official-a74c5de6ef55136d",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 512
+  },
+  {
+    "height" : 572,
+    "id" : "official-07788f7e3ced9064",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 952.125
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-14a8499e6a606733",
+    "kind" : "sequence",
+    "line" : 14,
+    "message" : "暂不支持这条时序图语法：Alice ->>+ John: Did you want to go to the game tonight?",
+    "status" : "rejected"
+  },
+  {
+    "height" : 378,
+    "id" : "official-c404e4ed538f9b3b",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 560.765625
+  },
+  {
+    "height" : 378,
+    "id" : "official-942c34f9cb6c3d14",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 610.7734375
+  },
+  {
+    "height" : 724,
+    "id" : "official-df13c1b9dfa70137",
+    "kind" : "sequence",
+    "status" : "rendered",
+    "width" : 832.765625
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-0f2f5747cfd48644",
+    "kind" : "sequence",
+    "line" : 4,
+    "message" : "暂不支持这条时序图语法：links Alice: {\"Dashboard\": \"https://dashboard.contoso.com/alice\", \"Wiki\": \"https://wiki.contoso.com/alice\"}",
+    "status" : "rejected"
+  },
+  {
+    "height" : 380,
+    "id" : "official-e658870b4c3402e2",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 319.71337890625
+  },
+  {
+    "height" : 613,
+    "id" : "official-eebe01b06a3fbe2d",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 209.2841796875
+  },
+  {
+    "height" : 371,
+    "id" : "official-16d97bc5b2256b16",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 847.75
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-fc35188de9f919aa",
+    "kind" : "state",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 434,
+    "id" : "official-39acf723262aa564",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 229.9609375
+  },
+  {
+    "height" : 494,
+    "id" : "official-1e1b107393bac8ac",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 248.8515625
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-bd780a3a2d167f10",
+    "kind" : "state",
+    "line" : 2,
+    "message" : "暂不支持这条状态图语法：stateId",
+    "status" : "rejected"
+  },
+  {
+    "height" : 62,
+    "id" : "official-31acb54a992766ee",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 237.0390625
+  },
+  {
+    "height" : 62,
+    "id" : "official-e7475df8ff02639a",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 237.0390625
+  },
+  {
+    "height" : 156,
+    "id" : "official-ad45017122efa301",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 69.40625
+  },
+  {
+    "height" : 156,
+    "id" : "official-ad6754c39467d7b5",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 97.650390625
+  },
+  {
+    "height" : 246,
+    "id" : "official-f6ff1530a8fe9c57",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 66.9375
+  },
+  {
+    "height" : 396,
+    "id" : "official-885c8b1b173cbaf7",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 370.5703125
+  },
+  {
+    "height" : 790,
+    "id" : "official-8375051aace412a1",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 205.3046875
+  },
+  {
+    "height" : 732,
+    "id" : "official-d637094dd39ae470",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 251.7734375
+  },
+  {
+    "height" : 369.6767578125,
+    "id" : "official-8b4cf7c3adaa9c5f",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 197.7265625
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-9e139d5ea8476442",
+    "kind" : "state",
+    "line" : 2,
+    "message" : "状态图的 fork 和 join 标记尚未支持。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-14b527de19785b23",
+    "kind" : "state",
+    "line" : 3,
+    "message" : "暂不支持这条状态图语法：note right of State1",
+    "status" : "rejected"
+  },
+  {
+    "height" : 148,
+    "id" : "official-e98ccbbe271e462a",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 484
+  },
+  {
+    "height" : 434,
+    "id" : "official-19213af7efbabc66",
+    "kind" : "state",
+    "status" : "rendered",
+    "width" : 229.9609375
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-186122eccfe5e212",
+    "kind" : "state",
+    "line" : 7,
+    "message" : "暂不支持这条状态图语法：classDef notMoving fill:white",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-592b1439148ea5a9",
+    "kind" : "state",
+    "line" : 7,
+    "message" : "暂不支持这条状态图语法：classDef notMoving fill:white",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-7b7ab5b3a5f94bab",
+    "kind" : "state",
+    "line" : 2,
+    "message" : "暂不支持这条状态图语法：classDef yourState font-style:italic,font-weight:bold,fill:white",
+    "status" : "rejected"
+  },
+  {
+    "height" : 284,
+    "id" : "official-1b6ef8c6e2bb6038",
+    "kind" : "timeline",
+    "status" : "rendered",
+    "width" : 840
+  },
+  {
+    "height" : 284,
+    "id" : "official-632b53443b0ca687",
+    "kind" : "timeline",
+    "status" : "rendered",
+    "width" : 840
+  },
+  {
+    "height" : 274,
+    "id" : "official-523985f9a7ca3ab9",
+    "kind" : "timeline",
+    "status" : "rendered",
+    "width" : 1040
+  },
+  {
+    "height" : 464,
+    "id" : "official-c2440af8294c7015",
+    "kind" : "timeline",
+    "status" : "rendered",
+    "width" : 840
+  },
+  {
+    "height" : 354,
+    "id" : "official-e2806e53df11c521",
+    "kind" : "timeline",
+    "status" : "rendered",
+    "width" : 840
+  },
+  {
+    "height" : 304,
+    "id" : "official-fc46654076ba27e4",
+    "kind" : "timeline",
+    "status" : "rendered",
+    "width" : 840
+  },
+  {
+    "height" : 284,
+    "id" : "official-4a436bf5cde4cf70",
+    "kind" : "timeline",
+    "status" : "rendered",
+    "width" : 840
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-56b167410e41154b",
+    "kind" : "timeline",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-6ee60b83a541e264",
+    "kind" : "timeline",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-d355ed477cfd4b67",
+    "kind" : "timeline",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-a24bead1895db6a5",
+    "kind" : "timeline",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-f09678e83888b535",
+    "kind" : "timeline",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-87eacd36f6ef7b35",
+    "kind" : "timeline",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-399391685b5266aa",
+    "kind" : "timeline",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 516,
+    "id" : "official-26b0cd5e3c3bcf2c",
+    "kind" : "xychart",
+    "status" : "rendered",
+    "width" : 896
+  },
+  {
+    "height" : 516,
+    "id" : "official-3685342d92ac9491",
+    "kind" : "xychart",
+    "status" : "rendered",
+    "width" : 688
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-fbe6837b9d1a9a5d",
+    "kind" : "xychart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-ade44d5c559d10e3",
+    "kind" : "xychart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-55d282bc9b85f6b3",
+    "kind" : "xychart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "semantic",
+    "id" : "official-58d05b223eab0fcc",
+    "kind" : "xychart",
+    "line" : 5,
+    "message" : "需要有限的数值。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "semantic",
+    "id" : "official-ff4787edb814b8de",
+    "kind" : "xychart",
+    "line" : 5,
+    "message" : "需要有限的数值。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-4191b7b5dc6ecbe6",
+    "kind" : "xychart",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-f2101f354fdae5a2",
+    "kind" : "agentflow",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-c01cb465b4b372eb",
+    "kind" : "agentflow",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-fd6a77e1c98668d6",
+    "kind" : "agentflow",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-72ddb9fc72ab937a",
+    "kind" : "agentflow",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-05cb31ddbb76bdf6",
+    "kind" : "agentflow",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-5c89eae1c581b64f",
+    "kind" : "agentflow",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-c0455db4242a041c",
+    "kind" : "agentflow",
+    "line" : 3,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-2a44766f654fd681",
+    "kind" : "agentflow",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-475c7f21f53077e4",
+    "kind" : "agentflow",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-69451cfd3a686cf3",
+    "kind" : "agentflow",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 370,
+    "id" : "official-bc2e0b86f3114544",
+    "kind" : "architecture",
+    "status" : "rendered",
+    "width" : 484.86328125
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-7744f879b77a36a2",
+    "kind" : "architecture",
+    "line" : 10,
+    "message" : "暂不支持这条架构图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-b090a75233e19893",
+    "kind" : "architecture",
+    "line" : 9,
+    "message" : "暂不支持这条架构图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-3ed71c734c4a7031",
+    "kind" : "architecture",
+    "line" : 4,
+    "message" : "暂不支持这个架构图图标。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 620,
+    "id" : "official-4fb60908c114c6b9",
+    "kind" : "cynefin",
+    "status" : "rendered",
+    "width" : 900
+  },
+  {
+    "height" : 580,
+    "id" : "official-c41ec80b216c2903",
+    "kind" : "cynefin",
+    "status" : "rendered",
+    "width" : 900
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-8ac5e8cdf4bde31e",
+    "kind" : "radar",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-dbcef8ff2cd577d1",
+    "kind" : "railroad",
+    "line" : 2,
+    "message" : "铁路图规则需要名称和 = 或 <-。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-7eaf506537b9c6a5",
+    "kind" : "railroad",
+    "line" : 2,
+    "message" : "铁路图规则需要名称和 = 或 <-。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 296,
+    "id" : "official-9288050492569224",
+    "kind" : "railroad",
+    "status" : "rendered",
+    "width" : 360
+  },
+  {
+    "height" : 106,
+    "id" : "official-21d44260da42bc0d",
+    "kind" : "railroad",
+    "status" : "rendered",
+    "width" : 360
+  },
+  {
+    "height" : 154,
+    "id" : "official-58d07ac0e2d73d5c",
+    "kind" : "railroad",
+    "status" : "rendered",
+    "width" : 360
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-ecb34dcea625666b",
+    "kind" : "railroad",
+    "line" : 2,
+    "message" : "铁路图规则需要名称和 = 或 <-。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-9794f34e0a3fb230",
+    "kind" : "railroad",
+    "line" : 2,
+    "message" : "铁路图规则需要名称和 = 或 <-。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-e4b8b1a4559eba40",
+    "kind" : "railroad",
+    "line" : 2,
+    "message" : "暂不支持铁路图函数 term。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-41e29febcb6136f5",
+    "kind" : "railroad",
+    "line" : 5,
+    "message" : "铁路图暂不支持这个词法符号：1。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-e5b8b271aac85395",
+    "kind" : "railroad",
+    "line" : 5,
+    "message" : "铁路图暂不支持这个词法符号：1。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-e825d5ab3c9b8fcf",
+    "kind" : "railroad",
+    "line" : 2,
+    "message" : "铁路图规则需要名称和 = 或 <-。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-3fab267fc31fd24f",
+    "kind" : "railroad",
+    "line" : 4,
+    "message" : "铁路图暂不支持这个词法符号：!。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 640,
+    "id" : "official-7677982d4cd415d8",
+    "kind" : "swimlane",
+    "status" : "rendered",
+    "width" : 803.0546875
+  },
+  {
+    "height" : 640,
+    "id" : "official-04962e5b09528a12",
+    "kind" : "swimlane",
+    "status" : "rendered",
+    "width" : 785.203125
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-4de93e7a0c26892b",
+    "kind" : "swimlane",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 228,
+    "id" : "official-8dfe9a424d0b625f",
+    "kind" : "swimlane",
+    "status" : "rendered",
+    "width" : 320.5703125
+  },
+  {
+    "height" : 428,
+    "id" : "official-60c192d9e1edf6ad",
+    "kind" : "swimlane",
+    "status" : "rendered",
+    "width" : 862.265625
+  },
+  {
+    "height" : 640,
+    "id" : "official-aa3016964e4787fc",
+    "kind" : "swimlane",
+    "status" : "rendered",
+    "width" : 760.34375
+  },
+  {
+    "height" : 428,
+    "id" : "official-c97fe4d378535c6b",
+    "kind" : "swimlane",
+    "status" : "rendered",
+    "width" : 924.3955078125
+  },
+  {
+    "code" : "syntax",
+    "id" : "official-4eca0116897bbb8d",
+    "kind" : "swimlane",
+    "line" : 2,
+    "message" : "此处需要连线，例如 -->、-->|标签|、-.-> 或 ==>。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 640,
+    "id" : "official-d35379f671d80f98",
+    "kind" : "swimlane",
+    "status" : "rendered",
+    "width" : 1260.5078125
+  },
+  {
+    "height" : 683.14453125,
+    "id" : "official-27ad3133a24aae1a",
+    "kind" : "swimlane",
+    "status" : "rendered",
+    "width" : 718.3984375
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-3328f094a66a6a94",
+    "kind" : "swimlane",
+    "line" : 13,
+    "message" : "暂不支持样式指令和交互指令。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 655.41015625,
+    "id" : "official-74df22ac9f981a34",
+    "kind" : "swimlane",
+    "status" : "rendered",
+    "width" : 998.078125
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-fca891cb5a0356b1",
+    "kind" : "treeView",
+    "line" : 3,
+    "message" : "树形图暂不支持图标、样式或元数据指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-6b40fe28208f3581",
+    "kind" : "treeView",
+    "line" : 2,
+    "message" : "目录树当前支持空格缩进格式。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-39fe66e893ae8c0d",
+    "kind" : "treeView",
+    "line" : 2,
+    "message" : "目录树当前支持空格缩进格式。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-3056eee3048bf090",
+    "kind" : "treeView",
+    "line" : 2,
+    "message" : "目录树当前支持空格缩进格式。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-9a7ffe1ec7b32a9a",
+    "kind" : "treeView",
+    "line" : 3,
+    "message" : "树形图暂不支持图标、样式或元数据指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-04e61b50f48a3523",
+    "kind" : "treeView",
+    "line" : 3,
+    "message" : "树形图暂不支持图标、样式或元数据指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-4d3420e45f7a8f7d",
+    "kind" : "treeView",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-a20065d1be5d947a",
+    "kind" : "treeView",
+    "line" : 3,
+    "message" : "树形图暂不支持图标、样式或元数据指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-8fefcf2b5cab12a0",
+    "kind" : "treeView",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 164,
+    "id" : "official-47b72aedb6fc36c7",
+    "kind" : "treeView",
+    "status" : "rendered",
+    "width" : 420
+  },
+  {
+    "height" : 254,
+    "id" : "official-3a512e31979952f0",
+    "kind" : "treeView",
+    "status" : "rendered",
+    "width" : 420
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-3cb8979e83d9be9f",
+    "kind" : "treeView",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 468,
+    "id" : "official-bac2c087ac52db3b",
+    "kind" : "treemap",
+    "status" : "rendered",
+    "width" : 820
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-64135f10e0b3a08c",
+    "kind" : "treemap",
+    "line" : 4,
+    "message" : "树形图暂不支持图标、样式或元数据指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-5f240e126b287f1b",
+    "kind" : "treemap",
+    "line" : 4,
+    "message" : "树形图暂不支持图标、样式或元数据指令。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-9acc1e6e648be555",
+    "kind" : "treemap",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-8b628158795a4271",
+    "kind" : "treemap",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-9c4e6d63b7c161fc",
+    "kind" : "treemap",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-00339c496aec5a45",
+    "kind" : "usecase",
+    "line" : 3,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-d5da69a08ca9bd49",
+    "kind" : "usecase",
+    "line" : 16,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-602930284299ce28",
+    "kind" : "usecase",
+    "line" : 4,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-512322076f2110a9",
+    "kind" : "usecase",
+    "line" : 2,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-5e2ceaa9a657fdc2",
+    "kind" : "usecase",
+    "line" : 2,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-e30205185984ab8a",
+    "kind" : "usecase",
+    "line" : 2,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-cc7884f2722a0260",
+    "kind" : "usecase",
+    "line" : 2,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 106,
+    "id" : "official-2b04d71e8026a82f",
+    "kind" : "usecase",
+    "status" : "rendered",
+    "width" : 440.73796875
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-b4b9e11d329da958",
+    "kind" : "usecase",
+    "line" : 2,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-2d94b58bf0c1709c",
+    "kind" : "usecase",
+    "line" : 2,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-d4aaab4d50a96bf6",
+    "kind" : "usecase",
+    "line" : 7,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-05f26a014a27f80a",
+    "kind" : "usecase",
+    "line" : 4,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-9cb66c38e51b5a4d",
+    "kind" : "usecase",
+    "line" : 7,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-5b4f68379af67286",
+    "kind" : "usecase",
+    "line" : 5,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-ddec036429b83779",
+    "kind" : "usecase",
+    "line" : 2,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-a77aca89d95cdd7f",
+    "kind" : "usecase",
+    "line" : 3,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-d30527c997c57b15",
+    "kind" : "usecase",
+    "line" : 2,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-5e65e7026d2e1873",
+    "kind" : "usecase",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-diagram",
+    "id" : "official-2845caa6b012296d",
+    "kind" : "usecase",
+    "line" : 1,
+    "message" : "无法识别图表声明，请从示例中选择一种图形。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-d2ecf4a337d37930",
+    "kind" : "usecase",
+    "line" : 2,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-e4fb4f72cd84fab7",
+    "kind" : "usecase",
+    "line" : 3,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-ad6a3a578b0f599b",
+    "kind" : "usecase",
+    "line" : 3,
+    "message" : "暂不支持这条用例图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-9a53dbe64737af6c",
+    "kind" : "venn",
+    "line" : 3,
+    "message" : "韦恩图当前支持 set 和 union 数值声明。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-7e1f629a073676a8",
+    "kind" : "venn",
+    "line" : 3,
+    "message" : "韦恩图当前支持 set 和 union 数值声明。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-43f17aa16bc50895",
+    "kind" : "venn",
+    "line" : 2,
+    "message" : "韦恩图当前支持 set 和 union 数值声明。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-4ac8b1e3dba7ce46",
+    "kind" : "venn",
+    "line" : 2,
+    "message" : "韦恩图当前支持 set 和 union 数值声明。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-dbe2e15b8822e28a",
+    "kind" : "venn",
+    "line" : 4,
+    "message" : "韦恩图当前支持 set 和 union 数值声明。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-ac6de7c7813c6c44",
+    "kind" : "venn",
+    "line" : 3,
+    "message" : "韦恩图当前支持 set 和 union 数值声明。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-ee7968c51b2dfc94",
+    "kind" : "wardley",
+    "line" : 20,
+    "message" : "暂不支持这条 Wardley 图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-30bd5186b8416c3f",
+    "kind" : "wardley",
+    "line" : 3,
+    "message" : "暂不支持这条 Wardley 图语法。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 576,
+    "id" : "official-c8a676b374edb468",
+    "kind" : "wardley",
+    "status" : "rendered",
+    "width" : 864
+  },
+  {
+    "code" : "semantic",
+    "id" : "official-24cf67f618fb8e52",
+    "kind" : "wardley",
+    "line" : 5,
+    "message" : "地图坐标需要 0 到 1 的小数或 0 到 100 的百分数。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 576,
+    "id" : "official-f8939bf3c47509e8",
+    "kind" : "wardley",
+    "status" : "rendered",
+    "width" : 864
+  },
+  {
+    "height" : 576,
+    "id" : "official-0dba7eb5e8a69ad3",
+    "kind" : "wardley",
+    "status" : "rendered",
+    "width" : 864
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-eaade9886d10fc14",
+    "kind" : "wardley",
+    "line" : 4,
+    "message" : "暂不支持这条 Wardley 图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-d1f89162a665f281",
+    "kind" : "wardley",
+    "line" : 11,
+    "message" : "暂不支持这条 Wardley 图语法。",
+    "status" : "rejected"
+  },
+  {
+    "height" : 576,
+    "id" : "official-bd99ec4274a9f135",
+    "kind" : "wardley",
+    "status" : "rendered",
+    "width" : 864
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-16bd41b8a1695cac",
+    "kind" : "wardley",
+    "line" : 6,
+    "message" : "暂不支持这条 Wardley 图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "semantic",
+    "id" : "official-a21a41f96bb7ef97",
+    "kind" : "wardley",
+    "message" : "地图关系引用了未知组件。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "semantic",
+    "id" : "official-78f1f8e0586b761b",
+    "kind" : "wardley",
+    "message" : "地图关系引用了未知组件。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "semantic",
+    "id" : "official-fa9bb12669913552",
+    "kind" : "wardley",
+    "message" : "地图关系引用了未知组件。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-6ba6230ffb4f7a61",
+    "kind" : "wardley",
+    "line" : 9,
+    "message" : "暂不支持这条 Wardley 图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-c5d091f2bc8cb332",
+    "kind" : "wardley",
+    "line" : 11,
+    "message" : "暂不支持这条 Wardley 图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-fcf464d599f56ace",
+    "kind" : "wardley",
+    "line" : 11,
+    "message" : "暂不支持这条 Wardley 图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-d85436bace2b6f19",
+    "kind" : "wardley",
+    "line" : 3,
+    "message" : "暂不支持这条 Wardley 图语法。",
+    "status" : "rejected"
+  },
+  {
+    "code" : "unsupported-syntax",
+    "id" : "official-4be02ccb84d6157a",
+    "kind" : "wardley",
+    "line" : 3,
+    "message" : "暂不支持这条 Wardley 图语法。",
+    "status" : "rejected"
+  }
+]

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="285.49" height="70.00" viewBox="0 0 285.49 70.00" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g><title>A</title>
+<path d="M 8.00 8.00 L 277.49 8.00 L 223.59 62.00 L 61.90 62.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="142.75" y="40.60" text-anchor="middle" font-size="16.00" fill="#272727">Manual operation</text>
+</g></g>
+</svg>

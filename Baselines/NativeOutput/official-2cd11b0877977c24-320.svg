@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="462.00" height="522.00" viewBox="0 0 462.00 522.00" role="img" aria-label="XY 坐标图">
+<title>XY 坐标图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="231.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">Ocean Temperature</text>
+<path d="M 86.00 396.00 L 422.00 396.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="400.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">74</text>
+<path d="M 86.00 332.00 L 422.00 332.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="336.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">76</text>
+<path d="M 86.00 268.00 L 422.00 268.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="272.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">77</text>
+<path d="M 86.00 204.00 L 422.00 204.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="208.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">79</text>
+<path d="M 86.00 140.00 L 422.00 140.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="144.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">80</text>
+<path d="M 86.00 76.00 L 422.00 76.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="80.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">82</text>
+<g data-id="bar-0-0"><title>jan: 76</title><rect x="90.20" y="304.00" width="17.60" height="92.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-1"><title>feb: 76</title><rect x="118.20" y="320.00" width="17.60" height="76.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-2"><title>mar: 76</title><rect x="146.20" y="316.00" width="17.60" height="80.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-3"><title>apr: 77</title><rect x="174.20" y="288.00" width="17.60" height="108.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-4"><title>may: 78</title><rect x="202.20" y="244.00" width="17.60" height="152.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-5"><title>jun: 79</title><rect x="230.20" y="200.00" width="17.60" height="196.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-6"><title>jul: 80</title><rect x="258.20" y="160.00" width="17.60" height="236.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-7"><title>aug: 81</title><rect x="286.20" y="128.00" width="17.60" height="268.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-8"><title>sep: 81</title><rect x="314.20" y="112.00" width="17.60" height="284.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-9"><title>oct: 80</title><rect x="342.20" y="136.00" width="17.60" height="260.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-10"><title>nov: 79</title><rect x="370.20" y="192.00" width="17.60" height="204.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-11"><title>dec: 77</title><rect x="398.20" y="260.00" width="17.60" height="136.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 100.00 304.00 L 115.72 312.98 C 123.33 317.33 133.32 319.24 142.00 318.00 L 142.00 318.00 C 150.68 316.76 159.80 312.20 166.00 306.00 L 170.00 302.00 C 178.68 293.32 188.04 281.65 194.63 271.30 L 201.26 260.87 C 207.92 250.41 216.08 237.59 222.74 227.13 L 229.26 216.87 C 235.92 206.41 244.36 193.77 251.47 183.62 L 256.53 176.38 C 263.64 166.23 273.00 154.28 281.17 144.95 L 285.38 140.13 C 291.97 132.61 301.32 124.96 310.00 120.00 L 310.00 120.00 C 318.68 115.04 328.65 115.99 336.24 122.49 L 338.00 124.00 C 346.68 131.44 355.13 142.27 360.25 152.49 L 371.06 174.11 C 376.60 185.20 382.89 199.03 387.61 210.49 L 408.00 260.00" fill="none" stroke="#34c759" stroke-width="2.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="point-1-0"><title>jan: 76</title><ellipse cx="100.00" cy="304.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-1"><title>feb: 76</title><ellipse cx="128.00" cy="320.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-2"><title>mar: 76</title><ellipse cx="156.00" cy="316.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-3"><title>apr: 77</title><ellipse cx="184.00" cy="288.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-4"><title>may: 78</title><ellipse cx="212.00" cy="244.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-5"><title>jun: 79</title><ellipse cx="240.00" cy="200.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-6"><title>jul: 80</title><ellipse cx="268.00" cy="160.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-7"><title>aug: 81</title><ellipse cx="296.00" cy="128.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-8"><title>sep: 81</title><ellipse cx="324.00" cy="112.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-9"><title>oct: 80</title><ellipse cx="352.00" cy="136.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-10"><title>nov: 79</title><ellipse cx="380.00" cy="192.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-11"><title>dec: 77</title><ellipse cx="408.00" cy="260.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 86.00 76.00 L 86.00 376.00 C 86.00 388.40 93.60 396.00 106.00 396.00 L 422.00 396.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="100.00" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">jan</text>
+<text x="128.00" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">feb</text>
+<text x="156.00" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">mar</text>
+<text x="184.00" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">apr</text>
+<text x="212.00" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">may</text>
+<text x="240.00" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">jun</text>
+<text x="268.00" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">jul</text>
+<text x="296.00" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">aug</text>
+<text x="324.00" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">sep</text>
+<text x="352.00" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">oct</text>
+<text x="380.00" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">nov</text>
+<text x="408.00" y="426.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">dec</text>
+<text x="254.00" y="464.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727"></text>
+<text x="8.00" y="66.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">Temperature (in °F)</text>
+<rect x="84.00" y="492.00" width="14.00" height="12.00" rx="8.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="106.00" y="502.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">bar 1</text>
+<rect x="234.00" y="492.00" width="14.00" height="12.00" rx="8.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="256.00" y="502.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">line 2</text></g>
+</svg>

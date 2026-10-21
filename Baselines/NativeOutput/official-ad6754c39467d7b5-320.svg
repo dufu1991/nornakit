@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="84.68" height="190.00" viewBox="0 0 84.68 190.00" role="img" aria-label="状态图">
+<title>状态图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 42.34 54.00 L 42.34 136.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 42.34 136.00 L 38.98 128.00 L 45.70 128.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-0"><title></title><rect x="8.00" y="86.00" width="68.68" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="42.34" y="99.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">A transition</text>
+<g data-id="s1"><title>s1</title><rect x="16.87" y="8.00" width="50.94" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="42.34" y="36.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">s1</text>
+<g data-id="s2"><title>s2</title><rect x="15.63" y="136.00" width="53.41" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="42.34" y="164.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">s2</text></g>
+</svg>

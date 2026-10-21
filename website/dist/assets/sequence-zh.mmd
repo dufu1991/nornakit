@@ -1,0 +1,15 @@
+sequenceDiagram
+    autonumber
+    actor User as 用户
+    participant App as 应用
+    participant API as 服务端
+    User->>App: 提交请求
+    App->>+API: 校验并处理
+    Note over App,API: 原生消息、激活与分支
+    alt 请求有效
+        API-->>App: 返回结果
+    else 请求无效
+        API-->>App: 返回错误
+    end
+    deactivate API
+    App-->>User: 展示响应

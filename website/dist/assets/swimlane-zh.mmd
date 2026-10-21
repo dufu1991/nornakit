@@ -1,0 +1,9 @@
+swimlane-beta LR
+    subgraph User[用户]
+        A[提交请求] --> B[确认结果]
+    end
+    subgraph Service[服务]
+        C[处理请求] --> D[返回响应]
+    end
+    A --> C
+    D --> B

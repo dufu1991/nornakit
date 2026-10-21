@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="149.20" height="156.00" viewBox="0 0 149.20 156.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 74.60 54.00 L 74.60 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 74.60 102.00 L 71.24 94.00 L 77.96 94.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="Animal Class!"><title>Animal Class!</title><rect x="8.00" y="8.00" width="133.20" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="74.60" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Animal Class!</text>
+<g data-id="Car Class"><title>Car Class</title><rect x="22.11" y="102.00" width="104.98" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="74.60" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Car Class</text></g>
+</svg>

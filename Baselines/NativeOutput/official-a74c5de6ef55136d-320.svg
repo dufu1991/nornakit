@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="214.04" height="384.00" viewBox="0 0 214.04 384.00" role="img" aria-label="时序图">
+<title>时序图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="24.00" y="132.00" width="166.04" height="114.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.22" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="lifeline-Service"><title></title><path d="M 61.02 82.00 L 61.02 274.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-DB"><title></title><path d="M 166.04 82.00 L 166.04 274.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="message-0"><title></title><path d="M 61.02 203.00 L 166.04 203.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="edge-label-message-0"><title>connect</title><rect x="88.60" y="194.00" width="49.86" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="113.53" y="207.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">connect</text>
+<rect x="24.00" y="132.00" width="61.07" height="26.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="54.53" y="148.50" text-anchor="middle" font-size="10.00" font-weight="400" fill="#272727">critical</text>
+<text x="106.00" y="133.00" text-anchor="start" font-size="8.00" font-weight="400" fill="#272727">Establish a</text><text x="106.00" y="144.20" text-anchor="start" font-size="8.00" font-weight="400" fill="#272727"> connectio</text><text x="106.00" y="155.40" text-anchor="start" font-size="8.00" font-weight="400" fill="#272727">n to the D</text><text x="106.00" y="166.60" text-anchor="start" font-size="8.00" font-weight="400" fill="#272727">B</text>
+<g data-id="participant-Service"><title>Service</title><rect x="16.00" y="32.00" width="90.04" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="61.02" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Service</text>
+<g data-id="participant-Service"><title>Service</title><rect x="16.00" y="286.00" width="90.04" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="61.02" y="316.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Service</text>
+<g data-id="participant-DB"><title>DB</title><rect x="134.04" y="32.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="166.04" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">DB</text>
+<g data-id="participant-DB"><title>DB</title><rect x="134.04" y="286.00" width="64.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="166.04" y="316.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">DB</text></g>
+</svg>

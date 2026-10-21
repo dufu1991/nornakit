@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900.00" height="580.00" viewBox="0 0 900.00 580.00" role="img" aria-label="Cynefin 框架">
+<title>Cynefin 框架</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="450.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">Strategy Categorization</text>
+<rect x="20.00" y="60.00" width="420.00" height="230.00" rx="12.00" fill="#0088ff" stroke="#e6e6e6" stroke-width="1.00" opacity="0.08" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="230.00" y="87.95" text-anchor="middle" font-size="17.00" font-weight="600" fill="#272727">Complex</text>
+<text x="230.00" y="111.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Probe → Sense → Respond</text>
+<g data-id="complex-0"><title>Market research</title><rect x="40.00" y="130.00" width="380.00" height="40.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="230.00" y="154.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Market research</text>
+<rect x="460.00" y="60.00" width="420.00" height="230.00" rx="12.00" fill="#34c759" stroke="#e6e6e6" stroke-width="1.00" opacity="0.08" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="670.00" y="87.95" text-anchor="middle" font-size="17.00" font-weight="600" fill="#272727">Complicated</text>
+<text x="670.00" y="111.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Sense → Analyze → Respond</text>
+<g data-id="complicated-0"><title>Competitive analysis</title><rect x="480.00" y="130.00" width="380.00" height="40.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="670.00" y="154.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Competitive analysis</text>
+<rect x="460.00" y="330.00" width="420.00" height="230.00" rx="12.00" fill="#ff8d28" stroke="#e6e6e6" stroke-width="1.00" opacity="0.08" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="670.00" y="357.95" text-anchor="middle" font-size="17.00" font-weight="600" fill="#272727">Clear</text>
+<text x="670.00" y="381.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Sense → Categorize → Respond</text>
+<g data-id="clear-0"><title>Standard pricing</title><rect x="480.00" y="400.00" width="380.00" height="40.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="670.00" y="424.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Standard pricing</text>
+<rect x="20.00" y="330.00" width="420.00" height="230.00" rx="12.00" fill="#cb30e0" stroke="#e6e6e6" stroke-width="1.00" opacity="0.08" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="230.00" y="357.95" text-anchor="middle" font-size="17.00" font-weight="600" fill="#272727">Chaotic</text>
+<text x="230.00" y="381.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Act → Sense → Respond</text>
+<g data-id="chaotic-0"><title>Crisis management</title><rect x="40.00" y="400.00" width="380.00" height="40.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="230.00" y="424.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Crisis management</text>
+<rect x="310.00" y="274.00" width="280.00" height="72.00" rx="12.00" fill="#00c3d0" stroke="#e6e6e6" stroke-width="1.00" opacity="0.60" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="450.00" y="301.95" text-anchor="middle" font-size="17.00" font-weight="600" fill="#272727">Confusion</text>
+<text x="450.00" y="325.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Disorder</text>
+<path d="M 230.00 175.00 L 670.00 175.00" fill="none" stroke="#007aff" stroke-width="1.50" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 670.00 175.00 L 662.00 178.36 L 662.00 171.64 Z" fill="#007aff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="350.00" y="161.00" width="200.00" height="28.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="450.00" y="179.00" text-anchor="middle" font-size="11.43" font-weight="400" fill="#272727">Pattern identified</text>
+<path d="M 670.00 175.00 L 670.00 445.00" fill="none" stroke="#007aff" stroke-width="1.50" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 670.00 445.00 L 666.64 437.00 L 673.36 437.00 Z" fill="#007aff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="570.00" y="296.00" width="200.00" height="28.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="670.00" y="314.00" text-anchor="middle" font-size="11.43" font-weight="400" fill="#272727">Best practice codified</text>
+<path d="M 670.00 445.00 L 230.00 445.00" fill="none" stroke="#007aff" stroke-width="1.50" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 230.00 445.00 L 238.00 441.64 L 238.00 448.36 Z" fill="#007aff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="350.00" y="431.00" width="200.00" height="28.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="450.00" y="449.00" text-anchor="middle" font-size="11.43" font-weight="400" fill="#272727">Complacency</text>
+<path d="M 230.00 445.00 L 230.00 175.00" fill="none" stroke="#007aff" stroke-width="1.50" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 230.00 175.00 L 233.36 183.00 L 226.64 183.00 Z" fill="#007aff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="130.00" y="296.00" width="200.00" height="28.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="230.00" y="314.00" text-anchor="middle" font-size="11.43" font-weight="400" fill="#272727">Stabilized</text></g>
+</svg>

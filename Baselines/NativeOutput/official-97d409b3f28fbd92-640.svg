@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297.17" height="450.00" viewBox="0 0 297.17 450.00" role="img" aria-label="实体关系图">
+<title>实体关系图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 76.31 98.00 L 76.31 180.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 82.31 180.00 L 79.31 174.00 C 77.45 170.28 75.17 170.28 73.31 174.00 L 70.31 180.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 76.31 180.00 L 76.31 168.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="76.31" cy="162.00" rx="4.00" ry="4.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 70.31 102.00 L 82.31 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 70.31 112.00 L 82.31 112.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-0"><title></title><rect x="55.89" y="130.00" width="40.83" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="76.31" y="143.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">places</text>
+<g data-id="relation-1"><title></title><path d="M 76.31 270.00 L 76.31 291.00 C 76.31 303.40 83.91 311.00 96.31 311.00 L 105.16 311.00 C 117.56 311.00 125.16 318.60 125.16 331.00 L 125.16 352.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 131.16 352.00 L 128.16 346.00 C 126.30 342.28 124.02 342.28 122.16 346.00 L 119.16 352.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 125.16 352.00 L 125.16 340.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 131.16 338.00 L 119.16 338.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 70.31 274.00 L 82.31 274.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 70.31 284.00 L 82.31 284.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-1"><title></title><rect x="50.29" y="274.65" width="52.04" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="76.31" y="287.85" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">contains</text>
+<g data-id="relation-2"><title></title><path d="M 233.47 98.00 L 233.47 291.00 C 233.47 303.40 225.87 311.00 213.47 311.00 L 161.16 311.00 C 148.76 311.00 141.16 318.60 141.16 331.00 L 141.16 352.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 147.16 352.00 L 144.16 346.00 C 142.30 342.28 140.02 342.28 138.16 346.00 L 135.16 352.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 141.16 352.00 L 141.16 340.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="141.16" cy="334.00" rx="4.00" ry="4.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 227.47 102.00 L 239.47 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 227.47 112.00 L 239.47 112.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-2"><title></title><rect x="202.06" y="185.50" width="62.82" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="233.47" y="198.70" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">appears in</text>
+<g data-id="CUSTOMER"><title>CUSTOMER</title><rect x="14.84" y="8.00" width="122.93" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="76.31" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">CUSTOMER</text>
+<path d="M 14.84 46.00 L 137.77 46.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="24.84" y="65.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">string name</text><text x="24.84" y="84.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">string email</text>
+<g data-id="ORDER"><title>ORDER</title><rect x="8.00" y="180.00" width="136.62" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="76.31" y="206.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">ORDER</text>
+<path d="M 8.00 218.00 L 144.62 218.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="237.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">int id</text><text x="18.00" y="256.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">date placedAt</text>
+<g data-id="LINE_ITEM"><title>LINE_ITEM</title><rect x="74.47" y="352.00" width="117.37" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="133.16" y="378.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">LINE_ITEM</text>
+<path d="M 74.47 390.00 L 191.84 390.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="84.47" y="409.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">int quantity</text><text x="84.47" y="428.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">float price</text>
+<g data-id="PRODUCT"><title>PRODUCT</title><rect x="177.77" y="8.00" width="111.40" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="233.47" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">PRODUCT</text>
+<path d="M 177.77 46.00 L 289.17 46.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="187.77" y="65.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">string sku</text><text x="187.77" y="84.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">string title</text></g>
+</svg>

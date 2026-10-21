@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="401.98" height="372.00" viewBox="0 0 401.98 372.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="8.00" y="8.00" width="385.98" height="356.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.50" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="200.99" y="32.50" text-anchor="middle" font-size="15.71" font-weight="400" fill="#808080">Platform</text>
+<rect x="28.00" y="196.00" width="164.20" height="148.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.50" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="110.10" y="220.50" text-anchor="middle" font-size="15.71" font-weight="400" fill="#808080">Auth</text>
+<rect x="220.20" y="196.00" width="153.79" height="148.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.50" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="297.09" y="220.50" text-anchor="middle" font-size="15.71" font-weight="400" fill="#808080">Data</text>
+<g data-id="relation-0"><title></title><path d="M 192.99 114.00 L 192.99 268.60 C 192.99 275.05 189.04 279.00 182.59 279.00 L 172.20 279.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 172.20 279.00 L 180.20 275.64 L 180.20 282.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-0"><title></title><rect x="163.26" y="182.30" width="59.46" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="192.99" y="195.50" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">delegates</text>
+<g data-id="relation-1"><title></title><path d="M 208.99 114.00 L 208.99 263.40 C 208.99 273.07 214.92 279.00 224.59 279.00 L 240.20 279.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 240.20 279.00 L 232.20 282.36 L 232.20 275.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-1"><title></title><rect x="179.26" y="157.29" width="59.46" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="208.99" y="170.49" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">delegates</text>
+<g data-id="UserService"><title>UserService</title><rect x="48.00" y="234.00" width="124.20" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="110.10" y="260.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">UserService</text>
+<path d="M 48.00 272.00 L 172.20 272.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="58.00" y="291.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+login()</text><text x="58.00" y="310.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+logout()</text>
+<g data-id="Repository"><title>Repository</title><rect x="240.20" y="234.00" width="113.79" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="297.09" y="260.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Repository</text>
+<path d="M 240.20 272.00 L 353.98 272.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="250.20" y="291.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+find()</text><text x="250.20" y="310.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+save()</text>
+<g data-id="Gateway"><title>Gateway</title><rect x="151.60" y="46.00" width="98.78" height="68.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="200.99" y="72.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Gateway</text>
+<path d="M 151.60 84.00 L 250.38 84.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="161.60" y="102.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+route()</text></g>
+</svg>

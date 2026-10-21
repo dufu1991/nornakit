@@ -1,0 +1,12 @@
+* text=auto eol=lf
+
+# Reference snapshots are verified by their original SHA-256 bytes.
+Baselines/OfficialReference/** -text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.icns binary
+*.ico binary
+*.zip binary
+*.pdf binary

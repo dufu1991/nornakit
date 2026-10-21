@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="243.74" height="648.00" viewBox="0 0 243.74 648.00" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g class="pele-cluster" data-id="one"><title>Group one</title>
+<path d="M 16.00 102.00 L 188.09 102.00 C 192.51 102.00 196.09 105.58 196.09 110.00 L 196.09 292.00 C 196.09 296.42 192.51 300.00 188.09 300.00 L 16.00 300.00 C 11.58 300.00 8.00 296.42 8.00 292.00 L 8.00 110.00 C 8.00 105.58 11.58 102.00 16.00 102.00 Z" fill="#dcdcdc" fill-opacity="0.5" stroke="#e6e6e6" stroke-width="1"/>
+</g>
+<g class="pele-cluster" data-id="two"><title>Group two</title>
+<path d="M 128.35 348.00 L 227.74 348.00 C 232.16 348.00 235.74 351.58 235.74 356.00 L 235.74 538.00 C 235.74 542.42 232.16 546.00 227.74 546.00 L 128.35 546.00 C 123.93 546.00 120.35 542.42 120.35 538.00 L 120.35 356.00 C 120.35 351.58 123.93 348.00 128.35 348.00 Z" fill="#dcdcdc" fill-opacity="0.5" stroke="#e6e6e6" stroke-width="1"/>
+</g>
+<path d="M 94.05 186.00 L 94.05 198.00 C 94.05 205.44 89.49 210.00 82.05 210.00 L 66.93 210.00 C 59.49 210.00 54.93 214.56 54.93 222.00 L 54.93 234.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 54.93 234.00 L 51.57 226.00 L 58.29 226.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 110.05 186.00 L 110.05 198.00 C 110.05 205.44 114.61 210.00 122.05 210.00 L 136.98 210.00 C 144.42 210.00 148.98 214.56 148.98 222.00 L 148.98 234.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 148.98 234.00 L 145.62 226.00 L 152.34 226.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 178.05 432.00 L 178.05 480.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 178.05 480.00 L 174.69 472.00 L 181.41 472.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 54.93 280.00 L 54.93 381.00 C 54.93 393.40 62.53 401.00 74.93 401.00 L 151.93 401.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 151.93 401.00 L 143.93 404.36 L 143.93 397.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 148.98 280.00 L 148.98 342.48 C 148.98 349.00 144.98 353.00 138.45 353.00 L 138.45 353.00 C 131.93 353.00 127.93 357.00 127.93 363.52 L 127.93 405.00 C 127.93 412.44 132.49 417.00 139.93 417.00 L 151.93 417.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 151.93 417.00 L 143.93 420.36 L 143.93 413.64 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 150.62 503.00 L 122.05 503.00 C 109.65 503.00 102.05 495.40 102.05 483.00 L 102.05 186.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 102.05 186.00 L 105.41 194.00 L 98.69 194.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 132.05 54.00 L 132.05 66.00 C 132.05 73.44 127.49 78.00 120.05 78.00 L 114.05 78.00 C 106.61 78.00 102.05 82.56 102.05 90.00 L 102.05 102.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 102.05 102.00 L 98.69 94.00 L 105.41 94.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 148.05 54.00 L 148.05 74.00 C 148.05 86.40 155.65 94.00 168.05 94.00 L 184.09 94.00 C 196.49 94.00 204.09 101.60 204.09 114.00 L 204.09 322.98 C 204.09 331.05 199.14 336.00 191.07 336.00 L 184.05 336.00 C 180.33 336.00 178.05 338.28 178.05 342.00 L 178.05 348.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 178.05 348.00 L 174.69 340.00 L 181.41 340.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 102.05 300.00 L 102.05 567.00 C 102.05 576.30 107.75 582.00 117.05 582.00 L 126.05 582.00 C 129.77 582.00 132.05 584.28 132.05 588.00 L 132.05 594.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 132.05 594.00 L 128.69 586.00 L 135.41 586.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 178.05 546.00 L 178.05 558.00 C 178.05 565.44 173.49 570.00 166.05 570.00 L 160.05 570.00 C 152.61 570.00 148.05 574.56 148.05 582.00 L 148.05 594.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 148.05 594.00 L 144.69 586.00 L 151.41 586.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<text x="102.05" y="126.60" text-anchor="middle" font-size="16.00" fill="#808080">Group one</text>
+<text x="178.05" y="372.60" text-anchor="middle" font-size="16.00" fill="#808080">Group two</text>
+<g><title>a1</title>
+<path d="M 84.55 140.00 L 119.55 140.00 C 123.97 140.00 127.55 143.58 127.55 148.00 L 127.55 178.00 C 127.55 182.42 123.97 186.00 119.55 186.00 L 84.55 186.00 C 80.13 186.00 76.55 182.42 76.55 178.00 L 76.55 148.00 C 76.55 143.58 80.13 140.00 84.55 140.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="102.05" y="168.60" text-anchor="middle" font-size="16.00" fill="#272727">a1</text>
+</g>
+<g><title>a2</title>
+<path d="M 36.00 234.00 L 73.86 234.00 C 78.28 234.00 81.86 237.58 81.86 242.00 L 81.86 272.00 C 81.86 276.42 78.28 280.00 73.86 280.00 L 36.00 280.00 C 31.58 280.00 28.00 276.42 28.00 272.00 L 28.00 242.00 C 28.00 237.58 31.58 234.00 36.00 234.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="54.93" y="262.60" text-anchor="middle" font-size="16.00" fill="#272727">a2</text>
+</g>
+<g><title>a3</title>
+<path d="M 129.86 234.00 L 168.09 234.00 C 172.51 234.00 176.09 237.58 176.09 242.00 L 176.09 272.00 C 176.09 276.42 172.51 280.00 168.09 280.00 L 129.86 280.00 C 125.44 280.00 121.86 276.42 121.86 272.00 L 121.86 242.00 C 121.86 237.58 125.44 234.00 129.86 234.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="148.98" y="262.60" text-anchor="middle" font-size="16.00" fill="#272727">a3</text>
+</g>
+<g><title>b1</title>
+<path d="M 159.93 386.00 L 196.16 386.00 C 200.58 386.00 204.16 389.58 204.16 394.00 L 204.16 424.00 C 204.16 428.42 200.58 432.00 196.16 432.00 L 159.93 432.00 C 155.51 432.00 151.93 428.42 151.93 424.00 L 151.93 394.00 C 151.93 389.58 155.51 386.00 159.93 386.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="178.05" y="414.60" text-anchor="middle" font-size="16.00" fill="#272727">b1</text>
+</g>
+<g><title>b2</title>
+<path d="M 158.62 480.00 L 197.48 480.00 C 201.89 480.00 205.48 483.58 205.48 488.00 L 205.48 518.00 C 205.48 522.42 201.89 526.00 197.48 526.00 L 158.62 526.00 C 154.20 526.00 150.62 522.42 150.62 518.00 L 150.62 488.00 C 150.62 483.58 154.20 480.00 158.62 480.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="178.05" y="508.60" text-anchor="middle" font-size="16.00" fill="#272727">b2</text>
+</g>
+<g><title>c</title>
+<path d="M 124.05 8.00 L 156.05 8.00 C 160.47 8.00 164.05 11.58 164.05 16.00 L 164.05 46.00 C 164.05 50.42 160.47 54.00 156.05 54.00 L 124.05 54.00 C 119.63 54.00 116.05 50.42 116.05 46.00 L 116.05 16.00 C 116.05 11.58 119.63 8.00 124.05 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="140.05" y="36.60" text-anchor="middle" font-size="16.00" fill="#272727">c</text>
+</g>
+<g><title>d</title>
+<path d="M 124.05 594.00 L 156.05 594.00 C 160.47 594.00 164.05 597.58 164.05 602.00 L 164.05 632.00 C 164.05 636.42 160.47 640.00 156.05 640.00 L 124.05 640.00 C 119.63 640.00 116.05 636.42 116.05 632.00 L 116.05 602.00 C 116.05 597.58 119.63 594.00 124.05 594.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="140.05" y="622.60" text-anchor="middle" font-size="16.00" fill="#272727">d</text>
+</g></g>
+</svg>

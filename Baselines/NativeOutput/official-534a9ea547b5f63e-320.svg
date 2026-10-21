@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100.99" height="156.00" viewBox="0 0 100.99 156.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 50.50 54.00 L 50.50 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 50.50 102.00 L 43.50 88.00 L 57.50 88.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 50.50 54.00 L 57.50 68.00 L 43.50 68.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="Animal"><title>Animal</title><rect x="8.00" y="8.00" width="84.99" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="50.50" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Animal</text>
+<g data-id="Zebra"><title>Zebra</title><rect x="11.16" y="102.00" width="78.68" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="50.50" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Zebra</text></g>
+</svg>

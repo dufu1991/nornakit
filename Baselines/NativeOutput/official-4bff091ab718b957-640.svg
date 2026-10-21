@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="461.67" height="172.00" viewBox="0 0 461.67 172.00" role="img" aria-label="需求图">
+<title>需求图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 158.67 86.00 L 285.50 86.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 285.50 86.00 L 277.50 89.36 L 277.50 82.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-0"><title></title><rect x="188.67" y="77.00" width="66.83" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="222.09" y="90.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">«satisfies»</text>
+<g data-id="test_req"><title>test_req</title><rect x="285.50" y="8.00" width="168.16" height="156.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="369.58" y="33.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">«requirement»</text><text x="369.58" y="54.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">test_req</text>
+<path d="M 285.50 66.00 L 453.67 66.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="295.50" y="85.50" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">id: 1</text><text x="295.50" y="105.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">text: the test text.</text><text x="295.50" y="124.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">risk: high</text><text x="295.50" y="144.30" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">verifymethod: test</text>
+<g data-id="test_entity"><title>test_entity</title><rect x="8.00" y="41.00" width="150.67" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="83.34" y="66.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">«element»</text><text x="83.34" y="87.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">test_entity</text>
+<path d="M 8.00 99.00 L 158.67 99.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="117.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">type: simulation</text></g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740.00" height="454.00" viewBox="0 0 740.00 454.00" role="img" aria-label="事件建模">
+<title>事件建模</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="12.00" y="16.00" width="716.00" height="128.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.35" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="22.00" y="36.55" text-anchor="start" font-size="13.00" font-weight="400" fill="#808080">UI / Automation</text>
+<rect x="12.00" y="156.00" width="716.00" height="128.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.35" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="22.00" y="176.55" text-anchor="start" font-size="13.00" font-weight="400" fill="#808080">Command / Read Model</text>
+<rect x="12.00" y="296.00" width="716.00" height="128.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.35" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="22.00" y="316.55" text-anchor="start" font-size="13.00" font-weight="400" fill="#808080">Events</text>
+<g data-id="event-edge-0"><title></title><path d="M 318.00 362.00 L 322.00 362.00 C 324.48 362.00 326.00 360.48 326.00 358.00 L 326.00 97.00 C 326.00 92.66 328.66 90.00 333.00 90.00 L 340.00 90.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 340.00 90.00 L 332.00 93.36 L 332.00 86.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="event-edge-1"><title></title><path d="M 318.00 378.00 L 486.00 378.00 C 498.40 378.00 506.00 370.40 506.00 358.00 L 506.00 242.00 C 506.00 234.56 510.56 230.00 518.00 230.00 L 530.00 230.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 530.00 230.00 L 522.00 233.36 L 522.00 226.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="01"><title>ItemAdded</title><rect x="150.00" y="334.00" width="168.00" height="72.00" rx="8.00" fill="#34c759" stroke="#e6e6e6" stroke-width="1.00" opacity="0.22" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="234.00" y="374.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">ItemAdded</text>
+<text x="234.00" y="420.50" text-anchor="middle" font-size="10.00" font-weight="400" fill="#808080">01</text>
+<g data-id="02"><title>OtherUI</title><rect x="340.00" y="54.00" width="168.00" height="72.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="424.00" y="94.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">OtherUI</text>
+<text x="424.00" y="140.50" text-anchor="middle" font-size="10.00" font-weight="400" fill="#808080">02</text>
+<g data-id="03"><title>CartItems</title><rect x="530.00" y="194.00" width="168.00" height="72.00" rx="8.00" fill="#ff8d28" stroke="#e6e6e6" stroke-width="1.00" opacity="0.22" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="614.00" y="234.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">CartItems</text>
+<text x="614.00" y="280.50" text-anchor="middle" font-size="10.00" font-weight="400" fill="#808080">03</text></g>
+</svg>

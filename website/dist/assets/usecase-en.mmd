@@ -1,0 +1,10 @@
+usecase-beta
+    actor User[User]
+    systemBoundary Studio[Diagram studio]
+        Edit(Edit source)
+        Preview(View preview)
+        Export(Export diagram)
+    end
+    User --> Edit
+    User --> Preview
+    User --> Export

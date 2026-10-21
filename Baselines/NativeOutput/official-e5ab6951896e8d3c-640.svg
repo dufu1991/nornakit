@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="632.91" height="178.00" viewBox="0 0 632.91 178.00" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 300.46 54.00 L 300.46 66.00 C 300.46 73.44 295.90 78.00 288.46 78.00 L 113.76 78.00 C 102.91 78.00 96.26 84.65 96.26 95.50 L 96.26 113.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 96.26 113.00 L 92.90 105.00 L 99.62 105.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 316.46 54.00 L 316.46 66.00 C 316.46 73.44 311.90 78.00 304.46 78.00 L 302.74 78.00 C 294.23 78.00 289.02 83.21 289.02 91.72 L 289.02 113.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 289.02 113.00 L 285.66 105.00 L 292.38 105.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 332.46 54.00 L 332.46 66.00 C 332.46 73.44 337.02 78.00 344.46 78.00 L 497.21 78.00 C 504.65 78.00 509.21 82.56 509.21 90.00 L 509.21 102.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 509.21 102.00 L 505.85 94.00 L 512.57 94.00 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<g><title>B</title>
+<path d="M 227.32 8.00 L 405.59 8.00 C 410.01 8.00 413.59 11.58 413.59 16.00 L 413.59 46.00 C 413.59 50.42 410.01 54.00 405.59 54.00 L 227.32 54.00 C 222.90 54.00 219.32 50.42 219.32 46.00 L 219.32 16.00 C 219.32 11.58 222.90 8.00 227.32 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="316.46" y="36.60" text-anchor="middle" font-size="16.00" fill="#272727">fa:fa-twitter for peace</text>
+</g>
+<g><title>C</title>
+<path d="M 16.00 113.00 L 176.52 113.00 C 180.93 113.00 184.52 116.58 184.52 121.00 L 184.52 151.00 C 184.52 155.42 180.93 159.00 176.52 159.00 L 16.00 159.00 C 11.58 159.00 8.00 155.42 8.00 151.00 L 8.00 121.00 C 8.00 116.58 11.58 113.00 16.00 113.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="96.26" y="141.60" text-anchor="middle" font-size="16.00" fill="#272727">fa:fa-ban forbidden</text>
+</g>
+<g><title>D</title>
+<path d="M 236.52 113.00 L 341.52 113.00 C 348.14 113.00 353.52 118.37 353.52 125.00 L 353.52 147.00 C 353.52 153.63 348.14 159.00 341.52 159.00 L 236.52 159.00 C 229.89 159.00 224.52 153.63 224.52 147.00 L 224.52 125.00 C 224.52 118.37 229.89 113.00 236.52 113.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="289.02" y="141.60" text-anchor="middle" font-size="16.00" fill="#272727">fa:fa-spinner</text>
+</g>
+<g><title>E</title>
+<path d="M 405.52 102.00 L 612.91 102.00 C 619.54 102.00 624.91 107.37 624.91 114.00 L 624.91 158.00 C 624.91 164.63 619.54 170.00 612.91 170.00 L 405.52 170.00 C 398.89 170.00 393.52 164.63 393.52 158.00 L 393.52 114.00 C 393.52 107.37 398.89 102.00 405.52 102.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="509.21" y="130.60" text-anchor="middle" font-size="16.00" fill="#272727">A fa:fa-camera-retro perha</text><text x="509.21" y="152.60" text-anchor="middle" font-size="16.00" fill="#272727">ps?</text>
+</g></g>
+</svg>

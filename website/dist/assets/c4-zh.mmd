@@ -1,0 +1,9 @@
+C4Context
+    title 图表工作台
+    Person(user, "用户", "编辑图表")
+    System_Boundary(studio, "Norna Studio") {
+        System(editor, "编辑器", "Mermaid 源码")
+        System(engine, "原生引擎", "Swift 几何布局")
+    }
+    Rel(user, editor, "编辑")
+    Rel(editor, engine, "渲染")

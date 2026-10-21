@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="344.59" height="523.00" viewBox="0 0 344.59 523.00" role="img" aria-label="需求图">
+<title>需求图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 125.65 98.00 L 125.65 127.00 C 125.65 134.44 121.09 139.00 113.65 139.00 L 113.65 139.00 C 106.21 139.00 101.65 143.56 101.65 151.00 L 101.65 180.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 101.65 180.00 L 98.29 172.00 L 105.01 172.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-0"><title></title><rect x="68.24" y="156.50" width="66.83" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="101.65" y="169.70" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">«satisfies»</text>
+<g data-id="relation-1"><title></title><path d="M 141.65 98.00 L 141.65 119.00 C 141.65 131.40 149.25 139.00 161.65 139.00 L 221.30 139.00 C 233.70 139.00 241.30 146.60 241.30 159.00 L 241.30 313.00 C 241.30 325.40 233.70 333.00 221.30 333.00 L 161.65 333.00 C 149.25 333.00 141.65 340.60 141.65 353.00 L 141.65 374.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 141.65 374.00 L 138.29 366.00 L 145.01 366.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-1"><title></title><rect x="207.89" y="203.90" width="66.83" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="241.30" y="217.10" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">«satisfies»</text>
+<g data-id="relation-2"><title></title><path d="M 101.65 292.00 L 101.65 321.00 C 101.65 328.44 106.21 333.00 113.65 333.00 L 113.65 333.00 C 121.09 333.00 125.65 337.56 125.65 345.00 L 125.65 374.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 125.65 374.00 L 122.29 366.00 L 129.01 366.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-2"><title></title><rect x="71.13" y="297.50" width="61.05" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="101.65" y="310.70" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">«derives»</text>
+<g data-id="relation-3"><title></title><path d="M 133.65 486.00 L 133.65 500.00 C 133.65 508.68 138.97 514.00 147.65 514.00 L 287.30 514.00 C 299.70 514.00 307.30 506.40 307.30 494.00 L 307.30 256.00 C 307.30 243.60 299.70 236.00 287.30 236.00 L 195.30 236.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 195.30 236.00 L 203.30 232.64 L 203.30 239.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-3"><title></title><rect x="278.02" y="366.00" width="58.57" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="307.30" y="379.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">«refines»</text>
+<g data-id="fast"><title>fast</title><rect x="8.00" y="180.00" width="187.30" height="112.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="101.65" y="205.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">«requirement»</text><text x="101.65" y="226.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">fast</text>
+<path d="M 8.00 238.00 L 195.30 238.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="257.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">id: 1</text><text x="18.00" y="276.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">text: Renders quickly</text>
+<g data-id="small"><title>small</title><rect x="39.81" y="374.00" width="187.68" height="112.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="133.65" y="399.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">«requirement»</text><text x="133.65" y="420.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">small</text>
+<path d="M 39.81 432.00 L 227.49 432.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="49.81" y="451.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">id: 2</text><text x="49.81" y="470.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">text: Ships little code</text>
+<g data-id="layout"><title>layout</title><rect x="68.34" y="8.00" width="130.63" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="133.65" y="33.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">«element»</text><text x="133.65" y="54.75" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">layout</text>
+<path d="M 68.34 66.00 L 198.97 66.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="78.34" y="84.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">type: module</text></g>
+</svg>

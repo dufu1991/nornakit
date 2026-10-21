@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="570.41" height="380.00" viewBox="0 0 570.41 380.00" role="img" aria-label="韦恩图">
+<title>韦恩图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="A"><title>Frontend</title><ellipse cx="190.00" cy="194.00" rx="150.00" ry="150.00" fill="#0088ff" stroke="#0088ff" stroke-width="1.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="190.00" y="84.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Frontend</text>
+<g data-id="B"><title>Backend</title><ellipse cx="380.41" cy="194.00" rx="150.00" ry="150.00" fill="#34c759" stroke="#34c759" stroke-width="1.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="380.41" y="84.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Backend</text>
+<text x="285.21" y="198.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Shared</text>
+<g data-id="A1"><title>React</title><text x="190.00" y="232.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">React</text></g>
+<g data-id="A2"><title>Design Systems</title><text x="190.00" y="258.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Design Systems</text></g>
+<g data-id="B1"><title>API</title><text x="380.41" y="232.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">API</text></g>
+<g data-id="AB1"><title>OpenAPI</title><text x="285.21" y="232.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">OpenAPI</text></g></g>
+</svg>

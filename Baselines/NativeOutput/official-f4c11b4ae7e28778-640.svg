@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="355.13" height="354.33" viewBox="0 0 355.13 354.33" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 145.06 184.33 L 145.06 212.33 C 145.06 223.49 138.22 230.33 127.06 230.33 L 127.06 230.33 C 115.90 230.33 109.06 237.17 109.06 248.33 L 109.06 271.33" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 109.06 271.33 L 105.70 263.33 L 112.42 263.33 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 109.06 317.33 L 109.06 331.33 C 109.06 340.01 114.38 345.33 123.06 345.33 L 326.13 345.33 C 338.53 345.33 346.13 337.73 346.13 325.33 L 346.13 118.67 C 346.13 106.27 338.53 98.67 326.13 98.67 L 298.13 98.67" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 298.13 98.67 L 306.13 95.31 L 306.13 102.03 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<path d="M 161.06 184.33 L 161.06 212.33 C 161.06 223.49 167.90 230.33 179.06 230.33 L 179.06 230.33 C 190.22 230.33 197.06 237.17 197.06 248.33 L 197.06 271.33" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 197.06 271.33 L 193.70 263.33 L 200.42 263.33 Z" fill="#808080" stroke="#808080" stroke-width="1"/>
+<g><title>D</title>
+<path d="M 153.06 8.00 L 298.13 98.67 L 153.06 189.33 L 8.00 98.67 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="153.06" y="93.27" text-anchor="middle" font-size="16.00" fill="#272727">Data, settings or context c</text><text x="153.06" y="115.27" text-anchor="middle" font-size="16.00" fill="#272727">hanged</text>
+</g>
+<g><title>F</title>
+<path d="M 93.06 271.33 L 125.06 271.33 C 129.48 271.33 133.06 274.91 133.06 279.33 L 133.06 309.33 C 133.06 313.75 129.48 317.33 125.06 317.33 L 93.06 317.33 C 88.65 317.33 85.06 313.75 85.06 309.33 L 85.06 279.33 C 85.06 274.91 88.65 271.33 93.06 271.33 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="109.06" y="299.93" text-anchor="middle" font-size="16.00" fill="#272727">F</text>
+</g>
+<g><title>G</title>
+<path d="M 181.06 271.33 L 213.06 271.33 C 217.48 271.33 221.06 274.91 221.06 279.33 L 221.06 309.33 C 221.06 313.75 217.48 317.33 213.06 317.33 L 181.06 317.33 C 176.65 317.33 173.06 313.75 173.06 309.33 L 173.06 279.33 C 173.06 274.91 176.65 271.33 181.06 271.33 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="197.06" y="299.93" text-anchor="middle" font-size="16.00" fill="#272727">G</text>
+</g>
+<path d="M 100.06 247.38 L 118.07 247.38 C 119.72 247.38 121.07 248.72 121.07 250.38 L 121.07 262.38 C 121.07 264.04 119.72 265.38 118.07 265.38 L 100.06 265.38 C 98.41 265.38 97.06 264.04 97.06 262.38 L 97.06 250.38 C 97.06 248.72 98.41 247.38 100.06 247.38 Z" fill="#ffffff"/>
+<text x="109.06" y="260.58" text-anchor="middle" font-size="12.00" fill="#272727">Yes</text>
+<path d="M 144.33 247.38 L 249.80 247.38 C 251.46 247.38 252.80 248.72 252.80 250.38 L 252.80 262.38 C 252.80 264.04 251.46 265.38 249.80 265.38 L 144.33 265.38 C 142.67 265.38 141.33 264.04 141.33 262.38 L 141.33 250.38 C 141.33 248.72 142.67 247.38 144.33 247.38 Z" fill="#ffffff"/>
+<text x="197.06" y="260.58" text-anchor="middle" font-size="12.00" fill="#272727">Container removed</text></g>
+</svg>

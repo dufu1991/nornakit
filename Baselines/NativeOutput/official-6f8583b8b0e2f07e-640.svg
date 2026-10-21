@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="309.79" height="70.00" viewBox="0 0 309.79 70.00" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g><title>A</title>
+<path d="M 66.76 8.00 L 243.03 8.00 L 301.79 35.00 L 243.03 62.00 L 66.76 62.00 L 8.00 35.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="154.89" y="40.60" text-anchor="middle" font-size="16.00" fill="#272727">Prepare conditional</text>
+</g></g>
+</svg>

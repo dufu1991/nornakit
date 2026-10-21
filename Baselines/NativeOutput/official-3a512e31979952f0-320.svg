@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420.00" height="254.00" viewBox="0 0 420.00 254.00" role="img" aria-label="目录树">
+<title>目录树</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="tree-0"><title>🚀 rocket-app/</title><rect x="30.00" y="27.00" width="15.00" height="12.00" rx="2.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 31.00 27.00 L 31.00 25.50 C 31.00 24.57 31.57 24.00 32.50 24.00 L 34.88 24.00 C 36.19 24.00 37.57 24.57 38.50 25.50 L 40.00 27.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="54.00" y="38.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">🚀 rocket-app/</text>
+<path d="M 40.00 46.00 L 40.00 57.50 C 40.00 61.53 42.47 64.00 46.50 64.00 L 53.00 64.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="tree-1"><title>📦 packages/</title><rect x="58.00" y="57.00" width="15.00" height="12.00" rx="2.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 59.00 57.00 L 59.00 55.50 C 59.00 54.57 59.57 54.00 60.50 54.00 L 62.88 54.00 C 64.19 54.00 65.57 54.57 66.50 55.50 L 68.00 57.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="82.00" y="68.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">📦 packages/</text>
+<path d="M 68.00 76.00 L 68.00 87.50 C 68.00 91.53 70.47 94.00 74.50 94.00 L 81.00 94.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="tree-2"><title>🎨 ui/</title><rect x="86.00" y="87.00" width="15.00" height="12.00" rx="2.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 87.00 87.00 L 87.00 85.50 C 87.00 84.57 87.57 84.00 88.50 84.00 L 90.88 84.00 C 92.19 84.00 93.57 84.57 94.50 85.50 L 96.00 87.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="110.00" y="98.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">🎨 ui/</text>
+<path d="M 68.00 76.00 L 68.00 117.50 C 68.00 121.53 70.47 124.00 74.50 124.00 L 81.00 124.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="tree-3"><title>🛠️ utils/</title><rect x="86.00" y="117.00" width="15.00" height="12.00" rx="2.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 87.00 117.00 L 87.00 115.50 C 87.00 114.57 87.57 114.00 88.50 114.00 L 90.88 114.00 C 92.19 114.00 93.57 114.57 94.50 115.50 L 96.00 117.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="110.00" y="128.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">🛠️ utils/</text>
+<path d="M 40.00 46.00 L 40.00 147.50 C 40.00 151.53 42.47 154.00 46.50 154.00 L 53.00 154.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="tree-4"><title>🧪 tests/</title><rect x="58.00" y="147.00" width="15.00" height="12.00" rx="2.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 59.00 147.00 L 59.00 145.50 C 59.00 144.57 59.57 144.00 60.50 144.00 L 62.88 144.00 C 64.19 144.00 65.57 144.57 66.50 145.50 L 68.00 147.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="82.00" y="158.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">🧪 tests/</text>
+<path d="M 40.00 46.00 L 40.00 177.50 C 40.00 181.53 42.47 184.00 46.50 184.00 L 53.00 184.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="tree-5"><title>📝 README.md</title><rect x="60.00" y="174.00" width="11.00" height="16.00" rx="1.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="82.00" y="188.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">📝 README.md</text>
+<path d="M 40.00 46.00 L 40.00 207.50 C 40.00 211.53 42.47 214.00 46.50 214.00 L 53.00 214.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="tree-6"><title>⚙️ config.yaml</title><rect x="60.00" y="204.00" width="11.00" height="16.00" rx="1.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="82.00" y="218.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">⚙️ config.yaml</text></g>
+</svg>

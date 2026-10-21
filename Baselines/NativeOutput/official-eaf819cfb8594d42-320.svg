@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="805.31" height="738.77" viewBox="0 0 805.31 738.77" role="img" aria-label="泳道图">
+<title>泳道图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="8.00" y="8.00" width="250.62" height="722.77" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.40" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="16.00" y="16.00" width="234.62" height="36.00" rx="8.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="0.12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="133.31" y="38.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Applicant</text>
+<rect x="270.62" y="8.00" width="250.20" height="722.77" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.40" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="278.62" y="16.00" width="234.20" height="36.00" rx="8.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="0.12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="395.71" y="38.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Reviewer</text>
+<rect x="532.81" y="8.00" width="264.50" height="722.77" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.40" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="540.81" y="16.00" width="248.50" height="36.00" rx="8.00" fill="#ff8d28" stroke="none" stroke-width="1.00" opacity="0.12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="665.06" y="38.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">System</text>
+<g data-id="lane-edge-0"><title></title><path d="M 218.62 81.50 L 278.62 81.50 C 291.02 81.50 298.62 89.10 298.62 101.50 L 298.62 215.00 C 298.62 218.72 300.90 221.00 304.62 221.00 L 310.62 221.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 310.62 221.00 L 302.62 224.36 L 302.62 217.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-lane-edge-0"><title></title><rect x="239.05" y="149.25" width="119.14" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="298.62" y="162.45" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Application received</text>
+<g data-id="lane-edge-1"><title></title><path d="M 395.71 244.00 L 395.71 292.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 395.71 292.00 L 392.35 284.00 L 399.07 284.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="lane-edge-2"><title></title><path d="M 466.73 336.38 L 559.61 336.38 C 572.01 336.38 579.61 343.98 579.61 356.38 L 579.61 479.77 C 579.61 483.49 581.89 485.77 585.61 485.77 L 591.61 485.77" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 591.61 485.77 L 583.61 489.13 L 583.61 482.41 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-lane-edge-2"><title></title><rect x="550.37" y="409.08" width="58.48" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="579.61" y="422.28" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Approved</text>
+<g data-id="lane-edge-3"><title></title><path d="M 665.06 508.77 L 665.06 556.77" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 665.06 556.77 L 661.70 548.77 L 668.42 548.77 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="lane-edge-4"><title></title><path d="M 572.81 579.77 L 240.45 579.77 C 228.05 579.77 220.45 587.37 220.45 599.77 L 220.45 667.77 C 220.45 671.49 218.17 673.77 214.45 673.77 L 208.45 673.77" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 208.45 673.77 L 216.45 670.41 L 216.45 677.13 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="lane-edge-5"><title></title><path d="M 324.70 336.38 L 250.62 336.38 C 238.22 336.38 230.62 328.78 230.62 316.38 L 230.62 110.50 C 230.62 106.78 228.34 104.50 224.62 104.50 L 218.62 104.50" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 218.62 104.50 L 226.62 101.14 L 226.62 107.86 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-lane-edge-5"><title></title><rect x="184.87" y="204.44" width="91.49" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="230.62" y="217.64" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Needs changes</text>
+<g data-id="apply"><title></title><path d="M 56.00 70.00 L 210.62 70.00 C 215.04 70.00 218.62 73.58 218.62 78.00 L 218.62 108.00 C 218.62 112.42 215.04 116.00 210.62 116.00 L 56.00 116.00 C 51.58 116.00 48.00 112.42 48.00 108.00 L 48.00 78.00 C 48.00 73.58 51.58 70.00 56.00 70.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="133.31" y="98.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Submit application</text>
+<g data-id="sign"><title></title><path d="M 66.16 650.77 L 200.45 650.77 C 204.87 650.77 208.45 654.35 208.45 658.77 L 208.45 688.77 C 208.45 693.19 204.87 696.77 200.45 696.77 L 66.16 696.77 C 61.75 696.77 58.16 693.19 58.16 688.77 L 58.16 658.77 C 58.16 654.35 61.75 650.77 66.16 650.77 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="133.31" y="679.37" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Sign agreement</text>
+<g data-id="screen"><title></title><path d="M 318.62 198.00 L 472.81 198.00 C 477.23 198.00 480.81 201.58 480.81 206.00 L 480.81 236.00 C 480.81 240.42 477.23 244.00 472.81 244.00 L 318.62 244.00 C 314.20 244.00 310.62 240.42 310.62 236.00 L 310.62 206.00 C 310.62 201.58 314.20 198.00 318.62 198.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="395.71" y="226.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Screen application</text>
+<g data-id="decide"><title></title><path d="M 395.71 292.00 L 466.73 336.38 L 395.71 380.77 L 324.70 336.38 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="395.71" y="341.98" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Approved?</text>
+<g data-id="create"><title></title><path d="M 599.61 462.77 L 730.52 462.77 C 734.94 462.77 738.52 466.35 738.52 470.77 L 738.52 500.77 C 738.52 505.19 734.94 508.77 730.52 508.77 L 599.61 508.77 C 595.19 508.77 591.61 505.19 591.61 500.77 L 591.61 470.77 C 591.61 466.35 595.19 462.77 599.61 462.77 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="665.06" y="491.37" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Create account</text>
+<g data-id="notify"><title></title><path d="M 580.81 556.77 L 749.31 556.77 C 753.73 556.77 757.31 560.35 757.31 564.77 L 757.31 594.77 C 757.31 599.19 753.73 602.77 749.31 602.77 L 580.81 602.77 C 576.39 602.77 572.81 599.19 572.81 594.77 L 572.81 564.77 C 572.81 560.35 576.39 556.77 580.81 556.77 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="665.06" y="585.37" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Send welcome email</text></g>
+</svg>

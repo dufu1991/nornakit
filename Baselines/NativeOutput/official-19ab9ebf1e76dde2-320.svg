@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="648.00" height="570.00" viewBox="0 0 648.00 570.00" role="img" aria-label="象限图">
+<title>象限图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="324.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">Reach and engagement of campaigns</text>
+<rect x="324.00" y="90.00" width="240.00" height="200.00" rx="0.00" fill="#0088ff" stroke="#e6e6e6" stroke-width="1.00" opacity="0.13" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="444.00" y="114.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#808080">We should expand</text>
+<rect x="84.00" y="90.00" width="240.00" height="200.00" rx="0.00" fill="#34c759" stroke="#e6e6e6" stroke-width="1.00" opacity="0.13" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="204.00" y="114.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#808080">Need to promote</text>
+<rect x="84.00" y="290.00" width="240.00" height="200.00" rx="0.00" fill="#ff8d28" stroke="#e6e6e6" stroke-width="1.00" opacity="0.13" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="204.00" y="314.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#808080">Re-evaluate</text>
+<rect x="324.00" y="290.00" width="240.00" height="200.00" rx="0.00" fill="#cb30e0" stroke="#e6e6e6" stroke-width="1.00" opacity="0.13" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="444.00" y="314.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#808080">May be improved</text>
+<g data-id="quadrant-0"><title>Campaign A</title><ellipse cx="228.00" cy="250.00" rx="5.00" ry="5.00" fill="#007aff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="228.00" y="274.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Campaign A</text>
+<g data-id="quadrant-1"><title>Campaign B</title><ellipse cx="300.00" cy="398.00" rx="5.00" ry="5.00" fill="#007aff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="300.00" y="422.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Campaign B</text>
+<g data-id="quadrant-2"><title>Campaign C</title><ellipse cx="357.60" cy="214.00" rx="5.00" ry="5.00" fill="#007aff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="357.60" y="238.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Campaign C</text>
+<g data-id="quadrant-3"><title>Campaign D</title><ellipse cx="458.40" cy="354.00" rx="5.00" ry="5.00" fill="#007aff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="458.40" y="378.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Campaign D</text>
+<g data-id="quadrant-4"><title>Campaign E</title><ellipse cx="276.00" cy="354.00" rx="5.00" ry="5.00" fill="#007aff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="276.00" y="378.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Campaign E</text>
+<g data-id="quadrant-5"><title>Campaign F</title><ellipse cx="252.00" cy="178.00" rx="5.00" ry="5.00" fill="#007aff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="252.00" y="202.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Campaign F</text>
+<text x="84.00" y="516.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">Low Reach</text>
+<text x="564.00" y="516.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#272727">High Reach</text>
+<text x="8.00" y="77.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">High Engagement</text>
+<text x="8.00" y="547.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">Low Engagement</text></g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="570.41" height="380.00" viewBox="0 0 570.41 380.00" role="img" aria-label="韦恩图">
+<title>韦恩图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="A"><title>Alpha</title><ellipse cx="190.00" cy="194.00" rx="150.00" ry="150.00" fill="#0088ff" stroke="#0088ff" stroke-width="1.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="190.00" y="84.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Alpha</text>
+<g data-id="B"><title>Beta</title><ellipse cx="380.41" cy="194.00" rx="150.00" ry="150.00" fill="#34c759" stroke="#34c759" stroke-width="1.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="380.41" y="84.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Beta</text>
+<text x="285.21" y="198.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">AB</text></g>
+</svg>

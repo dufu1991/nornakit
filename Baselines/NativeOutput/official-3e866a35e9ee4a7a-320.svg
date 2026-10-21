@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360.00" height="412.00" viewBox="0 0 360.00 412.00" role="img" aria-label="雷达图">
+<title>雷达图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 180.00 183.00 L 193.86 191.00 L 193.86 207.00 L 180.00 215.00 L 166.14 207.00 L 166.14 191.00 Z" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 3.00"/>
+<path d="M 180.00 167.00 L 207.71 183.00 L 207.71 215.00 L 180.00 231.00 L 152.29 215.00 L 152.29 183.00 Z" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 3.00"/>
+<path d="M 180.00 151.00 L 221.57 175.00 L 221.57 223.00 L 180.00 247.00 L 138.43 223.00 L 138.43 175.00 Z" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 3.00"/>
+<path d="M 180.00 135.00 L 235.43 167.00 L 235.43 231.00 L 180.00 263.00 L 124.57 231.00 L 124.57 167.00 Z" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 3.00"/>
+<path d="M 180.00 119.00 L 249.28 159.00 L 249.28 239.00 L 180.00 279.00 L 110.72 239.00 L 110.72 159.00 Z" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 3.00"/>
+<path d="M 180.00 199.00 L 180.00 119.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="180.00" y="91.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Math</text>
+<path d="M 180.00 199.00 L 249.28 159.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="276.99" y="147.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Science</text>
+<path d="M 180.00 199.00 L 249.28 239.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="276.99" y="259.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">English</text>
+<path d="M 180.00 199.00 L 180.00 279.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="180.00" y="315.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">History</text>
+<path d="M 180.00 199.00 L 110.72 239.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="83.01" y="259.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Geography</text>
+<path d="M 180.00 199.00 L 110.72 159.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="83.01" y="147.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Art</text>
+<g data-id="radar-0"><title></title><path d="M 180.00 131.00 L 242.35 163.00 L 235.43 231.00 L 180.00 255.00 L 128.04 229.00 L 117.65 163.00 Z" fill="#0088ff" stroke="#0088ff" stroke-width="2.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="40.00" y="350.00" width="12.00" height="12.00" rx="3.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="60.00" y="360.55" text-anchor="start" font-size="13.00" font-weight="400" fill="#272727">Alice</text>
+<g data-id="radar-1"><title></title><path d="M 180.00 143.00 L 231.96 169.00 L 238.89 233.00 L 180.00 263.00 L 117.65 235.00 L 121.11 165.00 Z" fill="#34c759" stroke="#34c759" stroke-width="2.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="40.00" y="378.00" width="12.00" height="12.00" rx="3.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="60.00" y="388.55" text-anchor="start" font-size="13.00" font-weight="400" fill="#272727">Bob</text>
+<text x="180.00" y="31.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">Grades</text></g>
+</svg>

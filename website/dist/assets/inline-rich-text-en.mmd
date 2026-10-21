@@ -1,0 +1,7 @@
+flowchart TB
+    A["[b]Bold emphasis[/b] and [i]italic details[/i]"]
+    B["Call the [code]render(source)[/code] method"]
+    C["[u]Underlined[/u] and [s]cancelled[/s] states"]
+    D["[color=#2563eb][b]This longer label keeps its color and bold styling when the text automatically wraps onto several lines.[/b][/color]"]
+    A -->|"[b]Keep[/b] :sf:checkmark.circle.fill: styling"| B
+    B --> C --> D

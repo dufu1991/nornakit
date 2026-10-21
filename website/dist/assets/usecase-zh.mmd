@@ -1,0 +1,10 @@
+usecase-beta
+    actor User[用户]
+    systemBoundary Studio[图表工作台]
+        Edit(编辑源码)
+        Preview(查看预览)
+        Export(导出图表)
+    end
+    User --> Edit
+    User --> Preview
+    User --> Export

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320.00" height="212.00" viewBox="0 0 320.00 212.00" role="img" aria-label="看板">
+<title>看板</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="16.00" y="16.00" width="280.00" height="180.00" rx="8.00" fill="#dcdcdc" stroke="none" stroke-width="1.00" opacity="0.50" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="16.00" y="16.00" width="280.00" height="4.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="28.00" y="47.60" text-anchor="start" font-size="16.00" font-weight="600" fill="#272727">Column Title  1</text>
+<g data-id="card-1"><title>Task Description</title><rect x="28.00" y="74.00" width="256.00" height="76.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="156.00" y="116.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Task Description</text></g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="259.10" height="62.00" viewBox="0 0 259.10 62.00" role="img" aria-label="流程图">
+<title>流程图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 56.00 31.00 L 203.10 31.00" fill="none" stroke="#808080" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<g><title>A</title>
+<path d="M 16.00 8.00 L 48.00 8.00 C 52.42 8.00 56.00 11.58 56.00 16.00 L 56.00 46.00 C 56.00 50.42 52.42 54.00 48.00 54.00 L 16.00 54.00 C 11.58 54.00 8.00 50.42 8.00 46.00 L 8.00 16.00 C 8.00 11.58 11.58 8.00 16.00 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="32.00" y="36.60" text-anchor="middle" font-size="16.00" fill="#272727">A</text>
+</g>
+<g><title>B</title>
+<path d="M 211.10 8.00 L 243.10 8.00 C 247.52 8.00 251.10 11.58 251.10 16.00 L 251.10 46.00 C 251.10 50.42 247.52 54.00 243.10 54.00 L 211.10 54.00 C 206.69 54.00 203.10 50.42 203.10 46.00 L 203.10 16.00 C 203.10 11.58 206.69 8.00 211.10 8.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+<path d="" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+<text x="227.10" y="36.60" text-anchor="middle" font-size="16.00" fill="#272727">B</text>
+</g>
+<path d="M 89.00 22.00 L 170.10 22.00 C 171.76 22.00 173.10 23.34 173.10 25.00 L 173.10 37.00 C 173.10 38.66 171.76 40.00 170.10 40.00 L 89.00 40.00 C 87.34 40.00 86.00 38.66 86.00 37.00 L 86.00 25.00 C 86.00 23.34 87.34 22.00 89.00 22.00 Z" fill="#ffffff"/>
+<text x="129.55" y="35.20" text-anchor="middle" font-size="12.00" fill="#272727">This is the text</text></g>
+</svg>

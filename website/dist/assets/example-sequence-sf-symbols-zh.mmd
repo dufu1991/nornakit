@@ -1,0 +1,9 @@
+sequenceDiagram
+    actor User as 用户 :sf:person.fill:
+    participant App as 应用 :sf:app:
+    participant Cloud as 云端 :sf:icloud:
+    User->>App: 选择 :sf:doc.text: 文件
+    Note over App,Cloud: 原生 :sf:sparkles: 图标与文字<br/>共享字号、颜色和基线
+    App->>+Cloud: 上传 :sf:icloud.and.arrow.up: 文件
+    Cloud-->>-App: 保存 :sf:checkmark.circle.fill: 成功
+    App-->>User: 展示 :sf:photo: 预览

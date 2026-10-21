@@ -1,0 +1,9 @@
+swimlane-beta LR
+    subgraph User[User]
+        A[Submit request] --> B[Confirm result]
+    end
+    subgraph Service[Service]
+        C[Process request] --> D[Return response]
+    end
+    A --> C
+    D --> B

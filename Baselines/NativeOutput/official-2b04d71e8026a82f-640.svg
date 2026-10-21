@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440.74" height="106.00" viewBox="0 0 440.74 106.00" role="img" aria-label="用例图">
+<title>用例图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 73.08 34.00 L 138.16 34.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 138.16 34.00 L 130.16 37.36 L 130.16 30.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 238.16 34.00 L 286.16 34.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 286.16 34.00 L 278.16 37.36 L 278.16 30.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="55.08" cy="16.00" rx="8.00" ry="8.00" fill="none" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 55.08 24.00 L 55.08 46.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 39.08 32.00 L 71.08 32.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 43.08 60.00 L 49.08 53.00 C 52.80 48.66 57.36 48.66 61.08 53.00 L 67.08 60.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="55.08" y="84.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">User</text>
+<g data-id="Login"><title>Login</title><ellipse cx="188.16" cy="34.00" rx="50.00" ry="25.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="188.16" y="39.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Login</text>
+<g data-id="Dashboard"><title>Dashboard</title><ellipse cx="359.45" cy="34.00" rx="73.29" ry="25.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="359.45" y="39.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Dashboard</text></g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640.00" height="537.23" viewBox="0 0 640.00 537.23" role="img" aria-label="泳道图">
+<title>泳道图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="8.00" y="8.00" width="200.00" height="521.23" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.40" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="16.00" y="16.00" width="184.00" height="36.00" rx="8.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="0.12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="108.00" y="38.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Intake</text>
+<rect x="220.00" y="8.00" width="200.00" height="521.23" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.40" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="228.00" y="16.00" width="184.00" height="36.00" rx="8.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="0.12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="320.00" y="38.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Review</text>
+<rect x="432.00" y="8.00" width="200.00" height="521.23" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.40" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="440.00" y="16.00" width="184.00" height="36.00" rx="8.00" fill="#ff8d28" stroke="none" stroke-width="1.00" opacity="0.12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="532.00" y="38.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Complete</text>
+<g data-id="lane-edge-0"><title></title><path d="M 108.00 116.00 L 108.00 164.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 108.00 164.00 L 104.64 156.00 L 111.36 156.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="lane-edge-1"><title></title><path d="M 155.85 179.00 L 229.48 179.00 C 241.88 179.00 249.48 186.60 249.48 199.00 L 249.48 263.37 C 249.48 274.04 256.02 280.57 266.68 280.57 L 283.88 280.57" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 283.88 280.57 L 275.88 283.93 L 275.88 277.21 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="lane-edge-2"><title></title><path d="M 378.52 294.57 L 469.91 294.57 C 482.31 294.57 489.91 302.17 489.91 314.57 L 489.91 437.23 C 489.91 440.95 492.19 443.23 495.91 443.23 L 501.91 443.23" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 501.91 443.23 L 493.91 446.59 L 493.91 439.87 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-lane-edge-2"><title></title><rect x="477.91" y="366.90" width="24.00" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="489.91" y="380.10" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Yes</text>
+<g data-id="lane-edge-3"><title></title><path d="M 283.88 308.57 L 205.14 308.57 C 192.74 308.57 185.14 316.17 185.14 328.57 L 185.14 442.73 C 185.14 450.17 180.58 454.73 173.14 454.73 L 161.14 454.73" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 161.14 454.73 L 169.14 451.37 L 169.14 458.09 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-lane-edge-3"><title></title><rect x="175.14" y="376.65" width="20.00" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="185.14" y="389.85" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">No</text>
+<g data-id="lane-edge-4"><title></title><path d="M 161.14 431.73 L 165.14 431.73 C 167.62 431.73 169.14 430.21 169.14 427.73 L 169.14 201.64 C 169.14 197.52 166.61 195.00 162.49 195.00 L 155.85 195.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 155.85 195.00 L 163.85 191.64 L 163.85 198.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="start"><title></title><path d="M 87.83 70.00 L 128.17 70.00 C 140.87 70.00 151.17 80.30 151.17 93.00 L 151.17 93.00 C 151.17 105.70 140.87 116.00 128.17 116.00 L 87.83 116.00 C 75.13 116.00 64.83 105.70 64.83 93.00 L 64.83 93.00 C 64.83 80.30 75.13 70.00 87.83 70.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="108.00" y="98.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Start</text>
+<g data-id="task"><title></title><path d="M 68.15 164.00 L 147.85 164.00 C 152.27 164.00 155.85 167.58 155.85 172.00 L 155.85 202.00 C 155.85 206.42 152.27 210.00 147.85 210.00 L 68.15 210.00 C 63.73 210.00 60.15 206.42 60.15 202.00 L 60.15 172.00 C 60.15 167.58 63.73 164.00 68.15 164.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="108.00" y="192.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Do work</text>
+<g data-id="fix"><title></title><path d="M 62.86 420.23 L 153.14 420.23 C 157.55 420.23 161.14 423.81 161.14 428.23 L 161.14 458.23 C 161.14 462.65 157.55 466.23 153.14 466.23 L 62.86 466.23 C 58.45 466.23 54.86 462.65 54.86 458.23 L 54.86 428.23 C 54.86 423.81 58.45 420.23 62.86 420.23 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="108.00" y="448.83" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Fix issues</text>
+<g data-id="decision"><title></title><path d="M 320.00 258.00 L 378.52 294.57 L 320.00 331.14 L 261.48 294.57 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="320.00" y="300.17" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Ready?</text>
+<g data-id="done"><title></title><path d="M 532.00 413.14 C 548.62 413.14 562.09 426.61 562.09 443.23 C 562.09 459.85 548.62 473.32 532.00 473.32 C 515.38 473.32 501.91 459.85 501.91 443.23 C 501.91 426.61 515.38 413.14 532.00 413.14 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="532.00" y="448.83" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Done</text></g>
+</svg>

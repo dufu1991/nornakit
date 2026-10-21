@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780.00" height="380.00" viewBox="0 0 780.00 380.00" role="img" aria-label="桑基图">
+<title>桑基图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 96.00 50.00 C 388.00 50.00 388.00 40.00 680.00 40.00 L 680.00 244.96 C 388.00 244.96 388.00 254.96 96.00 254.96 Z" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 96.00 254.96 C 388.00 254.96 388.00 264.96 680.00 264.96 L 680.00 340.00 C 388.00 340.00 388.00 330.00 96.00 330.00 Z" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="sankey-0"><title>Pumped heat: 2.6e+02</title><rect x="80.00" y="50.00" width="16.00" height="280.00" rx="1.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="102.00" y="194.55" text-anchor="start" font-size="13.00" font-weight="400" fill="#272727">Pumped heat</text>
+<g data-id="sankey-1"><title>Heating and cooling, &quot;homes&quot;: 1.9e+02</title><rect x="680.00" y="40.00" width="16.00" height="204.96" rx="1.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="674.00" y="139.48" text-anchor="end" font-size="8.57" font-weight="400" fill="#272727">Heating and cooling, &quot;ho</text><text x="674.00" y="151.48" text-anchor="end" font-size="8.57" font-weight="400" fill="#272727">mes&quot;</text>
+<g data-id="sankey-2"><title>Heating and cooling, &quot;commercial&quot;: 71</title><rect x="680.00" y="264.96" width="16.00" height="75.04" rx="1.00" fill="#ff8d28" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="674.00" y="299.48" text-anchor="end" font-size="8.57" font-weight="400" fill="#272727">Heating and cooling, &quot;co</text><text x="674.00" y="311.48" text-anchor="end" font-size="8.57" font-weight="400" fill="#272727">mmercial&quot;</text></g>
+</svg>

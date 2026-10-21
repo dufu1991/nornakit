@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440.00" height="320.00" viewBox="0 0 440.00 320.00" role="img" aria-label="时序图">
+<title>时序图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="lifeline-John"><title></title><path d="M 170.00 82.00 L 170.00 210.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<rect x="186.00" y="132.00" width="107.77" height="46.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="239.89" y="159.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Text in note</text>
+<g data-id="participant-John"><title>John</title><rect x="120.00" y="32.00" width="100.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="170.00" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">John</text>
+<g data-id="participant-John"><title>John</title><rect x="120.00" y="222.00" width="100.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="170.00" y="252.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">John</text></g>
+</svg>

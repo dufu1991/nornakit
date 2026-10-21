@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="478.65" height="474.00" viewBox="0 0 478.65 474.00" role="img" aria-label="泳道图">
+<title>泳道图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="8.00" y="8.00" width="232.58" height="458.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.40" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="16.00" y="16.00" width="216.58" height="36.00" rx="8.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="0.12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="124.29" y="38.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Buyer</text>
+<rect x="252.58" y="8.00" width="218.07" height="458.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.40" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="260.58" y="16.00" width="202.07" height="36.00" rx="8.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="0.12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="361.61" y="38.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Store</text>
+<g data-id="lane-edge-0"><title></title><path d="M 200.58 93.00 L 260.58 93.00 C 272.98 93.00 280.58 100.60 280.58 113.00 L 280.58 169.50 C 280.58 173.22 282.86 175.50 286.58 175.50 L 292.58 175.50" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 292.58 175.50 L 284.58 178.86 L 284.58 172.14 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="lane-edge-1"><title></title><path d="M 292.58 198.50 L 214.77 198.50 C 202.37 198.50 194.77 206.10 194.77 218.50 L 194.77 297.50 C 194.77 301.22 192.49 303.50 188.77 303.50 L 182.77 303.50" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 182.77 303.50 L 190.77 300.14 L 190.77 306.86 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-lane-edge-1"><title></title><rect x="155.26" y="249.00" width="79.01" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="194.77" y="262.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Invoice ready</text>
+<g data-id="lane-edge-2"><title></title><path d="M 182.77 326.50 L 264.99 326.50 C 277.39 326.50 284.99 334.10 284.99 346.50 L 284.99 403.00 C 284.99 406.72 287.27 409.00 290.99 409.00 L 296.99 409.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 296.99 409.00 L 288.99 412.36 L 288.99 405.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="choose"><title></title><path d="M 56.00 70.00 L 192.58 70.00 C 197.00 70.00 200.58 73.58 200.58 78.00 L 200.58 108.00 C 200.58 112.42 197.00 116.00 192.58 116.00 L 56.00 116.00 C 51.58 116.00 48.00 112.42 48.00 108.00 L 48.00 78.00 C 48.00 73.58 51.58 70.00 56.00 70.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="124.29" y="98.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Choose product</text>
+<g data-id="pay"><title></title><path d="M 73.81 292.00 L 174.77 292.00 C 179.18 292.00 182.77 295.58 182.77 300.00 L 182.77 330.00 C 182.77 334.42 179.18 338.00 174.77 338.00 L 73.81 338.00 C 69.39 338.00 65.81 334.42 65.81 330.00 L 65.81 300.00 C 65.81 295.58 69.39 292.00 73.81 292.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="124.29" y="320.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Pay invoice</text>
+<g data-id="reserve"><title></title><path d="M 300.58 164.00 L 422.65 164.00 C 427.07 164.00 430.65 167.58 430.65 172.00 L 430.65 202.00 C 430.65 206.42 427.07 210.00 422.65 210.00 L 300.58 210.00 C 296.16 210.00 292.58 206.42 292.58 202.00 L 292.58 172.00 C 292.58 167.58 296.16 164.00 300.58 164.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="361.61" y="192.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Reserve stock</text>
+<g data-id="ship"><title></title><path d="M 304.99 386.00 L 418.23 386.00 C 422.65 386.00 426.23 389.58 426.23 394.00 L 426.23 424.00 C 426.23 428.42 422.65 432.00 418.23 432.00 L 304.99 432.00 C 300.57 432.00 296.99 428.42 296.99 424.00 L 296.99 394.00 C 296.99 389.58 300.57 386.00 304.99 386.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="361.61" y="414.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Ship product</text></g>
+</svg>

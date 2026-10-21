@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="788.44" height="358.00" viewBox="0 0 788.44 358.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 273.55 190.00 L 273.55 202.00 C 273.55 209.44 268.99 214.00 261.55 214.00 L 102.81 214.00 C 95.37 214.00 90.81 218.56 90.81 226.00 L 90.81 238.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 273.55 190.00 L 280.55 204.00 L 266.55 204.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 289.55 190.00 L 289.55 210.83 C 289.55 212.80 288.34 214.00 286.38 214.00 L 286.38 214.00 C 284.41 214.00 283.21 215.20 283.21 217.17 L 283.21 249.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 289.55 190.00 L 296.55 204.00 L 282.55 204.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-2"><title></title><path d="M 305.55 190.00 L 305.55 202.00 C 305.55 209.44 310.11 214.00 317.55 214.00 L 464.45 214.00 C 475.30 214.00 481.95 220.65 481.95 231.50 L 481.95 249.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 305.55 190.00 L 312.55 204.00 L 298.55 204.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="Animal"><title>Animal</title><rect x="222.95" y="56.00" width="133.20" height="134.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="289.55" y="82.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Animal</text>
+<path d="M 222.95 94.00 L 356.14 94.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="232.95" y="113.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+int age</text><text x="232.95" y="132.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+String name</text>
+<path d="M 222.95 142.00 L 356.14 142.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="232.95" y="161.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+isMammal()</text><text x="232.95" y="180.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+migrate()</text>
+<g data-id="Turtle"><title>Turtle</title><rect x="8.00" y="238.00" width="165.62" height="112.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="90.81" y="264.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Turtle</text>
+<path d="M 8.00 276.00 L 173.62 276.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="294.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+String shellColor</text>
+<path d="M 8.00 304.00 L 173.62 304.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="322.25" text-anchor="start" font-size="13.57" font-weight="400" fill="#272727">+swim()</text><text x="18.00" y="341.25" text-anchor="start" font-size="13.57" font-weight="400" fill="#272727">+nest()</text>
+<g data-id="Shark"><title>Shark</title><rect x="213.62" y="249.00" width="139.19" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="283.21" y="275.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Shark</text>
+<path d="M 213.62 287.00 L 352.80 287.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="223.62" y="305.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">-int sizeInFeet</text>
+<path d="M 213.62 315.00 L 352.80 315.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="223.62" y="333.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">-canHunt()</text>
+<g data-id="Whale"><title>Whale</title><rect x="392.80" y="249.00" width="178.29" height="90.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="481.95" y="275.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Whale</text>
+<path d="M 392.80 287.00 L 571.09 287.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="402.80" y="305.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+bool is_humpback</text>
+<path d="M 392.80 315.00 L 571.09 315.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="402.80" y="333.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+sing()</text>
+<g data-id="note-0"><title>From Turtle till Whale</title><rect x="603.09" y="56.00" width="177.34" height="46.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="615.09" y="83.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">From Turtle till Whale</text>
+<path d="M 603.09 294.00 L 173.62 294.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.00 4.00"/>
+<g data-id="note-1"><title>can swim
+can dive
+can nest on beaches
+can live for decades</title><rect x="603.09" y="238.00" width="173.73" height="112.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="615.09" y="269.50" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">can swim</text><text x="615.09" y="289.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">can dive</text><text x="615.09" y="308.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">can nest on beaches</text><text x="615.09" y="328.30" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">can live for decades</text>
+<text x="394.22" y="31.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">Reef animal example</text></g>
+</svg>

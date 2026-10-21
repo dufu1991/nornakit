@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="864.00" height="576.00" viewBox="0 0 864.00 576.00" role="img" aria-label="Wardley 地图">
+<title>Wardley 地图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="434.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">Coordinate Examples</text>
+<path d="M 76.00 76.00 L 76.00 496.00 C 76.00 508.40 83.60 516.00 96.00 516.00 L 816.00 516.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 76.00 76.00 L 76.00 516.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.00 4.00"/>
+<text x="168.50" y="542.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#808080">Genesis</text>
+<path d="M 261.00 76.00 L 261.00 516.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.00 4.00"/>
+<text x="353.50" y="542.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#808080">Custom-built</text>
+<path d="M 446.00 76.00 L 446.00 516.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.00 4.00"/>
+<text x="538.50" y="542.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#808080">Product</text>
+<path d="M 631.00 76.00 L 631.00 516.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.00 4.00"/>
+<text x="723.50" y="542.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#808080">Commodity</text>
+<g data-id="component-0"><title>Infrastructure</title><ellipse cx="224.00" cy="384.00" rx="5.00" ry="5.00" fill="#ffffff" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="224.00" y="408.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Infrastructure</text>
+<g data-id="component-1"><title>Product</title><ellipse cx="520.00" cy="208.00" rx="5.00" ry="5.00" fill="#ffffff" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="520.00" y="232.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Product</text>
+<g data-id="component-2"><title>User Need</title><ellipse cx="779.00" cy="120.00" rx="5.00" ry="5.00" fill="#ffffff" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="736.00" y="144.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">User Need</text>
+<text x="42.00" y="72.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Visible</text>
+<text x="42.00" y="522.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Invisible</text></g>
+</svg>

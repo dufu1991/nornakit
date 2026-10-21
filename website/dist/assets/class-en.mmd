@@ -1,0 +1,14 @@
+classDiagram
+    direction LR
+    class Renderer {
+        +render(source)
+    }
+    class NativeRenderer {
+        -scene DiagramScene
+        +render(source)
+    }
+    class SVGExporter {
+        +export(scene)
+    }
+    Renderer <|.. NativeRenderer
+    NativeRenderer --> SVGExporter : exports

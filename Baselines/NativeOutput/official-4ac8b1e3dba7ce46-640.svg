@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="555.54" height="532.02" viewBox="0 0 555.54 532.02" role="img" aria-label="韦恩图">
+<title>韦恩图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="Desirable"><title>Desirable</title><ellipse cx="190.00" cy="194.00" rx="150.00" ry="150.00" fill="#0088ff" stroke="#0088ff" stroke-width="1.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="118.55" y="157.65" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Desirable</text>
+<g data-id="Feasible"><title>Feasible</title><ellipse cx="365.54" cy="194.00" rx="150.00" ry="150.00" fill="#34c759" stroke="#34c759" stroke-width="1.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="436.99" y="157.65" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Feasible</text>
+<g data-id="Viable"><title>Viable</title><ellipse cx="277.77" cy="346.02" rx="150.00" ry="150.00" fill="#ff8d28" stroke="#ff8d28" stroke-width="1.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="277.77" y="433.42" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Viable</text>
+<text x="277.77" y="249.57" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Innovation</text></g>
+</svg>

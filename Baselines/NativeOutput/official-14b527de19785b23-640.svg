@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="719.46" height="156.00" viewBox="0 0 719.46 156.00" role="img" aria-label="状态图">
+<title>状态图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 347.16 54.00 L 347.16 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 347.16 102.00 L 343.80 94.00 L 350.52 94.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="State1"><title>The state with a note</title><rect x="253.20" y="8.00" width="187.93" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="347.16" y="36.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">The state with a note</text>
+<g data-id="State2"><title>State2</title><rect x="305.43" y="102.00" width="83.45" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="347.16" y="130.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">State2</text>
+<path d="M 473.12 53.00 L 441.12 31.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.00 4.00"/>
+<g data-id="note-0"><title>Important information! You can write
+notes.</title><rect x="473.12" y="8.00" width="238.34" height="90.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="485.12" y="38.30" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">Important information! You ca</text><text x="485.12" y="57.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">n write</text><text x="485.12" y="77.50" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">notes.</text>
+<path d="M 221.20 125.00 L 305.43 125.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.00 4.00"/>
+<g data-id="note-1"><title>This is the note to the left.</title><rect x="8.00" y="102.00" width="213.20" height="46.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="20.00" y="129.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">This is the note to the left.</text></g>
+</svg>

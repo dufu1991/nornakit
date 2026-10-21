@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360.00" height="840.00" viewBox="0 0 360.00 840.00" role="img" aria-label="用户旅程">
+<title>用户旅程</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><path d="M 100.00 132.00 L 72.28 258.46 C 69.63 270.58 66.37 285.42 63.72 297.54 L 40.28 404.46 C 37.63 416.58 38.65 431.12 42.97 442.74 L 93.03 577.26 C 97.35 588.88 100.00 603.60 100.00 616.00 L 100.00 742.00" fill="none" stroke="#007aff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="180.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">My working day</text>
+<text x="132.00" y="88.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">Go to work</text>
+<rect x="132.00" y="100.00" width="208.00" height="64.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="236.00" y="136.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Make tea</text>
+<g data-id="journey-0"><title>Make tea: 5</title><ellipse cx="100.00" cy="132.00" rx="14.00" ry="14.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="100.00" y="136.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">5</text>
+<ellipse cx="141.00" cy="183.00" rx="5.00" ry="5.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="152.00" y="188.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">Me</text>
+<text x="132.00" y="234.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">Go to work</text>
+<rect x="132.00" y="246.00" width="208.00" height="64.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="236.00" y="282.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Go upstairs</text>
+<g data-id="journey-1"><title>Go upstairs: 3</title><ellipse cx="68.00" cy="278.00" rx="14.00" ry="14.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="68.00" y="282.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">3</text>
+<ellipse cx="141.00" cy="329.00" rx="5.00" ry="5.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="152.00" y="334.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">Me</text>
+<text x="132.00" y="380.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">Go to work</text>
+<rect x="132.00" y="392.00" width="208.00" height="64.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="236.00" y="428.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Do work</text>
+<g data-id="journey-2"><title>Do work: 1</title><ellipse cx="36.00" cy="424.00" rx="14.00" ry="14.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="36.00" y="428.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">1</text>
+<ellipse cx="141.00" cy="475.00" rx="5.00" ry="5.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="152.00" y="480.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">Me</text>
+<ellipse cx="141.00" cy="501.00" rx="5.00" ry="5.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="152.00" y="506.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">Cat</text>
+<text x="132.00" y="552.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">Go home</text>
+<rect x="132.00" y="564.00" width="208.00" height="64.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="236.00" y="600.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Go downstairs</text>
+<g data-id="journey-3"><title>Go downstairs: 5</title><ellipse cx="100.00" cy="596.00" rx="14.00" ry="14.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="100.00" y="600.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">5</text>
+<ellipse cx="141.00" cy="647.00" rx="5.00" ry="5.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="152.00" y="652.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">Me</text>
+<text x="132.00" y="698.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">Go home</text>
+<rect x="132.00" y="710.00" width="208.00" height="64.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="236.00" y="746.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Sit down</text>
+<g data-id="journey-4"><title>Sit down: 5</title><ellipse cx="100.00" cy="742.00" rx="14.00" ry="14.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="100.00" y="746.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">5</text>
+<ellipse cx="141.00" cy="793.00" rx="5.00" ry="5.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="152.00" y="798.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">Me</text></g>
+</svg>

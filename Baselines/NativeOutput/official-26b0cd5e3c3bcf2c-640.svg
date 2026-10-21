@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="648.00" height="510.00" viewBox="0 0 648.00 510.00" role="img" aria-label="XY 坐标图">
+<title>XY 坐标图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="324.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">Sales Revenue</text>
+<path d="M 86.00 396.00 L 608.00 396.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="400.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">4000</text>
+<path d="M 86.00 332.00 L 608.00 332.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="336.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">5400</text>
+<path d="M 86.00 268.00 L 608.00 268.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="272.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">6800</text>
+<path d="M 86.00 204.00 L 608.00 204.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="208.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">8200</text>
+<path d="M 86.00 140.00 L 608.00 140.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="144.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">9600</text>
+<path d="M 86.00 76.00 L 608.00 76.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 4.00"/>
+<text x="76.00" y="80.20" text-anchor="end" font-size="12.00" font-weight="400" fill="#808080">11000</text>
+<g data-id="bar-0-0"><title>jan: 5000</title><rect x="92.52" y="350.29" width="28.45" height="45.71" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-1"><title>feb: 6000</title><rect x="136.02" y="304.57" width="28.45" height="91.43" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-2"><title>mar: 7500</title><rect x="179.52" y="236.00" width="28.45" height="160.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-3"><title>apr: 8200</title><rect x="223.02" y="204.00" width="28.45" height="192.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-4"><title>may: 9500</title><rect x="266.52" y="144.57" width="28.45" height="251.43" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-5"><title>jun: 10500</title><rect x="310.02" y="98.86" width="28.45" height="297.14" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-6"><title>jul: 11000</title><rect x="353.52" y="76.00" width="28.45" height="320.00" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-7"><title>aug: 10200</title><rect x="397.02" y="112.57" width="28.45" height="283.43" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-8"><title>sep: 9200</title><rect x="440.52" y="158.29" width="28.45" height="237.71" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-9"><title>oct: 8500</title><rect x="484.02" y="190.29" width="28.45" height="205.71" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-10"><title>nov: 7000</title><rect x="527.52" y="258.86" width="28.45" height="137.14" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="bar-0-11"><title>dec: 6000</title><rect x="571.02" y="304.57" width="28.45" height="91.43" rx="2.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 107.75 350.29 L 137.46 319.06 C 146.01 310.08 155.32 298.15 161.96 287.68 L 184.04 252.89 C 190.68 242.42 200.87 231.50 210.86 224.15 L 222.14 215.85 C 232.13 208.50 242.74 197.87 250.06 187.86 L 269.94 160.71 C 277.26 150.70 286.99 139.07 295.54 130.08 L 311.46 113.35 C 320.01 104.36 331.98 95.32 342.95 89.55 L 351.05 85.30 C 362.02 79.54 374.57 80.89 384.06 88.87 L 396.94 99.70 C 406.43 107.68 417.49 118.08 426.04 127.06 L 441.96 143.80 C 450.51 152.78 461.87 162.79 471.86 170.14 L 483.14 178.43 C 493.13 185.78 503.32 196.70 509.96 207.17 L 532.04 241.97 C 538.68 252.44 547.99 264.36 556.54 273.35 L 586.25 304.57" fill="none" stroke="#34c759" stroke-width="2.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="point-1-0"><title>jan: 5000</title><ellipse cx="107.75" cy="350.29" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-1"><title>feb: 6000</title><ellipse cx="151.25" cy="304.57" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-2"><title>mar: 7500</title><ellipse cx="194.75" cy="236.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-3"><title>apr: 8200</title><ellipse cx="238.25" cy="204.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-4"><title>may: 9500</title><ellipse cx="281.75" cy="144.57" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-5"><title>jun: 10500</title><ellipse cx="325.25" cy="98.86" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-6"><title>jul: 11000</title><ellipse cx="368.75" cy="76.00" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-7"><title>aug: 10200</title><ellipse cx="412.25" cy="112.57" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-8"><title>sep: 9200</title><ellipse cx="455.75" cy="158.29" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-9"><title>oct: 8500</title><ellipse cx="499.25" cy="190.29" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-10"><title>nov: 7000</title><ellipse cx="542.75" cy="258.86" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="point-1-11"><title>dec: 6000</title><ellipse cx="586.25" cy="304.57" rx="3.00" ry="3.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 86.00 76.00 L 86.00 376.00 C 86.00 388.40 93.60 396.00 106.00 396.00 L 608.00 396.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="107.75" y="420.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">jan</text>
+<text x="151.25" y="420.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">feb</text>
+<text x="194.75" y="420.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">mar</text>
+<text x="238.25" y="420.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">apr</text>
+<text x="281.75" y="420.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">may</text>
+<text x="325.25" y="420.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">jun</text>
+<text x="368.75" y="420.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">jul</text>
+<text x="412.25" y="420.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">aug</text>
+<text x="455.75" y="420.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">sep</text>
+<text x="499.25" y="420.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">oct</text>
+<text x="542.75" y="420.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">nov</text>
+<text x="586.25" y="420.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">dec</text>
+<text x="347.00" y="452.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727"></text>
+<text x="8.00" y="66.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#808080">Revenue (in $)</text>
+<rect x="84.00" y="480.00" width="14.00" height="12.00" rx="8.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="106.00" y="490.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">bar 1</text>
+<rect x="234.00" y="480.00" width="14.00" height="12.00" rx="8.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="256.00" y="490.20" text-anchor="start" font-size="12.00" font-weight="400" fill="#272727">line 2</text></g>
+</svg>

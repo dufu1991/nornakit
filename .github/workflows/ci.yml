@@ -1,0 +1,110 @@
+name: CI and Studio Release
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      release:
+        description: Publish the current Studio version after checks pass
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode_26.4.1.app/Contents/Developer
+
+jobs:
+  checks:
+    name: Test and build
+    runs-on: macos-26
+    timeout-minutes: 30
+    outputs:
+      release: ${{ steps.candidate.outputs.release }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Validate release automation
+        run: python3 -m unittest discover -s Tests/ReleaseTests -p 'test_*.py'
+      - name: Test Swift package
+        run: swift test
+      - name: Build universal workbench
+        run: |
+          xcodebuild build \
+            -project Norna.xcodeproj -scheme NornaStudio \
+            -configuration Release -destination 'generic/platform=macOS' \
+            -derivedDataPath build \
+            'ARCHS=arm64 x86_64' ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO
+      - name: Check website resources
+        run: |
+          python3 website/scripts/verify-brand.py
+          python3 website/scripts/verify-screenshots.py
+          python3 website/scripts/verify-inline-content.py
+      - name: Determine whether the Studio version changed
+        id: candidate
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          MANUAL_RELEASE: ${{ inputs.release }}
+        run: python3 Scripts/Release/github_release.py candidate
+
+  release:
+    name: Publish Norna Studio
+    needs: checks
+    if: >-
+      needs.checks.outputs.release == 'true' &&
+      github.repository == 'dufu1991/norna' &&
+      github.ref == 'refs/heads/main'
+    runs-on: macos-26
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    concurrency:
+      group: studio-publication
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Check for an existing Studio release
+        id: version
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 Scripts/Release/github_release.py prepare
+      - name: Build, sign, and package the workbench
+        if: steps.version.outputs.publish == 'true'
+        env:
+          MACOS_SIGNING_ENABLED: ${{ vars.MACOS_SIGNING_ENABLED }}
+          MACOS_CERTIFICATE_P12: ${{ secrets.MACOS_CERTIFICATE_P12 }}
+          MACOS_CERTIFICATE_PASSWORD: ${{ secrets.MACOS_CERTIFICATE_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+        run: bash Scripts/Release/package.sh
+      - name: Preserve release packages
+        if: steps.version.outputs.publish == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: Norna-Studio-${{ steps.version.outputs.version }}
+          path: |
+            build/release/*.dmg
+            build/release/*.zip
+            build/release/SHA256SUMS.txt
+            build/release/release.json
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
+      - name: Publish complete packages to GitHub Releases
+        if: steps.version.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 Scripts/Release/github_release.py publish

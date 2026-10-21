@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="336.75" height="758.04" viewBox="0 0 336.75 758.04" role="img" aria-label="状态图">
+<title>状态图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="8.00" y="100.00" width="275.97" height="396.04" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.50" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="145.99" y="124.50" text-anchor="middle" font-size="15.71" font-weight="400" fill="#808080">Active</text>
+<g data-id="relation-0"><title></title><path d="M 145.99 39.00 L 145.99 100.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 145.99 100.00 L 142.63 92.00 L 149.35 92.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 116.12 169.00 L 116.12 230.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 116.12 230.00 L 112.76 222.00 L 119.48 222.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-2"><title></title><path d="M 116.12 276.00 L 116.12 358.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 116.12 358.00 L 112.76 350.00 L 119.48 350.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-2"><title></title><rect x="97.07" y="308.00" width="38.08" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="116.12" y="321.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">pause</text>
+<g data-id="relation-3"><title></title><path d="M 161.19 381.00 L 177.19 381.00 C 187.11 381.00 193.19 374.92 193.19 365.00 L 193.19 281.85 C 193.19 271.09 186.60 264.50 175.84 264.50 L 158.49 264.50" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 158.49 264.50 L 166.49 261.14 L 166.49 267.86 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-3"><title></title><rect x="181.45" y="314.43" width="23.48" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="193.19" y="327.63" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">key</text>
+<g data-id="relation-4"><title></title><path d="M 145.99 496.04 L 145.99 578.04" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 145.99 578.04 L 142.63 570.04 L 149.35 570.04 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-4"><title></title><rect x="131.09" y="528.04" width="29.79" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="145.99" y="541.24" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">save</text>
+<g data-id="relation-5"><title></title><path d="M 186.22 589.54 L 295.97 589.54 C 308.37 589.54 315.97 581.94 315.97 569.54 L 315.97 328.02 C 315.97 318.10 309.89 312.02 299.97 312.02 L 283.97 312.02" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 283.97 312.02 L 291.97 308.66 L 291.97 315.38 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-5"><title></title><rect x="303.20" y="439.78" width="25.55" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="315.97" y="452.98" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">edit</text>
+<g data-id="relation-6"><title></title><path d="M 145.99 624.04 L 145.99 719.04" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 145.99 719.04 L 142.63 711.04 L 149.35 711.04 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="@initial_Active_0"><title></title><ellipse cx="116.12" cy="160.00" rx="9.00" ry="9.00" fill="#272727" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="Typing"><title>Typing</title><rect x="73.75" y="230.00" width="84.74" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="116.12" y="258.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Typing</text>
+<g data-id="Waiting"><title>Waiting</title><rect x="71.04" y="358.00" width="90.15" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="116.12" y="386.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Waiting</text>
+<g data-id="@initial_root"><title></title><ellipse cx="145.99" cy="30.00" rx="9.00" ry="9.00" fill="#272727" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="Saved"><title>Saved</title><rect x="105.75" y="578.04" width="80.48" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="145.99" y="606.64" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Saved</text>
+<g data-id="@final_root"><title></title><ellipse cx="145.99" cy="728.04" rx="9.00" ry="9.00" fill="#ffffff" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<ellipse cx="145.99" cy="728.04" rx="5.00" ry="5.00" fill="#272727" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

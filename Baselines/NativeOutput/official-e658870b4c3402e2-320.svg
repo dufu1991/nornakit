@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="338.68" height="439.00" viewBox="0 0 338.68 439.00" role="img" aria-label="状态图">
+<title>状态图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 88.74 39.00 L 88.74 100.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 88.74 100.00 L 85.38 92.00 L 92.10 92.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 88.74 146.00 L 88.74 228.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 88.74 228.00 L 85.38 220.00 L 92.10 220.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-1"><title></title><rect x="73.62" y="178.00" width="30.25" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="88.74" y="191.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">start</text>
+<g data-id="relation-2"><title></title><path d="M 88.74 274.00 L 88.74 288.00 C 88.74 296.68 94.06 302.00 102.74 302.00 L 197.48 302.00 C 209.88 302.00 217.48 294.40 217.48 282.00 L 217.48 135.00 C 217.48 122.60 209.88 115.00 197.48 115.00 L 119.77 115.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 119.77 115.00 L 127.77 111.64 L 127.77 118.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-2"><title></title><rect x="203.03" y="199.50" width="28.91" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="217.48" y="212.70" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">stop</text>
+<g data-id="relation-3"><title></title><path d="M 80.74 274.00 L 80.74 301.00 C 80.74 309.68 75.42 315.00 66.74 315.00 L 66.74 315.00 C 58.06 315.00 52.74 320.32 52.74 329.00 L 52.74 356.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 52.74 356.00 L 49.38 348.00 L 56.10 348.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-3"><title></title><rect x="33.70" y="333.50" width="38.08" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="52.74" y="346.70" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">pause</text>
+<g data-id="relation-4"><title></title><path d="M 52.74 402.00 L 52.74 416.00 C 52.74 424.68 58.06 430.00 66.74 430.00 L 246.85 430.00 C 259.25 430.00 266.85 422.40 266.85 410.00 L 266.85 271.00 C 266.85 258.60 259.25 251.00 246.85 251.00 L 136.40 251.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 136.40 251.00 L 144.40 247.64 L 144.40 254.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-4"><title></title><rect x="243.94" y="331.50" width="45.83" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="266.85" y="344.70" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">resume</text>
+<g data-id="relation-5"><title></title><path d="M 52.74 402.00 L 52.74 416.00 C 52.74 424.68 58.06 430.00 66.74 430.00 L 296.22 430.00 C 308.62 430.00 316.22 422.40 316.22 410.00 L 316.22 151.00 C 316.22 138.60 308.62 131.00 296.22 131.00 L 119.77 131.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 119.77 131.00 L 127.77 127.64 L 127.77 134.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-5"><title></title><rect x="301.77" y="271.50" width="28.91" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="316.22" y="284.70" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">stop</text>
+<g data-id="relation-6"><title></title><path d="M 96.74 274.00 L 96.74 295.00 C 96.74 307.40 104.34 315.00 116.74 315.00 L 127.48 315.00 C 139.88 315.00 147.48 322.60 147.48 335.00 L 147.48 370.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 147.48 370.00 L 144.12 362.00 L 150.84 362.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="@initial_root"><title></title><ellipse cx="88.74" cy="30.00" rx="9.00" ry="9.00" fill="#272727" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="Idle"><title>Idle</title><rect x="57.72" y="100.00" width="62.05" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="88.74" y="128.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Idle</text>
+<g data-id="Running"><title>Running</title><rect x="41.09" y="228.00" width="95.31" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="88.74" y="256.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Running</text>
+<g data-id="Paused"><title>Paused</title><rect x="8.00" y="356.00" width="89.48" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="52.74" y="384.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Paused</text>
+<g data-id="@final_root"><title></title><ellipse cx="147.48" cy="379.00" rx="9.00" ry="9.00" fill="#ffffff" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<ellipse cx="147.48" cy="379.00" rx="5.00" ry="5.00" fill="#272727" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

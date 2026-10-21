@@ -1,0 +1,79 @@
+name: Norna
+options:
+  developmentLanguage: en
+  bundleIdPrefix: dev.norna
+  deploymentTarget:
+    macOS: "14.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    CODE_SIGN_STYLE: Automatic
+targets:
+  NornaKit:
+    type: framework
+    platform: macOS
+    sources:
+      - path: Sources/NornaKit
+        excludes: [Resources]
+      - path: Sources/NornaKit/Resources
+        type: folder
+        buildPhase: resources
+    settings:
+      GENERATE_INFOPLIST_FILE: YES
+      PRODUCT_BUNDLE_IDENTIFIER: dev.norna.kit
+  NornaStudio:
+    type: application
+    productName: Norna Studio
+    platform: macOS
+    configFiles:
+      Debug: Configuration/Studio-Version.xcconfig
+      Release: Configuration/Studio-Version.xcconfig
+    info:
+      path: Configuration/NornaStudio-Info.plist
+      properties:
+        CFBundleLocalizations: [en, zh-Hans]
+        CFBundleDisplayName: Norna Studio
+        CFBundleName: Norna Studio
+        CFBundleIconFile: NornaSculpted
+        CFBundleIconName: NornaSculpted
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSAccentColorName: AccentColor
+        NSPrincipalClass: NSApplication
+        LSApplicationCategoryType: public.app-category.developer-tools
+    sources:
+      - path: Sources/NornaStudio
+        excludes: [Resources/NornaSculpted.icon, Resources/Norna.icns]
+      - path: Sources/NornaStudio/Resources/NornaSculpted.icon
+        type: file
+        buildPhase: resources
+    dependencies:
+      - target: NornaKit
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: dev.norna.studio
+      GENERATE_INFOPLIST_FILE: NO
+      PRODUCT_NAME: Norna Studio
+      ASSETCATALOG_COMPILER_APPICON_NAME: NornaSculpted
+      ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+      CODE_SIGN_ENTITLEMENTS: Configuration/NornaStudio.entitlements
+      ENABLE_HARDENED_RUNTIME: YES
+      ENABLE_APP_SANDBOX: YES
+      ENABLE_USER_SELECTED_FILES: readwrite
+  NornaKitTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - Tests/NornaKitTests
+    dependencies:
+      - target: NornaKit
+    settings:
+      GENERATE_INFOPLIST_FILE: YES
+schemes:
+  NornaStudio:
+    build:
+      targets:
+        NornaStudio: all
+        NornaKitTests: [test]
+    test:
+      targets:
+        - NornaKitTests

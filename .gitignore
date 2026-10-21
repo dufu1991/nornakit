@@ -1,0 +1,27 @@
+# Build products and local archives
+/.build/
+/build/
+/.local/
+/outputs/
+/DerivedData/
+/.swiftpm/
+
+# Keep repository rules even when a global ignore excludes them.
+!/.gitignore
+
+# macOS and Xcode user state
+.DS_Store
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+
+# Local tools and credentials
+.openai/
+.env
+.env.*
+!.env.example
+*.p12
+*.pfx
+__pycache__/
+*.py[cod]

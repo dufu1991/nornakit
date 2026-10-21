@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360.00" height="296.00" viewBox="0 0 360.00 296.00" role="img" aria-label="语法铁路图">
+<title>语法铁路图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="16.00" y="30.25" text-anchor="start" font-size="15.00" font-weight="600" fill="#272727">letter</text>
+<path d="M 12.00 55.00 L 12.00 71.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 18.00 55.00 L 18.00 71.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 18.00 63.00 L 36.00 63.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 36.00 63.00 L 60.00 63.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60.00" y="48.00" width="52.00" height="30.00" rx="15.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="86.00" y="67.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">a</text>
+<path d="M 112.00 63.00 L 136.00 63.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 36.00 63.00 L 42.00 63.00 C 45.72 63.00 48.00 65.28 48.00 69.00 L 48.00 105.00 C 48.00 108.72 50.28 111.00 54.00 111.00 L 60.00 111.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60.00" y="96.00" width="52.00" height="30.00" rx="15.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="86.00" y="115.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">b</text>
+<path d="M 112.00 111.00 L 118.00 111.00 C 121.72 111.00 124.00 108.72 124.00 105.00 L 124.00 69.00 C 124.00 65.28 126.28 63.00 130.00 63.00 L 136.00 63.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 36.00 63.00 L 42.00 63.00 C 45.72 63.00 48.00 65.28 48.00 69.00 L 48.00 153.00 C 48.00 156.72 50.28 159.00 54.00 159.00 L 60.00 159.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60.00" y="144.00" width="52.00" height="30.00" rx="15.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="86.00" y="163.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">c</text>
+<path d="M 112.00 159.00 L 118.00 159.00 C 121.72 159.00 124.00 156.72 124.00 153.00 L 124.00 69.00 C 124.00 65.28 126.28 63.00 130.00 63.00 L 136.00 63.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 136.00 63.00 L 154.00 63.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 154.00 55.00 L 154.00 71.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 160.00 55.00 L 160.00 71.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="16.00" y="220.25" text-anchor="start" font-size="15.00" font-weight="600" fill="#272727">identifier</text>
+<path d="M 12.00 245.00 L 12.00 261.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 18.00 245.00 L 18.00 261.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 18.00 253.00 L 36.00 253.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="36.00" y="238.00" width="62.04" height="30.00" rx="4.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="67.02" y="257.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727" font-family="Menlo, monospace">letter</text>
+<path d="M 98.04 253.00 L 116.04 253.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 116.04 245.00 L 116.04 261.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 122.04 245.00 L 122.04 261.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

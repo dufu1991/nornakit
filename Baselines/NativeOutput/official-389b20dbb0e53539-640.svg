@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="381.02" height="190.00" viewBox="0 0 381.02 190.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 61.45 54.00 L 61.45 136.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 61.45 136.00 L 58.09 128.00 L 64.81 128.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="multiplicity-0-from"><title>1</title><rect x="47.28" y="64.00" width="9.17" height="16.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="51.86" y="75.85" text-anchor="middle" font-size="11.00" font-weight="400" fill="#272727">1</text>
+<g data-id="multiplicity-0-to"><title>*</title><rect x="66.45" y="110.00" width="9.25" height="16.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="71.07" y="121.85" text-anchor="middle" font-size="11.00" font-weight="400" fill="#272727">*</text>
+<g data-id="relation-1"><title></title><path d="M 201.53 54.00 L 201.53 136.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 201.53 136.00 L 198.17 128.00 L 204.89 128.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="multiplicity-1-from"><title>1</title><rect x="187.36" y="64.00" width="9.17" height="16.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="191.94" y="75.85" text-anchor="middle" font-size="11.00" font-weight="400" fill="#272727">1</text>
+<g data-id="multiplicity-1-to"><title>1..*</title><rect x="206.53" y="110.00" width="19.31" height="16.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="216.18" y="121.85" text-anchor="middle" font-size="11.00" font-weight="400" fill="#272727">1..*</text>
+<g data-id="relation-2"><title></title><path d="M 330.59 54.00 L 330.59 136.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 330.59 136.00 L 327.23 128.00 L 333.95 128.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="multiplicity-2-to"><title>many</title><rect x="335.59" y="110.00" width="32.07" height="16.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="351.63" y="121.85" text-anchor="middle" font-size="11.00" font-weight="400" fill="#272727">many</text>
+<g data-id="edge-label-relation-2"><title></title><rect x="303.63" y="86.00" width="53.91" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="330.59" y="99.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Contains</text>
+<g data-id="Customer"><title>Customer</title><rect x="8.00" y="8.00" width="106.89" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="61.45" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Customer</text>
+<g data-id="Ticket"><title>Ticket</title><rect x="21.31" y="136.00" width="80.27" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="61.45" y="162.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Ticket</text>
+<g data-id="Student"><title>Student</title><rect x="154.89" y="8.00" width="93.27" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="201.53" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Student</text>
+<g data-id="Course"><title>Course</title><rect x="157.62" y="136.00" width="87.82" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="201.53" y="162.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Course</text>
+<g data-id="Galaxy"><title>Galaxy</title><rect x="288.16" y="8.00" width="84.85" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="330.59" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Galaxy</text>
+<g data-id="Star"><title>Star</title><rect x="297.75" y="136.00" width="65.68" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="330.59" y="162.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Star</text></g>
+</svg>

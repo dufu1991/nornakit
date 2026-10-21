@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafaf9">
+  <meta name="description" content="Norna turns Mermaid source into native diagrams with Swift. Explore 33 diagram families, native screenshots, and a focused Mac editor.">
+  <title>Norna — Native diagrams, clearly.</title>
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64 128x128 256x256" type="image/vnd.microsoft.icon">
+  <link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <link rel="mask-icon" href="assets/brand/safari-pinned-tab.svg" color="#5148d8">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Norna — Native diagrams, clearly.">
+  <meta property="og:description" content="A pure Swift diagram engine and a focused Mac editor.">
+  <meta property="og:image" content="https://norna-native-diagrams.civillamp6.chatgpt.site/assets/brand/social-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://norna-native-diagrams.civillamp6.chatgpt.site/assets/brand/social-cover.png">
+  <script src="preferences.js"></script>
+  <link rel="stylesheet" href="style.css?v=workbench-download"><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="components.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<header class="header wrap">
+  <a class="brand" href="#" aria-label="Norna"><span class="brand-symbol" aria-hidden="true"></span><span>Norna</span></a>
+  <nav aria-label="Main navigation" data-i18n-aria="navigation"><a href="#examples" data-i18n="examples">Examples</a><a href="#start" data-i18n="getStarted">Get started</a><a href="docs.html" data-i18n="docs">Docs</a><a class="workbench-download" data-workbench-download role="link" tabindex="0" data-i18n="workbench" data-i18n-aria="workbenchDownload">Studio</a></nav>
+  <div class="preferences"><div id="language-picker" class="ui-picker"></div><div id="theme-picker" class="ui-picker"></div></div>
+</header>
+<main id="main">
+<section class="hero wrap">
+  <p class="eyebrow"><span class="status-dot"></span><span data-i18n="eyebrow">BUILT WITH SWIFT. NATIVE BY DESIGN.</span></p>
+  <h1 data-i18n-html="headline">Give your ideas<br><span class="hero-accent">a clearer shape.</span></h1>
+  <p class="hero-description" data-i18n="description">Mermaid diagrams, rendered natively in Swift.<br>From a few lines of text to a picture that makes sense.</p>
+  <div class="hero-actions"><a class="button primary" href="#examples"><span data-i18n="explore">Explore the examples</span><span aria-hidden="true">↗</span></a><a class="text-link" href="#start"><span data-i18n="useSwift">Use it in Swift</span><span aria-hidden="true">→</span></a></div>
+  <div class="hero-proof"><span data-i18n="currentPlatform">Currently macOS 14+</span><span data-i18n="pureSwift">Pure Swift</span><span data-i18n="noWebView">No WebView</span></div>
+</section>
+<section class="showcase wrap" aria-label="Native rendering preview" data-i18n-aria="nativePreview">
+  <div class="showcase-bar"><span class="file-label"><span class="file-icon" aria-hidden="true">⌘</span> hello-norna.mmd</span><span class="render-label"><span class="status-dot"></span><span data-i18n="nativeOutput">Native output</span></span></div>
+  <div class="hero-image-stage"><span id="hero-image" class="native-screenshot"><img data-image-theme="light" src="assets/hero-en-light.png" width="1600" height="550" alt="An idea becomes Mermaid source, then a native diagram and an SVG export" fetchpriority="high"><img data-image-theme="dark" src="assets/hero-en-dark.png" width="1600" height="550" alt="An idea becomes Mermaid source, then a native diagram and an SVG export" fetchpriority="high"></span></div>
+  <div class="showcase-caption"><span data-i18n="screenshotNote">An actual Swift render. Presented here as a screenshot.</span><span>CoreText → CoreGraphics</span></div>
+</section>
+<section class="principles wrap" aria-label="Features" data-i18n-aria="features">
+  <article><span class="feature-index">01</span><h2 data-i18n="feature1Title">Native, all the way.</h2><p data-i18n="feature1">Parsing, text measurement, layout, and drawing happen in Swift. No browser runtime in your app.</p></article>
+  <article><span class="feature-index">02</span><h2 data-i18n="feature2Title">One scene. More possibilities.</h2><p data-i18n="feature2">The native canvas and SVG share the same geometry. Preview your diagram, then take it with you.</p></article>
+  <article><span class="feature-index">03</span><h2 data-i18n="feature3Title">A focused native editor.</h2><p data-i18n="feature3">System typography, light and dark appearances, and a focused editor for your Mermaid files.</p></article>
+</section>
+<section class="examples wrap" id="examples">
+  <div class="section-heading"><div><p class="eyebrow" data-i18n="collection">THE NATIVE COLLECTION</p><h2 data-i18n="examplesTitle">A little syntax. A lot of clarity.</h2></div><span class="count" data-i18n="families">33 diagram families · 36 examples</span></div>
+  <p class="section-description" data-i18n="examplesDescription">Explore real output from the native engine. Select a diagram to see its screenshot and source.</p>
+  <div class="example-controls"><div class="example-selector"><span class="example-selector-label" data-i18n="pickerLabel">Example</span><div id="example-picker" class="ui-picker ui-example-picker"></div></div></div>
+  <div class="example-panel" role="region" id="example-panel" aria-label="Flowchart">
+    <div class="code-panel"><div class="panel-toolbar"><span><span class="code-dot"></span> <span data-i18n="source">Source</span></span><button id="copy-example" class="quiet-button" data-i18n="copy">Copy</button></div><pre><code id="example-source"></code></pre><a class="source-download text-link" id="download-source" download="example.mmd"><span data-i18n="downloadSource">Download .mmd</span><span aria-hidden="true">↓</span></a></div>
+    <button class="example-image" id="enlarge-example" aria-label="Enlarge screenshot" data-i18n-aria="enlarge"><span id="example-image" class="native-screenshot"></span><span class="zoom-hint"><span data-i18n="viewScreenshot">View screenshot</span> ↗</span></button>
+  </div>
+  <p class="compatibility"><span class="status-dot"></span><span data-i18n="compatibility">Each family includes a working example. Syntax support varies by diagram type.</span><a href="docs.html#support" data-i18n="supportLink">See support notes ↗</a></p>
+  <details class="gallery-details"><summary><span data-i18n="browseAll">Browse all 36 examples</span><svg class="ui-icon accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="gallery" id="gallery"></div></details>
+</section>
+<section class="getting-started wrap" id="start">
+  <div class="start-intro"><p class="eyebrow" data-i18n="builtFor">NATIVE DIAGRAMS FOR YOUR APP</p><h2 data-i18n-html="startTitle">A native canvas.<br>A familiar language.</h2><p data-i18n="startDescription">Use the rendering library in your app, or open Norna Studio to write, preview, and export diagrams on your Mac.</p><a class="text-link" href="docs.html"><span data-i18n="readDocs">Read the documentation</span><span aria-hidden="true">→</span></a><div class="studio-badge"><span class="studio-app-icon" aria-hidden="true"><img data-image-theme="light" src="assets/brand/app-icon-light.png" width="48" height="48" alt=""><img data-image-theme="dark" src="assets/brand/app-icon-dark.png" width="48" height="48" alt=""></span><div><strong>Norna Studio</strong><span data-i18n="studioSubtitle">The companion Mac editor</span></div></div></div>
+  <div class="integration"><div class="panel-toolbar"><span>Swift</span><button class="quiet-button" id="copy-swift" data-i18n="copy">Copy</button></div><pre><code id="swift-code"><span class="syntax-keyword">import</span> NornaKit
+
+<span class="syntax-keyword">let</span> renderer = NativeDiagramRenderer()
+<span class="syntax-keyword">let</span> diagram = <span class="syntax-keyword">try await</span> renderer.render(
+    <span class="syntax-string">"flowchart LR\n A[Hello] --&gt; B[Norna]"</span>
+)
+
+<span class="syntax-keyword">let</span> scene = diagram.scene
+<span class="syntax-keyword">let</span> svg = diagram.themedSVG(.appleLight)</code></pre><p class="integration-note" data-i18n="moduleNote">Add the Norna package and import NornaKit to render diagrams.</p></div>
+</section>
+<section class="closing wrap"><span class="brand-symbol brand-symbol-large" aria-hidden="true"></span><p data-i18n="closing">Less between your idea and the diagram.</p><a href="#examples" class="text-link"><span data-i18n="takeLook">Take a closer look</span><span aria-hidden="true">↑</span></a></section>
+</main>
+<footer class="footer wrap"><div class="footer-brand"><strong>Norna</strong><span data-i18n="footerSubtitle">Native diagrams, clearly.</span></div><div><a href="docs.html" data-i18n="docs">Docs</a><a href="docs.html#support" data-i18n="support">Support</a><a href="assets/THIRD_PARTY_NOTICES.md" data-i18n="credits">Credits</a></div><p data-i18n="attribution">Built with Swift. Native by design.</p></footer>
+<dialog id="screenshot-dialog" aria-labelledby="dialog-title"><div class="dialog-toolbar"><div class="dialog-heading"><span class="dialog-eyebrow" data-i18n="nativeOutput">Native output</span><h2 id="dialog-title"></h2></div><button id="close-dialog" class="ui-icon-button" aria-label="Close" data-i18n-aria="close"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div><div class="dialog-image-wrap"><span id="dialog-image" class="native-screenshot"></span></div><div class="dialog-footer"><a id="download-image" class="text-link" download><span data-i18n="downloadScreenshot">Download screenshot</span> ↓</a><span id="dialog-instructions" class="dialog-navigation-hint" data-i18n="navigationHint">Use ← → to browse</span><div class="dialog-navigation" role="group" aria-label="Browse screenshots" data-i18n-aria="browseScreenshots"><button id="previous-image" class="ui-icon-button" aria-label="Previous image" data-i18n-aria="previousImage"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button><span id="dialog-counter" aria-hidden="true"></span><button id="next-image" class="ui-icon-button" aria-label="Next image" data-i18n-aria="nextImage"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button></div></div><span id="dialog-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="app.js?v=workbench-download"></script>
+</body>
+</html>

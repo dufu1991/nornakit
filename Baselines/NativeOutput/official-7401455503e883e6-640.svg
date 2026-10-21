@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="570.41" height="588.90" viewBox="0 0 570.41 588.90" role="img" aria-label="韦恩图">
+<title>韦恩图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="285.21" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">What makes a good feature</text>
+<g data-id="Desirable"><title>Desirable</title><ellipse cx="190.00" cy="238.00" rx="150.00" ry="150.00" fill="#0088ff" stroke="#0088ff" stroke-width="1.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="118.55" y="201.65" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Desirable</text>
+<g data-id="Feasible"><title>Feasible</title><ellipse cx="380.41" cy="238.00" rx="150.00" ry="150.00" fill="#34c759" stroke="#34c759" stroke-width="1.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="451.86" y="201.65" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Feasible</text>
+<g data-id="Viable"><title>Viable</title><ellipse cx="285.21" cy="402.90" rx="150.00" ry="150.00" fill="#ff8d28" stroke="#ff8d28" stroke-width="1.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="285.21" y="490.30" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Viable</text>
+<text x="285.21" y="242.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Buildable</text>
+<text x="332.81" y="325.35" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Sustainable</text>
+<text x="237.60" y="325.35" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Marketable</text>
+<text x="285.21" y="297.87" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Ship it</text></g>
+</svg>

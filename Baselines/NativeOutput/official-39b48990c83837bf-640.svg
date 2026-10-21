@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620.00" height="578.00" viewBox="0 0 620.00 578.00" role="img" aria-label="雷达图">
+<title>雷达图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="310.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">Restaurant Comparison</text>
+<path d="M 310.00 247.00 L 343.00 280.00 L 310.00 313.00 L 277.00 280.00 Z" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 3.00"/>
+<path d="M 310.00 214.00 L 376.00 280.00 L 310.00 346.00 L 244.00 280.00 Z" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 3.00"/>
+<path d="M 310.00 181.00 L 409.00 280.00 L 310.00 379.00 L 211.00 280.00 Z" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 3.00"/>
+<path d="M 310.00 148.00 L 442.00 280.00 L 310.00 412.00 L 178.00 280.00 Z" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 3.00"/>
+<path d="M 310.00 115.00 L 475.00 280.00 L 310.00 445.00 L 145.00 280.00 Z" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.00 3.00"/>
+<path d="M 310.00 280.00 L 310.00 115.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="310.00" y="87.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Food Quality</text>
+<path d="M 310.00 280.00 L 475.00 280.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="507.00" y="284.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Service</text>
+<path d="M 310.00 280.00 L 310.00 445.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="310.00" y="481.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Price</text>
+<path d="M 310.00 280.00 L 145.00 280.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="113.00" y="284.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Ambiance</text>
+<g data-id="radar-0"><title></title><path d="M 310.00 148.00 L 409.00 280.00 L 310.00 346.00 L 178.00 280.00 Z" fill="#0088ff" stroke="#0088ff" stroke-width="2.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="40.00" y="516.00" width="12.00" height="12.00" rx="3.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="60.00" y="526.55" text-anchor="start" font-size="13.00" font-weight="400" fill="#272727">Restaurant A</text>
+<g data-id="radar-1"><title></title><path d="M 310.00 181.00 L 442.00 280.00 L 310.00 379.00 L 211.00 280.00 Z" fill="#34c759" stroke="#34c759" stroke-width="2.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="190.00" y="516.00" width="12.00" height="12.00" rx="3.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="210.00" y="526.55" text-anchor="start" font-size="13.00" font-weight="400" fill="#272727">Restaurant B</text>
+<g data-id="radar-2"><title></title><path d="M 310.00 214.00 L 409.00 280.00 L 310.00 412.00 L 244.00 280.00 Z" fill="#ff8d28" stroke="#ff8d28" stroke-width="2.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="340.00" y="516.00" width="12.00" height="12.00" rx="3.00" fill="#ff8d28" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="360.00" y="526.55" text-anchor="start" font-size="13.00" font-weight="400" fill="#272727">Restaurant C</text>
+<g data-id="radar-3"><title></title><path d="M 310.00 214.00 L 376.00 280.00 L 310.00 412.00 L 211.00 280.00 Z" fill="#cb30e0" stroke="#cb30e0" stroke-width="2.00" opacity="0.30" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="40.00" y="544.00" width="12.00" height="12.00" rx="3.00" fill="#cb30e0" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="60.00" y="554.55" text-anchor="start" font-size="13.00" font-weight="400" fill="#272727">Restaurant D</text></g>
+</svg>

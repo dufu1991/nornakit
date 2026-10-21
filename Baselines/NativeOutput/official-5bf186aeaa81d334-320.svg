@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="881.08" height="190.00" viewBox="0 0 881.08 190.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 49.59 54.00 L 49.59 136.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 49.59 136.00 L 42.59 122.00 L 56.59 122.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-0"><title></title><rect x="15.98" y="86.00" width="67.22" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="49.59" y="99.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Inheritance</text>
+<g data-id="relation-1"><title></title><path d="M 161.61 54.00 L 161.61 136.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 161.61 136.00 L 156.61 129.00 L 161.61 122.00 L 166.61 129.00 Z" fill="#808080" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-1"><title></title><rect x="124.01" y="86.00" width="75.20" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="161.61" y="99.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Composition</text>
+<g data-id="relation-2"><title></title><path d="M 272.65 54.00 L 272.65 136.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 272.65 136.00 L 267.65 129.00 L 272.65 122.00 L 277.65 129.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-2"><title></title><rect x="236.17" y="86.00" width="72.96" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="272.65" y="99.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Aggregation</text>
+<g data-id="relation-3"><title></title><path d="M 383.93 54.00 L 383.93 136.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 383.93 136.00 L 380.57 128.00 L 387.29 128.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-3"><title></title><rect x="349.32" y="86.00" width="69.22" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="383.93" y="99.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Association</text>
+<g data-id="relation-4"><title></title><path d="M 494.72 54.00 L 494.72 136.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="edge-label-relation-4"><title></title><rect x="462.44" y="86.00" width="64.57" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="494.72" y="99.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Link(Solid)</text>
+<g data-id="relation-5"><title></title><path d="M 604.12 54.00 L 604.12 136.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 604.12 136.00 L 600.76 128.00 L 607.48 128.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-5"><title></title><rect x="566.51" y="86.00" width="75.21" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="604.12" y="99.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Dependency</text>
+<g data-id="relation-6"><title></title><path d="M 716.93 54.00 L 716.93 136.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 716.93 136.00 L 709.93 122.00 L 723.93 122.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-relation-6"><title></title><rect x="684.10" y="86.00" width="65.65" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="716.93" y="99.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Realization</text>
+<g data-id="relation-7"><title></title><path d="M 830.64 54.00 L 830.64 136.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="edge-label-relation-7"><title></title><rect x="790.95" y="86.00" width="79.37" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="830.64" y="99.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Link(Dashed)</text>
+<g data-id="classA"><title>classA</title><rect x="8.00" y="8.00" width="83.17" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="49.59" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classA</text>
+<g data-id="classB"><title>classB</title><rect x="8.05" y="136.00" width="83.06" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="49.59" y="162.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classB</text>
+<g data-id="classC"><title>classC</title><rect x="119.61" y="8.00" width="84.00" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="161.61" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classC</text>
+<g data-id="classD"><title>classD</title><rect x="119.52" y="136.00" width="84.17" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="161.61" y="162.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classD</text>
+<g data-id="classE"><title>classE</title><rect x="231.61" y="8.00" width="82.08" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="272.65" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classE</text>
+<g data-id="classF"><title>classF</title><rect x="231.80" y="136.00" width="81.70" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="272.65" y="162.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classF</text>
+<g data-id="classG"><title>classG</title><rect x="341.69" y="8.00" width="84.49" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="383.93" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classG</text>
+<g data-id="classH"><title>classH</title><rect x="341.72" y="136.00" width="84.42" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="383.93" y="162.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classH</text>
+<g data-id="classI"><title>classI</title><rect x="456.31" y="8.00" width="76.83" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="494.72" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classI</text>
+<g data-id="classJ"><title>classJ</title><rect x="454.14" y="136.00" width="81.16" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="494.72" y="162.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classJ</text>
+<g data-id="classK"><title>classK</title><rect x="562.57" y="8.00" width="83.09" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="604.12" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classK</text>
+<g data-id="classL"><title>classL</title><rect x="563.30" y="136.00" width="81.63" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="604.12" y="162.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classL</text>
+<g data-id="classM"><title>classM</title><rect x="673.66" y="8.00" width="86.53" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="716.93" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classM</text>
+<g data-id="classN"><title>classN</title><rect x="674.71" y="136.00" width="84.42" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="716.93" y="162.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classN</text>
+<g data-id="classO"><title>classO</title><rect x="788.19" y="8.00" width="84.89" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="830.64" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classO</text>
+<g data-id="classP"><title>classP</title><rect x="789.28" y="136.00" width="82.71" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="830.64" y="162.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">classP</text></g>
+</svg>

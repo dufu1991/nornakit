@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="552.00" height="660.00" viewBox="0 0 552.00 660.00" role="img" aria-label="时序图">
+<title>时序图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="24.00" y="132.00" width="504.00" height="390.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.22" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="lifeline-Service"><title></title><path d="M 170.00 82.00 L 170.00 550.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-DB"><title></title><path d="M 342.00 82.00 L 342.00 550.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="message-0"><title></title><path d="M 170.00 203.00 L 342.00 203.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="edge-label-message-0"><title>connect</title><rect x="231.07" y="194.00" width="49.86" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="256.00" y="207.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">connect</text>
+<path d="M 24.00 238.00 L 528.00 238.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/>
+<text x="44.00" y="260.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">option  Network timeout</text>
+<g data-id="message-1"><title></title><path d="M 170.00 303.00 L 254.90 303.00 C 266.68 303.00 273.90 310.22 273.90 322.00 L 273.90 322.00 C 273.90 333.78 266.68 341.00 254.90 341.00 L 170.00 341.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="edge-label-message-1"><title>Log error</title><rect x="194.00" y="294.00" width="55.90" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="221.95" y="307.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Log error</text>
+<path d="M 24.00 376.00 L 528.00 376.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/>
+<text x="44.00" y="398.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">option  Credentials rejected</text>
+<g data-id="message-2"><title></title><path d="M 170.00 441.00 L 303.00 441.00 C 314.78 441.00 322.00 448.22 322.00 460.00 L 322.00 460.00 C 322.00 471.78 314.78 479.00 303.00 479.00 L 170.00 479.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="edge-label-message-2"><title>Log different error</title><rect x="192.25" y="432.00" width="107.49" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="246.00" y="445.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Log different error</text>
+<rect x="24.00" y="132.00" width="61.07" height="26.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="54.53" y="148.50" text-anchor="middle" font-size="10.00" font-weight="400" fill="#272727">critical</text>
+<text x="106.00" y="151.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">Establish a connection to the DB</text>
+<g data-id="participant-Service"><title>Service</title><rect x="120.00" y="32.00" width="100.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="170.00" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Service</text>
+<g data-id="participant-Service"><title>Service</title><rect x="120.00" y="562.00" width="100.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="170.00" y="592.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Service</text>
+<g data-id="participant-DB"><title>DB</title><rect x="292.00" y="32.00" width="100.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="342.00" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">DB</text>
+<g data-id="participant-DB"><title>DB</title><rect x="292.00" y="562.00" width="100.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="342.00" y="592.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">DB</text></g>
+</svg>

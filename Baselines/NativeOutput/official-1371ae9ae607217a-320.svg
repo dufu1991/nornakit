@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="310.42" height="374.00" viewBox="0 0 310.42 374.00" role="img" aria-label="时序图">
+<title>时序图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="lifeline-API"><title></title><path d="M 81.00 118.00 L 81.00 264.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-DB"><title></title><path d="M 234.21 82.00 L 234.21 264.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="message-0"><title></title><path d="M 81.00 157.00 L 234.21 157.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 234.21 157.00 L 226.21 160.36 L 226.21 153.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-0"><title>Query</title><rect x="138.48" y="148.00" width="38.26" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="157.61" y="161.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Query</text>
+<g data-id="message-1"><title></title><path d="M 234.21 217.00 L 81.00 217.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 81.00 217.00 L 89.00 213.64 L 89.00 220.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-1"><title>Result</title><rect x="138.01" y="208.00" width="39.20" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="157.61" y="221.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">Result</text>
+<g data-id="participant-API"><title>External Name</title><ellipse cx="81.00" cy="58.00" rx="18.00" ry="18.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 49.00 38.00 L 49.00 78.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 49.00 58.00 L 63.00 58.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="81.00" y="101.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">External Name</text>
+<g data-id="participant-API"><title>External Name</title><ellipse cx="81.00" cy="302.00" rx="18.00" ry="18.00" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 49.00 282.00 L 49.00 322.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 49.00 302.00 L 63.00 302.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="81.00" y="345.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">External Name</text>
+<g data-id="participant-DB"><title></title><path d="M 174.00 40.60 C 174.00 29.13 294.42 29.13 294.42 40.60 L 294.42 73.40 C 294.42 84.87 174.00 84.87 174.00 73.40 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 174.00 40.60 C 174.00 52.07 294.42 52.07 294.42 40.60" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="234.21" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">External DB</text>
+<g data-id="participant-DB"><title></title><path d="M 174.00 284.60 C 174.00 273.13 294.42 273.13 294.42 284.60 L 294.42 317.40 C 294.42 328.87 174.00 328.87 174.00 317.40 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 174.00 284.60 C 174.00 296.07 294.42 296.07 294.42 284.60" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="234.21" y="306.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">External DB</text></g>
+</svg>

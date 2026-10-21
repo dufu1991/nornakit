@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="864.00" height="576.00" viewBox="0 0 864.00 576.00" role="img" aria-label="Wardley 地图">
+<title>Wardley 地图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="434.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">Evolution</text>
+<path d="M 76.00 76.00 L 76.00 496.00 C 76.00 508.40 83.60 516.00 96.00 516.00 L 816.00 516.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 76.00 76.00 L 76.00 516.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.00 4.00"/>
+<text x="168.50" y="542.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#808080">Genesis</text>
+<path d="M 261.00 76.00 L 261.00 516.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.00 4.00"/>
+<text x="353.50" y="542.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#808080">Custom-built</text>
+<path d="M 446.00 76.00 L 446.00 516.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.00 4.00"/>
+<text x="538.50" y="542.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#808080">Product</text>
+<path d="M 631.00 76.00 L 631.00 516.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.00 4.00"/>
+<text x="723.50" y="542.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#808080">Commodity</text>
+<path d="M 446.00 340.00 L 520.00 274.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 446.00 340.00 L 631.00 340.00" fill="none" stroke="#007aff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/>
+<path d="M 631.00 340.00 L 623.00 343.36 L 623.00 336.64 Z" fill="#007aff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 520.00 274.00 L 668.00 274.00" fill="none" stroke="#007aff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/>
+<path d="M 668.00 274.00 L 660.00 277.36 L 660.00 270.64 Z" fill="#007aff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="component-0"><title>Database</title><ellipse cx="446.00" cy="340.00" rx="5.00" ry="5.00" fill="#ffffff" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="446.00" y="364.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">Database</text>
+<g data-id="component-1"><title>API</title><ellipse cx="520.00" cy="274.00" rx="5.00" ry="5.00" fill="#ffffff" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="520.00" y="298.55" text-anchor="middle" font-size="13.00" font-weight="400" fill="#272727">API</text>
+<text x="42.00" y="72.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Visible</text>
+<text x="42.00" y="522.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080">Invisible</text></g>
+</svg>

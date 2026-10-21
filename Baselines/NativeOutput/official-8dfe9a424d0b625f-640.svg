@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="344.57" height="228.00" viewBox="0 0 344.57 228.00" role="img" aria-label="泳道图">
+<title>泳道图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><rect x="8.00" y="8.00" width="328.57" height="212.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="0.40" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="16.00" y="16.00" width="126.00" height="196.00" rx="8.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="0.12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="79.00" y="118.90" text-anchor="middle" font-size="14.00" font-weight="600" fill="#272727">Sales</text>
+<g data-id="lead"><title></title><path d="M 182.50 48.00 L 288.07 48.00 C 292.49 48.00 296.07 51.58 296.07 56.00 L 296.07 86.00 C 296.07 90.42 292.49 94.00 288.07 94.00 L 182.50 94.00 C 178.08 94.00 174.50 90.42 174.50 86.00 L 174.50 56.00 C 174.50 51.58 178.08 48.00 182.50 48.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="235.29" y="76.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Qualify lead</text>
+<g data-id="quote"><title></title><path d="M 174.00 134.00 L 296.57 134.00 C 300.99 134.00 304.57 137.58 304.57 142.00 L 304.57 172.00 C 304.57 176.42 300.99 180.00 296.57 180.00 L 174.00 180.00 C 169.58 180.00 166.00 176.42 166.00 172.00 L 166.00 142.00 C 166.00 137.58 169.58 134.00 174.00 134.00 Z" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="235.29" y="162.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Prepare quote</text></g>
+</svg>

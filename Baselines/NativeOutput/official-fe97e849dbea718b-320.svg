@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="882.70" height="279.00" viewBox="0 0 882.70 279.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 396.40 54.00 L 396.40 66.00 C 396.40 73.44 391.84 78.00 384.40 78.00 L 58.77 78.00 C 51.33 78.00 46.77 82.56 46.77 90.00 L 46.77 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 396.40 54.00 L 403.40 68.00 L 389.40 68.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 410.03 54.00 L 410.03 66.00 C 410.03 73.44 405.47 78.00 398.03 78.00 L 304.76 78.00 C 297.32 78.00 292.76 82.56 292.76 90.00 L 292.76 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 410.03 54.00 L 417.03 68.00 L 403.03 68.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-2"><title></title><path d="M 416.85 54.00 L 416.85 75.17 C 416.85 76.92 415.77 78.00 414.02 78.00 L 414.02 78.00 C 412.26 78.00 411.18 79.08 411.18 80.83 L 411.18 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 416.85 54.00 L 423.85 68.00 L 409.85 68.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-3"><title></title><path d="M 423.66 54.00 L 423.66 66.00 C 423.66 73.44 428.22 78.00 435.66 78.00 L 524.13 78.00 C 531.57 78.00 536.13 82.56 536.13 90.00 L 536.13 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 423.66 54.00 L 430.66 68.00 L 416.66 68.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-4"><title></title><path d="M 430.48 54.00 L 430.48 66.00 C 430.48 73.44 435.04 78.00 442.48 78.00 L 643.60 78.00 C 651.04 78.00 655.60 82.56 655.60 90.00 L 655.60 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 430.48 54.00 L 437.48 68.00 L 423.48 68.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-5"><title></title><path d="M 437.29 54.00 L 437.29 66.00 C 437.29 73.44 441.85 78.00 449.29 78.00 L 763.32 78.00 C 770.76 78.00 775.32 82.56 775.32 90.00 L 775.32 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 437.29 54.00 L 444.29 68.00 L 430.29 68.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-6"><title></title><path d="M 403.22 54.00 L 403.22 66.00 C 403.22 73.44 398.66 78.00 391.22 78.00 L 179.34 78.00 C 171.90 78.00 167.34 82.56 167.34 90.00 L 167.34 102.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 403.22 54.00 L 410.22 68.00 L 396.22 68.00 Z" fill="#ffffff" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-7"><title></title><path d="M 46.77 148.00 L 46.77 160.00 C 46.77 167.44 51.33 172.00 58.77 172.00 L 396.85 172.00 C 404.29 172.00 408.85 176.56 408.85 184.00 L 408.85 196.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 408.85 196.00 L 405.49 188.00 L 412.21 188.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-8"><title></title><path d="M 167.34 148.00 L 167.34 160.00 C 167.34 167.44 171.90 172.00 179.34 172.00 L 412.85 172.00 C 420.29 172.00 424.85 176.56 424.85 184.00 L 424.85 196.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 424.85 196.00 L 421.49 188.00 L 428.21 188.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-9"><title></title><path d="M 416.85 242.00 L 416.85 256.00 C 416.85 264.68 422.17 270.00 430.85 270.00 L 853.70 270.00 C 866.10 270.00 873.70 262.40 873.70 250.00 L 873.70 51.00 C 873.70 38.60 866.10 31.00 853.70 31.00 L 457.74 31.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 457.74 31.00 L 465.74 27.64 L 465.74 34.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="Shape"><title>Shape</title><rect x="375.96" y="8.00" width="81.78" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="416.85" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Shape</text>
+<g data-id="Circle"><title>Circle</title><rect x="8.00" y="102.00" width="77.53" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="46.77" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Circle</text>
+<g data-id="Square"><title>Square</title><rect x="249.14" y="102.00" width="87.23" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="292.76" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Square</text>
+<g data-id="Triangle"><title>Triangle</title><rect x="364.38" y="102.00" width="93.62" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="411.18" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Triangle</text>
+<g data-id="Hexagon"><title>Hexagon</title><rect x="485.99" y="102.00" width="100.27" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="536.13" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Hexagon</text>
+<g data-id="Ellipse"><title>Ellipse</title><rect x="614.27" y="102.00" width="82.67" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="655.60" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Ellipse</text>
+<g data-id="Diamond"><title>Diamond</title><rect x="724.94" y="102.00" width="100.76" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="775.32" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Diamond</text>
+<g data-id="Trapezoid"><title>Trapezoid</title><rect x="113.53" y="102.00" width="107.61" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="167.34" y="128.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Trapezoid</text>
+<g data-id="Canvas"><title>Canvas</title><rect x="372.35" y="196.00" width="88.99" height="46.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="416.85" y="222.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Canvas</text></g>
+</svg>

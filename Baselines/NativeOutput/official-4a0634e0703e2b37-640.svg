@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="888.30" height="726.00" viewBox="0 0 888.30 726.00" role="img" aria-label="时序图">
+<title>时序图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="lifeline-Customer"><title></title><path d="M 173.45 118.00 L 173.45 616.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-Web"><title></title><path d="M 349.06 82.00 L 349.06 616.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-API"><title></title><path d="M 533.77 82.00 L 533.77 616.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<g data-id="lifeline-Bank"><title></title><path d="M 718.30 82.00 L 718.30 616.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<rect x="528.77" y="252.00" width="10.00" height="192.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="message-0"><title></title><path d="M 173.45 157.00 L 349.06 157.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 349.06 157.00 L 341.06 160.36 L 341.06 153.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-0"><title>1. Place order</title><rect x="220.90" y="148.00" width="80.72" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="261.25" y="161.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">1. Place order</text>
+<g data-id="message-1"><title></title><path d="M 349.06 217.00 L 533.77 217.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 533.77 217.00 L 525.77 220.36 L 525.77 213.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-1"><title>2. POST /orders</title><rect x="394.61" y="208.00" width="93.61" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="441.41" y="221.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">2. POST /orders</text>
+<g data-id="message-2"><title></title><path d="M 538.77 289.00 L 718.30 289.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 718.30 289.00 L 710.30 292.36 L 710.30 285.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-2"><title>3. Authorize payment</title><rect x="566.38" y="280.00" width="124.30" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="628.53" y="293.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">3. Authorize payment</text>
+<g data-id="message-3"><title></title><path d="M 718.30 349.00 L 538.77 349.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 538.77 349.00 L 546.77 345.64 L 546.77 352.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-3"><title>4. Approved</title><rect x="592.17" y="340.00" width="72.73" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="628.53" y="353.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">4. Approved</text>
+<g data-id="message-4"><title></title><path d="M 528.77 409.00 L 349.06 409.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 349.06 409.00 L 357.06 405.64 L 357.06 412.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-4"><title>5. 201 Created</title><rect x="395.59" y="400.00" width="86.65" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="438.91" y="413.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">5. 201 Created</text>
+<g data-id="message-5"><title></title><path d="M 349.06 481.00 L 173.45 481.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.00 4.00"/></g>
+<path d="M 173.45 481.00 L 181.45 477.64 L 181.45 484.36 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="edge-label-message-5"><title>6. Order confirmed</title><rect x="205.52" y="472.00" width="111.46" height="18.00" rx="3.00" fill="#ffffff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="261.25" y="485.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#272727">6. Order confirmed</text>
+<rect x="346.37" y="516.00" width="199.01" height="68.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="445.87" y="545.10" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">One order, one transacti</text><text x="445.87" y="564.70" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">on</text>
+<g data-id="participant-Customer"><title>Customer</title><ellipse cx="173.45" cy="40.00" rx="8.00" ry="8.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 173.45 48.00 L 173.45 66.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 157.45 55.00 L 189.45 55.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 161.45 80.00 L 167.45 73.00 C 171.17 68.66 175.73 68.66 179.45 73.00 L 185.45 80.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="173.45" y="101.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Customer</text>
+<g data-id="participant-Customer"><title>Customer</title><ellipse cx="173.45" cy="636.00" rx="8.00" ry="8.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 173.45 644.00 L 173.45 662.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 157.45 651.00 L 189.45 651.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 161.45 676.00 L 167.45 669.00 C 171.17 664.66 175.73 664.66 179.45 669.00 L 185.45 676.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="173.45" y="697.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Customer</text>
+<g data-id="participant-Web"><title>Web app</title><rect x="298.89" y="32.00" width="100.34" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="349.06" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Web app</text>
+<g data-id="participant-Web"><title>Web app</title><rect x="298.89" y="628.00" width="100.34" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="349.06" y="658.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Web app</text>
+<g data-id="participant-API"><title>API gateway</title><rect x="471.23" y="32.00" width="125.06" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="533.77" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">API gateway</text>
+<g data-id="participant-API"><title>API gateway</title><rect x="471.23" y="628.00" width="125.06" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="533.77" y="658.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">API gateway</text>
+<g data-id="participant-Bank"><title>Bank</title><rect x="668.30" y="32.00" width="100.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="718.30" y="62.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Bank</text>
+<g data-id="participant-Bank"><title>Bank</title><rect x="668.30" y="628.00" width="100.00" height="50.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="718.30" y="658.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">Bank</text></g>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840.00" height="284.00" viewBox="0 0 840.00 284.00" role="img" aria-label="时间线">
+<title>时间线</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="420.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">History of Social Media Platform</text>
+<path d="M 20.00 150.00 L 820.00 150.00" fill="none" stroke="#808080" stroke-width="2.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 820.00 150.00 L 812.00 153.36 L 812.00 146.64 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="114.00" y="80.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080"></text>
+<rect x="24.00" y="96.00" width="180.00" height="42.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="114.00" y="122.25" text-anchor="middle" font-size="15.00" font-weight="400" fill="#272727">2002</text>
+<ellipse cx="114.00" cy="150.00" rx="5.00" ry="5.00" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="event-0-0"><title>LinkedIn</title><rect x="24.00" y="172.00" width="180.00" height="40.00" rx="8.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="0.15" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="114.00" y="196.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">LinkedIn</text>
+<text x="314.00" y="80.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080"></text>
+<rect x="224.00" y="96.00" width="180.00" height="42.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="314.00" y="122.25" text-anchor="middle" font-size="15.00" font-weight="400" fill="#272727">2004</text>
+<ellipse cx="314.00" cy="150.00" rx="5.00" ry="5.00" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="event-1-0"><title>Facebook</title><rect x="224.00" y="172.00" width="180.00" height="40.00" rx="8.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="0.15" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="314.00" y="196.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Facebook</text>
+<g data-id="event-1-1"><title>Google</title><rect x="224.00" y="222.00" width="180.00" height="40.00" rx="8.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="0.15" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="314.00" y="246.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Google</text>
+<text x="514.00" y="80.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080"></text>
+<rect x="424.00" y="96.00" width="180.00" height="42.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="514.00" y="122.25" text-anchor="middle" font-size="15.00" font-weight="400" fill="#272727">2005</text>
+<ellipse cx="514.00" cy="150.00" rx="5.00" ry="5.00" fill="#ff8d28" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="event-2-0"><title>YouTube</title><rect x="424.00" y="172.00" width="180.00" height="40.00" rx="8.00" fill="#ff8d28" stroke="none" stroke-width="1.00" opacity="0.15" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="514.00" y="196.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">YouTube</text>
+<text x="714.00" y="80.20" text-anchor="middle" font-size="12.00" font-weight="400" fill="#808080"></text>
+<rect x="624.00" y="96.00" width="180.00" height="42.00" rx="8.00" fill="#dcdcdc" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="714.00" y="122.25" text-anchor="middle" font-size="15.00" font-weight="400" fill="#272727">2006</text>
+<ellipse cx="714.00" cy="150.00" rx="5.00" ry="5.00" fill="#cb30e0" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="event-3-0"><title>Twitter</title><rect x="624.00" y="172.00" width="180.00" height="40.00" rx="8.00" fill="#cb30e0" stroke="none" stroke-width="1.00" opacity="0.15" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="714.00" y="196.90" text-anchor="middle" font-size="14.00" font-weight="400" fill="#272727">Twitter</text></g>
+</svg>

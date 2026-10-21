@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="211.28" height="528.00" viewBox="0 0 211.28 528.00" role="img" aria-label="状态图">
+<title>状态图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="relation-0"><title></title><path d="M 105.64 39.00 L 105.64 119.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 105.64 119.00 L 102.28 111.00 L 109.00 111.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-1"><title></title><path d="M 104.96 127.00 L 101.00 150.28 C 98.92 162.51 90.04 170.00 77.64 170.00 L 61.73 170.00 C 54.29 170.00 49.73 174.56 49.73 182.00 L 49.73 194.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 49.73 194.00 L 46.37 186.00 L 53.09 186.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-2"><title></title><path d="M 106.32 127.00 L 110.28 150.28 C 112.37 162.51 121.24 170.00 133.64 170.00 L 149.37 170.00 C 156.81 170.00 161.37 174.56 161.37 182.00 L 161.37 194.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 161.37 194.00 L 158.01 186.00 L 164.73 186.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-3"><title></title><path d="M 49.73 240.00 L 49.73 252.00 C 49.73 259.44 54.29 264.00 61.73 264.00 L 77.64 264.00 C 90.04 264.00 98.92 271.49 101.00 283.72 L 104.96 307.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 104.96 307.00 L 100.31 299.68 L 106.93 298.55 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-4"><title></title><path d="M 161.37 240.00 L 161.37 252.00 C 161.37 259.44 156.81 264.00 149.37 264.00 L 133.64 264.00 C 121.24 264.00 112.37 271.49 110.28 283.72 L 106.32 307.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 106.32 307.00 L 104.35 298.55 L 110.98 299.68 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-5"><title></title><path d="M 105.64 315.00 L 105.64 382.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 105.64 382.00 L 102.28 374.00 L 109.00 374.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="relation-6"><title></title><path d="M 105.64 428.00 L 105.64 489.00" fill="none" stroke="#808080" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M 105.64 489.00 L 102.28 481.00 L 109.00 481.00 Z" fill="#808080" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g data-id="fork_state"><title>fork</title><rect x="81.64" y="119.00" width="48.00" height="8.00" rx="2.00" fill="#272727" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="@initial_root"><title></title><ellipse cx="105.64" cy="30.00" rx="9.00" ry="9.00" fill="#272727" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="State2"><title>State2</title><rect x="8.00" y="194.00" width="83.45" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="49.73" y="222.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">State2</text>
+<g data-id="State3"><title>State3</title><rect x="119.45" y="194.00" width="83.83" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="161.37" y="222.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">State3</text>
+<g data-id="join_state"><title>join</title><rect x="81.64" y="307.00" width="48.00" height="8.00" rx="2.00" fill="#272727" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g data-id="State4"><title>State4</title><rect x="63.59" y="382.00" width="84.09" height="46.00" rx="10.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="105.64" y="410.60" text-anchor="middle" font-size="16.00" font-weight="400" fill="#272727">State4</text>
+<g data-id="@final_root"><title></title><ellipse cx="105.64" cy="498.00" rx="9.00" ry="9.00" fill="#ffffff" stroke="#272727" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<ellipse cx="105.64" cy="498.00" rx="5.00" ry="5.00" fill="#272727" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

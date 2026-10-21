@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="518.91" height="216.00" viewBox="0 0 518.91 216.00" role="img" aria-label="类图">
+<title>类图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><g data-id="Square~Shape~"><title>Square~Shape~</title><rect x="8.00" y="41.00" width="227.26" height="134.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="121.63" y="67.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Square~Shape~</text>
+<path d="M 8.00 79.00 L 235.26 79.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="98.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">int id</text><text x="18.00" y="117.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">List~int~ position</text>
+<path d="M 8.00 127.00 L 235.26 127.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18.00" y="146.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">setPoints(List~int~ points)</text><text x="18.00" y="165.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">getPoints() List~int~</text>
+<g data-id="Square"><title>Square</title><rect x="275.26" y="8.00" width="235.66" height="200.00" rx="8.00" fill="#ffffff" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="393.09" y="34.25" text-anchor="middle" font-size="15.00" font-weight="600" fill="#272727">Square</text>
+<path d="M 275.26 46.00 L 510.91 46.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="285.26" y="64.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">-List~string~ messages</text>
+<path d="M 275.26 74.00 L 510.91 74.00" fill="none" stroke="#e6e6e6" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="285.26" y="93.70" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+setMessages(List~string~ </text><text x="285.26" y="113.30" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">messages)</text><text x="285.26" y="132.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+getMessages() List~string~</text><text x="285.26" y="152.50" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">+getDistanceMatrix() List~Lis</text><text x="285.26" y="172.10" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">t~int~~</text></g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620.00" height="428.00" viewBox="0 0 620.00 428.00" role="img" aria-label="饼图">
+<title>饼图</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g font-family="-apple-system, BlinkMacSystemFont, sans-serif"><text x="310.00" y="35.00" text-anchor="middle" font-size="20.00" font-weight="600" fill="#272727">Fish caught by the crew</text>
+<g data-id="slice-0"><title></title><path d="M 205.00 244.00 L 205.00 84.00 C 273.78 84.00 334.87 127.96 356.72 193.18 C 378.56 258.40 356.28 330.29 301.37 371.72 C 246.47 413.15 171.23 414.85 114.50 375.95 C 57.78 337.04 32.27 266.24 51.14 200.10 Z" fill="#0088ff" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="267.64" y="331.92" text-anchor="middle" font-size="14.00" font-weight="400" fill="#000000">79.4%</text>
+<g data-id="slice-1"><title></title><path d="M 205.00 244.00 L 51.14 200.10 C 67.64 142.28 115.16 98.59 174.17 87.00 Z" fill="#34c759" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="134.61" y="172.34" text-anchor="middle" font-size="14.00" font-weight="400" fill="#000000">17.5%</text>
+<g data-id="slice-2"><title></title><path d="M 205.00 244.00 L 174.17 87.00 C 184.32 85.00 194.65 84.00 205.00 84.00 Z" fill="#ff8d28" stroke="#ffffff" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="402.00" y="101.00" width="14.00" height="14.00" rx="8.00" fill="#0088ff" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="428.00" y="112.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">ʻAhi  386</text>
+<rect x="402.00" y="131.00" width="14.00" height="14.00" rx="8.00" fill="#34c759" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="428.00" y="142.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">Mahimahi  85</text>
+<rect x="402.00" y="161.00" width="14.00" height="14.00" rx="8.00" fill="#ff8d28" stroke="none" stroke-width="1.00" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="428.00" y="172.90" text-anchor="start" font-size="14.00" font-weight="400" fill="#272727">Ono  15</text></g>
+</svg>
