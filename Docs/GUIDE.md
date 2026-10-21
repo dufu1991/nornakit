@@ -8,7 +8,7 @@
 
 ## 运行
 
-要求 macOS 14 或更高版本。应用工程使用 Xcode 26 或更高版本编译原生分层图标，Swift Package 要求 Swift 6。工程和 Swift Package 均已提供，无须安装第三方依赖。
+要求 macOS 14 或更高版本。应用工程使用 Xcode 27.1 或更高版本编译原生分层图标，Swift Package 要求 Swift 6。工程和 Swift Package 均已提供，无须安装第三方依赖。
 
 ```sh
 open Norna.xcodeproj

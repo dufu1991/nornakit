@@ -36,7 +36,7 @@ Release notes identify the signing status. Until Apple credentials are configure
 
 ## Build from source
 
-Use **Xcode 26 or later** for the complete app, or a **Swift 6** toolchain for the Swift package. No external package dependencies are required.
+Use **Xcode 27.1 or later** for the complete app, or a **Swift 6** toolchain for the Swift package. No external package dependencies are required.
 
 ```sh
 git clone https://github.com/dufu1991/norna.git

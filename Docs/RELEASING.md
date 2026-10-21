@@ -30,7 +30,7 @@ Use a stable three-part app version and increment the positive integer build num
 
 Commit the version file with the app changes and merge or push to `main`. Its version does not need to match a library tag. New app releases must be newer than all published Studio releases. An already published version is skipped; its assets are never overwritten.
 
-The workflow uses the `macos-26` runner with Xcode 26.4.1, cross-compiling `arm64` and `x86_64` for macOS 14. Both architectures are checked in the app executable and bundled framework. Tests run on the runner's Apple Silicon architecture; Intel output is cross-compiled.
+The workflow uses the GitHub-hosted `xcode-27` preview runner with Xcode 27.1, cross-compiling `arm64` and `x86_64` for macOS 14. The app icon uses the current Icon Composer document format and requires Xcode 27.1 to compile. Both architectures are checked in the app executable and bundled framework. Tests run on the runner's Apple Silicon architecture; Intel output is cross-compiled. `.github/actionlint.yaml` registers this documented hosted runner label with lint versions that do not yet recognize it.
 
 ## Signing setup
 
@@ -86,7 +86,7 @@ The packaging script writes to `build/release/`. It does not launch the app, cre
 ## References
 
 - [GitHub runner images](https://github.com/actions/runner-images)
-- [macOS 26 runner software](https://github.com/actions/runner-images/blob/main/images/macos/macos-26-arm64-Readme.md)
+- [Xcode 27 runner software](https://github.com/actions/runner-images/blob/main/images/macos/xcode-27-arm64-Readme.md)
 - [GitHub Actions workflow syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax)
 - [GitHub CLI release commands](https://cli.github.com/manual/gh_release)
 - [Apple notarization workflow](https://developer.apple.com/documentation/security/customizing-the-notarization-workflow)

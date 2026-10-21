@@ -36,7 +36,7 @@ Norna 是纯 Swift 图表引擎与原生 Mac 工作台。解析、文本测量�
 
 ## 从源码构建
 
-完整应用要求 **Xcode 26 或更高版本**，Swift Package 要求 **Swift 6**。项目没有外部包依赖。
+完整应用要求 **Xcode 27.1 或更高版本**，Swift Package 要求 **Swift 6**。项目没有外部包依赖。
 
 ```sh
 git clone https://github.com/dufu1991/norna.git
