@@ -38,13 +38,22 @@ enum StudioLocalization {
         let resources = Bundle.main
         #endif
         return Dictionary(uniqueKeysWithValues: ["en", "zh-Hans"].map { identifier in
-            guard let url = resources.url(forResource: identifier, withExtension: "lproj"),
-                  let bundle = Bundle(url: url) else {
+            guard let bundle = localizedBundle(identifier, in: resources) else {
                 preconditionFailure("Missing localization resources: \(identifier)")
             }
             return (identifier, bundle)
         })
     }()
+
+    static func localizedBundle(_ identifier: String, in resources: Bundle) -> Bundle? {
+        // SwiftPM and Xcode can emit different casing for language identifiers.
+        guard let directory = resources.localizations.first(where: {
+            $0.caseInsensitiveCompare(identifier) == .orderedSame
+        }), let url = resources.url(forResource: directory, withExtension: "lproj") else {
+            return nil
+        }
+        return Bundle(url: url)
+    }
 
     static func text(_ key: String, language: StudioLanguage = StudioLocalization.language) -> String {
         bundles[language.resolvedIdentifier()]!.localizedString(forKey: key, value: nil, table: nil)

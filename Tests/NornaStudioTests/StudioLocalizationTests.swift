@@ -25,6 +25,30 @@ final class StudioLocalizationTests: XCTestCase {
         XCTAssertEqual(StudioLanguage.simplifiedChinese.resolvedIdentifier(preferredLanguages: ["en"]), "zh-Hans")
     }
 
+    func testLocalizationDirectoryCaseAcrossBuildSystems() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        for identifier in ["zh-Hans", "zh-hans"] {
+            let bundleURL = directory.appendingPathComponent(UUID().uuidString + ".bundle")
+            let resources = bundleURL.appendingPathComponent("Contents/Resources")
+            for (language, value) in [("en", "English"), (identifier, "中文")] {
+                let localization = resources.appendingPathComponent(language + ".lproj")
+                try FileManager.default.createDirectory(at: localization, withIntermediateDirectories: true)
+                try "\"greeting\" = \"\(value)\";".write(to: localization.appendingPathComponent("Localizable.strings"), atomically: true, encoding: .utf8)
+            }
+            let info = ["CFBundleIdentifier": "dev.norna.localization-test.\(UUID().uuidString)",
+                        "CFBundlePackageType": "BNDL", "CFBundleDevelopmentRegion": "en"]
+            try PropertyListEncoder().encode(info).write(to: bundleURL.appendingPathComponent("Contents/Info.plist"))
+            let resourceBundle = try XCTUnwrap(Bundle(url: bundleURL))
+            let chinese = try XCTUnwrap(StudioLocalization.localizedBundle("zh-Hans", in: resourceBundle))
+            let english = try XCTUnwrap(StudioLocalization.localizedBundle("en", in: resourceBundle))
+            XCTAssertEqual(chinese.localizedString(forKey: "greeting", value: nil, table: nil), "中文")
+            XCTAssertEqual(english.localizedString(forKey: "greeting", value: nil, table: nil), "English")
+            XCTAssertNil(StudioLocalization.localizedBundle("fr", in: resourceBundle))
+        }
+    }
+
     func testDynamicCatalogTitlesHaveBothLanguages() {
         let titles = DiagramKind.allCases.map(\.title)
             + DiagramCategory.allCases.map(\.title)

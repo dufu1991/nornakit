@@ -37,7 +37,7 @@ jobs:
       - name: Validate release automation
         run: python3 -m unittest discover -s Tests/ReleaseTests -p 'test_*.py'
       - name: Test Swift package
-        run: swift test
+        run: swift test --build-system native
       - name: Build universal workbench
         run: |
           xcodebuild build \

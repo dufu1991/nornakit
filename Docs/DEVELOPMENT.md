@@ -35,6 +35,8 @@ xcodebuild build \
 
 运行工作台前，先关闭所有旧实例，包括临时目录中的调试副本。每次只启动最新代码构建的一个实例。
 
+CI 使用 Swift Package 的 `native` 构建方式。新版 Xcode 的默认构建方式可能不同；复现 CI 中的资源打包行为时，执行 `swift test --build-system native --scratch-path build/NativePackageTests`。本地化资源查找不依赖语言目录的大小写，兼容两种构建方式。
+
 ## 固定快照与临时报告
 
 `Baselines/` 保存用于回归的官方示例原文、原始 SVG、结果快照及图像对照。它们属于版本化验证资料，应随源码提交。`OfficialReference/` 中的文件由测试校验 SHA-256，`.gitattributes` 明确保留其原始字节，不做换行转换。
