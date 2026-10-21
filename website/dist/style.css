@@ -27,3 +27,7 @@
 
 .header .workbench-download{cursor:pointer;white-space:nowrap}
 @media(max-width:600px){.header{flex-wrap:wrap;height:auto;min-height:78px;padding-top:18px;padding-bottom:16px;row-gap:14px}.header nav{order:3;flex-basis:100%;justify-content:center}.header .preferences{margin-left:auto}}
+
+.header nav{align-items:center}
+.header .github-link{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.github-link svg{display:block;width:16px;height:16px;flex-shrink:0}
