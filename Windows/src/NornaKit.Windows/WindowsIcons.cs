@@ -17,6 +17,11 @@ public static class WindowsIcons
         ["cloud.sun.fill"] = "weather"
     };
 
-    public static string? Glyph(string name) => Glyphs.GetValueOrDefault(name);
+    public static string? Glyph(string name)
+    {
+        if (name.StartsWith("sf:", StringComparison.Ordinal))
+            return SfAliases.TryGetValue(name[3..], out var alias) ? Glyphs.GetValueOrDefault(alias) : null;
+        return Glyphs.GetValueOrDefault(name.StartsWith("win:", StringComparison.Ordinal) ? name[4..] : name);
+    }
     public static string? FromSfSymbol(string name) => SfAliases.GetValueOrDefault(name);
 }

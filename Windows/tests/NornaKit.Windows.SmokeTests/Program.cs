@@ -9,14 +9,16 @@ var directory = Path.GetFullPath(args.Length == 0 ? "artifacts/native-smoke" : a
 Directory.CreateDirectory(directory);
 using var device = new CanvasDevice(forceSoftwareRenderer: true);
 var text = new WindowsTextLayoutProvider(device);
-var layout = text.Layout(new([
-    new("NornaKit Windows 你好，世界。\n", new(Size: 20)),
-    new("Bold 粗体 ", new(Size: 20, Bold: true)),
-    new("Italic 斜体 ", new(Size: 20, Italic: true)),
-    new("render(source)\n", new(Size: 18, Monospace: true)),
-    new("Rich text 原生富文本 ", new(Size: 18, Underline: true, Strikethrough: true, Color: DiagramColor.FromHex("2563eb"))),
-    new(":win:check:", new(Size: 18), "check")
-], 560, LineHeight: 32));
+var layout = text.Layout(new(InlineText.Parse("NornaKit Windows 你好，世界。\n"
+    + "[b]Bold 粗体[/b] [i]Italic 斜体[/i] [code]render(source)[/code]\n"
+    + "[u][s][color=#2563eb]Rich text 原生富文本[/color][/s][/u] :win:check: :sf:doc.text:", new(Size: 20)),
+    560, LineHeight: 32));
+await File.WriteAllTextAsync(Path.Combine(directory, "layout.json"), JsonSerializer.Serialize(new
+{
+    layout.Size,
+    runs = layout.Runs.Select(run => new { run.Text, run.Font, run.Baseline, run.Width, run.Style, run.Glyphs, run.ClusterMap, run.IsIcon })
+}, new JsonSerializerOptions { WriteIndented = true }));
+Console.WriteLine("Native text runs: " + JsonSerializer.Serialize(layout.Runs.Select(run => run.Text)));
 if (!layout.Runs.Any(run => run.Text.Contains('你'))) throw new InvalidOperationException("DirectWrite dropped Chinese text.");
 if (!layout.Runs.Any(run => run.IsIcon && !run.GlyphPath.IsEmpty)) throw new InvalidOperationException("The native icon has no paths.");
 if (layout.Runs.Any(run => !File.Exists(run.Font.FilePath))) throw new InvalidOperationException("The actual system font file could not be resolved.");

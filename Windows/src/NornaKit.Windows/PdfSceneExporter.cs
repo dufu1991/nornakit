@@ -65,6 +65,7 @@ internal static class PdfSceneExporter
                         }
                         // ActualText preserves ligatures and multi-glyph clusters in copy/search results.
                         output.Append($"/Span << /ActualText <FEFF{Unicode(run.Text)}> >> BDC\n");
+                        if (run.Font.SimulatedBold) output.Append(Color(color, true));
                         var x = origin.X;
                         var rightToLeft = (run.BidiLevel & 1) != 0;
                         for (var index = 0; index < run.Glyphs.Length; index++)
@@ -73,7 +74,8 @@ internal static class PdfSceneExporter
                             if (rightToLeft) x -= glyph.Advance;
                             var unicode = ClusterText(run, index);
                             var cid = font.Register(glyph.Index, unicode, glyph.Advance / run.Style.Size * 1000);
-                            output.Append($"BT {font.Name} {N(run.Style.Size)} Tf 1 0 0 -1 {N(x + glyph.AdvanceOffset)} {N(origin.Y - glyph.AscenderOffset)} Tm <{cid:X4}> Tj ET\n");
+                            var shear = run.Font.SimulatedItalic ? .21255656 : 0;
+                            output.Append($"BT {font.Name} {N(run.Style.Size)} Tf {(run.Font.SimulatedBold ? "2" : "0")} Tr {N(run.Style.Size * .02)} w 1 0 {N(shear)} -1 {N(x + glyph.AdvanceOffset)} {N(origin.Y - glyph.AscenderOffset)} Tm <{cid:X4}> Tj ET\n");
                             if (!rightToLeft) x += glyph.Advance;
                         }
                         output.Append("EMC\n");

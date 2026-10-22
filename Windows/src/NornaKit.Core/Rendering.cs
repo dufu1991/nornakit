@@ -35,7 +35,8 @@ public sealed record TextLayoutRequest(ImmutableArray<InlineRun> Runs, double Ma
     TextAlignment Alignment = TextAlignment.Leading, double LineHeight = 24);
 
 /// <summary>Identifies the exact font face selected by the native text layout engine.</summary>
-public sealed record FontFaceReference(string Family, string FilePath, int FaceIndex = 0, bool Bold = false, bool Italic = false);
+public sealed record FontFaceReference(string Family, string FilePath, int FaceIndex = 0, bool Bold = false,
+    bool Italic = false, bool SimulatedBold = false, bool SimulatedItalic = false);
 
 public readonly record struct PreparedGlyph(int Index, double Advance, double AdvanceOffset, double AscenderOffset);
 

@@ -42,6 +42,12 @@ var xml = XDocument.Parse(svg);
 check(xml.Descendants().Any(element => element.Name.LocalName == "text" && element.Value == "中文 <A> & \"B\""), "SVG must preserve Unicode and escape XML.");
 check(svg.Contains("data-id=\"a&amp;b\"", StringComparison.Ordinal), "SVG must escape attribute values.");
 check(ScenePaths.Ellipse(new(0, 0, 20, 20)).Count(command => command is PathCommand.Cubic) == 4, "Ellipse must have four cubic segments.");
+var rich = InlineText.Parse("[b]Hello [i]世界[/i][/b] :sf:doc.text: :win:check@palette(#2563eb,#f59e0b):");
+check(rich[0].Style.Bold && rich[1].Style.Bold && rich[1].Style.Italic, "Nested native text styles were lost.");
+check(rich.Single(run => run.IconName == "sf:doc.text").Text == ":sf:doc.text:", "The original icon token must be retained.");
+check(rich.Single(run => run.IconName == "win:check").Style.Color == DiagramColor.FromHex("2563eb"), "Windows icons must use the first palette color.");
+check(string.Concat(InlineText.Parse("[b]unclosed").Select(run => run.Text)) == "[b]unclosed", "Unclosed markup must remain literal.");
+check(string.Concat(InlineText.Parse("[b][i]invalid[/b][/i]").Select(run => run.Text)) == "[b][i]invalid[/b][/i]", "Misnested markup must remain literal.");
 
 // The synthetic collection contains two faces sharing the same table data.
 var collection = new byte[140];

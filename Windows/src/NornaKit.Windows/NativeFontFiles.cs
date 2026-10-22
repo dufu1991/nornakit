@@ -42,7 +42,8 @@ internal static unsafe class NativeFontFiles
             var index = ((delegate* unmanaged[Stdcall]<nint, uint>)Table(nativeFace)[5])(nativeFace);
             var family = face.FamilyNames.TryGetValue("en-us", out var english) ? english : face.FamilyNames.Values.First();
             return new(family, new string(path, 0, (int)pathLength), checked((int)index),
-                face.Weight.Weight >= 600, face.Style != global::Windows.UI.Text.FontStyle.Normal);
+                face.Weight.Weight >= 600, face.Style != global::Windows.UI.Text.FontStyle.Normal,
+                face.Simulations.HasFlag(CanvasFontSimulations.Bold), face.Simulations.HasFlag(CanvasFontSimulations.Oblique));
         }
         finally
         {

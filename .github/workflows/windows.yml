@@ -2,7 +2,7 @@ name: Windows native validation
 
 on:
   push:
-    branches: [main, 'codex/windows-native*']
+    branches: [main]
     paths: ['Windows/**', '.github/workflows/windows.yml']
   pull_request:
     paths: ['Windows/**', '.github/workflows/windows.yml']
@@ -19,6 +19,7 @@ jobs:
   core:
     name: Core contracts
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     defaults:
       run:
         working-directory: Windows
@@ -43,6 +44,7 @@ jobs:
             platform: ARM64
             rid: win-arm64
     runs-on: ${{ matrix.runner }}
+    timeout-minutes: 20
     defaults:
       run:
         working-directory: Windows
