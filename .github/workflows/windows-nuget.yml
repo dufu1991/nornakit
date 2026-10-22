@@ -39,6 +39,10 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw 'Core packaging failed.' }
           dotnet pack src/NornaKit.Windows -c Release --no-restore -p:PackageVersion=$env:PACKAGE_VERSION -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o artifacts/nuget
           if ($LASTEXITCODE -ne 0) { throw 'Windows packaging failed.' }
+      - name: Verify independent NuGet consumer
+        env:
+          PACKAGE_VERSION: ${{ inputs.version }}
+        run: ./scripts/verify-packages.ps1 -Platform x64 -Version $env:PACKAGE_VERSION
       - uses: actions/upload-artifact@v7
         with:
           name: windows-nuget

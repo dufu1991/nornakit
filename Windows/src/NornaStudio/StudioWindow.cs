@@ -40,6 +40,7 @@ internal sealed partial class StudioWindow : Window
     public StudioWindow(StudioSettings initialSettings)
     {
         settings = initialSettings;
+        if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is { Length: > 0 }) preview.ForceSoftwareRenderer = true;
         preview.RenderingFailed += error =>
         {
             if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is not { Length: > 0 } directory) return;

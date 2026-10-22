@@ -109,6 +109,14 @@ jobs:
           global-json-file: Windows/global.json
       - name: Restore native workbench
         run: dotnet restore src/NornaStudio -p:Platform=${{ matrix.platform }} --locked-mode
+      - name: Pack independent libraries
+        run: |
+          dotnet pack src/NornaKit.Core -c Release --no-restore -p:Platform=${{ matrix.platform }} -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o artifacts/nuget
+          if ($LASTEXITCODE -ne 0) { throw 'Core packaging failed.' }
+          dotnet pack src/NornaKit.Windows -c Release --no-restore -p:Platform=${{ matrix.platform }} -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o artifacts/nuget
+          if ($LASTEXITCODE -ne 0) { throw 'Windows packaging failed.' }
+      - name: Verify independent NuGet consumer
+        run: ./scripts/verify-packages.ps1 -Platform ${{ matrix.platform }}
       - name: Build native workbench
         run: dotnet publish src/NornaStudio --no-restore -c Release -p:Platform=${{ matrix.platform }} -o artifacts/studio
       - name: Launch native workbench

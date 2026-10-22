@@ -76,6 +76,9 @@ public sealed partial class DiagramPreview : UserControl, IDisposable
     public bool ShowGrid
     { get => grid; set { grid = value; canvas.Invalidate(); } }
     public double ZoomFactor => zoom;
+    /// <summary>Use WARP for deterministic rendering on machines without a hardware graphics adapter.</summary>
+    public bool ForceSoftwareRenderer
+    { get => canvas.ForceSoftwareRenderer; set => canvas.ForceSoftwareRenderer = value; }
     public void Fit()
     {
         fitOnResize = true;
