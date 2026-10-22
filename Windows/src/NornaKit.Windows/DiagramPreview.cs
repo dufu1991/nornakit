@@ -15,7 +15,11 @@ namespace NornaKit.Windows;
 /// <summary>A native Win2D preview. View transforms and its grid never modify the scene.</summary>
 public sealed class DiagramPreview : IDisposable
 {
-    public UserControl Element { get; } = new();
+    public UserControl Element { get; } = new()
+    {
+        Background = new SolidColorBrush(global::Windows.UI.Color.FromArgb(0, 0, 0, 0)),
+        HorizontalContentAlignment = HorizontalAlignment.Stretch, VerticalContentAlignment = VerticalAlignment.Stretch
+    };
     public double ActualWidth => Element.ActualWidth;
     public double ActualHeight => Element.ActualHeight;
     private XamlRoot? XamlRoot => Element.XamlRoot;
@@ -157,6 +161,6 @@ public sealed class DiagramPreview : IDisposable
     {
         if (disposed) return; disposed = true; panning = false;
         if (observedRoot is not null) observedRoot.Changed -= RootChanged;
-        observedRoot = null; ReleaseSurface(); Element.Content = null;
+        observedRoot = null; scene = null; ReleaseSurface(); Element.Content = null;
     }
 }

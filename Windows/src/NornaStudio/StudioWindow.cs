@@ -123,9 +123,9 @@ internal sealed partial class StudioWindow : Window
         categories = new ComboBox { HorizontalAlignment = HorizontalAlignment.Stretch, Header = L("Category", "分类") };
         categories.Items.Add(new ComboBoxItem { Content = L("All diagrams", "全部图形"), Tag = "all" });
         foreach (var category in ExampleCatalog.Kinds.Select(kind => kind.Category).Distinct()) categories.Items.Add(new ComboBoxItem { Content = CategoryName(category), Tag = category }); categories.SelectedIndex = 0;
-        categories.SelectionChanged += (_, _) => { if (!rebuilding) PopulateKinds(); }; library.Children.Add(categories);
-        kinds = new ComboBox { HorizontalAlignment = HorizontalAlignment.Stretch, Header = L("Diagram", "图形") }; kinds.SelectionChanged += (_, _) => { if (!rebuilding) PopulateExamples(); }; Grid.SetRow(kinds, 1); library.Children.Add(kinds);
-        var filter = new AutoSuggestBox { PlaceholderText = L("Search examples", "搜索示例") }; filter.TextChanged += (_, _) => { search = filter.Text; PopulateExamples(); }; Grid.SetRow(filter, 2); library.Children.Add(filter);
+        categories.SelectionChanged += (_, _) => { if (!rebuilding) DispatcherQueue.TryEnqueue(PopulateKinds); }; library.Children.Add(categories);
+        kinds = new ComboBox { HorizontalAlignment = HorizontalAlignment.Stretch, Header = L("Diagram", "图形") }; kinds.SelectionChanged += (_, _) => { if (!rebuilding) DispatcherQueue.TryEnqueue(PopulateExamples); }; Grid.SetRow(kinds, 1); library.Children.Add(kinds);
+        var filter = new AutoSuggestBox { PlaceholderText = L("Search examples", "搜索示例") }; filter.TextChanged += (_, args) => { if (args.Reason != AutoSuggestionBoxTextChangeReason.UserInput) return; search = filter.Text; DispatcherQueue.TryEnqueue(PopulateExamples); }; Grid.SetRow(filter, 2); library.Children.Add(filter);
         examples = new ListView { SelectionMode = ListViewSelectionMode.Single, IsItemClickEnabled = true };
         examples.ItemClick += (_, e) => { if (e.ClickedItem is ListViewItem { Tag: DiagramExample example }) { preview.Fit(); settings = settings with { SourcePath = null }; editor.Text = example.Source(Language); UpdateTitle(); } };
         Grid.SetRow(examples, 3); library.Children.Add(examples); workspace.Children.Add(library);

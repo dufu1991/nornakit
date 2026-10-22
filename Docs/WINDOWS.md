@@ -60,7 +60,7 @@ hostGrid.Children.Add(preview.Element);
 preview.Fit();
 ```
 
-`DiagramPreview.Element` 是宿主添加到布局中的原生 UserControl，无须从库加载 XAML 资源。控件支持拖动平移、滚轮缩放、方向键、加减键，以及按 `0` 适应窗口。宿主永久移除控件时调用 `Dispose()`，释放 Win2D 画布。控件的缩放、平移与网格只影响预览，不写入场景，不参与导出。预览使用 Win2D CanvasImageSource，根据 XamlRoot 的 DPI 和画布尺寸重建表面，在设备丢失后重新创建绘图资源。图形本身保留设备无关的场景路径。CI 使用 WARP 软件绘制并等待场景实际完成首帧，普通运行默认使用硬件绘制。
+`DiagramPreview.Element` 是宿主添加到布局中的原生 UserControl，无须从库加载 XAML 资源。预览的创建、属性更新和释放在宿主的 UI 线程进行。控件支持拖动平移、滚轮缩放、方向键、加减键，以及按 `0` 适应窗口。宿主永久移除控件时调用 `Dispose()`，释放 Win2D 画布。控件的缩放、平移与网格只影响预览，不写入场景，不参与导出。预览使用 Win2D CanvasImageSource，根据 XamlRoot 的 DPI 和画布尺寸重建表面，在设备丢失后重新创建绘图资源。图形本身保留设备无关的场景路径。CI 使用 WARP 软件绘制并等待场景实际完成首帧，普通运行默认使用硬件绘制。
 
 ## 导出与平台差异
 
