@@ -7,6 +7,8 @@
     <Description>Windows native text layout, drawing and export for NornaKit.</Description>
     <IsPackable>true</IsPackable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CsWinRTAotOptimizerEnabled>OptIn</CsWinRTAotOptimizerEnabled>
+    <CsWinRTAotWarningLevel>1</CsWinRTAotWarningLevel>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../NornaKit.Core/NornaKit.Core.csproj" />

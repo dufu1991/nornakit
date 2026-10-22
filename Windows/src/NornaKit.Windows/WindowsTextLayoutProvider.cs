@@ -7,7 +7,7 @@ using global::Windows.UI.Text;
 
 namespace NornaKit.Windows;
 
-public sealed class WindowsTextLayoutProvider(CanvasDevice device) : ITextLayoutProvider
+public sealed partial class WindowsTextLayoutProvider(CanvasDevice device) : ITextLayoutProvider
 {
     public PreparedText Layout(TextLayoutRequest request, CancellationToken cancellationToken = default)
     {
@@ -53,7 +53,8 @@ public sealed class WindowsTextLayoutProvider(CanvasDevice device) : ITextLayout
         return new(new(Math.Max(0, bounds.Width), Math.Max(request.LineHeight, bounds.Height)), receiver.Runs.ToImmutableArray());
     }
 
-    private sealed class TextReceiver(CanvasDevice device, List<(int Start, int Length, InlineRun Run)> ranges,
+    [WinRT.GeneratedWinRTExposedType]
+    private sealed partial class TextReceiver(CanvasDevice device, List<(int Start, int Length, InlineRun Run)> ranges,
         CancellationToken cancellationToken) : ICanvasTextRenderer
     {
         public List<PreparedTextRun> Runs { get; } = [];
@@ -92,7 +93,8 @@ public sealed class WindowsTextLayoutProvider(CanvasDevice device) : ITextLayout
     }
 }
 
-internal sealed class GeometryReceiver : ICanvasPathReceiver
+[WinRT.GeneratedWinRTExposedType]
+internal sealed partial class GeometryReceiver : ICanvasPathReceiver
 {
     public List<PathCommand> Commands { get; } = [];
     private static DiagramPoint Point(Vector2 point) => new(point.X, point.Y);
