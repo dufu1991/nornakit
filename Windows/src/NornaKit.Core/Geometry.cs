@@ -23,6 +23,9 @@ public readonly record struct DiagramRect(double X, double Y, double Width, doub
     public DiagramRect Inset(double x, double y) => new(X + x, Y + y, Width - 2 * x, Height - 2 * y);
     public bool Contains(DiagramPoint point) => point.X >= Left && point.X <= Right
         && point.Y >= Top && point.Y <= Bottom;
+    public bool Contains(DiagramRect other) => other.Left >= Left && other.Right <= Right && other.Top >= Top && other.Bottom <= Bottom;
+    public DiagramRect Intersection(DiagramRect other) => new(Math.Max(Left, other.Left), Math.Max(Top, other.Top),
+        Math.Max(0, Math.Min(Right, other.Right) - Math.Max(Left, other.Left)), Math.Max(0, Math.Min(Bottom, other.Bottom) - Math.Max(Top, other.Top)));
     public bool Intersects(DiagramRect other) => Left < other.Right && Right > other.Left
         && Top < other.Bottom && Bottom > other.Top;
     public DiagramRect Union(DiagramRect other) => new(Math.Min(Left, other.Left), Math.Min(Top, other.Top),

@@ -50,6 +50,47 @@ var scene = new DiagramScene(new(608, Math.Max(200, layout.Size.Height + 48)), "
     new(new VectorGeometry.Text(layout, new(24, 24), new(SceneColorRole.Foreground)), new())
 ]);
 var exporter = new DiagramExporter(device);
+var renderer = new NativeDiagramRenderer(text);
+var regression = new List<string>();
+var rendered = 0; var rejected = 0;
+foreach (var example in OfficialExampleCatalog.Snapshot.Examples)
+{
+    var expected = OfficialExampleCatalog.Results[example.Id];
+    try
+    {
+        var artifact = await renderer.RenderAsync(example.Source);
+        if (expected.Status != "rendered" || artifact.Type != expected.Kind) regression.Add($"{example.Id}: unexpected render {artifact.Type}.");
+        else rendered++;
+    }
+    catch (DiagramRenderException error)
+    {
+        if (expected.Status == "rendered" || error.Code != expected.Code || error.Line != expected.Line) regression.Add($"{example.Id}: expected {expected.Status}/{expected.Code}@{expected.Line}, got {error.Code}@{error.Line}: {error.Message}");
+        else rejected++;
+    }
+}
+await File.WriteAllTextAsync(Path.Combine(directory, "regression.json"), JsonSerializer.Serialize(new { rendered, rejected, failures = regression }, new JsonSerializerOptions { WriteIndented = true }));
+if (regression.Count > 0 || rendered != 304 || rejected != 296) throw new InvalidOperationException(string.Join('\n', regression.Prepend($"Native baseline: {rendered} rendered, {rejected} rejected.")));
+foreach (var example in ExampleCatalog.All)
+foreach (var language in Enum.GetValues<DiagramExampleLanguage>())
+{
+    var artifact = await renderer.RenderAsync(example.Source(language), new(MaxWidth: 720));
+    if (artifact.Type != example.Kind) throw new InvalidOperationException($"Changed native sample kind: {example.Id}.");
+    using var target = new CanvasRenderTarget(device, (float)Math.Min(1600, artifact.Width), (float)Math.Min(1200, artifact.Height), 96);
+    using var drawing = target.CreateDrawingSession();
+    var palette = WindowsPalette.Resolve(CanvasAppearance.Light);
+    drawing.Clear(global::Windows.UI.Color.FromArgb(255, palette.Background.R, palette.Background.G, palette.Background.B));
+    var scale = Math.Min(target.Size.Width / artifact.Width, target.Size.Height / artifact.Height);
+    drawing.Transform = Matrix3x2.CreateScale((float)scale);
+    Win2DScenePainter.Draw(drawing, artifact.Scene, palette);
+}
+foreach (var kind in Enum.GetValues<DiagramKind>())
+{
+    var example = ExampleCatalog.Starter(kind.Id());
+    var artifact = await renderer.RenderAsync(example.Source(DiagramExampleLanguage.SimplifiedChinese), new(MaxWidth: 720));
+    var sampleDirectory = Path.Combine(directory, "diagrams"); Directory.CreateDirectory(sampleDirectory);
+    foreach (var format in new[] { DiagramExportFormat.Png, DiagramExportFormat.Svg, DiagramExportFormat.Pdf })
+        await File.WriteAllBytesAsync(Path.Combine(sampleDirectory, $"{kind.Id()}.{format.ToString().ToLowerInvariant()}"), await exporter.ExportAsync(artifact.Scene, WindowsPalette.Resolve(CanvasAppearance.Light), new(Format: format, Scale: 1)));
+}
 foreach (var appearance in new[] { CanvasAppearance.Light, CanvasAppearance.Dark })
 {
     var palette = WindowsPalette.Resolve(appearance);

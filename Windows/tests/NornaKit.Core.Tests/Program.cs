@@ -122,4 +122,79 @@ check(markers.Edges[0].StartMarker == EdgeMarker.Arrow && markers.Edges[1].EndMa
 rejects(() => MermaidFlowchartParser.Parse("flowchart TD\nsubgraph G[Group]\nA --> B"), "syntax");
 rejects(() => MermaidFlowchartParser.Parse("flowchart TD\nA --> B\nstyle A fill:red"), "unsupported-syntax");
 
+var renderer = new NativeDiagramRenderer(new FixedTextLayoutProvider());
+foreach (var example in ExampleCatalog.All.Where(example => example.Kind == "flowchart"))
+foreach (var language in Enum.GetValues<DiagramExampleLanguage>())
+foreach (var width in new double?[] { null, 360, 720 })
+{
+    var result = await renderer.RenderAsync(example.Source(language), new(MaxWidth: width));
+    check(result.Scene.Nodes.Length > 0 && result.Scene.Primitives.Length > 0, $"Flow layout lost nodes: {example.Id}.");
+    check(result.Scene.Nodes.All(node => node.Frame.IsFinite && node.Frame.Width > 0 && node.Frame.Height > 0), "Node frames must be finite and positive.");
+    check(result.Scene.Edges.All(edge => edge.Points.Length >= 2 && edge.Points.All(point => double.IsFinite(point.X) && double.IsFinite(point.Y))), "Edge routes must be finite and connected.");
+    var model = MermaidFlowchartParser.Parse(example.Source(language));
+    check(result.Scene.Groups.All(group => model.Nodes.Where(node => node.ParentId == group.Id).All(node => group.Frame.Contains(result.Scene.Nodes.Single(placed => placed.Id == node.Id).Frame))), "A subgraph must enclose its direct children.");
+}
+var straight = await renderer.RenderAsync("flowchart TD\nA --> B --> C");
+check(straight.Scene.Nodes.Select(node => node.Frame.Center.X).Distinct().Count() == 1, "Serial flow chains must align.");
+var feedbackArtifact = await renderer.RenderAsync("flowchart TD\nA --> B\nB --> A\nA --> A");
+check(feedbackArtifact.Scene.Edges.Length == 3 && feedbackArtifact.Scene.Edges.All(edge => edge.Points.Length >= 2), "Feedback edges and self loops must be routed.");
+var implemented = Enum.GetValues<DiagramKind>().Select(kind => kind.Id()).ToArray();
+foreach (var example in ExampleCatalog.All.Where(example => implemented.Contains(example.Kind) && example.Kind != "flowchart"))
+foreach (var language in Enum.GetValues<DiagramExampleLanguage>())
+foreach (var width in new double?[] { null, 360, 720 })
+{
+    var result = await renderer.RenderAsync(example.Source(language), new(MaxWidth: width));
+    check(result.Type == example.Kind && result.Scene.Primitives.Length > 0, $"The {example.Id} sample must render as {example.Kind}.");
+    check(result.Width is > 0 and <= 250_000 && result.Height is > 0 and <= 250_000, "Diagram bounds must be exportable.");
+}
+var regressionFailures = new List<string>();
+foreach (var example in OfficialExampleCatalog.Snapshot.Examples.Where(example => implemented.Contains(example.Kind)))
+{
+    var expected = OfficialExampleCatalog.Results[example.Id];
+    try
+    {
+        var result = await renderer.RenderAsync(example.Source);
+        if (expected.Status != "rendered") regressionFailures.Add($"{example.Id}: expected {expected.Code}@{expected.Line}, rendered {result.Type}.");
+        else check(result.Type == expected.Kind, $"Official example {example.Id} changed kind.");
+    }
+    catch (DiagramRenderException error)
+    {
+        if (expected.Status == "rendered" || error.Code != expected.Code || error.Line != expected.Line) regressionFailures.Add($"{example.Id}: expected {expected.Status}/{expected.Code}@{expected.Line}, got {error.Code}@{error.Line}: {error.Message}");
+        else count++;
+    }
+}
+check(regressionFailures.Count == 0, string.Join('\n', regressionFailures));
+rejects(() => renderer.RenderAsync("flowchart TD\nA\u0001").GetAwaiter().GetResult(), "syntax");
+using (var cancellation = new CancellationTokenSource())
+{
+    cancellation.Cancel();
+    try { await renderer.RenderAsync("flowchart TD\nA --> B", cancellationToken: cancellation.Token); }
+    catch (OperationCanceledException) { count++; }
+}
+
 Console.WriteLine($"Passed {count} Core assertions.");
+
+sealed class FixedTextLayoutProvider : ITextLayoutProvider
+{
+    public PreparedText Layout(TextLayoutRequest request, CancellationToken cancellationToken = default)
+    {
+        var runs = new List<PreparedTextRun>(); double x = 0, y = request.LineHeight * .8, width = 0;
+        foreach (var run in request.Runs)
+        foreach (var rune in run.Text.EnumerateRunes())
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            if (rune.Value == '\n') { width = Math.Max(width, x); x = 0; y += request.LineHeight; continue; }
+            var advance = run.Style.Size * (rune.Value >= 0x2e80 ? 1 : .5);
+            if (x > 0 && x + advance > request.MaxWidth) { width = Math.Max(width, x); x = 0; y += request.LineHeight; }
+            runs.Add(new(rune.ToString(), run.Style, new("Fixture Sans", "fixture.ttf"), new(x, y), advance, [], [], 0, []));
+            x += advance;
+        }
+        width = Math.Max(width, x);
+        if (request.Alignment != TextAlignment.Leading)
+        {
+            var lineWidths = runs.GroupBy(run => run.Baseline.Y).ToDictionary(group => group.Key, group => group.Max(run => run.Baseline.X + run.Width));
+            runs = runs.Select(run => run with { Baseline = run.Baseline.Offset((request.MaxWidth - lineWidths[run.Baseline.Y]) / (request.Alignment == TextAlignment.Center ? 2 : 1), 0) }).ToList();
+        }
+        return new(new(width, y + request.LineHeight * .2), runs.ToImmutableArray());
+    }
+}

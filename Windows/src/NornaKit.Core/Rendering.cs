@@ -12,6 +12,9 @@ public sealed class DiagramRenderException(string message, string code, int? lin
 
 public sealed record DiagramLayoutOptions(double? MaxWidth = null, bool AutoDirection = true, double DirectionBreakpoint = 640)
 {
+    internal double LabelWidth => Math.Min(200, Math.Max(80, (MaxWidth ?? 640) - 100));
+    internal bool Compact => MaxWidth is { } width && width < DirectionBreakpoint;
+    internal double Width(double natural, double minimum = 320) => MaxWidth is { } width ? Math.Min(natural, Math.Max(minimum, width)) : natural;
     public void Validate()
     {
         if (MaxWidth is { } width && (!double.IsFinite(width) || width is < 160 or > 250_000)
