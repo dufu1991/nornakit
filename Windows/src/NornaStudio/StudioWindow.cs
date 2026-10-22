@@ -28,6 +28,7 @@ internal sealed partial class StudioWindow : Window
     private DiagramPreview preview = null!;
     private TextBlock status = null!;
     private Button diagnostic = null!;
+    private InfoBar errors = null!;
     private AppBarButton export = null!, copy = null!;
     private ComboBox categories = null!, kinds = null!;
     private ListView examples = null!;
@@ -65,10 +66,11 @@ internal sealed partial class StudioWindow : Window
     private void HighContrastChanged(AccessibilitySettings sender, object args) => DispatcherQueue.TryEnqueue(() => preview.Palette = Palette);
     private void Build()
     {
-        if (Content is not null) preview.Dispose();
         rebuilding = true;
+        if (Content is not null) preview.Dispose();
         root = new() { Background = (Brush)Application.Current.Resources["ApplicationPageBackgroundThemeBrush"], RequestedTheme = settings.Appearance switch { CanvasAppearance.Light => ElementTheme.Light, CanvasAppearance.Dark => ElementTheme.Dark, _ => ElementTheme.Default } };
         root.RowDefinitions.Add(new() { Height = GridLength.Auto }); root.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) }); root.RowDefinitions.Add(new() { Height = GridLength.Auto });
+        root.RowDefinitions.Add(new() { Height = GridLength.Auto });
         var toolbar = new CommandBar { DefaultLabelPosition = CommandBarDefaultLabelPosition.Right, IsOpen = false };
         toolbar.Content = new TextBlock { Text = "Norna Studio", FontSize = 20, FontWeight = Microsoft.UI.Text.FontWeights.SemiBold, Margin = new(20, 12, 24, 12) };
         toolbar.PrimaryCommands.Add(Command(L("Open", "打开"), Symbol.OpenFile, OpenAsync, VirtualKey.O));
@@ -101,12 +103,13 @@ internal sealed partial class StudioWindow : Window
         editor.TextChanged += (_, _) => { if (!rebuilding) _ = RunAsync(RenderAsync); }; Grid.SetRow(editor, 1); sourcePanel.Children.Add(editor); Grid.SetColumn(sourcePanel, 1); workspace.Children.Add(sourcePanel);
         var previewPanel = new Grid { RowSpacing = 8, Padding = new(12, 12, 16, 12) }; previewPanel.RowDefinitions.Add(new() { Height = GridLength.Auto }); previewPanel.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) });
         preview = new() { Palette = Palette, ShowGrid = settings.Grid }; Grid.SetRow(preview, 1); previewPanel.Children.Add(preview);
-        preview.SizeChanged += (sender, e) => { if (!rebuilding && !session.Busy && session.Artifact is not null && Math.Abs(e.NewSize.Width - e.PreviousSize.Width) > 32) _ = RunAsync(RenderAsync); };
+        preview.SizeChanged += (sender, e) => { if (!closing && !rebuilding && !session.Busy && session.Artifact is not null && Math.Abs(e.NewSize.Width - e.PreviousSize.Width) > 32) _ = RunAsync(RenderAsync); };
         var controls = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8 };
         controls.Children.Add(ActionButton(L("Fit", "适应窗口"), () => preview.Fit())); controls.Children.Add(ActionButton("−", () => preview.Zoom(1 / 1.2))); controls.Children.Add(ActionButton("+", () => preview.Zoom(1.2)));
         var grid = new ToggleSwitch { Header = L("Grid", "网格"), IsOn = settings.Grid, OnContent = "", OffContent = "", VerticalAlignment = VerticalAlignment.Center }; grid.Toggled += (_, _) => { preview.ShowGrid = grid.IsOn; settings = settings with { Grid = grid.IsOn }; _ = RunAsync(SaveWorkspaceAsync); }; controls.Children.Add(grid); previewPanel.Children.Add(controls); Grid.SetColumn(previewPanel, 2); workspace.Children.Add(previewPanel);
         var footer = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 16, Padding = new(16, 8, 16, 8) }; status = new() { VerticalAlignment = VerticalAlignment.Center }; footer.Children.Add(status);
         diagnostic = new() { Visibility = Visibility.Collapsed }; diagnostic.Click += (_, _) => LocateDiagnostic(); footer.Children.Add(diagnostic); Grid.SetRow(footer, 2); root.Children.Add(footer);
+        errors = new InfoBar { Severity = InfoBarSeverity.Error, IsClosable = true, Margin = new(16, 0, 16, 12) }; Grid.SetRow(errors, 3); root.Children.Add(errors);
         Content = root; PopulateKinds(); rebuilding = false; Refresh(); UpdateTitle();
     }
     private string CategoryName(string category) => category switch { "process" => L("Process", "流程"), "relationships" => L("Relationships", "关系"), "charts" => L("Charts", "数据图表"), "planning" => L("Planning", "规划"), "development" => L("Development", "开发"), "hierarchy" => L("Hierarchy", "层级"), "architecture" => L("Architecture", "架构"), _ => category };
@@ -143,7 +146,9 @@ internal sealed partial class StudioWindow : Window
     }
     private void LocateDiagnostic()
     {
-        if (session.Diagnostic?.Line is not { } line) return; var rows = editor.Text.Split('\n'); var index = rows.Take(Math.Max(0, line - 1)).Sum(row => row.Length + 1) + Math.Max(0, (session.Diagnostic.Column ?? 1) - 1); index = Math.Min(index, editor.Text.Length); editor.Focus(FocusState.Programmatic); editor.Select(index, Math.Min(rows.ElementAtOrDefault(line - 1)?.Length ?? 0, editor.Text.Length - index));
+        if (session.Diagnostic?.Line is not { } line) return;
+        var selection = SourceSelection.Locate(editor.Text, line, session.Diagnostic.Column);
+        editor.Focus(FocusState.Programmatic); editor.Select(selection.Start, selection.Length);
     }
     private Task SaveWorkspaceAsync() => store.SaveAsync(settings with { Source = editor.Text });
     private void UpdateTitle() => Title = (settings.SourcePath is null ? L("Untitled", "未命名") : Path.GetFileName(settings.SourcePath)) + " — Norna Studio";
@@ -194,7 +199,11 @@ internal sealed partial class StudioWindow : Window
     {
         // Expected UI, file and render failures are shown here; the Kit never discards them.
         try { await action(); }
-        catch (Exception error) when (error is IOException or UnauthorizedAccessException or JsonException or DiagramRenderException or DecoderFallbackException)
-        { await new ContentDialog { XamlRoot = root.XamlRoot, Title = L("Unable to complete the action", "无法完成操作"), Content = error.Message, CloseButtonText = L("Close", "关闭") }.ShowAsync(); }
+        catch (Exception error) when (error is IOException or UnauthorizedAccessException or JsonException or DiagramRenderException or DecoderFallbackException or System.Runtime.InteropServices.COMException)
+        {
+            errors.Title = L("Unable to complete the action", "无法完成操作"); errors.Message = error.Message; errors.IsOpen = true;
+            if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is { Length: > 0 } directory)
+            { Directory.CreateDirectory(directory); await File.WriteAllTextAsync(Path.Combine(directory, "action-failure.txt"), error.ToString()); }
+        }
     }
 }

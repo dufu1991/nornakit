@@ -11,6 +11,7 @@
     <CsWinRTAotWarningLevel>1</CsWinRTAotWarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="../../../THIRD_PARTY_NOTICES.md" Pack="true" PackagePath="" />
     <InternalsVisibleTo Include="NornaKit.Windows.SmokeTests" />
     <ProjectReference Include="../NornaKit.Core/NornaKit.Core.csproj" />
     <PackageReference Include="Microsoft.WindowsAppSDK" />

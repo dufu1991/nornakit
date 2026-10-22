@@ -85,6 +85,28 @@ jobs:
             Windows/artifacts/native-smoke/diagrams/*.svg
             Windows/artifacts/native-smoke/regression.json
           retention-days: 7
+
+  studio:
+    name: Native workbench (${{ matrix.platform }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-2025
+            platform: x64
+          - runner: windows-11-arm
+            platform: ARM64
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: Windows
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: Windows/global.json
       - name: Restore native workbench
         run: dotnet restore src/NornaStudio -p:Platform=${{ matrix.platform }} --locked-mode
       - name: Build native workbench
@@ -92,9 +114,14 @@ jobs:
       - name: Launch native workbench
         run: |
           $env:NORNA_STUDIO_SMOKE = Join-Path $pwd 'artifacts/studio-smoke'
+          $started = Get-Date
           $process = Start-Process './artifacts/studio/NornaStudio.exe' -PassThru
           if (-not $process.WaitForExit(90000)) { $process.Kill(); throw 'Studio startup timed out.' }
-          if ($process.ExitCode -ne 0) { throw "Studio exited with $($process.ExitCode)." }
+          if ($process.ExitCode -ne 0) {
+            New-Item $env:NORNA_STUDIO_SMOKE -ItemType Directory -Force | Out-Null
+            Get-WinEvent -FilterHashtable @{ LogName = 'Application'; StartTime = $started.AddSeconds(-1) } -ErrorAction SilentlyContinue | Where-Object { $_.Message -match 'NornaStudio' } | Format-List TimeCreated, Id, Message | Out-String | Set-Content "$env:NORNA_STUDIO_SMOKE/events.txt"
+            throw "Studio exited with $($process.ExitCode)."
+          }
           if (-not (Test-Path "$env:NORNA_STUDIO_SMOKE/studio.json")) { throw 'Studio did not complete startup verification.' }
       - uses: actions/upload-artifact@v7
         if: always()

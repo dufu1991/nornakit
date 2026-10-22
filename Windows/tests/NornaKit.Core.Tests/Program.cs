@@ -139,7 +139,8 @@ check(straight.Scene.Nodes.Select(node => node.Frame.Center.X).Distinct().Count(
 var feedbackArtifact = await renderer.RenderAsync("flowchart TD\nA --> B\nB --> A\nA --> A");
 check(feedbackArtifact.Scene.Edges.Length == 3 && feedbackArtifact.Scene.Edges.All(edge => edge.Points.Length >= 2), "Feedback edges and self loops must be routed.");
 var titledPie = await renderer.RenderAsync("---\ntitle: Front matter\n---\npie title Body title\n\"A\": 2\n\"B\": 3");
-check(titledPie.Scene.Primitives.Where(primitive => primitive.Geometry is VectorGeometry.Text).SelectMany(primitive => ((VectorGeometry.Text)primitive.Geometry).Layout.Runs).All(run => !run.Text.Contains("Front matter", StringComparison.Ordinal)), "An inline pie title must take precedence over front matter.");
+var pieText = string.Concat(titledPie.Scene.Primitives.Where(primitive => primitive.Geometry is VectorGeometry.Text).SelectMany(primitive => ((VectorGeometry.Text)primitive.Geometry).Layout.Runs).Select(run => run.Text));
+check(pieText.Contains("Body title", StringComparison.Ordinal) && !pieText.Contains("Front matter", StringComparison.Ordinal), "An inline pie title must take precedence over front matter.");
 var implemented = Enum.GetValues<DiagramKind>().Select(kind => kind.Id()).ToArray();
 foreach (var example in ExampleCatalog.All.Where(example => implemented.Contains(example.Kind) && example.Kind != "flowchart"))
 foreach (var language in Enum.GetValues<DiagramExampleLanguage>())
@@ -170,9 +171,13 @@ rejects(() => renderer.RenderAsync("flowchart TD\nA\u0001").GetAwaiter().GetResu
 using (var cancellation = new CancellationTokenSource())
 {
     cancellation.Cancel();
+    var wasCancelled = false;
     try { await renderer.RenderAsync("flowchart TD\nA --> B", cancellationToken: cancellation.Token); }
-    catch (OperationCanceledException) { count++; }
+    catch (OperationCanceledException) { wasCancelled = true; }
+    check(wasCancelled, "Cancellation must use the standard cancellation exception.");
 }
+check(NornaStudio.SourceSelection.Locate("第一行\r错误位置\r第三行", 2, 3) == (6, 2), "CR source locations must match the native editor.");
+check(NornaStudio.SourceSelection.Locate("first\r\nsecond\nthird", 3, null) == (14, 5), "Mixed line endings must preserve UTF-16 source offsets.");
 
 var delayedRenderer = new ControlledRenderer();
 using (var studio = new NornaStudio.StudioSession(delayedRenderer, (_, _) => Task.CompletedTask))

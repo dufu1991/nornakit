@@ -27,7 +27,35 @@ New-Item $OutputDirectory -ItemType Directory -Force | Out-Null
 $OutputDirectory = (Resolve-Path $OutputDirectory).Path
 $commit = & git -C $repository rev-parse HEAD
 if ($LASTEXITCODE -ne 0) { throw 'Cannot determine the source commit.' }
-Copy-Item (Join-Path $repository 'LICENSE') (Join-Path $PublishDirectory 'LICENSE.txt')
+Copy-Item (Join-Path $repository 'LICENSE') (Join-Path $PublishDirectory 'NornaKit-LICENSE.txt')
+Copy-Item (Join-Path $repository 'THIRD_PARTY_NOTICES.md') $PublishDirectory
+$assets = Get-Content (Join-Path $root 'src/NornaStudio/obj/project.assets.json') -Raw | ConvertFrom-Json
+$licenseDirectory = Join-Path $PublishDirectory 'licenses'
+New-Item $licenseDirectory -ItemType Directory -Force | Out-Null
+$packageRoots = @($assets.packageFolders.PSObject.Properties.Name)
+$copyLicense = {
+    param([string]$PackageDirectory, [string]$Name)
+    $destination = Join-Path $licenseDirectory $Name
+    New-Item $destination -ItemType Directory -Force | Out-Null
+    Get-ChildItem $PackageDirectory -File | Where-Object { $_.Name -match '^(LICENSE|COPYING|NOTICE|THIRD.PARTY)' -or $_.Extension -eq '.nuspec' } | Copy-Item -Destination $destination
+    foreach ($folder in @('license', 'licenses')) {
+        $source = Join-Path $PackageDirectory $folder
+        if (Test-Path $source) { Copy-Item $source $destination -Recurse -Force }
+    }
+}
+foreach ($library in $assets.libraries.PSObject.Properties) {
+    if ($library.Value.type -ne 'package') { continue }
+    foreach ($packageRoot in $packageRoots) {
+        $package = Join-Path $packageRoot $library.Value.path
+        if (Test-Path $package) { & $copyLicense $package ($library.Name -replace '/', '-'); break }
+    }
+}
+$runtimeConfig = Get-Content (Join-Path $PublishDirectory 'NornaStudio.runtimeconfig.json') -Raw | ConvertFrom-Json
+$runtime = @($runtimeConfig.runtimeOptions.includedFrameworks | Where-Object { $_.name -eq 'Microsoft.NETCore.App' })[0]
+foreach ($packageRoot in $packageRoots) {
+    $package = Join-Path $packageRoot "microsoft.netcore.app.runtime.win-$architecture/$($runtime.version)"
+    if (Test-Path $package) { & $copyLicense $package "dotnet-$($runtime.version)-$architecture"; break }
+}
 $manifest = @{ product = 'Norna Studio'; version = $version; architecture = $architecture; commit = $commit; minimumWindowsBuild = 22000; runtimeDeployment = 'self-contained'; builtAt = [DateTime]::UtcNow.ToString('O') }
 $manifest | ConvertTo-Json | Set-Content (Join-Path $PublishDirectory 'build-info.json') -Encoding utf8
 $base = "NornaStudio-windows-$architecture-$version"

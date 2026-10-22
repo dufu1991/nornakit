@@ -4,6 +4,23 @@ namespace NornaStudio;
 
 internal sealed record ExportSnapshot(DiagramScene Scene, DiagramPalette Palette, string Source);
 
+internal static class SourceSelection
+{
+    public static (int Start, int Length) Locate(string source, int line, int? column)
+    {
+        var offset = 0; var current = 1;
+        while (offset < source.Length && current < line)
+        {
+            var character = source[offset++];
+            if (character == '\r') { if (offset < source.Length && source[offset] == '\n') offset++; current++; }
+            else if (character == '\n') current++;
+        }
+        var end = offset; while (end < source.Length && source[end] is not ('\r' or '\n')) end++;
+        var start = offset + Math.Clamp((column ?? 1) - 1, 0, end - offset);
+        return (start, end - start);
+    }
+}
+
 internal sealed class StudioSession(IDiagramRenderer renderer, Func<TimeSpan, CancellationToken, Task>? delay = null) : IDisposable
 {
     private readonly Func<TimeSpan, CancellationToken, Task> pause = delay ?? Task.Delay;
