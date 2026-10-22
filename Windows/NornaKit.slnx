@@ -7,6 +7,7 @@
     <Project Path="src/NornaKit.Core/NornaKit.Core.csproj" />
     <Project Path="src/NornaKit.Windows/NornaKit.Windows.csproj" />
   </Folder>
+  <Folder Name="/Applications/"><Project Path="src/NornaStudio/NornaStudio.csproj" /></Folder>
   <Folder Name="/Tests/">
     <Project Path="tests/NornaKit.Core.Tests/NornaKit.Core.Tests.csproj" />
     <Project Path="tests/NornaKit.Windows.SmokeTests/NornaKit.Windows.SmokeTests.csproj" />

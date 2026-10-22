@@ -73,3 +73,30 @@ jobs:
           name: windows-native-${{ matrix.platform }}
           path: Windows/artifacts/native-smoke
           if-no-files-found: warn
+          retention-days: 7
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: windows-visuals-${{ matrix.platform }}
+          path: |
+            Windows/artifacts/native-smoke/diagrams/*.png
+            Windows/artifacts/native-smoke/diagrams/*.svg
+            Windows/artifacts/native-smoke/regression.json
+          retention-days: 7
+      - name: Restore native workbench
+        run: dotnet restore src/NornaStudio -p:Platform=${{ matrix.platform }} --locked-mode
+      - name: Build native workbench
+        run: dotnet publish src/NornaStudio --no-restore -c Release -p:Platform=${{ matrix.platform }} -o artifacts/studio
+      - name: Launch native workbench
+        run: |
+          $env:NORNA_STUDIO_SMOKE = Join-Path $pwd 'artifacts/studio-smoke'
+          $process = Start-Process './artifacts/studio/NornaStudio.exe' -PassThru
+          if (-not $process.WaitForExit(90000)) { $process.Kill(); throw 'Studio startup timed out.' }
+          if ($process.ExitCode -ne 0) { throw "Studio exited with $($process.ExitCode)." }
+          if (-not (Test-Path "$env:NORNA_STUDIO_SMOKE/studio.json")) { throw 'Studio did not complete startup verification.' }
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: windows-studio-${{ matrix.platform }}
+          path: Windows/artifacts/studio-smoke
+          retention-days: 7

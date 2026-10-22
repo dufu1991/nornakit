@@ -172,7 +172,33 @@ using (var cancellation = new CancellationTokenSource())
     catch (OperationCanceledException) { count++; }
 }
 
+var delayedRenderer = new ControlledRenderer();
+using (var studio = new NornaStudio.StudioSession(delayedRenderer, (_, _) => Task.CompletedTask))
+{
+    var first = studio.UpdateAsync("first", new());
+    check(!studio.CanExport && studio.Busy, "Editing must immediately disable export.");
+    var latest = studio.UpdateAsync("latest", new());
+    delayedRenderer.Complete("latest", new(scene with { Kind = "latest" })); await latest;
+    check(studio.CanExport && studio.Artifact?.Type == "latest", "The latest preview must become exportable.");
+    var frozen = studio.Snapshot(palette);
+    delayedRenderer.Complete("first", new(scene with { Kind = "stale" })); await first;
+    check(studio.Artifact?.Type == "latest", "A renderer that ignores cancellation must not overwrite the latest preview.");
+    var failed = studio.UpdateAsync("invalid", new());
+    check(!studio.CanExport && frozen.Source == "latest" && frozen.Scene.Kind == "latest", "An open export snapshot must survive subsequent edits.");
+    delayedRenderer.Fail("invalid", new("Bad token", "syntax", 4, 2)); await failed;
+    check(studio.Diagnostic is { Code: "syntax", Line: 4, Column: 2 } && !studio.CanExport, "Source diagnostics must disable stale export.");
+}
+
 Console.WriteLine($"Passed {count} Core assertions.");
+
+sealed class ControlledRenderer : IDiagramRenderer
+{
+    private readonly Dictionary<string, TaskCompletionSource<DiagramArtifact>> requests = [];
+    public Task<DiagramArtifact> RenderAsync(string source, DiagramLayoutOptions? options = null, CancellationToken cancellationToken = default)
+    { var request = new TaskCompletionSource<DiagramArtifact>(); requests.Add(source, request); return request.Task; }
+    public void Complete(string source, DiagramArtifact artifact) => requests[source].SetResult(artifact);
+    public void Fail(string source, DiagramRenderException error) => requests[source].SetException(error);
+}
 
 sealed class FixedTextLayoutProvider : ITextLayoutProvider
 {

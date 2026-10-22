@@ -223,6 +223,7 @@ internal static class PdfSceneExporter
     {
         var dictionary = new PdfDictionary(document);
         dictionary.CreateStream(bytes);
+        dictionary.Stream.Zip();
         document.Internals.AddObject(dictionary);
         return dictionary;
     }

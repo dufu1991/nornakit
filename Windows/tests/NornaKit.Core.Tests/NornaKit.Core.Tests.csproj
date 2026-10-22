@@ -6,5 +6,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../../src/NornaKit.Core/NornaKit.Core.csproj" />
+    <Compile Include="../../src/NornaStudio/StudioSession.cs" Link="StudioSession.cs" />
   </ItemGroup>
 </Project>
