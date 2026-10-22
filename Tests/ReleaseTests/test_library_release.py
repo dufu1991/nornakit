@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "Scripts/Release"))
 import library_release as library
-from version import read_version
+from version import package_metadata, read_version
 
 
 class LibraryReleaseTests(unittest.TestCase):
@@ -47,6 +47,20 @@ class LibraryReleaseTests(unittest.TestCase):
         for source in [self.changelog, "## 1.2.3\n\n", "## 1.2.30\nOther version.\n"]:
             with self.assertRaises(ValueError):
                 library.changelog_notes(source, "1.2.3")
+
+    def test_companion_uses_the_library_source_instead_of_the_workflow_commit(self):
+        path = self.directory / "Studio-Version.xcconfig"
+        path.write_text("MARKETING_VERSION = 0.1.1\nCURRENT_PROJECT_VERSION = 7\n")
+        environment = {"GITHUB_SHA": "workflow-commit", "NORNA_PACKAGE_SOURCE_COMMIT": "library-commit",
+                       "NORNA_KIT_VERSION": "0.1.0", "NORNA_PACKAGE_SIGNING": "false"}
+        metadata = package_metadata(environment, path)
+        self.assertEqual(metadata["commit"], "library-commit")
+        self.assertEqual(metadata["version"], "0.1.1")
+        self.assertEqual(metadata["build"], "7")
+        self.assertEqual(metadata["kitVersion"], "0.1.0")
+        self.assertEqual(metadata["releaseTag"], "v0.1.0")
+        del environment["NORNA_PACKAGE_SOURCE_COMMIT"]
+        self.assertEqual(package_metadata(environment, path)["commit"], "workflow-commit")
 
     @patch("library_release.read_library_version")
     @patch("github_release.subprocess.check_output")

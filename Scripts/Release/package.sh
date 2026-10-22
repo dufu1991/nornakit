@@ -132,19 +132,8 @@ import os
 from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(os.environ['NORNA_RELEASE_TOOLS_ROOT']) / 'Scripts/Release'))
-from version import read_version
-metadata = read_version() | {
-    'commit': os.environ.get('GITHUB_SHA', 'working-tree'),
-    'architectures': ['arm64'],
-    'minimumMacOS': '14.0',
-    'signing': 'developer-id-notarized' if os.environ['NORNA_PACKAGE_SIGNING'] == 'true' else 'ad-hoc',
-}
-if os.environ.get('NORNA_KIT_VERSION'):
-    kit_version = os.environ['NORNA_KIT_VERSION']
-    import re
-    if not re.fullmatch(r'(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)', kit_version):
-        raise SystemExit('NORNA_KIT_VERSION must be a stable X.Y.Z version')
-    metadata |= {'kitVersion': kit_version, 'releaseTag': 'v' + kit_version}
+from version import package_metadata
+metadata = package_metadata(os.environ)
 directory = Path(os.environ['NORNA_PACKAGE_OUTPUT'])
 (directory / 'release.json').write_text(json.dumps(metadata, indent=2) + '\n', encoding='utf-8')
 signing_note = ('Signed with Developer ID and notarized by Apple.' if metadata['signing'] == 'developer-id-notarized'

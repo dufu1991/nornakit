@@ -104,7 +104,7 @@ jobs:
       - name: Build the companion from the released Kit source
         if: steps.kit.outputs.publish == 'true'
         env:
-          GITHUB_SHA: ${{ steps.kit.outputs.target }}
+          NORNA_PACKAGE_SOURCE_COMMIT: ${{ steps.kit.outputs.target }}
           NORNA_KIT_VERSION: ${{ steps.kit.outputs.version }}
           NORNA_PACKAGE_SOURCE_ROOT: ${{ github.workspace }}/release-source
           NORNA_PACKAGE_OUTPUT: ${{ github.workspace }}/build/release
@@ -127,6 +127,7 @@ jobs:
             build/release/release.json
           if-no-files-found: error
           compression-level: 0
+          overwrite: true
           retention-days: 14
       - name: Publish Kit release notes and companion assets
         if: steps.kit.outputs.publish == 'true'
@@ -183,6 +184,7 @@ jobs:
             build/release/release.json
           if-no-files-found: error
           compression-level: 0
+          overwrite: true
           retention-days: 14
       - name: Publish complete packages to GitHub Releases
         if: steps.version.outputs.publish == 'true'

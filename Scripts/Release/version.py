@@ -30,6 +30,21 @@ def write_outputs(values, destination):
         output.writelines(f"{key}={value}\n" for key, value in values.items())
 
 
+def package_metadata(environment, path=CONFIG):
+    metadata = read_version(path) | {
+        "commit": environment.get("NORNA_PACKAGE_SOURCE_COMMIT", environment.get("GITHUB_SHA", "working-tree")),
+        "architectures": ["arm64"],
+        "minimumMacOS": "14.0",
+        "signing": "developer-id-notarized" if environment["NORNA_PACKAGE_SIGNING"] == "true" else "ad-hoc",
+    }
+    if environment.get("NORNA_KIT_VERSION"):
+        version = environment["NORNA_KIT_VERSION"]
+        if not re.fullmatch(r"(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)", version):
+            raise ValueError("NORNA_KIT_VERSION must be a stable X.Y.Z version")
+        metadata |= {"kitVersion": version, "releaseTag": "v" + version}
+    return metadata
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--field", choices=["version", "build", "tag"])

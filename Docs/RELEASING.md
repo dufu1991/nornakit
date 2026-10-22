@@ -24,7 +24,7 @@ Do not copy the Kit version into Studio's marketing version. Increment Studio's 
 
 [CI and NornaKit Release](../.github/workflows/ci.yml) runs release automation tests, the Swift suite, an Apple Silicon Release build, and website checks before publication. PRs receive checks only. Manual dispatch with `release` enabled retries the configured Kit version on `main`.
 
-The Kit job resolves an existing tag to its immutable source commit, or uses the checked main commit when the tag is new. It checks out and tests that exact library source again, then builds the companion from that source with the separately configured Studio version and build. This also supports the already-created `v0.1.0` tag without moving it to a later CI commit.
+The Kit job resolves an existing tag to its immutable source commit, or uses the checked main commit when the tag is new. It checks out and tests that exact library source again, then builds the companion from that source with the separately configured Studio version and build. Companion metadata uses `NORNA_PACKAGE_SOURCE_COMMIT` for that source; GitHub's immutable `GITHUB_SHA` continues to identify the workflow commit. This also supports the already-created `v0.1.0` tag without moving it to a later CI commit.
 
 Release notes start with **NornaKit X.Y.Z** and the exact library changelog section. Studio normally receives only a short companion version line. When app-specific notes are needed, add a matching `## X.Y.Z` section to `Docs/STUDIO_CHANGELOG.md`; only the current app version's section is appended.
 

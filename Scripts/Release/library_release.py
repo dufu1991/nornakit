@@ -67,8 +67,9 @@ def validate_companion(directory, metadata, target, studio):
         raise ValueError("The companion package is incomplete")
     manifest = json.loads((directory / "release.json").read_text(encoding="utf-8"))
     expected = {**studio, "commit": target, "kitVersion": metadata["version"], "releaseTag": metadata["tag"]}
-    if any(manifest[key] != value for key, value in expected.items()):
-        raise ValueError("The companion package does not match the Kit release and independent Studio version")
+    mismatched = [key for key, value in expected.items() if manifest[key] != value]
+    if mismatched:
+        raise ValueError("The companion package metadata differs in: " + ", ".join(mismatched))
     if manifest["architectures"] != ["arm64"] or manifest["minimumMacOS"] != "14.0":
         raise ValueError("The companion requires the arm64 macOS 14 package")
     if manifest["signing"] not in ["ad-hoc", "developer-id-notarized"]:
