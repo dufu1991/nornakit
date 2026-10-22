@@ -6,7 +6,6 @@
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <OutputType>WinExe</OutputType>
     <UseWinUI>true</UseWinUI>
-    <EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition>
     <DefineConstants>$(DefineConstants);DISABLE_XAML_GENERATED_MAIN</DefineConstants>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <WindowsPackageType>None</WindowsPackageType>
@@ -22,7 +21,6 @@
     <Product>Norna Studio for Windows</Product>
   </PropertyGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml" />
     <ProjectReference Include="../NornaKit.Windows/NornaKit.Windows.csproj" />
   </ItemGroup>
 </Project>

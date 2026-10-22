@@ -1,8 +1,10 @@
 # 图形支持范围
 
-截至 2026 年 10 月 21 日，NornaKit 已为 33 类图形提供纯 Swift 原生入口、基础解析、专用布局和示例。项目没有运行上游 JavaScript 或 Mermaid 解析器。第三方参考来源见 `THIRD_PARTY_NOTICES.md`。
+截至 2026 年 10 月 22 日，NornaKit 已为 33 类图形提供 Swift 和 C# 原生入口、基础解析、专用布局和共享示例。Apple 端使用 CoreGraphics，Windows 端使用 DirectWrite 与 Win2D。项目没有运行上游 JavaScript 或 Mermaid 解析器。第三方参考来源见 `THIRD_PARTY_NOTICES.md`。
 
-这是一份基础实现的范围说明，具体语法支持以各类图形的能力和限制为准。所有示例均通过 `NativeDiagramRenderer` 渲染，画布直接使用 CoreGraphics 绘制，SVG 使用相同几何数据导出。未知的独立指令通常会报错；不进行 HTML、Markdown 或 CSS 样式解释，标签支持纯文本、换行、`:sf:名称:` 内联 SF Symbols、四种图标渲染模式、配对标签原生富文本。图标标记整体换行，富文本换行后保留样式；单色图标跟随文字字号、字重、颜色和基线。未知名称保留原文，可用图标取决于渲染时的 macOS 版本。此语法为 NornaKit 扩展，不改变各图形原有的图标配置语法。PNG、JPEG、TIFF 和 PDF 原生绘制图标，SVG 以 4 倍分辨率的透明 PNG 内嵌图标，其他文字和路径仍为矢量元素。
+以下语法范围适用于两端当前实现。Windows x64 与 ARM64 均检查同一份 600 个官方示例的 304 个可渲染、296 个拒绝行为，以及诊断代码与行位置。系统字体、配色和图标会产生平台视觉差异。Windows 使用 `:win:名称:` 与 Segoe Fluent Icons，内置示例的 SF 标记使用显式语义映射；Windows 图标统一单色，SVG 中导出自包含路径。PDF 保留可选择、可搜索的普通文字。接入方式、字体限制和发布状态见 [Windows 指南](WINDOWS.md)。
+
+这是一份基础实现的范围说明，具体语法支持以各类图形的能力和限制为准。Apple 端的示例通过 `NativeDiagramRenderer` 渲染，画布直接使用 CoreGraphics 绘制，SVG 使用相同几何数据导出。未知的独立指令通常会报错；不进行 HTML、Markdown 或 CSS 样式解释，标签支持纯文本、换行、`:sf:名称:` 内联 SF Symbols、四种图标渲染模式、配对标签原生富文本。图标标记整体换行，富文本换行后保留样式；单色图标跟随文字字号、字重、颜色和基线。未知名称保留原文，可用图标取决于渲染时的 macOS 版本。此语法为 NornaKit 扩展，不改变各图形原有的图标配置语法。PNG、JPEG、TIFF 和 PDF 原生绘制图标，SVG 以 4 倍分辨率的透明 PNG 内嵌图标，其他文字和路径仍为矢量元素。
 
 | 图形 | 已实现的核心能力 | 当前限制 |
 | --- | --- | --- |

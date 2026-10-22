@@ -1,6 +1,6 @@
 # NornaKit 介绍站
 
-简洁的静态站点，沿用 NornaKit 的标志与靛蓝配色，以纯 Swift 渲染库 NornaKit 的能力、示例和接入方式为主要内容。Norna Studio 作为配套的演示、渲染、调试与导出工具介绍。
+简洁的静态站点，沿用 NornaKit 的标志与靛蓝配色，以 Swift 与 C# 原生渲染库 NornaKit 的能力、示例和接入方式为主要内容。Norna Studio 作为配套的演示、渲染、调试与导出工具介绍。
 
 - 中英文默认使用浏览器首选语言，其他语言使用英文。可以手动切换并记住选择。
 - 浅深色默认跟随系统，也可以手动循环切换为浅色、深色与自动。
@@ -103,3 +103,9 @@ xattr -dr com.apple.quarantine "/Applications/Norna Studio.app"
 ```sh
 python3 website/scripts/build-site.py
 ```
+
+## Windows 平台入口
+
+`dist/windows.html` 提供 Windows 原生 Kit 接入文档与工作台下载位置。Windows 使用独立的 C# 库、.NET 10、DirectWrite 与 Win2D；工作台使用 WinUI 3。首页与文档页继续以库为主，并链接 Windows 接入页。
+
+`dist/download-config.js` 的 `windowsStudioDownloads` 默认全部为空，页面保持禁用状态。只有在独立的 `studio-windows-vX.Y.Z` Release 真实发布并完成产物验证后，才能写入版本和对应架构的 EXE 地址。不得使用 macOS 的 `latest` 地址推导 Windows 下载。

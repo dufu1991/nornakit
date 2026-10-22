@@ -22,6 +22,8 @@ xcodegen generate
 
 ## 构建与验证
 
+Windows 工程独立位于 `Windows/`，包含 C# Core、Windows 原生库、WinUI 3 工作台和测试。两端使用 `Sources/NornaKit/Resources/examples.json` 中的同一份双语示例，以及同一份官方语料与状态基线。Windows 构建、双架构验收和独立版本发布见 [Windows 指南](WINDOWS.md)。
+
 工作台仅面向 Apple Silicon Mac。Xcode 工程与发布脚本均只构建 `arm64` 架构。
 
 ```sh

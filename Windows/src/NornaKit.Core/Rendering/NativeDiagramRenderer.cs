@@ -54,7 +54,9 @@ public sealed class NativeDiagramRenderer(ITextLayoutProvider textLayoutProvider
             DiagramKind.Info => Info(body, text),
             _ => throw new ArgumentOutOfRangeException(nameof(kind))
         };
-        if (DiagramSyntax.Title(DiagramSyntax.Lines(body)).Length == 0 && document.Title is { Length: > 0 } title)
+        var bodyLines = DiagramSyntax.Lines(body);
+        var hasTitle = DiagramSyntax.Title(bodyLines).Length > 0 || kind == DiagramKind.Pie && bodyLines[0].Text.Contains("title ", StringComparison.Ordinal);
+        if (!hasTitle && document.Title is { Length: > 0 } title)
         {
             var heading = new SceneBuilder(kind, text); var headingHeight = heading.Title(title, Math.Max(240, scene.Size.Width));
             scene = scene with { Size = new(Math.Max(240, scene.Size.Width), scene.Size.Height + headingHeight),

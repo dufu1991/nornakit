@@ -16,7 +16,7 @@ public sealed partial class DiagramPreview : UserControl, IDisposable
     private readonly CanvasControl canvas = new();
     private DiagramScene? scene;
     private DiagramPalette palette = WindowsPalette.Resolve();
-    private bool grid, panning, fitOnResize = true;
+    private bool grid, panning, disposed, fitOnResize = true;
     private Point last;
     private Vector2 pan;
     private float zoom = 1;
@@ -77,5 +77,5 @@ public sealed partial class DiagramPreview : UserControl, IDisposable
         var center = around ?? new(ActualWidth / 2, ActualHeight / 2); var next = (float)Math.Clamp(zoom * factor, .02, 8); var ratio = next / zoom; var point = new Vector2((float)center.X, (float)center.Y);
         pan = point - (point - pan) * ratio; zoom = next; fitOnResize = false; canvas.Invalidate();
     }
-    public void Dispose() { panning = false; canvas.RemoveFromVisualTree(); Content = null; }
+    public void Dispose() { if (disposed) return; disposed = true; panning = false; canvas.RemoveFromVisualTree(); Content = null; }
 }

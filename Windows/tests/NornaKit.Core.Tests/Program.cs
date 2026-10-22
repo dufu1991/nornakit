@@ -138,6 +138,8 @@ var straight = await renderer.RenderAsync("flowchart TD\nA --> B --> C");
 check(straight.Scene.Nodes.Select(node => node.Frame.Center.X).Distinct().Count() == 1, "Serial flow chains must align.");
 var feedbackArtifact = await renderer.RenderAsync("flowchart TD\nA --> B\nB --> A\nA --> A");
 check(feedbackArtifact.Scene.Edges.Length == 3 && feedbackArtifact.Scene.Edges.All(edge => edge.Points.Length >= 2), "Feedback edges and self loops must be routed.");
+var titledPie = await renderer.RenderAsync("---\ntitle: Front matter\n---\npie title Body title\n\"A\": 2\n\"B\": 3");
+check(titledPie.Scene.Primitives.Where(primitive => primitive.Geometry is VectorGeometry.Text).SelectMany(primitive => ((VectorGeometry.Text)primitive.Geometry).Layout.Runs).All(run => !run.Text.Contains("Front matter", StringComparison.Ordinal)), "An inline pie title must take precedence over front matter.");
 var implemented = Enum.GetValues<DiagramKind>().Select(kind => kind.Id()).ToArray();
 foreach (var example in ExampleCatalog.All.Where(example => implemented.Contains(example.Kind) && example.Kind != "flowchart"))
 foreach (var language in Enum.GetValues<DiagramExampleLanguage>())
