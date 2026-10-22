@@ -74,4 +74,4 @@ jobs:
         run: |
           [[ "$RELEASE_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
           printf 'Native Windows 11 x64 and ARM64 builds.\n\nVersion: %s\nSource commit: %s\n\nThe installers install for the current user. Portable ZIP files include both .NET and Windows App SDK runtimes. SHA-256 checksums accompany each download.\n' "$RELEASE_VERSION" "$SOURCE_COMMIT" > release-notes.md
-          gh release create "studio-windows-v$RELEASE_VERSION" packages/* --target "$SOURCE_COMMIT" --title "Norna Studio for Windows $RELEASE_VERSION" --notes-file release-notes.md --latest=false
+          gh release create "studio-windows-v$RELEASE_VERSION" packages/*.exe packages/*.zip packages/*.sha256 packages/*-build-info.json --target "$SOURCE_COMMIT" --title "Norna Studio for Windows $RELEASE_VERSION" --notes-file release-notes.md --latest=false

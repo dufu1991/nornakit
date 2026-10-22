@@ -81,7 +81,8 @@ internal sealed partial class StudioWindow : Window
     {
         SmokeStep("verify-startup");
         Directory.CreateDirectory(directory);
-        await File.WriteAllTextAsync(Path.Combine(directory, "initial-session.json"), JsonSerializer.Serialize(new { session.Busy, session.CanExport, session.Diagnostic, artifact = session.Artifact?.Type }));
+        var diagnosticState = session.Diagnostic is { } error ? new { error.Code, error.Line, error.Column, error.Message } : null;
+        await File.WriteAllTextAsync(Path.Combine(directory, "initial-session.json"), JsonSerializer.Serialize(new { session.Busy, session.CanExport, diagnostic = diagnosticState, artifact = session.Artifact?.Type }));
         if (!session.CanExport || session.Artifact is null) throw new InvalidOperationException("The initial native workbench preview was not rendered.");
         await WaitForPreviewFrameAsync();
         SmokeStep("default-device"); preview.ForceSoftwareRenderer = false; await WaitForPreviewFrameAsync();
