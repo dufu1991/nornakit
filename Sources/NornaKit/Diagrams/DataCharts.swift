@@ -79,7 +79,9 @@ enum DataCharts {
         for tick in 0...5 {
             let value = low + (high - low) * Double(tick) / 5, py = y(value)
             b.line([CGPoint(x: plot.minX, y: py), CGPoint(x: plot.maxX, y: py)], color: .border, dash: [2, 4])
-            b.text(format(value), CGRect(x: 4, y: py - 12, width: 68, height: 24), size: 12, color: .muted, align: .trailing)
+            if !(low < 0 && high > 0 && abs(py - y(0)) < 24) {
+                b.text(format(value), CGRect(x: 4, y: py - 12, width: 68, height: 24), size: 12, color: .muted, align: .trailing)
+            }
         }
         let slot = plot.width / CGFloat(count), baseline = y(min(high, max(low, 0)))
         let bars = series.indices.filter { series[$0].0 == "bar" }
@@ -92,11 +94,15 @@ enum DataCharts {
                 }
             } else {
                 let points = item.2.enumerated().map { CGPoint(x: plot.minX + (CGFloat($0.offset) + 0.5) * slot, y: y($0.element)) }
-                b.line(points, color: .series(i), width: 2.5)
+                b.line(points, color: .series(i), width: 2.5, id: "xy-line-\(i)", rounded: false)
                 for (j, p) in points.enumerated() { b.ellipse(CGRect(x: p.x - 3, y: p.y - 3, width: 6, height: 6), fill: .series(i), stroke: .background, id: "point-\(i)-\(j)", label: "\(categories[j]): \(format(item.2[j]))") }
             }
         }
-        b.line([CGPoint(x: plot.minX, y: plot.minY), CGPoint(x: plot.minX, y: plot.maxY), CGPoint(x: plot.maxX, y: plot.maxY)], color: .line, width: 1.5)
+        b.line([CGPoint(x: plot.minX, y: plot.minY), CGPoint(x: plot.minX, y: plot.maxY), CGPoint(x: plot.maxX, y: plot.maxY)], color: .line, width: 1.5, rounded: false)
+        if low < 0, high > 0 {
+            b.line([CGPoint(x: plot.minX, y: baseline), CGPoint(x: plot.maxX, y: baseline)], color: .line, width: 1.5, id: "xy-zero-baseline", rounded: false)
+            b.text("0", CGRect(x: 4, y: baseline - 12, width: 68, height: 24), size: 12, color: .foreground, align: .trailing)
+        }
         let axisHeight = max(24, CGFloat(categories.map { TextMeasurement.lines($0, maxWidth: max(12, slot - 4)).count }.max() ?? 1) * 18)
         for (i, label) in categories.enumerated() { b.text(label, CGRect(x: plot.minX + CGFloat(i) * slot + 2, y: plot.maxY + 8, width: slot - 4, height: axisHeight), size: 12, color: .muted) }
         b.text(xLabel, CGRect(x: plot.minX, y: plot.maxY + axisHeight + 16, width: plot.width, height: 24), size: 14)
@@ -123,7 +129,9 @@ enum DataCharts {
         for tick in 0...ticks {
             let value = low + (high - low) * Double(tick) / Double(ticks), px = x(value)
             b.line([CGPoint(x: px, y: plot.minY), CGPoint(x: px, y: plot.maxY)], color: .border, dash: [2, 4])
-            b.text(format(value), CGRect(x: px - 30, y: plot.maxY + 8, width: 60, height: 24), size: 12, color: .muted)
+            if !(low < 0 && high > 0 && abs(px - baseline) < 60) {
+                b.text(format(value), CGRect(x: px - 30, y: plot.maxY + 8, width: 60, height: 24), size: 12, color: .muted)
+            }
         }
         let bars = series.indices.filter { series[$0].0 == "bar" }
         for (i, item) in series.enumerated() {
@@ -136,14 +144,18 @@ enum DataCharts {
                 }
             } else {
                 let points = item.2.enumerated().map { CGPoint(x: x($0.element), y: plot.minY + (CGFloat($0.offset) + 0.5) * slot) }
-                b.line(points, color: .series(i), width: 2.5)
+                b.line(points, color: .series(i), width: 2.5, id: "xy-line-\(i)", rounded: false)
                 for (j, p) in points.enumerated() {
                     b.ellipse(CGRect(x: p.x - 3, y: p.y - 3, width: 6, height: 6), fill: .series(i), stroke: .background,
                         id: "point-\(i)-\(j)", label: "\(categories[j]): \(format(item.2[j]))")
                 }
             }
         }
-        b.line([CGPoint(x: plot.minX, y: plot.minY), CGPoint(x: plot.minX, y: plot.maxY), CGPoint(x: plot.maxX, y: plot.maxY)], color: .line, width: 1.5)
+        b.line([CGPoint(x: plot.minX, y: plot.minY), CGPoint(x: plot.minX, y: plot.maxY), CGPoint(x: plot.maxX, y: plot.maxY)], color: .line, width: 1.5, rounded: false)
+        if low < 0, high > 0 {
+            b.line([CGPoint(x: baseline, y: plot.minY), CGPoint(x: baseline, y: plot.maxY)], color: .line, width: 1.5, id: "xy-zero-baseline", rounded: false)
+            b.text("0", CGRect(x: baseline - 30, y: plot.maxY + 8, width: 60, height: 24), size: 12)
+        }
         for (i, lines) in labelLines.enumerated() {
             b.text(lines.joined(separator: "\n"), CGRect(x: 8, y: plot.minY + CGFloat(i) * slot, width: labelWidth - 20, height: slot), size: 12, color: .muted, align: .trailing)
         }

@@ -11,6 +11,7 @@
 		0565499A6C24CC425DB3F77F /* GitDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29187FC0D3C2ACB77490E84E /* GitDiagram.swift */; };
 		07117D3E3CDC8D64385B0A73 /* NativeDrawingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70550ABF968ABD2E80FC1E0 /* NativeDrawingTests.swift */; };
 		07545F76B295CC28700DD688 /* DiagramExampleLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E076F6C2AA1E3B53B2C064F4 /* DiagramExampleLanguage.swift */; };
+		08F4EAD765E6792C0381845F /* BusinessMermaidRegressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118BAABA8B2226D650B829F8 /* BusinessMermaidRegressionTests.swift */; };
 		0B893B5DE7FE90A79E0652D2 /* ScenePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93104D591745FB248EF1B111 /* ScenePath.swift */; };
 		0FA939D3D7DBF771B813C5B5 /* DiagramExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A0662A64914077770F7A55 /* DiagramExportView.swift */; };
 		1014E80A8363E97C338AFE9F /* InlineText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134A2BBCF7EA7FFF9DEAB79A /* InlineText.swift */; };
@@ -65,6 +66,7 @@
 		BD4E20B5EB47EB4521AEAC41 /* NativeFlowchartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4495754BE5FF752BFBE9E6F6 /* NativeFlowchartTests.swift */; };
 		BD9665856BCFD2DB4DD1B655 /* ScaleDiagramExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775AF989307D8502098AD09 /* ScaleDiagramExamples.swift */; };
 		C37192A018BFBBAC44C12236 /* InlineSymbolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B679B5C6F1DD8069F1F52974 /* InlineSymbolTests.swift */; };
+		C6623B068C009D9EC5815422 /* CompoundRoutingPropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D139A09FB24C5801DD0420 /* CompoundRoutingPropertyTests.swift */; };
 		CAE6912939BD107C75DEB55C /* NornaSculpted.icon in Resources */ = {isa = PBXBuildFile; fileRef = 2C9A2555D02DD367A9F73C0F /* NornaSculpted.icon */; };
 		CC5896983692BE2006A524A6 /* AdvancedDiagramExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F8C7DAD56D0ED4B6318569 /* AdvancedDiagramExamples.swift */; };
 		D165C1091870C441203C34E0 /* AdaptiveLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7C1BA76D06E51BC092BDE /* AdaptiveLayoutTests.swift */; };
@@ -129,6 +131,7 @@
 		03EE2138E3E7A073F4573DC1 /* SubgraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubgraphTests.swift; sourceTree = "<group>"; };
 		07382FA30697D4AE58060954 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A48DB87201C3B9B2D5A82B3 /* DiagramLayoutOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramLayoutOptions.swift; sourceTree = "<group>"; };
+		118BAABA8B2226D650B829F8 /* BusinessMermaidRegressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMermaidRegressionTests.swift; sourceTree = "<group>"; };
 		134A2BBCF7EA7FFF9DEAB79A /* InlineText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineText.swift; sourceTree = "<group>"; };
 		18F1FBD3F53CEB9DDDDCA742 /* Norna Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Norna Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		193FA0D3A1C629A2128CE911 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = Sources/NornaKit/Resources; sourceTree = SOURCE_ROOT; };
@@ -200,6 +203,7 @@
 		EA2D6720543984E5FFA680E4 /* NativeInlineContentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeInlineContentTests.swift; sourceTree = "<group>"; };
 		EB71E5EC2948EBF9075CCD77 /* VectorSceneRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorSceneRenderer.swift; sourceTree = "<group>"; };
 		F707DE411F6073886C5534B6 /* ScaleExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleExampleTests.swift; sourceTree = "<group>"; };
+		F7D139A09FB24C5801DD0420 /* CompoundRoutingPropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundRoutingPropertyTests.swift; sourceTree = "<group>"; };
 		FFADBDC9F36CBF57B1F45D21 /* MermaidFlowchartParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MermaidFlowchartParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,6 +250,8 @@
 				6CC7C1BA76D06E51BC092BDE /* AdaptiveLayoutTests.swift */,
 				3CF49A47989827EE84B89DB0 /* AdvancedSyntaxTests.swift */,
 				47B53A12FD93639DE51D25B5 /* AppleAppearanceTests.swift */,
+				118BAABA8B2226D650B829F8 /* BusinessMermaidRegressionTests.swift */,
+				F7D139A09FB24C5801DD0420 /* CompoundRoutingPropertyTests.swift */,
 				E4AC2091B388895C2ACE42AE /* ConnectorAuditTests.swift */,
 				A07576E181CDD90838C919FE /* DiagramCatalogTests.swift */,
 				AE925723A14FA7677437231D /* DiagramExportTests.swift */,
@@ -583,6 +589,8 @@
 				D165C1091870C441203C34E0 /* AdaptiveLayoutTests.swift in Sources */,
 				E0DDE87C08AAC08BD59C7694 /* AdvancedSyntaxTests.swift in Sources */,
 				D34439E3846FAD56796D5D30 /* AppleAppearanceTests.swift in Sources */,
+				08F4EAD765E6792C0381845F /* BusinessMermaidRegressionTests.swift in Sources */,
+				C6623B068C009D9EC5815422 /* CompoundRoutingPropertyTests.swift in Sources */,
 				B287B7B98BB677FE045155F3 /* ConnectorAuditTests.swift in Sources */,
 				8A4B6B57C42F7D457856342E /* DiagramCatalogTests.swift in Sources */,
 				3E769B3BA2D333709276E4A4 /* DiagramExportTests.swift in Sources */,

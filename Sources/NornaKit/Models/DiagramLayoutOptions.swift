@@ -30,7 +30,7 @@ public struct DiagramLayoutOptions: Equatable, Hashable, Sendable {
 enum AdaptiveFlowLayout {
     static func layout(_ graph: FlowchartModel, options: DiagramLayoutOptions) throws -> DiagramScene {
         let scene = try LayeredLayoutEngine.layout(graph, options: options)
-        guard let width = options.maxWidth, options.autoDirection, options.compact,
+        guard let width = options.maxWidth, options.autoDirection,
               graph.direction.horizontal, scene.size.width > width else { return scene }
         let vertical = FlowchartModel(direction: .topDown, nodes: graph.nodes, edges: graph.edges, groups: graph.groups)
         let candidate = try LayeredLayoutEngine.layout(vertical, options: options)

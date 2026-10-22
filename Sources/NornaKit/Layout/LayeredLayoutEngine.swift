@@ -6,7 +6,7 @@ public enum LayeredLayoutEngine {
         return try layoutFlat(graph, options: options)
     }
 
-    static func layoutFlat(_ graph: FlowchartModel, imposedSizes: [String: CGSize] = [:], padding: CGFloat = DiagramStyle.scenePadding, options: DiagramLayoutOptions = .init()) throws -> DiagramScene {
+    static func layoutFlat(_ graph: FlowchartModel, imposedSizes: [String: CGSize] = [:], padding: CGFloat = DiagramStyle.scenePadding, rankSeparation: CGFloat = DiagramStyle.rankSeparation, options: DiagramLayoutOptions = .init()) throws -> DiagramScene {
         guard graph.edges.allSatisfy({ (1...10).contains($0.minimumRankSpan) }) else {
             throw DiagramRenderError(message: "连线跨度必须介于 1 到 10 层之间。", code: "limit")
         }
@@ -19,18 +19,7 @@ public enum LayeredLayoutEngine {
         let n = graph.nodes.count
         var outgoing = Array(repeating: [Int](), count: n)
         for (index, edge) in graph.edges.enumerated() { outgoing[lookup[edge.from]!].append(index) }
-        var state = Array(repeating: 0, count: n)
-        var feedback = Set<Int>()
-        func visit(_ node: Int) {
-            state[node] = 1
-            for index in outgoing[node] {
-                let next = lookup[graph.edges[index].to]!
-                if state[next] == 1 { feedback.insert(index) }
-                else if state[next] == 0 { visit(next) }
-            }
-            state[node] = 2
-        }
-        for index in 0..<n where state[index] == 0 { visit(index) }
+        let feedback = feedbackEdges(graph, lookup: lookup, outgoing: outgoing)
         var indegree = Array(repeating: 0, count: n)
         for (index, edge) in graph.edges.enumerated() where !feedback.contains(index) { indegree[lookup[edge.to]!] += 1 }
         var queue = (0..<n).filter { indegree[$0] == 0 }
@@ -107,7 +96,7 @@ public enum LayeredLayoutEngine {
                 return horizontal ? (label.map { TextMeasurement.width($0, size: DiagramStyle.edgeFontSize) }.max() ?? 0) + 64
                     : CGFloat(label.count) * DiagramStyle.edgeLineHeight + 64
             }.max() ?? 0
-            y += height + max(DiagramStyle.rankSeparation, labelRoom)
+            y += height + max(rankSeparation, labelRoom)
         }
         // 按完整串行链对齐真实节点及跨层虚拟节点，同时保留各层的节点顺序和间距。
         var chainParents = Array(frames.indices)
@@ -177,7 +166,6 @@ public enum LayeredLayoutEngine {
             for root in roots { for vertex in chainMembers[root]! { frames[vertex].origin.x = centers[root]! - frames[vertex].width / 2 } }
             totalWidth = max(totalWidth, frames.map(\.maxX).max() ?? 0)
         }
-        let totalHeight = frames.map(\.maxY).max() ?? 0
         let anchor: (Int, Int, CGFloat) -> CGPoint = { node, side, offset in
             let r = frames[node]
             let shape = imposedSizes[graph.nodes[node].id] == nil ? graph.nodes[node].shape : .rectangle
@@ -205,19 +193,82 @@ public enum LayeredLayoutEngine {
         // 分支中接近直行的节点对齐其独立端口，避免端口分散后又立即折回。
         for index in graph.edges.indices where !feedback.contains(index) {
             let edge = graph.edges[index], from = lookup[edge.from]!, to = lookup[edge.to]!
-            guard outgoing[from].count > 1, previous[to].count == 1, outgoing[to].count == 1,
+            guard outgoing[from].count > 1, previous[to].count == 1,
                   ranks[to] == ranks[from] + 1,
                   imposedSizes[edge.from] == nil, imposedSizes[edge.to] == nil else { continue }
             let dx = port(from, index, true).x - frames[to].midX
             guard abs(dx) > 0.01, abs(dx) <= max(20, gap) else { continue }
-            let members = chainMembers[chainRoot(to)]!, memberIDs = Set(members)
+            var members = [to], cursor = 0
+            while cursor < members.count {
+                let vertex = members[cursor]; cursor += 1
+                for child in next[vertex] where previous[child].count == 1 && !members.contains(child)
+                    && (child >= n || imposedSizes[graph.nodes[child].id] == nil) { members.append(child) }
+            }
+            let memberIDs = Set(members)
             guard members.allSatisfy({ vertex in
                 let aligned = frames[vertex].offsetBy(dx: dx, dy: 0)
                 return !frames.indices.contains { !memberIDs.contains($0) && frames[$0].insetBy(dx: -8, dy: -8).intersects(aligned) }
             }) else { continue }
             for vertex in members { frames[vertex].origin.x += dx }
         }
+        // Project a long edge's reserved corridor onto its destination port instead of adding a tiny final stair.
+        for index in graph.edges.indices where !feedback.contains(index) && chains[index].count > 2 {
+            let chain = chains[index], target = lookup[graph.edges[index].to]!
+            let corridor = Array(chain.dropFirst().dropLast())
+            let dx = port(target, index, false).x - frames[corridor.last!].midX
+            guard abs(dx) > 0.01, abs(dx) <= 12 else { continue }
+            let clearance = corridor.allSatisfy { vertex in
+                let x = frames[vertex].midX + dx, y = frames[vertex].midY
+                return !graph.nodes.indices.contains { node in
+                    frames[node].insetBy(dx: -8, dy: -8).contains(CGPoint(x: x, y: y))
+                }
+            }
+            if clearance { for vertex in corridor { frames[vertex].origin.x += dx } }
+        }
         totalWidth = max(totalWidth, frames.map(\.maxX).max() ?? 0)
+        // Colour overlapping spans before routing, reserving more inter-layer space when needed.
+        var spans: [Int: [(edge: Int, step: Int, start: CGFloat, end: CGFloat)]] = [:]
+        var channels: [Int: [[ClosedRange<CGFloat>]]] = [:]
+        var channelForStep: [Int: [Int: Int]] = [:]
+        for index in graph.edges.indices where !feedback.contains(index) {
+            let chain = chains[index]
+            for (step, pair) in zip(chain, chain.dropFirst()).enumerated() {
+                let start = pair.0 < n ? port(pair.0, index, true).x : frames[pair.0].midX
+                let end = pair.1 < n ? port(pair.1, index, false).x : frames[pair.1].midX
+                if abs(start - end) > 0.001 { spans[ranks[pair.0], default: []].append((index, step, start, end)) }
+            }
+        }
+        for (layer, row) in spans {
+            let ordered = row.sorted { a, b in
+                let leftA = a.end < a.start, leftB = b.end < b.start
+                if leftA != leftB { return leftA }
+                let centerA = a.start + a.end, centerB = b.start + b.end
+                if abs(centerA - centerB) > 0.001 { return leftA ? centerA < centerB : centerA > centerB }
+                return a.edge < b.edge
+            }
+            var slots: [[ClosedRange<CGFloat>]] = []
+            for span in ordered {
+                let interval = min(span.start, span.end)...max(span.start, span.end)
+                let previous = slots.indices.filter { slot in
+                    slots[slot].contains { min($0.upperBound, interval.upperBound) - max($0.lowerBound, interval.lowerBound) > 0.01 }
+                }.max()
+                let slot = previous.map { $0 + 1 } ?? 0
+                while slots.count <= slot { slots.append([]) }
+                slots[slot].append(interval)
+                channelForStep[span.edge, default: [:]][span.step] = slot
+            }
+            channels[layer] = slots
+        }
+        for layer in layers.indices.dropLast() {
+            let bottom = layers[layer].map { frames[$0].maxY }.max() ?? 0
+            let top = layers[layer + 1].map { frames[$0].minY }.min() ?? bottom
+            let room = CGFloat(max(0, (channels[layer]?.count ?? 0) - 1)) * 12 + 16
+            let extra = max(0, room - (top - bottom))
+            if extra > 0 {
+                for vertex in frames.indices where ranks[vertex] > layer { frames[vertex].origin.y += extra }
+            }
+        }
+        let totalHeight = frames.map(\.maxY).max() ?? 0
         let rankStarts = layers.map { row in row.map { frames[$0].minY }.min() ?? 0 }
         let rankEnds = layers.map { row in row.map { frames[$0].maxY }.max() ?? 0 }
         let forwardRoutes = Dictionary(uniqueKeysWithValues: graph.edges.indices.filter { !feedback.contains($0) }.map { index in
@@ -227,7 +278,9 @@ public enum LayeredLayoutEngine {
                 let source = frames[pair.0], target = frames[pair.1]
                 let start = pair.0 < n ? port(pair.0, index, true) : CGPoint(x: source.midX, y: source.maxY)
                 let end = pair.1 < n ? port(pair.1, index, false) : CGPoint(x: target.midX, y: target.minY)
-                let middle = (rankEnds[ranks[pair.0]] + rankStarts[ranks[pair.1]]) / 2
+                let slot = channelForStep[index]?[step] ?? 0
+                let offset = (CGFloat(slot) - CGFloat(max(0, (channels[ranks[pair.0]]?.count ?? 0) - 1)) / 2) * 12
+                let middle = (rankEnds[ranks[pair.0]] + rankStarts[ranks[pair.1]]) / 2 + offset
                 if step == 0 { points.append(start) }
                 if abs(start.x - end.x) < 0.001 { points.append(end) }
                 else { points += [CGPoint(x: start.x, y: middle), CGPoint(x: end.x, y: middle), end] }
@@ -262,9 +315,19 @@ public enum LayeredLayoutEngine {
                         routes: Array(forwardRoutes.values) + feedbackRoutes)
                 } else if EdgeGeometry.clear(sideEntry, end, obstacles: otherNodes) {
                     // Keep return arrows on a separate face from the normal incoming transitions.
-                    let start = anchor(from, 2, 0)
-                    points = [start, CGPoint(x: start.x, y: a.maxY + 28),
-                              CGPoint(x: lane, y: a.maxY + 28), sideEntry, end]
+                    let exits = graph.edges.indices.filter { feedback.contains($0) && lookup[graph.edges[$0].from] == from }
+                    let exit = CGFloat(exits.firstIndex(of: index)!) * 12
+                    let start = anchor(from, 2, CGFloat(exits.firstIndex(of: index)!) * 8)
+                    points = [start, CGPoint(x: start.x, y: a.maxY + 28 + exit),
+                              CGPoint(x: lane, y: a.maxY + 28 + exit), sideEntry, end]
+                    let existing = Array(forwardRoutes.values) + feedbackRoutes
+                    if EdgeGeometry.sharesSegment(points, routes: existing) {
+                        let sideStart = anchor(from, 1, 0)
+                        let candidate = [sideStart, CGPoint(x: lane, y: sideStart.y), sideEntry, end]
+                        let obstacles = graph.nodes.indices.filter { $0 != from && $0 != to }.map { frames[$0].insetBy(dx: -8, dy: -8) }
+                        if zip(candidate, candidate.dropFirst()).allSatisfy({ EdgeGeometry.clear($0.0, $0.1, obstacles: obstacles) }),
+                           !EdgeGeometry.sharesSegment(candidate, routes: existing) { points = candidate }
+                    }
                 } else {
                     let start = anchor(from, 2, 0), end = anchor(to, 0, 0)
                     points = [start, CGPoint(x: start.x, y: a.maxY + 28),
@@ -325,6 +388,68 @@ public enum LayeredLayoutEngine {
             routed[index].labelFrame = routed[index].labelFrame.offsetBy(dx: offset.x, dy: offset.y)
         }
         return DiagramScene(size: CGSize(width: bounds.width + padding * 2, height: bounds.height + padding * 2), nodes: nodes, edges: routed)
+    }
+
+    /// Compare cycle break candidates inside each strongly connected component.
+    /// Stable neighbour order prevents equivalent edge declarations from changing the main flow.
+    private static func feedbackEdges(_ graph: FlowchartModel, lookup: [String: Int], outgoing: [[Int]]) -> Set<Int> {
+        let n = graph.nodes.count
+        let ordered = outgoing.map { row in row.sorted {
+            let a = lookup[graph.edges[$0].to]!, b = lookup[graph.edges[$1].to]!
+            return a == b ? $0 < $1 : a < b
+        } }
+        var serial = 0, stack: [Int] = [], active = Set<Int>()
+        var indices = Array(repeating: -1, count: n), low = indices
+        var components: [[Int]] = []
+        func connect(_ node: Int) {
+            indices[node] = serial; low[node] = serial; serial += 1
+            stack.append(node); active.insert(node)
+            for edge in ordered[node] {
+                let target = lookup[graph.edges[edge].to]!
+                if indices[target] == -1 { connect(target); low[node] = min(low[node], low[target]) }
+                else if active.contains(target) { low[node] = min(low[node], indices[target]) }
+            }
+            if low[node] == indices[node] {
+                var members: [Int] = []
+                while let last = stack.popLast() {
+                    active.remove(last); members.append(last)
+                    if last == node { break }
+                }
+                components.append(members.sorted())
+            }
+        }
+        for node in 0..<n where indices[node] == -1 { connect(node) }
+        var result = Set<Int>()
+        for component in components {
+            let members = Set(component)
+            let internalEdges = component.flatMap { ordered[$0] }.filter { members.contains(lookup[graph.edges[$0].to]!) }
+            guard component.count > 1 || internalEdges.contains(where: { graph.edges[$0].from == graph.edges[$0].to }) else { continue }
+            var best = Set<Int>(), bestCount = Int.max, bestForwardSpan = Int.max
+            // Bound the number of trials for very large cyclic graphs.
+            let seeds = component.count <= 64 ? component : (0..<64).map { component[$0 * component.count / 64] }
+            for seed in seeds {
+                var state = Array(repeating: 0, count: n), feedback = Set<Int>()
+                func visit(_ node: Int) {
+                    state[node] = 1
+                    for edge in ordered[node] {
+                        let target = lookup[graph.edges[edge].to]!
+                        guard members.contains(target) else { continue }
+                        if state[target] == 1 { feedback.insert(edge) }
+                        else if state[target] == 0 { visit(target) }
+                    }
+                    state[node] = 2
+                }
+                visit(seed)
+                let forwardSpan = feedback.reduce(0) { sum, edge in
+                    sum + max(0, lookup[graph.edges[edge].to]! - lookup[graph.edges[edge].from]!)
+                }
+                if feedback.count < bestCount || feedback.count == bestCount && forwardSpan < bestForwardSpan {
+                    best = feedback; bestCount = feedback.count; bestForwardSpan = forwardSpan
+                }
+            }
+            result.formUnion(best)
+        }
+        return result
     }
 
     static func selfLoop(frame: CGRect, position: Int, count: Int, anchor: (Int, CGFloat) -> CGPoint,

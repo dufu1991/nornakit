@@ -15,7 +15,7 @@ final class ConnectorAuditTests: XCTestCase {
                 let scene = artifact.scene
                 XCTAssertTrue(scene.size.width.isFinite && scene.size.height.isFinite, example.id)
                 XCTAssertTrue(XMLParser(data: Data(artifact.svg.utf8)).parse(), example.id)
-                let audit = auditConnections(scene)
+                let audit = Self.auditConnections(scene)
                 XCTAssertTrue(audit.issues.isEmpty, "\(example.id), \(Int(width)): \(audit.issues.joined(separator: "; "))")
                 guard let directory else { continue }
                 let point: (CGPoint) -> [CGFloat] = { [$0.x, $0.y] }
@@ -89,7 +89,7 @@ final class ConnectorAuditTests: XCTestCase {
         """
         for source in [block, events] {
             let scene = try await NativeDiagramRenderer().render(source).scene
-            XCTAssertTrue(auditConnections(scene).issues.isEmpty, auditConnections(scene).issues.joined(separator: "; "))
+            XCTAssertTrue(Self.auditConnections(scene).issues.isEmpty, Self.auditConnections(scene).issues.joined(separator: "; "))
             if scene.kind == .eventmodeling {
                 let route = try XCTUnwrap(scene.primitives.first { $0.id == "event-edge-0" })
                 guard case .path(let commands) = route.geometry else { return XCTFail("Expected event dependency") }
@@ -114,7 +114,7 @@ final class ConnectorAuditTests: XCTestCase {
         """
         for width: CGFloat in [320, 640, 1200] {
             let scene = try await NativeDiagramRenderer().render(source, options: .init(maxWidth: width)).scene
-            XCTAssertTrue(auditConnections(scene).issues.isEmpty, auditConnections(scene).issues.joined(separator: "; "))
+            XCTAssertTrue(Self.auditConnections(scene).issues.isEmpty, Self.auditConnections(scene).issues.joined(separator: "; "))
             let loop = try XCTUnwrap(scene.primitives.first { $0.id == "message-0" })
             guard case .path(let commands) = loop.geometry else { return XCTFail("Expected self message") }
             XCTAssertEqual(commands.filter { if case .cubic = $0 { return true }; return false }.count, 2)
@@ -133,7 +133,7 @@ final class ConnectorAuditTests: XCTestCase {
         var segments: [(CGPoint, CGPoint)] { EdgeGeometry.segments(commands) }
     }
 
-    private func auditConnections(_ scene: DiagramScene) -> (count: Int, issues: [String]) {
+    static func auditConnections(_ scene: DiagramScene) -> (count: Int, issues: [String]) {
         let prefixes = ["relation-", "lane-edge-", "block-edge-", "architecture-edge-", "event-edge-", "message-"]
         let masks = Dictionary(uniqueKeysWithValues: scene.primitives.compactMap { primitive -> (String, CGRect)? in
             guard let id = primitive.id, id.contains("-label-") else { return nil }

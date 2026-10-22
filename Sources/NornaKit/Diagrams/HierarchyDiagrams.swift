@@ -53,9 +53,13 @@ enum HierarchyDiagrams {
         return b.scene(width: width, height: CGFloat(items.count) * row + 44)
     }
 
-    static func mindmap(_ source: String) throws -> DiagramScene {
+    static func mindmap(_ source: String, options: DiagramLayoutOptions = .init()) throws -> DiagramScene {
         let items = try parse(source, kind: .mindmap)
         guard items.filter({ $0.parent == nil }).count == 1 else { throw DiagramRenderError(message: "思维导图必须只有一个根节点。", code: "semantic") }
+        let naturalWidth = CGFloat(items.map(\.depth).max() ?? 0) * 440 + 220
+        if let width = options.maxWidth, width < naturalWidth {
+            return compactMindmap(items, width: width)
+        }
         let children = Dictionary(grouping: items.filter { $0.parent != nil }, by: { $0.parent! })
         var heights: [Int: CGFloat] = [:]
         func height(_ id: Int) -> CGFloat {
@@ -88,6 +92,44 @@ enum HierarchyDiagrams {
         }
         b.box(items[0].label, root, fill: .surfaceAlt, radius: 28, id: "mindmap-root")
         return b.scene(width: max(420, width), height: totalH)
+    }
+
+    /// A narrow container uses an indented outline, retaining full size text and every branch.
+    private static func compactMindmap(_ items: [HierarchyItem], width: CGFloat) -> DiagramScene {
+        let builder = SceneBuilder(.mindmap)
+        let children = Dictionary(grouping: items.filter { $0.parent != nil }, by: { $0.parent! })
+        let maxDepth = items.map(\.depth).max() ?? 0
+        let indent = min(28, max(8, (width - 100) / CGFloat(max(1, maxDepth + 1))))
+        var frames: [Int: CGRect] = [:], top: CGFloat = 8
+        for item in items {
+            let x = 16 + CGFloat(item.depth) * indent
+            let labelWidth = max(32, width - x - 28)
+            let lines = TextMeasurement.lines(item.label, maxWidth: labelWidth, size: 14)
+            let h = max(46, CGFloat(lines.count) * 22 + 16)
+            let measured = (lines.map { TextMeasurement.width($0, size: 14) }.max() ?? 0) + 20
+            frames[item.id] = CGRect(x: x, y: top, width: min(width - x - 8, max(84, measured)), height: h)
+            top += h + 22
+        }
+        var branches: [Int: Int] = [0: 0]
+        for item in items.dropFirst() {
+            let parent = item.parent!, parentFrame = frames[parent]!, frame = frames[item.id]!
+            let siblings = children[parent]!, position = siblings.firstIndex { $0.id == item.id }!
+            // Later children use the outer lanes, so sibling and descendant branches remain planar.
+            let lane = parentFrame.minX + indent * CGFloat(siblings.count - position) / CGFloat(siblings.count + 1)
+            let start = NodeGeometry.anchor(shape: .rectangle, frame: parentFrame, side: 2, offset: lane - parentFrame.midX)
+            let end = CGPoint(x: frame.minX, y: frame.midY)
+            let branch = parent == 0 ? position : branches[parent]!
+            branches[item.id] = branch
+            builder.line([start, CGPoint(x: lane, y: end.y), end], color: .series(branch), width: 1.5)
+        }
+        for item in items {
+            let frame = frames[item.id]!
+            let lines = TextMeasurement.lines(item.label, maxWidth: frame.width - 20, size: 14)
+            builder.rect(frame, fill: item.id == 0 ? .surfaceAlt : .series(branches[item.id]!),
+                opacity: item.id == 0 ? 1 : 0.16, id: item.id == 0 ? "mindmap-root" : "mindmap-\(item.id)", label: item.label)
+            builder.text(lines.joined(separator: "\n"), frame.insetBy(dx: 10, dy: 6), size: 14)
+        }
+        return builder.scene(width: width, height: top - 14)
     }
 
     static func treemap(_ source: String, options: DiagramLayoutOptions = .init()) throws -> DiagramScene {

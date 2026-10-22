@@ -10,7 +10,13 @@ enum CompoundEdgeRouter {
         var side: Int = 0
     }
 
-    static func route(_ graph: FlowchartModel, scene: DiagramScene, additionalObstacles: [CGRect] = [], separateConnections: Bool = false, allowCrossingGroups: Bool = false, projectSpanningPorts: Bool = false) throws -> DiagramScene {
+    private struct Channel {
+        let coordinate: CGFloat
+        let horizontal: Bool
+        let range: ClosedRange<CGFloat>
+    }
+
+    static func route(_ graph: FlowchartModel, scene: DiagramScene, additionalObstacles: [CGRect] = [], separateConnections: Bool = false, allowCrossingGroups: Bool = false, projectSpanningPorts: Bool = false, avoidGroupBorders: Bool = false) throws -> DiagramScene {
         let nodes = Dictionary(uniqueKeysWithValues: scene.nodes.map { ($0.id, $0) })
         let groups = Dictionary(uniqueKeysWithValues: scene.groups.map { ($0.id, $0) })
         let modelGroups = Dictionary(uniqueKeysWithValues: graph.groups.map { ($0.id, $0) })
@@ -58,6 +64,23 @@ enum CompoundEdgeRouter {
             routed.targetSide = routed.sourceSide
             return routed
         }
+        let tracks = parallelTracks(graph, frame: frame, parent: parent, direction: direction) { index, leaving in
+            let edge = graph.edges[index], id = leaving ? edge.from : edge.to
+            return ports(frame: frame(id), node: nodes[id], direction: direction(id), leaving: leaving,
+                edgeIndex: index, edges: routingEdges, frameForNode: frame, minimumStub: 12,
+                projectSpanningPorts: projectSpanningPorts).first { $0.penalty == 0 }!.anchor
+        }
+        var reservedPorts: [Int: [[CGPoint]]] = [:]
+        if avoidGroupBorders {
+            for (index, edge) in graph.edges.enumerated() where edge.style != .invisible && edge.from != edge.to && parent(edge.from) == parent(edge.to) && forward(edge) {
+                reservedPorts[index] = [true, false].compactMap { leaving in
+                    let id = leaving ? edge.from : edge.to
+                    return ports(frame: frame(id), node: nodes[id], direction: direction(id), leaving: leaving,
+                        edgeIndex: index, edges: routingEdges, frameForNode: frame, minimumStub: 12,
+                        projectSpanningPorts: projectSpanningPorts).first { $0.penalty == 0 }.map { [$0.anchor, $0.stub] }
+                }
+            }
+        }
         var routed: [SceneEdge] = []
         var labelDomains: [CGRect] = []
         for (index, edge) in graph.edges.enumerated() {
@@ -68,6 +91,7 @@ enum CompoundEdgeRouter {
             let targetContainsSource = sourceAncestors.contains(edge.to)
             let enclosure = sourceContainsTarget ? groups[edge.from] : targetContainsSource ? groups[edge.to] : common.flatMap { groups[$0] }
             let allowedGroups = Set(sourceAncestors + targetAncestors + [edge.from, edge.to])
+            let borders = avoidGroupBorders ? scene.groups.filter { $0.id != edge.from && $0.id != edge.to }.map(\.frame) : []
             let inlineLabel = EdgeLabelLayout.size(EdgeLabelLayout.lines(edge.label))
             let horizontalPort = edge.sourceSide.map { !$0.isMultiple(of: 2) } ?? direction(edge.from).horizontal
             let labelClearance = projectSpanningPorts && !edge.label.isEmpty
@@ -114,8 +138,8 @@ enum CompoundEdgeRouter {
             }
             starts = starts.map { trim($0, sourceContainsTarget || targetContainsSource || edge.from == edge.to ? nil : b) }
             ends = ends.map { trim($0, sourceContainsTarget || targetContainsSource || edge.from == edge.to ? nil : a) }
-            starts = starts.filter { domain.contains($0.stub) && clear($0.anchor, $0.stub, obstacles: portObstacles) }
-            ends = ends.filter { domain.contains($0.stub) && clear($0.anchor, $0.stub, obstacles: portObstacles) }
+            starts = starts.filter { domain.contains($0.stub) && clear($0.anchor, $0.stub, obstacles: portObstacles) && clearOfBorders($0.anchor, $0.stub, borders: borders) }
+            ends = ends.filter { domain.contains($0.stub) && clear($0.anchor, $0.stub, obstacles: portObstacles) && clearOfBorders($0.anchor, $0.stub, borders: borders) }
             if parent(edge.from) == parent(edge.to), edge.from != edge.to {
                 if forward(edge) {
                     let preferredStarts = starts.filter { $0.penalty == 0 }, preferredEnds = ends.filter { $0.penalty == 0 }
@@ -133,8 +157,8 @@ enum CompoundEdgeRouter {
                         let stub = horizontal ? CGPoint(x: port.anchor.x, y: lane) : CGPoint(x: lane, y: port.anchor.y)
                         return Port(anchor: port.anchor, stub: stub, penalty: port.penalty, side: port.side)
                     }
-                    let returnStarts = starts.filter { $0.side == side }.map(extend).filter { domain.contains($0.stub) && clear($0.anchor, $0.stub, obstacles: portObstacles) }
-                    let returnEnds = ends.filter { $0.side == side }.map(extend).filter { domain.contains($0.stub) && clear($0.anchor, $0.stub, obstacles: portObstacles) }
+                    let returnStarts = starts.filter { $0.side == side }.map(extend).filter { domain.contains($0.stub) && clear($0.anchor, $0.stub, obstacles: portObstacles) && clearOfBorders($0.anchor, $0.stub, borders: borders) }
+                    let returnEnds = ends.filter { $0.side == side }.map(extend).filter { domain.contains($0.stub) && clear($0.anchor, $0.stub, obstacles: portObstacles) && clearOfBorders($0.anchor, $0.stub, borders: borders) }
                     if !returnStarts.isEmpty, !returnEnds.isEmpty { starts = returnStarts; ends = returnEnds }
                 }
             }
@@ -149,21 +173,50 @@ enum CompoundEdgeRouter {
                 }
             }
             let local = a.union(b).insetBy(dx: -80, dy: -80).intersection(domain)
-            let siblings = separateConnections ? routed.filter { $0.style != .invisible && ($0.from == edge.from || $0.to == edge.to || $0.from == edge.to && $0.to == edge.from) }.map(\.points) : []
+            // A cross-group edge must not occupy a later internal edge's entrance or exit.
+            let reservations = parent(edge.from) == parent(edge.to) ? [] : reservedPorts.keys.sorted().filter { $0 > index }.flatMap { reservedPorts[$0]! }
+            let siblings = routed.filter { $0.style != .invisible }.map(\.points) + reservations
             let fan = separateConnections ? fanRoute(edgeIndex: index, edges: graph.edges, starts: starts, ends: ends,
                 frameForNode: frame, obstacles: obstacles, captions: additionalObstacles, domain: domain) : nil
-            let forward = separateConnections ? nil : forwardRoute(starts: starts, ends: ends, obstacles: obstacles, domain: domain)
+            let plan = avoidGroupBorders ? tracks[index] : nil
+            let forward = separateConnections ? nil : forwardRoute(starts: starts, ends: ends, obstacles: obstacles, borders: borders, channel: plan, domain: domain, routes: siblings)
+            let independentFan = fan.flatMap { points in
+                EdgeGeometry.sharesSegment(points, routes: siblings) || !zip(points, points.dropFirst()).allSatisfy({ clearOfBorders($0.0, $0.1, borders: borders) }) ? nil : points
+            }
+            let channel: [CGPoint]? = tracks[index].flatMap { plan in
+                guard let start = starts.first(where: { $0.penalty == 0 }), let end = ends.first(where: { $0.penalty == 0 }) else { return nil }
+                let vertical = start.side.isMultiple(of: 2)
+                guard vertical != plan.horizontal, end.side == (start.side + 2) % 4 else { return nil }
+                let track = plan.coordinate
+                let elbowA = vertical ? CGPoint(x: start.anchor.x, y: track) : CGPoint(x: track, y: start.anchor.y)
+                let elbowB = vertical ? CGPoint(x: end.anchor.x, y: track) : CGPoint(x: track, y: end.anchor.y)
+                let stub: (Port, CGRect) -> CGPoint = { port, rect in
+                    switch port.side {
+                    case 0: return CGPoint(x: port.anchor.x, y: rect.minY - 8)
+                    case 1: return CGPoint(x: rect.maxX + 8, y: port.anchor.y)
+                    case 2: return CGPoint(x: port.anchor.x, y: rect.maxY + 8)
+                    default: return CGPoint(x: rect.minX - 8, y: port.anchor.y)
+                    }
+                }
+                let corridor = [stub(start, a), elbowA, elbowB, stub(end, b)]
+                let points = LayeredLayoutEngine.simplify([start.anchor, elbowA, elbowB, end.anchor])
+                guard points.allSatisfy(domain.contains), !EdgeGeometry.sharesSegment(points, routes: siblings),
+                      zip(points, points.dropFirst()).allSatisfy({ clearOfBorders($0.0, $0.1, borders: borders) }),
+                      zip(points, points.dropFirst()).allSatisfy({ clearChannel($0.0, $0.1, plan: plan, routes: siblings) }),
+                      zip(corridor, corridor.dropFirst()).allSatisfy({ clear($0.0, $0.1, obstacles: obstacles) }) else { return nil }
+                return points
+            }
             let loop: [CGPoint]? = {
                 guard edge.from == edge.to else { return nil }
                 let loops = graph.edges.indices.filter { graph.edges[$0].from == edge.from && graph.edges[$0].to == edge.from }
                 let path = LayeredLayoutEngine.selfLoop(frame: a, position: loops.firstIndex(of: index)!, count: loops.count,
                     anchor: { side, offset in NodeGeometry.anchor(shape: nodes[edge.from]?.shape ?? .rectangle, frame: a, side: side, offset: offset) },
                     obstacles: portObstacles, routes: routed.filter { $0.style != .invisible }.map(\.points), domain: domain)
-                return path.isEmpty ? nil : path
+                return path.isEmpty || !zip(path, path.dropFirst()).allSatisfy({ clearOfBorders($0.0, $0.1, borders: borders) }) ? nil : path
             }()
-            let points = loop ?? fan ?? forward ?? visibilityRoute(starts: starts, ends: ends, obstacles: obstacles, bounds: local, siblings: siblings)
-                ?? visibilityRoute(starts: starts, ends: ends, obstacles: obstacles, bounds: domain, siblings: siblings)
-                ?? (separateConnections ? visibilityRoute(starts: fallbackStarts, ends: fallbackEnds, obstacles: obstacles, bounds: domain, siblings: siblings) : nil)
+            let points = loop ?? independentFan ?? channel ?? forward ?? visibilityRoute(starts: starts, ends: ends, obstacles: obstacles, borders: borders, channel: plan, bounds: local, siblings: siblings)
+                ?? visibilityRoute(starts: starts, ends: ends, obstacles: obstacles, borders: borders, channel: plan, bounds: domain, siblings: siblings)
+                ?? (separateConnections ? visibilityRoute(starts: fallbackStarts, ends: fallbackEnds, obstacles: obstacles, borders: borders, channel: plan, bounds: domain, siblings: siblings) : nil)
             guard let points else {
                 throw DiagramRenderError(message: "无法为 \(edge.from) 到 \(edge.to) 的连线找到不穿过节点的路径，请增加分组空间或简化连线。", code: "layout")
             }
@@ -206,19 +259,80 @@ enum CompoundEdgeRouter {
                             nodes: shiftedNodes, edges: routed, groups: shiftedGroups)
     }
 
-    private static func forwardRoute(starts: [Port], ends: [Port], obstacles: [CGRect], domain: CGRect) -> [CGPoint]? {
+    /// Order parallel group connections together instead of selecting each elbow independently.
+    private static func parallelTracks(_ graph: FlowchartModel, frame: (String) -> CGRect, parent: @escaping (String) -> String?,
+                                       direction: (String) -> FlowDirection, anchor: (Int, Bool) -> CGPoint) -> [Int: Channel] {
+        let boundary: (String, String) -> String = { endpoint, other in
+            var otherAncestors = Set<String>(), current = parent(other)
+            while let id = current { otherAncestors.insert(id); current = parent(id) }
+            var result = endpoint
+            current = parent(endpoint)
+            while let id = current, !otherAncestors.contains(id), id != other {
+                result = id
+                current = parent(id)
+            }
+            return result
+        }
+        let candidates = graph.edges.indices.filter { index in
+            let edge = graph.edges[index]
+            return edge.style != .invisible && edge.sourceSide == nil && edge.targetSide == nil && parent(edge.from) != parent(edge.to)
+        }
+        let pairs = Dictionary(grouping: candidates) { [boundary(graph.edges[$0].from, graph.edges[$0].to), boundary(graph.edges[$0].to, graph.edges[$0].from)] }
+        var result: [Int: Channel] = [:]
+        for (pair, indices) in pairs where indices.count >= 2 {
+            let flow = direction(pair[0])
+            let horizontal = flow.horizontal
+            let positive = flow == .leftRight || flow == .topDown
+            // Turns occupy the gap between group outlines, including nested ancestor outlines.
+            let sources = indices.map { frame(boundary(graph.edges[$0].from, graph.edges[$0].to)) }
+            let targets = indices.map { frame(boundary(graph.edges[$0].to, graph.edges[$0].from)) }
+            let starts = sources.map { horizontal ? (positive ? $0.maxX : $0.minX) : (positive ? $0.maxY : $0.minY) }
+            let ends = targets.map { horizontal ? (positive ? $0.minX : $0.maxX) : (positive ? $0.minY : $0.maxY) }
+            let first = positive ? starts.max()! : starts.min()!, last = positive ? ends.min()! : ends.max()!
+            let sign: CGFloat = positive ? 1 : -1
+            let clearance = DiagramStyle.groupEdgeClearance
+            let available = (last - first) * sign - 2 * clearance
+            guard available >= CGFloat(indices.count - 1) * DiagramStyle.edgeLaneSeparation - 0.01 else { continue }
+            let ordered = indices.sorted { a, b in
+                let a0 = anchor(a, true), a1 = anchor(a, false), b0 = anchor(b, true), b1 = anchor(b, false)
+                let startA = horizontal ? a0.y : a0.x, endA = horizontal ? a1.y : a1.x
+                let startB = horizontal ? b0.y : b0.x, endB = horizontal ? b1.y : b1.x
+                let beforeA = endA < startA, beforeB = endB < startB
+                if beforeA != beforeB { return beforeA }
+                if abs(startA + endA - startB - endB) > 0.001 {
+                    return beforeA ? startA + endA < startB + endB : startA + endA > startB + endB
+                }
+                return a < b
+            }
+            for (position, index) in ordered.enumerated() {
+                let coordinate = first + sign * (clearance + available * CGFloat(position) / CGFloat(ordered.count - 1))
+                result[index] = Channel(coordinate: coordinate, horizontal: horizontal,
+                    range: (min(first, last) + clearance)...(max(first, last) - clearance))
+            }
+        }
+        return result
+    }
+
+    private static func forwardRoute(starts: [Port], ends: [Port], obstacles: [CGRect], borders: [CGRect], channel: Channel?, domain: CGRect, routes: [[CGPoint]]) -> [CGPoint]? {
         for start in starts where start.penalty == 0 {
             let vertical = start.side.isMultiple(of: 2), positive = start.side == 1 || start.side == 2
             for end in ends where end.penalty == 0 && end.side == (start.side + 2) % 4 {
                 let first = vertical ? start.stub.y : start.stub.x, last = vertical ? end.stub.y : end.stub.x
                 guard positive ? first <= last : first >= last else { continue }
-                let middle = (first + last) / 2
-                let a = vertical ? CGPoint(x: start.anchor.x, y: middle) : CGPoint(x: middle, y: start.anchor.y)
-                let b = vertical ? CGPoint(x: end.anchor.x, y: middle) : CGPoint(x: middle, y: end.anchor.y)
-                let corridor = [start.stub, a, b, end.stub]
-                guard corridor.allSatisfy({ domain.contains($0) }),
-                      zip(corridor, corridor.dropFirst()).allSatisfy({ clear($0.0, $0.1, obstacles: obstacles) }) else { continue }
-                return LayeredLayoutEngine.simplify([start.anchor, a, b, end.anchor])
+                for offset: CGFloat in [0, -12, 12, -24, 24, -36, 36] {
+                    let middle = (first + last) / 2 + offset
+                    guard middle >= min(first, last), middle <= max(first, last) else { continue }
+                    let a = vertical ? CGPoint(x: start.anchor.x, y: middle) : CGPoint(x: middle, y: start.anchor.y)
+                    let b = vertical ? CGPoint(x: end.anchor.x, y: middle) : CGPoint(x: middle, y: end.anchor.y)
+                    let corridor = [start.stub, a, b, end.stub]
+                    let points = LayeredLayoutEngine.simplify([start.anchor, a, b, end.anchor])
+                    guard corridor.allSatisfy({ domain.contains($0) }),
+                          zip(points, points.dropFirst()).allSatisfy({ clearOfBorders($0.0, $0.1, borders: borders) }),
+                          zip(points, points.dropFirst()).allSatisfy({ clearChannel($0.0, $0.1, plan: channel, routes: routes) }),
+                          zip(corridor, corridor.dropFirst()).allSatisfy({ clear($0.0, $0.1, obstacles: obstacles) }),
+                          !EdgeGeometry.sharesSegment(points, routes: routes) else { continue }
+                    return points
+                }
             }
         }
         return nil
@@ -333,21 +447,52 @@ enum CompoundEdgeRouter {
         return true
     }
 
-    private static func visibilityRoute(starts: [Port], ends: [Port], obstacles: [CGRect], bounds: CGRect, siblings: [[CGPoint]]) -> [CGPoint]? {
+    /// Crossing a group outline is allowed; following it within the clearance band is not.
+    private static func clearOfBorders(_ a: CGPoint, _ b: CGPoint, borders: [CGRect]) -> Bool {
+        let clearance = DiagramStyle.groupEdgeClearance - 0.01
+        for rect in borders {
+            if abs(a.x - b.x) < 0.01,
+               min(max(a.y, b.y), rect.maxY) - max(min(a.y, b.y), rect.minY) > 0.01,
+               min(abs(a.x - rect.minX), abs(a.x - rect.maxX)) < clearance { return false }
+            if abs(a.y - b.y) < 0.01,
+               min(max(a.x, b.x), rect.maxX) - max(min(a.x, b.x), rect.minX) > 0.01,
+               min(abs(a.y - rect.minY), abs(a.y - rect.maxY)) < clearance { return false }
+        }
+        return true
+    }
+
+    private static func clearChannel(_ a: CGPoint, _ b: CGPoint, plan: Channel?, routes: [[CGPoint]]) -> Bool {
+        guard let plan else { return true }
+        let axis: (CGPoint) -> CGFloat = { plan.horizontal ? $0.x : $0.y }
+        let cross: (CGPoint) -> CGFloat = { plan.horizontal ? $0.y : $0.x }
+        guard abs(axis(a) - axis(b)) < 0.01, axis(a) >= plan.range.lowerBound - 0.01,
+              axis(a) <= plan.range.upperBound + 0.01 else { return true }
+        return !routes.contains { route in zip(route, route.dropFirst()).contains { c, d in
+            abs(axis(c) - axis(d)) < 0.01 && axis(c) >= plan.range.lowerBound - 0.01 && axis(c) <= plan.range.upperBound + 0.01
+                && min(max(cross(a), cross(b)), max(cross(c), cross(d))) - max(min(cross(a), cross(b)), min(cross(c), cross(d))) > 0.01
+                && abs(axis(a) - axis(c)) < DiagramStyle.edgeLaneSeparation - 0.01
+        } }
+    }
+
+    private static func visibilityRoute(starts: [Port], ends: [Port], obstacles: [CGRect], borders: [CGRect], channel: Channel?, bounds: CGRect, siblings: [[CGPoint]]) -> [CGPoint]? {
         let starts = starts.filter { bounds.contains($0.stub) }, ends = ends.filter { bounds.contains($0.stub) }
         guard !starts.isEmpty, !ends.isEmpty else { return nil }
         let obstacles = obstacles.filter { $0.intersects(bounds) }
+        let channelPadding: CGFloat = channel == nil ? 8 : DiagramStyle.edgeLaneSeparation
         let channels = siblings.flatMap { route in
             zip(route, route.dropFirst()).map { a, b in
-                CGRect(x: min(a.x, b.x), y: min(a.y, b.y), width: abs(b.x - a.x), height: abs(b.y - a.y)).insetBy(dx: -8, dy: -8)
+                CGRect(x: min(a.x, b.x), y: min(a.y, b.y), width: abs(b.x - a.x), height: abs(b.y - a.y)).insetBy(dx: -channelPadding, dy: -channelPadding)
             }
         }.filter { $0.intersects(bounds) }
         let congestion: (CGPoint, CGPoint) -> CGFloat = { a, b in
             CGFloat(channels.filter { !clear(a, b, obstacles: [$0]) }.count) * 160
         }
-        let xs = Array(Set([bounds.minX, bounds.maxX] + starts.map { $0.stub.x } + ends.map { $0.stub.x }
+        let clearance = DiagramStyle.groupEdgeClearance
+        let borderXs = borders.flatMap { [$0.minX - clearance, $0.minX + clearance, $0.maxX - clearance, $0.maxX + clearance] }.filter { $0 >= bounds.minX && $0 <= bounds.maxX }
+        let borderYs = borders.flatMap { [$0.minY - clearance, $0.minY + clearance, $0.maxY - clearance, $0.maxY + clearance] }.filter { $0 >= bounds.minY && $0 <= bounds.maxY }
+        let xs = Array(Set([bounds.minX, bounds.maxX] + borderXs + starts.map { $0.stub.x } + ends.map { $0.stub.x }
             + (obstacles + channels).flatMap { [$0.minX, $0.maxX] }.filter { $0 >= bounds.minX && $0 <= bounds.maxX })).sorted()
-        let ys = Array(Set([bounds.minY, bounds.maxY] + starts.map { $0.stub.y } + ends.map { $0.stub.y }
+        let ys = Array(Set([bounds.minY, bounds.maxY] + borderYs + starts.map { $0.stub.y } + ends.map { $0.stub.y }
             + (obstacles + channels).flatMap { [$0.minY, $0.maxY] }.filter { $0 >= bounds.minY && $0 <= bounds.maxY })).sorted()
         let width = xs.count, cells = width * ys.count
         guard cells <= 200_000 else { return nil }
@@ -359,6 +504,7 @@ enum CompoundEdgeRouter {
         var origin = previous
         var heap = RouteHeap()
         for (index, port) in starts.enumerated() {
+            guard !EdgeGeometry.sharesSegment([port.anchor, port.stub], routes: siblings), clearChannel(port.anchor, port.stub, plan: channel, routes: siblings) else { continue }
             let axis = abs(port.anchor.x - port.stub.x) > 0.01 ? 1 : 2
             let state = cell(port.stub) * 3 + axis
             let cost = port.penalty + abs(port.anchor.x - port.stub.x) + abs(port.anchor.y - port.stub.y) + congestion(port.anchor, port.stub)
@@ -375,6 +521,7 @@ enum CompoundEdgeRouter {
             let index = visit.state / 3, axis = visit.state % 3, p = point(index)
             for target in ends.indices where endCells[target] == index {
                 let end = ends[target]
+                guard !EdgeGeometry.sharesSegment([end.stub, end.anchor], routes: siblings), clearChannel(end.stub, end.anchor, plan: channel, routes: siblings) else { continue }
                 let endAxis = abs(end.anchor.x - end.stub.x) > 0.01 ? 1 : 2
                 let score = visit.cost + end.penalty + abs(end.anchor.x - end.stub.x) + abs(end.anchor.y - end.stub.y)
                     + (axis != endAxis ? 18 : 0) + congestion(end.stub, end.anchor)
@@ -384,7 +531,7 @@ enum CompoundEdgeRouter {
             let neighbours = [(x - 1, y, 1), (x + 1, y, 1), (x, y - 1, 2), (x, y + 1, 2)]
             for (nx, ny, nextAxis) in neighbours where nx >= 0 && nx < width && ny >= 0 && ny < ys.count {
                 let nextCell = ny * width + nx, q = point(nextCell)
-                guard clear(p, q, obstacles: obstacles) else { continue }
+                guard clear(p, q, obstacles: obstacles), clearOfBorders(p, q, borders: borders), clearChannel(p, q, plan: channel, routes: siblings), !EdgeGeometry.sharesSegment([p, q], routes: siblings) else { continue }
                 let next = nextCell * 3 + nextAxis
                 let cost = visit.cost + abs(q.x - p.x) + abs(q.y - p.y) + (axis != 0 && axis != nextAxis ? 18 : 0) + congestion(p, q)
                 guard cost < costs[next] else { continue }

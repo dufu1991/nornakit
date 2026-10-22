@@ -35,7 +35,7 @@ public actor NativeDiagramRenderer: DiagramRendering {
         case .xychart: scene = try DataCharts.xy(source, options: options)
         case .quadrantChart: scene = try DataCharts.quadrant(source)
         case .radar: scene = try DataCharts.radar(source, options: options)
-        case .mindmap: scene = try HierarchyDiagrams.mindmap(source)
+        case .mindmap: scene = try HierarchyDiagrams.mindmap(source, options: options)
         case .treeView: scene = try HierarchyDiagrams.tree(source)
         case .treemap: scene = try HierarchyDiagrams.treemap(source, options: options)
         case .ishikawa: scene = try HierarchyDiagrams.ishikawa(source)

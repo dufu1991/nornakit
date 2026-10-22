@@ -9,6 +9,8 @@ enum DiagramStyle {
     static let nodeSeparation: CGFloat = 40
     static let rankSeparation: CGFloat = 48
     static let groupPadding: CGFloat = 20
+    static let groupEdgeClearance: CGFloat = 16
+    static let edgeLaneSeparation: CGFloat = 12
     static let cornerRadius: CGFloat = 8
     static let scenePadding: CGFloat = 8
 }

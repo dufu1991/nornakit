@@ -90,8 +90,9 @@ final class SceneBuilder {
         primitives.append(ScenePrimitive(geometry: .path(commands), style: VectorStyle(fill: fill, stroke: stroke, lineWidth: width, dash: dash, opacity: opacity), id: id))
     }
 
-    func line(_ points: [CGPoint], color: SceneColor = .line, width: CGFloat = 1, dash: [CGFloat] = [], arrow: Bool = false, open: Bool = false, id: String? = nil) {
-        path(ScenePath.edge(points).commands, stroke: color, width: width, dash: dash, id: id)
+    func line(_ points: [CGPoint], color: SceneColor = .line, width: CGFloat = 1, dash: [CGFloat] = [], arrow: Bool = false, open: Bool = false, id: String? = nil, rounded: Bool = true) {
+        let commands = rounded ? ScenePath.edge(points).commands : points.enumerated().map { $0.offset == 0 ? PathCommand.move($0.element) : .line($0.element) }
+        path(commands, stroke: color, width: width, dash: dash, id: id)
         if arrow {
             if open, points.count >= 2 {
                 let triangle = ScenePath.arrow(points).commands

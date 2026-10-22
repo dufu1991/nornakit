@@ -1,0 +1,62 @@
+[
+  {
+    "id": "01",
+    "title": "多折线图：实际值与目标值对比",
+    "source": "xychart-beta\n    title \"上半年实际收入与目标收入\"\n    x-axis [\"1月\", \"2月\", \"3月\", \"4月\", \"5月\", \"6月\"]\n    y-axis \"收入（万元）\" 0 --> 180\n    line [80, 95, 110, 105, 140, 165]\n    line [90, 100, 110, 120, 130, 150]\n"
+  },
+  {
+    "id": "02",
+    "title": "柱线组合图：新增用户与流失用户",
+    "source": "xychart-beta\n    title \"月度新增与流失用户\"\n    x-axis [\"1月\", \"2月\", \"3月\", \"4月\", \"5月\", \"6月\"]\n    y-axis \"用户数\" 0 --> 1600\n    bar [800, 950, 1100, 1050, 1300, 1500]\n    line [200, 260, 240, 300, 280, 320]\n"
+  },
+  {
+    "id": "03",
+    "title": "直方图式展示：订单金额分布",
+    "source": "xychart-beta\n    title \"订单金额分布\"\n    x-axis [\"0–99\", \"100–199\", \"200–299\", \"300–399\", \"400–499\"]\n    y-axis \"订单数\" 0 --> 500\n    bar [420, 360, 210, 120, 60]\n"
+  },
+  {
+    "id": "04",
+    "title": "正负柱状图：月度利润变化",
+    "source": "xychart-beta\n    title \"上半年月度利润\"\n    x-axis [\"1月\", \"2月\", \"3月\", \"4月\", \"5月\", \"6月\"]\n    y-axis \"利润（万元）\" -40 --> 100\n    bar [-25, -10, 15, 35, 60, 85]\n"
+  },
+  {
+    "id": "05",
+    "title": "数据质量报告：校验、分流与修复",
+    "source": "flowchart LR\n    A[\"原始数据<br/>100,000 条\"] --> B[\"数据质量校验\"]\n\n    B --> C[\"合格数据<br/>96,500 条\"]\n    B --> D[\"重复记录<br/>1,500 条\"]\n    B --> E[\"必填字段缺失<br/>1,200 条\"]\n    B --> F[\"格式错误<br/>800 条\"]\n\n    C --> G[\"进入分析数据集\"]\n    D --> H[\"执行去重\"]\n    E --> I[\"补全或人工确认\"]\n    F --> J[\"格式标准化\"]\n\n    H --> K[\"重新校验\"]\n    I --> K\n    J --> K\n\n    classDef good fill:#dcfce7,stroke:#16a34a,color:#14532d;\n    classDef warning fill:#fef3c7,stroke:#d97706,color:#78350f;\n\n    class C,G good;\n    class D,E,F warning;\n"
+  },
+  {
+    "id": "06",
+    "title": "数据分析链路：从数据源到看板",
+    "source": "flowchart LR\n    subgraph Sources[\"数据来源\"]\n        A[\"业务数据库\"]\n        B[\"埋点日志\"]\n        C[\"第三方接口\"]\n    end\n\n    subgraph Ingestion[\"数据采集\"]\n        D[\"批量同步\"]\n        E[\"流式采集\"]\n    end\n\n    subgraph Storage[\"数据存储与加工\"]\n        F[\"原始数据层\"]\n        G[\"清洗明细层\"]\n        H[\"指标汇总层\"]\n    end\n\n    subgraph Applications[\"数据应用\"]\n        I[\"经营看板\"]\n        J[\"用户分析\"]\n        K[\"异常告警\"]\n    end\n\n    A --> D\n    C --> D\n    B --> E\n\n    D --> F\n    E --> F\n    F --> G\n    G --> H\n\n    H --> I\n    H --> J\n    H --> K\n"
+  },
+  {
+    "id": "07",
+    "title": "指标拆解图：收入由哪些因素决定？",
+    "source": "mindmap\n    root((收入分析))\n        付费用户数\n            新增付费用户\n                新注册用户\n                首次付费转化率\n            留存付费用户\n                到期用户数\n                续费率\n            召回付费用户\n        每位付费用户平均收入\n            购买频次\n            平均订单金额\n            产品组合\n        影响因素\n            定价策略\n            促销活动\n            渠道质量\n            产品体验\n"
+  },
+  {
+    "id": "08",
+    "title": "权限关系图：角色能访问哪些功能？",
+    "source": "flowchart LR\n    subgraph Roles[\"角色\"]\n        A[\"系统管理员\"]\n        B[\"运营人员\"]\n        C[\"数据分析师\"]\n        D[\"普通成员\"]\n    end\n\n    subgraph Permissions[\"权限\"]\n        P1[\"管理用户\"]\n        P2[\"配置系统\"]\n        P3[\"发布内容\"]\n        P4[\"查看报表\"]\n        P5[\"导出数据\"]\n        P6[\"使用聊天\"]\n    end\n\n    A --> P1\n    A --> P2\n    A --> P3\n    A --> P4\n    A --> P5\n    A --> P6\n\n    B --> P3\n    B --> P4\n    B --> P6\n\n    C --> P4\n    C --> P5\n    C --> P6\n\n    D --> P6\n"
+  },
+  {
+    "id": "09",
+    "title": "订单状态图：支付、发货与售后",
+    "source": "stateDiagram-v2\n    [*] --> PendingPayment\n\n    state \"待支付\" as PendingPayment\n    state \"已支付\" as Paid\n    state \"已发货\" as Shipped\n    state \"已完成\" as Completed\n    state \"已取消\" as Cancelled\n    state \"退款处理中\" as Refunding\n    state \"已退款\" as Refunded\n\n    PendingPayment --> Paid: 支付成功\n    PendingPayment --> Cancelled: 超时或主动取消\n\n    Paid --> Shipped: 仓库发货\n    Paid --> Refunding: 申请退款并通过审核\n\n    Shipped --> Completed: 确认收货\n    Shipped --> Refunding: 售后审核通过\n\n    Refunding --> Refunded: 退款成功\n\n    Completed --> [*]\n    Cancelled --> [*]\n    Refunded --> [*]\n"
+  },
+  {
+    "id": "10",
+    "title": "并行时序图：多个接口同时加载",
+    "source": "sequenceDiagram\n    autonumber\n    actor U as 用户\n    participant Page as 数据看板\n    participant Sales as 销售服务\n    participant Users as 用户服务\n    participant Stock as 库存服务\n\n    U->>Page: 打开经营看板\n\n    par 加载销售数据\n        Page->>Sales: 查询本月销售额\n        Sales-->>Page: 返回销售统计\n    and 加载用户数据\n        Page->>Users: 查询活跃用户数\n        Users-->>Page: 返回用户统计\n    and 加载库存数据\n        Page->>Stock: 查询库存预警\n        Stock-->>Page: 返回库存统计\n    end\n\n    Page-->>U: 展示完整看板\n"
+  },
+  {
+    "id": "11",
+    "title": "故障排查图：接口响应时间过高",
+    "source": "flowchart TD\n    A[\"发现接口响应变慢\"] --> B{\"是否所有接口都变慢？\"}\n\n    B -->|是| C[\"检查公共基础设施\"]\n    B -->|否| D[\"定位具体慢接口\"]\n\n    C --> E[\"检查 CPU、内存与网络\"]\n    C --> F[\"检查数据库与缓存\"]\n\n    D --> G[\"查看调用链和慢日志\"]\n    G --> H{\"耗时主要在哪里？\"}\n\n    H -->|数据库| I[\"检查慢 SQL、索引和锁等待\"]\n    H -->|外部服务| J[\"检查超时、重试和依赖状态\"]\n    H -->|应用内部| K[\"检查热点代码与资源竞争\"]\n\n    E --> L[\"结合证据制定修复方案\"]\n    F --> L\n    I --> L\n    J --> L\n    K --> L\n\n    L --> M[\"验证延迟、错误率和资源使用\"]\n    M --> N{\"是否恢复？\"}\n\n    N -->|是| O[\"记录原因与预防措施\"]\n    N -->|否| G\n"
+  },
+  {
+    "id": "12",
+    "title": "类图：展示 API 返回的数据结构",
+    "source": "classDiagram\n    class ChatResponse {\n        +string requestId\n        +string conversationId\n        +string status\n    }\n\n    class Message {\n        +string id\n        +string role\n        +string content\n        +string createdAt\n    }\n\n    class Usage {\n        +int inputTokens\n        +int outputTokens\n        +int totalTokens\n    }\n\n    class Citation {\n        +string title\n        +string url\n        +string snippet\n    }\n\n    ChatResponse \"1\" *-- \"1\" Message : message\n    ChatResponse \"1\" *-- \"1\" Usage : usage\n    Message \"1\" *-- \"0..*\" Citation : citations\n"
+  }
+]

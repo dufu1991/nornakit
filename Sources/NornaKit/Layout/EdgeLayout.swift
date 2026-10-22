@@ -1,6 +1,24 @@
 import Foundation
 
 enum EdgeGeometry {
+    static func sharedLength(_ a: CGPoint, _ b: CGPoint, _ c: CGPoint, _ d: CGPoint) -> CGFloat {
+        if abs(a.x - b.x) < 0.001, abs(c.x - d.x) < 0.001, abs(a.x - c.x) < 0.001 {
+            return max(0, min(max(a.y, b.y), max(c.y, d.y)) - max(min(a.y, b.y), min(c.y, d.y)))
+        }
+        if abs(a.y - b.y) < 0.001, abs(c.y - d.y) < 0.001, abs(a.y - c.y) < 0.001 {
+            return max(0, min(max(a.x, b.x), max(c.x, d.x)) - max(min(a.x, b.x), min(c.x, d.x)))
+        }
+        return 0
+    }
+
+    static func sharesSegment(_ points: [CGPoint], routes: [[CGPoint]]) -> Bool {
+        zip(points, points.dropFirst()).contains { a, b in
+            routes.contains { route in
+                zip(route, route.dropFirst()).contains { c, d in sharedLength(a, b, c, d) > 0.01 }
+            }
+        }
+    }
+
     static func segments(_ commands: [PathCommand]) -> [(CGPoint, CGPoint)] {
         var result: [(CGPoint, CGPoint)] = []
         var cursor = CGPoint.zero
@@ -75,7 +93,27 @@ enum EdgeLabelLayout {
             let length = hypot(b.x - a.x, b.y - a.y)
             guard length > 0.01 else { continue }
             let extent = abs(b.x - a.x) > abs(b.y - a.y) ? size.width : size.height
-            for t: CGFloat in [0.5, 0.35, 0.65, 0.2, 0.8, 0.3, 0.7, 0.25, 0.75, 0.15, 0.85, 0.1, 0.9] {
+            var positions: [CGFloat] = [0.5, 0.35, 0.65, 0.2, 0.8, 0.3, 0.7, 0.25, 0.75, 0.15, 0.85, 0.1, 0.9]
+            // Sample obstacle boundaries as well as percentages, so narrow free intervals are not missed.
+            let horizontal = abs(b.x - a.x) > abs(b.y - a.y)
+            let exclusions = obstacles + otherRoutes.flatMap { route in
+                route.map { p, q in
+                    CGRect(x: min(p.x, q.x), y: min(p.y, q.y), width: abs(p.x - q.x), height: abs(p.y - q.y)).insetBy(dx: -2, dy: -2)
+                }
+            }
+            for obstacle in exclusions {
+                let center = horizontal ? a.y : a.x
+                let half = (horizontal ? size.height : size.width) / 2
+                let minimum = horizontal ? obstacle.minY : obstacle.minX
+                let maximum = horizontal ? obstacle.maxY : obstacle.maxX
+                guard maximum >= center - half, minimum <= center + half else { continue }
+                let values = horizontal ? [obstacle.minX - size.width / 2 - 0.1, obstacle.maxX + size.width / 2 + 0.1]
+                    : [obstacle.minY - size.height / 2 - 0.1, obstacle.maxY + size.height / 2 + 0.1]
+                let delta = horizontal ? b.x - a.x : b.y - a.y
+                let origin = horizontal ? a.x : a.y
+                positions += values.map { ($0 - origin) / delta }.filter { $0 > 0 && $0 < 1 }
+            }
+            for t in Set(positions).sorted() {
                 let center = CGPoint(x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t)
                 let r = CGRect(x: center.x - size.width / 2, y: center.y - size.height / 2, width: size.width, height: size.height)
                 let collisions = obstacles.filter { $0.intersects(r) }.count
@@ -86,10 +124,13 @@ enum EdgeLabelLayout {
                 let crossings = otherRoutes.reduce(0) { count, route in
                     count + (route.contains { !EdgeGeometry.clear($0.0, $0.1, obstacles: [r.insetBy(dx: -6, dy: -6)]) } ? 1 : 0)
                 }
+                let intersections = otherRoutes.reduce(0) { count, route in
+                    count + (route.contains { !EdgeGeometry.clear($0.0, $0.1, obstacles: [r]) } ? 1 : 0)
+                }
                 let outside = domain.map { $0.contains(r) ? 0 : 1 } ?? 0
                 let clearance = min(length * t, length * (1 - t)) - extent / 2
                 let shortage = max(0, 16 - clearance)
-                let score: CGFloat = CGFloat(collisions) * 100_000 + CGFloat(crossings) * 20_000 + CGFloat(outside) * 10_000
+                let score: CGFloat = CGFloat(collisions + intersections) * 1_000_000 + CGFloat(crossings) * 20_000 + CGFloat(outside) * 100_000
                     + overlap * 10_000 + shortage * 100 + abs(t - 0.5) * 40 - min(length, 300) * 0.02
                 if best == nil || score < best!.1 { best = (r, score) }
             }
