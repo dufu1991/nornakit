@@ -93,7 +93,7 @@ foreach (var kind in Enum.GetValues<DiagramKind>())
     foreach (var format in new[] { DiagramExportFormat.Png, DiagramExportFormat.Svg, DiagramExportFormat.Pdf })
         await File.WriteAllBytesAsync(Path.Combine(sampleDirectory, $"{kind.Id()}.{format.ToString().ToLowerInvariant()}"), await exporter.ExportAsync(artifact.Scene, WindowsPalette.Resolve(CanvasAppearance.Light), new(Format: format, Scale: 1)));
 }
-foreach (var appearance in new[] { CanvasAppearance.Light, CanvasAppearance.Dark })
+foreach (var appearance in new[] { CanvasAppearance.Light, CanvasAppearance.Dark, CanvasAppearance.HighContrastLight, CanvasAppearance.HighContrastDark })
 {
     var palette = WindowsPalette.Resolve(appearance);
     foreach (var format in Enum.GetValues<DiagramExportFormat>())

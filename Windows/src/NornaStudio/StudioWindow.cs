@@ -21,7 +21,7 @@ internal sealed partial class StudioWindow : Window
     private readonly StudioSession session = new(WindowsDiagramRenderer.Create());
     private readonly StudioSettingsStore store = new();
     private readonly UISettings systemSettings = new();
-    private readonly AccessibilitySettings accessibility = new();
+    private readonly Microsoft.UI.System.ThemeSettings themeSettings;
     private StudioSettings settings = new();
     private Grid root = null!;
     private TextBox editor = null!;
@@ -42,11 +42,12 @@ internal sealed partial class StudioWindow : Window
         Title = "Norna Studio"; AppWindow.Resize(new(1440, 920)); SystemBackdrop = new MicaBackdrop(); Build();
         session.Changed += Refresh;
         systemSettings.ColorValuesChanged += ColorsChanged;
-        accessibility.HighContrastChanged += HighContrastChanged;
+        themeSettings = Microsoft.UI.System.ThemeSettings.CreateForWindowId(AppWindow.Id);
+        themeSettings.Changed += ThemeChanged;
         AppWindow.Closing += (sender, args) =>
         {
             if (closing) return; args.Cancel = true;
-            _ = RunAsync(async () => { await SaveWorkspaceAsync(); closing = true; session.Dispose(); preview.Dispose(); systemSettings.ColorValuesChanged -= ColorsChanged; accessibility.HighContrastChanged -= HighContrastChanged; Close(); });
+            _ = RunAsync(async () => { await SaveWorkspaceAsync(); closing = true; session.Dispose(); preview.Dispose(); systemSettings.ColorValuesChanged -= ColorsChanged; themeSettings.Changed -= ThemeChanged; Close(); });
         };
     }
     public async Task InitializeAsync() => await RunAsync(async () => { SmokeStep("load-settings"); settings = await store.LoadAsync(); SmokeStep("build-window"); Build(); SmokeStep("initial-render"); await RenderAsync(); SmokeStep("initialized"); });
@@ -69,7 +70,7 @@ internal sealed partial class StudioWindow : Window
         await File.WriteAllTextAsync(Path.Combine(directory, "studio.json"), JsonSerializer.Serialize(new { status = "passed", architecture = System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture.ToString(), families = ExampleCatalog.Kinds.Length, examples = ExampleCatalog.All.Length, title = Title }));
     }
     private void ColorsChanged(UISettings sender, object args) => DispatcherQueue.TryEnqueue(() => preview.Palette = Palette);
-    private void HighContrastChanged(AccessibilitySettings sender, object args) => DispatcherQueue.TryEnqueue(() => preview.Palette = Palette);
+    private void ThemeChanged(Microsoft.UI.System.ThemeSettings sender, object args) => DispatcherQueue.TryEnqueue(() => preview.Palette = Palette);
     private void Build()
     {
         rebuilding = true;

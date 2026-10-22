@@ -11,7 +11,7 @@ directory = Path(sys.argv[1])
 result = json.loads((directory / "result.json").read_text(encoding="utf-8"))
 assert result["status"] == "passed"
 assert result["architecture"] in {"X64", "Arm64"}
-for appearance in ("light", "dark"):
+for appearance in ("light", "dark", "highcontrastlight", "highcontrastdark"):
     images = {}
     for format_name in ("png", "jpeg", "tiff"):
         with Image.open(directory / f"native-{appearance}.{format_name}") as image:
