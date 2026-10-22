@@ -21,7 +21,11 @@ internal sealed class StudioSettingsStore
     {
         var file = Path.Combine(directory, "settings.json"); if (!File.Exists(file)) return new();
         await using var stream = File.OpenRead(file);
-        return await JsonSerializer.DeserializeAsync<StudioSettings>(stream) ?? throw new InvalidDataException("The saved workspace is empty.");
+        var settings = await JsonSerializer.DeserializeAsync<StudioSettings>(stream, new JsonSerializerOptions { RespectNullableAnnotations = true }) ?? throw new InvalidDataException("The saved workspace is empty.");
+        if (settings.Source.Length > 50_000 || settings.Language is not ("en" or "zh") || !Enum.IsDefined(settings.Appearance) || !Enum.IsDefined(settings.ColorStyle)
+            || !System.Text.RegularExpressions.Regex.IsMatch(settings.Accent, "^#?[0-9a-fA-F]{6}$", System.Text.RegularExpressions.RegexOptions.CultureInvariant))
+            throw new InvalidDataException("The saved workspace contains invalid settings.");
+        return settings;
     }
     public async Task SaveAsync(StudioSettings settings)
     {

@@ -13,20 +13,24 @@ namespace NornaKit.Windows;
 [WinRT.GeneratedWinRTExposedType]
 public sealed partial class DiagramPreview : UserControl, IDisposable
 {
-    private readonly CanvasControl canvas = new();
+    private readonly CanvasControl canvas;
     private DiagramScene? scene;
     private DiagramPalette palette = WindowsPalette.Resolve();
     private bool grid, panning, disposed, fitOnResize = true;
     private Point last;
     private Vector2 pan;
     private float zoom = 1;
+    public event Action<Exception>? RenderingFailed;
     public DiagramPreview()
     {
-        Content = canvas; IsTabStop = true; MinWidth = 120; MinHeight = 120;
+        InitializeComponent(); canvas = DrawingCanvas;
+        IsTabStop = true; MinWidth = 120; MinHeight = 120;
         AutomationProperties.SetName(this, "Diagram preview");
         AutomationProperties.SetHelpText(this, "Drag to pan. Scroll to zoom. Press 0 to fit, plus or minus to zoom.");
         canvas.Draw += (_, args) =>
         {
+            try
+            {
             var drawing = args.DrawingSession; drawing.Clear(Win2DScenePainter.Native(palette.Background));
             if (grid)
             {
@@ -36,6 +40,13 @@ public sealed partial class DiagramPreview : UserControl, IDisposable
             if (scene is null) return;
             drawing.Transform = Matrix3x2.CreateScale(zoom) * Matrix3x2.CreateTranslation(pan);
             Win2DScenePainter.Draw(drawing, scene, palette);
+            }
+            catch (Exception error)
+            {
+                // Preserve native callback diagnostics, then let Win2D handle or propagate the failure.
+                RenderingFailed?.Invoke(error);
+                throw;
+            }
         };
         SizeChanged += (_, _) => { if (fitOnResize) Fit(); else canvas.Invalidate(); };
         PointerPressed += (_, e) => { Focus(FocusState.Pointer); panning = true; last = e.GetCurrentPoint(this).Position; CapturePointer(e.Pointer); e.Handled = true; };

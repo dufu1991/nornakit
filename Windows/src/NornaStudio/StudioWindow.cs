@@ -75,7 +75,7 @@ internal sealed partial class StudioWindow : Window
     {
         rebuilding = true;
         if (Content is not null) preview.Dispose();
-        root = new() { Background = (Brush)Application.Current.Resources["ApplicationPageBackgroundThemeBrush"], RequestedTheme = settings.Appearance switch { CanvasAppearance.Light => ElementTheme.Light, CanvasAppearance.Dark => ElementTheme.Dark, _ => ElementTheme.Default } };
+        root = new() { Background = (Brush)Application.Current.Resources["ApplicationPageBackgroundThemeBrush"], RequestedTheme = settings.Appearance switch { CanvasAppearance.Light or CanvasAppearance.HighContrastLight => ElementTheme.Light, CanvasAppearance.Dark or CanvasAppearance.HighContrastDark => ElementTheme.Dark, _ => ElementTheme.Default } };
         root.RowDefinitions.Add(new() { Height = GridLength.Auto }); root.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) }); root.RowDefinitions.Add(new() { Height = GridLength.Auto });
         root.RowDefinitions.Add(new() { Height = GridLength.Auto });
         var toolbar = new CommandBar { DefaultLabelPosition = CommandBarDefaultLabelPosition.Right, IsOpen = false };
@@ -110,6 +110,11 @@ internal sealed partial class StudioWindow : Window
         editor.TextChanged += (_, _) => { if (!rebuilding) _ = RunAsync(RenderAsync); }; Grid.SetRow(editor, 1); sourcePanel.Children.Add(editor); Grid.SetColumn(sourcePanel, 1); workspace.Children.Add(sourcePanel);
         var previewPanel = new Grid { RowSpacing = 8, Padding = new(12, 12, 16, 12) }; previewPanel.RowDefinitions.Add(new() { Height = GridLength.Auto }); previewPanel.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) });
         preview = new() { Palette = Palette, ShowGrid = settings.Grid }; Grid.SetRow(preview, 1); previewPanel.Children.Add(preview);
+        preview.RenderingFailed += error =>
+        {
+            if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is not { Length: > 0 } directory) return;
+            Directory.CreateDirectory(directory); File.WriteAllText(Path.Combine(directory, "drawing-failure.txt"), error.ToString());
+        };
         preview.SizeChanged += (sender, e) => { if (!closing && !rebuilding && !session.Busy && session.Artifact is not null && Math.Abs(e.NewSize.Width - e.PreviousSize.Width) > 32) _ = RunAsync(RenderAsync); };
         var controls = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8 };
         controls.Children.Add(ActionButton(L("Fit", "适应窗口"), () => preview.Fit())); controls.Children.Add(ActionButton("−", () => preview.Zoom(1 / 1.2))); controls.Children.Add(ActionButton("+", () => preview.Zoom(1.2)));
