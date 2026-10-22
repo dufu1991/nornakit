@@ -14,8 +14,6 @@ public sealed partial class App : Application
             { Directory.CreateDirectory(directory); File.AppendAllText(Path.Combine(directory, "steps.log"), "application-constructed\n"); }
             UnhandledException += (sender, args) => WriteFailure(args.Exception);
             InitializeComponent();
-            if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is { Length: > 0 } output)
-                File.WriteAllText(Path.Combine(output, "application-resources.txt"), $"Merged dictionaries: {Resources.MergedDictionaries.Count}\n");
         }
         catch (Exception error) { WriteFailure(error); throw; }
     }
