@@ -148,7 +148,7 @@ internal static class SceneGeometry
     {
         VectorGeometry.Rectangle rectangle => rectangle.Frame,
         VectorGeometry.Ellipse ellipse => ellipse.Frame,
-        VectorGeometry.Text text => new(text.Origin.X, text.Origin.Y, text.Layout.Size.Width, text.Layout.Size.Height),
+        VectorGeometry.Text text => TextBounds(text),
         VectorGeometry.Path path => PointBounds(path.Commands.SelectMany(command => command switch
         {
             PathCommand.Move move => new[] { move.Point }, PathCommand.Line line => [line.Point],
@@ -157,6 +157,12 @@ internal static class SceneGeometry
         })),
         _ => throw new ArgumentOutOfRangeException(nameof(geometry))
     };
+    private static DiagramRect TextBounds(VectorGeometry.Text text)
+    {
+        var left = Math.Min(0, text.Layout.Runs.Select(run => (run.BidiLevel & 1) == 0 ? run.Baseline.X : run.Baseline.X - run.Width).DefaultIfEmpty(0).Min());
+        var right = Math.Max(text.Layout.Size.Width, text.Layout.Runs.Select(run => (run.BidiLevel & 1) == 0 ? run.Baseline.X + run.Width : run.Baseline.X).DefaultIfEmpty(0).Max());
+        return new(text.Origin.X + left, text.Origin.Y, right - left, text.Layout.Size.Height);
+    }
     public static DiagramRect? PointBounds(IEnumerable<DiagramPoint> values)
     {
         var points = values.ToArray();

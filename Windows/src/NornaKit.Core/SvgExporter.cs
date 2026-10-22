@@ -31,7 +31,8 @@ public static class SvgExporter
                     else
                     {
                         var decoration = string.Join(' ', new[] { run.Style.Underline ? "underline" : "", run.Style.Strikethrough ? "line-through" : "" }.Where(value => value.Length != 0));
-                        output.Append($"<text x=\"{N(x)}\" y=\"{N(y)}\" xml:space=\"preserve\" font-family=\"{Escape(run.Font.Family)}\" font-size=\"{N(run.Style.Size)}\" font-weight=\"{(run.Style.Bold ? 700 : 400)}\" font-style=\"{(run.Style.Italic ? "italic" : "normal")}\" text-decoration=\"{decoration}\" fill=\"{color.Hex}\">{Escape(run.Text)}</text>");
+                        var direction = (run.BidiLevel & 1) != 0 ? " direction=\"rtl\" unicode-bidi=\"isolate\"" : "";
+                        output.Append($"<text x=\"{N(x)}\" y=\"{N(y)}\" xml:space=\"preserve\"{direction} font-family=\"{Escape(run.Font.Family)}\" font-size=\"{N(run.Style.Size)}\" font-weight=\"{(run.Style.Bold ? 700 : 400)}\" font-style=\"{(run.Style.Italic ? "italic" : "normal")}\" text-decoration=\"{decoration}\" fill=\"{color.Hex}\">{Escape(run.Text)}</text>");
                     }
                 }
             }
@@ -45,6 +46,7 @@ public static class SvgExporter
             output.Append("</g>");
         }
         output.Append("</svg>");
+        if (Encoding.UTF8.GetByteCount(output.ToString()) > 4_000_000) throw new DiagramRenderException("SVG 输出超过 4 MB。", "limit");
         return output.ToString();
     }
 

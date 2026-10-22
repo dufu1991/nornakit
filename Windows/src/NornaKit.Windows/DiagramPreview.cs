@@ -11,7 +11,7 @@ namespace NornaKit.Windows;
 
 /// <summary>A native Win2D preview. View transforms and its grid never modify the scene.</summary>
 [WinRT.GeneratedWinRTExposedType]
-public sealed partial class DiagramPreview : UserControl
+public sealed partial class DiagramPreview : UserControl, IDisposable
 {
     private readonly CanvasControl canvas = new();
     private DiagramScene? scene;
@@ -77,4 +77,5 @@ public sealed partial class DiagramPreview : UserControl
         var center = around ?? new(ActualWidth / 2, ActualHeight / 2); var next = (float)Math.Clamp(zoom * factor, .02, 8); var ratio = next / zoom; var point = new Vector2((float)center.X, (float)center.Y);
         pan = point - (point - pan) * ratio; zoom = next; fitOnResize = false; canvas.Invalidate();
     }
+    public void Dispose() { panning = false; canvas.RemoveFromVisualTree(); Content = null; }
 }

@@ -15,13 +15,23 @@ internal static class Program
 }
 
 [WinRT.GeneratedWinRTExposedType]
-internal sealed partial class StudioApp : Application
+public sealed partial class StudioApp : Application
 {
     private StudioWindow? window;
-    public StudioApp() => Resources.MergedDictionaries.Add(new XamlControlsResources());
-    protected override void OnLaunched(LaunchActivatedEventArgs args)
+    public StudioApp()
     {
-        window = new(); window.Activate(); _ = StartAsync();
+        UnhandledException += (sender, args) => WriteFailure(args.Exception);
+        InitializeComponent();
+    }
+    private static void WriteFailure(Exception error)
+    {
+        var directory = Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE");
+        if (string.IsNullOrEmpty(directory)) return;
+        Directory.CreateDirectory(directory); File.WriteAllText(Path.Combine(directory, "failure.txt"), error.ToString());
+    }
+    protected override async void OnLaunched(LaunchActivatedEventArgs args)
+    {
+        window = new(); window.Activate(); await StartAsync();
     }
     private async Task StartAsync()
     {

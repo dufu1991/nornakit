@@ -1,0 +1,54 @@
+name: Publish Windows NuGet libraries
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: NuGet package version
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  publish:
+    runs-on: windows-2025
+    environment: nuget
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: Windows
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: Windows/global.json
+      - name: Validate package version
+        env:
+          PACKAGE_VERSION: ${{ inputs.version }}
+        run: |
+          if ($env:PACKAGE_VERSION -notmatch '^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$') { throw 'Invalid NuGet version.' }
+      - run: dotnet restore NornaKit.slnx -p:Platform=x64 --locked-mode
+      - run: dotnet run --project tests/NornaKit.Core.Tests -c Release --no-restore
+      - run: dotnet publish tests/NornaKit.Windows.SmokeTests -c Release --no-restore -p:Platform=x64 -o artifacts/smoke
+      - run: ./artifacts/smoke/NornaKit.Windows.SmokeTests.exe artifacts/native-smoke
+      - name: Pack independent libraries
+        env:
+          PACKAGE_VERSION: ${{ inputs.version }}
+        run: |
+          dotnet pack src/NornaKit.Core -c Release --no-restore -p:PackageVersion=$env:PACKAGE_VERSION -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o artifacts/nuget
+          if ($LASTEXITCODE -ne 0) { throw 'Core packaging failed.' }
+          dotnet pack src/NornaKit.Windows -c Release --no-restore -p:PackageVersion=$env:PACKAGE_VERSION -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o artifacts/nuget
+          if ($LASTEXITCODE -ne 0) { throw 'Windows packaging failed.' }
+      - uses: actions/upload-artifact@v7
+        with:
+          name: windows-nuget
+          path: Windows/artifacts/nuget
+      - name: Publish packages
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: |
+          if (-not $env:NUGET_API_KEY) { throw 'Configure the nuget environment NUGET_API_KEY secret before publishing.' }
+          Get-ChildItem artifacts/nuget/*.nupkg | ForEach-Object {
+            dotnet nuget push $_.FullName --api-key $env:NUGET_API_KEY --source https://api.nuget.org/v3/index.json
+            if ($LASTEXITCODE -ne 0) { throw 'NuGet publication failed.' }
+          }

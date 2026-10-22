@@ -39,4 +39,24 @@ for appearance in ("light", "dark"):
         assert "/ToUnicode" in font
         assert "/FontFile2" in font["/DescendantFonts"][0]["/FontDescriptor"]
     assert b"/ActualText" in page.get_contents().get_data()
+regression = json.loads((directory / "regression.json").read_text(encoding="utf-8"))
+assert regression == {"rendered": 304, "rejected": 296, "failures": []}
+diagrams = list((directory / "diagrams").glob("*.pdf"))
+assert len(diagrams) == 33
+for file in diagrams:
+    svg = ET.parse(file.with_suffix(".svg")).getroot()
+    reader = PdfReader(file)
+    assert len(reader.pages) == 1
+    page = reader.pages[0]
+    assert abs(float(page.mediabox.width) - float(svg.attrib["width"])) < .01
+    assert abs(float(page.mediabox.height) - float(svg.attrib["height"])) < .01
+    assert page.extract_text().strip(), file.name
+    assert not page["/Resources"].get("/XObject"), file.name
+    for font in page["/Resources"]["/Font"].values():
+        font = font.get_object()
+        assert "/ToUnicode" in font
+        assert "/FontFile2" in font["/DescendantFonts"][0]["/FontDescriptor"]
+    with Image.open(file.with_suffix(".png")) as image:
+        assert image.size == (int(float(svg.attrib["width"]) + .999999), int(float(svg.attrib["height"]) + .999999)), file.name
+    assert not any("href" in attribute for node in svg.iter() for attribute in node.attrib), file.name
 print(f"Verified {result['architecture']} native export formats and searchable bilingual PDF text.")

@@ -45,7 +45,7 @@ internal sealed partial class StudioWindow : Window
         AppWindow.Closing += (sender, args) =>
         {
             if (closing) return; args.Cancel = true;
-            _ = RunAsync(async () => { await SaveWorkspaceAsync(); closing = true; session.Dispose(); systemSettings.ColorValuesChanged -= ColorsChanged; accessibility.HighContrastChanged -= HighContrastChanged; Close(); });
+            _ = RunAsync(async () => { await SaveWorkspaceAsync(); closing = true; session.Dispose(); preview.Dispose(); systemSettings.ColorValuesChanged -= ColorsChanged; accessibility.HighContrastChanged -= HighContrastChanged; Close(); });
         };
     }
     public async Task InitializeAsync() => await RunAsync(async () => { settings = await store.LoadAsync(); Build(); await RenderAsync(); });
@@ -65,6 +65,7 @@ internal sealed partial class StudioWindow : Window
     private void HighContrastChanged(AccessibilitySettings sender, object args) => DispatcherQueue.TryEnqueue(() => preview.Palette = Palette);
     private void Build()
     {
+        if (Content is not null) preview.Dispose();
         rebuilding = true;
         root = new() { Background = (Brush)Application.Current.Resources["ApplicationPageBackgroundThemeBrush"], RequestedTheme = settings.Appearance switch { CanvasAppearance.Light => ElementTheme.Light, CanvasAppearance.Dark => ElementTheme.Dark, _ => ElementTheme.Default } };
         root.RowDefinitions.Add(new() { Height = GridLength.Auto }); root.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) }); root.RowDefinitions.Add(new() { Height = GridLength.Auto });
@@ -100,6 +101,7 @@ internal sealed partial class StudioWindow : Window
         editor.TextChanged += (_, _) => { if (!rebuilding) _ = RunAsync(RenderAsync); }; Grid.SetRow(editor, 1); sourcePanel.Children.Add(editor); Grid.SetColumn(sourcePanel, 1); workspace.Children.Add(sourcePanel);
         var previewPanel = new Grid { RowSpacing = 8, Padding = new(12, 12, 16, 12) }; previewPanel.RowDefinitions.Add(new() { Height = GridLength.Auto }); previewPanel.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) });
         preview = new() { Palette = Palette, ShowGrid = settings.Grid }; Grid.SetRow(preview, 1); previewPanel.Children.Add(preview);
+        preview.SizeChanged += (sender, e) => { if (!rebuilding && !session.Busy && session.Artifact is not null && Math.Abs(e.NewSize.Width - e.PreviousSize.Width) > 32) _ = RunAsync(RenderAsync); };
         var controls = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8 };
         controls.Children.Add(ActionButton(L("Fit", "适应窗口"), () => preview.Fit())); controls.Children.Add(ActionButton("−", () => preview.Zoom(1 / 1.2))); controls.Children.Add(ActionButton("+", () => preview.Zoom(1.2)));
         var grid = new ToggleSwitch { Header = L("Grid", "网格"), IsOn = settings.Grid, OnContent = "", OffContent = "", VerticalAlignment = VerticalAlignment.Center }; grid.Toggled += (_, _) => { preview.ShowGrid = grid.IsOn; settings = settings with { Grid = grid.IsOn }; _ = RunAsync(SaveWorkspaceAsync); }; controls.Children.Add(grid); previewPanel.Children.Add(controls); Grid.SetColumn(previewPanel, 2); workspace.Children.Add(previewPanel);
