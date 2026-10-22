@@ -8,6 +8,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="../../PACKAGE.md" Pack="true" PackagePath="README.md" />
+    <None Include="../../../LICENSE" Pack="true" PackagePath="LICENSE" />
     <None Include="../../../THIRD_PARTY_NOTICES.md" Pack="true" PackagePath="" />
     <EmbeddedResource Include="../../../Sources/NornaKit/Resources/examples.json" LogicalName="NornaKit.examples.json" />
     <EmbeddedResource Include="../../../Sources/NornaKit/Resources/official-examples.json" LogicalName="NornaKit.official-examples.json" />

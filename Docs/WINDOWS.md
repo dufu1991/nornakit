@@ -13,7 +13,7 @@ NornaKit.Windows 是可独立集成的 Windows 原生渲染库。Norna Studio �
 
 最低系统为 Windows 11 初始版本，即内部版本 22000。支持 x64 与 ARM64，不支持 Windows 10 和 x86。构建需要 Windows SDK 26100、.NET SDK 10.0.402 和 Windows 应用开发工具。打开 `Windows/NornaKit.slnx`，选择对应架构。
 
-依赖通过 `Directory.Packages.props` 与各工程的 `packages.lock.json` 固定。Windows App SDK 为 2.5.1，Win2D 为 1.4.0，PDFsharp 为 6.2.3；显式使用 System.Security.Cryptography.Pkcs 10.0.13，替换 PDFsharp 的旧版传递依赖。恢复时使用 `--locked-mode`。
+依赖通过 `Directory.Packages.props` 与各工程的 `packages.lock.json` 固定。Windows App SDK 为 2.5.1，Win2D 为 1.4.0，PDFsharp 为 6.2.3；显式使用 System.Security.Cryptography.Pkcs 10.0.13，替换 PDFsharp 的旧版传递依赖。恢复时使用 `--locked-mode`。WinUI 自包含宿主应保留模板中的 `EnableMsixTooling=true`，以生成并发布应用的 PRI 资源索引；工作台仍采用 `WindowsPackageType=None`，不会生成 MSIX。打包脚本检查 `resources.pri`，避免遗漏原生控件样式。
 
 ## 集成 Kit
 

@@ -72,7 +72,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Independent NuGet consumer execution failed.' 
 $previewConsumer = Join-Path $root "artifacts/package-preview-consumer-$($Platform.ToLowerInvariant())"
 New-Item $previewConsumer -ItemType Directory -Force | Out-Null
 $previewProject = $project.Replace('@ARCH@', $Platform.ToLowerInvariant()).Replace('@VERSION@', $Version)
-$previewProject = $previewProject.Replace('<OutputType>Exe</OutputType>', '<OutputType>WinExe</OutputType><UseWinUI>true</UseWinUI><ApplicationManifest>app.manifest</ApplicationManifest>')
+$previewProject = $previewProject.Replace('<OutputType>Exe</OutputType>', '<OutputType>WinExe</OutputType><UseWinUI>true</UseWinUI><EnableMsixTooling>true</EnableMsixTooling><ApplicationManifest>app.manifest</ApplicationManifest>')
 $previewProject | Set-Content (Join-Path $previewConsumer 'Preview.csproj') -Encoding utf8
 Copy-Item (Join-Path $consumer 'NuGet.Config') $previewConsumer
 (Get-Content (Join-Path $root 'src/NornaStudio/app.manifest') -Raw).Replace('NornaStudio.Windows', 'NornaKit.PackagePreview') | Set-Content (Join-Path $previewConsumer 'app.manifest') -Encoding utf8

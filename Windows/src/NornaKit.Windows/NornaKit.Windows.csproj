@@ -13,6 +13,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="../../PACKAGE.md" Pack="true" PackagePath="README.md" />
+    <None Include="../../../LICENSE" Pack="true" PackagePath="LICENSE" />
     <None Include="../../../THIRD_PARTY_NOTICES.md" Pack="true" PackagePath="" />
     <InternalsVisibleTo Include="NornaKit.Windows.SmokeTests" />
     <ProjectReference Include="../NornaKit.Core/NornaKit.Core.csproj" />

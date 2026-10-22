@@ -6,7 +6,9 @@
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <OutputType>WinExe</OutputType>
     <UseWinUI>true</UseWinUI>
+    <EnableMsixTooling>true</EnableMsixTooling>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>../../../website/dist/favicon.ico</ApplicationIcon>
     <WindowsPackageType>None</WindowsPackageType>
     <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
     <SelfContained>true</SelfContained>
@@ -18,6 +20,7 @@
     <Product>Norna Studio for Windows</Product>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="../../../website/dist/favicon.ico" Link="NornaStudio.ico" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
     <ProjectReference Include="../NornaKit.Windows/NornaKit.Windows.csproj" />
   </ItemGroup>
 </Project>

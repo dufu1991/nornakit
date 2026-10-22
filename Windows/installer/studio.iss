@@ -28,6 +28,7 @@ OutputBaseFilename=NornaStudio-windows-{#Architecture}-{#StudioVersion}-setup
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
+SetupIconFile=..\..\website\dist\favicon.ico
 UninstallDisplayIcon={app}\NornaStudio.exe
 CloseApplications=yes
 RestartApplications=no

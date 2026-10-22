@@ -20,7 +20,7 @@ if (-not $PublishDirectory) {
     if ($LASTEXITCODE -ne 0) { throw 'Studio publication failed.' }
 }
 $PublishDirectory = (Resolve-Path $PublishDirectory).Path
-foreach ($file in @('NornaStudio.exe', 'coreclr.dll', 'Microsoft.UI.Xaml.dll')) {
+foreach ($file in @('NornaStudio.exe', 'coreclr.dll', 'Microsoft.UI.Xaml.dll', 'resources.pri', 'NornaStudio.ico')) {
     if (-not (Test-Path (Join-Path $PublishDirectory $file))) { throw "Self contained publication is missing $file." }
 }
 New-Item $OutputDirectory -ItemType Directory -Force | Out-Null

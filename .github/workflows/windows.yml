@@ -3,9 +3,9 @@ name: Windows native validation
 on:
   push:
     branches: [main]
-    paths: ['Windows/**', 'Sources/NornaKit/Resources/*.json', '.github/workflows/windows.yml']
+    paths: ['Windows/**', 'Sources/NornaKit/Resources/*.json', 'website/dist/favicon.ico', '.github/workflows/windows.yml']
   pull_request:
-    paths: ['Windows/**', 'Sources/NornaKit/Resources/*.json', '.github/workflows/windows.yml']
+    paths: ['Windows/**', 'Sources/NornaKit/Resources/*.json', 'website/dist/favicon.ico', '.github/workflows/windows.yml']
   workflow_dispatch:
 
 permissions:

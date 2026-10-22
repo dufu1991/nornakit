@@ -47,7 +47,7 @@ internal sealed partial class StudioWindow : Window
             Directory.CreateDirectory(directory); File.WriteAllText(Path.Combine(directory, "drawing-failure.txt"), error.ToString());
         };
         preview.Element.SizeChanged += (sender, e) => { if (!closing && !rebuilding && !session.Busy && session.Artifact is not null && Math.Abs(e.NewSize.Width - e.PreviousSize.Width) > 32) _ = RunAsync(RenderAsync); };
-        Title = "Norna Studio"; AppWindow.Resize(new(1440, 920)); SystemBackdrop = new MicaBackdrop(); Build();
+        Title = "Norna Studio"; AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory, "NornaStudio.ico")); AppWindow.Resize(new(1440, 920)); SystemBackdrop = new MicaBackdrop(); Build();
         session.Changed += Refresh;
         systemSettings.ColorValuesChanged += ColorsChanged;
         themeSettings = Microsoft.UI.System.ThemeSettings.CreateForWindowId(AppWindow.Id);
