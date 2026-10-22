@@ -23,10 +23,10 @@
 
 要求 **macOS 14 或更高版本**、**Swift 6**，没有外部包依赖。
 
-将本仓库添加为 Swift Package 依赖，链接 **NornaKit** 产品。在渲染库版本标签发布前，使用 `main` 分支或固定到具体提交：
+将本仓库添加为 Swift Package 依赖，链接 **NornaKit** 产品。渲染库已独立发布为 [NornaKit v0.1.0](https://github.com/dufu1991/nornakit/releases/tag/v0.1.0)，版本与 Norna Studio 分开维护。依赖声明使用库版本：
 
 ```swift
-.package(url: "https://github.com/dufu1991/nornakit.git", branch: "main")
+.package(url: "https://github.com/dufu1991/nornakit.git", from: "0.1.0")
 ```
 
 ```swift

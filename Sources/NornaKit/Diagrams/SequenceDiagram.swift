@@ -170,27 +170,29 @@ enum SequenceDiagram {
     static func layout(_ model: SequenceModel, options: DiagramLayoutOptions) throws -> DiagramScene {
         let participants = model.participants
         let indexes = Dictionary(uniqueKeysWithValues: participants.enumerated().map { ($1.id, $0) })
+        let constrained = options.maxWidth != nil
+        let minimumGap: CGFloat = (options.maxWidth ?? 640) < 480 ? 12 : 28
         let slot: CGFloat
         if let maxWidth = options.maxWidth {
-            let totalGapWidth = CGFloat(max(0, participants.count - 1)) * 28
+            let totalGapWidth = CGFloat(max(0, participants.count - 1)) * minimumGap
             let availableWidth = maxWidth - 32 - totalGapWidth
-            slot = max(64, availableWidth / CGFloat(participants.count))
+            slot = max(40, availableWidth / CGFloat(participants.count))
         } else {
             slot = 240
         }
         let widths: [CGFloat] = participants.map { participant in
-            let minimum: CGFloat = options.compact ? 64 : 100
-            let maximum: CGFloat = options.compact ? min(160, slot) : 240
+            let minimum: CGFloat = constrained ? 40 : 100
+            let maximum: CGFloat = constrained ? min(160, slot) : 240
             return max(minimum, min(maximum, TextMeasurement.width(participant.label) + 36))
         }
-        var gaps = Array(repeating: CGFloat(options.compact ? 28 : 72), count: max(0, participants.count - 1))
-        var leftMargin: CGFloat = options.compact ? 16 : 120, rightMargin: CGFloat = options.compact ? 16 : 120
+        var gaps = Array(repeating: constrained ? minimumGap : 72, count: max(0, participants.count - 1))
+        var leftMargin: CGFloat = constrained ? 16 : 120, rightMargin: CGFloat = constrained ? 16 : 120
         for event in model.events {
             if case .message(let from, let to, let text, _, _) = event {
                 let a = indexes[from]!, b = indexes[to]!
                 let span = abs(b - a)
                 if span > 0 {
-                    let room = min(options.compact ? 100 : 280, TextMeasurement.width(text) + 40) / CGFloat(span)
+                    let room = min(constrained ? min(100, slot + minimumGap) : 280, TextMeasurement.width(text) + 40) / CGFloat(span)
                     for i in min(a, b)..<max(a, b) { gaps[i] = max(gaps[i], room - (widths[i] + widths[i + 1]) / 2) }
                 } else { rightMargin = max(rightMargin, 160) }
             }
@@ -270,7 +272,7 @@ enum SequenceDiagram {
                                         width: labelSize.width, height: labelSize.height)
                 }
                 let hasHead = arrow.contains(">>") || arrow.contains(")") || arrow.contains("x")
-                content.line(points, dash: arrow.contains("--") ? [4, 4] : [], arrow: hasHead && !arrow.contains("x"),
+                content.line(points, width: 1.5, dash: arrow.contains("--") ? [4, 4] : [], arrow: hasHead && !arrow.contains("x"),
                              open: arrow.contains(")"), id: "message-\(messageIndex)")
                 if arrow.hasPrefix("<<") { content.path(ScenePath.arrow(Array(points.reversed())).commands, fill: .line, stroke: .none) }
                 if arrow.contains("x"), let tip = points.last {
@@ -306,7 +308,11 @@ enum SequenceDiagram {
                 y += 40
             case .end:
                 let frame = frames.removeLast(), inset = 24 + CGFloat(frame.depth) * 10
-                backgrounds.rect(CGRect(x: inset, y: frame.y, width: width - inset * 2, height: y - frame.y + 8), fill: frame.kind == "rect" ? try backgroundColor(frame.label, line: SourceLine(text: frame.label, raw: frame.label, number: 1)) : .surfaceAlt, opacity: frame.kind == "rect" ? 0.12 : 0.22)
+                let frameRect = CGRect(x: inset, y: frame.y, width: width - inset * 2, height: y - frame.y + 8)
+                let fragment = SceneBuilder(.sequence)
+                fragment.rect(frameRect, fill: frame.kind == "rect" ? try backgroundColor(frame.label, line: SourceLine(text: frame.label, raw: frame.label, number: 1)) : .surfaceAlt, stroke: .none, opacity: frame.kind == "rect" ? 0.12 : 0.22)
+                fragment.rect(frameRect, fill: .none, stroke: .border)
+                backgrounds.primitives.insert(contentsOf: fragment.primitives, at: 0)
                 content.box(frame.kind, CGRect(x: inset, y: frame.y, width: max(54, TextMeasurement.width(frame.kind, size: 14) + 18), height: 26), fill: .surfaceAlt, size: 14)
                 if frame.kind != "rect" { content.text(frame.label, CGRect(x: inset + 82, y: frame.y + 2, width: width - inset * 2 - 96, height: 26), size: 14, align: .leading) }
                 y += 24
@@ -319,7 +325,7 @@ enum SequenceDiagram {
         for (index, participant) in participants.enumerated() {
             let x = xs[index]
             let start = (created[participant.id] ?? actorY) + (participant.style.symbolic ? 86 : actorHeight)
-            lifelines.path([.move(CGPoint(x: x, y: start)), .line(CGPoint(x: x, y: destroyed[participant.id] ?? endY))], stroke: .border, dash: [4, 4], id: "lifeline-\(participant.id)")
+            lifelines.path([.move(CGPoint(x: x, y: start)), .line(CGPoint(x: x, y: destroyed[participant.id] ?? endY))], stroke: .border, width: 1.25, dash: [4, 4], id: "lifeline-\(participant.id)")
             let tops = [created[participant.id] ?? actorY] + (destroyed[participant.id] == nil ? [endY + 12] : [])
             for top in tops {
                 drawParticipant(participant, frame: CGRect(x: x - widths[index] / 2, y: top, width: widths[index], height: actorHeight), builder: content)
@@ -330,11 +336,14 @@ enum SequenceDiagram {
             let members = participants.indices.filter { participants[$0].box == box }
             guard let first = members.first, let last = members.last else { continue }
             let x = xs[first] - widths[first] / 2 - 16, right = xs[last] + widths[last] / 2 + 16
-            backgrounds.rect(CGRect(x: x, y: actorY - 12, width: right - x, height: height - actorY), fill: .surfaceAlt, opacity: 0.25)
+            let boxBackground = SceneBuilder(.sequence)
+            boxBackground.rect(CGRect(x: x, y: actorY - 12, width: right - x, height: height - actorY), fill: .surfaceAlt, stroke: .none, opacity: 0.25)
+            boxBackground.rect(CGRect(x: x, y: actorY - 12, width: right - x, height: height - actorY), fill: .none, stroke: .border)
+            backgrounds.primitives.insert(contentsOf: boxBackground.primitives, at: 0)
             content.text(label, CGRect(x: x, y: actorY - 36, width: right - x, height: 24), size: 14, color: .muted)
         }
-        // Outer control fragments are painted before their nested fragments.
-        content.primitives = backgrounds.primitives.reversed() + lifelines.primitives + activations.primitives + content.primitives
+        // Outer fragments precede nested fragments; fills never fade their outlines.
+        content.primitives = backgrounds.primitives + lifelines.primitives + activations.primitives + content.primitives
         return content.scene(width: width, height: height)
     }
 

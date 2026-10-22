@@ -24,11 +24,13 @@ public enum SVGExporter {
             elements.append(text(group.titleLines, center: CGPoint(x: group.titleFrame.midX, y: group.titleFrame.midY), size: DiagramStyle.fontSize, lineHeight: DiagramStyle.lineHeight, color: c.muted))
         }
         for node in scene.nodes {
+            let fill = node.appearance.fill ?? c.surface, stroke = node.appearance.stroke ?? c.border
+            let lineWidth = number(node.appearance.lineWidth ?? 1)
             elements.append("<g><title>\(escape(node.id))</title>")
-            elements.append(path(.node(node), "fill=\"\(c.surface)\" stroke=\"\(c.border)\" stroke-width=\"1\""))
-            elements.append(path(.detail(node), "fill=\"none\" stroke=\"\(c.border)\" stroke-width=\"1\""))
+            elements.append(path(.node(node), "fill=\"\(fill)\" stroke=\"\(stroke)\" stroke-width=\"\(lineWidth)\""))
+            elements.append(path(.detail(node), "fill=\"none\" stroke=\"\(stroke)\" stroke-width=\"\(lineWidth)\""))
             let dy = node.shape == .cylinder ? min(12, max(6, node.frame.width / 14)) / 2 : 0
-            elements.append(text(node.lines, center: CGPoint(x: node.frame.midX, y: node.frame.midY + dy), size: DiagramStyle.fontSize, lineHeight: DiagramStyle.lineHeight, color: c.foreground))
+            elements.append(text(node.lines, center: CGPoint(x: node.frame.midX, y: node.frame.midY + dy), size: DiagramStyle.fontSize, lineHeight: DiagramStyle.lineHeight, color: node.appearance.color ?? c.foreground))
             elements.append("</g>")
         }
         for edge in scene.edges where !edge.label.isEmpty && edge.style != .invisible {

@@ -36,9 +36,9 @@ public enum CoreGraphicsDiagramPainter {
         }
         for node in scene.nodes {
             let selected = node.id == selectedNode
-            context.setFillColor(color(c.surface).cgColor)
-            context.setStrokeColor(color(selected ? c.accent : c.border).cgColor)
-            context.setLineWidth(selected ? 2 : 1)
+            context.setFillColor(color(node.appearance.fill ?? c.surface).cgColor)
+            context.setStrokeColor(color(selected ? c.accent : node.appearance.stroke ?? c.border).cgColor)
+            context.setLineWidth(selected ? 2 : node.appearance.lineWidth ?? 1)
             context.setLineDash(phase: 0, lengths: [])
             context.addPath(ScenePath.node(node).cgPath)
             context.drawPath(using: .fillStroke)
@@ -46,7 +46,7 @@ public enum CoreGraphicsDiagramPainter {
             context.addPath(ScenePath.detail(node).cgPath)
             context.strokePath()
             let dy = node.shape == .cylinder ? min(12, max(6, node.frame.width / 14)) / 2 : 0
-            drawText(node.lines, center: CGPoint(x: node.frame.midX, y: node.frame.midY + dy), size: DiagramStyle.fontSize, lineHeight: DiagramStyle.lineHeight, color: color(c.foreground))
+            drawText(node.lines, center: CGPoint(x: node.frame.midX, y: node.frame.midY + dy), size: DiagramStyle.fontSize, lineHeight: DiagramStyle.lineHeight, color: color(node.appearance.color ?? c.foreground))
         }
         for edge in scene.edges where !edge.label.isEmpty && edge.style != .invisible {
             context.setLineDash(phase: 0, lengths: [])

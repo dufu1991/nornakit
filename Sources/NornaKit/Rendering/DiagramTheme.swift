@@ -69,11 +69,11 @@ public enum DiagramTheme: String, CaseIterable, Identifiable, Sendable {
         case .ocean:
             DiagramColors(background: "#f5f9ff", foreground: "#183957", muted: "#5c758e", line: "#5280a6", surface: "#e6f0fc", surfaceAlt: "#d3e5f9", border: "#9ab9d6", accent: "#3475cf")
         case .appleLight, .appleDark, .appleLightHighContrast, .appleDarkHighContrast:
-            ApplePaletteCache.shared.colors(for: self)
+            ApplePaletteCache.shared.neutralColors(for: self)
         }
     }
 
-    /// Neutral preserves the existing palette, including categorical data-series colors.
+    /// Neutral removes the theme tint while retaining fills, opacity, and categorical series colors.
     public func colors(for colorStyle: DiagramColorStyle, customAccent: DiagramAccentColor = .norna) -> DiagramColors {
         switch colorStyle {
         case .neutral: colors
@@ -89,12 +89,14 @@ private final class ApplePaletteCache: @unchecked Sendable {
     static let shared = ApplePaletteCache()
     private let lock = NSLock()
     private var palettes: [DiagramTheme: DiagramColors] = [:]
+    private var neutralPalettes: [DiagramTheme: DiagramColors] = [:]
     private var themedPalettes: [DiagramTheme: DiagramColors] = [:]
     private var customPalettes: [DiagramTheme: (accent: DiagramAccentColor, colors: DiagramColors)] = [:]
 
     func invalidate() {
         lock.lock(); defer { lock.unlock() }
         palettes.removeAll()
+        neutralPalettes.removeAll()
         themedPalettes.removeAll()
         customPalettes.removeAll()
     }
@@ -144,9 +146,45 @@ private final class ApplePaletteCache: @unchecked Sendable {
         return (max(first, second) + 0.05) / (min(first, second) + 0.05)
     }
 
+    private func visibleStroke(_ proposed: String, foreground: String, backgrounds: [String]) -> String {
+        for step in 0...40 {
+            let candidate = blend(foreground, proposed, Double(step) / 40)
+            if backgrounds.allSatisfy({ contrast(candidate, $0) >= 3 }) { return candidate }
+        }
+        return foreground
+    }
+
+    private func grayscale(_ hex: String) -> String {
+        let value = UInt32(hex.dropFirst(), radix: 16)!
+        let linear: (UInt32) -> Double = {
+            let channel = Double($0 & 255) / 255
+            return channel <= 0.04045 ? channel / 12.92 : pow((channel + 0.055) / 1.055, 2.4)
+        }
+        let luminance = 0.2126 * linear(value >> 16) + 0.7152 * linear(value >> 8) + 0.0722 * linear(value)
+        let channel = luminance <= 0.0031308 ? luminance * 12.92 : 1.055 * pow(luminance, 1 / 2.4) - 0.055
+        let gray = Int((channel * 255).rounded())
+        return String(format: "#%02x%02x%02x", gray, gray, gray)
+    }
+
+    func neutralColors(for theme: DiagramTheme) -> DiagramColors {
+        let themed = themedColors(for: theme)
+        lock.lock(); defer { lock.unlock() }
+        if let cached = neutralPalettes[theme] { return cached }
+        let surface = grayscale(themed.surface), surfaceAlt = grayscale(themed.surfaceAlt)
+        let backgrounds = [themed.background, surface, surfaceAlt]
+        let result = DiagramColors(background: themed.background, foreground: themed.foreground, muted: themed.muted,
+            line: visibleStroke(grayscale(themed.line), foreground: themed.foreground, backgrounds: backgrounds),
+            surface: surface, surfaceAlt: surfaceAlt,
+            border: visibleStroke(grayscale(themed.border), foreground: themed.foreground, backgrounds: backgrounds),
+            accent: grayscale(themed.accent), series: themed.series)
+        neutralPalettes[theme] = result
+        return result
+    }
+
     func themedColors(for theme: DiagramTheme) -> DiagramColors {
         // Resolve system colors before taking the same cache lock.
-        let base = theme.colors
+        let systemAppearance = [.appleLight, .appleDark, .appleLightHighContrast, .appleDarkHighContrast].contains(theme)
+        let base = systemAppearance ? colors(for: theme) : theme.colors
         lock.lock(); defer { lock.unlock() }
         if let cached = themedPalettes[theme] { return cached }
         let dark = [.midnight, .appleDark, .appleDarkHighContrast].contains(theme)
@@ -171,7 +209,8 @@ private final class ApplePaletteCache: @unchecked Sendable {
             background: base.background, foreground: base.foreground, muted: base.muted,
             line: accent, surface: blend(accent, base.surface, dark ? 0.14 : 0.07),
             surfaceAlt: blend(accent, base.background, dark ? 0.16 : 0.10),
-            border: blend(accent, base.background, increasedContrast ? 0.96 : 0.72),
+            border: visibleStroke(blend(accent, base.background, increasedContrast ? 0.96 : 0.72), foreground: base.foreground,
+                backgrounds: [base.background, blend(accent, base.surface, dark ? 0.14 : 0.07), blend(accent, base.background, dark ? 0.16 : 0.10)]),
             accent: accent, series: base.series
         )
         themedPalettes[theme] = result
@@ -197,9 +236,11 @@ private final class ApplePaletteCache: @unchecked Sendable {
                 let channel: (CGFloat, CGFloat) -> Int = { Int((min(1, max(0, $0 * alpha + $1 * (1 - alpha))) * 255).rounded()) }
                 return String(format: "#%02x%02x%02x", channel(rgb.redComponent, background.redComponent), channel(rgb.greenComponent, background.greenComponent), channel(rgb.blueComponent, background.blueComponent))
             }
-            result = DiagramColors(background: hex(background), foreground: hex(.labelColor), muted: hex(.secondaryLabelColor),
-                line: hex(.secondaryLabelColor), surface: hex(.controlBackgroundColor), surfaceAlt: hex(.unemphasizedSelectedContentBackgroundColor),
-                border: hex(.separatorColor), accent: hex(.controlAccentColor),
+            let foreground = hex(.labelColor), surface = hex(.controlBackgroundColor), surfaceAlt = hex(.unemphasizedSelectedContentBackgroundColor)
+            let backgrounds = [hex(background), surface, surfaceAlt]
+            result = DiagramColors(background: hex(background), foreground: foreground, muted: hex(.secondaryLabelColor),
+                line: visibleStroke(hex(.secondaryLabelColor), foreground: foreground, backgrounds: backgrounds), surface: surface, surfaceAlt: surfaceAlt,
+                border: visibleStroke(hex(.separatorColor), foreground: foreground, backgrounds: backgrounds), accent: hex(.controlAccentColor),
                 series: [.systemBlue, .systemGreen, .systemOrange, .systemPurple, .systemTeal, .systemPink, .systemIndigo, .systemBrown].map(hex))
         }
         palettes[theme] = result

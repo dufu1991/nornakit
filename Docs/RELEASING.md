@@ -1,10 +1,26 @@
-# Releasing Norna Studio
+# Releasing NornaKit and Norna Studio
 
 [English README](../README.md) · [中文 README](../README.zh-CN.md)
 
 The app, Swift package, and website share [dufu1991/nornakit](https://github.com/dufu1991/nornakit). NornaKit is the primary library product. Studio is a companion demo, rendering, debugging, and export tool with an independent release cycle.
 
-## Automatic release policy
+## NornaKit library releases
+
+NornaKit uses independent semantic-version tags in the `vX.Y.Z` namespace. The first library release is **v0.1.0**. Swift Package Manager reads the library version from the Git tag; `Package.swift` does not contain a separate package version field.
+
+Norna Studio uses `studio-vX.Y.Z` release tags and reads its app version and build number from `Configuration/Studio-Version.xcconfig`. Publishing NornaKit v0.1.0 does not change Studio 0.1.1, build 6, or create a new Studio package.
+
+For a library release:
+
+1. Commit the library changes, regression tests, and library changelog. Keep unrelated app and platform work out of the library commit.
+2. Verify that exact commit in a clean checkout and update the Swift Package dependency examples to the new library version.
+3. Create an annotated `vX.Y.Z` tag on the verified library commit, then push the branch and tag without force.
+4. Create a GitHub Release named `NornaKit X.Y.Z`, with library-specific release notes and **Latest disabled**. Do not attach Studio DMG or ZIP assets.
+5. Verify that the remote tag resolves to the tested commit and that the latest-release download still points to Studio.
+
+The library changelog is maintained in [CHANGELOG.md](../CHANGELOG.md). Library tags do not trigger the Studio publication workflow.
+
+## Automatic Studio release policy
 
 The [workflow](../.github/workflows/ci.yml) runs for pushes to `main`, PRs targeting `main`, and manual dispatches. Checks include Swift tests, release automation tests, an Apple Silicon Release build, and website resource validation. Only successful checks can reach publication.
 

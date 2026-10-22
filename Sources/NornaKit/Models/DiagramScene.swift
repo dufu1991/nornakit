@@ -10,12 +10,27 @@ public enum FlowDirection: String, Sendable {
     var horizontal: Bool { self == .leftRight || self == .rightLeft }
 }
 
+public struct FlowNodeAppearance: Equatable, Sendable {
+    public var fill: String? = nil
+    public var stroke: String? = nil
+    public var color: String? = nil
+    public var lineWidth: CGFloat? = nil
+
+    mutating func merge(_ other: FlowNodeAppearance) {
+        if let fill = other.fill { self.fill = fill }
+        if let stroke = other.stroke { self.stroke = stroke }
+        if let color = other.color { self.color = color }
+        if let lineWidth = other.lineWidth { self.lineWidth = lineWidth }
+    }
+}
+
 public struct FlowNode: Equatable, Sendable {
     public let id: String
     public var label: String
     public var shape: NodeShape
     public var parentID: String? = nil
     public var sequence: Int = 0
+    public var appearance = FlowNodeAppearance()
 }
 
 public struct FlowGroup: Equatable, Sendable {
@@ -58,6 +73,7 @@ public struct SceneNode: Equatable, Sendable {
     public let shape: NodeShape
     public var frame: CGRect
     public let lines: [String]
+    public var appearance = FlowNodeAppearance()
 }
 
 public struct SceneEdge: Equatable, Sendable {

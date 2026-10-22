@@ -23,10 +23,10 @@
 
 Requires **macOS 14 or later** and **Swift 6**, with no external package dependencies.
 
-Add this repository as a Swift Package dependency and link the **NornaKit** product. Until a library version tag is published, use `main` or pin a specific commit:
+Add this repository as a Swift Package dependency and link the **NornaKit** product. The library is released as [NornaKit v0.1.0](https://github.com/dufu1991/nornakit/releases/tag/v0.1.0), independently of Norna Studio. Use the library version in your package dependency:
 
 ```swift
-.package(url: "https://github.com/dufu1991/nornakit.git", branch: "main")
+.package(url: "https://github.com/dufu1991/nornakit.git", from: "0.1.0")
 ```
 
 ```swift

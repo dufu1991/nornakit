@@ -16,7 +16,7 @@ enum TemporalDiagrams {
         }
         try DiagramSyntax.nonempty(events.count, kind: .timeline)
         let naturalWidth = max(520, CGFloat(events.count) * 200 + 40)
-        if options.compact, options.autoDirection, naturalWidth > options.maxWidth! {
+        if let maxWidth = options.maxWidth, options.autoDirection, naturalWidth > maxWidth {
             let width = options.width(naturalWidth), top = b.title(DiagramSyntax.title(lines), width: width)
             var y = top + 12
             let track = SceneBuilder(.timeline)
@@ -73,7 +73,7 @@ enum TemporalDiagrams {
         }
         try DiagramSyntax.nonempty(items.count, kind: .journey)
         let naturalWidth = max(600, CGFloat(items.count) * 180 + 32)
-        if options.compact, options.autoDirection, naturalWidth > options.maxWidth! {
+        if let maxWidth = options.maxWidth, options.autoDirection, naturalWidth > maxWidth {
             let width = options.width(naturalWidth, minimum: 360), top = b.title(DiagramSyntax.title(lines), width: width)
             var y = top + 12, points: [CGPoint] = []
             for (i, item) in items.enumerated() {
@@ -129,7 +129,7 @@ enum TemporalDiagrams {
         struct TaskBar { let id: String; let label: String; let start: Date; let end: Date; let status: [String]; let section: String }
         let lines = DiagramSyntax.lines(source), b = SceneBuilder(.gantt)
         let formatter = DateFormatter(); formatter.locale = Locale(identifier: "en_US_POSIX"); formatter.timeZone = TimeZone(secondsFromGMT: 0); formatter.dateFormat = "yyyy-MM-dd"; formatter.isLenient = false
-        var tasks: [TaskBar] = [], section = "", last: Date?, weekends = false
+        var tasks: [TaskBar] = [], section = "", last: Date?, weekends = false, axisPattern = "MM-dd"
         var calendar = Calendar(identifier: .gregorian)
         calendar.timeZone = TimeZone(secondsFromGMT: 0)!
         for line in lines.dropFirst() {
@@ -141,7 +141,7 @@ enum TemporalDiagrams {
                 guard let pattern = formats[value] else { throw line.error("甘特图暂不支持这个日期格式。") }; formatter.dateFormat = pattern; continue
             }
             if s == "excludes weekends" { weekends = true; continue }
-            if s.hasPrefix("axisFormat ") { throw line.error("甘特图暂不支持自定义 axisFormat。") }
+            if s.hasPrefix("axisFormat ") { axisPattern = try ganttAxisPattern(String(s.dropFirst(11)), line: line); continue }
             guard let colon = s.firstIndex(of: ":") else { throw line.error("甘特任务需要冒号和时间定义。", code: "syntax") }
             let label = String(s[..<colon]), raw = DiagramSyntax.split(String(s[s.index(after: colon)...]))
             let statuses = raw.filter { ["active", "done", "crit", "milestone"].contains($0) }
@@ -155,13 +155,19 @@ enum TemporalDiagrams {
                 guard let latest = dependencies.map(\.end).max() else { throw line.error("after 至少需要一个任务标识符。", code: "syntax") }
                 start = latest; fields.removeFirst()
             } else if let first = fields.first, let date = formatter.date(from: first) { start = date; fields.removeFirst() }
+            if weekends, !statuses.contains("milestone") {
+                while calendar.isDateInWeekend(start) { start = start.addingTimeInterval(86400) }
+            }
             guard fields.count == 1 else { throw line.error("任务需要开始日期或 after 依赖，以及结束日期或时长。", code: "syntax") }
             let end: Date
             if let date = formatter.date(from: fields[0]) { end = date }
             else if let duration = DiagramSyntax.match(#"^(\d+)([dwhm])$"#, fields[0]), let amount = Int(duration[1]), amount <= 36_600 {
                 if duration[2] == "d" || duration[2] == "w" {
                     var cursor = start, remaining = amount * (duration[2] == "w" ? 7 : 1)
-                    while remaining > 0 { cursor = cursor.addingTimeInterval(86400); if !weekends || !calendar.isDateInWeekend(cursor) { remaining -= 1 } }
+                    while remaining > 0 {
+                        if !weekends || !calendar.isDateInWeekend(cursor) { remaining -= 1 }
+                        cursor = cursor.addingTimeInterval(86400)
+                    }
                     end = cursor
                 } else { end = start.addingTimeInterval(Double(amount) * (duration[2] == "h" ? 3600 : 60)) }
             } else { throw line.error("无法解析任务日期或时长。", code: "syntax") }
@@ -176,7 +182,7 @@ enum TemporalDiagrams {
         var sectionCount = 0, previousSection = ""
         for task in tasks where task.section != previousSection { sectionCount += 1; previousSection = task.section }
         let gridBottom = top + 50 + CGFloat(tasks.count) * 50 + CGFloat(sectionCount) * 28
-        let dateLabel = DateFormatter(); dateLabel.locale = Locale(identifier: "en_US_POSIX"); dateLabel.timeZone = formatter.timeZone; dateLabel.dateFormat = "MM-dd"
+        let dateLabel = DateFormatter(); dateLabel.locale = Locale(identifier: "en_US_POSIX"); dateLabel.timeZone = formatter.timeZone; dateLabel.dateFormat = axisPattern
         let ticks = width < 640 ? 3 : 6
         for tick in 0...ticks {
             let px = plotX + CGFloat(tick) / CGFloat(ticks) * plotW
@@ -193,5 +199,26 @@ enum TemporalDiagrams {
             y += 50
         }
         return b.scene(width: width, height: y + 24)
+    }
+
+    private static func ganttAxisPattern(_ source: String, line: SourceLine) throws -> String {
+        let formats: [Character: String] = ["Y": "yyyy", "y": "yy", "m": "MM", "d": "dd", "H": "HH", "I": "hh",
+            "M": "mm", "S": "ss", "L": "SSS", "j": "DDD", "a": "EEE", "A": "EEEE", "b": "MMM", "B": "MMMM",
+            "p": "a", "Z": "xx", "x": "MM/dd/yyyy", "X": "HH:mm:ss"]
+        let characters = Array(source)
+        var result = "", literal = "", index = 0
+        let quoted: (String) -> String = { "'" + $0.replacingOccurrences(of: "'", with: "''") + "'" }
+        while index < characters.count {
+            if characters[index] != "%" { literal.append(characters[index]); index += 1; continue }
+            index += 1
+            guard index < characters.count else { throw line.error("axisFormat 缺少百分号后的格式符。", code: "syntax") }
+            if characters[index] == "%" { literal.append("%"); index += 1; continue }
+            guard let format = formats[characters[index]] else { throw line.error("axisFormat 暂不支持格式符 %\(characters[index])。") }
+            if !literal.isEmpty { result += quoted(literal); literal = "" }
+            result += format
+            index += 1
+        }
+        if !literal.isEmpty { result += quoted(literal) }
+        return result
     }
 }

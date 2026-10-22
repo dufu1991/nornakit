@@ -46,7 +46,7 @@ enum DataCharts {
 
     static func xy(_ source: String, options: DiagramLayoutOptions = .init()) throws -> DiagramScene {
         let lines = DiagramSyntax.lines(source)
-        if lines[0].text.contains("horizontal") { throw lines[0].error("XY 图暂不支持 horizontal 方向。") }
+        let horizontal = lines[0].text.split(whereSeparator: \.isWhitespace).dropFirst().contains("horizontal")
         var title = "", categories: [String] = [], xLabel = "", yLabel = "", explicitRange: (Double, Double)?
         var series: [(String, String, [Double])] = []
         for line in lines.dropFirst() {
@@ -69,6 +69,10 @@ enum DataCharts {
         let low = explicitRange?.0 ?? min(0, all.min()!), high = explicitRange?.1 ?? max(1, all.max()! * 1.1)
         guard high > low else { throw DiagramRenderError(message: "纵轴上限必须大于下限。", code: "semantic") }
         guard all.allSatisfy({ $0 >= low && $0 <= high }) else { throw DiagramRenderError(message: "数据超出显式纵轴范围。", code: "semantic") }
+        if horizontal {
+            return horizontalXY(title: title, categories: categories, categoryTitle: xLabel, valueTitle: yLabel,
+                series: series, low: low, high: high, options: options)
+        }
         let width = options.width(max(680, CGFloat(count) * 64 + 120), minimum: max(320, CGFloat(count) * 28 + 118)), b = SceneBuilder(.xychart), top = b.title(title, width: width)
         let plot = CGRect(x: 82, y: top + 16, width: width - 118, height: 320)
         let y: (Double) -> CGFloat = { plot.maxY - CGFloat(($0 - low) / (high - low)) * plot.height }
@@ -88,11 +92,11 @@ enum DataCharts {
                 }
             } else {
                 let points = item.2.enumerated().map { CGPoint(x: plot.minX + (CGFloat($0.offset) + 0.5) * slot, y: y($0.element)) }
-                b.line(points, color: .series(i), width: 2)
+                b.line(points, color: .series(i), width: 2.5)
                 for (j, p) in points.enumerated() { b.ellipse(CGRect(x: p.x - 3, y: p.y - 3, width: 6, height: 6), fill: .series(i), stroke: .background, id: "point-\(i)-\(j)", label: "\(categories[j]): \(format(item.2[j]))") }
             }
         }
-        b.line([CGPoint(x: plot.minX, y: plot.minY), CGPoint(x: plot.minX, y: plot.maxY), CGPoint(x: plot.maxX, y: plot.maxY)], color: .border)
+        b.line([CGPoint(x: plot.minX, y: plot.minY), CGPoint(x: plot.minX, y: plot.maxY), CGPoint(x: plot.maxX, y: plot.maxY)], color: .line, width: 1.5)
         let axisHeight = max(24, CGFloat(categories.map { TextMeasurement.lines($0, maxWidth: max(12, slot - 4)).count }.max() ?? 1) * 18)
         for (i, label) in categories.enumerated() { b.text(label, CGRect(x: plot.minX + CGFloat(i) * slot + 2, y: plot.maxY + 8, width: slot - 4, height: axisHeight), size: 12, color: .muted) }
         b.text(xLabel, CGRect(x: plot.minX, y: plot.maxY + axisHeight + 16, width: plot.width, height: 24), size: 14)
@@ -104,6 +108,54 @@ enum DataCharts {
             b.text(item.1.isEmpty ? "\(item.0) \(i + 1)" : item.1, CGRect(x: x + 22, y: plot.maxY + axisHeight + 54 + row, width: 124, height: 24), size: 12, align: .leading)
         }
         return b.scene(width: width, height: plot.maxY + axisHeight + 90 + CGFloat((series.count - 1) / perRow) * 30)
+    }
+
+    private static func horizontalXY(title: String, categories: [String], categoryTitle: String, valueTitle: String,
+                                     series: [(String, String, [Double])], low: Double, high: Double,
+                                     options: DiagramLayoutOptions) -> DiagramScene {
+        let width = options.width(680), b = SceneBuilder(.xychart), top = b.title(title, width: width)
+        let labelWidth = min(width * 0.35, max(82, (categories.map { TextMeasurement.width($0, size: 12) }.max() ?? 0) + 20))
+        let labelLines = categories.map { TextMeasurement.lines($0, maxWidth: labelWidth - 20, size: 12) }
+        let slot = max(48, CGFloat(labelLines.map(\.count).max() ?? 1) * 18 + 16)
+        let plot = CGRect(x: labelWidth, y: top + 20, width: width - labelWidth - 40, height: slot * CGFloat(categories.count))
+        let x: (Double) -> CGFloat = { plot.minX + CGFloat(($0 - low) / (high - low)) * plot.width }
+        let baseline = x(min(high, max(low, 0))), ticks = width < 480 ? 3 : 5
+        for tick in 0...ticks {
+            let value = low + (high - low) * Double(tick) / Double(ticks), px = x(value)
+            b.line([CGPoint(x: px, y: plot.minY), CGPoint(x: px, y: plot.maxY)], color: .border, dash: [2, 4])
+            b.text(format(value), CGRect(x: px - 30, y: plot.maxY + 8, width: 60, height: 24), size: 12, color: .muted)
+        }
+        let bars = series.indices.filter { series[$0].0 == "bar" }
+        for (i, item) in series.enumerated() {
+            if item.0 == "bar" {
+                let barHeight = slot * 0.7 / CGFloat(bars.count), barIndex = bars.firstIndex(of: i)!
+                for (j, value) in item.2.enumerated() {
+                    let px = x(value), y = plot.minY + CGFloat(j) * slot + slot * 0.15 + CGFloat(barIndex) * barHeight
+                    b.rect(CGRect(x: min(px, baseline), y: y, width: max(0.5, abs(px - baseline)), height: max(0.5, barHeight - 2)),
+                        fill: .series(i), stroke: .none, radius: 2, id: "bar-\(i)-\(j)", label: "\(categories[j]): \(format(value))")
+                }
+            } else {
+                let points = item.2.enumerated().map { CGPoint(x: x($0.element), y: plot.minY + (CGFloat($0.offset) + 0.5) * slot) }
+                b.line(points, color: .series(i), width: 2.5)
+                for (j, p) in points.enumerated() {
+                    b.ellipse(CGRect(x: p.x - 3, y: p.y - 3, width: 6, height: 6), fill: .series(i), stroke: .background,
+                        id: "point-\(i)-\(j)", label: "\(categories[j]): \(format(item.2[j]))")
+                }
+            }
+        }
+        b.line([CGPoint(x: plot.minX, y: plot.minY), CGPoint(x: plot.minX, y: plot.maxY), CGPoint(x: plot.maxX, y: plot.maxY)], color: .line, width: 1.5)
+        for (i, lines) in labelLines.enumerated() {
+            b.text(lines.joined(separator: "\n"), CGRect(x: 8, y: plot.minY + CGFloat(i) * slot, width: labelWidth - 20, height: slot), size: 12, color: .muted, align: .trailing)
+        }
+        b.text(categoryTitle, CGRect(x: 8, y: top - 6, width: labelWidth - 20, height: 24), size: 12, color: .muted, align: .trailing)
+        b.text(valueTitle, CGRect(x: plot.minX, y: plot.maxY + 40, width: plot.width, height: 24), size: 14)
+        let perRow = max(1, Int((width - 48) / 150))
+        for (i, item) in series.enumerated() {
+            let px = 24 + CGFloat(i % perRow) * 150, py = plot.maxY + 80 + CGFloat(i / perRow) * 30
+            b.rect(CGRect(x: px, y: py + 6, width: 14, height: 12), fill: .series(i), stroke: .none)
+            b.text(item.1.isEmpty ? "\(item.0) \(i + 1)" : item.1, CGRect(x: px + 22, y: py, width: 124, height: 24), size: 12, align: .leading)
+        }
+        return b.scene(width: width, height: plot.maxY + 116 + CGFloat((series.count - 1) / perRow) * 30)
     }
 
     static func quadrant(_ source: String) throws -> DiagramScene {
@@ -124,9 +176,12 @@ enum DataCharts {
         for i in 0..<4 {
             let x = plot.minX + (i == 0 || i == 3 ? plot.width / 2 : 0), y = plot.minY + (i > 1 ? plot.height / 2 : 0)
             let r = CGRect(x: x, y: y, width: plot.width / 2, height: plot.height / 2)
-            b.rect(r, fill: .series(i), stroke: .border, radius: 0, opacity: 0.13)
+            b.rect(r, fill: .series(i), stroke: .none, radius: 0, opacity: 0.13)
             b.text(labels[i], CGRect(x: r.minX + 6, y: r.minY + 8, width: r.width - 12, height: 24), size: 14, color: .muted)
         }
+        b.rect(plot, fill: .none, stroke: .border, radius: 0)
+        b.line([CGPoint(x: plot.midX, y: plot.minY), CGPoint(x: plot.midX, y: plot.maxY)], color: .border)
+        b.line([CGPoint(x: plot.minX, y: plot.midY), CGPoint(x: plot.maxX, y: plot.midY)], color: .border)
         for (i, p) in points.enumerated() {
             let x = plot.minX + CGFloat(p.1) * plot.width, y = plot.maxY - CGFloat(p.2) * plot.height
             b.ellipse(CGRect(x: x - 5, y: y - 5, width: 10, height: 10), fill: .accent, stroke: .background, id: "quadrant-\(i)", label: p.0)
@@ -173,7 +228,9 @@ enum DataCharts {
         let perRow = max(1, Int((width - 80) / 150)), legendY = top + radius * 2 + 120
         for (i, curve) in curves.enumerated() {
             let points = curve.1.enumerated().map { point($0.offset, radius * CGFloat(($0.element - minimum) / (high - minimum))) }
-            b.path([.move(points[0])] + points.dropFirst().map(PathCommand.line) + [.close], fill: .series(i), stroke: .series(i), width: 2, opacity: 0.3, id: "radar-\(i)")
+            let outline = [.move(points[0])] + points.dropFirst().map(PathCommand.line) + [PathCommand.close]
+            b.path(outline, fill: .series(i), stroke: .none, opacity: 0.15, id: "radar-\(i)")
+            b.path(outline, stroke: .series(i), width: 2)
             let legendX = 40 + CGFloat(i % perRow) * 150, rowY = legendY + CGFloat(i / perRow) * 28
             b.rect(CGRect(x: legendX, y: rowY + 6, width: 12, height: 12), fill: .series(i), stroke: .none, radius: 3)
             b.text(curve.0, CGRect(x: legendX + 20, y: rowY, width: 120, height: 24), size: 13, align: .leading)

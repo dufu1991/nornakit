@@ -298,7 +298,7 @@ public enum LayeredLayoutEngine {
             return CGRect(x: min(p.x, q.x), y: min(p.y, q.y), width: abs(q.x - p.x), height: abs(q.y - p.y))
         }
         var nodes = graph.nodes.enumerated().map { index, node in
-            SceneNode(id: node.id, label: node.label, shape: node.shape, frame: transformFrame(frames[index]), lines: lines[index])
+            SceneNode(id: node.id, label: node.label, shape: node.shape, frame: transformFrame(frames[index]), lines: lines[index], appearance: node.appearance)
         }
         for index in routed.indices {
             routed[index].points = routed[index].points.map(transform)

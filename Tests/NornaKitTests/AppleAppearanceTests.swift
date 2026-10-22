@@ -22,6 +22,8 @@ final class AppleAppearanceTests: XCTestCase {
             let colors = theme.colors
             for background in [colors.background, colors.surface, colors.surfaceAlt] {
                 XCTAssertGreaterThanOrEqual(try contrast(colors.foreground, background), 4.5, theme.rawValue)
+                XCTAssertGreaterThanOrEqual(try contrast(colors.border, background), 3, theme.rawValue)
+                XCTAssertGreaterThanOrEqual(try contrast(colors.line, background), 3, theme.rawValue)
             }
             XCTAssertEqual(colors.series.count, 8)
             for index in -8..<16 {
@@ -60,6 +62,7 @@ final class AppleAppearanceTests: XCTestCase {
             for background in [colors.background, colors.surface, colors.surfaceAlt] {
                 XCTAssertGreaterThanOrEqual(try contrast(colors.foreground, background), 4.5, theme.rawValue)
                 XCTAssertGreaterThanOrEqual(try contrast(colors.line, background), 3, theme.rawValue)
+                XCTAssertGreaterThanOrEqual(try contrast(colors.border, background), 3, theme.rawValue)
             }
             if [.appleLightHighContrast, .appleDarkHighContrast].contains(theme) {
                 XCTAssertGreaterThanOrEqual(try contrast(colors.border, colors.surface), 3, theme.rawValue)
@@ -86,6 +89,31 @@ final class AppleAppearanceTests: XCTestCase {
                 XCTAssertEqual(colors.series, theme.colors.series)
                 XCTAssertEqual(SceneColor.literal("#123456").hex(theme, colorStyle: .custom, customAccent: accent), "#123456")
             }
+        }
+    }
+
+    func testNeutralKeepsThemedFillLevelsInGrayscale() throws {
+        let luminance: (String) -> Double = { hex in
+            let value = UInt32(hex.dropFirst(), radix: 16)!
+            let linear: (UInt32) -> Double = {
+                let channel = Double($0 & 255) / 255
+                return channel <= 0.04045 ? channel / 12.92 : pow((channel + 0.055) / 1.055, 2.4)
+            }
+            return 0.2126 * linear(value >> 16) + 0.7152 * linear(value >> 8) + 0.0722 * linear(value)
+        }
+        for theme in appearances {
+            let neutral = theme.colors(for: .neutral), themed = theme.colors(for: .themed)
+            for (gray, original) in [(neutral.surface, themed.surface), (neutral.surfaceAlt, themed.surfaceAlt)] {
+                let value = try XCTUnwrap(UInt32(gray.dropFirst(), radix: 16))
+                XCTAssertEqual((value >> 16) & 255, (value >> 8) & 255)
+                XCTAssertEqual((value >> 8) & 255, value & 255)
+                XCTAssertEqual(luminance(gray), luminance(original), accuracy: 0.005)
+                XCTAssertNotEqual(gray, neutral.background)
+            }
+            XCTAssertEqual(neutral.series, themed.series)
+            let before = neutral.surface
+            DiagramTheme.invalidateSystemColors()
+            XCTAssertEqual(theme.colors.surface, before)
         }
     }
 

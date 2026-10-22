@@ -24,6 +24,8 @@ public enum MermaidFlowchartParser {
         var groupPositions: [String: Int] = [:]
         var groupStack: [(index: Int, line: Int)] = []
         var explicitNodes = Set<String>()
+        var classDefinitions: [String: FlowNodeAppearance] = [:]
+        var classAssignments: [(nodes: [String], name: String, line: Int)] = []
         var sequence = 0
         let register: (FlowNode, Bool) -> Void = { node, explicit in
             var node = node
@@ -75,6 +77,19 @@ public enum MermaidFlowchartParser {
                 else { direction = local }
                 continue
             }
+            if let match = DiagramSyntax.match(#"^classDef\s+([\p{L}\p{N}_,-]+)\s+(.+)$"#, statement.text) {
+                let appearance = try classAppearance(match[2], line: statement.line)
+                for name in match[1].split(separator: ",").map(String.init) {
+                    var merged = classDefinitions[name] ?? FlowNodeAppearance()
+                    merged.merge(appearance)
+                    classDefinitions[name] = merged
+                }
+                continue
+            }
+            if let match = DiagramSyntax.match(#"^class\s+([\p{L}\p{N}_,]+)\s+([\p{L}\p{N}_-]+)$"#, statement.text) {
+                classAssignments.append((match[1].split(separator: ",").map(String.init), match[2], statement.line))
+                continue
+            }
             let unsupported = ["style", "classDef", "class", "click", "linkStyle"]
             if unsupported.contains(where: { statement.text == $0 || statement.text.hasPrefix($0 + " ") }) {
                 throw scanner.error("暂不支持样式指令和交互指令。", code: "unsupported-syntax")
@@ -103,6 +118,18 @@ public enum MermaidFlowchartParser {
         }
         // A forward edge may name a group before its declaration. Such references are not nodes.
         nodes.removeAll { groupPositions[$0.id] != nil }
+        for index in nodes.indices { nodes[index].appearance = classDefinitions["default"] ?? FlowNodeAppearance() }
+        for assignment in classAssignments {
+            guard let appearance = classDefinitions[assignment.name] else {
+                throw DiagramRenderError(message: "class 引用了未定义的样式。", code: "semantic", line: assignment.line)
+            }
+            for id in assignment.nodes {
+                guard let index = nodes.firstIndex(where: { $0.id == id }) else {
+                    throw DiagramRenderError(message: "class 需要引用已定义的节点。", code: "semantic", line: assignment.line)
+                }
+                nodes[index].appearance.merge(appearance)
+            }
+        }
         guard !nodes.isEmpty || !groups.isEmpty else {
             throw DiagramRenderError(message: "请在方向声明下添加节点，例如 A[开始] --> B[结束]。", code: "syntax", line: header.line)
         }
@@ -110,6 +137,31 @@ public enum MermaidFlowchartParser {
             throw DiagramRenderError(message: "第一版最多支持 200 个节点。", code: "limit")
         }
         return FlowchartModel(direction: direction, nodes: nodes, edges: edges, groups: groups)
+    }
+
+    private static func classAppearance(_ source: String, line: Int) throws -> FlowNodeAppearance {
+        var appearance = FlowNodeAppearance()
+        for declaration in source.split(separator: ",", omittingEmptySubsequences: false) {
+            let parts = declaration.split(separator: ":", maxSplits: 1).map { $0.trimmingCharacters(in: .whitespaces) }
+            guard parts.count == 2 else { throw DiagramRenderError(message: "classDef 样式需要属性与值。", code: "syntax", line: line) }
+            if parts[0] == "stroke-width", let match = DiagramSyntax.match(#"^(\d+(?:\.\d+)?)(?:px)?$"#, parts[1]),
+               let width = Double(match[1]), width > 0, width <= 16 {
+                appearance.lineWidth = CGFloat(width)
+                continue
+            }
+            guard ["fill", "stroke", "color"].contains(parts[0]),
+                  let match = DiagramSyntax.match(#"^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$"#, parts[1]) else {
+                throw DiagramRenderError(message: "classDef 支持十六进制 fill、stroke、color 和不超过 16 的 stroke-width。", code: "unsupported-syntax", line: line)
+            }
+            let digits = match[1].lowercased()
+            let hex = "#" + (digits.count == 3 ? digits.map { "\($0)\($0)" }.joined() : digits)
+            switch parts[0] {
+            case "fill": appearance.fill = hex
+            case "stroke": appearance.stroke = hex
+            default: appearance.color = hex
+            }
+        }
+        return appearance
     }
 
     private static func groupHeader(_ text: String, line: Int, anonymousIndex: Int) throws -> (id: String, label: String) {
