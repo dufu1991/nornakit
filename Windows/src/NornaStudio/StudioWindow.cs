@@ -146,7 +146,10 @@ internal sealed partial class StudioWindow : Window
         var sourcePanel = new Grid { Padding = new(12, 16, 12, 12), RowSpacing = 12 };
         sourcePanel.RowDefinitions.Add(new() { Height = GridLength.Auto }); sourcePanel.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) });
         sourcePanel.Children.Add(new TextBlock { Text = L("Source", "源码"), FontWeight = Microsoft.UI.Text.FontWeights.SemiBold });
-        editor = new TextBox { Text = settings.Source, AcceptsReturn = true, TextWrapping = TextWrapping.NoWrap, FontFamily = new("Cascadia Mono, Consolas"), FontSize = 14, HorizontalAlignment = HorizontalAlignment.Stretch, VerticalAlignment = VerticalAlignment.Stretch, Padding = new(12), MaxLength = 50_000 };
+        editor = new TextBox { AcceptsReturn = true, TextWrapping = TextWrapping.NoWrap, FontFamily = new("Cascadia Mono, Consolas"), FontSize = 14, HorizontalAlignment = HorizontalAlignment.Stretch, VerticalAlignment = VerticalAlignment.Stretch, Padding = new(12), MaxLength = 50_000, Text = settings.Source };
+        if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is { Length: > 0 }
+            && editor.Text.ReplaceLineEndings("\n") != settings.Source.ReplaceLineEndings("\n"))
+            throw new InvalidOperationException("The native source editor did not preserve the multiline source.");
         ScrollViewer.SetHorizontalScrollBarVisibility(editor, ScrollBarVisibility.Auto); ScrollViewer.SetVerticalScrollBarVisibility(editor, ScrollBarVisibility.Auto); AutomationProperties.SetName(editor, L("Diagram source", "图形源码"));
         editor.TextChanged += (_, _) => { if (!rebuilding && editor.Text != settings.Source) _ = RunAsync(RenderAsync); }; Grid.SetRow(editor, 1); sourcePanel.Children.Add(editor); Grid.SetColumn(sourcePanel, 1); workspace.Children.Add(sourcePanel);
         var previewPanel = new Grid { RowSpacing = 8, Padding = new(12, 12, 16, 12) }; previewPanel.RowDefinitions.Add(new() { Height = GridLength.Auto }); previewPanel.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) });
