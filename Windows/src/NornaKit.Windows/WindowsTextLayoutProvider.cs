@@ -10,6 +10,7 @@ namespace NornaKit.Windows;
 
 public sealed partial class WindowsTextLayoutProvider(CanvasDevice device) : ITextLayoutProvider
 {
+    internal Func<CanvasFontFace, FontFaceReference> ResolveFont { get; init; } = NativeFontFiles.Resolve;
     public PreparedText Layout(TextLayoutRequest request, CancellationToken cancellationToken = default)
     {
         cancellationToken.ThrowIfCancellationRequested();
@@ -48,7 +49,7 @@ public sealed partial class WindowsTextLayoutProvider(CanvasDevice device) : ITe
             layout.SetColor(start, length, global::Windows.UI.Color.FromArgb(255, (byte)(ranges.Count >> 16), (byte)(ranges.Count >> 8), (byte)ranges.Count));
             start += length;
         }
-        var receiver = new TextReceiver(device, ranges, text, cancellationToken);
+        var receiver = new TextReceiver(device, ranges, text, ResolveFont, cancellationToken);
         var bounds = layout.LayoutBoundsIncludingTrailingWhitespace;
         layout.DrawToTextRenderer(receiver, 0, 0);
         receiver.Failure?.Throw();
@@ -59,7 +60,7 @@ public sealed partial class WindowsTextLayoutProvider(CanvasDevice device) : ITe
 
     [WinRT.GeneratedWinRTExposedType]
     private sealed partial class TextReceiver(CanvasDevice device, List<(int Start, int Length, InlineRun Run)> ranges,
-        string content, CancellationToken cancellationToken) : ICanvasTextRenderer
+        string content, Func<CanvasFontFace, FontFaceReference> resolveFont, CancellationToken cancellationToken) : ICanvasTextRenderer
     {
         public List<PreparedTextRun> Runs { get; } = [];
         public ExceptionDispatchInfo? Failure { get; private set; }
@@ -77,7 +78,7 @@ public sealed partial class WindowsTextLayoutProvider(CanvasDevice device) : ITe
             {
                 cancellationToken.ThrowIfCancellationRequested();
                 var source = ranges.First(range => characterIndex >= range.Start && characterIndex < range.Start + range.Length).Run;
-                var font = NativeFontFiles.Resolve(fontFace);
+                var font = resolveFont(fontFace);
                 using var geometry = CanvasGeometry.CreateGlyphRun(device, Vector2.Zero, fontFace, fontSize,
                     glyphs, isSideways, bidiLevel, measuringMode, glyphOrientation);
                 using var simplified = geometry.Simplify(CanvasGeometrySimplification.CubicsAndLines);

@@ -66,6 +66,14 @@ try
     throw new InvalidOperationException("Cancelled export was accepted.");
 }
 catch (OperationCanceledException) { }
+var callbackFailure = new InvalidOperationException("Injected font callback failure.");
+var failingText = new WindowsTextLayoutProvider(device) { ResolveFont = _ => throw callbackFailure };
+try
+{
+    failingText.Layout(new([new("Callback failure", new())], 300));
+    throw new InvalidOperationException("A native callback failure was swallowed.");
+}
+catch (InvalidOperationException exception) when (ReferenceEquals(exception, callbackFailure)) { }
 await File.WriteAllTextAsync(Path.Combine(directory, "result.json"), JsonSerializer.Serialize(new
 {
     schemaVersion = 1,

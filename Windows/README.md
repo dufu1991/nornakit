@@ -14,9 +14,9 @@ Package versions are managed in `Directory.Packages.props`, with checked in NuGe
 
 | Project | Current responsibility |
 | --- | --- |
-| `NornaKit.Core` | Platform independent geometry, scene and text contracts, native inline markup, SVG serialization, export validation and font collection extraction |
+| `NornaKit.Core` | Platform independent geometry, scene and text contracts, native inline markup, shared official example resources, SVG serialization, export validation and font collection extraction |
 | `NornaKit.Windows` | DirectWrite text layout, native glyph geometry, Windows colors and icons, Win2D scene painting and PNG, JPEG, TIFF, SVG and PDF export |
-| `NornaKit.Core.Tests` | Executable assertions for geometry, markup, XML escaping, export limits and font collection integrity |
+| `NornaKit.Core.Tests` | Executable assertions for geometry, markup, XML escaping, export limits, font collection integrity and all 600 official source hashes |
 | `NornaKit.Windows.SmokeTests` | Windowless native rendering and export verification on each Windows architecture |
 
 `IDiagramRenderer` defines the asynchronous rendering contract. A Mermaid parser and layout implementation is intentionally not advertised by this validation build. The full migration must wait for the native technology gate to pass.

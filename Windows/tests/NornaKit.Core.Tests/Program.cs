@@ -1,6 +1,8 @@
 using System.Buffers.Binary;
 using System.Collections.Immutable;
 using System.Xml.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using NornaKit;
 
 var count = 0;
@@ -70,5 +72,16 @@ try { OpenTypeFontFile.ExtractFace(collection, 2); throw new InvalidOperationExc
 catch (InvalidDataException) { count++; }
 try { OpenTypeFontFile.ExtractFace(collection.AsSpan(0, 40), 1); throw new InvalidOperationException("Truncated font was accepted."); }
 catch (InvalidDataException) { count++; }
+
+var official = OfficialExampleCatalog.Snapshot;
+check(official.Pages.Length == 33 && official.Examples.Length == 600, "The shared official source catalog changed unexpectedly.");
+check(official.Examples.Select(example => example.Id).Distinct().Count() == 600, "Official example identifiers must be unique.");
+foreach (var example in official.Examples)
+    check(Convert.ToHexStringLower(SHA256.HashData(Encoding.UTF8.GetBytes(example.Source))) == example.Sha256,
+        $"Official source bytes changed: {example.Id}.");
+check(OfficialExampleCatalog.Results.Count == 600, "Every official example needs a baseline result.");
+check(OfficialExampleCatalog.Results.Values.Count(result => result.Status == "rendered") == 304, "The rendered baseline count changed.");
+check(OfficialExampleCatalog.Results.Values.Count(result => result.Status == "rejected") == 296, "The rejected baseline count changed.");
+check(official.Examples.All(example => OfficialExampleCatalog.Results.ContainsKey(example.Id)), "Official status identifiers do not match the sources.");
 
 Console.WriteLine($"Passed {count} Core assertions.");

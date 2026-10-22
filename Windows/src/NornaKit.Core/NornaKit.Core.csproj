@@ -5,4 +5,8 @@
     <Description>Native diagram models and platform independent contracts for NornaKit.</Description>
     <IsPackable>true</IsPackable>
   </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="../../../Sources/NornaKit/Resources/official-examples.json" LogicalName="NornaKit.official-examples.json" />
+    <EmbeddedResource Include="../../../Sources/NornaKit/Resources/official-status.json" LogicalName="NornaKit.official-status.json" />
+  </ItemGroup>
 </Project>
