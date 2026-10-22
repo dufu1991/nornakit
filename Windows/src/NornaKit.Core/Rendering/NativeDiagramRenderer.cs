@@ -69,8 +69,12 @@ public sealed class NativeDiagramRenderer(ITextLayoutProvider textLayoutProvider
         if (!double.IsFinite(scene.Size.Width) || !double.IsFinite(scene.Size.Height) || scene.Size.Width is <= 0 or > 250_000 || scene.Size.Height is <= 0 or > 250_000 || scene.Primitives.Length > 20_000)
             throw new DiagramRenderException("图表几何数据超过安全绘制范围，请减少数据项。", "limit");
         if (scene.Primitives.Any(primitive => SceneGeometry.Bounds(primitive.Geometry) is { IsFinite: false })) throw new DiagramRenderException("布局生成了无效几何数据。", "layout");
+        _ = SvgExporter.Export(scene, ValidationPalette);
         return new(scene);
     }
+    private static readonly DiagramPalette ValidationPalette = new(new(255, 255, 255), new(0, 0, 0), new(80, 80, 80), new(0, 0, 0),
+        new(245, 245, 245), new(230, 230, 230), new(100, 100, 100), new(81, 72, 216), [new(81, 72, 216)]);
+
     private static DiagramScene Flow(string body, DiagramLayoutOptions options, TextMeasurement text)
     {
         var graph = MermaidFlowchartParser.Parse(body); var engine = new LayeredLayoutEngine(text); var scene = engine.Layout(graph, options);

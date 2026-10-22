@@ -49,14 +49,20 @@ internal sealed partial class StudioWindow : Window
             _ = RunAsync(async () => { await SaveWorkspaceAsync(); closing = true; session.Dispose(); preview.Dispose(); systemSettings.ColorValuesChanged -= ColorsChanged; accessibility.HighContrastChanged -= HighContrastChanged; Close(); });
         };
     }
-    public async Task InitializeAsync() => await RunAsync(async () => { settings = await store.LoadAsync(); Build(); await RenderAsync(); });
+    public async Task InitializeAsync() => await RunAsync(async () => { SmokeStep("load-settings"); settings = await store.LoadAsync(); SmokeStep("build-window"); Build(); SmokeStep("initial-render"); await RenderAsync(); SmokeStep("initialized"); });
+    private static void SmokeStep(string step)
+    {
+        if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is not { Length: > 0 } directory) return;
+        Directory.CreateDirectory(directory); File.AppendAllText(Path.Combine(directory, "steps.log"), $"{DateTime.UtcNow:O} {step}\n");
+    }
     internal async Task VerifyStartupAsync(string directory)
     {
+        SmokeStep("verify-startup");
         Directory.CreateDirectory(directory);
         if (!session.CanExport || session.Artifact is null) throw new InvalidOperationException("The initial native workbench preview was not rendered.");
         foreach (var language in new[] { "en", "zh" })
         {
-            settings = settings with { Language = language }; Build(); await RenderAsync();
+            SmokeStep($"language-{language}"); settings = settings with { Language = language }; Build(); await RenderAsync();
             if (examples.Items.Count == 0 || !export.IsEnabled) throw new InvalidOperationException("The native workbench lost its examples or export command.");
             var scene = session.Snapshot(Palette); await File.WriteAllTextAsync(Path.Combine(directory, $"studio-{language}.svg"), SvgExporter.Export(scene.Scene, scene.Palette));
         }

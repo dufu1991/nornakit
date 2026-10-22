@@ -50,6 +50,8 @@ var scene = new DiagramScene(new(608, Math.Max(200, layout.Size.Height + 48)), "
     new(new VectorGeometry.Text(layout, new(24, 24), new(SceneColorRole.Foreground)), new())
 ]);
 var exporter = new DiagramExporter(device);
+var factoryArtifact = await WindowsDiagramRenderer.Create().RenderAsync("flowchart LR\nA[Source] --> B[Native]");
+if (factoryArtifact.Type != "flowchart") throw new InvalidOperationException("The public Windows renderer factory failed.");
 var renderer = new NativeDiagramRenderer(text);
 var regression = new List<string>();
 var rendered = 0; var rejected = 0;
