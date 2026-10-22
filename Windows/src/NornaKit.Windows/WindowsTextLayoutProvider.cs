@@ -1,5 +1,6 @@
 using System.Collections.Immutable;
 using System.Numerics;
+using System.Runtime.ExceptionServices;
 using Microsoft.Graphics.Canvas;
 using Microsoft.Graphics.Canvas.Geometry;
 using Microsoft.Graphics.Canvas.Text;
@@ -47,17 +48,21 @@ public sealed partial class WindowsTextLayoutProvider(CanvasDevice device) : ITe
             layout.SetColor(start, length, global::Windows.UI.Color.FromArgb(255, (byte)(ranges.Count >> 16), (byte)(ranges.Count >> 8), (byte)ranges.Count));
             start += length;
         }
-        var receiver = new TextReceiver(device, ranges, cancellationToken);
+        var receiver = new TextReceiver(device, ranges, text, cancellationToken);
         var bounds = layout.LayoutBoundsIncludingTrailingWhitespace;
         layout.DrawToTextRenderer(receiver, 0, 0);
+        receiver.Failure?.Throw();
+        if (receiver.Runs.Count == 0 && !string.IsNullOrWhiteSpace(text))
+            throw new DiagramRenderException("DirectWrite produced no glyph runs for nonempty text.", "layout");
         return new(new(Math.Max(0, bounds.Width), Math.Max(request.LineHeight, bounds.Height)), receiver.Runs.ToImmutableArray());
     }
 
     [WinRT.GeneratedWinRTExposedType]
     private sealed partial class TextReceiver(CanvasDevice device, List<(int Start, int Length, InlineRun Run)> ranges,
-        CancellationToken cancellationToken) : ICanvasTextRenderer
+        string content, CancellationToken cancellationToken) : ICanvasTextRenderer
     {
         public List<PreparedTextRun> Runs { get; } = [];
+        public ExceptionDispatchInfo? Failure { get; private set; }
         public bool PixelSnappingDisabled => true;
         public Matrix3x2 Transform => Matrix3x2.Identity;
         public float Dpi => 96;
@@ -66,19 +71,30 @@ public sealed partial class WindowsTextLayoutProvider(CanvasDevice device) : ITe
             bool isSideways, uint bidiLevel, object brush, CanvasTextMeasuringMode measuringMode, string localeName,
             string textString, int[] clusterMapIndices, uint characterIndex, CanvasGlyphOrientation glyphOrientation)
         {
-            cancellationToken.ThrowIfCancellationRequested();
-            var source = ranges.First(range => characterIndex >= range.Start && characterIndex < range.Start + range.Length).Run;
-            var font = NativeFontFiles.Resolve(fontFace);
-            using var geometry = CanvasGeometry.CreateGlyphRun(device, Vector2.Zero, fontFace, fontSize,
-                glyphs, isSideways, bidiLevel, measuringMode, glyphOrientation);
-            using var simplified = geometry.Simplify(CanvasGeometrySimplification.CubicsAndLines);
-            var receiver = new GeometryReceiver();
-            simplified.SendPathTo(receiver);
-            Runs.Add(new(textString, source.Style with { Size = fontSize }, font, new(point.X, point.Y),
-                glyphs.Sum(glyph => glyph.Advance),
-                glyphs.Select(glyph => new PreparedGlyph(glyph.Index, glyph.Advance, glyph.AdvanceOffset, glyph.AscenderOffset)).ToImmutableArray(),
-                clusterMapIndices.ToImmutableArray(), bidiLevel, receiver.Commands.ToImmutableArray(),
-                source.IconName is not null && WindowsIcons.Glyph(source.IconName) is not null));
+            if (Failure is not null) return;
+            // Preserve callback failures explicitly; native rendering can otherwise return an empty result.
+            try
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+                var source = ranges.First(range => characterIndex >= range.Start && characterIndex < range.Start + range.Length).Run;
+                var font = NativeFontFiles.Resolve(fontFace);
+                using var geometry = CanvasGeometry.CreateGlyphRun(device, Vector2.Zero, fontFace, fontSize,
+                    glyphs, isSideways, bidiLevel, measuringMode, glyphOrientation);
+                using var simplified = geometry.Simplify(CanvasGeometrySimplification.CubicsAndLines);
+                var receiver = new GeometryReceiver();
+                simplified.SendPathTo(receiver);
+                // Win2D can return the remainder of the source; the cluster map defines the actual run length.
+                var runText = content.Substring(checked((int)characterIndex), clusterMapIndices.Length);
+                Runs.Add(new(runText, source.Style with { Size = fontSize }, font, new(point.X, point.Y),
+                    glyphs.Sum(glyph => glyph.Advance),
+                    glyphs.Select(glyph => new PreparedGlyph(glyph.Index, glyph.Advance, glyph.AdvanceOffset, glyph.AscenderOffset)).ToImmutableArray(),
+                    clusterMapIndices.ToImmutableArray(), bidiLevel, receiver.Commands.ToImmutableArray(),
+                    source.IconName is not null && WindowsIcons.Glyph(source.IconName) is not null));
+            }
+            catch (Exception exception)
+            {
+                Failure = ExceptionDispatchInfo.Capture(exception);
+            }
         }
 
         public void DrawStrikethrough(Vector2 point, float width, float thickness, float offset,
