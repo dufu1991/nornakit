@@ -49,7 +49,9 @@ for binary in "$app/Contents/MacOS/Norna Studio" "$app/Contents/Frameworks/Norna
 done
 
 identity='-'
-sign_arguments=(--force --options runtime --timestamp=none)
+# Ad-hoc code has no Team ID for hardened runtime library validation.
+# Enable hardened runtime only for the Developer ID distribution branch.
+sign_arguments=(--force --timestamp=none)
 if [[ "$signing" == true ]]; then
     export NORNA_CERTIFICATE_PATH="$temporary/certificate.p12"
     python3 - <<'PY'
