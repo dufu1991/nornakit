@@ -8,6 +8,8 @@ NornaKit 是本项目的核心渲染库。配套的 Norna Studio 用于演示、
 
 ## 集成渲染库
 
+以下 Swift 接口适用于 Apple 端。Windows 提供独立的 C# 库与 WinUI 3 工作台，使用 .NET 10、DirectWrite 和 Win2D。两端读取同一份示例目录与官方基线，完整 Windows 接入方式见 [Windows 指南](WINDOWS.md)。
+
 将本仓库添加为 Swift Package 依赖，并链接 `NornaKit` 库产品。库要求 macOS 14 或更高版本和 Swift 6，没有外部包依赖。
 
 ```swift
@@ -25,7 +27,7 @@ let svg = diagram.themedSVG(.appleLight)
 
 ## 配套工作台运行
 
-工作台仅支持 macOS 14 或更高版本的 Apple Silicon Mac。应用工程使用 Xcode 27.1 或更高版本编译原生分层图标，Swift Package 要求 Swift 6。工程和 Swift Package 均已提供，无须安装第三方依赖。
+本节介绍 macOS 14 或更高版本的 Apple Silicon 工作台。Windows 工作台的构建与分发使用独立流程。Apple 应用工程使用 Xcode 27.1 或更高版本编译原生分层图标，Swift Package 要求 Swift 6。工程和 Swift Package 均已提供，无须安装第三方依赖。
 
 ```sh
 open NornaKit.xcodeproj
@@ -253,7 +255,7 @@ let svg = artifact.themedSVG(.appleLight)
 let scene = artifact.scene
 ```
 
-流程图的扩展节点与端点、时序图的生命周期和参与者类型、类图的接口与基数、状态图的并发区域均通过同一原生场景输出，示例见 `Sources/NornaKit/Examples/AdvancedDiagramExamples.swift`。
+流程图的扩展节点与端点、时序图的生命周期和参与者类型、类图的接口与基数、状态图的并发区域均通过同一原生场景输出。双语示例统一保存在 `Sources/NornaKit/Resources/examples.json`，Swift 与 C# 共用示例 ID、源码、起始示例及复杂度对照。
 
 `DiagramExporter` 使用同一画布绘制器输出 PNG、JPEG、TIFF 和矢量 PDF，SVG 直接输出同一场景几何。
 

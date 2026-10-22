@@ -1,8 +1,10 @@
 # 图形支持范围
 
-截至 2026 年 10 月 21 日，NornaKit 已为 33 类图形提供纯 Swift 原生入口、基础解析、专用布局和示例。项目没有运行上游 JavaScript 或 Mermaid 解析器。第三方参考来源见 `THIRD_PARTY_NOTICES.md`。
+截至 2026 年 10 月 22 日，NornaKit 已为 33 类图形提供 Swift 和 C# 原生入口、基础解析、专用布局和共享示例。Apple 端使用 CoreGraphics，Windows 端使用 DirectWrite 与 Win2D。项目没有运行上游 JavaScript 或 Mermaid 解析器。第三方参考来源见 `THIRD_PARTY_NOTICES.md`。
 
-这是一份基础实现的范围说明，具体语法支持以各类图形的能力和限制为准。所有示例均通过 `NativeDiagramRenderer` 渲染，画布直接使用 CoreGraphics 绘制，SVG 使用相同几何数据导出。未知的独立指令通常会报错；不进行 HTML、Markdown 或 CSS 样式解释，标签支持纯文本、换行、`:sf:名称:` 内联 SF Symbols、四种图标渲染模式、配对标签原生富文本。图标标记整体换行，富文本换行后保留样式；单色图标跟随文字字号、字重、颜色和基线。未知名称保留原文，可用图标取决于渲染时的 macOS 版本。此语法为 NornaKit 扩展，不改变各图形原有的图标配置语法。PNG、JPEG、TIFF 和 PDF 原生绘制图标，SVG 以 4 倍分辨率的透明 PNG 内嵌图标，其他文字和路径仍为矢量元素。
+以下语法范围适用于两端当前实现。Windows x64 与 ARM64 均检查同一份 600 个官方示例的 304 个可渲染、296 个拒绝行为，以及诊断代码与行位置。系统字体、配色和图标会产生平台视觉差异。Windows 使用 `:win:名称:` 与 Segoe Fluent Icons，内置示例的 SF 标记使用显式语义映射；Windows 图标统一单色，SVG 中导出自包含路径。PDF 保留可选择、可搜索的普通文字。接入方式、字体限制和发布状态见 [Windows 指南](WINDOWS.md)。
+
+这是一份基础实现的范围说明，具体语法支持以各类图形的能力和限制为准。Apple 端的示例通过 `NativeDiagramRenderer` 渲染，画布直接使用 CoreGraphics 绘制，SVG 使用相同几何数据导出。未知的独立指令通常会报错；不进行 HTML、Markdown 或 CSS 样式解释，标签支持纯文本、换行、`:sf:名称:` 内联 SF Symbols、四种图标渲染模式、配对标签原生富文本。图标标记整体换行，富文本换行后保留样式；单色图标跟随文字字号、字重、颜色和基线。未知名称保留原文，可用图标取决于渲染时的 macOS 版本。此语法为 NornaKit 扩展，不改变各图形原有的图标配置语法。PNG、JPEG、TIFF 和 PDF 原生绘制图标，SVG 以 4 倍分辨率的透明 PNG 内嵌图标，其他文字和路径仍为矢量元素。
 
 | 图形 | 已实现的核心能力 | 当前限制 |
 | --- | --- | --- |
@@ -52,7 +54,7 @@
 
 `DiagramCatalogTests` 逐类生成原生 PNG，并验证所有主题的 SVG XML 和图元边界。`AppleAppearanceTests` 验证全部类型的原生系统符号、起始示例、四种系统外观下的绘制与导出，并检查主要文字和饼图标签的对比度。`DiagramSemanticsTests` 检查时序片段、甘特日期、架构端口、层级间距、铁路轨道及部分语义错误。原有流程图和子图测试继续检查轮廓端口、嵌套边界及避障。`AdvancedSyntaxTests` 进一步验证扩展节点端口、箭头标记、创建和销毁消息的绑定、生命线端点、接口与基数语义、并发区域隔离、同步条端口和标签避让。测试通过不代表已覆盖上游全部语料。
 
-设置 `NORNA_FIXTURE_DIR` 后运行 `swift test`，可以导出所有内置示例的 PNG 和 SVG。`Sources/NornaKit/DiagramCatalog.swift` 是新增图形的可运行语法参考。`ScaleDiagramExamples.swift` 提供 29 类图形的复杂数据示例，应用菜单与原生预览页共用这些源码；固定坐标或固定框架的象限图、Wardley 地图、Cynefin 框架和信息图不额外增加复杂示例。`ScaleExampleTests` 检查两档示例确实包含不同规模的内容，并验证复杂示例在三种宽度与四种系统外观下的绘制和导出。
+设置 `NORNA_FIXTURE_DIR` 后运行 `swift test`，可以导出所有内置示例的 PNG 和 SVG。`Sources/NornaKit/Resources/examples.json` 集中维护 79 个双语示例，其中包含 29 类图形的复杂数据示例，Swift 与 C# 共用相同源码及稳定 ID。固定坐标或固定框架的象限图、Wardley 地图、Cynefin 框架和信息图不额外增加复杂示例。`ScaleExampleTests` 检查两档示例确实包含不同规模的内容，并验证复杂示例在三种宽度与四种系统外观下的绘制和导出。
 
 ## 官网原始案例基准
 
@@ -62,7 +64,7 @@
 
 ## 复杂语法示例与约束
 
-编辑器在这四类图形的“示例”菜单中提供扩展节点与双向连线、参与者生命周期、接口与基数、并发状态示例。源码位于 `Sources/NornaKit/Examples/AdvancedDiagramExamples.swift`。
+编辑器在这四类图形的“示例”菜单中提供扩展节点与双向连线、参与者生命周期、接口与基数、并发状态示例。源码位于 `Sources/NornaKit/Resources/examples.json`，分组由 `advanced` 示例 ID 列表定义。
 
 流程图新加入双圆、六边形、非对称、两种平行四边形和两种梯形。现代形状声明仅接受已支持形状的 `shape` 和 `label`，未知形状或属性会报错。不可见连线参与布局，但不绘制。长连线在无环分层部分保留最小跨度，循环回边不保证跨度。
 

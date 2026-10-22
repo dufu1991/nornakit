@@ -8,10 +8,10 @@
 
 [https://nornakit.com](https://nornakit.com)
 
-**NornaKit** 是纯 Swift 原生图表渲染库，用于在 macOS 应用中解析 Mermaid 源码、布局并绘制图表。解析、文本测量、布局、绘制和导出均在原生侧完成，无须浏览器、JavaScript 运行时或网络服务。
+**NornaKit** 是面向 macOS 与 Windows 的原生 Mermaid 图表渲染库。macOS 使用 Swift 与 CoreGraphics，Windows 使用 C#、.NET 10、DirectWrite 与 Win2D。解析、文本测量、布局、绘制和导出均在本地原生侧完成，无须浏览器、JavaScript 运行时或网络服务。
 
 - **NornaKit** 提供解析、布局、原生绘制与导出能力，是本项目的主要内容。
-- **Norna Studio** 是配套的 Mac 演示与开发工具，用于查看渲染效果、临时渲染、调试和导出图表。集成渲染库无须安装该应用。
+- **Norna Studio** 是配套的原生演示与开发工具。macOS 使用 SwiftUI，Windows 使用 WinUI 3。集成任一平台的渲染库均无须安装工作台。
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/hero-zh-dark.png">
@@ -19,7 +19,7 @@
   <img alt="NornaKit 原生绘制的图表" src="website/dist/assets/hero-zh-light.png">
 </picture>
 
-## 集成 NornaKit
+## 集成 macOS 版 NornaKit
 
 要求 **macOS 14 或更高版本**、**Swift 6**，没有外部包依赖。
 
@@ -42,6 +42,25 @@ let svg = diagram.themedSVG(.appleLight)
 `diagram.scene` 包含原生几何。`CoreGraphicsDiagramPainter` 可将场景绘制到 AppKit 图形上下文，`DiagramExporter` 负责图像与 PDF 导出。详细用法与扩展语法见[使用指南](Docs/GUIDE.md)。
 
 ## 功能
+
+### Windows 接入
+
+[`Windows/`](Windows/README.md) 解决方案包含独立的 `NornaKit.Core`、`NornaKit.Windows` 库，以及 WinUI 3 工作台。支持 Windows 11 初始版本及以上的 x64 和 ARM64，构建使用 Windows SDK 26100。
+
+```csharp
+using NornaKit;
+using NornaKit.Windows;
+
+var renderer = WindowsDiagramRenderer.Create();
+var diagram = await renderer.RenderAsync(
+    "flowchart LR\n A[源码] --> B[原生图表]",
+    new DiagramLayoutOptions(MaxWidth: 640), cancellationToken);
+var svg = SvgExporter.Export(diagram.Scene, WindowsPalette.Resolve());
+```
+
+NuGet 包发布前通过项目引用接入。解析、布局与离屏导出无须创建可见窗口，可按需使用 `DiagramPreview` 原生预览控件。完整接入、平台差异与打包说明见 [Windows 指南](Docs/WINDOWS.md)。Windows 下载入口在实际发布安装包后启用。
+
+### 共同能力
 
 - 支持 33 类图形，覆盖流程图、时序图、类图、状态图、实体关系图、甘特图、思维导图与数据图表。
 - Mermaid 源码解析、原生文本测量、自适应布局与源码错误定位。

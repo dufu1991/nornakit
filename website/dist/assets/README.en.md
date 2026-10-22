@@ -8,10 +8,10 @@
 
 [https://nornakit.com](https://nornakit.com)
 
-**NornaKit** is a native diagram rendering library written in pure Swift. It parses Mermaid source, lays out diagrams, and renders them in macOS apps. Parsing, text measurement, layout, rendering, and export run natively, without a browser, JavaScript runtime, or network service.
+**NornaKit** is a native Mermaid diagram rendering library for macOS and Windows. The macOS implementation uses Swift and CoreGraphics; Windows uses C#, .NET 10, DirectWrite and Win2D. Parsing, text measurement, layout, rendering, and export run locally, without a browser, JavaScript runtime, or network service.
 
 - **NornaKit** provides parsing, layout, native drawing, and export. It is the primary focus of this project.
-- **Norna Studio** is a companion Mac demo and development tool for inspecting output, ad hoc rendering, debugging, and export. The library can be integrated without installing the app.
+- **Norna Studio** is the optional native workbench: SwiftUI on macOS, WinUI 3 on Windows. Integrating either library does not require installing the app.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/hero-en-dark.png">
@@ -19,7 +19,7 @@
   <img alt="A diagram rendered natively by NornaKit" src="website/dist/assets/hero-en-light.png">
 </picture>
 
-## Use NornaKit
+## Use NornaKit on macOS
 
 Requires **macOS 14 or later** and **Swift 6**, with no external package dependencies.
 
@@ -42,6 +42,25 @@ let svg = diagram.themedSVG(.appleLight)
 `diagram.scene` contains the native geometry. `CoreGraphicsDiagramPainter` draws into an AppKit graphics context, and `DiagramExporter` handles image and PDF output. More examples and extensions are documented in the [Chinese usage guide](Docs/GUIDE.md).
 
 ## Features
+
+### Windows integration
+
+The Windows solution is in [`Windows/`](Windows/README.md). It includes the independent `NornaKit.Core` and `NornaKit.Windows` libraries and the WinUI 3 workbench. It targets Windows 11 build 22000 or later on x64 and ARM64, with Windows SDK 26100 for builds.
+
+```csharp
+using NornaKit;
+using NornaKit.Windows;
+
+var renderer = WindowsDiagramRenderer.Create();
+var diagram = await renderer.RenderAsync(
+    "flowchart LR\n A[Source] --> B[Native diagram]",
+    new DiagramLayoutOptions(MaxWidth: 640), cancellationToken);
+var svg = SvgExporter.Export(diagram.Scene, WindowsPalette.Resolve());
+```
+
+Use project references until NuGet packages are published. The Kit runs without a visible window; `DiagramPreview` provides the optional WinUI control. See the [Windows guide](Docs/WINDOWS.md) for integration, export, platform differences and packaging. Windows downloads remain unavailable until an actual Windows release is published.
+
+### Shared capabilities
 
 - 33 diagram families, including flowcharts, sequence, class, state, ER, Gantt, mind maps, and data charts.
 - Mermaid parsing, native text measurement, adaptive layouts, and source error locations.

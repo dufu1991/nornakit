@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="../../../Sources/NornaKit/Resources/layout-fixtures.json" LogicalName="NornaKit.Tests.layout-fixtures.json" />
+    <ProjectReference Include="../../src/NornaKit.Core/NornaKit.Core.csproj" />
+    <Compile Include="../../src/NornaStudio/StudioSession.cs" Link="StudioSession.cs" />
+  </ItemGroup>
+</Project>
