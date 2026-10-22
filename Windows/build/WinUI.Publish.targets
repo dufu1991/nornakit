@@ -2,7 +2,7 @@
   <!-- Windows App SDK 2.5.1 can omit application XAML or use only the executable-named PRI in unpackaged publication. -->
   <Target Name="NornaPublishWinUIResources" AfterTargets="Publish"
           DependsOnTargets="Prep_ComputeProcessXamlFiles"
-          Condition="'$(UseWinUI)' == 'true' and '$(WindowsPackageType)' == 'None' and '$(OutputType)' != 'Library'">
+          Condition="'$(UseWinUI)' == 'true' and '$(WindowsPackageType)' == 'None' and '$(WindowsAppSDKSelfContained)' == 'true' and '$(OutputType)' != 'Library' and '$(PublishSingleFile)' != 'true'">
     <Error Condition="!Exists('$(TargetDir)resources.pri') and !Exists('$(TargetDir)$(TargetName).pri')"
            Text="The WinUI application resource index was not generated. Enable MSIX tooling before publishing." />
     <Copy SourceFiles="$(TargetDir)resources.pri" DestinationFiles="$(PublishDir)resources.pri"

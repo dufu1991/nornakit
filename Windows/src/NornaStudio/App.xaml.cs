@@ -2,20 +2,22 @@ using Microsoft.UI.Xaml;
 
 namespace NornaStudio;
 
-public sealed partial class StudioApp : Application
+public sealed partial class App : Application
 {
     private StudioWindow? window;
-    public StudioApp()
+    public App()
     {
-        UnhandledException += (sender, args) => WriteFailure(args.Exception);
         // Application construction precedes the WinUI unhandled-exception boundary.
-        try { InitializeComponent(); }
-        catch (Exception error) { WriteFailure(error); throw; }
-        if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is { Length: > 0 } output)
+        try
         {
-            Directory.CreateDirectory(output);
-            File.WriteAllText(Path.Combine(output, "application-resources.txt"), $"Merged dictionaries: {Resources.MergedDictionaries.Count}\n" + string.Join('\n', typeof(StudioApp).Assembly.GetManifestResourceNames()));
+            if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is { Length: > 0 } directory)
+            { Directory.CreateDirectory(directory); File.AppendAllText(Path.Combine(directory, "steps.log"), "application-constructed\n"); }
+            UnhandledException += (sender, args) => WriteFailure(args.Exception);
+            InitializeComponent();
+            if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is { Length: > 0 } output)
+                File.WriteAllText(Path.Combine(output, "application-resources.txt"), $"Merged dictionaries: {Resources.MergedDictionaries.Count}\n");
         }
+        catch (Exception error) { WriteFailure(error); throw; }
     }
     private static void WriteFailure(Exception error)
     {

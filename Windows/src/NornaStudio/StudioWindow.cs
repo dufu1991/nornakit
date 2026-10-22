@@ -115,7 +115,7 @@ internal sealed partial class StudioWindow : Window
         toolbar.SecondaryCommands.Add(Command(L("Settings", "设置"), Symbol.Setting, SettingsAsync));
         root.Children.Add(toolbar);
         var workspace = new Grid { ColumnSpacing = 1 };
-        workspace.ColumnDefinitions.Add(new() { Width = new(240) }); workspace.ColumnDefinitions.Add(new() { Width = new(390), MinWidth = 240 }); workspace.ColumnDefinitions.Add(new() { Width = new(1, GridUnitType.Star), MinWidth = 180 });
+        workspace.ColumnDefinitions.Add(new() { Width = new(240) }); workspace.ColumnDefinitions.Add(new() { Width = new(2, GridUnitType.Star), MinWidth = 240, MaxWidth = 640 }); workspace.ColumnDefinitions.Add(new() { Width = new(3, GridUnitType.Star), MinWidth = 180 });
         Grid.SetRow(workspace, 1); root.Children.Add(workspace);
         var library = new Grid { Padding = new(16), RowSpacing = 10 };
         for (var i = 0; i < 4; i++) library.RowDefinitions.Add(new() { Height = i == 3 ? new(1, GridUnitType.Star) : GridLength.Auto });
