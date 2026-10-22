@@ -21,6 +21,12 @@ public sealed partial class StudioApp : Application
     public StudioApp()
     {
         UnhandledException += (sender, args) => WriteFailure(args.Exception);
+        if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is { Length: > 0 } directory)
+        {
+            Directory.CreateDirectory(directory);
+            DebugSettings.IsXamlResourceReferenceTracingEnabled = true;
+            DebugSettings.XamlResourceReferenceFailed += (_, args) => File.AppendAllText(Path.Combine(directory, "xaml-resources.log"), args.Message + "\n");
+        }
         InitializeComponent();
     }
     private static void WriteFailure(Exception error)

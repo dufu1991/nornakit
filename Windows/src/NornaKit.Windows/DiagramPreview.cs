@@ -15,7 +15,7 @@ namespace NornaKit.Windows;
 [WinRT.GeneratedWinRTExposedType]
 public sealed partial class DiagramPreview : UserControl, IDisposable
 {
-    private readonly Image image = new() { Stretch = Stretch.Fill, IsHitTestVisible = false };
+    private readonly Image image;
     private CanvasImageSource? surface;
     private CanvasDevice? device;
     private XamlRoot? observedRoot;
@@ -32,7 +32,7 @@ public sealed partial class DiagramPreview : UserControl, IDisposable
     public event Action<DiagramScene>? SceneRendered;
     public DiagramPreview()
     {
-        Content = image;
+        InitializeComponent(); image = DrawingImage;
         IsTabStop = true; MinWidth = 120; MinHeight = 120;
         AutomationProperties.SetName(this, "Diagram preview");
         AutomationProperties.SetHelpText(this, "Drag to pan. Scroll to zoom. Press 0 to fit, plus or minus to zoom.");
