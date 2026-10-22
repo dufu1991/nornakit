@@ -1,18 +1,7 @@
-using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
 namespace NornaStudio;
-
-internal static class Program
-{
-    [STAThread]
-    public static void Main()
-    {
-        WinRT.ComWrappersSupport.InitializeComWrappers();
-        Application.Start(arguments => { SynchronizationContext.SetSynchronizationContext(new DispatcherQueueSynchronizationContext(DispatcherQueue.GetForCurrentThread())); _ = new StudioApp(); });
-    }
-}
 
 [WinRT.GeneratedWinRTExposedType]
 public sealed partial class StudioApp : Application

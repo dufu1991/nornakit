@@ -127,6 +127,9 @@ jobs:
           New-Item $key -Force | Out-Null
           New-ItemProperty $key -Name DumpFolder -Value $dumps -PropertyType ExpandString -Force | Out-Null
           New-ItemProperty $key -Name DumpType -Value 2 -PropertyType DWord -Force | Out-Null
+          New-Item $env:NORNA_STUDIO_SMOKE -ItemType Directory -Force | Out-Null
+          Get-ChildItem artifacts/studio -Recurse -File | Where-Object { $_.Extension -in '.pri', '.xbf', '.xaml' } | Select-Object FullName, Length | Format-Table -AutoSize | Out-String -Width 240 | Set-Content "$env:NORNA_STUDIO_SMOKE/resources.txt"
+          Get-ChildItem src/NornaStudio/obj -Recurse -Filter 'App.g.i.cs' | ForEach-Object { Get-Content $_.FullName | Set-Content "$env:NORNA_STUDIO_SMOKE/application-init.cs" }
           $started = Get-Date
           $process = Start-Process './artifacts/studio/NornaStudio.exe' -PassThru
           if (-not $process.WaitForExit(90000)) { $process.Kill(); throw 'Studio startup timed out.' }

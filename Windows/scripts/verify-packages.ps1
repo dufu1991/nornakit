@@ -87,6 +87,7 @@ Copy-Item (Join-Path $consumer 'NuGet.Config') $previewConsumer
 '@ | Set-Content (Join-Path $previewConsumer 'App.xaml') -Encoding utf8
 @'
 using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 using NornaKit;
 using NornaKit.Windows;
 
@@ -108,7 +109,9 @@ public sealed partial class App : Application
             File.WriteAllText(Path.Combine(Environment.GetEnvironmentVariable("NORNA_PACKAGE_SMOKE")!, "preview.txt"), "passed");
             preview.Dispose(); Exit();
         };
-        window = new Window { Title = "NornaKit package integration", Content = preview.Element }; window.AppWindow.Resize(new(640, 480)); window.Activate();
+        var panel = new Grid(); panel.RowDefinitions.Add(new() { Height = GridLength.Auto }); panel.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) });
+        panel.Children.Add(new Button { Content = "Native package integration", Margin = new(12) }); Grid.SetRow(preview.Element, 1); panel.Children.Add(preview.Element);
+        window = new Window { Title = "NornaKit package integration", Content = panel }; window.AppWindow.Resize(new(640, 480)); window.Activate();
     }
 }
 '@ | Set-Content (Join-Path $previewConsumer 'App.xaml.cs') -Encoding utf8
