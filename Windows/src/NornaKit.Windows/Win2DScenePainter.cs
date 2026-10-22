@@ -34,9 +34,9 @@ public static class Win2DScenePainter
             {
                 using var stroke = new CanvasStrokeStyle
                 {
-                    StartCap = CanvasCapStyle.Round, EndCap = CanvasCapStyle.Round, LineJoin = CanvasLineJoin.Round,
-                    CustomDashStyle = style.Dash.Select(value => (float)(value / style.LineWidth)).ToArray()
+                    StartCap = CanvasCapStyle.Round, EndCap = CanvasCapStyle.Round, LineJoin = CanvasLineJoin.Round
                 };
+                if (!style.Dash.IsEmpty) stroke.CustomDashStyle = style.Dash.Select(value => (float)(value / style.LineWidth)).ToArray();
                 drawing.DrawGeometry(geometry, Native(palette.Resolve(style.Stroke), style.Opacity), (float)style.LineWidth, stroke);
             }
         }

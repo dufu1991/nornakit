@@ -7,6 +7,12 @@ using NornaKit;
 using NornaKit.Windows;
 
 WinRT.ComWrappersSupport.InitializeComWrappers();
+AppDomain.CurrentDomain.UnhandledException += (_, arguments) =>
+{
+    if (arguments.ExceptionObject is Exception exception)
+        Console.Error.WriteLine("Native failure details: " + JsonSerializer.Serialize(exception.Data.Keys.Cast<object>()
+            .ToDictionary(key => key.ToString()!, key => exception.Data[key])));
+};
 var directory = Path.GetFullPath(args.Length == 0 ? "artifacts/native-smoke" : args[0]);
 Directory.CreateDirectory(directory);
 using var device = new CanvasDevice(forceSoftwareRenderer: true);

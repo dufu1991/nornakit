@@ -79,11 +79,14 @@ public sealed partial class WindowsTextLayoutProvider(CanvasDevice device) : ITe
                 cancellationToken.ThrowIfCancellationRequested();
                 var source = ranges.First(range => characterIndex >= range.Start && characterIndex < range.Start + range.Length).Run;
                 var font = resolveFont(fontFace);
-                using var geometry = CanvasGeometry.CreateGlyphRun(device, Vector2.Zero, fontFace, fontSize,
-                    glyphs, isSideways, bidiLevel, measuringMode, glyphOrientation);
-                using var simplified = geometry.Simplify(CanvasGeometrySimplification.CubicsAndLines);
                 var receiver = new GeometryReceiver();
-                simplified.SendPathTo(receiver);
+                if (glyphs.Length > 0)
+                {
+                    using var geometry = CanvasGeometry.CreateGlyphRun(device, Vector2.Zero, fontFace, fontSize,
+                        glyphs, isSideways, bidiLevel, measuringMode, glyphOrientation);
+                    using var simplified = geometry.Simplify(CanvasGeometrySimplification.CubicsAndLines);
+                    simplified.SendPathTo(receiver);
+                }
                 // Win2D can return the remainder of the source; the cluster map defines the actual run length.
                 var runText = content.Substring(checked((int)characterIndex), clusterMapIndices.Length);
                 Runs.Add(new(runText, source.Style with { Size = fontSize }, font, new(point.X, point.Y),
@@ -94,6 +97,11 @@ public sealed partial class WindowsTextLayoutProvider(CanvasDevice device) : ITe
             }
             catch (Exception exception)
             {
+                exception.Data["CharacterIndex"] = characterIndex;
+                exception.Data["GlyphCount"] = glyphs.Length;
+                exception.Data["FontSize"] = fontSize;
+                exception.Data["GlyphOrientation"] = glyphOrientation.ToString();
+                exception.Data["Glyphs"] = string.Join(';', glyphs.Select(glyph => $"{glyph.Index}:{glyph.Advance}"));
                 Failure = ExceptionDispatchInfo.Capture(exception);
             }
         }
