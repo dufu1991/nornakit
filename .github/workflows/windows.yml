@@ -121,12 +121,19 @@ jobs:
       - name: Launch native workbench
         run: |
           $env:NORNA_STUDIO_SMOKE = Join-Path $pwd 'artifacts/studio-smoke'
+          $dumps = Join-Path $pwd 'artifacts/crash-dumps'
+          New-Item $dumps -ItemType Directory -Force | Out-Null
+          $key = 'HKLM:\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps\NornaStudio.exe'
+          New-Item $key -Force | Out-Null
+          New-ItemProperty $key -Name DumpFolder -Value $dumps -PropertyType ExpandString -Force | Out-Null
+          New-ItemProperty $key -Name DumpType -Value 2 -PropertyType DWord -Force | Out-Null
           $started = Get-Date
           $process = Start-Process './artifacts/studio/NornaStudio.exe' -PassThru
           if (-not $process.WaitForExit(90000)) { $process.Kill(); throw 'Studio startup timed out.' }
           if ($process.ExitCode -ne 0) {
             New-Item $env:NORNA_STUDIO_SMOKE -ItemType Directory -Force | Out-Null
             Get-WinEvent -FilterHashtable @{ LogName = 'Application'; StartTime = $started.AddSeconds(-1) } -ErrorAction SilentlyContinue | Where-Object { $_.Message -match 'NornaStudio' } | Format-List TimeCreated, Id, Message | Out-String | Set-Content "$env:NORNA_STUDIO_SMOKE/events.txt"
+            Get-ChildItem $dumps -Filter '*.dmp' | ForEach-Object { python scripts/inspect-native-crash.py $_.FullName | Set-Content "$env:NORNA_STUDIO_SMOKE/native-error.json" }
             throw "Studio exited with $($process.ExitCode)."
           }
           if (-not (Test-Path "$env:NORNA_STUDIO_SMOKE/studio.json")) { throw 'Studio did not complete startup verification.' }
@@ -139,6 +146,12 @@ jobs:
       - name: Verify independent NuGet consumer
         if: always() && steps.pack.outcome == 'success'
         run: ./scripts/verify-packages.ps1 -Platform ${{ matrix.platform }}
+      - uses: actions/upload-artifact@v7
+        if: always() && steps.pack.outcome == 'success'
+        with:
+          name: windows-nuget-${{ matrix.platform }}
+          path: Windows/artifacts/nuget
+          retention-days: 7
       - name: Install pinned installer compiler
         run: ./scripts/install-inno.ps1
       - name: Package installer and portable build

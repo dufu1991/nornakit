@@ -23,6 +23,6 @@ dotnet publish src/NornaStudio -c Release --no-restore -p:Platform=x64 -o artifa
 
 Use `-p:Platform=ARM64` for ARM64. CI runs on both native architectures, checks the shared 600 source/status baselines, draws the 79 bilingual samples, verifies all five export formats and PDF text, then builds and launches the workbench. Installation and portable checks use the self contained output. A clean Windows 11 machine and physical DPI/accessibility/device recovery checks remain part of pre-release acceptance.
 
-The 79 bilingual samples are embedded directly from `Sources/NornaKit/Resources/examples.json`; Swift and C# share stable IDs, content, order, starters and comparisons. Official source/status resources are shared too.
+The 79 bilingual samples are embedded directly from `Sources/NornaKit/Resources/examples.json`; Swift and C# share stable IDs, content, order, starters and comparisons. Official source/status resources are shared too. Another 24 shared flow geometry fixtures run through the same fixed measurement rules in Swift and C#, including nested groups, adaptive widths, shapes, long edges and feedback routes.
 
 See the [Windows guide](../Docs/WINDOWS.md) for integration, exported font restrictions, icons, native controls, workbench shortcuts, build commands, installer validation and independent manual release workflows. See the [support matrix](../Docs/SUPPORT.md) for the implemented grammar and limits.

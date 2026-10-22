@@ -123,6 +123,9 @@ rejects(() => MermaidFlowchartParser.Parse("flowchart TD\nsubgraph G[Group]\nA -
 rejects(() => MermaidFlowchartParser.Parse("flowchart TD\nA --> B\nstyle A fill:red"), "unsupported-syntax");
 
 var renderer = new NativeDiagramRenderer(new FixedTextLayoutProvider());
+var fixtureFailures = new List<string>();
+await SharedLayoutFixtures.CheckAsync(renderer, (condition, message) => { if (condition) check(true, message); else fixtureFailures.Add(message); });
+check(fixtureFailures.Count == 0, string.Join('\n', fixtureFailures));
 foreach (var example in ExampleCatalog.All.Where(example => example.Kind == "flowchart"))
 foreach (var language in Enum.GetValues<DiagramExampleLanguage>())
 foreach (var width in new double?[] { null, 360, 720 })

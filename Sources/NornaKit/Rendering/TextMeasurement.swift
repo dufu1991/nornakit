@@ -1,16 +1,25 @@
 import Foundation
 
+/// Scoped measurement injection for platform independent layout regression fixtures.
+protocol TextMeasurementProviding: Sendable {
+    func width(_ text: String, size: CGFloat, bold: Bool, mono: Bool) -> CGFloat
+    func lines(_ text: String, maxWidth: CGFloat, size: CGFloat, bold: Bool, mono: Bool) -> [String]
+}
+
 enum TextMeasurement {
+    @TaskLocal static var provider: (any TextMeasurementProviding)?
     static let fontSize = DiagramStyle.fontSize
     static let lineHeight = DiagramStyle.lineHeight
 
     static func width(_ text: String, size: CGFloat = fontSize, bold: Bool = false, mono: Bool = false) -> CGFloat {
-        InlineText.line(text, size: size, bold: bold, mono: mono).width
+        provider?.width(text, size: size, bold: bold, mono: mono)
+            ?? InlineText.line(text, size: size, bold: bold, mono: mono).width
     }
 
     static func lines(_ text: String, maxWidth: CGFloat = 200, size: CGFloat = fontSize,
                       bold: Bool = false, mono: Bool = false) -> [String] {
-        InlineText.wrappedLines(text, maxWidth: maxWidth, size: size, bold: bold, mono: mono)
+        provider?.lines(text, maxWidth: maxWidth, size: size, bold: bold, mono: mono)
+            ?? InlineText.wrappedLines(text, maxWidth: maxWidth, size: size, bold: bold, mono: mono)
     }
 
     static func nodeSize(lines: [String], shape: NodeShape) -> CGSize {

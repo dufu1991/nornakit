@@ -41,13 +41,13 @@ internal sealed partial class StudioWindow : Window
     {
         settings = initialSettings;
         if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is { Length: > 0 }) preview.ForceSoftwareRenderer = true;
-        preview.Loaded += (_, _) => SmokeStep("preview-loaded");
+        preview.Element.Loaded += (_, _) => SmokeStep("preview-loaded");
         preview.RenderingFailed += error =>
         {
             if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is not { Length: > 0 } directory) return;
             Directory.CreateDirectory(directory); File.WriteAllText(Path.Combine(directory, "drawing-failure.txt"), error.ToString());
         };
-        preview.SizeChanged += (sender, e) => { if (!closing && !rebuilding && !session.Busy && session.Artifact is not null && Math.Abs(e.NewSize.Width - e.PreviousSize.Width) > 32) _ = RunAsync(RenderAsync); };
+        preview.Element.SizeChanged += (sender, e) => { if (!closing && !rebuilding && !session.Busy && session.Artifact is not null && Math.Abs(e.NewSize.Width - e.PreviousSize.Width) > 32) _ = RunAsync(RenderAsync); };
         Title = "Norna Studio"; AppWindow.Resize(new(1440, 920)); SystemBackdrop = new MicaBackdrop(); Build();
         session.Changed += Refresh;
         systemSettings.ColorValuesChanged += ColorsChanged;
@@ -101,7 +101,7 @@ internal sealed partial class StudioWindow : Window
     private void Build()
     {
         rebuilding = true;
-        if (preview.Parent is Panel previousPanel) previousPanel.Children.Remove(preview);
+        if (preview.Element.Parent is Panel previousPanel) previousPanel.Children.Remove(preview.Element);
         root = new() { RequestedTheme = settings.Appearance switch { CanvasAppearance.Light or CanvasAppearance.HighContrastLight => ElementTheme.Light, CanvasAppearance.Dark or CanvasAppearance.HighContrastDark => ElementTheme.Dark, _ => ElementTheme.Default } };
         root.RowDefinitions.Add(new() { Height = GridLength.Auto }); root.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) }); root.RowDefinitions.Add(new() { Height = GridLength.Auto });
         root.RowDefinitions.Add(new() { Height = GridLength.Auto });
@@ -136,15 +136,15 @@ internal sealed partial class StudioWindow : Window
         ScrollViewer.SetHorizontalScrollBarVisibility(editor, ScrollBarVisibility.Auto); ScrollViewer.SetVerticalScrollBarVisibility(editor, ScrollBarVisibility.Auto); AutomationProperties.SetName(editor, L("Diagram source", "图形源码"));
         editor.TextChanged += (_, _) => { if (!rebuilding) _ = RunAsync(RenderAsync); }; Grid.SetRow(editor, 1); sourcePanel.Children.Add(editor); Grid.SetColumn(sourcePanel, 1); workspace.Children.Add(sourcePanel);
         var previewPanel = new Grid { RowSpacing = 8, Padding = new(12, 12, 16, 12) }; previewPanel.RowDefinitions.Add(new() { Height = GridLength.Auto }); previewPanel.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) });
-        preview.Palette = Palette; preview.ShowGrid = settings.Grid; Grid.SetRow(preview, 1); previewPanel.Children.Add(preview);
+        preview.Palette = Palette; preview.ShowGrid = settings.Grid; Grid.SetRow(preview.Element, 1); previewPanel.Children.Add(preview.Element);
         var controls = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8 };
         controls.Children.Add(ActionButton(L("Fit", "适应窗口"), () => preview.Fit())); controls.Children.Add(ActionButton("−", () => preview.Zoom(1 / 1.2))); controls.Children.Add(ActionButton("+", () => preview.Zoom(1.2)));
         var grid = new ToggleSwitch { Header = L("Grid", "网格"), IsOn = settings.Grid, OnContent = "", OffContent = "", VerticalAlignment = VerticalAlignment.Center }; grid.Toggled += (_, _) => { preview.ShowGrid = grid.IsOn; settings = settings with { Grid = grid.IsOn }; _ = RunAsync(SaveWorkspaceAsync); }; controls.Children.Add(grid); previewPanel.Children.Add(controls); Grid.SetColumn(previewPanel, 2); workspace.Children.Add(previewPanel);
         var footer = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 16, Padding = new(16, 8, 16, 8) }; status = new() { VerticalAlignment = VerticalAlignment.Center }; footer.Children.Add(status);
         diagnostic = new() { Visibility = Visibility.Collapsed }; diagnostic.Click += (_, _) => LocateDiagnostic(); footer.Children.Add(diagnostic); Grid.SetRow(footer, 2); root.Children.Add(footer);
         errors = new InfoBar { Severity = InfoBarSeverity.Error, IsClosable = true, Margin = new(16, 0, 16, 12) }; Grid.SetRow(errors, 3); root.Children.Add(errors);
-        AutomationProperties.SetName(preview, L("Diagram preview", "图形预览"));
-        AutomationProperties.SetHelpText(preview, L("Drag to pan. Scroll to zoom. Press 0 to fit, plus or minus to zoom.", "拖动以平移，滚轮以缩放。按 0 适应窗口，按加减键缩放。"));
+        AutomationProperties.SetName(preview.Element, L("Diagram preview", "图形预览"));
+        AutomationProperties.SetHelpText(preview.Element, L("Drag to pan. Scroll to zoom. Press 0 to fit, plus or minus to zoom.", "拖动以平移，滚轮以缩放。按 0 适应窗口，按加减键缩放。"));
         RefreshAppearance(); Content = root; PopulateKinds(); rebuilding = false; Refresh(); UpdateTitle();
     }
     private string CategoryName(string category) => category switch { "process" => L("Process", "流程"), "relationships" => L("Relationships", "关系"), "charts" => L("Charts", "数据图表"), "planning" => L("Planning", "规划"), "development" => L("Development", "开发"), "hierarchy" => L("Hierarchy", "层级"), "architecture" => L("Architecture", "架构"), _ => category };

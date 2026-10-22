@@ -177,7 +177,7 @@ internal sealed class CompoundEdgeRouter(TextMeasurement text)
         Func<DiagramPoint, int> cell = p => Array.BinarySearch(ys, p.Y) * width + Array.BinarySearch(xs, p.X);
         Func<int, DiagramPoint> point = i => new(xs[i % width], ys[i / width]);
         Func<DiagramPoint, double> heuristic = p => ends.Min(port => Math.Abs(port.Stub.X - p.X) + Math.Abs(port.Stub.Y - p.Y));
-        var costs = Enumerable.Repeat(double.PositiveInfinity, cells * 3).ToArray(); var previous = Enumerable.Repeat(-1, cells * 3).ToArray(); var origin = new int[cells * 3]; var heap = new PriorityQueue<(int State, double Cost), double>();
+        var costs = Enumerable.Repeat(double.PositiveInfinity, cells * 3).ToArray(); var previous = Enumerable.Repeat(-1, cells * 3).ToArray(); var origin = new int[cells * 3]; var heap = new RouteHeap();
         for (var i = 0; i < starts.Count; i++)
         { var port = starts[i]; var axis = Math.Abs(port.Anchor.X - port.Stub.X) > .01 ? 1 : 2; var state = cell(port.Stub) * 3 + axis; var cost = port.Penalty + Math.Abs(port.Anchor.X - port.Stub.X) + Math.Abs(port.Anchor.Y - port.Stub.Y) + congestion(port.Anchor, port.Stub); if (cost >= costs[state]) continue; costs[state] = cost; origin[state] = i; heap.Enqueue((state, cost), cost + heuristic(port.Stub)); }
         var goal = -1; var endPort = 0; var best = double.PositiveInfinity; var endCells = ends.Select(port => cell(port.Stub)).ToArray();
@@ -200,4 +200,34 @@ internal sealed class CompoundEdgeRouter(TextMeasurement text)
         while (cursor >= 0) { route.Add(point(cursor / 3)); cursor = previous[cursor]; }
         route.Add(starts[origin[goal]].Anchor); route.Reverse(); return EdgeGeometry.Simplify(route);
     }
+    // Match Swift's binary heap tie order so equal cost visibility routes stay deterministic.
+    private sealed class RouteHeap
+    {
+        private readonly List<(int State, double Cost, double Estimate)> values = [];
+        public void Enqueue((int State, double Cost) value, double estimate)
+        {
+            values.Add((value.State, value.Cost, estimate)); var index = values.Count - 1;
+            while (index > 0)
+            {
+                var parent = (index - 1) / 2; if (values[index].Estimate >= values[parent].Estimate) break;
+                (values[index], values[parent]) = (values[parent], values[index]); index = parent;
+            }
+        }
+        public bool TryDequeue(out (int State, double Cost) value, out double estimate)
+        {
+            if (values.Count == 0) { value = default; estimate = 0; return false; }
+            var first = values[0]; value = (first.State, first.Cost); estimate = first.Estimate;
+            var last = values[^1]; values.RemoveAt(values.Count - 1); if (values.Count == 0) return true;
+            values[0] = last; var index = 0;
+            while (index * 2 + 1 < values.Count)
+            {
+                var child = index * 2 + 1;
+                if (child + 1 < values.Count && values[child + 1].Estimate < values[child].Estimate) child++;
+                if (values[child].Estimate >= values[index].Estimate) break;
+                (values[index], values[child]) = (values[child], values[index]); index = child;
+            }
+            return true;
+        }
+    }
+
 }

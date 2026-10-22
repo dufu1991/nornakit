@@ -6,16 +6,22 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Automation;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
+using DispatcherQueue = Microsoft.UI.Dispatching.DispatcherQueue;
 using global::Windows.Foundation;
 using global::Windows.System;
 
 namespace NornaKit.Windows;
 
 /// <summary>A native Win2D preview. View transforms and its grid never modify the scene.</summary>
-[WinRT.GeneratedWinRTExposedType]
-public sealed partial class DiagramPreview : UserControl, IDisposable
+public sealed class DiagramPreview : IDisposable
 {
-    private readonly Image image;
+    public UserControl Element { get; } = new();
+    public double ActualWidth => Element.ActualWidth;
+    public double ActualHeight => Element.ActualHeight;
+    private XamlRoot? XamlRoot => Element.XamlRoot;
+    private DispatcherQueue DispatcherQueue => Element.DispatcherQueue;
+    private bool IsLoaded => Element.IsLoaded;
+    private readonly Image image = new() { Stretch = Stretch.Fill, IsHitTestVisible = false };
     private CanvasImageSource? surface;
     private CanvasDevice? device;
     private XamlRoot? observedRoot;
@@ -32,17 +38,17 @@ public sealed partial class DiagramPreview : UserControl, IDisposable
     public event Action<DiagramScene>? SceneRendered;
     public DiagramPreview()
     {
-        InitializeComponent(); image = DrawingImage;
-        IsTabStop = true; MinWidth = 120; MinHeight = 120;
-        AutomationProperties.SetName(this, "Diagram preview");
-        AutomationProperties.SetHelpText(this, "Drag to pan. Scroll to zoom. Press 0 to fit, plus or minus to zoom.");
-        SizeChanged += (_, _) => { if (fitOnResize) Fit(); else Invalidate(); };
-        PointerPressed += (_, e) => { Focus(FocusState.Pointer); panning = true; last = e.GetCurrentPoint(this).Position; CapturePointer(e.Pointer); e.Handled = true; };
-        PointerMoved += (_, e) => { if (!panning) return; var point = e.GetCurrentPoint(this).Position; pan += new Vector2((float)(point.X - last.X), (float)(point.Y - last.Y)); last = point; fitOnResize = false; Invalidate(); e.Handled = true; };
-        PointerReleased += (_, e) => { panning = false; ReleasePointerCapture(e.Pointer); };
-        PointerCaptureLost += (_, _) => panning = false;
-        PointerWheelChanged += (_, e) => { var p = e.GetCurrentPoint(this); Zoom(Math.Pow(1.1, p.Properties.MouseWheelDelta / 120d), p.Position); e.Handled = true; };
-        KeyDown += (_, e) =>
+        Element.Content = image;
+        Element.IsTabStop = true; Element.MinWidth = 120; Element.MinHeight = 120;
+        AutomationProperties.SetName(Element, "Diagram preview");
+        AutomationProperties.SetHelpText(Element, "Drag to pan. Scroll to zoom. Press 0 to fit, plus or minus to zoom.");
+        Element.SizeChanged += (_, _) => { if (fitOnResize) Fit(); else Invalidate(); };
+        Element.PointerPressed += (_, e) => { Element.Focus(FocusState.Pointer); panning = true; last = e.GetCurrentPoint(Element).Position; Element.CapturePointer(e.Pointer); e.Handled = true; };
+        Element.PointerMoved += (_, e) => { if (!panning) return; var point = e.GetCurrentPoint(Element).Position; pan += new Vector2((float)(point.X - last.X), (float)(point.Y - last.Y)); last = point; fitOnResize = false; Invalidate(); e.Handled = true; };
+        Element.PointerReleased += (_, e) => { panning = false; Element.ReleasePointerCapture(e.Pointer); };
+        Element.PointerCaptureLost += (_, _) => panning = false;
+        Element.PointerWheelChanged += (_, e) => { var p = e.GetCurrentPoint(Element); Zoom(Math.Pow(1.1, p.Properties.MouseWheelDelta / 120d), p.Position); e.Handled = true; };
+        Element.KeyDown += (_, e) =>
         {
             switch (e.Key)
             {
@@ -55,13 +61,13 @@ public sealed partial class DiagramPreview : UserControl, IDisposable
             }
             e.Handled = true; Invalidate();
         };
-        Loaded += (_, _) =>
+        Element.Loaded += (_, _) =>
         {
             loadedCount++;
             if (observedRoot is not null) observedRoot.Changed -= RootChanged;
-            observedRoot = XamlRoot; observedRoot.Changed += RootChanged; Invalidate();
+            observedRoot = XamlRoot ?? throw new InvalidOperationException("A loaded preview requires a XamlRoot."); observedRoot.Changed += RootChanged; Invalidate();
         };
-        Unloaded += (_, _) =>
+        Element.Unloaded += (_, _) =>
         {
             if (--loadedCount > 0) return;
             panning = false;
@@ -151,6 +157,6 @@ public sealed partial class DiagramPreview : UserControl, IDisposable
     {
         if (disposed) return; disposed = true; panning = false;
         if (observedRoot is not null) observedRoot.Changed -= RootChanged;
-        observedRoot = null; ReleaseSurface(); Content = null;
+        observedRoot = null; ReleaseSurface(); Element.Content = null;
     }
 }

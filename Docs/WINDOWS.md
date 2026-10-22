@@ -56,11 +56,11 @@ var preview = new DiagramPreview
     Palette = palette,
     ShowGrid = true
 };
-hostGrid.Children.Add(preview);
+hostGrid.Children.Add(preview.Element);
 preview.Fit();
 ```
 
-控件支持拖动平移、滚轮缩放、方向键、加减键，以及按 `0` 适应窗口。宿主永久移除控件时调用 `Dispose()`，释放 Win2D 画布。控件的缩放、平移与网格只影响预览，不写入场景，不参与导出。预览使用 Win2D CanvasImageSource，根据 XamlRoot 的 DPI 和画布尺寸重建表面，在设备丢失后重新创建绘图资源。图形本身保留设备无关的场景路径。CI 使用 WARP 软件绘制并等待场景实际完成首帧，普通运行默认使用硬件绘制。
+`DiagramPreview.Element` 是宿主添加到布局中的原生 UserControl，无须从库加载 XAML 资源。控件支持拖动平移、滚轮缩放、方向键、加减键，以及按 `0` 适应窗口。宿主永久移除控件时调用 `Dispose()`，释放 Win2D 画布。控件的缩放、平移与网格只影响预览，不写入场景，不参与导出。预览使用 Win2D CanvasImageSource，根据 XamlRoot 的 DPI 和画布尺寸重建表面，在设备丢失后重新创建绘图资源。图形本身保留设备无关的场景路径。CI 使用 WARP 软件绘制并等待场景实际完成首帧，普通运行默认使用硬件绘制。
 
 ## 导出与平台差异
 
@@ -68,7 +68,7 @@ preview.Fit();
 - SVG 使用场景路径与文字，图标使用自包含矢量路径，不引用外部图标图片或字体资源。普通文字保留系统字体名称。SVG 最大为 4 MB。
 - PDF 使用 PDFsharp Core，嵌入 DirectWrite 实际选用的 TrueType 字体及字体集合中的具体字面，保存字形位置、Unicode 映射和 `ActualText`。普通文字可选择、复制和搜索，图形保持矢量。
 - PDF 当前支持 TrueType 轮廓，并遵守字体的嵌入权限。字体不允许嵌入或轮廓格式不受支持时返回 `export-font`，不会悄悄把普通文字替换成截图或轮廓。
-- 两端使用系统字体，允许字宽、换行和最终尺寸存在差异。固定文本测量用于算法检查，真实字体快照按平台单独检查。
+- 两端使用系统字体，允许字宽、换行和最终尺寸存在差异。Swift 与 C# 使用同一套固定字宽规则和 24 组共享几何基线，对照节点、分组、连线路径、标记及尺寸。真实字体快照按平台单独检查。
 
 Windows 图标采用 Segoe Fluent Icons。可用名称包括 `document`、`upload`、`check-circle`、`drive`、`check`、`sparkles`、`person`、`arrow-right`、`align-center`、`return`、`weather`、`folder`、`cloud`、`settings`、`code`、`warning`、`app` 与 `photo`。
 
