@@ -3,7 +3,6 @@ using Microsoft.UI.Xaml.Controls;
 
 namespace NornaStudio;
 
-[WinRT.GeneratedWinRTExposedType]
 public sealed partial class StudioApp : Application
 {
     private StudioWindow? window;
@@ -17,6 +16,9 @@ public sealed partial class StudioApp : Application
             DebugSettings.XamlResourceReferenceFailed += (_, args) => File.AppendAllText(Path.Combine(directory, "xaml-resources.log"), args.Message + "\n");
         }
         InitializeComponent();
+        Resources.MergedDictionaries.Add(new XamlControlsResources());
+        if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is { Length: > 0 } output)
+            File.WriteAllText(Path.Combine(output, "application-resources.txt"), $"Merged dictionaries: {Resources.MergedDictionaries.Count}\n" + string.Join('\n', typeof(StudioApp).Assembly.GetManifestResourceNames()));
     }
     private static void WriteFailure(Exception error)
     {

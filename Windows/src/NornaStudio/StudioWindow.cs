@@ -15,7 +15,6 @@ using global::Windows.UI.ViewManagement;
 
 namespace NornaStudio;
 
-[WinRT.GeneratedWinRTExposedType]
 internal sealed partial class StudioWindow : Window
 {
     private readonly StudioSession session = new(WindowsDiagramRenderer.Create());

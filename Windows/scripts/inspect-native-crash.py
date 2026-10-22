@@ -77,6 +77,18 @@ def inspect(path):
                     error["message"] = text.decode("utf-16-le", errors="replace")
                 if length >= 56:
                     error["nestedType"] = read(address + 40, 4).decode("ascii", errors="replace")
+                    if read(address + 40, 4) == b"XAML":
+                        context = word(address + 48)
+                        begin, end, capacity = struct.unpack("<QQQ", read(context + 16 + 512 * 8, 24))
+                        if begin <= end <= capacity and (end - begin) % 32 == 0 and end - begin <= 32 * 64:
+                            strings = []
+                            for item in range((end - begin) // 32):
+                                value = begin + item * 32
+                                characters, reserved = struct.unpack("<QQ", read(value + 16, 16))
+                                if characters <= reserved and characters <= 8192:
+                                    pointer = value if reserved < 8 else word(value)
+                                    strings.append(read(pointer, characters * 2).decode("utf-16-le", errors="replace"))
+                            error["context"] = strings
                 result["stowed"].append(error)
         return result
 

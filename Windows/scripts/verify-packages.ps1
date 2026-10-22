@@ -110,7 +110,11 @@ public sealed partial class App : Application
             preview.Dispose(); Exit();
         };
         var panel = new Grid(); panel.RowDefinitions.Add(new() { Height = GridLength.Auto }); panel.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) });
-        panel.Children.Add(new Button { Content = "Native package integration", Margin = new(12) }); Grid.SetRow(preview.Element, 1); panel.Children.Add(preview.Element);
+        var controls = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8, Margin = new(12) };
+        controls.Children.Add(new Button { Content = "Native package integration" });
+        controls.Children.Add(new AutoSuggestBox { PlaceholderText = "Native styles" });
+        controls.Children.Add(new InfoBar { IsOpen = true, Message = "WinUI resources" });
+        panel.Children.Add(controls); Grid.SetRow(preview.Element, 1); panel.Children.Add(preview.Element);
         window = new Window { Title = "NornaKit package integration", Content = panel }; window.AppWindow.Resize(new(640, 480)); window.Activate();
     }
 }
