@@ -8,12 +8,20 @@ NornaKit is the primary library product. GitHub Releases lead with the Kit versi
 
 | Product | Source of truth | Git tag | Current version |
 | --- | --- | --- | --- |
-| NornaKit Swift Package | `Configuration/Kit-Version.json` | `vX.Y.Z` | `v0.1.0` |
-| Norna Studio app | `Configuration/Studio-Version.xcconfig` | `studio-vX.Y.Z` for standalone app releases | `0.1.1`, build `7` |
+| NornaKit Swift Package | `Configuration/Kit-Version.json` | `vX.Y.Z` | `v0.1.1` |
+| Norna Studio app | `Configuration/Studio-Version.xcconfig` | `studio-vX.Y.Z` for standalone app releases | `0.1.1`, build `8` |
 
 Swift Package Manager reads the Kit version from its Git tag. `Package.swift` has no separate version field. A companion attachment does not change the meaning of the Kit tag: its hidden release-note manifest records the independent app `version`, app `build`, library `kitVersion`, library source `commit`, and hosting `releaseTag`.
 
 Do not copy the Kit version into Studio's marketing version. Increment Studio's build number for each refreshed companion. A standalone Studio release also needs a new app marketing version because published `studio-vX.Y.Z` releases are immutable.
+
+## Version selection before committing
+
+For each completed change, determine whether the released library or app behavior changes before preparing the commit. Library parser, layout, rendering, export, integration, or public model changes require a Kit version update and matching changelog section in the same delivery. Use a patch version for compatible fixes, performance work, and internal refactors; use a minor version for backward-compatible features. Breaking public API changes require a major version after 1.0, or a minor version while the library is below 1.0.
+
+Each new companion package also needs a fresh Studio build number. Keep Studio's marketing version independent; app-only releases update its own marketing version and build without changing Kit's version. Documentation, tests, agent instructions, website, or CI changes alone do not require a product release unless they change a distributed product or its packaging. Plan one version for a completed delivery, not one version per intermediate edit.
+
+Check published versions and companion builds before choosing new values. Do not reuse published tags, move an existing tag, or overwrite a published package. A `fix:` or `feat:` commit message does not trigger publication by itself: the workflow checks the version configuration files. Respect explicit instructions to commit locally or not push; updating version files does not authorize publication on its own.
 
 ## Normal Kit release
 
