@@ -13,7 +13,7 @@ def gh(*arguments):
     return subprocess.check_output(["gh", *arguments], text=True).strip()
 
 
-def is_release_candidate(event, ref, before, sha, manual):
+def is_release_candidate(event, ref, before, sha, manual, version_path="Configuration/Studio-Version.xcconfig"):
     if ref != "refs/heads/main":
         return False
     if event == "workflow_dispatch":
@@ -24,7 +24,7 @@ def is_release_candidate(event, ref, before, sha, manual):
     if before == "0" * 40:
         command = ["git", "ls-tree", "-r", "--name-only", sha]
     changed = subprocess.check_output(command, cwd=ROOT, text=True).splitlines()
-    return "Configuration/Studio-Version.xcconfig" in changed
+    return version_path in changed
 
 
 def release_needed(metadata, releases, sha):

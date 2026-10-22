@@ -1,6 +1,6 @@
 # NornaKit changelog
 
-NornaKit library versions use `vX.Y.Z` tags. Norna Studio is versioned separately using `studio-vX.Y.Z` tags and is not bundled with these library releases.
+NornaKit library versions use `vX.Y.Z` tags. Norna Studio keeps an independent app version and build number. Kit releases may include optional Studio companion assets; standalone app releases use `studio-vX.Y.Z` tags.
 
 ## 0.1.0 — 2026-10-22
 

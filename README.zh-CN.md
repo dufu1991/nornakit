@@ -205,7 +205,7 @@ Apple Silicon 版 DMG 和 ZIP 位于 `build/release/`。打包命令不启动工
 | tap 仓库每小时执行，或手动运行同步工作流 | 校验最新工作台 Release 并同步 Cask，无须个人令牌 |
 | 推送渲染库的 `vX.Y.Z` 标签 | 不发布工作台应用 |
 
-**NornaKit 是主要的库产品，工作台独立维护版本。** 发布工作台时，修改版本文件中的 `MARKETING_VERSION`，并递增 `CURRENT_PROJECT_VERSION`。包含该文件的首次推送也会触发发布。普通提交不创建新 Release，已发布的工作台版本不会被覆盖。配置和重试方式见[发布指南](Docs/RELEASING.md)。
+**NornaKit 是主要的库产品，工作台独立维护版本。** Kit 使用 `vX.Y.Z` 标签，发布说明以库更新为主，通常附带跟随更新的 Studio 构建。Studio 保留独立的应用版本和构建号，仅在工作台需要单独更新时发布 `studio-vX.Y.Z`。 单独发布工作台时，修改版本文件中的 `MARKETING_VERSION`，并递增 `CURRENT_PROJECT_VERSION`。包含该文件的首次推送也会触发发布。普通提交不创建新 Release，已发布的工作台版本不会被覆盖。配置和重试方式见[发布指南](Docs/RELEASING.md)。
 
 ## 目录结构
 

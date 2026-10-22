@@ -2,88 +2,74 @@
 
 [English README](../README.md) · [中文 README](../README.zh-CN.md)
 
-The app, Swift package, and website share [dufu1991/nornakit](https://github.com/dufu1991/nornakit). NornaKit is the primary library product. Studio is a companion demo, rendering, debugging, and export tool with an independent release cycle.
+NornaKit is the primary library product. GitHub Releases lead with the Kit version and its library changes. Norna Studio normally follows as an optional companion build, with a short version line rather than a separate feature announcement.
 
-## NornaKit library releases
+## Independent versions
 
-NornaKit uses independent semantic-version tags in the `vX.Y.Z` namespace. The first library release is **v0.1.0**. Swift Package Manager reads the library version from the Git tag; `Package.swift` does not contain a separate package version field.
+| Product | Source of truth | Git tag | Current version |
+| --- | --- | --- | --- |
+| NornaKit Swift Package | `Configuration/Kit-Version.json` | `vX.Y.Z` | `v0.1.0` |
+| Norna Studio app | `Configuration/Studio-Version.xcconfig` | `studio-vX.Y.Z` for standalone app releases | `0.1.1`, build `7` |
 
-Norna Studio uses `studio-vX.Y.Z` release tags and reads its app version and build number from `Configuration/Studio-Version.xcconfig`. Publishing NornaKit v0.1.0 does not change Studio 0.1.1, build 6, or create a new Studio package.
+Swift Package Manager reads the Kit version from its Git tag. `Package.swift` has no separate version field. A companion attachment does not change the meaning of the Kit tag: its `release.json` records the independent app `version`, app `build`, library `kitVersion`, library source `commit`, and hosting `releaseTag`.
 
-For a library release:
+Do not copy the Kit version into Studio's marketing version. Increment Studio's build number for each refreshed companion. A standalone Studio release also needs a new app marketing version because published `studio-vX.Y.Z` releases are immutable.
 
-1. Commit the library changes, regression tests, and library changelog. Keep unrelated app and platform work out of the library commit.
-2. Verify that exact commit in a clean checkout and update the Swift Package dependency examples to the new library version.
-3. Create an annotated `vX.Y.Z` tag on the verified library commit, then push the branch and tag without force.
-4. Create a GitHub Release named `NornaKit X.Y.Z`, with library-specific release notes and **Latest disabled**. Do not attach Studio DMG or ZIP assets.
-5. Verify that the remote tag resolves to the tested commit and that the latest-release download still points to Studio.
+## Normal Kit release
 
-The library changelog is maintained in [CHANGELOG.md](../CHANGELOG.md). Library tags do not trigger the Studio publication workflow.
+1. Change `Configuration/Kit-Version.json` to the next stable library version.
+2. Add a nonempty section for that exact version in [CHANGELOG.md](../CHANGELOG.md). Describe the library changes and integration impact here.
+3. Increment `CURRENT_PROJECT_VERSION` in the Studio version file so the companion can be upgraded independently. Keep its marketing version unless the app itself needs a new version.
+4. Commit and push to `main`. A matching `vX.Y.Z` tag push also runs validation. Normal source-only commits do not publish a release.
 
-## Automatic Studio release policy
+[CI and NornaKit Release](../.github/workflows/ci.yml) runs release automation tests, the Swift suite, an Apple Silicon Release build, and website checks before publication. PRs receive checks only. Manual dispatch with `release` enabled retries the configured Kit version on `main`.
 
-The [workflow](../.github/workflows/ci.yml) runs for pushes to `main`, PRs targeting `main`, and manual dispatches. Checks include Swift tests, release automation tests, an Apple Silicon Release build, and website resource validation. Only successful checks can reach publication.
+The Kit job resolves an existing tag to its immutable source commit, or uses the checked main commit when the tag is new. It checks out and tests that exact library source again, then builds the companion from that source with the separately configured Studio version and build. This also supports the already-created `v0.1.0` tag without moving it to a later CI commit.
 
-A push to `main` publishes the app when that push changes `Configuration/Studio-Version.xcconfig`. The initial push containing this file also triggers publication. A manual run on `main` with `release` enabled retries the current app version; leaving the checkbox disabled only runs checks. Tag pushes do not start this workflow.
+Release notes start with **NornaKit X.Y.Z** and the exact library changelog section. Studio normally receives only a short companion version line. When app-specific notes are needed, add a matching `## X.Y.Z` section to `Docs/STUDIO_CHANGELOG.md`; only the current app version's section is appended.
 
-| Namespace | Purpose |
-| --- | --- |
-| `studio-v1.2.3` | Studio app release, created automatically by the workflow |
-| `v0.4.0` | Independent NornaKit Swift Package version |
+All four companion assets upload to a draft before it becomes public. The Kit release becomes GitHub's **Latest** release only after validation and upload succeed. Published releases and tags are never overwritten. A retry may replace incomplete assets only on a draft targeting the same source commit. Publication jobs are serialized, so a delayed older candidate cannot replace a newer library version.
 
-Library tags never trigger app publication. When creating a separate library Release, leave it unmarked as GitHub's latest release so the app's stable download URLs continue to resolve to Studio.
+## Companion downloads
 
-## Prepare a version
+A normal Kit release contains:
 
-Edit [Studio-Version.xcconfig](../Configuration/Studio-Version.xcconfig):
-
-```xcconfig
-MARKETING_VERSION = 0.2.0
-CURRENT_PROJECT_VERSION = 3
-```
-
-Use a stable three-part app version and increment the positive integer build number for each release. Both Debug and Release configurations read this file directly. No XcodeGen regeneration or `Package.swift` change is required for a version bump.
-
-Commit the version file with the app changes and merge or push to `main`. Its version does not need to match a library tag. New app releases must be newer than all published Studio releases. An already published version is skipped; its assets are never overwritten.
-
-The workflow uses the GitHub-hosted `xcode-27` preview runner with Xcode 27.1, building only `arm64` for Apple Silicon Macs running macOS 14 or later. The app icon uses the current Icon Composer document format and requires Xcode 27.1 to compile. The app executable and bundled framework are checked to contain only `arm64`. Tests also run on Apple Silicon. `.github/actionlint.yaml` registers this documented hosted runner label with lint versions that do not yet recognize it.
-
-## Signing setup
-
-With the repository Actions variable `MACOS_SIGNING_ENABLED` unset or `false`, no Apple credentials are required. The app and framework receive ad-hoc signatures. Release notes identify these packages as not Developer ID signed or notarized; Gatekeeper may block them.
-
-For Developer ID signing and Apple notarization, set that variable to `true` and configure these repository **Actions secrets**:
-
-| Secret | Value |
-| --- | --- |
-| `MACOS_CERTIFICATE_P12` | Base64 of a password-protected Developer ID Application certificate exported with its private key |
-| `MACOS_CERTIFICATE_PASSWORD` | Password for the exported `.p12` |
-| `APPLE_TEAM_ID` | Apple Developer team identifier matching the certificate |
-| `APPLE_ID` | Account used for notarization |
-| `APPLE_APP_PASSWORD` | App-specific password for that account |
-
-Export exactly one valid Developer ID Application identity. Encode the file with `base64 -i certificate.p12 | tr -d '\n'` and store the result directly as the secret. Do not commit credentials. Publication uses the repository-scoped `GITHUB_TOKEN`; no personal access token is needed.
-
-When signing is enabled, missing credentials or failed signing or notarization stop publication. The workflow does not switch to ad-hoc signing. It imports the certificate into a temporary keychain, signs embedded code before the app, applies hardened runtime and sandbox entitlements, notarizes and staples the app, and notarizes and staples the final DMG. It deletes the keychain when the script exits.
-
-If an ad-hoc release was already published, enable signing and bump the app version to publish a new notarized release.
-
-## Assets and download links
-
-Every Studio release contains:
-
-- `Norna-Studio-macOS-arm64.dmg`: app and Applications shortcut.
-- `Norna-Studio-macOS-arm64.zip`: the same app with its bundle layout and signatures preserved.
+- `Norna-Studio-macOS-arm64.dmg`: optional app and Applications shortcut.
+- `Norna-Studio-macOS-arm64.zip`: the same app with signatures and bundle layout preserved.
+- `release.json`: independent Kit and Studio versions, library source commit, architecture, minimum macOS, and signing status.
 - `SHA256SUMS.txt`: checksums for both packages and the manifest.
-- `release.json`: version, build, commit, architectures, minimum macOS, and signing status.
 
-Stable links are [latest DMG](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg) and [latest ZIP](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.zip). The website uses the DMG URL. Before the first successful release these endpoints return 404.
+The [latest DMG](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg) and [latest ZIP](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.zip) remain valid because the primary Kit release carries the refreshed companion. Swift Package consumers use the `vX.Y.Z` library tag and do not install Studio.
 
 Download all four files into one directory and run `shasum -a 256 -c SHA256SUMS.txt` to verify them.
 
-## Homebrew distribution
+## Standalone Studio updates
 
-The companion app can also be installed as a Cask from [dufu1991/homebrew-tap](https://github.com/dufu1991/homebrew-tap):
+If only Studio needs a release, change its marketing version and build without changing the Kit version file. CI publishes the independent `studio-vX.Y.Z` app release after checks pass. Manual dispatch has a separate `studio_release` input for retrying this path.
+
+When both version files change together, the Kit release takes priority and only one release page is created. A standalone Studio release is appropriate for app-specific functionality, packaging, or distribution changes that warrant separate notes.
+
+## Signing and build environment
+
+The workflow uses the GitHub-hosted `xcode-27` runner and Xcode 27.1. Both the app and embedded framework must contain only `arm64`; the minimum macOS version is 14. The native icon format also requires this Xcode generation. `.github/actionlint.yaml` registers the preview runner label for lint versions that do not yet recognize it.
+
+With `MACOS_SIGNING_ENABLED` unset or `false`, the package uses ad-hoc signatures without Hardened Runtime library validation. The app retains its sandbox entitlements. Release notes identify that the companion is not Developer ID signed or notarized.
+
+For Developer ID signing and notarization, set `MACOS_SIGNING_ENABLED=true` and configure these Actions secrets:
+
+| Secret | Value |
+| --- | --- |
+| `MACOS_CERTIFICATE_P12` | Base64-encoded `.p12` containing one valid Developer ID Application identity |
+| `MACOS_CERTIFICATE_PASSWORD` | Certificate export password |
+| `APPLE_TEAM_ID` | Apple Developer team identifier |
+| `APPLE_ID` | Notarization account |
+| `APPLE_APP_PASSWORD` | App-specific notarization password |
+
+The signed branch enables Hardened Runtime, signs embedded code before the app, applies sandbox entitlements, notarizes and staples the app and DMG, and deletes its temporary keychain. Missing credentials or notarization failures stop publication. It never silently falls back to ad-hoc signing.
+
+Only publication jobs receive `contents: write` and signing secrets. Pull requests cannot publish or obtain those secrets. The repository-scoped `GITHUB_TOKEN` handles Kit and Studio publication.
+
+## Homebrew distribution
 
 ```sh
 brew install --cask dufu1991/tap/norna-studio
@@ -91,58 +77,22 @@ brew update
 brew upgrade --cask dufu1991/tap/norna-studio
 ```
 
-NornaKit remains a Swift Package dependency. The Cask installs only the optional Norna Studio app and requires Apple Silicon and macOS 14 or later.
+The Cask installs only the companion app. It reads Studio's version and build from the verified release manifest, not from the Kit tag. Kit-hosted companions use a Cask version such as `0.1.1,7` and a literal versioned download URL such as `releases/download/v0.1.0/...`. This lets an app build follow a new Kit release without copying the library version into the app version.
 
-The tap's [Sync Norna Studio workflow](https://github.com/dufu1991/homebrew-tap/blob/main/.github/workflows/norna-studio.yml) runs hourly, when its workflow file changes, and on manual dispatch. It checks out the public NornaKit release tools, verifies the latest published Studio package, and updates the Cask using the tap's own `GITHUB_TOKEN`. No personal token is needed for this synchronization. Scheduled execution can be delayed by GitHub; use manual dispatch to synchronize immediately.
+[Publish Studio to Homebrew](../.github/workflows/homebrew.yml) accepts both Kit and standalone Studio releases. It downloads the published DMG, manifest, and checksums, validates their relationship and checksum, then generates the Cask with [homebrew.py](../Scripts/Release/homebrew.py). Older builds cannot replace newer builds, identical retries skip writes, and different content for the same app version/build is rejected.
 
-For immediate synchronization directly from the NornaKit release workflow, optionally configure the **NornaKit repository** Actions secret **`HOMEBREW_TAP_TOKEN`** with a fine-grained personal access token scoped to **`dufu1991/homebrew-tap`**, with **Contents: Read and write**. No workflow or administration permissions are required. GitHub's ordinary `GITHUB_TOKEN` is scoped to the repository running the workflow, so the app release token cannot write to the separate tap.
+For immediate cross-repository synchronization, optionally configure `HOMEBREW_TAP_TOKEN` with Contents read/write permission for `dufu1991/homebrew-tap`. Without it, the tap's own **Sync Norna Studio** workflow checks the latest stable release hourly and can be dispatched manually, using its repository's own `GITHUB_TOKEN`.
 
-After the Studio release job succeeds, it calls [Publish Studio to Homebrew](../.github/workflows/homebrew.yml). The workflow downloads the published DMG, manifest, and checksums for that exact `studio-vX.Y.Z` tag, checks the package architecture and SHA-256, and generates the Cask with [homebrew.py](../Scripts/Release/homebrew.py). It creates or updates only `Casks/norna-studio.rb` on the tap's `main` branch. Existing Casks and the tap's `youran-toolbox` dispatch workflow are unaffected. The Cask points at the versioned Release URL, never the mutable latest-download URL.
+The tap workflow accepts a Kit release with companion assets as well as legacy `studio-vX.Y.Z` releases. Keep its `Casks/norna-studio.rb`, README, and workflow consistent. Preserve existing local changes when updating a sibling tap checkout.
 
-The original `studio-v0.1.0` release has universal assets. The initial Cask in the local tap references that verified published DMG and restricts installation to Apple Silicon. Publish this Cask to the tap to make the installation command available. Do not substitute a locally rebuilt package or a nonexistent `arm64` URL for the published asset.
+## Recovery and local verification
 
-Subsequent automatic synchronization requires a newer app release with the `macOS-arm64` asset names. For example, use app version `0.1.1` and build `6` or higher. This replaces the initial Cask with the arm64-only download. Published releases are not rewritten to change their package architecture.
-
-If the optional tap token is missing, the NornaKit workflow reports that immediate synchronization is skipped; the tap-owned workflow still performs publication. Once configured, token permission errors and upload failures fail the immediate Homebrew job. An identical retry does not create another commit, older versions cannot replace newer Casks, and different content for the same version is rejected. Updates use the existing blob SHA so a concurrent edit is rejected rather than overwritten.
-
-To recover a failed tap update without a personal token, run **Sync Norna Studio** in the tap repository or rerun its failed job. With the optional tap token configured, run **Publish Studio to Homebrew** manually on NornaKit’s `main`, supplying the already published tag, or rerun the failed job. This downloads the existing release and does not rebuild or republish it. Homebrew publication is serialized separately from app publication. Ad-hoc builds retain an explicit Cask caveat about signing and notarization; Homebrew does not change the package's signing status.
-
-Generate and inspect a Cask locally without changing the tap:
-
-```sh
-python3 Scripts/Release/homebrew.py render --tag "$(python3 Scripts/Release/version.py --field tag)"
-ruby -c build/release/norna-studio.rb
-```
-
-The `sync` command is the remote mutation and requires the tap token as `GH_TOKEN`. The normal packaging command does not update Homebrew.
-
-The local tap checkout can be placed alongside this repository at `../homebrew-tap`; use its actual checkout location if it is elsewhere. Maintain `Casks/norna-studio.rb` and its README together when adding or updating NornaKit. After an automated remote update, inspect local changes and bring the checkout up to date without discarding them. Keep the README's installation, upgrade, first-launch, and release automation instructions consistent with the Cask.
-
-## Recovery
-
-Build and notarization happen before a public Release is created. Packages are retained as an Actions artifact for 14 days, then uploaded to a draft Release. It becomes public only after all four files have uploaded.
-
-Rerun a failed job, or manually dispatch on the same `main` commit with `release` enabled. A draft can be reused only for that exact commit; partial assets are replaced before publication. If `main` moved after the failed draft, bump the version instead. An existing tag targeting another commit also blocks publication.
-
-Main checks run independently so an ordinary follow-up push cannot cancel a version change awaiting publication. Publication jobs are serialized without canceling an active release; GitHub may replace an older pending publication with a newer candidate. Published version checks prevent a delayed older build from replacing a newer release. PR checks cancel older checks for that PR. Only the release job has `contents: write`, and it runs only on this repository's `main` after checks pass. PR jobs never receive signing secrets or publish packages.
-
-## Local verification
+A draft can be retried only for the same library source commit. If a tag already exists, the workflow tests and packages that tag; it never moves the tag to the new workflow commit. Bump the Kit version for new library changes and the Studio build for a new companion. Published assets are immutable.
 
 ```sh
 python3 -m unittest discover -s Tests/ReleaseTests -p 'test_*.py'
-swift test
+swift test --build-system native
 bash Scripts/Release/package.sh
 ```
 
-The packaging script writes to `build/release/`. It does not launch the app, create tags, or contact GitHub. With signing enabled it contacts Apple's notarization service. Local manifests use `working-tree` unless `GITHUB_SHA` is supplied; the workflow always supplies the real commit SHA.
-
-## References
-
-- [GitHub runner images](https://github.com/actions/runner-images)
-- [Xcode 27 runner software](https://github.com/actions/runner-images/blob/main/images/macos/xcode-27-arm64-Readme.md)
-- [GitHub Actions workflow syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax)
-- [GitHub CLI release commands](https://cli.github.com/manual/gh_release)
-- [Apple notarization workflow](https://developer.apple.com/documentation/security/customizing-the-notarization-workflow)
-- [Homebrew Cask Cookbook](https://docs.brew.sh/Cask-Cookbook)
-- [Maintaining a Homebrew tap](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap)
-- [GitHub token scope](https://docs.github.com/en/actions/concepts/security/github_token)
+The packaging script writes local artifacts only. Kit publication is handled separately by `library_release.py`; packaging alone does not launch the app, push tags, update Homebrew, or contact GitHub. With signing enabled, packaging contacts Apple's notarization service.

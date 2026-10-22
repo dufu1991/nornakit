@@ -9,7 +9,7 @@ import unittest
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "Scripts/Release"))
-from homebrew import CASK_PATH, DMG_NAME, render, sync
+from homebrew import CASK_PATH, DMG_NAME, cask_version, render, sync
 
 
 class HomebrewTests(unittest.TestCase):
@@ -103,6 +103,33 @@ class HomebrewTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             sync(self.content())
         run.assert_not_called()
+
+    def test_kit_release_uses_independent_studio_version_and_literal_release_url(self):
+        self.manifest |= {"version": "1.2.3", "build": "18", "kitVersion": "0.4.0", "releaseTag": "v0.4.0"}
+        self.write_manifest()
+        content = render(self.directory, "v0.4.0")
+        self.assertIn('version "1.2.3,18"', content)
+        self.assertIn(f"releases/download/v0.4.0/{DMG_NAME}", content)
+        self.assertNotIn('version "0.4.0"', content)
+        self.assertGreater(cask_version(content), cask_version(self.content()))
+        self.manifest["kitVersion"] = "0.4.1"
+        self.write_manifest()
+        with self.assertRaises(ValueError):
+            render(self.directory, "v0.4.0")
+
+    @patch("homebrew.subprocess.run")
+    @patch("homebrew.gh")
+    def test_followup_build_updates_even_when_studio_marketing_version_is_unchanged(self, gh, run):
+        previous = self.content()
+        self.manifest |= {"build": "18", "kitVersion": "0.4.0", "releaseTag": "v0.4.0"}
+        self.write_manifest()
+        content = render(self.directory, "v0.4.0")
+        gh.side_effect = [json.dumps([{"path": CASK_PATH}]),
+                          json.dumps({"sha": "current-blob", "content": base64.b64encode(previous.encode()).decode()})]
+        sync(content)
+        payload = json.loads(run.call_args.kwargs["input"])
+        self.assertEqual(payload["sha"], "current-blob")
+        self.assertEqual(base64.b64decode(payload["content"]).decode(), content)
 
 
 if __name__ == "__main__":

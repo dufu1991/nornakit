@@ -18,15 +18,22 @@ VERSION_PATTERN = r"(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)"
 
 def cask_version(content):
     versions = re.findall(r'^  version "([^"]+)"$', content, re.MULTILINE)
-    if len(versions) != 1 or not re.fullmatch(VERSION_PATTERN, versions[0]):
-        raise ValueError("Expected one stable X.Y.Z Cask version")
-    return tuple(map(int, versions[0].split(".")))
+    if len(versions) != 1 or not re.fullmatch(VERSION_PATTERN + r"(?:,[1-9]\d{0,3})?", versions[0]):
+        raise ValueError("Expected one stable X.Y.Z Cask version with an optional build")
+    version, separator, build = versions[0].partition(",")
+    return (*map(int, version.split(".")), int(build) if separator else 0)
 
 
 def render(directory, tag):
     manifest = json.loads((directory / "release.json").read_text(encoding="utf-8"))
     version = manifest["version"]
-    if not re.fullmatch(VERSION_PATTERN, version) or manifest["tag"] != f"studio-v{version}" or tag != manifest["tag"]:
+    if not re.fullmatch(VERSION_PATTERN, version) or manifest["tag"] != f"studio-v{version}":
+        raise ValueError("The package version does not match the requested Studio tag")
+    kit_release = re.fullmatch("v" + VERSION_PATTERN, tag)
+    if kit_release:
+        if manifest["releaseTag"] != tag or manifest["kitVersion"] != tag[1:] or not re.fullmatch(r"[1-9]\d{0,3}", manifest["build"]):
+            raise ValueError("The companion package does not match the requested Kit release")
+    elif tag != manifest["tag"]:
         raise ValueError("The package version does not match the requested Studio tag")
     if manifest["architectures"] != ["arm64"] or manifest["minimumMacOS"] != "14.0":
         raise ValueError("The Cask requires the arm64-only macOS 14 package")
@@ -46,19 +53,22 @@ def render(directory, tag):
     macOS Gatekeeper may block it. See the release notes before opening the app.
   EOS
 '''
+    cask_release_version = f"{version},{manifest['build']}" if kit_release else version
+    release_path = tag if kit_release else "studio-v#{version}"
+    livecheck = '''    skip "Updated from the verified companion manifest by GitHub Actions."''' if kit_release else '''    url :url
+    regex(/^studio-v(\\d+(?:\\.\\d+)+)$/i)
+    strategy :github_latest'''
     return f'''cask "norna-studio" do
-  version "{version}"
+  version "{cask_release_version}"
   sha256 "{digest}"
 
-  url "https://github.com/dufu1991/nornakit/releases/download/studio-v#{{version}}/{DMG_NAME}"
+  url "https://github.com/dufu1991/nornakit/releases/download/{release_path}/{DMG_NAME}"
   name "Norna Studio"
   desc "Companion demo, debugging, and export tool for the NornaKit diagram library"
   homepage "https://nornakit.com"
 
   livecheck do
-    url :url
-    regex(/^studio-v(\\d+(?:\\.\\d+)+)$/i)
-    strategy :github_latest
+{livecheck}
   end
 
   depends_on arch: :arm64
@@ -75,7 +85,7 @@ def sync(content):
     entries = json.loads(gh("api", f"repos/{TAP}/contents/Casks?ref=main"))
     existing = next((entry for entry in entries if entry["path"] == CASK_PATH), None)
     payload = {
-        "message": f"chore: 更新 Norna Studio 至 {'.'.join(map(str, version))}",
+        "message": f"chore: update Norna Studio to {'.'.join(map(str, version[:3]))} (build {version[3]})",
         "branch": "main",
         "content": base64.b64encode(content.encode("utf-8")).decode("ascii"),
     }

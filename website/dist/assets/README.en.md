@@ -205,7 +205,7 @@ Apple Silicon DMG and ZIP packages are written to `build/release/`. Packaging do
 | Hourly or manual run in the tap repository | Verify the latest Studio Release and synchronize its Cask, without a personal token |
 | Push a library tag such as `vX.Y.Z` | Does not publish the Studio app |
 
-**NornaKit is the primary library product; Studio is versioned independently.** Change `MARKETING_VERSION` and increment `CURRENT_PROJECT_VERSION` in the Studio version file to release the app. This also applies to the initial push containing that file. Ordinary commits do not create a new Release; published Studio versions are immutable. See [release setup and recovery](Docs/RELEASING.md).
+**NornaKit is the primary library product; Studio is versioned independently.** Kit releases use `vX.Y.Z`, lead with library changes, and normally include a refreshed Studio companion build. Studio keeps its own app version and build number; separate `studio-vX.Y.Z` releases are reserved for app-specific updates. For a standalone app release, change `MARKETING_VERSION` and increment `CURRENT_PROJECT_VERSION` in the Studio version file. This also applies to the initial push containing that file. Ordinary commits do not create a new Release; published Studio versions are immutable. See [release setup and recovery](Docs/RELEASING.md).
 
 ## Repository layout
 

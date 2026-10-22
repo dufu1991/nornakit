@@ -2,10 +2,11 @@
 set -euo pipefail
 umask 077
 
-project_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+tools_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+project_root="${NORNA_PACKAGE_SOURCE_ROOT:-$tools_root}"
 cd "$project_root"
-version="$(python3 Scripts/Release/version.py --field version)"
-build_number="$(python3 Scripts/Release/version.py --field build)"
+version="$(python3 "$tools_root/Scripts/Release/version.py" --field version)"
+build_number="$(python3 "$tools_root/Scripts/Release/version.py" --field build)"
 signing="${MACOS_SIGNING_ENABLED:-false}"
 if [[ "$signing" != true && "$signing" != false ]]; then
     echo 'MACOS_SIGNING_ENABLED must be true or false.' >&2
@@ -19,7 +20,7 @@ if [[ "$signing" == true ]]; then
     : "${APPLE_APP_PASSWORD:?Set APPLE_APP_PASSWORD}"
 fi
 
-output="$project_root/build/release"
+output="${NORNA_PACKAGE_OUTPUT:-$project_root/build/release}"
 mkdir -p "$output"
 temporary="$(mktemp -d "${TMPDIR:-/tmp}/norna-release.XXXXXX")"
 keychain="$temporary/signing.keychain-db"
@@ -35,7 +36,8 @@ xcodebuild build \
     -project NornaKit.xcodeproj -scheme NornaStudio \
     -configuration Release -destination 'generic/platform=macOS' \
     -derivedDataPath build \
-    ARCHS=arm64 ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO
+    ARCHS=arm64 ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO \
+    MARKETING_VERSION="$version" CURRENT_PROJECT_VERSION="$build_number"
 
 app="$project_root/build/Build/Products/Release/Norna Studio.app"
 app_version="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$app/Contents/Info.plist")"
@@ -122,12 +124,14 @@ if [[ "$signing" == true ]]; then
 fi
 
 export NORNA_PACKAGE_SIGNING="$signing"
+export NORNA_RELEASE_TOOLS_ROOT="$tools_root"
+export NORNA_PACKAGE_OUTPUT="$output"
 python3 - <<'PY'
 import json
 import os
 from pathlib import Path
 import sys
-sys.path.insert(0, 'Scripts/Release')
+sys.path.insert(0, str(Path(os.environ['NORNA_RELEASE_TOOLS_ROOT']) / 'Scripts/Release'))
 from version import read_version
 metadata = read_version() | {
     'commit': os.environ.get('GITHUB_SHA', 'working-tree'),
@@ -135,7 +139,13 @@ metadata = read_version() | {
     'minimumMacOS': '14.0',
     'signing': 'developer-id-notarized' if os.environ['NORNA_PACKAGE_SIGNING'] == 'true' else 'ad-hoc',
 }
-directory = Path('build/release')
+if os.environ.get('NORNA_KIT_VERSION'):
+    kit_version = os.environ['NORNA_KIT_VERSION']
+    import re
+    if not re.fullmatch(r'(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)', kit_version):
+        raise SystemExit('NORNA_KIT_VERSION must be a stable X.Y.Z version')
+    metadata |= {'kitVersion': kit_version, 'releaseTag': 'v' + kit_version}
+directory = Path(os.environ['NORNA_PACKAGE_OUTPUT'])
 (directory / 'release.json').write_text(json.dumps(metadata, indent=2) + '\n', encoding='utf-8')
 signing_note = ('Signed with Developer ID and notarized by Apple.' if metadata['signing'] == 'developer-id-notarized'
     else '**Ad-hoc signed build.** This package is not signed with Developer ID or notarized by Apple. '

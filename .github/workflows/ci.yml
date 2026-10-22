@@ -1,14 +1,19 @@
-name: CI and Studio Release
+name: CI and NornaKit Release
 
 on:
   push:
     branches: [main]
+    tags: ['v*']
   pull_request:
     branches: [main]
   workflow_dispatch:
     inputs:
       release:
-        description: Publish the current Studio version after checks pass
+        description: Publish the current NornaKit version with its Studio companion after checks pass
+        type: boolean
+        default: false
+      studio_release:
+        description: Publish a standalone Studio release without a new Kit version
         type: boolean
         default: false
 
@@ -28,7 +33,8 @@ jobs:
     runs-on: xcode-27
     timeout-minutes: 30
     outputs:
-      release: ${{ steps.candidate.outputs.release }}
+      studio_release: ${{ steps.candidate.outputs.release }}
+      kit_release: ${{ steps.kit_candidate.outputs.release }}
     steps:
       - uses: actions/checkout@v7
         with:
@@ -47,20 +53,96 @@ jobs:
             ARCHS=arm64 ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO
       - name: Check website resources
         run: python3 website/scripts/build-site.py
+      - name: Determine whether the Kit version changed
+        id: kit_candidate
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          MANUAL_RELEASE: ${{ inputs.release }}
+        run: python3 Scripts/Release/library_release.py candidate
       - name: Determine whether the Studio version changed
         id: candidate
         env:
           BEFORE_SHA: ${{ github.event.before }}
-          MANUAL_RELEASE: ${{ inputs.release }}
+          MANUAL_RELEASE: ${{ inputs.studio_release }}
         run: python3 Scripts/Release/github_release.py candidate
 
+  kit_release:
+    name: Publish NornaKit with Studio companion
+    needs: checks
+    outputs:
+      tag: ${{ steps.kit.outputs.tag }}
+    if: >-
+      needs.checks.outputs.kit_release == 'true' &&
+      github.repository == 'dufu1991/nornakit' &&
+      (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
+    runs-on: xcode-27
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    concurrency:
+      group: norna-publication
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Resolve the immutable Kit source and companion version
+        id: kit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 Scripts/Release/library_release.py prepare
+      - uses: actions/checkout@v7
+        if: steps.kit.outputs.publish == 'true'
+        with:
+          ref: ${{ steps.kit.outputs.target }}
+          path: release-source
+          persist-credentials: false
+      - name: Verify the exact tagged Swift Package
+        if: steps.kit.outputs.publish == 'true'
+        run: swift test --build-system native --package-path release-source
+      - name: Build the companion from the released Kit source
+        if: steps.kit.outputs.publish == 'true'
+        env:
+          GITHUB_SHA: ${{ steps.kit.outputs.target }}
+          NORNA_KIT_VERSION: ${{ steps.kit.outputs.version }}
+          NORNA_PACKAGE_SOURCE_ROOT: ${{ github.workspace }}/release-source
+          NORNA_PACKAGE_OUTPUT: ${{ github.workspace }}/build/release
+          MACOS_SIGNING_ENABLED: ${{ vars.MACOS_SIGNING_ENABLED }}
+          MACOS_CERTIFICATE_P12: ${{ secrets.MACOS_CERTIFICATE_P12 }}
+          MACOS_CERTIFICATE_PASSWORD: ${{ secrets.MACOS_CERTIFICATE_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+        run: bash Scripts/Release/package.sh
+      - name: Preserve verified companion packages
+        if: steps.kit.outputs.publish == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: NornaKit-${{ steps.kit.outputs.version }}-Studio
+          path: |
+            build/release/*.dmg
+            build/release/*.zip
+            build/release/SHA256SUMS.txt
+            build/release/release.json
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
+      - name: Publish Kit release notes and companion assets
+        if: steps.kit.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          KIT_TARGET: ${{ steps.kit.outputs.target }}
+        run: python3 Scripts/Release/library_release.py publish --target "$KIT_TARGET"
+
   release:
-    name: Publish Norna Studio
+    name: Publish standalone Norna Studio
     needs: checks
     outputs:
       tag: ${{ steps.version.outputs.tag }}
     if: >-
-      needs.checks.outputs.release == 'true' &&
+      needs.checks.outputs.studio_release == 'true' &&
+      needs.checks.outputs.kit_release != 'true' &&
       github.repository == 'dufu1991/nornakit' &&
       github.ref == 'refs/heads/main'
     runs-on: xcode-27
@@ -68,7 +150,7 @@ jobs:
     permissions:
       contents: write
     concurrency:
-      group: studio-publication
+      group: norna-publication
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@v7
@@ -110,10 +192,13 @@ jobs:
 
   homebrew:
     name: Update Homebrew Cask
-    needs: release
-    if: needs.release.outputs.tag != ''
+    needs: [kit_release, release]
+    if: >-
+      always() && github.ref == 'refs/heads/main' &&
+      ((needs.kit_release.result == 'success' && needs.kit_release.outputs.tag != '') ||
+       (needs.release.result == 'success' && needs.release.outputs.tag != ''))
     uses: ./.github/workflows/homebrew.yml
     with:
-      tag: ${{ needs.release.outputs.tag }}
+      tag: ${{ needs.kit_release.outputs.tag || needs.release.outputs.tag }}
     secrets:
       HOMEBREW_TAP_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
