@@ -52,6 +52,81 @@ let svg = diagram.themedSVG(.appleLight)
 
 各类图形的语法支持程度不同，具体范围与限制见[支持矩阵](Docs/SUPPORT.md)。项目不宣称完整兼容 Mermaid 的全部语法。
 
+## 渲染示例
+
+精选几种常用图表，均由 NornaKit 原生渲染。图片随浅深色外观切换，点击可查看原图。
+
+<table>
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <strong>流程图</strong><br>
+      <a href="website/dist/assets/flowchart-zh-light.png">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/flowchart-zh-dark.png">
+          <img alt="流程图" src="website/dist/assets/flowchart-zh-light.png" width="100%">
+        </picture>
+      </a><br>
+      <a href="website/dist/assets/flowchart-zh.mmd">Mermaid 源码</a>
+    </td>
+    <td align="center" valign="top" width="50%">
+      <strong>时序图</strong><br>
+      <a href="website/dist/assets/sequence-zh-light.png">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/sequence-zh-dark.png">
+          <img alt="时序图" src="website/dist/assets/sequence-zh-light.png" width="100%">
+        </picture>
+      </a><br>
+      <a href="website/dist/assets/sequence-zh.mmd">Mermaid 源码</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <strong>类图</strong><br>
+      <a href="website/dist/assets/class-zh-light.png">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/class-zh-dark.png">
+          <img alt="类图" src="website/dist/assets/class-zh-light.png" width="100%">
+        </picture>
+      </a><br>
+      <a href="website/dist/assets/class-zh.mmd">Mermaid 源码</a>
+    </td>
+    <td align="center" valign="top" width="50%">
+      <strong>架构图</strong><br>
+      <a href="website/dist/assets/architecture-zh-light.png">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/architecture-zh-dark.png">
+          <img alt="架构图" src="website/dist/assets/architecture-zh-light.png" width="100%">
+        </picture>
+      </a><br>
+      <a href="website/dist/assets/architecture-zh.mmd">Mermaid 源码</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <strong>甘特图</strong><br>
+      <a href="website/dist/assets/gantt-zh-light.png">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/gantt-zh-dark.png">
+          <img alt="甘特图" src="website/dist/assets/gantt-zh-light.png" width="100%">
+        </picture>
+      </a><br>
+      <a href="website/dist/assets/gantt-zh.mmd">Mermaid 源码</a>
+    </td>
+    <td align="center" valign="top" width="50%">
+      <strong>思维导图</strong><br>
+      <a href="website/dist/assets/mindmap-zh-light.png">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/mindmap-zh-dark.png">
+          <img alt="思维导图" src="website/dist/assets/mindmap-zh-light.png" width="100%">
+        </picture>
+      </a><br>
+      <a href="website/dist/assets/mindmap-zh.mmd">Mermaid 源码</a>
+    </td>
+  </tr>
+</table>
+
+[浏览全部示例](https://nornakit.com/#examples)
+
 ## 开发与验证
 
 ```sh

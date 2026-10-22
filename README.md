@@ -52,6 +52,81 @@ let svg = diagram.themedSVG(.appleLight)
 
 Syntax support varies by diagram family. See the [support matrix, in Chinese](Docs/SUPPORT.md) for supported constructs and current limits. NornaKit does not claim complete Mermaid compatibility.
 
+## Rendering examples
+
+A selection of common diagrams rendered by NornaKit. Previews follow your light or dark appearance; open an image to view it at full size.
+
+<table>
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <strong>Flowchart</strong><br>
+      <a href="website/dist/assets/flowchart-en-light.png">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/flowchart-en-dark.png">
+          <img alt="Flowchart" src="website/dist/assets/flowchart-en-light.png" width="100%">
+        </picture>
+      </a><br>
+      <a href="website/dist/assets/flowchart-en.mmd">Mermaid source</a>
+    </td>
+    <td align="center" valign="top" width="50%">
+      <strong>Sequence diagram</strong><br>
+      <a href="website/dist/assets/sequence-en-light.png">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/sequence-en-dark.png">
+          <img alt="Sequence diagram" src="website/dist/assets/sequence-en-light.png" width="100%">
+        </picture>
+      </a><br>
+      <a href="website/dist/assets/sequence-en.mmd">Mermaid source</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <strong>Class diagram</strong><br>
+      <a href="website/dist/assets/class-en-light.png">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/class-en-dark.png">
+          <img alt="Class diagram" src="website/dist/assets/class-en-light.png" width="100%">
+        </picture>
+      </a><br>
+      <a href="website/dist/assets/class-en.mmd">Mermaid source</a>
+    </td>
+    <td align="center" valign="top" width="50%">
+      <strong>Architecture diagram</strong><br>
+      <a href="website/dist/assets/architecture-en-light.png">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/architecture-en-dark.png">
+          <img alt="Architecture diagram" src="website/dist/assets/architecture-en-light.png" width="100%">
+        </picture>
+      </a><br>
+      <a href="website/dist/assets/architecture-en.mmd">Mermaid source</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <strong>Gantt chart</strong><br>
+      <a href="website/dist/assets/gantt-en-light.png">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/gantt-en-dark.png">
+          <img alt="Gantt chart" src="website/dist/assets/gantt-en-light.png" width="100%">
+        </picture>
+      </a><br>
+      <a href="website/dist/assets/gantt-en.mmd">Mermaid source</a>
+    </td>
+    <td align="center" valign="top" width="50%">
+      <strong>Mind map</strong><br>
+      <a href="website/dist/assets/mindmap-en-light.png">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/mindmap-en-dark.png">
+          <img alt="Mind map" src="website/dist/assets/mindmap-en-light.png" width="100%">
+        </picture>
+      </a><br>
+      <a href="website/dist/assets/mindmap-en.mmd">Mermaid source</a>
+    </td>
+  </tr>
+</table>
+
+[Browse all examples](https://nornakit.com/#examples)
+
 ## Development and validation
 
 ```sh
