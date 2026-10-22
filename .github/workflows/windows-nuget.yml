@@ -35,9 +35,9 @@ jobs:
         env:
           PACKAGE_VERSION: ${{ inputs.version }}
         run: |
-          dotnet pack src/NornaKit.Core -c Release --no-restore -p:PackageVersion=$env:PACKAGE_VERSION -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o artifacts/nuget
+          dotnet pack src/NornaKit.Core -c Release --no-restore -p:Platform=x64 -p:PackageVersion=$env:PACKAGE_VERSION -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o artifacts/nuget
           if ($LASTEXITCODE -ne 0) { throw 'Core packaging failed.' }
-          dotnet pack src/NornaKit.Windows -c Release --no-restore -p:PackageVersion=$env:PACKAGE_VERSION -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o artifacts/nuget
+          dotnet pack src/NornaKit.Windows -c Release --no-restore -p:Platform=x64 -p:PackageVersion=$env:PACKAGE_VERSION -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o artifacts/nuget
           if ($LASTEXITCODE -ne 0) { throw 'Windows packaging failed.' }
       - name: Verify independent NuGet consumer
         env:

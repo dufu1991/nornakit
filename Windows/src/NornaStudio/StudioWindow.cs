@@ -71,6 +71,8 @@ internal sealed partial class StudioWindow : Window
         Directory.CreateDirectory(directory);
         if (!session.CanExport || session.Artifact is null) throw new InvalidOperationException("The initial native workbench preview was not rendered.");
         await WaitForPreviewFrameAsync();
+        SmokeStep("default-device"); preview.ForceSoftwareRenderer = false; await WaitForPreviewFrameAsync();
+        SmokeStep("software-device"); preview.ForceSoftwareRenderer = true; await WaitForPreviewFrameAsync();
         foreach (var language in new[] { "en", "zh" })
         {
             SmokeStep($"language-{language}"); settings = settings with { Language = language }; Build(); await RenderAsync();
