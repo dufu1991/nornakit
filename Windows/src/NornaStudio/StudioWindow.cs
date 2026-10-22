@@ -58,7 +58,20 @@ internal sealed partial class StudioWindow : Window
             _ = RunAsync(async () => { await SaveWorkspaceAsync(); closing = true; session.Dispose(); preview.Dispose(); systemSettings.ColorValuesChanged -= ColorsChanged; themeSettings.Changed -= ThemeChanged; Close(); });
         };
     }
-    public async Task InitializeAsync() => await RunAsync(async () => { SmokeStep("initial-render"); await RenderAsync(); SmokeStep("initialized"); });
+    public async Task InitializeAsync() => await RunAsync(async () =>
+    {
+        SmokeStep("initial-render"); await RenderAsync();
+        // Initial XAML layout may enqueue a newer request before the first request completes.
+        while (session.Busy)
+        {
+            var completion = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+            Action changed = () => { if (!session.Busy) completion.TrySetResult(); };
+            session.Changed += changed;
+            try { if (session.Busy) await completion.Task.WaitAsync(TimeSpan.FromSeconds(15)); }
+            finally { session.Changed -= changed; }
+        }
+        SmokeStep("initialized");
+    });
     private static void SmokeStep(string step)
     {
         if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is not { Length: > 0 } directory) return;
@@ -68,6 +81,7 @@ internal sealed partial class StudioWindow : Window
     {
         SmokeStep("verify-startup");
         Directory.CreateDirectory(directory);
+        await File.WriteAllTextAsync(Path.Combine(directory, "initial-session.json"), JsonSerializer.Serialize(new { session.Busy, session.CanExport, session.Diagnostic, artifact = session.Artifact?.Type }));
         if (!session.CanExport || session.Artifact is null) throw new InvalidOperationException("The initial native workbench preview was not rendered.");
         await WaitForPreviewFrameAsync();
         SmokeStep("default-device"); preview.ForceSoftwareRenderer = false; await WaitForPreviewFrameAsync();
@@ -131,9 +145,9 @@ internal sealed partial class StudioWindow : Window
         var sourcePanel = new Grid { Padding = new(12, 16, 12, 12), RowSpacing = 12 };
         sourcePanel.RowDefinitions.Add(new() { Height = GridLength.Auto }); sourcePanel.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) });
         sourcePanel.Children.Add(new TextBlock { Text = L("Source", "源码"), FontWeight = Microsoft.UI.Text.FontWeights.SemiBold });
-        editor = new TextBox { Text = settings.Source, AcceptsReturn = true, TextWrapping = TextWrapping.NoWrap, FontFamily = new("Cascadia Mono, Consolas"), FontSize = 14, HorizontalAlignment = HorizontalAlignment.Stretch, VerticalAlignment = VerticalAlignment.Stretch, Padding = new(12), MaxLength = 50_001 };
+        editor = new TextBox { Text = settings.Source, AcceptsReturn = true, TextWrapping = TextWrapping.NoWrap, FontFamily = new("Cascadia Mono, Consolas"), FontSize = 14, HorizontalAlignment = HorizontalAlignment.Stretch, VerticalAlignment = VerticalAlignment.Stretch, Padding = new(12), MaxLength = 50_000 };
         ScrollViewer.SetHorizontalScrollBarVisibility(editor, ScrollBarVisibility.Auto); ScrollViewer.SetVerticalScrollBarVisibility(editor, ScrollBarVisibility.Auto); AutomationProperties.SetName(editor, L("Diagram source", "图形源码"));
-        editor.TextChanged += (_, _) => { if (!rebuilding) _ = RunAsync(RenderAsync); }; Grid.SetRow(editor, 1); sourcePanel.Children.Add(editor); Grid.SetColumn(sourcePanel, 1); workspace.Children.Add(sourcePanel);
+        editor.TextChanged += (_, _) => { if (!rebuilding && editor.Text != settings.Source) _ = RunAsync(RenderAsync); }; Grid.SetRow(editor, 1); sourcePanel.Children.Add(editor); Grid.SetColumn(sourcePanel, 1); workspace.Children.Add(sourcePanel);
         var previewPanel = new Grid { RowSpacing = 8, Padding = new(12, 12, 16, 12) }; previewPanel.RowDefinitions.Add(new() { Height = GridLength.Auto }); previewPanel.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) });
         preview.Palette = Palette; preview.ShowGrid = settings.Grid; Grid.SetRow(preview.Element, 1); previewPanel.Children.Add(preview.Element);
         var controls = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8 };

@@ -12,7 +12,11 @@ public sealed partial class App : Application
         {
             if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is { Length: > 0 } directory)
             { Directory.CreateDirectory(directory); File.AppendAllText(Path.Combine(directory, "steps.log"), "application-constructed\n"); }
-            UnhandledException += (sender, args) => WriteFailure(args.Exception);
+            UnhandledException += (sender, args) =>
+            {
+                WriteFailure(args.Exception);
+                if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is { Length: > 0 }) Environment.Exit(1);
+            };
             InitializeComponent();
         }
         catch (Exception error) { WriteFailure(error); throw; }
