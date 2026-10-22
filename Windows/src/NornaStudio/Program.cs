@@ -31,7 +31,8 @@ public sealed partial class StudioApp : Application
     }
     protected override async void OnLaunched(LaunchActivatedEventArgs args)
     {
-        window = new(); window.Activate(); await StartAsync();
+        var settings = await new StudioSettingsStore().LoadAsync();
+        window = new(settings); window.Activate(); await StartAsync();
     }
     private async Task StartAsync()
     {

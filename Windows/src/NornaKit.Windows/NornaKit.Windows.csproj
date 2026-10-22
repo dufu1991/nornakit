@@ -4,7 +4,6 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <SupportedOSPlatformVersion>10.0.22000.0</SupportedOSPlatformVersion>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
-    <UseWinUI>true</UseWinUI>
     <Description>Windows native text layout, drawing and export for NornaKit.</Description>
     <IsPackable>true</IsPackable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>

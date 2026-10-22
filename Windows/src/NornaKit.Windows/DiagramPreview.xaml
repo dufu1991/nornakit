@@ -1,6 +1,0 @@
-<UserControl x:Class="NornaKit.Windows.DiagramPreview"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml">
-  <canvas:CanvasControl x:Name="DrawingCanvas" />
-</UserControl>

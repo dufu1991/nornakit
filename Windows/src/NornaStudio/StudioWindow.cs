@@ -25,7 +25,7 @@ internal sealed partial class StudioWindow : Window
     private StudioSettings settings = new();
     private Grid root = null!;
     private TextBox editor = null!;
-    private DiagramPreview preview = null!;
+    private readonly DiagramPreview preview = new();
     private TextBlock status = null!;
     private Button diagnostic = null!;
     private InfoBar errors = null!;
@@ -37,8 +37,15 @@ internal sealed partial class StudioWindow : Window
     private DiagramExampleLanguage Language => settings.Language == "zh" ? DiagramExampleLanguage.SimplifiedChinese : DiagramExampleLanguage.English;
     private string L(string en, string zh) => settings.Language == "zh" ? zh : en;
     private DiagramPalette Palette => WindowsPalette.Resolve(settings.Appearance, settings.ColorStyle, DiagramColor.FromHex(settings.Accent));
-    public StudioWindow()
+    public StudioWindow(StudioSettings initialSettings)
     {
+        settings = initialSettings;
+        preview.RenderingFailed += error =>
+        {
+            if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is not { Length: > 0 } directory) return;
+            Directory.CreateDirectory(directory); File.WriteAllText(Path.Combine(directory, "drawing-failure.txt"), error.ToString());
+        };
+        preview.SizeChanged += (sender, e) => { if (!closing && !rebuilding && !session.Busy && session.Artifact is not null && Math.Abs(e.NewSize.Width - e.PreviousSize.Width) > 32) _ = RunAsync(RenderAsync); };
         Title = "Norna Studio"; AppWindow.Resize(new(1440, 920)); SystemBackdrop = new MicaBackdrop(); Build();
         session.Changed += Refresh;
         systemSettings.ColorValuesChanged += ColorsChanged;
@@ -50,7 +57,7 @@ internal sealed partial class StudioWindow : Window
             _ = RunAsync(async () => { await SaveWorkspaceAsync(); closing = true; session.Dispose(); preview.Dispose(); systemSettings.ColorValuesChanged -= ColorsChanged; themeSettings.Changed -= ThemeChanged; Close(); });
         };
     }
-    public async Task InitializeAsync() => await RunAsync(async () => { SmokeStep("load-settings"); settings = await store.LoadAsync(); SmokeStep("build-window"); Build(); SmokeStep("initial-render"); await RenderAsync(); SmokeStep("initialized"); });
+    public async Task InitializeAsync() => await RunAsync(async () => { SmokeStep("initial-render"); await RenderAsync(); SmokeStep("initialized"); });
     private static void SmokeStep(string step)
     {
         if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is not { Length: > 0 } directory) return;
@@ -74,7 +81,7 @@ internal sealed partial class StudioWindow : Window
     private void Build()
     {
         rebuilding = true;
-        if (Content is not null) preview.Dispose();
+        if (preview.Parent is Panel previousPanel) previousPanel.Children.Remove(preview);
         root = new() { Background = (Brush)Application.Current.Resources["ApplicationPageBackgroundThemeBrush"], RequestedTheme = settings.Appearance switch { CanvasAppearance.Light or CanvasAppearance.HighContrastLight => ElementTheme.Light, CanvasAppearance.Dark or CanvasAppearance.HighContrastDark => ElementTheme.Dark, _ => ElementTheme.Default } };
         root.RowDefinitions.Add(new() { Height = GridLength.Auto }); root.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) }); root.RowDefinitions.Add(new() { Height = GridLength.Auto });
         root.RowDefinitions.Add(new() { Height = GridLength.Auto });
@@ -109,13 +116,7 @@ internal sealed partial class StudioWindow : Window
         ScrollViewer.SetHorizontalScrollBarVisibility(editor, ScrollBarVisibility.Auto); ScrollViewer.SetVerticalScrollBarVisibility(editor, ScrollBarVisibility.Auto); AutomationProperties.SetName(editor, L("Diagram source", "图形源码"));
         editor.TextChanged += (_, _) => { if (!rebuilding) _ = RunAsync(RenderAsync); }; Grid.SetRow(editor, 1); sourcePanel.Children.Add(editor); Grid.SetColumn(sourcePanel, 1); workspace.Children.Add(sourcePanel);
         var previewPanel = new Grid { RowSpacing = 8, Padding = new(12, 12, 16, 12) }; previewPanel.RowDefinitions.Add(new() { Height = GridLength.Auto }); previewPanel.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) });
-        preview = new() { Palette = Palette, ShowGrid = settings.Grid }; Grid.SetRow(preview, 1); previewPanel.Children.Add(preview);
-        preview.RenderingFailed += error =>
-        {
-            if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is not { Length: > 0 } directory) return;
-            Directory.CreateDirectory(directory); File.WriteAllText(Path.Combine(directory, "drawing-failure.txt"), error.ToString());
-        };
-        preview.SizeChanged += (sender, e) => { if (!closing && !rebuilding && !session.Busy && session.Artifact is not null && Math.Abs(e.NewSize.Width - e.PreviousSize.Width) > 32) _ = RunAsync(RenderAsync); };
+        preview.Palette = Palette; preview.ShowGrid = settings.Grid; Grid.SetRow(preview, 1); previewPanel.Children.Add(preview);
         var controls = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8 };
         controls.Children.Add(ActionButton(L("Fit", "适应窗口"), () => preview.Fit())); controls.Children.Add(ActionButton("−", () => preview.Zoom(1 / 1.2))); controls.Children.Add(ActionButton("+", () => preview.Zoom(1.2)));
         var grid = new ToggleSwitch { Header = L("Grid", "网格"), IsOn = settings.Grid, OnContent = "", OffContent = "", VerticalAlignment = VerticalAlignment.Center }; grid.Toggled += (_, _) => { preview.ShowGrid = grid.IsOn; settings = settings with { Grid = grid.IsOn }; _ = RunAsync(SaveWorkspaceAsync); }; controls.Children.Add(grid); previewPanel.Children.Add(controls); Grid.SetColumn(previewPanel, 2); workspace.Children.Add(previewPanel);
@@ -146,8 +147,9 @@ internal sealed partial class StudioWindow : Window
     private async Task RenderAsync()
     {
         settings = settings with { Source = editor.Text }; var source = settings.Source;
+        SmokeStep("request-render");
         var render = session.UpdateAsync(source, new(MaxWidth: Math.Max(320, preview.ActualWidth > 0 ? preview.ActualWidth : 720)));
-        await SaveWorkspaceAsync(); await render;
+        await SaveWorkspaceAsync(); SmokeStep("workspace-saved"); await render; SmokeStep("render-complete");
     }
     private void Refresh()
     {

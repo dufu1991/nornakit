@@ -13,7 +13,7 @@ namespace NornaKit.Windows;
 [WinRT.GeneratedWinRTExposedType]
 public sealed partial class DiagramPreview : UserControl, IDisposable
 {
-    private readonly CanvasControl canvas;
+    private readonly CanvasControl canvas = new();
     private DiagramScene? scene;
     private DiagramPalette palette = WindowsPalette.Resolve();
     private bool grid, panning, disposed, fitOnResize = true;
@@ -23,7 +23,7 @@ public sealed partial class DiagramPreview : UserControl, IDisposable
     public event Action<Exception>? RenderingFailed;
     public DiagramPreview()
     {
-        InitializeComponent(); canvas = DrawingCanvas;
+        Content = canvas;
         IsTabStop = true; MinWidth = 120; MinHeight = 120;
         AutomationProperties.SetName(this, "Diagram preview");
         AutomationProperties.SetHelpText(this, "Drag to pan. Scroll to zoom. Press 0 to fit, plus or minus to zoom.");
@@ -31,15 +31,15 @@ public sealed partial class DiagramPreview : UserControl, IDisposable
         {
             try
             {
-            var drawing = args.DrawingSession; drawing.Clear(Win2DScenePainter.Native(palette.Background));
-            if (grid)
-            {
-                var color = Win2DScenePainter.Native(palette.Border, .2); const int step = 24;
-                for (var x = (int)(pan.X % step); x < canvas.ActualWidth; x += step) for (var y = (int)(pan.Y % step); y < canvas.ActualHeight; y += step) drawing.FillCircle(x, y, 1, color);
-            }
-            if (scene is null) return;
-            drawing.Transform = Matrix3x2.CreateScale(zoom) * Matrix3x2.CreateTranslation(pan);
-            Win2DScenePainter.Draw(drawing, scene, palette);
+                var drawing = args.DrawingSession; drawing.Clear(Win2DScenePainter.Native(palette.Background));
+                if (grid)
+                {
+                    var color = Win2DScenePainter.Native(palette.Border, .2); const int step = 24;
+                    for (var x = (int)(pan.X % step); x < canvas.ActualWidth; x += step) for (var y = (int)(pan.Y % step); y < canvas.ActualHeight; y += step) drawing.FillCircle(x, y, 1, color);
+                }
+                if (scene is null) return;
+                drawing.Transform = Matrix3x2.CreateScale(zoom) * Matrix3x2.CreateTranslation(pan);
+                Win2DScenePainter.Draw(drawing, scene, palette);
             }
             catch (Exception error)
             {
