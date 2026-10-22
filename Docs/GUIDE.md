@@ -253,7 +253,7 @@ let svg = artifact.themedSVG(.appleLight)
 let scene = artifact.scene
 ```
 
-流程图的扩展节点与端点、时序图的生命周期和参与者类型、类图的接口与基数、状态图的并发区域均通过同一原生场景输出，示例见 `Sources/NornaKit/Examples/AdvancedDiagramExamples.swift`。
+流程图的扩展节点与端点、时序图的生命周期和参与者类型、类图的接口与基数、状态图的并发区域均通过同一原生场景输出。双语示例统一保存在 `Sources/NornaKit/Resources/examples.json`，Swift 与 C# 共用示例 ID、源码、起始示例及复杂度对照。
 
 `DiagramExporter` 使用同一画布绘制器输出 PNG、JPEG、TIFF 和矢量 PDF，SVG 直接输出同一场景几何。
 

@@ -84,4 +84,42 @@ check(OfficialExampleCatalog.Results.Values.Count(result => result.Status == "re
 check(OfficialExampleCatalog.Results.Values.Count(result => result.Status == "rejected") == 296, "The rejected baseline count changed.");
 check(official.Examples.All(example => OfficialExampleCatalog.Results.ContainsKey(example.Id)), "Official status identifiers do not match the sources.");
 
+check(ExampleCatalog.All.Length == 79 && ExampleCatalog.Kinds.Length == 33 && ExampleCatalog.Comparisons.Length == 29,
+    "The shared bilingual sample catalog changed unexpectedly.");
+var catalogFields = ExampleCatalog.All.SelectMany(example => new[]
+{
+    example.Id, example.Kind, example.Symbol, example.Titles.Zh, example.Titles.En, example.Sources.Zh, example.Sources.En
+});
+var catalogHash = Convert.ToHexStringLower(SHA256.HashData(Encoding.UTF8.GetBytes(string.Join('\0', catalogFields))));
+check(catalogHash == "0b02676e05913aeef6d772ea627fe8ff634cb696ffb6d8a40f400fbeb8fe360b", "The original bilingual examples changed during migration.");
+foreach (var kind in ExampleCatalog.Kinds)
+    check(ExampleCatalog.Starter(kind.Id).Kind == kind.Id, $"Invalid starter: {kind.Id}.");
+foreach (var comparison in ExampleCatalog.Comparisons)
+{
+    check(ExampleCatalog.Get(comparison.SimpleId).Kind == comparison.Kind, $"Invalid simple example: {comparison.Kind}.");
+    check(ExampleCatalog.Get(comparison.ComplexId).Kind == comparison.Kind, $"Invalid complex example: {comparison.Kind}.");
+}
+var groupedIds = ExampleCatalog.Group("catalog").Concat(ExampleCatalog.Group("flowcharts")).Concat(ExampleCatalog.Group("advanced"))
+    .Select(example => example.Id).Concat(ExampleCatalog.Comparisons.Select(comparison => comparison.ComplexId));
+check(groupedIds.SequenceEqual(ExampleCatalog.All.Select(example => example.Id)), "Canonical example ordering changed.");
+foreach (var example in ExampleCatalog.All)
+    foreach (var language in Enum.GetValues<DiagramExampleLanguage>())
+        check(DiagramKinds.Detect(example.Source(language))?.Id() == example.Kind, $"Incorrect diagram detection: {example.Id}.");
+foreach (var example in ExampleCatalog.All.Where(example => example.Kind == "flowchart"))
+    foreach (var language in Enum.GetValues<DiagramExampleLanguage>())
+    {
+        var model = MermaidFlowchartParser.Parse(example.Source(language));
+        check(model.Nodes.Length + model.Groups.Length > 0, $"Empty flowchart: {example.Id}.");
+    }
+var product = MermaidFlowchartParser.Parse("flowchart LR\nA & B --> C & D");
+check(product.Edges.Length == 4 && product.Nodes.Length == 4, "Cartesian edge expansion failed.");
+var nested = MermaidFlowchartParser.Parse("flowchart TD\nStart --> API\nsubgraph API[Service]\n direction LR\n A[Input] --> B[Output]\nend");
+check(nested.Groups.Length == 1 && nested.Nodes.Length == 3 && nested.Nodes.Single(node => node.Id == "A").ParentId == "API", "Forward group references or parent membership failed.");
+check(nested.Groups[0].Direction == FlowDirection.LeftRight, "Subgraph direction was lost.");
+var markers = MermaidFlowchartParser.Parse("flowchart LR\nA@{ shape: stadium, label: \"Input\" } <--> B{{Decision}}\nB --o C>Output]\nC --x A");
+check(markers.Nodes[0].Shape == NodeShape.Stadium && markers.Nodes[1].Shape == NodeShape.Hexagon && markers.Nodes[2].Shape == NodeShape.Asymmetric, "Expanded node shapes were lost.");
+check(markers.Edges[0].StartMarker == EdgeMarker.Arrow && markers.Edges[1].EndMarker == EdgeMarker.Circle && markers.Edges[2].EndMarker == EdgeMarker.Cross, "Edge markers were lost.");
+rejects(() => MermaidFlowchartParser.Parse("flowchart TD\nsubgraph G[Group]\nA --> B"), "syntax");
+rejects(() => MermaidFlowchartParser.Parse("flowchart TD\nA --> B\nstyle A fill:red"), "unsupported-syntax");
+
 Console.WriteLine($"Passed {count} Core assertions.");

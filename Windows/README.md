@@ -38,6 +38,8 @@ For ARM64, replace `-p:Platform=x64` with `-p:Platform=ARM64`. The executable an
 
 The Core assertions can also run on macOS or Linux. Full native builds and execution require Windows. A C# compilation check on another OS, with resource generation disabled, does not establish native runtime compatibility.
 
+The 79 built in bilingual samples live in `Sources/NornaKit/Resources/examples.json`. Swift and C# both read this catalog, including stable identifiers, order, starter examples and comparisons. The catalog migration is checked against the original content fingerprint in both test suites. The 600 official sources and their status baselines are also embedded from the existing Swift resource files; no separate Windows copies are maintained.
+
 ## Native content and PDF
 
 The Core parser recognizes balanced `[b]`, `[i]`, `[code]`, `[u]`, `[s]` and `[color=#RRGGBB]` tags. Unbalanced markup remains literal. It preserves the original source of `:win:name:` and `:sf:name:` icon tokens.

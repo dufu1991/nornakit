@@ -69,7 +69,12 @@ public abstract record VectorGeometry
 }
 
 public sealed record ScenePrimitive(VectorGeometry Geometry, VectorStyle Style, string? Id = null, string Label = "");
-public sealed record DiagramScene(DiagramSize Size, string Kind, ImmutableArray<ScenePrimitive> Primitives);
+public sealed record DiagramScene(DiagramSize Size, string Kind, ImmutableArray<ScenePrimitive> Primitives)
+{
+    public ImmutableArray<SceneNode> Nodes { get; init; } = [];
+    public ImmutableArray<SceneEdge> Edges { get; init; } = [];
+    public ImmutableArray<SceneGroup> Groups { get; init; } = [];
+}
 public sealed record DiagramArtifact(DiagramScene Scene)
 {
     public double Width => Scene.Size.Width;

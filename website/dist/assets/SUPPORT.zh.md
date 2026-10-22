@@ -52,7 +52,7 @@
 
 `DiagramCatalogTests` 逐类生成原生 PNG，并验证所有主题的 SVG XML 和图元边界。`AppleAppearanceTests` 验证全部类型的原生系统符号、起始示例、四种系统外观下的绘制与导出，并检查主要文字和饼图标签的对比度。`DiagramSemanticsTests` 检查时序片段、甘特日期、架构端口、层级间距、铁路轨道及部分语义错误。原有流程图和子图测试继续检查轮廓端口、嵌套边界及避障。`AdvancedSyntaxTests` 进一步验证扩展节点端口、箭头标记、创建和销毁消息的绑定、生命线端点、接口与基数语义、并发区域隔离、同步条端口和标签避让。测试通过不代表已覆盖上游全部语料。
 
-设置 `NORNA_FIXTURE_DIR` 后运行 `swift test`，可以导出所有内置示例的 PNG 和 SVG。`Sources/NornaKit/DiagramCatalog.swift` 是新增图形的可运行语法参考。`ScaleDiagramExamples.swift` 提供 29 类图形的复杂数据示例，应用菜单与原生预览页共用这些源码；固定坐标或固定框架的象限图、Wardley 地图、Cynefin 框架和信息图不额外增加复杂示例。`ScaleExampleTests` 检查两档示例确实包含不同规模的内容，并验证复杂示例在三种宽度与四种系统外观下的绘制和导出。
+设置 `NORNA_FIXTURE_DIR` 后运行 `swift test`，可以导出所有内置示例的 PNG 和 SVG。`Sources/NornaKit/Resources/examples.json` 集中维护 79 个双语示例，其中包含 29 类图形的复杂数据示例，Swift 与 C# 共用相同源码及稳定 ID。固定坐标或固定框架的象限图、Wardley 地图、Cynefin 框架和信息图不额外增加复杂示例。`ScaleExampleTests` 检查两档示例确实包含不同规模的内容，并验证复杂示例在三种宽度与四种系统外观下的绘制和导出。
 
 ## 官网原始案例基准
 
@@ -62,7 +62,7 @@
 
 ## 复杂语法示例与约束
 
-编辑器在这四类图形的“示例”菜单中提供扩展节点与双向连线、参与者生命周期、接口与基数、并发状态示例。源码位于 `Sources/NornaKit/Examples/AdvancedDiagramExamples.swift`。
+编辑器在这四类图形的“示例”菜单中提供扩展节点与双向连线、参与者生命周期、接口与基数、并发状态示例。源码位于 `Sources/NornaKit/Resources/examples.json`，分组由 `advanced` 示例 ID 列表定义。
 
 流程图新加入双圆、六边形、非对称、两种平行四边形和两种梯形。现代形状声明仅接受已支持形状的 `shape` 和 `label`，未知形状或属性会报错。不可见连线参与布局，但不绘制。长连线在无环分层部分保留最小跨度，循环回边不保证跨度。
 
