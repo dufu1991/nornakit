@@ -41,6 +41,7 @@ internal sealed partial class StudioWindow : Window
     {
         settings = initialSettings;
         if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is { Length: > 0 }) preview.ForceSoftwareRenderer = true;
+        preview.Loaded += (_, _) => SmokeStep("preview-loaded");
         preview.RenderingFailed += error =>
         {
             if (Environment.GetEnvironmentVariable("NORNA_STUDIO_SMOKE") is not { Length: > 0 } directory) return;
@@ -69,21 +70,37 @@ internal sealed partial class StudioWindow : Window
         SmokeStep("verify-startup");
         Directory.CreateDirectory(directory);
         if (!session.CanExport || session.Artifact is null) throw new InvalidOperationException("The initial native workbench preview was not rendered.");
+        await WaitForPreviewFrameAsync();
         foreach (var language in new[] { "en", "zh" })
         {
             SmokeStep($"language-{language}"); settings = settings with { Language = language }; Build(); await RenderAsync();
+            await WaitForPreviewFrameAsync();
             if (examples.Items.Count == 0 || !export.IsEnabled) throw new InvalidOperationException("The native workbench lost its examples or export command.");
             var scene = session.Snapshot(Palette); await File.WriteAllTextAsync(Path.Combine(directory, $"studio-{language}.svg"), SvgExporter.Export(scene.Scene, scene.Palette));
         }
         await File.WriteAllTextAsync(Path.Combine(directory, "studio.json"), JsonSerializer.Serialize(new { status = "passed", architecture = System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture.ToString(), families = ExampleCatalog.Kinds.Length, examples = ExampleCatalog.All.Length, title = Title }));
     }
-    private void ColorsChanged(UISettings sender, object args) => DispatcherQueue.TryEnqueue(() => preview.Palette = Palette);
-    private void ThemeChanged(Microsoft.UI.System.ThemeSettings sender, object args) => DispatcherQueue.TryEnqueue(() => preview.Palette = Palette);
+    private async Task WaitForPreviewFrameAsync()
+    {
+        var scene = session.Artifact!.Scene;
+        var completion = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        Action<DiagramScene> rendered = value => { if (ReferenceEquals(value, scene)) completion.TrySetResult(); };
+        preview.SceneRendered += rendered;
+        try { preview.Scene = scene; await completion.Task.WaitAsync(TimeSpan.FromSeconds(15)); SmokeStep("preview-frame-rendered"); }
+        finally { preview.SceneRendered -= rendered; }
+    }
+    private void ColorsChanged(UISettings sender, object args) => DispatcherQueue.TryEnqueue(RefreshAppearance);
+    private void ThemeChanged(Microsoft.UI.System.ThemeSettings sender, object args) => DispatcherQueue.TryEnqueue(RefreshAppearance);
+    private void RefreshAppearance()
+    {
+        var palette = Palette; preview.Palette = palette;
+        root.Background = new SolidColorBrush(Color.FromArgb(palette.Background.A, palette.Background.R, palette.Background.G, palette.Background.B));
+    }
     private void Build()
     {
         rebuilding = true;
         if (preview.Parent is Panel previousPanel) previousPanel.Children.Remove(preview);
-        root = new() { Background = (Brush)Application.Current.Resources["ApplicationPageBackgroundThemeBrush"], RequestedTheme = settings.Appearance switch { CanvasAppearance.Light or CanvasAppearance.HighContrastLight => ElementTheme.Light, CanvasAppearance.Dark or CanvasAppearance.HighContrastDark => ElementTheme.Dark, _ => ElementTheme.Default } };
+        root = new() { RequestedTheme = settings.Appearance switch { CanvasAppearance.Light or CanvasAppearance.HighContrastLight => ElementTheme.Light, CanvasAppearance.Dark or CanvasAppearance.HighContrastDark => ElementTheme.Dark, _ => ElementTheme.Default } };
         root.RowDefinitions.Add(new() { Height = GridLength.Auto }); root.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) }); root.RowDefinitions.Add(new() { Height = GridLength.Auto });
         root.RowDefinitions.Add(new() { Height = GridLength.Auto });
         var toolbar = new CommandBar { DefaultLabelPosition = CommandBarDefaultLabelPosition.Right, IsOpen = false };
@@ -108,7 +125,7 @@ internal sealed partial class StudioWindow : Window
         kinds = new ComboBox { HorizontalAlignment = HorizontalAlignment.Stretch, Header = L("Diagram", "图形") }; kinds.SelectionChanged += (_, _) => { if (!rebuilding) PopulateExamples(); }; Grid.SetRow(kinds, 1); library.Children.Add(kinds);
         var filter = new AutoSuggestBox { PlaceholderText = L("Search examples", "搜索示例") }; filter.TextChanged += (_, _) => { search = filter.Text; PopulateExamples(); }; Grid.SetRow(filter, 2); library.Children.Add(filter);
         examples = new ListView { SelectionMode = ListViewSelectionMode.Single, IsItemClickEnabled = true };
-        examples.ItemClick += (_, e) => { if (e.ClickedItem is ListViewItem { Tag: DiagramExample example }) { preview.Fit(); editor.Text = example.Source(Language); settings = settings with { SourcePath = null }; UpdateTitle(); } };
+        examples.ItemClick += (_, e) => { if (e.ClickedItem is ListViewItem { Tag: DiagramExample example }) { preview.Fit(); settings = settings with { SourcePath = null }; editor.Text = example.Source(Language); UpdateTitle(); } };
         Grid.SetRow(examples, 3); library.Children.Add(examples); workspace.Children.Add(library);
         var sourcePanel = new Grid { Padding = new(12, 16, 12, 12), RowSpacing = 12 };
         sourcePanel.RowDefinitions.Add(new() { Height = GridLength.Auto }); sourcePanel.RowDefinitions.Add(new() { Height = new(1, GridUnitType.Star) });
@@ -124,7 +141,9 @@ internal sealed partial class StudioWindow : Window
         var footer = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 16, Padding = new(16, 8, 16, 8) }; status = new() { VerticalAlignment = VerticalAlignment.Center }; footer.Children.Add(status);
         diagnostic = new() { Visibility = Visibility.Collapsed }; diagnostic.Click += (_, _) => LocateDiagnostic(); footer.Children.Add(diagnostic); Grid.SetRow(footer, 2); root.Children.Add(footer);
         errors = new InfoBar { Severity = InfoBarSeverity.Error, IsClosable = true, Margin = new(16, 0, 16, 12) }; Grid.SetRow(errors, 3); root.Children.Add(errors);
-        Content = root; PopulateKinds(); rebuilding = false; Refresh(); UpdateTitle();
+        AutomationProperties.SetName(preview, L("Diagram preview", "图形预览"));
+        AutomationProperties.SetHelpText(preview, L("Drag to pan. Scroll to zoom. Press 0 to fit, plus or minus to zoom.", "拖动以平移，滚轮以缩放。按 0 适应窗口，按加减键缩放。"));
+        RefreshAppearance(); Content = root; PopulateKinds(); rebuilding = false; Refresh(); UpdateTitle();
     }
     private string CategoryName(string category) => category switch { "process" => L("Process", "流程"), "relationships" => L("Relationships", "关系"), "charts" => L("Charts", "数据图表"), "planning" => L("Planning", "规划"), "development" => L("Development", "开发"), "hierarchy" => L("Hierarchy", "层级"), "architecture" => L("Architecture", "架构"), _ => category };
     private void PopulateKinds()
@@ -185,29 +204,42 @@ internal sealed partial class StudioWindow : Window
     }
     private async Task ExportAsync()
     {
-        var snapshot = session.Snapshot(Palette); var format = new ComboBox { Header = L("Format", "格式"), ItemsSource = Enum.GetValues<DiagramExportFormat>(), SelectedIndex = 0, HorizontalAlignment = HorizontalAlignment.Stretch };
+        var snapshot = session.Snapshot(Palette); var format = new ComboBox { Header = L("Format", "格式"), ItemsSource = Enum.GetValues<DiagramExportFormat>().Select(value => new ComboBoxItem { Content = value.ToString().ToUpperInvariant(), Tag = value }), SelectedIndex = 0, HorizontalAlignment = HorizontalAlignment.Stretch };
         var scale = new NumberBox { Header = L("Bitmap scale", "位图倍率"), Value = 2, Minimum = .25, Maximum = 8, SpinButtonPlacementMode = NumberBoxSpinButtonPlacementMode.Inline };
         var padding = new NumberBox { Header = L("Padding", "留白"), Value = 16, Minimum = 0, Maximum = 512, SpinButtonPlacementMode = NumberBoxSpinButtonPlacementMode.Inline };
         var transparent = new CheckBox { Content = L("Transparent background", "透明背景") }; var quality = new Slider { Header = L("JPEG quality", "JPEG 质量"), Minimum = .1, Maximum = 1, Value = .92, StepFrequency = .01 };
         var panel = new StackPanel { Spacing = 16, MinWidth = 320 }; foreach (var control in new FrameworkElement[] { format, scale, padding, transparent, quality }) panel.Children.Add(control);
-        format.SelectionChanged += (_, _) => { var selected = (DiagramExportFormat)format.SelectedItem; scale.IsEnabled = selected is not (DiagramExportFormat.Svg or DiagramExportFormat.Pdf); transparent.IsEnabled = selected != DiagramExportFormat.Jpeg; if (!transparent.IsEnabled) transparent.IsChecked = false; quality.IsEnabled = selected == DiagramExportFormat.Jpeg; };
+        var selectedFormat = () => (DiagramExportFormat)((ComboBoxItem)format.SelectedItem).Tag;
+        var updateOptions = () => { var selected = selectedFormat(); scale.IsEnabled = selected is not (DiagramExportFormat.Svg or DiagramExportFormat.Pdf); transparent.IsEnabled = selected != DiagramExportFormat.Jpeg; if (!transparent.IsEnabled) transparent.IsChecked = false; quality.IsEnabled = selected == DiagramExportFormat.Jpeg; };
+        format.SelectionChanged += (_, _) => updateOptions(); updateOptions();
         var dialog = new ContentDialog { XamlRoot = root.XamlRoot, Title = L("Export diagram", "导出图形"), Content = panel, PrimaryButtonText = L("Save", "保存"), CloseButtonText = L("Cancel", "取消"), DefaultButton = ContentDialogButton.Primary };
         if (await dialog.ShowAsync() != ContentDialogResult.Primary) return;
-        var options = new DiagramExportOptions((DiagramExportFormat)format.SelectedItem, transparent.IsChecked == true ? DiagramExportBackground.Transparent : DiagramExportBackground.Theme, scale.Value, quality.Value, padding.Value); options.OutputSize(snapshot.Scene);
+        var options = new DiagramExportOptions(selectedFormat(), transparent.IsChecked == true ? DiagramExportBackground.Transparent : DiagramExportBackground.Theme, scale.Value, quality.Value, padding.Value); options.OutputSize(snapshot.Scene);
         var picker = new FileSavePicker(AppWindow.Id) { SuggestedFileName = "diagram" }; picker.FileTypeChoices.Add(options.Format.ToString(), ["." + options.Format.ToString().ToLowerInvariant()]); var file = await picker.PickSaveFileAsync(); if (file is null) return;
         var bytes = await new DiagramExporter(Microsoft.Graphics.Canvas.CanvasDevice.GetSharedDevice()).ExportAsync(snapshot.Scene, snapshot.Palette, options); await File.WriteAllBytesAsync(file.Path, bytes);
     }
+    private string AppearanceName(CanvasAppearance value) => value switch
+    {
+        CanvasAppearance.System => L("Use system setting", "跟随系统"), CanvasAppearance.Light => L("Light", "浅色"), CanvasAppearance.Dark => L("Dark", "深色"),
+        CanvasAppearance.HighContrastLight => L("High contrast light", "高对比度浅色"), CanvasAppearance.HighContrastDark => L("High contrast dark", "高对比度深色"),
+        _ => throw new ArgumentOutOfRangeException(nameof(value))
+    };
+    private string ColorStyleName(DiagramColorStyle value) => value switch
+    {
+        DiagramColorStyle.Neutral => L("Neutral", "中性"), DiagramColorStyle.Themed => L("System accent", "系统强调色"), DiagramColorStyle.Custom => L("Custom accent", "自定义强调色"),
+        _ => throw new ArgumentOutOfRangeException(nameof(value))
+    };
     private async Task SettingsAsync()
     {
         var language = new ComboBox { Header = L("Language", "语言"), ItemsSource = new[] { "English", "简体中文" }, SelectedIndex = settings.Language == "zh" ? 1 : 0, HorizontalAlignment = HorizontalAlignment.Stretch };
-        var appearance = new ComboBox { Header = L("Appearance", "外观"), ItemsSource = Enum.GetValues<CanvasAppearance>(), SelectedItem = settings.Appearance, HorizontalAlignment = HorizontalAlignment.Stretch };
-        var colors = new ComboBox { Header = L("Colors", "配色"), ItemsSource = Enum.GetValues<DiagramColorStyle>(), SelectedItem = settings.ColorStyle, HorizontalAlignment = HorizontalAlignment.Stretch };
+        var appearance = new ComboBox { Header = L("Appearance", "外观"), ItemsSource = Enum.GetValues<CanvasAppearance>().Select(value => new ComboBoxItem { Content = AppearanceName(value), Tag = value }), SelectedIndex = Array.IndexOf(Enum.GetValues<CanvasAppearance>(), settings.Appearance), HorizontalAlignment = HorizontalAlignment.Stretch };
+        var colors = new ComboBox { Header = L("Colors", "配色"), ItemsSource = Enum.GetValues<DiagramColorStyle>().Select(value => new ComboBoxItem { Content = ColorStyleName(value), Tag = value }), SelectedIndex = Array.IndexOf(Enum.GetValues<DiagramColorStyle>(), settings.ColorStyle), HorizontalAlignment = HorizontalAlignment.Stretch };
         var value = Palette.Accent;
         var accent = new ColorPicker { Color = Color.FromArgb(255, value.R, value.G, value.B), IsAlphaEnabled = false, IsColorSliderVisible = true, IsHexInputVisible = true };
         var panel = new StackPanel { Spacing = 16 }; foreach (var control in new FrameworkElement[] { language, appearance, colors, new TextBlock { Text = L("Accent", "强调色") }, accent }) panel.Children.Add(control);
         var dialog = new ContentDialog { XamlRoot = root.XamlRoot, Title = L("Settings", "设置"), Content = new ScrollViewer { Content = panel, MaxHeight = 600 }, PrimaryButtonText = L("Apply", "应用"), CloseButtonText = L("Cancel", "取消") };
         if (await dialog.ShowAsync() != ContentDialogResult.Primary) return;
-        settings = settings with { Source = editor.Text, Language = language.SelectedIndex == 1 ? "zh" : "en", Appearance = (CanvasAppearance)appearance.SelectedItem, ColorStyle = (DiagramColorStyle)colors.SelectedItem, Accent = new DiagramColor(accent.Color.R, accent.Color.G, accent.Color.B).Hex };
+        settings = settings with { Source = editor.Text, Language = language.SelectedIndex == 1 ? "zh" : "en", Appearance = (CanvasAppearance)((ComboBoxItem)appearance.SelectedItem).Tag, ColorStyle = (DiagramColorStyle)((ComboBoxItem)colors.SelectedItem).Tag, Accent = new DiagramColor(accent.Color.R, accent.Color.G, accent.Color.B).Hex };
         await SaveWorkspaceAsync(); Build(); await RenderAsync();
     }
     private async Task RunAsync(Func<Task> action)

@@ -110,13 +110,12 @@ jobs:
       - name: Restore native workbench
         run: dotnet restore src/NornaStudio -p:Platform=${{ matrix.platform }} --locked-mode
       - name: Pack independent libraries
+        id: pack
         run: |
           dotnet pack src/NornaKit.Core -c Release --no-restore -p:Platform=${{ matrix.platform }} -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o artifacts/nuget
           if ($LASTEXITCODE -ne 0) { throw 'Core packaging failed.' }
           dotnet pack src/NornaKit.Windows -c Release --no-restore -p:Platform=${{ matrix.platform }} -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o artifacts/nuget
           if ($LASTEXITCODE -ne 0) { throw 'Windows packaging failed.' }
-      - name: Verify independent NuGet consumer
-        run: ./scripts/verify-packages.ps1 -Platform ${{ matrix.platform }}
       - name: Build native workbench
         run: dotnet publish src/NornaStudio --no-restore -c Release -p:Platform=${{ matrix.platform }} -o artifacts/studio
       - name: Launch native workbench
@@ -137,6 +136,9 @@ jobs:
           name: windows-studio-${{ matrix.platform }}
           path: Windows/artifacts/studio-smoke
           retention-days: 7
+      - name: Verify independent NuGet consumer
+        if: always() && steps.pack.outcome == 'success'
+        run: ./scripts/verify-packages.ps1 -Platform ${{ matrix.platform }}
       - name: Install pinned installer compiler
         run: ./scripts/install-inno.ps1
       - name: Package installer and portable build

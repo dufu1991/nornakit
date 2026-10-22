@@ -10,6 +10,21 @@ $packageSource = (Resolve-Path $PackageDirectory).Path
 $root = Split-Path $PSScriptRoot -Parent
 $consumer = Join-Path $root "artifacts/package-consumer-$($Platform.ToLowerInvariant())"
 New-Item $consumer -ItemType Directory -Force | Out-Null
+$config = @'
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <clear />
+    <add key="local" value="@PACKAGES@" />
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+  </packageSources>
+  <packageSourceMapping>
+    <packageSource key="local"><package pattern="NornaKit.*" /></packageSource>
+    <packageSource key="nuget.org"><package pattern="*" /></packageSource>
+  </packageSourceMapping>
+</configuration>
+'@
+$config.Replace('@PACKAGES@', [System.Security.SecurityElement]::Escape($packageSource)) | Set-Content (Join-Path $consumer 'NuGet.Config') -Encoding utf8
 $project = @'
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
@@ -47,7 +62,7 @@ var png = await new DiagramExporter(device).ExportAsync(diagram.Scene, palette);
 if (png.Length < 8 || !png.AsSpan(0, 8).SequenceEqual(new byte[] { 137, 80, 78, 71, 13, 10, 26, 10 })) throw new InvalidOperationException("The packaged native exporter did not produce PNG.");
 Console.WriteLine($"Verified independent NuGet consumer: {diagram.Type}, {diagram.Width} x {diagram.Height}, {png.Length} PNG bytes.");
 '@ | Set-Content (Join-Path $consumer 'Program.cs') -Encoding utf8
-& dotnet restore (Join-Path $consumer 'Consumer.csproj') "-p:Platform=$Platform" --source $packageSource --source 'https://api.nuget.org/v3/index.json'
+& dotnet restore (Join-Path $consumer 'Consumer.csproj') "-p:Platform=$Platform" --configfile (Join-Path $consumer 'NuGet.Config')
 if ($LASTEXITCODE -ne 0) { throw 'Independent NuGet consumer restore failed.' }
 & dotnet publish (Join-Path $consumer 'Consumer.csproj') --no-restore -c Release "-p:Platform=$Platform" -o (Join-Path $consumer 'publish')
 if ($LASTEXITCODE -ne 0) { throw 'Independent NuGet consumer build failed.' }

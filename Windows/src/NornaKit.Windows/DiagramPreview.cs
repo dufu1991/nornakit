@@ -21,6 +21,7 @@ public sealed partial class DiagramPreview : UserControl, IDisposable
     private Vector2 pan;
     private float zoom = 1;
     public event Action<Exception>? RenderingFailed;
+    public event Action<DiagramScene>? SceneRendered;
     public DiagramPreview()
     {
         Content = canvas;
@@ -40,6 +41,7 @@ public sealed partial class DiagramPreview : UserControl, IDisposable
                 if (scene is null) return;
                 drawing.Transform = Matrix3x2.CreateScale(zoom) * Matrix3x2.CreateTranslation(pan);
                 Win2DScenePainter.Draw(drawing, scene, palette);
+                SceneRendered?.Invoke(scene);
             }
             catch (Exception error)
             {
