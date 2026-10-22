@@ -146,9 +146,9 @@ Norna Studio 调用同一套 NornaKit API，用于演示库能力、复现和调
 
 要求 **macOS 14 或更高版本**。仅支持 **Apple Silicon Mac**。
 
-[下载 DMG](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg) · [下载 ZIP](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.zip) · [全部版本](https://github.com/dufu1991/nornakit/releases)
+[下载 DMG](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg) · [全部版本](https://github.com/dufu1991/nornakit/releases)
 
-首次工作台发布流程成功后，下载链接才会生效。打开 DMG，将 **Norna Studio** 拖入 **Applications**，或解压 ZIP 后移动应用。每个版本均附带 SHA-256 校验和与 `release.json` 清单。
+打开 DMG，将 **Norna Studio** 拖入 **Applications**。发布页只提供一个应用安装包，ZIP、清单与校验文件保留在打包工作流的产物中。
 
 发布说明会标明签名状态。在仓库配置 Apple 凭据前，软件包使用**临时签名，未经 Apple 公证**，可能被 macOS Gatekeeper 拦截。可在仓库设置中启用 Developer ID 签名与公证，步骤见[发布指南](Docs/RELEASING.md)。
 

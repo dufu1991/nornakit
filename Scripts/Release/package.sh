@@ -143,11 +143,11 @@ notes = f"""## Norna Studio {metadata['version']}
 
 Build {metadata['build']} · macOS 14 or later · Apple Silicon
 
-Download the DMG, open it, and drag **Norna Studio** to **Applications**. A ZIP containing the same app is also available.
+Download the DMG, open it, and drag **Norna Studio** to **Applications**.
 
 {signing_note}
 
-`SHA256SUMS.txt` contains SHA-256 checksums for both packages and `release.json`.
+The ZIP, package manifest, and checksum file are retained in the workflow artifacts.
 
 This is a **Norna Studio application release**. Its version is independent of NornaKit Swift package releases.
 

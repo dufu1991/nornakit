@@ -9,7 +9,8 @@ import unittest
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "Scripts/Release"))
-from homebrew import CASK_PATH, DMG_NAME, cask_version, render, sync
+from homebrew import CASK_PATH, DMG_NAME, cask_version, download, render, sync
+from release_metadata import MARKER, append_manifest, read_manifest
 
 
 class HomebrewTests(unittest.TestCase):
@@ -32,6 +33,59 @@ class HomebrewTests(unittest.TestCase):
 
     def content(self):
         return render(self.directory, "studio-v1.2.3")
+
+    def published(self):
+        return {"tag_name": "studio-v1.2.3", "draft": False, "prerelease": False,
+                "body": append_manifest("Studio notes.", self.manifest, self.directory),
+                "assets": [{"name": DMG_NAME, "digest": "sha256:" + self.digest}]}
+
+    @patch("homebrew.subprocess.run")
+    @patch("homebrew.gh")
+    def test_dmg_only_release_downloads_and_generates_the_same_cask(self, gh, run):
+        gh.return_value = json.dumps(self.published())
+        expected = self.content()
+        (self.directory / "release.json").unlink()
+        (self.directory / "SHA256SUMS.txt").unlink()
+        download(self.directory, "studio-v1.2.3")
+        self.assertEqual(self.content(), expected)
+        arguments = run.call_args.args[0]
+        self.assertEqual(arguments.count("--pattern"), 1)
+        self.assertIn(DMG_NAME, arguments)
+
+    @patch("homebrew.subprocess.run")
+    @patch("homebrew.gh")
+    def test_unpublished_or_mismatched_release_fails_before_download(self, gh, run):
+        for change in [{"draft": True}, {"prerelease": True}, {"tag_name": "studio-v9.0.0"},
+                       {"assets": []}, {"assets": [{"name": DMG_NAME, "digest": "sha256:" + "0" * 64}]}]:
+            gh.return_value = json.dumps(self.published() | change)
+            with self.assertRaises(ValueError):
+                download(self.directory, "studio-v1.2.3")
+        run.assert_not_called()
+
+    @patch("homebrew.subprocess.run")
+    @patch("homebrew.gh")
+    def test_downloaded_dmg_must_match_both_published_digests(self, gh, run):
+        gh.return_value = json.dumps(self.published())
+        (self.directory / DMG_NAME).write_bytes(b"corrupt download")
+        with self.assertRaises(ValueError):
+            download(self.directory, "studio-v1.2.3")
+
+    @patch("homebrew.subprocess.run")
+    @patch("homebrew.gh")
+    def test_legacy_release_downloads_its_attached_metadata(self, gh, run):
+        release = self.published() | {"body": "Legacy notes.", "assets": [
+            {"name": name} for name in [DMG_NAME, "release.json", "SHA256SUMS.txt"]]}
+        gh.return_value = json.dumps(release)
+        download(self.directory, "studio-v1.2.3")
+        self.assertEqual(run.call_args.args[0].count("--pattern"), 3)
+
+    def test_hidden_manifest_is_optional_but_malformed_or_duplicate_comments_fail(self):
+        notes = self.published()["body"]
+        self.assertEqual(read_manifest(notes)["sha256"], self.digest)
+        self.assertIsNone(read_manifest("Plain release notes."))
+        for value in [notes + notes, MARKER + " broken -->", notes.replace(self.digest, "bad")]:
+            with self.assertRaises(ValueError):
+                read_manifest(value)
 
     def test_cask_uses_versioned_release_and_real_package_checksum(self):
         content = self.content()

@@ -7,6 +7,7 @@ import re
 import subprocess
 
 from version import ROOT, read_version, write_outputs
+from release_metadata import DMG_NAME, append_manifest
 
 
 def gh(*arguments):
@@ -71,14 +72,17 @@ def publish(repository, sha, directory):
     releases = [item for page in pages for item in page]
     if not release_needed(metadata, releases, sha):
         raise ValueError("A published release cannot be overwritten")
+    notes_file = directory / "PUBLIC_RELEASE_NOTES.md"
+    notes_file.write_text(append_manifest((directory / "RELEASE_NOTES.md").read_text(encoding="utf-8"),
+                                          manifest, directory), encoding="utf-8")
     tag = metadata["tag"]
     if not any(item["tag_name"] == tag for item in releases):
         gh("release", "create", tag, "--repo", repository, "--target", sha,
            "--title", f"Norna Studio {metadata['version']}", "--draft",
-           "--notes-file", str(directory / "RELEASE_NOTES.md"))
-    gh("release", "upload", tag, *map(str, assets), "--repo", repository, "--clobber")
+           "--notes-file", str(notes_file))
+    gh("release", "upload", tag, str(directory / DMG_NAME), "--repo", repository, "--clobber")
     gh("release", "edit", tag, "--repo", repository, "--draft=false", "--latest",
-       "--notes-file", str(directory / "RELEASE_NOTES.md"))
+       "--notes-file", str(notes_file))
     print(f"Published https://github.com/{repository}/releases/tag/{tag}")
 
 

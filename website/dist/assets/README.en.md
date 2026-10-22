@@ -146,9 +146,9 @@ Norna Studio uses the same NornaKit APIs to demonstrate library capabilities, re
 
 Requires **macOS 14 or later**. Supports **Apple Silicon Macs**.
 
-[Download DMG](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg) · [Download ZIP](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.zip) · [All releases](https://github.com/dufu1991/nornakit/releases)
+[Download DMG](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg) · [All releases](https://github.com/dufu1991/nornakit/releases)
 
-Packages become available after the first successful Studio release workflow. Open the DMG and drag **Norna Studio** into **Applications**, or extract the ZIP and move the app there. Each release includes SHA-256 checksums and a `release.json` manifest.
+Open the DMG and drag **Norna Studio** into **Applications**. Releases provide one app download; the ZIP, manifest, and checksums remain in the packaging workflow artifacts.
 
 Release notes identify the signing status. Until Apple credentials are configured, packages are **ad-hoc signed and not notarized**; macOS Gatekeeper may block them. Developer ID signing and notarization can be enabled in repository settings. See the [release guide](Docs/RELEASING.md).
 

@@ -11,7 +11,7 @@ NornaKit is the primary library product. GitHub Releases lead with the Kit versi
 | NornaKit Swift Package | `Configuration/Kit-Version.json` | `vX.Y.Z` | `v0.1.0` |
 | Norna Studio app | `Configuration/Studio-Version.xcconfig` | `studio-vX.Y.Z` for standalone app releases | `0.1.1`, build `7` |
 
-Swift Package Manager reads the Kit version from its Git tag. `Package.swift` has no separate version field. A companion attachment does not change the meaning of the Kit tag: its `release.json` records the independent app `version`, app `build`, library `kitVersion`, library source `commit`, and hosting `releaseTag`.
+Swift Package Manager reads the Kit version from its Git tag. `Package.swift` has no separate version field. A companion attachment does not change the meaning of the Kit tag: its hidden release-note manifest records the independent app `version`, app `build`, library `kitVersion`, library source `commit`, and hosting `releaseTag`.
 
 Do not copy the Kit version into Studio's marketing version. Increment Studio's build number for each refreshed companion. A standalone Studio release also needs a new app marketing version because published `studio-vX.Y.Z` releases are immutable.
 
@@ -28,20 +28,15 @@ The Kit job resolves an existing tag to its immutable source commit, or uses the
 
 Release notes start with **NornaKit X.Y.Z** and the exact library changelog section. Studio normally receives only a short companion version line. When app-specific notes are needed, add a matching `## X.Y.Z` section to `Docs/STUDIO_CHANGELOG.md`; only the current app version's section is appended.
 
-All four companion assets upload to a draft before it becomes public. The Kit release becomes GitHub's **Latest** release only after validation and upload succeed. Published releases and tags are never overwritten. A retry may replace incomplete assets only on a draft targeting the same source commit. Publication jobs are serialized, so a delayed older candidate cannot replace a newer library version.
+Only the companion DMG uploads to a draft before it becomes public. The Kit release becomes GitHub's **Latest** release only after validation and upload succeed. Published releases and tags are never overwritten. A retry may replace incomplete assets only on a draft targeting the same source commit. Publication jobs are serialized, so a delayed older candidate cannot replace a newer library version.
 
 ## Companion downloads
 
-A normal Kit release contains:
+A normal Kit release has one uploaded attachment: `Norna-Studio-macOS-arm64.dmg`, containing the optional app and Applications shortcut. GitHub also generates its two source archives automatically.
 
-- `Norna-Studio-macOS-arm64.dmg`: optional app and Applications shortcut.
-- `Norna-Studio-macOS-arm64.zip`: the same app with signatures and bundle layout preserved.
-- `release.json`: independent Kit and Studio versions, library source commit, architecture, minimum macOS, and signing status.
-- `SHA256SUMS.txt`: checksums for both packages and the manifest.
+The [latest DMG](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg) follows the primary Kit release. Swift Package consumers use the `vX.Y.Z` library tag and do not install Studio.
 
-The [latest DMG](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg) and [latest ZIP](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.zip) remain valid because the primary Kit release carries the refreshed companion. Swift Package consumers use the `vX.Y.Z` library tag and do not install Studio.
-
-Download all four files into one directory and run `shasum -a 256 -c SHA256SUMS.txt` to verify them.
+The ZIP, `release.json`, and `SHA256SUMS.txt` remain available in the packaging job's Actions artifacts for debugging and verification. They are not uploaded to Releases. A hidden `norna-studio-manifest` JSON comment in the release notes carries the independent app metadata and DMG SHA-256 digest for automation without adding visible attachments. Homebrew checks that digest against both GitHub's asset digest and the downloaded DMG. Legacy releases with manifest and checksum attachments remain supported.
 
 ## Standalone Studio updates
 
@@ -79,7 +74,7 @@ brew upgrade --cask dufu1991/tap/norna-studio
 
 The Cask installs only the companion app. It reads Studio's version and build from the verified release manifest, not from the Kit tag. Kit-hosted companions use a Cask version such as `0.1.1,7` and a literal versioned download URL such as `releases/download/v0.1.0/...`. This lets an app build follow a new Kit release without copying the library version into the app version.
 
-[Publish Studio to Homebrew](../.github/workflows/homebrew.yml) accepts both Kit and standalone Studio releases. It downloads the published DMG, manifest, and checksums, validates their relationship and checksum, then generates the Cask with [homebrew.py](../Scripts/Release/homebrew.py). Older builds cannot replace newer builds, identical retries skip writes, and different content for the same app version/build is rejected.
+[Publish Studio to Homebrew](../.github/workflows/homebrew.yml) accepts both Kit and standalone Studio releases. It reads the release-note manifest, downloads only the published DMG, validates the release tag and checksum, then generates the Cask with [homebrew.py](../Scripts/Release/homebrew.py). Older builds cannot replace newer builds, identical retries skip writes, and different content for the same app version/build is rejected.
 
 For immediate cross-repository synchronization, optionally configure `HOMEBREW_TAP_TOKEN` with Contents read/write permission for `dufu1991/homebrew-tap`. Without it, the tap's own **Sync Norna Studio** workflow checks the latest stable release hourly and can be dispatched manually, using its repository's own `GITHUB_TOKEN`.
 

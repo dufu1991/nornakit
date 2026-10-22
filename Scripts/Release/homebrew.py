@@ -8,12 +8,38 @@ import re
 import subprocess
 
 from github_release import gh
+from release_metadata import DMG_NAME, read_manifest
 
 
 TAP = "dufu1991/homebrew-tap"
 CASK_PATH = "Casks/norna-studio.rb"
-DMG_NAME = "Norna-Studio-macOS-arm64.dmg"
 VERSION_PATTERN = r"(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)"
+
+
+def download(directory, tag):
+    if not re.fullmatch(r"(?:studio-)?v" + VERSION_PATTERN, tag):
+        raise ValueError("Expected a stable Kit or Studio release tag")
+    release = json.loads(gh("api", f"repos/dufu1991/nornakit/releases/tags/{tag}"))
+    if release["draft"] or release["prerelease"] or release["tag_name"] != tag:
+        raise ValueError("Only a published stable release can be sent to Homebrew")
+    manifest = read_manifest(release["body"])
+    names = [DMG_NAME] if manifest is not None else [DMG_NAME, "release.json", "SHA256SUMS.txt"]
+    assets = {asset["name"]: asset for asset in release["assets"]}
+    if not all(name in assets for name in names):
+        raise ValueError("The published companion is incomplete")
+    if manifest is not None and assets[DMG_NAME]["digest"] != "sha256:" + manifest["sha256"]:
+        raise ValueError("The GitHub asset digest differs from the companion manifest")
+    directory.mkdir(parents=True, exist_ok=True)
+    arguments = ["gh", "release", "download", tag, "--repo", "dufu1991/nornakit", "--dir", str(directory)]
+    for name in names:
+        arguments.extend(["--pattern", name])
+    subprocess.run(arguments, check=True)
+    if manifest is not None:
+        digest = hashlib.sha256((directory / DMG_NAME).read_bytes()).hexdigest()
+        if digest != manifest["sha256"]:
+            raise ValueError("The downloaded DMG differs from the published digest")
+        (directory / "release.json").write_text(json.dumps(manifest), encoding="utf-8")
+        (directory / "SHA256SUMS.txt").write_text(f"{digest}  {DMG_NAME}\n", encoding="utf-8")
 
 
 def cask_version(content):
@@ -108,14 +134,16 @@ def sync(content):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=["render", "sync"])
+    parser.add_argument("command", choices=["download", "render", "sync"])
     parser.add_argument("--directory", type=Path, default=Path("build/release"))
     parser.add_argument("--tag")
     parser.add_argument("--cask", type=Path, default=Path("build/release/norna-studio.rb"))
     args = parser.parse_args()
-    if args.command == "render":
+    if args.command in ["download", "render"]:
         if not args.tag:
-            parser.error("render requires --tag")
+            parser.error(f"{args.command} requires --tag")
+        if args.command == "download":
+            download(args.directory, args.tag)
         args.cask.parent.mkdir(parents=True, exist_ok=True)
         args.cask.write_text(render(args.directory, args.tag), encoding="utf-8")
         print(f"Generated {args.cask}")

@@ -52,24 +52,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: ${{ inputs.tag }}
         run: |
-          python3 - <<'PY'
-          import json
-          import os
-          import re
-          import subprocess
-          tag = os.environ['RELEASE_TAG']
-          if not re.fullmatch(r'(?:studio-)?v(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)', tag):
-              raise SystemExit('Expected a stable Kit or Studio release tag')
-          release = json.loads(subprocess.check_output([
-              'gh', 'api', f'repos/dufu1991/nornakit/releases/tags/{tag}'
-          ], text=True))
-          if release['draft'] or release['prerelease'] or release['tag_name'] != tag:
-              raise SystemExit('Only a published stable release can be sent to Homebrew')
-          PY
-          gh release download "$RELEASE_TAG" --repo dufu1991/nornakit \
-            --pattern Norna-Studio-macOS-arm64.dmg \
-            --pattern release.json --pattern SHA256SUMS.txt --dir build/release
-          python3 Scripts/Release/homebrew.py render --tag "$RELEASE_TAG"
+          python3 Scripts/Release/homebrew.py download --tag "$RELEASE_TAG"
           ruby -c build/release/norna-studio.rb
       - name: Update the companion app Cask in the personal tap
         if: steps.credentials.outputs.configured == 'true'

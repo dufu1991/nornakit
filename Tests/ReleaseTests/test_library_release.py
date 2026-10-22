@@ -120,12 +120,22 @@ class LibraryReleaseTests(unittest.TestCase):
 
     @patch("library_release.gh")
     def test_following_a_kit_release_requires_a_new_companion_build(self, gh):
-        previous = [{"draft": False, "prerelease": False, "assets": [{"name": "release.json", "id": 7}]}]
+        previous = [{"draft": False, "prerelease": False, "body": "", "assets": [{"name": "release.json", "id": 7}]}]
         gh.return_value = json.dumps({"version": "0.1.1", "build": "6"})
         library.validate_studio_build("owner/repo", self.studio, previous)
         gh.return_value = json.dumps({"version": "0.1.1", "build": "7"})
         with self.assertRaises(ValueError):
             library.validate_studio_build("owner/repo", self.studio, previous)
+
+    @patch("library_release.gh")
+    def test_hidden_metadata_still_prevents_reusing_a_companion_build(self, gh):
+        self.package()
+        notes = library.append_manifest("Kit notes.", self.manifest, self.directory)
+        previous = [{"draft": False, "prerelease": False, "body": notes, "assets": []}]
+        with self.assertRaises(ValueError):
+            library.validate_studio_build("owner/repo", self.studio, previous)
+        library.validate_studio_build("owner/repo", self.studio | {"build": "8"}, previous)
+        gh.assert_not_called()
 
     @patch("library_release.read_version")
     @patch("library_release.read_library_version")
@@ -141,6 +151,9 @@ class LibraryReleaseTests(unittest.TestCase):
         self.assertIn("--draft", calls[2])
         self.assertIn("NornaKit 0.1.0", calls[2])
         self.assertEqual(calls[3][:2], ("release", "upload"))
+        self.assertIn(str(self.directory / library.DMG_NAME), calls[3])
+        for name in library.ASSETS[1:]:
+            self.assertNotIn(str(self.directory / name), calls[3])
         self.assertIn("--draft=false", calls[4])
         self.assertIn("--latest", calls[4])
         notes = (self.directory / "KIT_RELEASE_NOTES.md").read_text()
@@ -148,6 +161,8 @@ class LibraryReleaseTests(unittest.TestCase):
         self.assertIn("Fix native borders.", notes)
         self.assertIn("Norna Studio 0.1.1 (build 7)", notes)
         self.assertNotIn("Old notes", notes)
+        self.assertEqual(library.read_manifest(notes)["build"], "7")
+        self.assertNotIn("SHA256SUMS.txt", notes)
 
     @patch("library_release.read_version")
     @patch("library_release.read_library_version")

@@ -82,6 +82,9 @@ class ReleaseTests(unittest.TestCase):
             calls = [call.args for call in gh.call_args_list]
             self.assertIn("--draft", calls[1])
             self.assertEqual(calls[2][:2], ("release", "upload"))
+            self.assertIn(str(path / "Norna-Studio-macOS-arm64.dmg"), calls[2])
+            for name in ["Norna-Studio-macOS-arm64.zip", "release.json", "SHA256SUMS.txt"]:
+                self.assertNotIn(str(path / name), calls[2])
             self.assertIn("--draft=false", calls[3])
 
 

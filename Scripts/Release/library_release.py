@@ -8,6 +8,7 @@ import re
 import subprocess
 
 from github_release import gh, is_release_candidate
+from release_metadata import DMG_NAME, append_manifest, read_manifest
 from version import ROOT, read_version, write_outputs
 
 VERSION = r"(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)"
@@ -88,10 +89,12 @@ def validate_studio_build(repository, studio, existing):
         if release["draft"] or release["prerelease"]:
             continue
         assets = {asset["name"]: asset for asset in release["assets"]}
-        if "release.json" not in assets:
-            continue
-        manifest = json.loads(gh("api", f"repos/{repository}/releases/assets/{assets['release.json']['id']}",
-                                 "-H", "Accept: application/octet-stream"))
+        manifest = read_manifest(release["body"])
+        if manifest is None:
+            if "release.json" not in assets:
+                continue
+            manifest = json.loads(gh("api", f"repos/{repository}/releases/assets/{assets['release.json']['id']}",
+                                     "-H", "Accept: application/octet-stream"))
         builds.append((tuple(map(int, manifest["version"].split("."))), int(manifest["build"])))
     current = (tuple(map(int, studio["version"].split("."))), int(studio["build"]))
     if builds and current <= max(builds):
@@ -128,14 +131,15 @@ def publish(repository, target, directory):
         notes += "\n" + changelog_notes(studio_notes.read_text(), studio["version"]) + "\n"
     if manifest["signing"] == "ad-hoc":
         notes += "\nThe companion app is ad-hoc signed and is not notarized by Apple.\n"
-    notes += "\nThe DMG and ZIP contain only the optional Studio app. Swift Package integration does not require them. Verify companion assets with SHA256SUMS.txt.\n"
+    notes += "\nThe DMG contains the optional Studio app. Swift Package integration does not require it.\n"
+    notes = append_manifest(notes, manifest, directory)
     notes_file = directory / "KIT_RELEASE_NOTES.md"
     notes_file.write_text(notes, encoding="utf-8")
     tag = metadata["tag"]
     if not any(item["tag_name"] == tag for item in existing):
         gh("release", "create", tag, "--repo", repository, "--target", target,
            "--title", f"NornaKit {metadata['version']}", "--draft", "--notes-file", str(notes_file))
-    gh("release", "upload", tag, *[str(directory / name) for name in ASSETS], "--repo", repository, "--clobber")
+    gh("release", "upload", tag, str(directory / DMG_NAME), "--repo", repository, "--clobber")
     gh("release", "edit", tag, "--repo", repository, "--draft=false", "--latest", "--notes-file", str(notes_file))
     print(f"Published https://github.com/{repository}/releases/tag/{tag}")
 
