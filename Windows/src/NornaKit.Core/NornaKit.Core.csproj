@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Description>Native diagram models and platform independent contracts for NornaKit.</Description>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+</Project>

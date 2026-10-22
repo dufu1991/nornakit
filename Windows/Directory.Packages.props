@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.WindowsAppSDK" Version="2.5.1" />
+    <PackageVersion Include="Microsoft.Graphics.Win2D" Version="1.4.0" />
+    <PackageVersion Include="PDFsharp" Version="6.2.3" />
+  </ItemGroup>
+</Project>

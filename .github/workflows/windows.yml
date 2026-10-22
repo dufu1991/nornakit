@@ -1,0 +1,73 @@
+name: Windows native validation
+
+on:
+  push:
+    branches: [main, 'codex/windows-native*']
+    paths: ['Windows/**', '.github/workflows/windows.yml']
+  pull_request:
+    paths: ['Windows/**', '.github/workflows/windows.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: windows-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  core:
+    name: Core contracts
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Windows
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: Windows/global.json
+      - run: dotnet restore tests/NornaKit.Core.Tests --locked-mode
+      - run: dotnet run --project tests/NornaKit.Core.Tests --no-restore --configuration Release
+
+  native:
+    name: Native exports (${{ matrix.platform }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-2025
+            platform: x64
+            rid: win-x64
+          - runner: windows-11-arm
+            platform: ARM64
+            rid: win-arm64
+    runs-on: ${{ matrix.runner }}
+    defaults:
+      run:
+        working-directory: Windows
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: Windows/global.json
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Restore native dependencies
+        run: dotnet restore tests/NornaKit.Windows.SmokeTests -p:Platform=${{ matrix.platform }} --locked-mode
+      - name: Build self contained native harness
+        run: dotnet publish tests/NornaKit.Windows.SmokeTests --no-restore -c Release -p:Platform=${{ matrix.platform }} -o artifacts/smoke
+      - name: Run without creating a window
+        run: ./artifacts/smoke/NornaKit.Windows.SmokeTests.exe artifacts/native-smoke
+      - name: Inspect native formats and extract PDF text
+        run: |
+          python -m pip install --disable-pip-version-check Pillow==11.3.0 pypdf==6.1.1
+          python scripts/verify-native-smoke.py artifacts/native-smoke
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: windows-native-${{ matrix.platform }}
+          path: Windows/artifacts/native-smoke
+          if-no-files-found: warn
