@@ -48,8 +48,8 @@ public sealed partial class WindowsTextLayoutProvider(CanvasDevice device) : ITe
             start += length;
         }
         var receiver = new TextReceiver(device, ranges, cancellationToken);
-        layout.DrawToTextRenderer(receiver, Vector2.Zero);
         var bounds = layout.LayoutBoundsIncludingTrailingWhitespace;
+        layout.DrawToTextRenderer(receiver, 0, 0);
         return new(new(Math.Max(0, bounds.Width), Math.Max(request.LineHeight, bounds.Height)), receiver.Runs.ToImmutableArray());
     }
 

@@ -1,6 +1,8 @@
 using System.Text.Json;
 using System.Xml.Linq;
+using System.Numerics;
 using Microsoft.Graphics.Canvas;
+using Microsoft.Graphics.Canvas.Text;
 using NornaKit;
 using NornaKit.Windows;
 
@@ -8,6 +10,18 @@ WinRT.ComWrappersSupport.InitializeComWrappers();
 var directory = Path.GetFullPath(args.Length == 0 ? "artifacts/native-smoke" : args[0]);
 Directory.CreateDirectory(directory);
 using var device = new CanvasDevice(forceSoftwareRenderer: true);
+using (var probeFormat = new CanvasTextFormat { FontFamily = "Segoe UI", FontSize = 20 })
+using (var probeLayout = new CanvasTextLayout(device, "Probe 你好", probeFormat, 400, 100))
+{
+    var probe = new ProbeTextRenderer();
+    var bounds = probeLayout.LayoutBounds;
+    probeLayout.DrawToTextRenderer(probe, 0, 0);
+    var coordinateCalls = probe.GlyphCalls;
+    probeLayout.DrawToTextRenderer(probe, Vector2.Zero);
+    var diagnostics = JsonSerializer.Serialize(new { bounds, coordinateCalls, probe.GlyphCalls, probe.PixelReads, probe.DpiReads, probe.TransformReads, probe.Text });
+    Console.WriteLine("Native renderer probe: " + diagnostics);
+    await File.WriteAllTextAsync(Path.Combine(directory, "probe.json"), diagnostics);
+}
 var text = new WindowsTextLayoutProvider(device);
 var layout = text.Layout(new(InlineText.Parse("NornaKit Windows 你好，世界。\n"
     + "[b]Bold 粗体[/b] [i]Italic 斜体[/i] [code]render(source)[/code]\n"
@@ -64,3 +78,26 @@ await File.WriteAllTextAsync(Path.Combine(directory, "result.json"), JsonSeriali
     status = "passed"
 }, new JsonSerializerOptions { WriteIndented = true }));
 Console.WriteLine($"Native smoke tests passed: {directory}");
+
+[WinRT.GeneratedWinRTExposedType]
+public sealed partial class ProbeTextRenderer : ICanvasTextRenderer
+{
+    public int GlyphCalls { get; private set; }
+    public int PixelReads { get; private set; }
+    public int DpiReads { get; private set; }
+    public int TransformReads { get; private set; }
+    public List<string> Text { get; } = [];
+    public bool PixelSnappingDisabled { get { PixelReads++; return true; } }
+    public Matrix3x2 Transform { get { TransformReads++; return Matrix3x2.Identity; } }
+    public float Dpi { get { DpiReads++; return 96; } }
+    public void DrawGlyphRun(Vector2 point, CanvasFontFace fontFace, float fontSize, CanvasGlyph[] glyphs,
+        bool isSideways, uint bidiLevel, object brush, CanvasTextMeasuringMode measuringMode, string localeName,
+        string textString, int[] clusterMapIndices, uint characterIndex, CanvasGlyphOrientation glyphOrientation)
+    { GlyphCalls++; Text.Add(textString); }
+    public void DrawStrikethrough(Vector2 point, float width, float thickness, float offset, CanvasTextDirection direction,
+        object brush, CanvasTextMeasuringMode mode, string locale, CanvasGlyphOrientation orientation) { }
+    public void DrawUnderline(Vector2 point, float width, float thickness, float offset, float height, CanvasTextDirection direction,
+        object brush, CanvasTextMeasuringMode mode, string locale, CanvasGlyphOrientation orientation) { }
+    public void DrawInlineObject(Vector2 point, ICanvasTextInlineObject inlineObject, bool sideways, bool rtl,
+        object brush, CanvasGlyphOrientation orientation) { }
+}
