@@ -6,7 +6,7 @@ The native shape measurement formulas, series palette, visual constants, and
 diagram rendering conventions are adapted from Pele. Diagram family names and
 core syntax were checked against its public registry and tests on 2026-10-20.
 The public example sources and server-rendered SVG reference snapshots in
-Baselines/ and Sources/NornaKit/Resources/official-examples.json were retrieved from pele.run
+Baselines/ and Sources/NornaExamples/Resources/official-examples.json were retrieved from pele.run
 on 2026-10-20. They include examples derived from Mermaid documentation.
 The Swift parsers, native scene representation, and layouts run independently;
 no upstream JavaScript or TypeScript is executed or bundled.

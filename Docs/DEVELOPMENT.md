@@ -4,7 +4,9 @@
 
 ## 目录约定
 
-`Sources/NornaKit` 是可独立使用的 Swift 图表库，按模型、语法、布局、绘制、导出和示例分组。各图形专用的解析与布局集中在 `Diagrams/`，公共流程图布局和路由位于 `Layout/`。目录分组不改变 `NornaKit` 模块名或公开接口。
+`Sources/NornaKit` 是可独立使用的 Swift 图表库，按模型、语法、布局、绘制和导出分组。各图形专用的解析与布局集中在 `Diagrams/`，公共流程图布局和路由位于 `Layout/`。仅依赖 `NornaKit` 产品时，不编译或打包示例代码与资源。
+
+`Sources/NornaExamples` 是供 Studio 和回归测试使用的内部示例模块，保存示例模型、目录、双语源码与官方示例快照，不作为公开库产品发布。
 
 `Sources/NornaStudio` 是调用 NornaKit 的演示与调试工作台，按应用状态、编辑器、画布、导出和本地化分组。随应用分发的图标、强调色和字符串表保留在 `Resources/`。
 
@@ -25,6 +27,7 @@ xcodegen generate
 工作台仅面向 Apple Silicon Mac。Xcode 工程与发布脚本均只构建 `arm64` 架构。
 
 ```sh
+python3 Scripts/check_kit_package.py
 swift test
 xcodebuild build \
   -project NornaKit.xcodeproj \
@@ -43,7 +46,7 @@ CI 使用 Swift Package 的 `native` 构建方式。新版 Xcode 的默认构建
 
 `Baselines/` 保存用于回归的官方示例原文、原始 SVG、结果快照及图像对照。它们属于版本化验证资料，应随源码提交。`OfficialReference/` 中的文件由测试校验 SHA-256，`.gitattributes` 明确保留其原始字节，不做换行转换。
 
-`Sources/NornaKit/Resources/` 保存应用实际使用的示例资源与第三方许可。这些资源也必须提交。更新快照的命令和数量同步要求见[使用指南](GUIDE.md#开发回归资料与自适应布局)。
+`Sources/NornaExamples/Resources/` 保存应用实际使用的示例资源与第三方许可。这些资源也必须提交。更新快照的命令和数量同步要求见[使用指南](GUIDE.md#开发回归资料与自适应布局)。
 
 日常生成的预览、连线审计和图标资源放在 `build/`：
 

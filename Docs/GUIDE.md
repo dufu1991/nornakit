@@ -253,7 +253,7 @@ let svg = artifact.themedSVG(.appleLight)
 let scene = artifact.scene
 ```
 
-流程图的扩展节点与端点、时序图的生命周期和参与者类型、类图的接口与基数、状态图的并发区域均通过同一原生场景输出，示例见 `Sources/NornaKit/Examples/AdvancedDiagramExamples.swift`。
+流程图的扩展节点与端点、时序图的生命周期和参与者类型、类图的接口与基数、状态图的并发区域均通过同一原生场景输出，示例见 `Sources/NornaExamples/AdvancedDiagramExamples.swift`。
 
 `DiagramExporter` 使用同一画布绘制器输出 PNG、JPEG、TIFF 和矢量 PDF，SVG 直接输出同一场景几何。
 
@@ -334,4 +334,4 @@ NORNA_LAYOUT_OUTPUT=/tmp/official-layout-results.json \
 NORNA_OFFICIAL_SVG_DIR=Baselines/NativeOutput swift test
 ```
 
-核对测试输出后，将两份 JSON 更新到 `Baselines`，同步 `Sources/NornaKit/Resources/official-status.json`，再运行 `python3 Scripts/report_official_examples.py`。快照数量变化需要同时更新完整性测试，避免静默减少基准范围。
+核对测试输出后，将两份 JSON 更新到 `Baselines`，同步 `Sources/NornaExamples/Resources/official-status.json`，再运行 `python3 Scripts/report_official_examples.py`。快照数量变化需要同时更新完整性测试，避免静默减少基准范围。

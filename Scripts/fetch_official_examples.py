@@ -49,7 +49,7 @@ def main():
             else:
                 entries[digest] = {"id": "official-" + digest[:16], "kind": kind, "sha256": digest, "source": source, "origins": [origin]}
     result = {"schemaVersion": 1, "retrievedAt": datetime.datetime.now(datetime.timezone.utc).isoformat(), "pages": pages, "examples": list(entries.values())}
-    output = ROOT / "Sources" / "NornaKit" / "Resources" / "official-examples.json"
+    output = ROOT / "Sources" / "NornaExamples" / "Resources" / "official-examples.json"
     output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"pages": len(pages), "occurrences": sum(page["exampleCount"] for page in pages), "uniqueExamples": len(entries)}, indent=2))
 

@@ -17,7 +17,7 @@ def read(path):
 
 
 def main():
-    snapshot = read(ROOT / "Sources/NornaKit/Resources/official-examples.json")
+    snapshot = read(ROOT / "Sources/NornaExamples/Resources/official-examples.json")
     display_time = datetime.datetime.fromisoformat(snapshot["retrievedAt"]).astimezone(ZoneInfo("Asia/Shanghai")).strftime("%Y 年 %m 月 %d 日 %H:%M")
     results = {item["id"]: item for item in read(BASE / "official-results.json")}
     before = read(BASE / "official-before.json")

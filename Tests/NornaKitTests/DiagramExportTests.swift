@@ -2,6 +2,7 @@ import AppKit
 import ImageIO
 import XCTest
 @testable import NornaKit
+import NornaExamples
 
 final class DiagramExportTests: XCTestCase {
     private let source = """

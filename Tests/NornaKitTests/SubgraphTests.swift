@@ -1,6 +1,7 @@
 import Foundation
 import XCTest
 @testable import NornaKit
+import NornaExamples
 
 final class SubgraphTests: XCTestCase {
     private let nested = """

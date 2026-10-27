@@ -23,10 +23,12 @@
 
 Requires **macOS 14 or later** and **Swift 6**, with no external package dependencies.
 
-Add this repository as a Swift Package dependency and link the **NornaKit** product. The library is released as [NornaKit v0.1.0](https://github.com/dufu1991/nornakit/releases/tag/v0.1.0), independently of Norna Studio. Use the library version in your package dependency:
+Add this repository as a Swift Package dependency and link the **NornaKit** product. Library versions are maintained independently of Norna Studio. Use the library version in your package dependency:
+
+The macOS library product contains only the rendering engine. Example catalogs and resources belong to the internal `NornaExamples` module used by Studio and regression tests.
 
 ```swift
-.package(url: "https://github.com/dufu1991/nornakit.git", from: "0.1.0")
+.package(url: "https://github.com/dufu1991/nornakit.git", from: "0.2.0")
 ```
 
 ```swift

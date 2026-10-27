@@ -1,4 +1,5 @@
 import Foundation
+import NornaKit
 
 public struct DiagramExample: Identifiable, Sendable {
     public let id: String

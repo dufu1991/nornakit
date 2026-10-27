@@ -1,5 +1,6 @@
 import XCTest
 @testable import NornaKit
+@testable import NornaExamples
 
 final class ExampleLanguageTests: XCTestCase {
     func testEveryBundledExampleHasAnEnglishSource() {

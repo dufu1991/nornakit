@@ -1,4 +1,5 @@
 import Foundation
+import NornaKit
 
 public enum DiagramExampleLanguage: String, CaseIterable, Sendable {
     case simplifiedChinese = "zh"

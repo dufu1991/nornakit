@@ -15,13 +15,24 @@ targets:
     platform: macOS
     sources:
       - path: Sources/NornaKit
-        excludes: [Resources]
-      - path: Sources/NornaKit/Resources
-        type: folder
-        buildPhase: resources
     settings:
       GENERATE_INFOPLIST_FILE: YES
       PRODUCT_BUNDLE_IDENTIFIER: dev.norna.kit
+  NornaExamples:
+    type: framework
+    platform: macOS
+    sources:
+      - path: Sources/NornaExamples
+        excludes: [Resources]
+      - path: Sources/NornaExamples/Resources
+        type: folder
+        buildPhase: resources
+    dependencies:
+      - target: NornaKit
+        embed: false
+    settings:
+      GENERATE_INFOPLIST_FILE: YES
+      PRODUCT_BUNDLE_IDENTIFIER: dev.norna.examples
   NornaStudio:
     type: application
     productName: Norna Studio
@@ -50,6 +61,7 @@ targets:
         buildPhase: resources
     dependencies:
       - target: NornaKit
+      - target: NornaExamples
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: dev.norna.studio
       GENERATE_INFOPLIST_FILE: NO
@@ -67,6 +79,7 @@ targets:
       - Tests/NornaKitTests
     dependencies:
       - target: NornaKit
+      - target: NornaExamples
     settings:
       GENERATE_INFOPLIST_FILE: YES
 schemes:

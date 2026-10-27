@@ -1,6 +1,7 @@
 import AppKit
 import XCTest
 @testable import NornaKit
+import NornaExamples
 
 final class ConnectorAuditTests: XCTestCase {
     @MainActor

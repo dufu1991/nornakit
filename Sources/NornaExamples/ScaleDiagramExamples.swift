@@ -1,4 +1,5 @@
 import Foundation
+import NornaKit
 
 public struct DiagramExampleComparison: Identifiable, Sendable {
     public var id: String { kind.rawValue }

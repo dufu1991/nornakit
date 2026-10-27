@@ -1,6 +1,7 @@
 import CryptoKit
 import XCTest
 @testable import NornaKit
+import NornaExamples
 
 struct OfficialResult: Codable {
     let id: String

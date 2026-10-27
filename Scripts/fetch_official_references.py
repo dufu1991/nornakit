@@ -72,7 +72,7 @@ class Cards(html.parser.HTMLParser):
 
 
 def main():
-    snapshot = json.loads((ROOT / "Sources/NornaKit/Resources/official-examples.json").read_text())
+    snapshot = json.loads((ROOT / "Sources/NornaExamples/Resources/official-examples.json").read_text())
     directory = ROOT / "Baselines/OfficialReference"
     directory.mkdir(parents=True, exist_ok=True)
     origins = {(origin["url"], origin["ordinal"]): item for item in snapshot["examples"] for origin in item["origins"]}

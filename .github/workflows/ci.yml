@@ -42,6 +42,8 @@ jobs:
           persist-credentials: false
       - name: Validate release automation
         run: python3 -m unittest discover -s Tests/ReleaseTests -p 'test_*.py'
+      - name: Verify Kit-only integration
+        run: python3 Scripts/check_kit_package.py
       - name: Test Swift package
         run: swift test --build-system native
       - name: Build Apple Silicon workbench

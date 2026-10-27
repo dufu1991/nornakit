@@ -1,6 +1,7 @@
 import AppKit
 import XCTest
 @testable import NornaKit
+import NornaExamples
 
 final class AppleAppearanceTests: XCTestCase {
     private let appearances: [DiagramTheme] = [.appleLight, .appleDark, .appleLightHighContrast, .appleDarkHighContrast]

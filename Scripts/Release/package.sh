@@ -43,7 +43,7 @@ app="$project_root/build/Build/Products/Release/Norna Studio.app"
 app_version="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$app/Contents/Info.plist")"
 app_build="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$app/Contents/Info.plist")"
 [[ "$app_version" == "$version" && "$app_build" == "$build_number" ]]
-for binary in "$app/Contents/MacOS/Norna Studio" "$app/Contents/Frameworks/NornaKit.framework/NornaKit"; do
+for binary in "$app/Contents/MacOS/Norna Studio" "$app/Contents/Frameworks/NornaKit.framework/NornaKit" "$app/Contents/Frameworks/NornaExamples.framework/NornaExamples"; do
     if [[ "$(lipo -archs "$binary")" != arm64 ]]; then
         echo "Expected only arm64 architecture: $binary" >&2
         exit 1
@@ -81,7 +81,9 @@ print(identities[0])
 fi
 
 # Sign embedded code before signing the enclosing app.
-codesign "${sign_arguments[@]}" --sign "$identity" "$app/Contents/Frameworks/NornaKit.framework"
+for framework in NornaKit NornaExamples; do
+    codesign "${sign_arguments[@]}" --sign "$identity" "$app/Contents/Frameworks/$framework.framework"
+done
 codesign "${sign_arguments[@]}" --sign "$identity" \
     --entitlements Configuration/NornaStudio.entitlements "$app"
 codesign --verify --deep --strict --verbose=2 "$app"

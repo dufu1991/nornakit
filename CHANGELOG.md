@@ -2,6 +2,13 @@
 
 NornaKit library versions use `vX.Y.Z` tags. Norna Studio keeps an independent app version and build number. Kit releases may include optional Studio companion assets; standalone app releases use `studio-vX.Y.Z` tags.
 
+## 0.2.0 — 2026-10-27
+
+- Remove bundled examples, official source snapshots, and validation baselines from the NornaKit library target and framework.
+- Move example models, catalogs, language helpers, and example-related DiagramKind properties into the internal NornaExamples module used by Studio and regression tests. Applications integrating only the NornaKit product no longer compile or copy the example library.
+
+This removes the example APIs from `import NornaKit`; rendering, layout, and export APIs are unchanged. NornaExamples is an internal support module, not a published library product. The optional companion is Norna Studio 0.1.1, build 9.
+
 ## 0.1.1 — 2026-10-22
 
 - Stabilize compound layouts across edge declaration orders and plan nested connections at their shared outer boundaries.

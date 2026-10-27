@@ -8,8 +8,8 @@ NornaKit is the primary library product. GitHub Releases lead with the Kit versi
 
 | Product | Source of truth | Git tag | Current version |
 | --- | --- | --- | --- |
-| NornaKit Swift Package | `Configuration/Kit-Version.json` | `vX.Y.Z` | `v0.1.1` |
-| Norna Studio app | `Configuration/Studio-Version.xcconfig` | `studio-vX.Y.Z` for standalone app releases | `0.1.1`, build `8` |
+| NornaKit Swift Package | `Configuration/Kit-Version.json` | `vX.Y.Z` | `v0.2.0` |
+| Norna Studio app | `Configuration/Studio-Version.xcconfig` | `studio-vX.Y.Z` for standalone app releases | `0.1.1`, build `9` |
 
 Swift Package Manager reads the Kit version from its Git tag. `Package.swift` has no separate version field. A companion attachment does not change the meaning of the Kit tag: its hidden release-note manifest records the independent app `version`, app `build`, library `kitVersion`, library source `commit`, and hosting `releaseTag`.
 
@@ -54,7 +54,7 @@ When both version files change together, the Kit release takes priority and only
 
 ## Signing and build environment
 
-The workflow uses the GitHub-hosted `xcode-27` runner and Xcode 27.1. Both the app and embedded framework must contain only `arm64`; the minimum macOS version is 14. The native icon format also requires this Xcode generation. `.github/actionlint.yaml` registers the preview runner label for lint versions that do not yet recognize it.
+The workflow uses the GitHub-hosted `xcode-27` runner and Xcode 27.1. The app and both embedded frameworks, NornaKit and the internal NornaExamples support module, must contain only `arm64`; the minimum macOS version is 14. The native icon format also requires this Xcode generation. `.github/actionlint.yaml` registers the preview runner label for lint versions that do not yet recognize it.
 
 With `MACOS_SIGNING_ENABLED` unset or `false`, the package uses ad-hoc signatures without Hardened Runtime library validation. The app retains its sandbox entitlements. Release notes identify that the companion is not Developer ID signed or notarized.
 

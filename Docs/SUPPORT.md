@@ -62,7 +62,7 @@
 
 ## 复杂语法示例与约束
 
-编辑器在这四类图形的“示例”菜单中提供扩展节点与双向连线、参与者生命周期、接口与基数、并发状态示例。源码位于 `Sources/NornaKit/Examples/AdvancedDiagramExamples.swift`。
+编辑器在这四类图形的“示例”菜单中提供扩展节点与双向连线、参与者生命周期、接口与基数、并发状态示例。源码位于 `Sources/NornaExamples/AdvancedDiagramExamples.swift`。
 
 流程图新加入双圆、六边形、非对称、两种平行四边形和两种梯形。现代形状声明仅接受已支持形状的 `shape` 和 `label`，未知形状或属性会报错。不可见连线参与布局，但不绘制。长连线在无环分层部分保留最小跨度，循环回边不保证跨度。
 

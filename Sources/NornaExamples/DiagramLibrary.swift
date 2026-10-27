@@ -1,4 +1,5 @@
 import Foundation
+import NornaKit
 
 public enum DiagramCategory: String, CaseIterable, Identifiable, Sendable {
     case process, relationships, architecture, charts, planning, hierarchy, development

@@ -1,5 +1,6 @@
 import XCTest
 @testable import NornaKit
+import NornaExamples
 
 final class EdgeReadabilityTests: XCTestCase {
     func testAgentChainsStayAlignedAndLongBranchUsesOneContinuousCorridor() throws {

@@ -1,6 +1,7 @@
 import Foundation
 import XCTest
 @testable import NornaKit
+import NornaExamples
 
 final class NativeFlowchartTests: XCTestCase {
     func testBundledExamplesRenderWithoutOverlappingNodes() async throws {

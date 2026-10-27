@@ -10,7 +10,6 @@
 		039BC2C8D6D5899020A45FA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07382FA30697D4AE58060954 /* Assets.xcassets */; };
 		0565499A6C24CC425DB3F77F /* GitDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29187FC0D3C2ACB77490E84E /* GitDiagram.swift */; };
 		07117D3E3CDC8D64385B0A73 /* NativeDrawingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70550ABF968ABD2E80FC1E0 /* NativeDrawingTests.swift */; };
-		07545F76B295CC28700DD688 /* DiagramExampleLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E076F6C2AA1E3B53B2C064F4 /* DiagramExampleLanguage.swift */; };
 		08F4EAD765E6792C0381845F /* BusinessMermaidRegressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118BAABA8B2226D650B829F8 /* BusinessMermaidRegressionTests.swift */; };
 		0B893B5DE7FE90A79E0652D2 /* ScenePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93104D591745FB248EF1B111 /* ScenePath.swift */; };
 		0FA939D3D7DBF771B813C5B5 /* DiagramExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A0662A64914077770F7A55 /* DiagramExportView.swift */; };
@@ -27,17 +26,22 @@
 		30D3F044A85864BA883C132C /* NodeGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF662344A6CC264DFE41BFE /* NodeGeometry.swift */; };
 		32C1EF667FCBA008FD95D85D /* DiagramRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC55AC827DDC683916FF851 /* DiagramRenderer.swift */; };
 		378BAF9DA53D73ABBDF82760 /* DiagramKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D28669C89EB40D816FD4F48 /* DiagramKind.swift */; };
+		39691E3524438A0C8644EE0F /* DiagramExampleLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD104243B8F918BF2C8BF0D7 /* DiagramExampleLanguage.swift */; };
 		39C894DE483CDB30DAC187F9 /* EdgeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C82C202B6A2B409FE32F4FD /* EdgeLayout.swift */; };
 		3A7FFA80A5D9928D2FCB968D /* RailroadDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6190B0CC5B7E54781801BD81 /* RailroadDiagram.swift */; };
 		3B20DA319F7DC320E9D49780 /* VectorScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FA2DA0D51B9D2783E190EC /* VectorScene.swift */; };
 		3E769B3BA2D333709276E4A4 /* DiagramExportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE925723A14FA7677437231D /* DiagramExportTests.swift */; };
+		3F31AEFA953565A38E76453A /* ScaleDiagramExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC28E0E23BDC777260FE409 /* ScaleDiagramExamples.swift */; };
 		3F8E88436E08B8335DA8DC51 /* DiagramTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F660957DD153B2BC06CB5 /* DiagramTheme.swift */; };
 		479510C13A5BE2C8126286A7 /* EmbeddedDiagramRegressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA99EF571B040BC17900DD /* EmbeddedDiagramRegressionTests.swift */; };
-		48B0C83B4AB3E3B078E79136 /* DiagramCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA593D819602CBB4F6FB57 /* DiagramCatalog.swift */; };
+		56D372F3AEC23908BAE0B274 /* NornaExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9824919E00AB02D9BB488DDC /* NornaExamples.framework */; };
+		5762E1110A873AE70DF3F5E6 /* DiagramCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB36B918A900DB03627E55 /* DiagramCatalog.swift */; };
+		5BCCF1A8C227AD6D1475CE4D /* NornaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50D10F47676D4A13196C0BE /* NornaKit.framework */; };
+		5BF215DA50F02D4658BD192B /* OfficialExampleCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC988290AB35036633482C1 /* OfficialExampleCatalog.swift */; };
+		5CECF50506DD17F58D69BEEF /* NornaExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9824919E00AB02D9BB488DDC /* NornaExamples.framework */; };
 		5F0710A79E438854D9BD177D /* SourceEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0790FE57B0E743E5C683607 /* SourceEditor.swift */; };
-		62EE4A03F4EC216E7EA56AC2 /* DiagramLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D019281E197D2B6686E9DE /* DiagramLibrary.swift */; };
+		6275F128D30ACA570703896C /* DiagramLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393C512B2F63FAB5C852D63 /* DiagramLibrary.swift */; };
 		64ACC67D7893EECC22875BA5 /* DiagramLayoutOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48DB87201C3B9B2D5A82B3 /* DiagramLayoutOptions.swift */; };
-		68796C3FFAB88E1578ED5E05 /* DiagramExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3183323397B2C6BBBBB823 /* DiagramExample.swift */; };
 		6A8EEACBBDC0889CCC1D32B4 /* TemporalDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B69C1B66BDE1E1890EF1984 /* TemporalDiagrams.swift */; };
 		6E48A90FD2B0061AA404E856 /* OfficialExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73050310F9CC6C4923733847 /* OfficialExampleTests.swift */; };
 		703000DEB3977232BCB093F5 /* ExampleLanguageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D311834E5E1BCA8314982E0 /* ExampleLanguageTests.swift */; };
@@ -45,15 +49,17 @@
 		713FB9F7CEA4C9BB14283D54 /* StudioLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C50D8F44744C724CE66FF55 /* StudioLocalization.swift */; };
 		788ADD857F6E2FC1E917B76F /* PacketEventDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F026D3F04696BC09CE51B /* PacketEventDiagrams.swift */; };
 		7A74B3AAD1B43D98EF914A44 /* NornaKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D50D10F47676D4A13196C0BE /* NornaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7CCD53ABB633523996AB47AE /* OfficialExampleCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C7915F08E0A07346EB114 /* OfficialExampleCatalog.swift */; };
+		7B7F0BA7B3CBEBE98B57ADA2 /* NornaExamples.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9824919E00AB02D9BB488DDC /* NornaExamples.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7F9C61DC580DFEE63E1F9B84 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A55C5592F19C254F580BE40C /* Localizable.strings */; };
 		8063EC70D1B8EC00AF5C9797 /* ScaleExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F707DE411F6073886C5534B6 /* ScaleExampleTests.swift */; };
+		80B573FB163A29E6FB4942D7 /* AdvancedDiagramExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF99055568DE898FA8F024 /* AdvancedDiagramExamples.swift */; };
 		83A4B43FA49C5F829755C1C3 /* NornaKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D50D10F47676D4A13196C0BE /* NornaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8538D07F78256C11D982A85B /* DiagramSemanticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3490153DCE2C62F88A8968 /* DiagramSemanticsTests.swift */; };
 		879823F2A73668D392C3F01A /* CompoundEdgeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B46B2224580DC4651D98AE6 /* CompoundEdgeRouter.swift */; };
 		8A4B6B57C42F7D457856342E /* DiagramCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07576E181CDD90838C919FE /* DiagramCatalogTests.swift */; };
 		8FD31F8A0886BA534601A0FB /* DiagramScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C77B2096A62F791287DCA4 /* DiagramScene.swift */; };
 		90A7AC8E192A57EAF6691160 /* NornaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50D10F47676D4A13196C0BE /* NornaKit.framework */; };
+		92D7BE459E1748A27B5E8BE2 /* NornaExamples.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9824919E00AB02D9BB488DDC /* NornaExamples.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		985E7ABF175702F44CEE549E /* ArchitectureDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761D64574A6813DD9C39FC93 /* ArchitectureDiagrams.swift */; };
 		9E29FF24EF64762F2F9A05BC /* SequenceDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6DD9D2734BCDB3C45D156 /* SequenceDiagram.swift */; };
 		A3648AF598DC7576048A0371 /* SVGExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D34763A68E207A2340C77 /* SVGExporter.swift */; };
@@ -64,11 +70,9 @@
 		B84108270EDE8E4483CE478F /* HierarchyDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA661DAFB0C8C8D30EF8534 /* HierarchyDiagrams.swift */; };
 		BAF80474E7668DF8DA99377C /* CompoundLayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA6CBC213E67D2359F47D4 /* CompoundLayoutEngine.swift */; };
 		BD4E20B5EB47EB4521AEAC41 /* NativeFlowchartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4495754BE5FF752BFBE9E6F6 /* NativeFlowchartTests.swift */; };
-		BD9665856BCFD2DB4DD1B655 /* ScaleDiagramExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775AF989307D8502098AD09 /* ScaleDiagramExamples.swift */; };
 		C37192A018BFBBAC44C12236 /* InlineSymbolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B679B5C6F1DD8069F1F52974 /* InlineSymbolTests.swift */; };
 		C6623B068C009D9EC5815422 /* CompoundRoutingPropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D139A09FB24C5801DD0420 /* CompoundRoutingPropertyTests.swift */; };
 		CAE6912939BD107C75DEB55C /* NornaSculpted.icon in Resources */ = {isa = PBXBuildFile; fileRef = 2C9A2555D02DD367A9F73C0F /* NornaSculpted.icon */; };
-		CC5896983692BE2006A524A6 /* AdvancedDiagramExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F8C7DAD56D0ED4B6318569 /* AdvancedDiagramExamples.swift */; };
 		D165C1091870C441203C34E0 /* AdaptiveLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7C1BA76D06E51BC092BDE /* AdaptiveLayoutTests.swift */; };
 		D34439E3846FAD56796D5D30 /* AppleAppearanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B53A12FD93639DE51D25B5 /* AppleAppearanceTests.swift */; };
 		D5FF61B6DA270A4444F739A0 /* DiagramStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7528F77D170BA6FE737735AA /* DiagramStyle.swift */; };
@@ -76,17 +80,25 @@
 		E0DDE87C08AAC08BD59C7694 /* AdvancedSyntaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF49A47989827EE84B89DB0 /* AdvancedSyntaxTests.swift */; };
 		E6D5000C0ACA0634E4F7B27B /* StudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C66715DE9A72E62E0682CE /* StudioView.swift */; };
 		EACC1D245F28B609D52B2C02 /* EdgeReadabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E03E9E59B8840050F7A080C /* EdgeReadabilityTests.swift */; };
+		EC75A7CD7735DADF5DAD7B0D /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 193FA0D3A1C629A2128CE911 /* Resources */; };
 		EDCB9B0FCD5756C1F1E7F6EC /* NativeDiagramPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4FC4FB8CE9E91DF2999D1 /* NativeDiagramPreview.swift */; };
 		EFD5C6F202CEDC41BAA215DC /* StudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4707B2E18F8BCB7C21E95E99 /* StudioModel.swift */; };
 		F1E8FF140287640EC43E6E19 /* NornaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50D10F47676D4A13196C0BE /* NornaKit.framework */; };
 		F6E22CE5FA1F89F5C446756A /* DataCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BE8C3952504C181210F85 /* DataCharts.swift */; };
 		F823E6BAA3DE33120EAB8BD4 /* SubgraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EE2138E3E7A073F4573DC1 /* SubgraphTests.swift */; };
-		FE4CC11BA770EC629D5CC796 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 193FA0D3A1C629A2128CE911 /* Resources */; };
+		FDEF42E9DA00A3961F0D1232 /* DiagramExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884162F245B9BAEE6CFD103C /* DiagramExample.swift */; };
 		FEA98F4E9A86C4DA59D81EE6 /* NativeInlineContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D6720543984E5FFA680E4 /* NativeInlineContentTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		2B78942521D98F8DF7C3AA6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABA64BFA6EA5B459B3A42909 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50933F516B66BBADCCE9F399;
+			remoteInfo = NornaKit;
+		};
+		AB5BC1832846845CFA951D89 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ABA64BFA6EA5B459B3A42909 /* Project object */;
 			proxyType = 1;
@@ -100,6 +112,20 @@
 			remoteGlobalIDString = 50933F516B66BBADCCE9F399;
 			remoteInfo = NornaKit;
 		};
+		CACC7043D034AF091BBBB46B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABA64BFA6EA5B459B3A42909 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5129205A6A9151E781D700FA;
+			remoteInfo = NornaExamples;
+		};
+		E0CE77D4110B7F6FE2B59D4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABA64BFA6EA5B459B3A42909 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5129205A6A9151E781D700FA;
+			remoteInfo = NornaExamples;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -110,6 +136,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				83A4B43FA49C5F829755C1C3 /* NornaKit.framework in Embed Frameworks */,
+				7B7F0BA7B3CBEBE98B57ADA2 /* NornaExamples.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +148,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				7A74B3AAD1B43D98EF914A44 /* NornaKit.framework in Embed Frameworks */,
+				92D7BE459E1748A27B5E8BE2 /* NornaExamples.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,15 +159,15 @@
 		03EE2138E3E7A073F4573DC1 /* SubgraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubgraphTests.swift; sourceTree = "<group>"; };
 		07382FA30697D4AE58060954 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A48DB87201C3B9B2D5A82B3 /* DiagramLayoutOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramLayoutOptions.swift; sourceTree = "<group>"; };
+		0CC988290AB35036633482C1 /* OfficialExampleCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialExampleCatalog.swift; sourceTree = "<group>"; };
 		118BAABA8B2226D650B829F8 /* BusinessMermaidRegressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMermaidRegressionTests.swift; sourceTree = "<group>"; };
 		134A2BBCF7EA7FFF9DEAB79A /* InlineText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineText.swift; sourceTree = "<group>"; };
 		18F1FBD3F53CEB9DDDDCA742 /* Norna Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Norna Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		193FA0D3A1C629A2128CE911 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = Sources/NornaKit/Resources; sourceTree = SOURCE_ROOT; };
+		193FA0D3A1C629A2128CE911 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = Sources/NornaExamples/Resources; sourceTree = SOURCE_ROOT; };
 		1AEA6CBC213E67D2359F47D4 /* CompoundLayoutEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundLayoutEngine.swift; sourceTree = "<group>"; };
 		1B69C1B66BDE1E1890EF1984 /* TemporalDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporalDiagrams.swift; sourceTree = "<group>"; };
 		2114E2A6043A3CFB43359C56 /* MermaidDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MermaidDocument.swift; sourceTree = "<group>"; };
 		21C66715DE9A72E62E0682CE /* StudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioView.swift; sourceTree = "<group>"; };
-		2775AF989307D8502098AD09 /* ScaleDiagramExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleDiagramExamples.swift; sourceTree = "<group>"; };
 		27E45FAFB712A7804D5BBDDA /* Studio-Version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Studio-Version.xcconfig"; sourceTree = "<group>"; };
 		29187FC0D3C2ACB77490E84E /* GitDiagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDiagram.swift; sourceTree = "<group>"; };
 		2C9A2555D02DD367A9F73C0F /* NornaSculpted.icon */ = {isa = PBXFileReference; lastKnownFileType = wrapper.icon; path = NornaSculpted.icon; sourceTree = "<group>"; };
@@ -151,6 +179,7 @@
 		3D311834E5E1BCA8314982E0 /* ExampleLanguageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleLanguageTests.swift; sourceTree = "<group>"; };
 		3D7D34763A68E207A2340C77 /* SVGExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGExporter.swift; sourceTree = "<group>"; };
 		4495754BE5FF752BFBE9E6F6 /* NativeFlowchartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeFlowchartTests.swift; sourceTree = "<group>"; };
+		46EB36B918A900DB03627E55 /* DiagramCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramCatalog.swift; sourceTree = "<group>"; };
 		4707B2E18F8BCB7C21E95E99 /* StudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioModel.swift; sourceTree = "<group>"; };
 		47B53A12FD93639DE51D25B5 /* AppleAppearanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAppearanceTests.swift; sourceTree = "<group>"; };
 		4D28669C89EB40D816FD4F48 /* DiagramKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramKind.swift; sourceTree = "<group>"; };
@@ -159,7 +188,6 @@
 		605EF079B06BB8FF5FAB17E8 /* RelationshipDiagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipDiagram.swift; sourceTree = "<group>"; };
 		611358CFE145F9D352E84937 /* DiagramSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramSyntax.swift; sourceTree = "<group>"; };
 		6190B0CC5B7E54781801BD81 /* RailroadDiagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailroadDiagram.swift; sourceTree = "<group>"; };
-		69F8C7DAD56D0ED4B6318569 /* AdvancedDiagramExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedDiagramExamples.swift; sourceTree = "<group>"; };
 		6BD4FC4FB8CE9E91DF2999D1 /* NativeDiagramPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeDiagramPreview.swift; sourceTree = "<group>"; };
 		6C82C202B6A2B409FE32F4FD /* EdgeLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeLayout.swift; sourceTree = "<group>"; };
 		6CC55AC827DDC683916FF851 /* DiagramRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramRenderer.swift; sourceTree = "<group>"; };
@@ -167,6 +195,7 @@
 		6E03E9E59B8840050F7A080C /* EdgeReadabilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeReadabilityTests.swift; sourceTree = "<group>"; };
 		6F1BE8C3952504C181210F85 /* DataCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCharts.swift; sourceTree = "<group>"; };
 		73050310F9CC6C4923733847 /* OfficialExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialExampleTests.swift; sourceTree = "<group>"; };
+		7393C512B2F63FAB5C852D63 /* DiagramLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramLibrary.swift; sourceTree = "<group>"; };
 		7528F77D170BA6FE737735AA /* DiagramStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramStyle.swift; sourceTree = "<group>"; };
 		761D64574A6813DD9C39FC93 /* ArchitectureDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureDiagrams.swift; sourceTree = "<group>"; };
 		7B46B2224580DC4651D98AE6 /* CompoundEdgeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundEdgeRouter.swift; sourceTree = "<group>"; };
@@ -175,28 +204,28 @@
 		7FAA99EF571B040BC17900DD /* EmbeddedDiagramRegressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedDiagramRegressionTests.swift; sourceTree = "<group>"; };
 		85299F4DF83E7F5F9FF05D64 /* LayeredLayoutEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayeredLayoutEngine.swift; sourceTree = "<group>"; };
 		86FA2DA0D51B9D2783E190EC /* VectorScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorScene.swift; sourceTree = "<group>"; };
+		884162F245B9BAEE6CFD103C /* DiagramExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramExample.swift; sourceTree = "<group>"; };
 		8A98FE9C352C3EECE71E98B6 /* BlockLaneDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockLaneDiagrams.swift; sourceTree = "<group>"; };
+		8CC28E0E23BDC777260FE409 /* ScaleDiagramExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleDiagramExamples.swift; sourceTree = "<group>"; };
 		93104D591745FB248EF1B111 /* ScenePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenePath.swift; sourceTree = "<group>"; };
 		94AC57512DFF4ED2F57E24B4 /* SpatialDataDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialDataDiagrams.swift; sourceTree = "<group>"; };
+		9824919E00AB02D9BB488DDC /* NornaExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NornaExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BAF99055568DE898FA8F024 /* AdvancedDiagramExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedDiagramExamples.swift; sourceTree = "<group>"; };
 		9C50D8F44744C724CE66FF55 /* StudioLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioLocalization.swift; sourceTree = "<group>"; };
 		9DF662344A6CC264DFE41BFE /* NodeGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeGeometry.swift; sourceTree = "<group>"; };
 		A07576E181CDD90838C919FE /* DiagramCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramCatalogTests.swift; sourceTree = "<group>"; };
-		A8BA593D819602CBB4F6FB57 /* DiagramCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramCatalog.swift; sourceTree = "<group>"; };
 		A98F026D3F04696BC09CE51B /* PacketEventDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketEventDiagrams.swift; sourceTree = "<group>"; };
 		AAE9F6DFF752BD1D63CBE265 /* TextMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMeasurement.swift; sourceTree = "<group>"; };
 		AE925723A14FA7677437231D /* DiagramExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramExportTests.swift; sourceTree = "<group>"; };
-		B37C7915F08E0A07346EB114 /* OfficialExampleCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialExampleCatalog.swift; sourceTree = "<group>"; };
 		B679B5C6F1DD8069F1F52974 /* InlineSymbolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineSymbolTests.swift; sourceTree = "<group>"; };
-		B8D019281E197D2B6686E9DE /* DiagramLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramLibrary.swift; sourceTree = "<group>"; };
 		BD7C630A2BB12E0CD230ED25 /* CoreGraphicsDiagramPainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsDiagramPainter.swift; sourceTree = "<group>"; };
 		C3439918BDBEFD60A44F23C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		CE3183323397B2C6BBBBB823 /* DiagramExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramExample.swift; sourceTree = "<group>"; };
 		D0790FE57B0E743E5C683607 /* SourceEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditor.swift; sourceTree = "<group>"; };
 		D50D10F47676D4A13196C0BE /* NornaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NornaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8F42C1346B07E0C3F2FF4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DBF89C08F096A9A5CF5FF17C /* NornaKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NornaKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD104243B8F918BF2C8BF0D7 /* DiagramExampleLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramExampleLanguage.swift; sourceTree = "<group>"; };
 		DF3490153DCE2C62F88A8968 /* DiagramSemanticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramSemanticsTests.swift; sourceTree = "<group>"; };
-		E076F6C2AA1E3B53B2C064F4 /* DiagramExampleLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramExampleLanguage.swift; sourceTree = "<group>"; };
 		E1A0662A64914077770F7A55 /* DiagramExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramExportView.swift; sourceTree = "<group>"; };
 		E4AC2091B388895C2ACE42AE /* ConnectorAuditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectorAuditTests.swift; sourceTree = "<group>"; };
 		E70550ABF968ABD2E80FC1E0 /* NativeDrawingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeDrawingTests.swift; sourceTree = "<group>"; };
@@ -213,6 +242,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1E8FF140287640EC43E6E19 /* NornaKit.framework in Frameworks */,
+				5CECF50506DD17F58D69BEEF /* NornaExamples.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E51CEBDDA6B1987F2BB7368 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BCCF1A8C227AD6D1475CE4D /* NornaKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90A7AC8E192A57EAF6691160 /* NornaKit.framework in Frameworks */,
+				56D372F3AEC23908BAE0B274 /* NornaExamples.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +315,7 @@
 			children = (
 				193FA0D3A1C629A2128CE911 /* Resources */,
 				4ABB42A2BBC761C7828EB340 /* Configuration */,
+				A4B7A4ACE27670AF388D5F89 /* NornaExamples */,
 				C70032A89D6383CA5911AC9A /* NornaKit */,
 				2D9DB60754B78C68AECDD0CF /* NornaKitTests */,
 				6D666AD3A49C210D60A23C5A /* NornaStudio */,
@@ -349,20 +389,6 @@
 			path = Sources/NornaStudio;
 			sourceTree = "<group>";
 		};
-		83EE044F0A88DEBDC026A8D2 /* Examples */ = {
-			isa = PBXGroup;
-			children = (
-				69F8C7DAD56D0ED4B6318569 /* AdvancedDiagramExamples.swift */,
-				A8BA593D819602CBB4F6FB57 /* DiagramCatalog.swift */,
-				CE3183323397B2C6BBBBB823 /* DiagramExample.swift */,
-				E076F6C2AA1E3B53B2C064F4 /* DiagramExampleLanguage.swift */,
-				B8D019281E197D2B6686E9DE /* DiagramLibrary.swift */,
-				B37C7915F08E0A07346EB114 /* OfficialExampleCatalog.swift */,
-				2775AF989307D8502098AD09 /* ScaleDiagramExamples.swift */,
-			);
-			path = Examples;
-			sourceTree = "<group>";
-		};
 		95BA0CD7D91FBA964D0E285E /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +404,21 @@
 				E1A0662A64914077770F7A55 /* DiagramExportView.swift */,
 			);
 			path = Export;
+			sourceTree = "<group>";
+		};
+		A4B7A4ACE27670AF388D5F89 /* NornaExamples */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF99055568DE898FA8F024 /* AdvancedDiagramExamples.swift */,
+				46EB36B918A900DB03627E55 /* DiagramCatalog.swift */,
+				884162F245B9BAEE6CFD103C /* DiagramExample.swift */,
+				DD104243B8F918BF2C8BF0D7 /* DiagramExampleLanguage.swift */,
+				7393C512B2F63FAB5C852D63 /* DiagramLibrary.swift */,
+				0CC988290AB35036633482C1 /* OfficialExampleCatalog.swift */,
+				8CC28E0E23BDC777260FE409 /* ScaleDiagramExamples.swift */,
+			);
+			name = NornaExamples;
+			path = Sources/NornaExamples;
 			sourceTree = "<group>";
 		};
 		B178874D3F6C2931203BA31C /* Models */ = {
@@ -417,7 +458,6 @@
 			isa = PBXGroup;
 			children = (
 				E9CAB65A13FCC24C86ACF652 /* Diagrams */,
-				83EE044F0A88DEBDC026A8D2 /* Examples */,
 				1FC67EB15A2834AC28D48AA0 /* Export */,
 				B609A06BD13FC2B80190B464 /* Layout */,
 				B178874D3F6C2931203BA31C /* Models */,
@@ -432,6 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				18F1FBD3F53CEB9DDDDCA742 /* Norna Studio.app */,
+				9824919E00AB02D9BB488DDC /* NornaExamples.framework */,
 				D50D10F47676D4A13196C0BE /* NornaKit.framework */,
 				DBF89C08F096A9A5CF5FF17C /* NornaKitTests.xctest */,
 			);
@@ -471,6 +512,7 @@
 			);
 			dependencies = (
 				08F1C71B663F4E7FD69EF979 /* PBXTargetDependency */,
+				48B06D330A1C96E96AAE9E37 /* PBXTargetDependency */,
 			);
 			name = NornaKitTests;
 			packageProductDependencies = (
@@ -484,7 +526,6 @@
 			buildConfigurationList = 2C6AF3229F68A9BC5CFFA893 /* Build configuration list for PBXNativeTarget "NornaKit" */;
 			buildPhases = (
 				B6E616C1A5E9F5AB612993D7 /* Sources */,
-				9D95CCC3F4406C46AABDF766 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -495,6 +536,26 @@
 			);
 			productName = NornaKit;
 			productReference = D50D10F47676D4A13196C0BE /* NornaKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5129205A6A9151E781D700FA /* NornaExamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2C34FD1F1C44DDA6400CD90 /* Build configuration list for PBXNativeTarget "NornaExamples" */;
+			buildPhases = (
+				4DF6CDE1E07E806DBBD682CF /* Sources */,
+				9F6AA45C2F6ED773B01C8785 /* Resources */,
+				3E51CEBDDA6B1987F2BB7368 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48B0BDEF30B04E3347A03D04 /* PBXTargetDependency */,
+			);
+			name = NornaExamples;
+			packageProductDependencies = (
+			);
+			productName = NornaExamples;
+			productReference = 9824919E00AB02D9BB488DDC /* NornaExamples.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B75CAE60302947D614F23BC9 /* NornaStudio */ = {
@@ -510,6 +571,7 @@
 			);
 			dependencies = (
 				51CBE3AAEA6FB9921AB98425 /* PBXTargetDependency */,
+				6B64A24142FD779A1843AD3C /* PBXTargetDependency */,
 			);
 			name = NornaStudio;
 			packageProductDependencies = (
@@ -533,6 +595,9 @@
 					50933F516B66BBADCCE9F399 = {
 						ProvisioningStyle = Automatic;
 					};
+					5129205A6A9151E781D700FA = {
+						ProvisioningStyle = Automatic;
+					};
 					B75CAE60302947D614F23BC9 = {
 						ProvisioningStyle = Automatic;
 					};
@@ -553,6 +618,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				5129205A6A9151E781D700FA /* NornaExamples */,
 				50933F516B66BBADCCE9F399 /* NornaKit */,
 				2310FBA478388EE32CCE42AC /* NornaKitTests */,
 				B75CAE60302947D614F23BC9 /* NornaStudio */,
@@ -571,11 +637,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9D95CCC3F4406C46AABDF766 /* Resources */ = {
+		9F6AA45C2F6ED773B01C8785 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE4CC11BA770EC629D5CC796 /* Resources in Resources */,
+				EC75A7CD7735DADF5DAD7B0D /* Resources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +674,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DF6CDE1E07E806DBBD682CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B573FB163A29E6FB4942D7 /* AdvancedDiagramExamples.swift in Sources */,
+				5762E1110A873AE70DF3F5E6 /* DiagramCatalog.swift in Sources */,
+				FDEF42E9DA00A3961F0D1232 /* DiagramExample.swift in Sources */,
+				39691E3524438A0C8644EE0F /* DiagramExampleLanguage.swift in Sources */,
+				6275F128D30ACA570703896C /* DiagramLibrary.swift in Sources */,
+				5BF215DA50F02D4658BD192B /* OfficialExampleCatalog.swift in Sources */,
+				3F31AEFA953565A38E76453A /* ScaleDiagramExamples.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FDDBF0A34C83BB9F9C50490 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -627,20 +707,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC5896983692BE2006A524A6 /* AdvancedDiagramExamples.swift in Sources */,
 				985E7ABF175702F44CEE549E /* ArchitectureDiagrams.swift in Sources */,
 				2394C87FCA07A488E803C053 /* BlockLaneDiagrams.swift in Sources */,
 				879823F2A73668D392C3F01A /* CompoundEdgeRouter.swift in Sources */,
 				BAF80474E7668DF8DA99377C /* CompoundLayoutEngine.swift in Sources */,
 				1E2B42E76D22FF6A2E20FF90 /* CoreGraphicsDiagramPainter.swift in Sources */,
 				F6E22CE5FA1F89F5C446756A /* DataCharts.swift in Sources */,
-				48B0C83B4AB3E3B078E79136 /* DiagramCatalog.swift in Sources */,
-				68796C3FFAB88E1578ED5E05 /* DiagramExample.swift in Sources */,
-				07545F76B295CC28700DD688 /* DiagramExampleLanguage.swift in Sources */,
 				2AA62FE0A3F3AE0DEDE68991 /* DiagramExporter.swift in Sources */,
 				378BAF9DA53D73ABBDF82760 /* DiagramKind.swift in Sources */,
 				64ACC67D7893EECC22875BA5 /* DiagramLayoutOptions.swift in Sources */,
-				62EE4A03F4EC216E7EA56AC2 /* DiagramLibrary.swift in Sources */,
 				32C1EF667FCBA008FD95D85D /* DiagramRenderer.swift in Sources */,
 				8FD31F8A0886BA534601A0FB /* DiagramScene.swift in Sources */,
 				D5FF61B6DA270A4444F739A0 /* DiagramStyle.swift in Sources */,
@@ -655,12 +730,10 @@
 				70382E0EDF39E9BFECB63E80 /* MermaidFlowchartParser.swift in Sources */,
 				21B9728D7F0116CDAA6A41A6 /* NativeDiagramRenderer.swift in Sources */,
 				30D3F044A85864BA883C132C /* NodeGeometry.swift in Sources */,
-				7CCD53ABB633523996AB47AE /* OfficialExampleCatalog.swift in Sources */,
 				788ADD857F6E2FC1E917B76F /* PacketEventDiagrams.swift in Sources */,
 				3A7FFA80A5D9928D2FCB968D /* RailroadDiagram.swift in Sources */,
 				1BA79392FD2ABFE7B73CBBA7 /* RelationshipDiagram.swift in Sources */,
 				A3648AF598DC7576048A0371 /* SVGExporter.swift in Sources */,
-				BD9665856BCFD2DB4DD1B655 /* ScaleDiagramExamples.swift in Sources */,
 				0B893B5DE7FE90A79E0652D2 /* ScenePath.swift in Sources */,
 				9E29FF24EF64762F2F9A05BC /* SequenceDiagram.swift in Sources */,
 				AA169686016FC19385AF3244 /* SpatialDataDiagrams.swift in Sources */,
@@ -679,10 +752,25 @@
 			target = 50933F516B66BBADCCE9F399 /* NornaKit */;
 			targetProxy = C833D7BAD8661992893CC672 /* PBXContainerItemProxy */;
 		};
+		48B06D330A1C96E96AAE9E37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5129205A6A9151E781D700FA /* NornaExamples */;
+			targetProxy = E0CE77D4110B7F6FE2B59D4C /* PBXContainerItemProxy */;
+		};
+		48B0BDEF30B04E3347A03D04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50933F516B66BBADCCE9F399 /* NornaKit */;
+			targetProxy = AB5BC1832846845CFA951D89 /* PBXContainerItemProxy */;
+		};
 		51CBE3AAEA6FB9921AB98425 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 50933F516B66BBADCCE9F399 /* NornaKit */;
 			targetProxy = 2B78942521D98F8DF7C3AA6D /* PBXContainerItemProxy */;
+		};
+		6B64A24142FD779A1843AD3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5129205A6A9151E781D700FA /* NornaExamples */;
+			targetProxy = CACC7043D034AF091BBBB46B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -735,6 +823,29 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.norna.NornaKitTests;
 				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		32C6953A085008D7E5DCA988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.norna.examples;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -832,6 +943,29 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.norna.NornaKitTests;
 				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B534D78DC6C53147D16818DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.norna.examples;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -981,6 +1115,15 @@
 			buildConfigurations = (
 				D4D3935CAD7527AC5C997605 /* Debug */,
 				1516EED6A3A5CAF5D51A68D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F2C34FD1F1C44DDA6400CD90 /* Build configuration list for PBXNativeTarget "NornaExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32C6953A085008D7E5DCA988 /* Debug */,
+				B534D78DC6C53147D16818DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
