@@ -1,0 +1,62 @@
+"""Independently inspect exported Windows native images, SVGs and searchable PDFs."""
+import json
+from pathlib import Path
+import sys
+import xml.etree.ElementTree as ET
+
+from PIL import Image
+from pypdf import PdfReader
+
+directory = Path(sys.argv[1])
+result = json.loads((directory / "result.json").read_text(encoding="utf-8"))
+assert result["status"] == "passed"
+assert result["architecture"] in {"X64", "Arm64"}
+for appearance in ("light", "dark", "highcontrastlight", "highcontrastdark"):
+    images = {}
+    for format_name in ("png", "jpeg", "tiff"):
+        with Image.open(directory / f"native-{appearance}.{format_name}") as image:
+            image.load()
+            assert image.width == (result["width"] + 32) * 2
+            assert image.height == (result["height"] + 32) * 2
+            assert image.convert("RGB").getextrema() != ((255, 255),) * 3
+            images[format_name] = image.size
+    assert len(set(images.values())) == 1
+    with Image.open(directory / f"native-{appearance}-transparent.png") as image:
+        assert image.mode == "RGBA"
+        assert image.getpixel((0, 0))[3] == 0
+    svg = ET.parse(directory / f"native-{appearance}.svg")
+    assert any(node.tag.endswith("text") and "NornaKit" in (node.text or "") for node in svg.iter())
+    reader = PdfReader(directory / f"native-{appearance}.pdf")
+    assert len(reader.pages) == 1
+    page = reader.pages[0]
+    extracted = page.extract_text()
+    for expected in ("NornaKit", "Windows", "你好，世界。", "粗体", "斜体", "原生富文本", "render(source)"):
+        assert expected in extracted, (expected, extracted)
+    fonts = page["/Resources"]["/Font"]
+    assert len(fonts) >= 3
+    for reference in fonts.values():
+        font = reference.get_object()
+        assert "/ToUnicode" in font
+        assert "/FontFile2" in font["/DescendantFonts"][0]["/FontDescriptor"]
+    assert b"/ActualText" in page.get_contents().get_data()
+regression = json.loads((directory / "regression.json").read_text(encoding="utf-8"))
+assert regression == {"rendered": 304, "rejected": 296, "failures": []}
+diagrams = list((directory / "diagrams").glob("*.pdf"))
+assert len(diagrams) == 33
+for file in diagrams:
+    svg = ET.parse(file.with_suffix(".svg")).getroot()
+    reader = PdfReader(file)
+    assert len(reader.pages) == 1
+    page = reader.pages[0]
+    assert abs(float(page.mediabox.width) - float(svg.attrib["width"])) < .01
+    assert abs(float(page.mediabox.height) - float(svg.attrib["height"])) < .01
+    assert page.extract_text().strip(), file.name
+    assert not page["/Resources"].get("/XObject"), file.name
+    for font in page["/Resources"]["/Font"].values():
+        font = font.get_object()
+        assert "/ToUnicode" in font
+        assert "/FontFile2" in font["/DescendantFonts"][0]["/FontDescriptor"]
+    with Image.open(file.with_suffix(".png")) as image:
+        assert image.size == (int(float(svg.attrib["width"]) + .999999), int(float(svg.attrib["height"]) + .999999)), file.name
+    assert not any("href" in attribute for node in svg.iter() for attribute in node.attrib), file.name
+print(f"Verified {result['architecture']} native export formats and searchable bilingual PDF text.")

@@ -26,3 +26,13 @@ xcuserdata/
 *.pfx
 __pycache__/
 *.py[cod]
+
+# .NET and Windows build products
+**/bin/
+**/obj/
+.vs/
+TestResults/
+/Windows/artifacts/
+*.user
+*.nupkg
+*.snupkg

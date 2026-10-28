@@ -1,17 +1,17 @@
-import { workbenchDownloadURL } from './download-config.js';
+import { workbenchDownloadURL, windowsStudioDownloads } from './download-config.js';
 import { inlineTranslations, updateInlineContent } from './inline-content.js';
 import { createPicker, icon } from './components.js';
 import { createNativeImage, setNativeImage } from './native-images.js';
 const translations = {
   en: {
-    skip: 'Skip to content', navigation: 'Main navigation', examples: 'Examples', getStarted: 'Get started', docs: 'Docs', language: 'Language', auto: 'Auto', eyebrow: 'BUILT WITH SWIFT. NATIVE BY DESIGN.', headline: 'Give your ideas<br><span class="hero-accent">a clearer shape.</span>', description: 'Mermaid diagrams, rendered natively in Swift.\nFrom a few lines of text to a picture that makes sense.', explore: 'Explore the examples', useSwift: 'Use it in Swift', pureSwift: 'Pure Swift', noWebView: 'No WebView', nativePreview: 'Native rendering preview', nativeOutput: 'Native output', screenshotNote: 'An actual Swift render. Presented here as a screenshot.', features: 'Features', feature1Title: 'Native, all the way.', feature1: 'Parsing, text measurement, layout, and drawing happen in Swift. No browser runtime in your app.', feature2Title: 'One scene. More possibilities.', feature2: 'The native canvas and SVG share the same geometry. Preview your diagram, then take it with you.', feature3Title: 'Ready to integrate.', feature3: 'Add NornaKit as a Swift Package. Parse, lay out, draw, and export diagrams directly in your app.', collection: 'THE NATIVE COLLECTION', examplesTitle: 'A little syntax. A lot of clarity.', families: '33 diagram families · 36 examples', examplesDescription: 'Explore native output across 33 diagram families, plus three built-in SF Symbols examples. Select an example to see its screenshot and source.', diagramExamples: 'Diagram examples', allExamples: 'All examples', source: 'Source', copy: 'Copy', copied: 'Copied to clipboard', copyFailed: 'Could not copy. Select the code to copy it manually.', downloadSource: 'Download .mmd', enlarge: 'Enlarge screenshot', viewScreenshot: 'View screenshot', compatibility: 'Each family includes a working example. Syntax support varies by diagram type.', supportLink: 'See support notes ↗', browseAll: 'Browse all 36 examples', builtFor: 'NATIVE DIAGRAMS FOR YOUR APP', startTitle: 'A native canvas.<br>A familiar language.', startDescription: 'Add NornaKit to your app for native diagram rendering and export. Norna Studio is an optional Mac tool for demos, rendering checks, debugging, and occasional exports.', readDocs: 'Read the documentation', studioSubtitle: 'Companion demo and debugging tool', moduleNote: 'Add the NornaKit package and import NornaKit to render diagrams.', closing: 'Less between your idea and the diagram.', takeLook: 'Take a closer look', footerSubtitle: 'Native diagrams, clearly.', support: 'Support', credits: 'Credits', attribution: 'Built with Swift. Native by design.', close: 'Close', downloadScreenshot: 'Download screenshot', appearance: 'Appearance', autoTheme: 'System', light: 'Light', dark: 'Dark', screenshotAlt: 'Native Swift render of a {name} diagram', title: 'NornaKit — Native diagrams, clearly.', metaDescription: 'Integrate native Mermaid diagrams into macOS apps with NornaKit, a pure Swift rendering library. Explore 33 diagram families, native output, and export.', heroAlt: 'An idea becomes Mermaid source, then a native diagram and an SVG export', loadError: 'Examples could not load. Refresh the page to try again.', docsTitle: 'Small library. Native foundations.', docsLead: 'NornaKit is a pure Swift library for parsing, laying out, rendering, and exporting diagrams in macOS apps. Norna Studio demonstrates the library and helps debug rendering issues.', requirementsTitle: 'Requirements', requirements: 'NornaKit and Norna Studio currently support macOS 14 or later. Norna Studio requires an Apple Silicon Mac. Build the app with Xcode 27.1 or later; the package requires Swift 6. The package declares no external package dependencies.', integrateTitle: 'Render a diagram', integrate: 'Add the NornaKit package from https://github.com/dufu1991/nornakit to your Xcode project and link the NornaKit library product. Rendering produces a scene for native drawing and SVG for export.', setupNotice: 'Add NornaKit from github.com/dufu1991/nornakit as a Swift Package dependency. The companion app is optional.', studioTitle: 'Optional demo and debugging tool', studio: 'From the project directory, open the Xcode project and select the NornaStudio scheme, or run the Swift package command below.', supportTitle: 'Support and current limits', supportIntro: 'The engine has 33 diagram families, with basic parsing, dedicated layouts, and working examples. This does not mean full Mermaid syntax compatibility.', support1: 'Flowcharts, sequence diagrams, class diagrams, state diagrams, entity relationships, and C4 architecture.', support2: 'Pie, XY, radar, Sankey, treemap, Gantt, timelines, and more.', support3: 'Layout adapts for supported families. Dense data or long labels may still cause crossings or crowding.', support4: 'Arbitrary HTML, CSS, scripts, and full Markdown styling are not interpreted.', originalSupport: 'Download the detailed support matrix in Chinese', screenshotsTitle: 'About the examples', screenshots: 'Every diagram on this site is a PNG produced by the Swift native drawing pipeline. The browser displays screenshots and source text; it does not execute the diagram engine. Example sources and screenshot labels follow the selected language. Both languages include light and dark screenshots.', attributionTitle: 'Acknowledgments', attributionDocs: 'Some measurement and layout formulas are adapted from Pele. Upstream license notices are included with the project. NornaKit is an independent project.', notices: 'Read third-party notices', docsPageTitle: 'Documentation — NornaKit', back: 'Back to NornaKit'
+    skip: 'Skip to content', navigation: 'Main navigation', examples: 'Examples', getStarted: 'Get started', docs: 'Docs', language: 'Language', auto: 'Auto', nativeOutput: 'Native output', diagramExamples: 'Diagram examples', source: 'Source', copy: 'Copy', copied: 'Copied to clipboard', copyFailed: 'Could not copy. Select the code to copy it manually.', downloadSource: 'Download .mmd', enlarge: 'Enlarge screenshot', viewScreenshot: 'View screenshot', support: 'Support', credits: 'Credits', close: 'Close', downloadScreenshot: 'Download screenshot', appearance: 'Appearance', autoTheme: 'System', light: 'Light', dark: 'Dark', screenshotAlt: 'Native Swift render of a {name} diagram', heroAlt: 'An idea becomes Mermaid source, then a native diagram and an SVG export', loadError: 'Examples could not load. Refresh the page to try again.', docsTitle: 'Small library. Native foundations.', docsLead: 'NornaKit provides native Swift and C# libraries for parsing, layout, drawing and export. Norna Studio demonstrates the libraries and helps debug rendering issues.', requirementsTitle: 'Requirements', requirements: 'NornaKit and Norna Studio currently support macOS 14 or later. Norna Studio requires an Apple Silicon Mac. Build the app with Xcode 27.1 or later; the package requires Swift 6. The package declares no external package dependencies.', integrateTitle: 'Render a diagram', integrate: 'Add the NornaKit package from https://github.com/dufu1991/nornakit to your Xcode project and link the NornaKit library product. Rendering produces a scene for native drawing and SVG for export.', setupNotice: 'Add NornaKit from github.com/dufu1991/nornakit as a Swift Package dependency. The companion app is optional.', studioTitle: 'Optional demo and debugging tool', studio: 'From the project directory, open the Xcode project and select the NornaStudio scheme, or run the Swift package command below.', supportTitle: 'Support and current limits', supportIntro: 'The engine has 33 diagram families, with basic parsing, dedicated layouts, and working examples. This does not mean full Mermaid syntax compatibility.', support1: 'Flowcharts, sequence diagrams, class diagrams, state diagrams, entity relationships, and C4 architecture.', support2: 'Pie, XY, radar, Sankey, treemap, Gantt, timelines, and more.', support3: 'Layout adapts for supported families. Dense data or long labels may still cause crossings or crowding.', support4: 'Arbitrary HTML, CSS, scripts, and full Markdown styling are not interpreted.', originalSupport: 'Download the detailed support matrix in Chinese', screenshotsTitle: 'About the examples', screenshots: 'Every diagram on this site is a PNG produced by the Swift native drawing pipeline. The browser displays screenshots and source text; it does not execute the diagram engine. Example sources and screenshot labels follow the selected language. Both languages include light and dark screenshots.', attributionTitle: 'Acknowledgments', attributionDocs: 'Some measurement and layout formulas are adapted from Pele. Upstream license notices are included with the project. NornaKit is an independent project.', notices: 'Read third-party notices', docsPageTitle: 'Documentation — NornaKit', back: 'Back to NornaKit'
   },
   zh: {
-    skip: '跳转到正文', navigation: '主导航', examples: '示例', getStarted: '开始使用', docs: '文档', language: '语言', auto: '自动', eyebrow: '以 Swift 构建，让图表原生呈现', headline: '让思路，<br><span class="hero-accent">清晰成形。</span>', description: '用 Swift 原生渲染 Mermaid 图表。\n几行文字，把想法变成看得懂的结构。', explore: '浏览图表示例', useSwift: '在 Swift 中使用', pureSwift: '纯 Swift', noWebView: '无 WebView', nativePreview: '原生渲染预览', nativeOutput: '原生绘制结果', screenshotNote: '由 Swift 原生绘制，本站以截图呈现。', features: '功能特点', feature1Title: '从头到尾，原生完成。', feature1: '解析、文本测量、布局与绘制，全部由 Swift 完成。应用无须嵌入浏览器运行时。', feature2Title: '同一场景，多种可能。', feature2: '原生画布与 SVG 共用几何数据。从预览到导出，让图表自然融入你的工作流。', feature3Title: '接入应用，原生绘制。', feature3: '通过 Swift Package 接入 NornaKit，在应用中直接解析、布局、绘制并导出图表。', collection: '原生图表示例集', examplesTitle: '几行语法，理清复杂。', families: '33 类图形 · 36 个示例', examplesDescription: '查看 33 类图形和 3 个 SF Symbols 内置示例的原生输出。选择示例，对照浅深色预览与对应源码。', diagramExamples: '图表示例', allExamples: '全部示例', source: '源码', copy: '复制', copied: '已复制到剪贴板', copyFailed: '复制未成功，请选中代码手动复制。', downloadSource: '下载 .mmd 源码', enlarge: '放大截图', viewScreenshot: '查看截图', compatibility: '每类图形均有可运行示例，具体语法支持范围因类型而异。', supportLink: '查看支持说明 ↗', browseAll: '浏览全部 36 个示例', builtFor: '为应用集成原生图表', startTitle: '原生的画布，<br>熟悉的表达。', startDescription: '将 NornaKit 集成到应用，获得原生图表渲染与导出能力。配套的 Norna Studio 用于演示、渲染验证、调试和临时导出。', readDocs: '阅读接入文档', studioSubtitle: '配套的演示与调试工具', moduleNote: '添加 NornaKit 包，导入 NornaKit 即可渲染图表。', closing: '从想法到图表，少一点距离。', takeLook: '再看看示例', footerSubtitle: '让思路，清晰成形。', support: '支持范围', credits: '致谢', attribution: '以 Swift 构建，原生呈现。', close: '关闭', downloadScreenshot: '下载截图', appearance: '外观', autoTheme: '跟随系统', light: '浅色', dark: '深色', screenshotAlt: '由 Swift 原生绘制的 {name} 截图', title: 'NornaKit — 让思路，清晰成形。', metaDescription: 'NornaKit 是纯 Swift 原生图表渲染库，可在 macOS 应用中渲染 Mermaid 图表，提供 33 类图形、原生绘制与导出。', heroAlt: '从输入想法、编写 Mermaid，到原生引擎生成图表与导出 SVG 的流程图', loadError: '示例加载失败，请刷新页面重试。', docsTitle: '轻量的库，原生的基础。', docsLead: 'NornaKit 提供可集成到 macOS 应用的解析、布局、原生绘制与导出能力。Norna Studio 用于展示库效果和调试渲染问题。', requirementsTitle: '运行要求', requirements: '当前 NornaKit 与 Norna Studio 支持 macOS 14 或更高版本。Norna Studio 仅支持 Apple Silicon Mac。完整应用要求 Xcode 27.1 或更高版本，Swift Package 要求 Swift 6。当前包没有外部包依赖。', integrateTitle: '渲染一张图表', integrate: '在 Xcode 项目中添加 https://github.com/dufu1991/nornakit 上的 NornaKit 包，并链接 NornaKit 库产品。渲染后可获取用于原生绘制的场景，以及用于导出的 SVG。', setupNotice: '从 github.com/dufu1991/nornakit 添加 NornaKit 作为 Swift Package 依赖，即可接入渲染能力。配套工作台按需使用。', studioTitle: '按需运行演示与调试工具', studio: '在项目目录中打开 Xcode 工程，选择 NornaStudio scheme，或使用下方的 Swift Package 命令运行。', supportTitle: '支持范围与当前限制', supportIntro: '引擎覆盖 33 类图形，提供基础解析、专用布局与可运行示例。这不代表完整兼容 Mermaid 的全部语法。', support1: '流程图、时序图、类图、状态图、实体关系图，以及 C4 架构图等。', support2: '饼图、XY 坐标图、雷达图、桑基图、矩形树图、甘特图与时间线等。', support3: '部分图形支持自适应布局，密集数据或过长标签仍可能产生交叉与拥挤。', support4: '不解释任意 HTML、CSS、脚本或完整的 Markdown 富文本样式。', originalSupport: '下载完整中文支持矩阵', screenshotsTitle: '关于本站示例', screenshots: '本站所有图表均为 Swift 原生绘制流程生成的 PNG。浏览器只展示截图和源码，不执行图表引擎。示例源码和截图标签随语言切换，中英文均提供浅色与深色版本。', attributionTitle: '致谢', attributionDocs: '部分测量与布局公式参考并移植自 Pele，项目包含相应的上游许可声明。NornaKit 是独立项目。', notices: '阅读第三方许可声明', docsPageTitle: '文档 — NornaKit', back: '返回 NornaKit'
+    skip: '跳转到正文', navigation: '主导航', examples: '示例', getStarted: '开始使用', docs: '文档', language: '语言', auto: '自动', nativeOutput: '原生绘制结果', diagramExamples: '图表示例', source: '源码', copy: '复制', copied: '已复制到剪贴板', copyFailed: '复制未成功，请选中代码手动复制。', downloadSource: '下载 .mmd 源码', enlarge: '放大截图', viewScreenshot: '查看截图', support: '支持范围', credits: '致谢', close: '关闭', downloadScreenshot: '下载截图', appearance: '外观', autoTheme: '跟随系统', light: '浅色', dark: '深色', screenshotAlt: '由 Swift 原生绘制的 {name} 截图', heroAlt: '从输入想法、编写 Mermaid，到原生引擎生成图表与导出 SVG 的流程图', loadError: '示例加载失败，请刷新页面重试。', docsTitle: '轻量的库，原生的基础。', docsLead: 'NornaKit 提供可集成到 macOS 与 Windows 应用的解析、布局、原生绘制与导出能力。Norna Studio 用于展示库效果和调试渲染问题。', requirementsTitle: '运行要求', requirements: '当前 NornaKit 与 Norna Studio 支持 macOS 14 或更高版本。Norna Studio 仅支持 Apple Silicon Mac。完整应用要求 Xcode 27.1 或更高版本，Swift Package 要求 Swift 6。当前包没有外部包依赖。', integrateTitle: '渲染一张图表', integrate: '在 Xcode 项目中添加 https://github.com/dufu1991/nornakit 上的 NornaKit 包，并链接 NornaKit 库产品。渲染后可获取用于原生绘制的场景，以及用于导出的 SVG。', setupNotice: '从 github.com/dufu1991/nornakit 添加 NornaKit 作为 Swift Package 依赖，即可接入渲染能力。配套工作台按需使用。', studioTitle: '按需运行演示与调试工具', studio: '在项目目录中打开 Xcode 工程，选择 NornaStudio scheme，或使用下方的 Swift Package 命令运行。', supportTitle: '支持范围与当前限制', supportIntro: '引擎覆盖 33 类图形，提供基础解析、专用布局与可运行示例。这不代表完整兼容 Mermaid 的全部语法。', support1: '流程图、时序图、类图、状态图、实体关系图，以及 C4 架构图等。', support2: '饼图、XY 坐标图、雷达图、桑基图、矩形树图、甘特图与时间线等。', support3: '部分图形支持自适应布局，密集数据或过长标签仍可能产生交叉与拥挤。', support4: '不解释任意 HTML、CSS、脚本或完整的 Markdown 富文本样式。', originalSupport: '下载完整中文支持矩阵', screenshotsTitle: '关于本站示例', screenshots: '本站所有图表均为 Swift 原生绘制流程生成的 PNG。浏览器只展示截图和源码，不执行图表引擎。示例源码和截图标签随语言切换，中英文均提供浅色与深色版本。', attributionTitle: '致谢', attributionDocs: '部分测量与布局公式参考并移植自 Pele，项目包含相应的上游许可声明。NornaKit 是独立项目。', notices: '阅读第三方许可声明', docsPageTitle: '文档 — NornaKit', back: '返回 NornaKit'
   }
 };
-Object.assign(translations.en, { browserLanguage: 'Follow browser', searchExamples: 'Search examples…', noResults: 'No examples found', pickerLabel: 'Example' });
-Object.assign(translations.zh, { browserLanguage: '跟随浏览器', searchExamples: '搜索示例名称…', noResults: '没有找到匹配的示例', pickerLabel: '示例' });
+Object.assign(translations.en, { browserLanguage: 'Follow browser' });
+Object.assign(translations.zh, { browserLanguage: '跟随浏览器' });
 Object.assign(translations.en, { githubRepository: 'View the NornaKit repository on GitHub', workbench: 'Studio', workbenchDownload: 'Download the Norna Studio demo and debugging tool for Mac', workbenchComingSoon: 'The Mac app download is coming soon.' });
 Object.assign(translations.zh, { githubRepository: '在 GitHub 查看 NornaKit 源码仓库', workbench: '工作台', workbenchDownload: '下载 Mac 版 Norna Studio 演示与调试工具', workbenchComingSoon: 'Mac 版工作台下载即将开放。' });
 Object.assign(translations.en, {
@@ -32,8 +32,6 @@ Object.assign(translations.zh, {
 });
 Object.assign(translations.en, { previousImage: 'Previous image', nextImage: 'Next image', browseScreenshots: 'Browse screenshots', navigationHint: 'Use ← → to browse', previewPosition: '{name}, image {current} of {total}.' });
 Object.assign(translations.zh, { previousImage: '上一张', nextImage: '下一张', browseScreenshots: '浏览截图', navigationHint: '使用左右方向键切换', previewPosition: '{name}，第 {current} 张，共 {total} 张。' });
-Object.assign(translations.en, { currentPlatform: 'Currently macOS 14+' });
-Object.assign(translations.zh, { currentPlatform: '当前支持 macOS 14+' });
 Object.assign(translations.en, {
   symbolsTitle: 'SF Symbols inside text',
   symbolsLead: 'Write :sf:name: anywhere in a displayed label, for example Upload :sf:icloud.and.arrow.up: file. Use the exact system symbol name from the SF Symbols app. Multiple symbols can appear in one label.',
@@ -56,6 +54,114 @@ Object.assign(translations.zh, {
   symbolsAlt: '在标签中嵌入 SF Symbols 的原生图表',
   symbolsDownload: '下载 SF Symbols 示例源码'
 });
+Object.assign(translations.en, {
+  windowsKit: 'Windows Kit', windowsPageTitle: 'Windows Kit — NornaKit', windowsTitle: 'Native diagrams for Windows.',
+  windowsLead: 'Independent C# libraries on .NET 10. DirectWrite text, Win2D drawing and local export across all 33 diagram families. The optional workbench uses WinUI 3.',
+  windowsRequirements: 'Windows 11 build 22000 or later, x64 and ARM64. Build with .NET SDK 10.0.402 and Windows SDK 26100. Use project references until NuGet packages are published.',
+  windowsIntegration: 'NornaKit.Core contains parsing, layout and geometry. NornaKit.Windows adds native text, drawing, icons, export and an optional WinUI preview control. The Kit does not need a running workbench or visible window.',
+  windowsExports: 'Export PNG, JPEG, TIFF, SVG and PDF from the same immutable scene. PDF embeds the actual selected TrueType fonts and keeps ordinary text selectable and searchable. Icons use self contained paths in SVG.',
+  windowsIcons: 'Use :win:document: or other supported Segoe Fluent Icons names. Built in SF tokens have explicit semantic mappings; unknown names remain literal. Windows icons are monochrome and use the first configured color.',
+  windowsSource: 'Read the Windows integration guide', windowsDownloads: 'Windows workbench downloads',
+  windowsPending: 'No Windows release has been published yet. Downloads remain disabled until verified release assets exist. Source builds and CI packages are available from the repository.',
+  windowsX64: 'Windows x64 installer', windowsArm64: 'Windows ARM64 installer', windowsDocLink: 'Use the native Windows libraries →'
+});
+Object.assign(translations.zh, {
+  windowsKit: 'Windows Kit', windowsPageTitle: 'Windows 接入 — NornaKit', windowsTitle: '为 Windows 原生绘制图表。',
+  windowsLead: '独立的 C# 库，运行于 .NET 10。通过 DirectWrite 排版、Win2D 绘制并在本地导出全部 33 类图形。配套工作台使用 WinUI 3。',
+  windowsRequirements: '支持 Windows 11 初始版本及以上的 x64 与 ARM64。构建使用 .NET SDK 10.0.402 与 Windows SDK 26100。NuGet 包发布前通过项目引用接入。',
+  windowsIntegration: 'NornaKit.Core 提供解析、布局与几何。NornaKit.Windows 提供原生文本、绘制、图标、导出和可选的 WinUI 预览控件。集成库无须启动工作台或创建可见窗口。',
+  windowsExports: '同一份不可变场景可导出 PNG、JPEG、TIFF、SVG 与 PDF。PDF 嵌入实际选用的 TrueType 字体，普通文字可选择、可搜索。SVG 图标使用自包含路径。',
+  windowsIcons: '使用 :win:document: 等 Segoe Fluent Icons 标记。内置示例的 SF 标记通过显式语义映射转换，未知名称保留原文。Windows 图标统一单色，采用首个配置颜色。',
+  windowsSource: '阅读 Windows 接入指南', windowsDownloads: 'Windows 工作台下载',
+  windowsPending: 'Windows 正式版本尚未发布，下载入口将在产物发布并验证后启用。当前可从源码构建，或查看仓库中的 CI 构建产物。',
+  windowsX64: 'Windows x64 安装程序', windowsArm64: 'Windows ARM64 安装程序', windowsDocLink: '接入 Windows 原生库 →'
+});
+Object.assign(translations.en, {
+  sponsor: 'Sponsor', sponsorEyebrow: 'OPEN SOURCE · COMMUNITY SUPPORTED', sponsorTitle: 'Support NornaKit',
+  sponsorDescription: 'If NornaKit helps you build native diagrams, consider supporting its development, documentation, and ongoing maintenance. Thank you for helping the project grow.',
+  sponsorInternational: 'Recommended outside China', sponsorChina: 'Recommended in China',
+  sponsorWechat: 'WeChat', sponsorAlipay: 'Alipay', sponsorWechatScan: 'Scan with WeChat', sponsorAlipayScan: 'Scan with Alipay',
+  sponsorWechatAlt: 'WeChat sponsorship QR code', sponsorAlipayAlt: 'Alipay sponsorship QR code',
+  sponsorThanks: 'Every contribution helps keep native diagrams moving forward.'
+});
+Object.assign(translations.zh, {
+  sponsor: '赞助', sponsorEyebrow: '开放源码 · 社区支持', sponsorTitle: '支持 NornaKit',
+  sponsorDescription: '如果 NornaKit 帮助你实现了原生图表，欢迎通过赞助支持渲染库的开发、文档建设与长期维护。感谢你的支持，让项目持续成长。',
+  sponsorInternational: '推荐中国以外地区使用', sponsorChina: '推荐中国地区使用',
+  sponsorWechat: '微信赞赏', sponsorAlipay: '支付宝', sponsorWechatScan: '微信扫一扫', sponsorAlipayScan: '支付宝扫一扫',
+  sponsorWechatAlt: '微信赞赏二维码', sponsorAlipayAlt: '支付宝赞助二维码',
+  sponsorThanks: '每一份支持，都在帮助原生图表持续成长。'
+});
+Object.assign(translations.en, {
+  title: 'NornaKit — Native Mermaid diagrams for Swift and C#',
+  metaDescription: 'NornaKit renders Mermaid diagrams natively in Swift on macOS and in C# on Windows. 33 diagram families, native text and drawing, PNG, SVG and PDF export.',
+  windowsNav: 'Windows', footerNavigation: 'Footer', installLabel: 'Install', codeLanguage: 'Language',
+  heroTitle: 'Native Mermaid diagrams for Swift and C#.',
+  heroLead: 'NornaKit parses Mermaid text, measures it with the platform’s own text engine, lays it out and draws it with CoreGraphics or Win2D. No WebView, no JavaScript runtime, no network service.',
+  readDocs: 'Read the docs', installSwift: 'Add the package in Package.swift or Xcode, then link the NornaKit product.', installWindows: 'Reference the project directly until NuGet packages are published.',
+  heroCaption: 'Actual native output from NornaKit, shown here as a screenshot.',
+  startTitle: 'Quick start', startLead: 'Three steps from Mermaid text to a diagram inside your app.',
+  step1Title: 'Add the library', step1: 'Swift Package Manager on macOS. Project references to NornaKit.Core and NornaKit.Windows on Windows.',
+  step2Title: 'Render the source', step2: 'The renderer parses Mermaid, measures text natively and lays the diagram out into an immutable scene.',
+  step3Title: 'Draw or export', step3: 'Draw the scene in your own view, or export PNG, JPEG, TIFF, SVG and PDF from the same geometry.',
+  platformsTitle: 'Platforms', platformsLead: 'Two independent native implementations that share the same diagram families and layout model.',
+  rowLanguage: 'Language', rowSystem: 'System', rowText: 'Text', rowDrawing: 'Drawing', rowExport: 'Export', rowIcons: 'Inline icons', rowInstall: 'Integration', rowStudio: 'Companion app', rowGuide: 'Guide',
+  windowsSystem: 'Windows 11 (build 22000+), x64 and ARM64', windowsInstall: 'Project references (NuGet coming later)',
+  macStudio: 'Norna Studio, Apple Silicon', windowsStudio: 'WinUI 3 workbench, not yet released', macGuide: 'macOS documentation →', windowsGuide: 'Windows documentation →',
+  featuresTitle: 'What’s included', featuresLead: 'Everything runs locally, inside your app’s process.',
+  featureParseTitle: 'Parsing with source locations', featureParse: 'Mermaid parsing for 33 diagram families, with error locations that point back to the source text.',
+  featureTextTitle: 'Native text measurement', featureText: 'Labels are measured by CoreText or DirectWrite, so layout matches what the system actually draws.',
+  featureLayoutTitle: 'Adaptive layout', featureLayout: 'Dedicated layouts per family that adapt to width limits and label length.',
+  featureSceneTitle: 'One scene, every output', featureScene: 'On-screen drawing and every export format share the same immutable scene geometry.',
+  featureThemeTitle: 'System appearances', featureTheme: 'Light, dark and increased contrast, with configurable diagram colors.',
+  featureInlineTitle: 'Inline icons and rich text', featureInline: 'SF Symbols or Segoe Fluent Icons inside labels, plus native rich text extensions.',
+  compatibility: 'Syntax support varies by diagram family. NornaKit does not claim complete Mermaid compatibility.', supportLink: 'See the support notes →',
+  examplesTitle: 'Examples', examplesLead: '33 diagram families and 3 SF Symbols examples. Every image is real native output; select one to see its source.',
+  browseAll: 'Browse all 36 screenshots',
+  studioTitle: 'Norna Studio', studioLead: 'An optional Mac app for demos, rendering checks, debugging and occasional exports. You do not need it to use the library.',
+  studioRequirements: 'macOS 14+ · Apple Silicon', studioDownload: 'Download for Mac',
+  resourcesTitle: 'Resources', resDocs: 'Documentation', resDocsText: 'Requirements, integration, inline content and Studio.',
+  resWindows: 'Windows guide', resWindowsText: 'C# libraries, Win2D drawing, export and packaging.',
+  resSupport: 'Support notes', resSupportText: 'Supported constructs and current limits per family.',
+  resGithubText: 'Source code, issues and releases.', resChangelog: 'Changelog', resChangelogText: 'What changed in each library release.',
+  resCreditsText: 'Third-party notices and acknowledgments.',
+  footerTagline: 'Native diagrams, clearly.', footerLegal: 'MIT License · © 2026 dufu1991'
+});
+Object.assign(translations.zh, {
+  title: 'NornaKit — Swift 与 C# 原生 Mermaid 图表渲染库',
+  metaDescription: 'NornaKit 在 macOS 上用 Swift、在 Windows 上用 C# 原生渲染 Mermaid 图表，支持 33 类图形、原生排版与绘制，以及 PNG、SVG、PDF 导出。',
+  windowsNav: 'Windows', footerNavigation: '页脚导航', installLabel: '安装方式', codeLanguage: '语言',
+  heroTitle: '用 Swift 与 C# 原生渲染 Mermaid 图表。',
+  heroLead: 'NornaKit 解析 Mermaid 文本，使用系统自带的文字引擎测量排版，再通过 CoreGraphics 或 Win2D 绘制。不依赖 WebView、JavaScript 运行时或网络服务。',
+  readDocs: '阅读文档', installSwift: '在 Package.swift 或 Xcode 中添加依赖，并链接 NornaKit 库产品。', installWindows: 'NuGet 包发布前，直接以项目引用的方式接入。',
+  heroCaption: 'NornaKit 原生引擎的实际输出，本站以截图呈现。',
+  startTitle: '快速上手', startLead: '三步把 Mermaid 文本变成应用里的图表。',
+  step1Title: '添加依赖', step1: 'macOS 使用 Swift Package Manager；Windows 引用 NornaKit.Core 与 NornaKit.Windows 项目。',
+  step2Title: '渲染源码', step2: '渲染器解析 Mermaid，原生测量文字，并将图表布局为不可变的场景。',
+  step3Title: '绘制或导出', step3: '在自己的视图中绘制场景，或基于同一份几何导出 PNG、JPEG、TIFF、SVG 与 PDF。',
+  platformsTitle: '平台对照', platformsLead: '两套独立的原生实现，共享相同的图形类型与布局模型。',
+  rowLanguage: '语言', rowSystem: '系统', rowText: '文字排版', rowDrawing: '绘制', rowExport: '导出', rowIcons: '行内图标', rowInstall: '接入方式', rowStudio: '配套工具', rowGuide: '接入指南',
+  windowsSystem: 'Windows 11（22000 及以上），x64 与 ARM64', windowsInstall: '项目引用（NuGet 包后续发布）',
+  macStudio: 'Norna Studio，Apple Silicon', windowsStudio: 'WinUI 3 工作台，尚未发布', macGuide: 'macOS 文档 →', windowsGuide: 'Windows 文档 →',
+  featuresTitle: '包含的能力', featuresLead: '全部在本地、在你的应用进程内完成。',
+  featureParseTitle: '解析与源码定位', featureParse: '解析 33 类 Mermaid 图形，错误信息可定位回源码位置。',
+  featureTextTitle: '原生文字测量', featureText: '由 CoreText 或 DirectWrite 测量标签，布局与系统实际绘制保持一致。',
+  featureLayoutTitle: '自适应布局', featureLayout: '每类图形使用专用布局，适应宽度限制与标签长度。',
+  featureSceneTitle: '一份场景，多种输出', featureScene: '屏幕绘制与各种导出格式共用同一份不可变的场景几何。',
+  featureThemeTitle: '系统外观', featureTheme: '支持浅色、深色与增强对比度，图表颜色可配置。',
+  featureInlineTitle: '行内图标与富文本', featureInline: '在标签中嵌入 SF Symbols 或 Segoe Fluent Icons，并支持原生富文本扩展。',
+  compatibility: '具体语法支持范围因图形类型而异，NornaKit 不宣称完整兼容 Mermaid。', supportLink: '查看支持说明 →',
+  examplesTitle: '示例', examplesLead: '33 类图形与 3 个 SF Symbols 示例，全部为原生引擎的真实输出。选择一个示例查看源码。',
+  browseAll: '浏览全部 36 张截图',
+  studioTitle: 'Norna Studio', studioLead: '可选的 Mac 应用，用于演示、渲染验证、调试和临时导出。使用渲染库无须安装它。',
+  studioRequirements: 'macOS 14+ · Apple Silicon', studioDownload: '下载 Mac 版',
+  resourcesTitle: '资源', resDocs: '文档', resDocsText: '运行要求、接入方式、行内内容与工作台。',
+  resWindows: 'Windows 接入指南', resWindowsText: 'C# 库、Win2D 绘制、导出与打包。',
+  resSupport: '支持说明', resSupportText: '各类图形已支持的语法与当前限制。',
+  resGithubText: '源码、问题反馈与版本发布。', resChangelog: '更新日志', resChangelogText: '渲染库每个版本的变更。',
+  resCreditsText: '第三方许可声明与致谢。',
+  footerTagline: '让思路，清晰成形。', footerLegal: 'MIT 许可证 · © 2026 dufu1991'
+});
 let languagePreference = nornaSettings.languagePreference;
 let themePreference = nornaSettings.themePreference;
 let language = nornaSettings.resolveLanguage(languagePreference);
@@ -71,9 +177,6 @@ const languagePicker = createPicker({ host: $('#language-picker'), id: 'language
 const themePicker = createPicker({ host: $('#theme-picker'), id: 'theme', compact: true, onChange: (value) => {
   themePreference = value; localStorage.setItem('norna-theme', value); syncAppearance();
 } });
-const examplePicker = $('#example-picker') ? createPicker({ host: $('#example-picker'), id: 'all-examples', searchable: true, onChange: (value) => {
-  selected = value; updateExample();
-} }) : null;
 document.querySelectorAll('.quiet-button[data-i18n="copy"]').forEach((button) => {
   button.removeAttribute('data-i18n'); button.innerHTML = `${icon('copy')}<span data-i18n="copy"></span>`;
 });
@@ -89,6 +192,12 @@ const notify = (message) => {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => $('#toast').classList.remove('visible'), 2300);
 };
+if (windowsStudioDownloads.version && windowsStudioDownloads.x64 && windowsStudioDownloads.arm64) document.querySelectorAll('[data-windows-pending]').forEach((notice) => { notice.hidden = true; });
+document.querySelectorAll('[data-windows-download]').forEach((link) => {
+  const url = windowsStudioDownloads[link.dataset.windowsDownload];
+  if (!windowsStudioDownloads.version || !url) return;
+  link.href = url; link.removeAttribute('aria-disabled'); link.removeAttribute('role');
+});
 document.querySelectorAll('[data-workbench-download]').forEach((link) => {
   if (workbenchDownloadURL) {
     link.href = workbenchDownloadURL;
@@ -107,6 +216,16 @@ document.querySelectorAll('[data-workbench-download]').forEach((link) => {
     link.click();
   });
 });
+// Keep the displayed Kit version in step with the latest GitHub release; the built-in version stays when the request fails.
+if (document.querySelector('[data-kit-version]')) fetch('https://api.github.com/repos/dufu1991/nornakit/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
+  .then((response) => response.ok ? response.json() : null)
+  .then((release) => {
+    const version = /^v(\d+\.\d+\.\d+)$/.exec(release?.tag_name ?? '')?.[1];
+    if (!version) return;
+    document.querySelectorAll('[data-kit-version]').forEach((element) => { element.textContent = version; });
+    document.querySelectorAll('[data-latest-release]').forEach((link) => { link.href = release.html_url; });
+  })
+  .catch(() => {});
 const copy = async (text) => {
   if (!navigator.clipboard) { notify(t('copyFailed')); return; }
   await navigator.clipboard.writeText(text).then(() => notify(t('copied')), () => notify(t('copyFailed')));
@@ -128,10 +247,11 @@ const updateExample = () => {
   const example = examples.find((item) => item.id === selected);
   $('#example-source').textContent = sourceOf(example);
   setNativeImage($('#example-image'), { stem: imageStem(example), alt: screenshotAlt(example) });
-  examplePicker.setValue(selected);
+  $('#example-name').textContent = nameOf(example);
   $('#example-panel').setAttribute('aria-label', nameOf(example));
   $('#download-source').href = `assets/${imageStem(example)}.mmd`;
   $('#download-source').download = `${imageStem(example)}.mmd`;
+  document.querySelectorAll('#family-index button').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.example === selected)));
 };
 const showImage = (example) => {
   imageURL = example;
@@ -166,11 +286,41 @@ const renderGallery = () => {
     return button;
   }));
 };
-const renderExamplePicker = () => {
-  if (!examplePicker || !examples.length) return;
-  const example = examples.find((item) => item.id === selected);
-  examplePicker.update({ label: t('pickerLabel'), display: nameOf(example), value: selected, icon: 'grid', searchPlaceholder: t('searchExamples'), emptyText: t('noResults'), options: examples.map((item) => ({ value: item.id, label: nameOf(item), searchText: `${item.zh} ${item.en} ${item.id}` })) });
+const renderFamilyIndex = () => {
+  if (!$('#family-index') || !examples.length) return;
+  $('#family-index').replaceChildren(...examples.map((example) => {
+    const button = document.createElement('button');
+    button.type = 'button'; button.dataset.example = example.id; button.textContent = nameOf(example);
+    button.setAttribute('aria-pressed', String(example.id === selected));
+    button.addEventListener('click', () => { selected = example.id; updateExample(); });
+    return button;
+  }));
 };
+// Tab groups share one copy button that copies the visible panel.
+document.querySelectorAll('[data-tabs]').forEach((group) => {
+  const tabs = [...group.querySelectorAll('[role=tab]')];
+  const select = (tab) => tabs.forEach((item) => {
+    const active = item === tab;
+    item.setAttribute('aria-selected', String(active)); item.tabIndex = active ? 0 : -1;
+    document.getElementById(item.getAttribute('aria-controls')).hidden = !active;
+  });
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => select(tab));
+    tab.addEventListener('keydown', (event) => {
+      const offset = { ArrowLeft: -1, ArrowRight: 1 }[event.key];
+      if (!offset) return;
+      event.preventDefault();
+      const next = tabs[(index + offset + tabs.length) % tabs.length];
+      select(next); next.focus();
+    });
+  });
+});
+document.querySelectorAll('[data-copy]').forEach((button) => {
+  button.addEventListener('click', async () => {
+    const code = button.closest('.tab-group').querySelector('.tab-panel:not([hidden]) code');
+    await copy(code.textContent);
+  });
+});
 const updateSymbolsExample = () => {
   if (!$('#symbols-preview') || !examples.length) return;
   const example = examples.find((item) => item.builtinID === 'sf-symbols');
@@ -187,14 +337,15 @@ const localize = () => {
   document.querySelectorAll('[data-i18n]').forEach((element) => { element.textContent = t(element.dataset.i18n); });
   document.querySelectorAll('[data-i18n-html]').forEach((element) => { element.innerHTML = t(element.dataset.i18nHtml); });
   document.querySelectorAll('[data-i18n-aria]').forEach((element) => { element.setAttribute('aria-label', t(element.dataset.i18nAria)); });
-  document.title = t(document.body.dataset.page === 'docs' ? 'docsPageTitle' : 'title');
+  document.querySelectorAll('[data-i18n-alt]').forEach((element) => { element.alt = t(element.dataset.i18nAlt); });
+  document.title = t(document.body.dataset.page === 'windows' ? 'windowsPageTitle' : document.body.dataset.page === 'docs' ? 'docsPageTitle' : 'title');
   document.querySelector('meta[name="description"]').content = t('metaDescription');
   if ($('#hero-image')) {
     setNativeImage($('#hero-image'), { stem: `hero-${language}`, alt: t('heroAlt'), loading: 'eager' });
   }
   updateSymbolsExample();
   updateInlineContent(language);
-  updatePreferencePickers(); renderExamplePicker(); updateExample(); renderGallery();
+  updatePreferencePickers(); renderFamilyIndex(); updateExample(); renderGallery();
   if ($('#screenshot-dialog')?.open) showImage(imageURL);
 };
 const syncAppearance = () => {
@@ -225,7 +376,6 @@ window.addEventListener('pageshow', () => {
 window.addEventListener('languagechange', () => { if (languagePreference === 'auto') localize(); });
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { if (themePreference === 'auto') syncAppearance(); });
 $('#copy-example')?.addEventListener('click', async () => { await copy($('#example-source').textContent); });
-$('#copy-swift')?.addEventListener('click', async () => { await copy($('#swift-code').textContent); });
 $('#enlarge-example')?.addEventListener('click', () => showImage(examples.find((item) => item.id === selected)));
 $('#previous-image')?.addEventListener('click', () => navigateImage(-1));
 $('#next-image')?.addEventListener('click', () => navigateImage(1));
@@ -242,13 +392,23 @@ $('#screenshot-dialog')?.addEventListener('click', (event) => {
   const box = $('#screenshot-dialog').getBoundingClientRect();
   if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) $('#screenshot-dialog').close();
 });
+const sponsorDialog = $('#sponsor-dialog');
+document.querySelectorAll('[data-open-sponsor]').forEach((button) => {
+  button.addEventListener('click', () => sponsorDialog.showModal());
+});
+$('#close-sponsor')?.addEventListener('click', () => sponsorDialog.close());
+sponsorDialog?.addEventListener('click', (event) => {
+  if (event.target !== sponsorDialog) return;
+  const box = sponsorDialog.getBoundingClientRect();
+  if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) sponsorDialog.close();
+});
 localize();
 const loadExamples = async () => {
   const response = await fetch('examples.json');
   if (!response.ok) throw new Error(`Examples request failed: ${response.status}`);
-  examples = await response.json(); renderExamplePicker(); updateExample(); renderGallery(); updateSymbolsExample();
+  examples = await response.json(); renderFamilyIndex(); updateExample(); renderGallery(); updateSymbolsExample();
 };
-if (examplePicker || $('#symbols-preview')) loadExamples().catch(() => {
+if ($('#example-source') || $('#symbols-preview')) loadExamples().catch(() => {
   const source = $('#example-source') || $('#symbols-source');
   source.textContent = t('loadError');
 });

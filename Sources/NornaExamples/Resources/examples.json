@@ -1,0 +1,1784 @@
+{
+  "comparisons": [
+    {
+      "complexId": "flowchart-complex",
+      "kind": "flowchart",
+      "layoutNotes": {
+        "en": "More nodes require new layers, branch spacing and routes between groups.",
+        "zh": "节点增加后，分支、汇合与跨组连线需要重新分层和避障。"
+      },
+      "simpleId": "flowchart"
+    },
+    {
+      "complexId": "sequence-complex",
+      "kind": "sequence",
+      "layoutNotes": {
+        "en": "More participants and messages change lifeline spacing, frame height and message wrapping.",
+        "zh": "参与者与消息增加后，生命线间距、片段高度和消息换行随之变化。"
+      },
+      "simpleId": "sequence"
+    },
+    {
+      "complexId": "class-complex",
+      "kind": "class",
+      "layoutNotes": {
+        "en": "More classes and relationships require additional layers, member sections and connection ports.",
+        "zh": "类和关系增加后，卡片分层、成员分区与关系端口更加明显。"
+      },
+      "simpleId": "class"
+    },
+    {
+      "complexId": "state-complex",
+      "kind": "state",
+      "layoutNotes": {
+        "en": "More states and transitions require room for nested regions and transition labels.",
+        "zh": "更多状态会增加转移通道，复合状态需要独立布局。"
+      },
+      "simpleId": "state"
+    },
+    {
+      "complexId": "er-complex",
+      "kind": "er",
+      "layoutNotes": {
+        "en": "More entities require larger attribute cards and clearer relationship routes.",
+        "zh": "实体数量和字段增加后，实体卡片的尺寸与关系分层随之扩展。"
+      },
+      "simpleId": "er"
+    },
+    {
+      "complexId": "pie-complex",
+      "kind": "pie",
+      "layoutNotes": {
+        "en": "More slices require space for labels and a balanced legend.",
+        "zh": "分类增加后，扇区变细，图例和标签更密集。"
+      },
+      "simpleId": "pie"
+    },
+    {
+      "complexId": "gantt-complex",
+      "kind": "gantt",
+      "layoutNotes": {
+        "en": "More tasks require additional rows, dependency routes and date labels.",
+        "zh": "更多任务和阶段会扩展时间跨度与任务行，窄画布需要更紧凑的时间轴。"
+      },
+      "simpleId": "gantt"
+    },
+    {
+      "complexId": "gitGraph-complex",
+      "kind": "gitGraph",
+      "layoutNotes": {
+        "en": "More branches and commits require distinct lanes and spaced commit labels.",
+        "zh": "提交和分支增加后，会出现更多分支轨道、合并线与提交标签。"
+      },
+      "simpleId": "gitGraph"
+    },
+    {
+      "complexId": "mindmap-complex",
+      "kind": "mindmap",
+      "layoutNotes": {
+        "en": "More branches require balanced subtree spacing around the root.",
+        "zh": "分支和层级增加后，左右子树展开，父节点位置随子树高度调整。"
+      },
+      "simpleId": "mindmap"
+    },
+    {
+      "complexId": "timeline-complex",
+      "kind": "timeline",
+      "layoutNotes": {
+        "en": "More periods and events require additional sections and readable event labels.",
+        "zh": "阶段和事件增加后，横向时间线变长，窄画布会改为纵向排列。"
+      },
+      "simpleId": "timeline"
+    },
+    {
+      "complexId": "journey-complex",
+      "kind": "journey",
+      "layoutNotes": {
+        "en": "More steps and actors require additional lanes and wrapped task labels.",
+        "zh": "更多阶段、步骤和参与者会扩展旅程，窄画布会重排步骤卡片。"
+      },
+      "simpleId": "journey"
+    },
+    {
+      "complexId": "xychart-complex",
+      "kind": "xychart",
+      "layoutNotes": {
+        "en": "More data requires readable axes, series spacing and a balanced legend.",
+        "zh": "数据点和系列增加后，柱宽、折线密度、刻度与图例排列随之变化。"
+      },
+      "simpleId": "xychart"
+    },
+    {
+      "complexId": "requirement-complex",
+      "kind": "requirement",
+      "layoutNotes": {
+        "en": "More requirements require additional layers and readable relationship labels.",
+        "zh": "需求、实现和验证对象增加后，关系图会出现多层追踪路径。"
+      },
+      "simpleId": "requirement"
+    },
+    {
+      "complexId": "c4-complex",
+      "kind": "c4",
+      "layoutNotes": {
+        "en": "More elements require space for boundaries, cards and relationships.",
+        "zh": "人物、系统边界和服务增加后，跨边界关系和卡片布局更复杂。"
+      },
+      "simpleId": "c4"
+    },
+    {
+      "complexId": "sankey-complex",
+      "kind": "sankey",
+      "layoutNotes": {
+        "en": "More flows require additional layers and proportional flow spacing.",
+        "zh": "来源、流向与权重增加后，节点分层、条带宽度和流量分配随之变化。"
+      },
+      "simpleId": "sankey"
+    },
+    {
+      "complexId": "block-complex",
+      "kind": "block",
+      "layoutNotes": {
+        "en": "More blocks require additional rows, columns and connection routes.",
+        "zh": "块数量增加后会换行，跨列块与多行连接形成更丰富的网格。"
+      },
+      "simpleId": "block"
+    },
+    {
+      "complexId": "packet-complex",
+      "kind": "packet",
+      "layoutNotes": {
+        "en": "More fields require additional bit rows and clearly bounded field labels.",
+        "zh": "字段和位宽增加后，字段跨越更多行，窄字段的标签显示也会变化。"
+      },
+      "simpleId": "packet"
+    },
+    {
+      "complexId": "kanban-complex",
+      "kind": "kanban",
+      "layoutNotes": {
+        "en": "More cards require taller columns and readable card labels.",
+        "zh": "列与卡片增加后，列宽、卡片换行和看板高度需要适应容器。"
+      },
+      "simpleId": "kanban"
+    },
+    {
+      "complexId": "architecture-complex",
+      "kind": "architecture",
+      "layoutNotes": {
+        "en": "More groups and services require additional layers and explicit connection ports.",
+        "zh": "服务与分组增加后，跨组连接、分支端口与图形中心对齐更加明显。"
+      },
+      "simpleId": "architecture"
+    },
+    {
+      "complexId": "radar-complex",
+      "kind": "radar",
+      "layoutNotes": {
+        "en": "More axes and series require readable axis labels and a balanced legend.",
+        "zh": "维度与数据系列增加后，网格角度、曲线密度和图例布局随之变化。"
+      },
+      "simpleId": "radar"
+    },
+    {
+      "complexId": "treemap-complex",
+      "kind": "treemap",
+      "layoutNotes": {
+        "en": "More values require proportional nested rectangles and readable labels.",
+        "zh": "更多层级与不均匀权重会改变矩形切分，小面积区域会减少标签。"
+      },
+      "simpleId": "treemap"
+    },
+    {
+      "complexId": "agentflow-complex",
+      "kind": "agentflow",
+      "layoutNotes": {
+        "en": "More agents and branches require additional layers and group routing.",
+        "zh": "更多智能体和任务分支会增加并行路径、汇合点与层级跨度。"
+      },
+      "simpleId": "agentflow"
+    },
+    {
+      "complexId": "usecase-complex",
+      "kind": "usecase",
+      "layoutNotes": {
+        "en": "More actors and use cases require clear boundaries and readable relationship routes.",
+        "zh": "更多人物、边界与用例会扩展关联通道，需要避让不同分组和人物名称。"
+      },
+      "simpleId": "usecase"
+    },
+    {
+      "complexId": "railroad-complex",
+      "kind": "railroad",
+      "layoutNotes": {
+        "en": "More grammar branches require additional tracks and nested branch spacing.",
+        "zh": "可选项、重复项与候选分支增加后，轨道会同时向横向和纵向展开。"
+      },
+      "simpleId": "railroad"
+    },
+    {
+      "complexId": "treeView-complex",
+      "kind": "treeView",
+      "layoutNotes": {
+        "en": "More nested entries require indentation and larger subtree spacing.",
+        "zh": "目录数量与嵌套深度增加后，缩进、分支线与画布高度随之扩展。"
+      },
+      "simpleId": "treeView"
+    },
+    {
+      "complexId": "venn-complex",
+      "kind": "venn",
+      "layoutNotes": {
+        "en": "More sets and intersections require distinct set labels and intersection labels.",
+        "zh": "从两个集合增加到三个集合后，圆的位置与多重交集区域会发生变化。"
+      },
+      "simpleId": "venn"
+    },
+    {
+      "complexId": "swimlane-complex",
+      "kind": "swimlane",
+      "layoutNotes": {
+        "en": "More lanes and steps require wider lanes and clear cross lane routes.",
+        "zh": "泳道、步骤和交接增加后，泳道尺寸与跨泳道的连线路径都会变化。"
+      },
+      "simpleId": "swimlane"
+    },
+    {
+      "complexId": "ishikawa-complex",
+      "kind": "ishikawa",
+      "layoutNotes": {
+        "en": "More causes require additional branches and readable nested cause labels.",
+        "zh": "主因和次因增加后，鱼骨数量、分支长度与画布高度会扩展。"
+      },
+      "simpleId": "ishikawa"
+    },
+    {
+      "complexId": "eventmodeling-complex",
+      "kind": "eventmodeling",
+      "layoutNotes": {
+        "en": "More events and commands require additional time frames and connection routes.",
+        "zh": "事件帧和引用增加后，横向时间顺序扩展，并出现更多跨泳道依赖。"
+      },
+      "simpleId": "eventmodeling"
+    }
+  ],
+  "examples": [
+    {
+      "id": "sequence",
+      "kind": "sequence",
+      "sources": {
+        "en": "sequenceDiagram\n    autonumber\n    actor User as User\n    participant App as App\n    participant API as Server\n    User->>App: Submit request\n    App->>+API: Validate and process\n    Note over App,API: Native messages, activations and branches\n    alt Valid request\n        API-->>App: Return result\n    else Invalid request\n        API-->>App: Return error\n    end\n    deactivate API\n    App-->>User: Show response",
+        "zh": "sequenceDiagram\n    autonumber\n    actor User as 用户\n    participant App as 应用\n    participant API as 服务端\n    User->>App: 提交请求\n    App->>+API: 校验并处理\n    Note over App,API: 原生消息、激活与分支\n    alt 请求有效\n        API-->>App: 返回结果\n    else 请求无效\n        API-->>App: 返回错误\n    end\n    deactivate API\n    App-->>User: 展示响应"
+      },
+      "symbol": "arrow.left.arrow.right",
+      "titles": {
+        "en": "Sequence Diagram",
+        "zh": "时序图"
+      }
+    },
+    {
+      "id": "class",
+      "kind": "class",
+      "sources": {
+        "en": "classDiagram\n    direction LR\n    class Renderer {\n        +render(source)\n    }\n    class NativeRenderer {\n        -scene DiagramScene\n        +render(source)\n    }\n    class SVGExporter {\n        +export(scene)\n    }\n    Renderer <|.. NativeRenderer\n    NativeRenderer --> SVGExporter : exports",
+        "zh": "classDiagram\n    direction LR\n    class Renderer {\n        +render(source)\n    }\n    class NativeRenderer {\n        -scene DiagramScene\n        +render(source)\n    }\n    class SVGExporter {\n        +export(scene)\n    }\n    Renderer <|.. NativeRenderer\n    NativeRenderer --> SVGExporter : exports"
+      },
+      "symbol": "square.stack.3d.up",
+      "titles": {
+        "en": "Class Diagram",
+        "zh": "类图"
+      }
+    },
+    {
+      "id": "state",
+      "kind": "state",
+      "sources": {
+        "en": "stateDiagram-v2\n    [*] --> Idle\n    Idle --> Parsing: Edit source\n    Parsing --> Ready: Success\n    Parsing --> Error: Syntax error\n    Error --> Parsing: Fix\n    Ready --> [*]",
+        "zh": "stateDiagram-v2\n    [*] --> Idle\n    Idle --> Parsing: 编辑源码\n    Parsing --> Ready: 成功\n    Parsing --> Error: 语法错误\n    Error --> Parsing: 修正\n    Ready --> [*]"
+      },
+      "symbol": "circle.hexagongrid",
+      "titles": {
+        "en": "State Diagram",
+        "zh": "状态图"
+      }
+    },
+    {
+      "id": "er",
+      "kind": "er",
+      "sources": {
+        "en": "erDiagram\n    PROJECT ||--o{ DIAGRAM : contains\n    DIAGRAM ||--o{ EXPORT : produces\n    PROJECT {\n        string id PK\n        string name\n    }\n    DIAGRAM {\n        string id PK\n        string source\n    }\n    EXPORT {\n        string format\n        string path\n    }",
+        "zh": "erDiagram\n    PROJECT ||--o{ DIAGRAM : contains\n    DIAGRAM ||--o{ EXPORT : produces\n    PROJECT {\n        string id PK\n        string name\n    }\n    DIAGRAM {\n        string id PK\n        string source\n    }\n    EXPORT {\n        string format\n        string path\n    }"
+      },
+      "symbol": "cylinder.split.1x2",
+      "titles": {
+        "en": "Entity Relationship",
+        "zh": "实体关系图"
+      }
+    },
+    {
+      "id": "pie",
+      "kind": "pie",
+      "sources": {
+        "en": "pie showData title Diagram usage\n    \"Flowcharts\" : 46\n    \"Sequence diagrams\" : 28\n    \"Relationship diagrams\" : 16\n    \"Other\" : 10",
+        "zh": "pie showData title 图形使用分布\n    \"流程图\" : 46\n    \"时序图\" : 28\n    \"关系图\" : 16\n    \"其他\" : 10"
+      },
+      "symbol": "chart.pie",
+      "titles": {
+        "en": "Pie Chart",
+        "zh": "饼图"
+      }
+    },
+    {
+      "id": "gantt",
+      "kind": "gantt",
+      "sources": {
+        "en": "gantt\n    title Native engine development\n    dateFormat YYYY-MM-DD\n    section Core\n    Scene model :done, scene, 2026-10-01, 5d\n    Sequence diagrams :active, seq, after scene, 7d\n    section Diagrams\n    Data charts :charts, 2026-10-06, 10d\n    Regression tests :crit, tests, after charts, 4d",
+        "zh": "gantt\n    title 原生引擎开发计划\n    dateFormat YYYY-MM-DD\n    section 核心\n    场景模型 :done, scene, 2026-10-01, 5d\n    时序图 :active, seq, after scene, 7d\n    section 图形\n    数据图表 :charts, 2026-10-06, 10d\n    回归测试 :crit, tests, after charts, 4d"
+      },
+      "symbol": "chart.bar.xaxis",
+      "titles": {
+        "en": "Gantt Chart",
+        "zh": "甘特图"
+      }
+    },
+    {
+      "id": "gitGraph",
+      "kind": "gitGraph",
+      "sources": {
+        "en": "gitGraph\n    commit id: \"init\"\n    branch develop\n    commit id: \"native\"\n    commit id: \"sequence\"\n    checkout main\n    commit id: \"docs\"\n    merge develop id: \"release\" tag: \"v0.2\"",
+        "zh": "gitGraph\n    commit id: \"init\"\n    branch develop\n    commit id: \"native\"\n    commit id: \"sequence\"\n    checkout main\n    commit id: \"docs\"\n    merge develop id: \"release\" tag: \"v0.2\""
+      },
+      "symbol": "arrow.triangle.branch",
+      "titles": {
+        "en": "Git Graph",
+        "zh": "Git 分支图"
+      }
+    },
+    {
+      "id": "mindmap",
+      "kind": "mindmap",
+      "sources": {
+        "en": "mindmap\n    root((NornaKit))\n        Parsing\n            Mermaid\n            Semantic validation\n        Layout\n            Layers\n            Timeline\n        Drawing\n            CoreGraphics\n            SVG",
+        "zh": "mindmap\n    root((NornaKit))\n        解析\n            Mermaid\n            语义校验\n        布局\n            层级\n            时间轴\n        绘制\n            CoreGraphics\n            SVG"
+      },
+      "symbol": "brain",
+      "titles": {
+        "en": "Mind Map",
+        "zh": "思维导图"
+      }
+    },
+    {
+      "id": "timeline",
+      "kind": "timeline",
+      "sources": {
+        "en": "timeline\n    title Native rendering roadmap\n    section Foundation\n        Phase 1 : Flowcharts : Subgraphs\n        Phase 2 : Sequence diagrams : Relationship diagrams\n    section Expansion\n        Phase 3 : Data charts : Advanced layouts",
+        "zh": "timeline\n    title 原生渲染路线\n    section 基础\n        第一阶段 : 流程图 : 子图\n        第二阶段 : 时序图 : 关系图\n    section 扩展\n        第三阶段 : 数据图表 : 高级布局"
+      },
+      "symbol": "clock",
+      "titles": {
+        "en": "Timeline",
+        "zh": "时间线"
+      }
+    },
+    {
+      "id": "journey",
+      "kind": "journey",
+      "sources": {
+        "en": "journey\n    title From idea to diagram\n    section Editing\n        Enter source: 4: User\n        View preview: 5: User, Engine\n    section Refinement\n        Fix syntax: 2: User\n        Export result: 5: User, Engine",
+        "zh": "journey\n    title 从想法到图表\n    section 编辑\n        输入源码: 4: 用户\n        查看预览: 5: 用户, 引擎\n    section 调整\n        修正语法: 2: 用户\n        导出结果: 5: 用户, 引擎"
+      },
+      "symbol": "figure.walk",
+      "titles": {
+        "en": "User Journey",
+        "zh": "用户旅程"
+      }
+    },
+    {
+      "id": "xychart",
+      "kind": "xychart",
+      "sources": {
+        "en": "xychart-beta\n    title \"Weekly diagram count\"\n    x-axis [Week 1, Week 2, Week 3, Week 4]\n    y-axis \"Count\" 0 --> 100\n    bar \"Created\" [24, 48, 62, 85]\n    line \"Export\" [16, 35, 54, 72]",
+        "zh": "xychart-beta\n    title \"每周图表数量\"\n    x-axis [第一周, 第二周, 第三周, 第四周]\n    y-axis \"数量\" 0 --> 100\n    bar \"创建\" [24, 48, 62, 85]\n    line \"导出\" [16, 35, 54, 72]"
+      },
+      "symbol": "chart.xyaxis.line",
+      "titles": {
+        "en": "XY Chart",
+        "zh": "XY 坐标图"
+      }
+    },
+    {
+      "id": "quadrantChart",
+      "kind": "quadrantChart",
+      "sources": {
+        "en": "quadrantChart\n    title Priority assessment\n    x-axis Low cost --> High cost\n    y-axis Low value --> High value\n    quadrant-1 Invest\n    quadrant-2 Prioritize\n    quadrant-3 Defer\n    quadrant-4 Reassess\n    Sequence diagrams: [0.3, 0.8]\n    Full compatibility: [0.85, 0.85]\n    Custom animation: [0.7, 0.25]",
+        "zh": "quadrantChart\n    title 优先级评估\n    x-axis 低成本 --> 高成本\n    y-axis 低价值 --> 高价值\n    quadrant-1 重点投入\n    quadrant-2 优先实现\n    quadrant-3 暂缓\n    quadrant-4 重新评估\n    时序图: [0.3, 0.8]\n    全量兼容: [0.85, 0.85]\n    自定义动画: [0.7, 0.25]"
+      },
+      "symbol": "square.grid.2x2",
+      "titles": {
+        "en": "Quadrant Chart",
+        "zh": "象限图"
+      }
+    },
+    {
+      "id": "requirement",
+      "kind": "requirement",
+      "sources": {
+        "en": "requirementDiagram\n    requirement Native {\n        id: REQ-001\n        text: Pure Swift native drawing\n        risk: medium\n        verifymethod: test\n    }\n    element Engine {\n        type: software\n        docRef: NornaKit\n    }\n    Engine - satisfies -> Native",
+        "zh": "requirementDiagram\n    requirement Native {\n        id: REQ-001\n        text: 纯 Swift 原生绘制\n        risk: medium\n        verifymethod: test\n    }\n    element Engine {\n        type: software\n        docRef: NornaKit\n    }\n    Engine - satisfies -> Native"
+      },
+      "symbol": "checklist",
+      "titles": {
+        "en": "Requirement Diagram",
+        "zh": "需求图"
+      }
+    },
+    {
+      "id": "c4",
+      "kind": "c4",
+      "sources": {
+        "en": "C4Context\n    title Diagram studio\n    Person(user, \"User\", \"Edit diagrams\")\n    System_Boundary(studio, \"Norna Studio\") {\n        System(editor, \"Editor\", \"Mermaid source\")\n        System(engine, \"Native engine\", \"Swift geometry layout\")\n    }\n    Rel(user, editor, \"Editing\")\n    Rel(editor, engine, \"Render\")",
+        "zh": "C4Context\n    title 图表工作台\n    Person(user, \"用户\", \"编辑图表\")\n    System_Boundary(studio, \"Norna Studio\") {\n        System(editor, \"编辑器\", \"Mermaid 源码\")\n        System(engine, \"原生引擎\", \"Swift 几何布局\")\n    }\n    Rel(user, editor, \"编辑\")\n    Rel(editor, engine, \"渲染\")"
+      },
+      "symbol": "building.2",
+      "titles": {
+        "en": "C4 Diagram",
+        "zh": "C4 架构图"
+      }
+    },
+    {
+      "id": "sankey",
+      "kind": "sankey",
+      "sources": {
+        "en": "sankey-beta\nInput,Flowcharts,46\nInput,Sequence diagrams,28\nInput,Relationship diagrams,26\nFlowcharts,Native canvas,30\nFlowcharts,SVG,16\nSequence diagrams,Native canvas,20\nSequence diagrams,SVG,8\nRelationship diagrams,SVG,26",
+        "zh": "sankey-beta\n输入,流程图,46\n输入,时序图,28\n输入,关系图,26\n流程图,原生画布,30\n流程图,SVG,16\n时序图,原生画布,20\n时序图,SVG,8\n关系图,SVG,26"
+      },
+      "symbol": "arrow.triangle.merge",
+      "titles": {
+        "en": "Sankey Diagram",
+        "zh": "桑基图"
+      }
+    },
+    {
+      "id": "block",
+      "kind": "block",
+      "sources": {
+        "en": "block-beta\n    columns 3\n    A[Parsing] B[Layout] C[Drawing]\n    D[Model] E[Scene] F[Export]\n    A --> B\n    B --> C\n    D --> E\n    E --> F",
+        "zh": "block-beta\n    columns 3\n    A[解析] B[布局] C[绘制]\n    D[模型] E[场景] F[导出]\n    A --> B\n    B --> C\n    D --> E\n    E --> F"
+      },
+      "symbol": "rectangle.grid.3x2",
+      "titles": {
+        "en": "Block Diagram",
+        "zh": "块图"
+      }
+    },
+    {
+      "id": "packet",
+      "kind": "packet",
+      "sources": {
+        "en": "packet-beta\n    title TCP header\n    0-15: \"Source Port\"\n    16-31: \"Destination Port\"\n    32-63: \"Sequence Number\"\n    64-95: \"Acknowledgment\"\n    96-99: \"Offset\"\n    100-105: \"Reserved\"\n    106-111: \"Flags\"\n    112-127: \"Window\"",
+        "zh": "packet-beta\n    title TCP 报文头\n    0-15: \"Source Port\"\n    16-31: \"Destination Port\"\n    32-63: \"Sequence Number\"\n    64-95: \"Acknowledgment\"\n    96-99: \"Offset\"\n    100-105: \"Reserved\"\n    106-111: \"Flags\"\n    112-127: \"Window\""
+      },
+      "symbol": "square.split.2x2",
+      "titles": {
+        "en": "Packet Diagram",
+        "zh": "数据包图"
+      }
+    },
+    {
+      "id": "kanban",
+      "kind": "kanban",
+      "sources": {
+        "en": "kanban\n    todo[To do]\n        a[Expand syntax support]\n        b[Improve complex layouts]\n    doing[In progress]\n        c[Native diagram engine]\n    done[Done]\n        d[Flowcharts and subgraphs]\n        e[Shared vector scene]",
+        "zh": "kanban\n    todo[待处理]\n        a[扩展语法兼容]\n        b[优化复杂布局]\n    doing[进行中]\n        c[原生图形引擎]\n    done[已完成]\n        d[流程图与子图]\n        e[通用矢量场景]"
+      },
+      "symbol": "rectangle.split.3x1",
+      "titles": {
+        "en": "Kanban",
+        "zh": "看板"
+      }
+    },
+    {
+      "id": "architecture",
+      "kind": "architecture",
+      "sources": {
+        "en": "architecture-beta\n    group backend[Service layer]\n    service api(server)[API gateway] in backend\n    service db(database)[Database] in backend\n    service web(internet)[Client]\n    web:R --> L:api\n    api:R --> L:db",
+        "zh": "architecture-beta\n    group backend[服务层]\n    service api(server)[API 网关] in backend\n    service db(database)[数据库] in backend\n    service web(internet)[客户端]\n    web:R --> L:api\n    api:R --> L:db"
+      },
+      "symbol": "server.rack",
+      "titles": {
+        "en": "Architecture Diagram",
+        "zh": "架构图"
+      }
+    },
+    {
+      "id": "radar",
+      "kind": "radar",
+      "sources": {
+        "en": "radar-beta\n    title Rendering capabilities\n    axis Parsing, Layout, Drawing, Export, Interaction\n    curve native[\"Native implementation\"]{8,7,9,8,9}\n    curve reference[\"Target\"]{10,10,10,10,10}\n    max 10",
+        "zh": "radar-beta\n    title 渲染能力\n    axis 解析, 布局, 绘制, 导出, 交互\n    curve native[\"原生实现\"]{8,7,9,8,9}\n    curve reference[\"目标\"]{10,10,10,10,10}\n    max 10"
+      },
+      "symbol": "hexagon",
+      "titles": {
+        "en": "Radar Chart",
+        "zh": "雷达图"
+      }
+    },
+    {
+      "id": "treemap",
+      "kind": "treemap",
+      "sources": {
+        "en": "treemap-beta\n    \"Diagram engine\"\n        \"Parsing\": 32\n        \"Layout\": 44\n        \"Drawing\": 24\n    \"App\"\n        \"Editing\": 18\n        \"Interaction\": 12",
+        "zh": "treemap-beta\n    \"图形引擎\"\n        \"解析\": 32\n        \"布局\": 44\n        \"绘制\": 24\n    \"应用\"\n        \"编辑\": 18\n        \"交互\": 12"
+      },
+      "symbol": "rectangle.3.group",
+      "titles": {
+        "en": "Treemap",
+        "zh": "矩形树图"
+      }
+    },
+    {
+      "id": "info",
+      "kind": "info",
+      "sources": {
+        "en": "info\nshowInfo",
+        "zh": "info\nshowInfo"
+      },
+      "symbol": "info.circle",
+      "titles": {
+        "en": "Info Diagram",
+        "zh": "信息图"
+      }
+    },
+    {
+      "id": "agentflow",
+      "kind": "agentflow",
+      "sources": {
+        "en": "agentflow-beta LR\n    A[User request] --> B{Route}\n    B --> C[Research agent]\n    B --> D[Coding agent]\n    C --> E[Summarize response]\n    D --> E",
+        "zh": "agentflow-beta LR\n    A[用户请求] --> B{路由}\n    B --> C[研究智能体]\n    B --> D[编码智能体]\n    C --> E[汇总响应]\n    D --> E"
+      },
+      "symbol": "sparkles",
+      "titles": {
+        "en": "Agent Flow",
+        "zh": "智能体流程"
+      }
+    },
+    {
+      "id": "usecase",
+      "kind": "usecase",
+      "sources": {
+        "en": "usecase-beta\n    actor User[User]\n    systemBoundary Studio[Diagram studio]\n        Edit(Edit source)\n        Preview(View preview)\n        Export(Export diagram)\n    end\n    User --> Edit\n    User --> Preview\n    User --> Export",
+        "zh": "usecase-beta\n    actor User[用户]\n    systemBoundary Studio[图表工作台]\n        Edit(编辑源码)\n        Preview(查看预览)\n        Export(导出图表)\n    end\n    User --> Edit\n    User --> Preview\n    User --> Export"
+      },
+      "symbol": "person.2",
+      "titles": {
+        "en": "Use Case Diagram",
+        "zh": "用例图"
+      }
+    },
+    {
+      "id": "railroad",
+      "kind": "railroad",
+      "sources": {
+        "en": "railroad-ebnf-beta\n    diagram = \"flowchart\" direction [ node ] { edge node } ;\n    direction = \"TD\" | \"LR\" | \"BT\" | \"RL\" ;",
+        "zh": "railroad-ebnf-beta\n    diagram = \"flowchart\" direction [ node ] { edge node } ;\n    direction = \"TD\" | \"LR\" | \"BT\" | \"RL\" ;"
+      },
+      "symbol": "point.topleft.down.curvedto.point.bottomright.up",
+      "titles": {
+        "en": "Railroad Diagram",
+        "zh": "语法铁路图"
+      }
+    },
+    {
+      "id": "treeView",
+      "kind": "treeView",
+      "sources": {
+        "en": "treeView-beta\n    NornaKit/\n        Sources/\n            NornaKit/\n                DiagramScene.swift\n            NornaStudio/\n                StudioView.swift\n        Tests/\n        Package.swift",
+        "zh": "treeView-beta\n    NornaKit/\n        Sources/\n            NornaKit/\n                DiagramScene.swift\n            NornaStudio/\n                StudioView.swift\n        Tests/\n        Package.swift"
+      },
+      "symbol": "folder",
+      "titles": {
+        "en": "Directory Tree",
+        "zh": "目录树"
+      }
+    },
+    {
+      "id": "venn",
+      "kind": "venn",
+      "sources": {
+        "en": "venn-beta\n    title Capability overlap\n    set Swift[Swift]: 60\n    set Graphics[Graphics]: 45\n    union Swift,Graphics: 20",
+        "zh": "venn-beta\n    title 能力交集\n    set Swift[Swift]: 60\n    set Graphics[Graphics]: 45\n    union Swift,Graphics: 20"
+      },
+      "symbol": "circle.lefthalf.filled",
+      "titles": {
+        "en": "Venn Diagram",
+        "zh": "韦恩图"
+      }
+    },
+    {
+      "id": "cynefin",
+      "kind": "cynefin",
+      "sources": {
+        "en": "cynefin-beta\n    title Problem solving approaches\n    complex\n        \"Explore new layouts\"\n    complicated\n        \"Analyze compatibility gaps\"\n    clear\n        \"Fix known syntax issues\"\n    chaotic\n        \"Handle runtime crashes\"\n    confusion\n        \"Identify the problem domain\"",
+        "zh": "cynefin-beta\n    title 问题处理方式\n    complex\n        \"探索新的布局方法\"\n    complicated\n        \"分析兼容性差异\"\n    clear\n        \"修复确定的语法问题\"\n    chaotic\n        \"处理运行时崩溃\"\n    confusion\n        \"识别问题所属领域\""
+      },
+      "symbol": "square.grid.2x2",
+      "titles": {
+        "en": "Cynefin Framework",
+        "zh": "Cynefin 框架"
+      }
+    },
+    {
+      "id": "wardley",
+      "kind": "wardley",
+      "sources": {
+        "en": "wardley-beta\n    title Diagram product map\n    anchor User value [0.95, 0.4]\n    component Editing experience [0.75, 0.6]\n    component Native engine [0.5, 0.35]\n    component System frameworks [0.15, 0.9]\n    User value -> Editing experience\n    Editing experience -> Native engine\n    Native engine -> System frameworks",
+        "zh": "wardley-beta\n    title 图表产品地图\n    anchor 用户价值 [0.95, 0.4]\n    component 编辑体验 [0.75, 0.6]\n    component 原生引擎 [0.5, 0.35]\n    component 系统框架 [0.15, 0.9]\n    用户价值 -> 编辑体验\n    编辑体验 -> 原生引擎\n    原生引擎 -> 系统框架"
+      },
+      "symbol": "map",
+      "titles": {
+        "en": "Wardley Map",
+        "zh": "Wardley 地图"
+      }
+    },
+    {
+      "id": "swimlane",
+      "kind": "swimlane",
+      "sources": {
+        "en": "swimlane-beta LR\n    subgraph User[User]\n        A[Submit request] --> B[Confirm result]\n    end\n    subgraph Service[Service]\n        C[Process request] --> D[Return response]\n    end\n    A --> C\n    D --> B",
+        "zh": "swimlane-beta LR\n    subgraph User[用户]\n        A[提交请求] --> B[确认结果]\n    end\n    subgraph Service[服务]\n        C[处理请求] --> D[返回响应]\n    end\n    A --> C\n    D --> B"
+      },
+      "symbol": "rectangle.split.2x1",
+      "titles": {
+        "en": "Swimlane Diagram",
+        "zh": "泳道图"
+      }
+    },
+    {
+      "id": "ishikawa",
+      "kind": "ishikawa",
+      "sources": {
+        "en": "ishikawa-beta\n    Rendering quality\n        Parsing\n            Syntax coverage\n            Error locations\n        Layout\n            Node layering\n            Edge routing\n        Drawing\n            Font measurement\n            Path precision\n        Validation\n            Regression tests\n            Visual checks",
+        "zh": "ishikawa-beta\n    渲染质量\n        解析\n            语法覆盖\n            错误定位\n        布局\n            节点分层\n            连线避障\n        绘制\n            字体测量\n            路径精度\n        验证\n            回归测试\n            视觉检查"
+      },
+      "symbol": "fish",
+      "titles": {
+        "en": "Fishbone Diagram",
+        "zh": "鱼骨图"
+      }
+    },
+    {
+      "id": "eventmodeling",
+      "kind": "eventmodeling",
+      "sources": {
+        "en": "eventmodeling\n    tf 01 ui Editor\n    tf 02 cmd Submit source\n    tf 03 evt Source updated\n    tf 04 rmo Diagram scene\n    tf 05 ui Preview canvas",
+        "zh": "eventmodeling\n    tf 01 ui 编辑器\n    tf 02 cmd 提交源码\n    tf 03 evt 源码已更新\n    tf 04 rmo 图表场景\n    tf 05 ui 预览画布"
+      },
+      "symbol": "rectangle.3.group.bubble",
+      "titles": {
+        "en": "Event Modeling",
+        "zh": "事件建模"
+      }
+    },
+    {
+      "id": "flowchart",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart TD\n    A([User input]) --> B{Valid input?}\n    B -->|Valid| C[Call API]\n    B -->|Invalid| D[Show error]\n    C --> E[Handle response]\n    E --> F([Output result])\n    D --> A",
+        "zh": "flowchart TD\n    A([用户输入]) --> B{验证通过？}\n    B -->|通过| C[调用 API]\n    B -->|失败| D[显示错误]\n    C --> E[处理响应]\n    E --> F([输出结果])\n    D --> A"
+      },
+      "symbol": "point.3.connected.trianglepath.dotted",
+      "titles": {
+        "en": "Input & Validation",
+        "zh": "输入与验证"
+      }
+    },
+    {
+      "id": "sf-symbols",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart TB\n    subgraph App[\"SF Symbols :sf:sparkles: Native icons\"]\n        A[\"Select :sf:doc.text: file\"]\n        B[\"Upload :sf:icloud.and.arrow.up: to cloud\"]\n        C[\"Complete :sf:checkmark.circle.fill: sync\"]\n        A -->|\"Read :sf:externaldrive: content\"| B\n        B -->|\"Confirm :sf:checkmark.seal: result\"| C\n    end",
+        "zh": "flowchart TB\n    subgraph App[\"SF Symbols :sf:sparkles: 原生图标\"]\n        A[\"选择 :sf:doc.text: 文件\"]\n        B[\"上传 :sf:icloud.and.arrow.up: 到云端\"]\n        C[\"完成 :sf:checkmark.circle.fill: 同步\"]\n        A -->|\"读取 :sf:externaldrive: 内容\"| B\n        B -->|\"确认 :sf:checkmark.seal: 结果\"| C\n    end"
+      },
+      "symbol": "sparkles",
+      "titles": {
+        "en": "SF Symbols Icons",
+        "zh": "SF Symbols 图标"
+      }
+    },
+    {
+      "id": "sf-symbols-wrapping",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart TB\n    A[\"Before :sf:icloud.and.arrow.up: after\"]\n    B[\"First line :sf:person.fill: User<br/>Second line :sf:checkmark.circle.fill: Done<br/>Third line :sf:arrow.right: Continue\"]\n    C[\"This longer label demonstrates automatic wrapping. The :sf:externaldrive: symbol stays together with the surrounding text as the label wraps.\"]\n    A -->|\"Explicit :sf:text.aligncenter: line break\"| B\n    B -->|\"Automatic :sf:arrow.turn.down.left: line break\"| C",
+        "zh": "flowchart TB\n    A[\"文字前 :sf:icloud.and.arrow.up: 文字后\"]\n    B[\"第一行 :sf:person.fill: 用户<br/>第二行 :sf:checkmark.circle.fill: 完成<br/>第三行 :sf:arrow.right: 继续\"]\n    C[\"这是一段用于观察自动换行的较长文本，其中的 :sf:externaldrive: 图标会作为整体参与排版，并继续显示后面的文字。\"]\n    A -->|\"显式 :sf:text.aligncenter: 换行\"| B\n    B -->|\"自动 :sf:arrow.turn.down.left: 换行\"| C"
+      },
+      "symbol": "text.aligncenter",
+      "titles": {
+        "en": "SF Symbols Wrapping",
+        "zh": "SF Symbols 换行"
+      }
+    },
+    {
+      "id": "sf-symbols-color",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart TB\n    A[\"Monochrome :sf:cloud.sun.fill: follows text\"]\n    B[\"Native multicolor :sf:cloud.sun.fill@multicolor: weather\"]\n    C[\"Hierarchical :sf:cloud.sun.fill@hierarchical: shading\"]\n    D[\"Palette :sf:cloud.sun.fill@palette(#2563eb,#f59e0b): custom colors\"]\n    A --> B --> C --> D",
+        "zh": "flowchart TB\n    A[\"单色 :sf:cloud.sun.fill: 跟随文字\"]\n    B[\"原生多色 :sf:cloud.sun.fill@multicolor: 天气\"]\n    C[\"分层 :sf:cloud.sun.fill@hierarchical: 明暗层次\"]\n    D[\"调色板 :sf:cloud.sun.fill@palette(#2563eb,#f59e0b): 自定义颜色\"]\n    A --> B --> C --> D"
+      },
+      "symbol": "paintpalette",
+      "titles": {
+        "en": "SF Symbols Colors",
+        "zh": "SF Symbols 多色"
+      }
+    },
+    {
+      "id": "rich-text",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart TB\n    A[\"[b]Bold emphasis[/b] and [i]italic details[/i]\"]\n    B[\"Call the [code]render(source)[/code] method\"]\n    C[\"[u]Underlined[/u] and [s]cancelled[/s] states\"]\n    D[\"[color=#2563eb][b]This longer label keeps its color and bold styling when the text automatically wraps onto several lines.[/b][/color]\"]\n    A -->|\"[b]Keep[/b] :sf:checkmark.circle.fill: styling\"| B\n    B --> C --> D",
+        "zh": "flowchart TB\n    A[\"[b]粗体重点[/b] 与 [i]斜体说明[/i]\"]\n    B[\"调用 [code]render(source)[/code] 方法\"]\n    C[\"[u]下划线[/u] 与 [s]已取消[/s] 状态\"]\n    D[\"[color=#2563eb][b]这是一段带有颜色和粗体的长标签，自动换行后仍然保留文字样式。[/b][/color]\"]\n    A -->|\"[b]保留[/b] :sf:checkmark.circle.fill: 样式\"| B\n    B --> C --> D"
+      },
+      "symbol": "textformat",
+      "titles": {
+        "en": "Native Rich Text",
+        "zh": "原生富文本"
+      }
+    },
+    {
+      "id": "subgraphs",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart LR\n    subgraph Client[Client]\n        direction TD\n        A[User action] --> B{Validate input}\n        B -->|Valid| C[Send request]\n        B -->|Invalid| D[Show error]\n        D -.-> A\n    end\n    subgraph Server[Server]\n        direction TD\n        E[API gateway] --> F[Business service]\n        F --> G[(Data store)]\n    end\n    C -->|HTTPS| E\n    F --> H([Show result])",
+        "zh": "flowchart LR\n    subgraph Client[客户端]\n        direction TD\n        A[用户操作] --> B{校验输入}\n        B -->|通过| C[发起请求]\n        B -->|失败| D[提示错误]\n        D -.-> A\n    end\n    subgraph Server[服务端]\n        direction TD\n        E[API 网关] --> F[业务服务]\n        F --> G[(数据存储)]\n    end\n    C -->|HTTPS| E\n    F --> H([展示结果])"
+      },
+      "symbol": "rectangle.3.group",
+      "titles": {
+        "en": "Subgraphs & Cross-group Links",
+        "zh": "子图与跨组"
+      }
+    },
+    {
+      "id": "nested",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart TD\n    Start([Start]) --> A\n    subgraph App[Application pipeline]\n        direction LR\n        subgraph Input[Input layer]\n            direction TD\n            A[Read file] --> B[Validate format]\n        end\n        subgraph Process[Processing layer]\n            direction TD\n            C[Parse content] --> D[Build scene]\n        end\n        subgraph Output[Output layer]\n            direction TD\n            E[Native canvas] --> F[Export SVG]\n        end\n        B --> C\n        D --> E\n    end\n    F --> Done([Done])",
+        "zh": "flowchart TD\n    Start([开始]) --> A\n    subgraph App[应用流水线]\n        direction LR\n        subgraph Input[输入层]\n            direction TD\n            A[读取文件] --> B[校验格式]\n        end\n        subgraph Process[处理层]\n            direction TD\n            C[解析内容] --> D[生成场景]\n        end\n        subgraph Output[输出层]\n            direction TD\n            E[原生画布] --> F[导出 SVG]\n        end\n        B --> C\n        D --> E\n    end\n    F --> Done([完成])"
+      },
+      "symbol": "square.3.layers.3d",
+      "titles": {
+        "en": "Nested Subgraphs",
+        "zh": "嵌套子图"
+      }
+    },
+    {
+      "id": "groupLinks",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart LR\n    User([User]) --> API\n    API --> Storage\n    subgraph API[API service]\n        direction TD\n        A[Authentication] --> B[Business logic]\n    end\n    subgraph Storage[Storage service]\n        direction TD\n        C[(Database)] --> D[Update index]\n    end\n    B -.->|Write| C",
+        "zh": "flowchart LR\n    User([用户]) --> API\n    API --> Storage\n    subgraph API[接口服务]\n        direction TD\n        A[鉴权] --> B[业务逻辑]\n    end\n    subgraph Storage[存储服务]\n        direction TD\n        C[(数据库)] --> D[更新索引]\n    end\n    B -.->|写入| C"
+      },
+      "symbol": "rectangle.connected.to.line.below",
+      "titles": {
+        "en": "Group Connections",
+        "zh": "分组连接"
+      }
+    },
+    {
+      "id": "shapes",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart LR\n    A[Rectangle] --> B(Rounded rectangle)\n    B --> C([Terminal])\n    C --> D{Decision}\n    D --> E((Circle))\n    D --> F[(Database)]\n    E --> G[[Subroutine]]\n    F --> G",
+        "zh": "flowchart LR\n    A[矩形] --> B(圆角矩形)\n    B --> C([起止节点])\n    C --> D{条件判断}\n    D --> E((圆形))\n    D --> F[(数据库)]\n    E --> G[[子程序]]\n    F --> G"
+      },
+      "symbol": "square.on.circle",
+      "titles": {
+        "en": "Node Shapes",
+        "zh": "节点形状"
+      }
+    },
+    {
+      "id": "pipeline",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart TD\n    A([Start]) --> B[Read configuration]\n    B --> C[Process text] & D[Load images] & E[Extract metadata]\n    C & D & E --> F[Merge results]\n    F --> G([Done])",
+        "zh": "flowchart TD\n    A([开始]) --> B[读取配置]\n    B --> C[处理文本] & D[加载图片] & E[提取元数据]\n    C & D & E --> F[合并结果]\n    F --> G([完成])"
+      },
+      "symbol": "arrow.triangle.branch",
+      "titles": {
+        "en": "Parallel Paths & Joins",
+        "zh": "并行与汇合"
+      }
+    },
+    {
+      "id": "cycle",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart TD\n    A([Submit task]) --> B[Send request]\n    B --> C{Request succeeded?}\n    C -->|Yes| D([Done])\n    C -->|No| E[Wait and retry]\n    E -.-> B\n    D --> D",
+        "zh": "flowchart TD\n    A([提交任务]) --> B[执行请求]\n    B --> C{请求成功？}\n    C -->|是| D([完成])\n    C -->|否| E[等待重试]\n    E -.-> B\n    D --> D"
+      },
+      "symbol": "arrow.clockwise",
+      "titles": {
+        "en": "Loops & Retries",
+        "zh": "循环与重试"
+      }
+    },
+    {
+      "id": "edges",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart LR\n    A[Client] -->|Request| B[gateway]\n    B ==> C[Main service]\n    B -.->|Async| D[Message queue]\n    C --- E[(Database)]\n    D --> F[Consumer]",
+        "zh": "flowchart LR\n    A[客户端] -->|请求| B[网关]\n    B ==> C[主服务]\n    B -.->|异步| D[消息队列]\n    C --- E[(数据库)]\n    D --> F[消费者]"
+      },
+      "symbol": "line.diagonal",
+      "titles": {
+        "en": "Edges & Labels",
+        "zh": "连线与标签"
+      }
+    },
+    {
+      "id": "unicode",
+      "kind": "flowchart",
+      "sources": {
+        "en": "graph TD\n    A[\"Swift native rendering<br/>No JavaScript\"]\n    A --> B[\"CoreText measurement<br/>Chinese, English and emoji 🌋\"]\n    B --> C[\"CoreGraphics drawing\"]\n    C --> D[\"Export SVG<br/>Keep vector paths and text\"]",
+        "zh": "graph TD\n    A[\"Swift 原生渲染<br/>无需 JavaScript\"]\n    A --> B[\"CoreText 测量<br/>中文、English 与 emoji 🌋\"]\n    B --> C[\"CoreGraphics 绘制\"]\n    C --> D[\"导出 SVG<br/>保留矢量路径与文字\"]"
+      },
+      "symbol": "textformat",
+      "titles": {
+        "en": "Chinese & Multiline Text",
+        "zh": "中文与多行"
+      }
+    },
+    {
+      "id": "flow-advanced",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart LR\n    subgraph Client[Client]\n        direction TD\n        A@{ shape: stadium, label: \"User action\" } <--> B{{Validate request}}\n        B --> C[/Request data/]\n    end\n    C <-->|HTTPS| D@{ shape: cyl, label: \"Service storage\" }\n    D --o E>Notification]\n    E --x F(((Terminate task)))\n    B -.->|Invalid| F\n    D ~~~ F",
+        "zh": "flowchart LR\n    subgraph Client[客户端]\n        direction TD\n        A@{ shape: stadium, label: \"用户操作\" } <--> B{{校验请求}}\n        B --> C[/请求数据/]\n    end\n    C <-->|HTTPS| D@{ shape: cyl, label: \"服务存储\" }\n    D --o E>消息通知]\n    E --x F(((终止任务)))\n    B -.->|失败| F\n    D ~~~ F"
+      },
+      "symbol": "arrow.left.arrow.right",
+      "titles": {
+        "en": "Extended Nodes & Bidirectional Edges",
+        "zh": "扩展节点与双向连线"
+      }
+    },
+    {
+      "id": "sequence-sf-symbols",
+      "kind": "sequence",
+      "sources": {
+        "en": "sequenceDiagram\n    actor User as User :sf:person.fill:\n    participant App as App :sf:app:\n    participant Cloud as Cloud :sf:icloud:\n    User->>App: Select :sf:doc.text: file\n    Note over App,Cloud: Native :sf:sparkles: symbols and text<br/>Share font size, color and baseline\n    App->>+Cloud: Upload :sf:icloud.and.arrow.up: file\n    Cloud-->>-App: Save :sf:checkmark.circle.fill: Success\n    App-->>User: Show :sf:photo: preview",
+        "zh": "sequenceDiagram\n    actor User as 用户 :sf:person.fill:\n    participant App as 应用 :sf:app:\n    participant Cloud as 云端 :sf:icloud:\n    User->>App: 选择 :sf:doc.text: 文件\n    Note over App,Cloud: 原生 :sf:sparkles: 图标与文字<br/>共享字号、颜色和基线\n    App->>+Cloud: 上传 :sf:icloud.and.arrow.up: 文件\n    Cloud-->>-App: 保存 :sf:checkmark.circle.fill: 成功\n    App-->>User: 展示 :sf:photo: 预览"
+      },
+      "symbol": "bubble.left.and.bubble.right",
+      "titles": {
+        "en": "SF Symbols Messages",
+        "zh": "SF Symbols 消息"
+      }
+    },
+    {
+      "id": "sequence-lifecycle",
+      "kind": "sequence",
+      "sources": {
+        "en": "sequenceDiagram\n    autonumber\n    actor User as User\n    participant API@{ \"type\": \"control\", \"alias\": \"Service\" }\n    User->>+API: Submit task\n    create participant Worker as Temporary worker\n    API->>Worker: Create and run\n    loop Process batches\n        Worker->>Worker: Process data\n    end\n    note over API,Worker\n        Release the worker after the task\n        The lifeline ends at the destroy message\n    end note\n    Worker-->>API: Return result\n    destroy Worker\n    API-xWorker: Release resources\n    API-->>-User: Return result",
+        "zh": "sequenceDiagram\n    autonumber\n    actor User as 用户\n    participant API@{ \"type\": \"control\", \"alias\": \"服务\" }\n    User->>+API: 提交任务\n    create participant Worker as 临时工作进程\n    API->>Worker: 创建并执行\n    loop 处理批次\n        Worker->>Worker: 处理数据\n    end\n    note over API,Worker\n        任务结束后释放工作进程\n        生命线在销毁消息处结束\n    end note\n    Worker-->>API: 返回结果\n    destroy Worker\n    API-xWorker: 释放资源\n    API-->>-User: 返回结果"
+      },
+      "symbol": "person.crop.rectangle.badge.plus",
+      "titles": {
+        "en": "Participant Lifecycle",
+        "zh": "参与者生命周期"
+      }
+    },
+    {
+      "id": "class-advanced",
+      "kind": "class",
+      "sources": {
+        "en": "classDiagram\n    direction LR\n    namespace Domain[\"Domain model\"] {\n        class Customer {\n            +String name\n            +placeOrder() Order\n        }\n        class Order {\n            +String id\n            +total() Money\n        }\n        class Payment <<interface>>\n        Payment : +authorize() bool\n        Customer \"1\" --> \"0..*\" Order : Created\n        Order --> Payment : Pay\n    }\n    note for Payment \"Isolate payment implementations behind an interface<br>Callers depend only on the payment protocol\"\n    note \"Separate properties and methods\"",
+        "zh": "classDiagram\n    direction LR\n    namespace Domain[\"业务模型\"] {\n        class Customer {\n            +String name\n            +placeOrder() Order\n        }\n        class Order {\n            +String id\n            +total() Money\n        }\n        class Payment <<interface>>\n        Payment : +authorize() bool\n        Customer \"1\" --> \"0..*\" Order : 创建\n        Order --> Payment : 支付\n    }\n    note for Payment \"通过接口隔离支付实现<br>调用方只依赖支付协议\"\n    note \"属性和方法分区显示\""
+      },
+      "symbol": "rectangle.3.group",
+      "titles": {
+        "en": "Interfaces, Cardinality & Notes",
+        "zh": "接口、基数与注释"
+      }
+    },
+    {
+      "id": "state-parallel",
+      "kind": "state",
+      "sources": {
+        "en": "stateDiagram-v2\n    [*] --> Ready\n    state Ready <<fork>>\n    Ready --> Loading\n    Ready --> Connecting\n    Loading --> Joined\n    Connecting --> Joined\n    state Joined <<join>>\n    Joined --> Active\n    state \"Active\" as Active {\n        [*] --> Idle\n        Idle --> Busy : Receive task\n        Busy --> Idle : Done\n        --\n        [*] --> Offline\n        Offline --> Online : Connect\n        Online --> Offline : Disconnect\n    }\n    note right of Active\n        Two regions run in parallel\n        Each retains its initial state\n    end note\n    Active --> [*] : Exit",
+        "zh": "stateDiagram-v2\n    [*] --> Ready\n    state Ready <<fork>>\n    Ready --> Loading\n    Ready --> Connecting\n    Loading --> Joined\n    Connecting --> Joined\n    state Joined <<join>>\n    Joined --> Active\n    state \"运行中\" as Active {\n        [*] --> Idle\n        Idle --> Busy : 接收任务\n        Busy --> Idle : 完成\n        --\n        [*] --> Offline\n        Offline --> Online : 建立连接\n        Online --> Offline : 断开\n    }\n    note right of Active\n        两个区域并行运行\n        各自保留初始状态\n    end note\n    Active --> [*] : 退出"
+      },
+      "symbol": "arrow.triangle.branch",
+      "titles": {
+        "en": "Forks, Joins & Concurrent Regions",
+        "zh": "分叉、汇合与并发区域"
+      }
+    },
+    {
+      "id": "flowchart-complex",
+      "kind": "flowchart",
+      "sources": {
+        "en": "flowchart TD\n    Start([Order received]) --> Check{Check order}\n    Check -->|Valid| Stock[Check stock]\n    Check -->|Invalid| Reject([Revise order])\n    subgraph Fulfillment[Order fulfillment]\n        Stock --> Available{Stock available?}\n        Available -->|Available| Reserve[Reserve items]\n        Available -->|Unavailable| Restock[Create restock task]\n        Restock --> Notify([Await restock])\n        Reserve --> Payment[Confirm payment]\n        Payment --> Risk[Risk check]\n        Payment --> Confirm[Confirm receipt]\n        Risk --> Pack[Pack items]\n        Confirm --> Pack\n        Pack --> Ship[Arrange delivery]\n        Ship --> Delivered[Confirm delivery]\n    end\n    Delivered --> Invoice[Generate receipt]\n    Invoice --> End([Order completed])",
+        "zh": "flowchart TD\n    Start([收到订单]) --> Check{检查订单}\n    Check -->|有效| Stock[查询库存]\n    Check -->|无效| Reject([请修改订单])\n    subgraph Fulfillment[订单履约]\n        Stock --> Available{库存充足？}\n        Available -->|充足| Reserve[预留商品]\n        Available -->|不足| Restock[创建补货任务]\n        Restock --> Notify([等待补货])\n        Reserve --> Payment[确认支付]\n        Payment --> Risk[风险检查]\n        Payment --> Confirm[确认收款]\n        Risk --> Pack[打包商品]\n        Confirm --> Pack\n        Pack --> Ship[安排配送]\n        Ship --> Delivered[确认签收]\n    end\n    Delivered --> Invoice[生成凭证]\n    Invoice --> End([订单完成])"
+      },
+      "symbol": "point.3.connected.trianglepath.dotted",
+      "titles": {
+        "en": "Flowchart · Complex Example",
+        "zh": "流程图 · 复杂示例"
+      }
+    },
+    {
+      "id": "sequence-complex",
+      "kind": "sequence",
+      "sources": {
+        "en": "sequenceDiagram\n    autonumber\n    actor User as User\n    participant Web as Client\n    participant API as Order service\n    participant Stock as Stock service\n    participant Pay as Payment service\n    participant Notify as Notification service\n    User->>Web: Submit order\n    Web->>+API: Create order\n    API->>Stock: Check and reserve stock\n    Stock-->>API: Return reservation\n    alt Stock available\n        API->>Pay: Create payment\n        Pay-->>API: Return payment URL\n        API-->>Web: Await payment\n        Web-->>User: Show payment page\n        User->>Web: Confirm payment\n        Web->>Pay: Submit payment\n        Pay-->>API: Payment notification\n        API->>Stock: Confirm stock deduction\n        Stock-->>API: Stock deducted\n        API->>Notify: Send order confirmation\n        Notify-->>User: Push order status\n    else Out of stock\n        API->>Notify: Send stock alert\n        Notify-->>User: Suggest revising order\n    end\n    API-->>-Web: Return final status\n    Web-->>User: Show order details",
+        "zh": "sequenceDiagram\n    autonumber\n    actor User as 用户\n    participant Web as 客户端\n    participant API as 订单服务\n    participant Stock as 库存服务\n    participant Pay as 支付服务\n    participant Notify as 通知服务\n    User->>Web: 提交订单\n    Web->>+API: 创建订单\n    API->>Stock: 检查并预留库存\n    Stock-->>API: 返回预留结果\n    alt 库存充足\n        API->>Pay: 创建支付单\n        Pay-->>API: 返回支付地址\n        API-->>Web: 等待支付\n        Web-->>User: 展示支付页面\n        User->>Web: 确认支付\n        Web->>Pay: 提交支付\n        Pay-->>API: 支付完成通知\n        API->>Stock: 确认扣减库存\n        Stock-->>API: 扣减完成\n        API->>Notify: 发送订单确认\n        Notify-->>User: 推送订单状态\n    else 库存不足\n        API->>Notify: 发送缺货提醒\n        Notify-->>User: 建议调整订单\n    end\n    API-->>-Web: 返回最终状态\n    Web-->>User: 展示订单详情"
+      },
+      "symbol": "arrow.left.arrow.right",
+      "titles": {
+        "en": "Sequence Diagram · Complex Example",
+        "zh": "时序图 · 复杂示例"
+      }
+    },
+    {
+      "id": "class-complex",
+      "kind": "class",
+      "sources": {
+        "en": "classDiagram\n    direction TD\n    class Customer {\n        +String name\n        +placeOrder() Order\n    }\n    class Address {\n        +String city\n        +String detail\n    }\n    class Order {\n        +String id\n        +total() Money\n    }\n    class OrderItem {\n        +int quantity\n        +subtotal() Money\n    }\n    class Product {\n        +String title\n        +Money price\n    }\n    class Payment {\n        +String status\n        +authorize() bool\n    }\n    class Shipment {\n        +String trackingID\n        +dispatch()\n    }\n    Customer --> Order : Created\n    Customer --> Address : Save\n    Order \"1\" *-- \"1..*\" OrderItem\n    OrderItem --> Product : Product\n    Order --> Payment : Pay\n    Payment --> Shipment : Confirm shipment",
+        "zh": "classDiagram\n    direction TD\n    class Customer {\n        +String name\n        +placeOrder() Order\n    }\n    class Address {\n        +String city\n        +String detail\n    }\n    class Order {\n        +String id\n        +total() Money\n    }\n    class OrderItem {\n        +int quantity\n        +subtotal() Money\n    }\n    class Product {\n        +String title\n        +Money price\n    }\n    class Payment {\n        +String status\n        +authorize() bool\n    }\n    class Shipment {\n        +String trackingID\n        +dispatch()\n    }\n    Customer --> Order : 创建\n    Customer --> Address : 保存\n    Order \"1\" *-- \"1..*\" OrderItem\n    OrderItem --> Product : 商品\n    Order --> Payment : 支付\n    Payment --> Shipment : 确认配送"
+      },
+      "symbol": "square.stack.3d.up",
+      "titles": {
+        "en": "Class Diagram · Complex Example",
+        "zh": "类图 · 复杂示例"
+      }
+    },
+    {
+      "id": "state-complex",
+      "kind": "state",
+      "sources": {
+        "en": "stateDiagram-v2\n    [*] --> Draft\n    Draft --> Submitted : Submit\n    Submitted --> Reviewing : Start review\n    Reviewing --> Rejected : Rejected\n    Rejected --> Draft : Revise\n    Reviewing --> Approved : Valid\n    Approved --> Processing : Start fulfillment\n    state Processing {\n        [*] --> Packing\n        Packing --> Shipping : Ship\n        Shipping --> [*] : Delivered\n    }\n    Processing --> Completed : Fulfilled\n    Completed --> Archived : Archive\n    Archived --> [*]",
+        "zh": "stateDiagram-v2\n    [*] --> Draft\n    Draft --> Submitted : 提交\n    Submitted --> Reviewing : 开始审核\n    Reviewing --> Rejected : 不通过\n    Rejected --> Draft : 修改\n    Reviewing --> Approved : 通过\n    Approved --> Processing : 开始履约\n    state Processing {\n        [*] --> Packing\n        Packing --> Shipping : 发货\n        Shipping --> [*] : 签收\n    }\n    Processing --> Completed : 履约结束\n    Completed --> Archived : 归档\n    Archived --> [*]"
+      },
+      "symbol": "circle.hexagongrid",
+      "titles": {
+        "en": "State Diagram · Complex Example",
+        "zh": "状态图 · 复杂示例"
+      }
+    },
+    {
+      "id": "er-complex",
+      "kind": "er",
+      "sources": {
+        "en": "erDiagram\n    CUSTOMER ||--o{ ORDER : places\n    CUSTOMER ||--o{ ADDRESS : owns\n    ORDER ||--|{ ORDER_ITEM : includes\n    ORDER_ITEM }o--|| PRODUCT : references\n    ORDER ||--|o PAYMENT : paid_by\n    PAYMENT ||--o{ PAYMENT_ATTEMPT : retries\n    CUSTOMER {\n        string id PK\n        string name\n        string email\n    }\n    ORDER {\n        string id PK\n        string customer_id FK\n        string status\n    }\n    ORDER_ITEM {\n        string id PK\n        string product_id FK\n        int quantity\n    }\n    PRODUCT {\n        string id PK\n        string title\n        float price\n    }\n    ADDRESS {\n        string city\n        string detail\n    }\n    PAYMENT {\n        string method\n        string status\n    }\n    PAYMENT_ATTEMPT {\n        string attempt_id\n        string status\n    }",
+        "zh": "erDiagram\n    CUSTOMER ||--o{ ORDER : places\n    CUSTOMER ||--o{ ADDRESS : owns\n    ORDER ||--|{ ORDER_ITEM : includes\n    ORDER_ITEM }o--|| PRODUCT : references\n    ORDER ||--|o PAYMENT : paid_by\n    PAYMENT ||--o{ PAYMENT_ATTEMPT : retries\n    CUSTOMER {\n        string id PK\n        string name\n        string email\n    }\n    ORDER {\n        string id PK\n        string customer_id FK\n        string status\n    }\n    ORDER_ITEM {\n        string id PK\n        string product_id FK\n        int quantity\n    }\n    PRODUCT {\n        string id PK\n        string title\n        float price\n    }\n    ADDRESS {\n        string city\n        string detail\n    }\n    PAYMENT {\n        string method\n        string status\n    }\n    PAYMENT_ATTEMPT {\n        string attempt_id\n        string status\n    }"
+      },
+      "symbol": "cylinder.split.1x2",
+      "titles": {
+        "en": "Entity Relationship · Complex Example",
+        "zh": "实体关系图 · 复杂示例"
+      }
+    },
+    {
+      "id": "pie-complex",
+      "kind": "pie",
+      "sources": {
+        "en": "pie showData title Team feature usage\n    \"Flowcharts\" : 28\n    \"Sequence diagrams\" : 19\n    \"Class diagrams\" : 12\n    \"State diagrams\" : 10\n    \"Architecture diagrams\" : 8\n    \"Entity relationships\" : 7\n    \"Mind maps\" : 5\n    \"Gantt charts\" : 4\n    \"Data charts\" : 3\n    \"Other\" : 2",
+        "zh": "pie showData title 团队功能使用分布\n    \"流程图\" : 28\n    \"时序图\" : 19\n    \"类图\" : 12\n    \"状态图\" : 10\n    \"架构图\" : 8\n    \"实体关系图\" : 7\n    \"思维导图\" : 5\n    \"甘特图\" : 4\n    \"数据图表\" : 3\n    \"其他\" : 2"
+      },
+      "symbol": "chart.pie",
+      "titles": {
+        "en": "Pie Chart · Complex Example",
+        "zh": "饼图 · 复杂示例"
+      }
+    },
+    {
+      "id": "gantt-complex",
+      "kind": "gantt",
+      "sources": {
+        "en": "gantt\n    title Product delivery plan\n    dateFormat YYYY-MM-DD\n    section Research\n        User interviews :done, interviews, 2026-10-01, 4d\n        Requirements :done, requirements, after interviews, 3d\n        Design review :done, review, after requirements, 2d\n    section Development\n        Data model :active, model, after review, 4d\n        Native editor :active, editor, after review, 8d\n        Layout engine :crit, layout, after model, 7d\n        Export module :export, after model, 5d\n    section Validation\n        Unit tests :tests, after layout, 4d\n        Visual regression :visual, after export, 5d\n        Performance validation :perf, after tests, 3d\n    section Delivery\n        Documentation :docs, after visual, 3d\n        Release preparation :release, after perf, 2d",
+        "zh": "gantt\n    title 产品交付计划\n    dateFormat YYYY-MM-DD\n    section 调研\n        用户访谈 :done, interviews, 2026-10-01, 4d\n        需求整理 :done, requirements, after interviews, 3d\n        方案评审 :done, review, after requirements, 2d\n    section 开发\n        数据模型 :active, model, after review, 4d\n        原生编辑器 :active, editor, after review, 8d\n        布局引擎 :crit, layout, after model, 7d\n        导出模块 :export, after model, 5d\n    section 验证\n        单元测试 :tests, after layout, 4d\n        视觉回归 :visual, after export, 5d\n        性能验证 :perf, after tests, 3d\n    section 交付\n        文档整理 :docs, after visual, 3d\n        发布准备 :release, after perf, 2d"
+      },
+      "symbol": "chart.bar.xaxis",
+      "titles": {
+        "en": "Gantt Chart · Complex Example",
+        "zh": "甘特图 · 复杂示例"
+      }
+    },
+    {
+      "id": "gitGraph-complex",
+      "kind": "gitGraph",
+      "sources": {
+        "en": "gitGraph\n    commit id: \"init\"\n    branch develop\n    commit id: \"model\"\n    branch feature-layout\n    commit id: \"layers\"\n    commit id: \"ports\"\n    checkout develop\n    branch feature-export\n    commit id: \"svg\"\n    commit id: \"theme\"\n    checkout develop\n    merge feature-layout id: \"merge-layout\"\n    merge feature-export id: \"merge-export\"\n    commit id: \"tests\"\n    checkout main\n    merge develop id: \"release\" tag: \"v1.0\"\n    branch hotfix\n    commit id: \"labels\"\n    checkout main\n    merge hotfix id: \"patch\" tag: \"v1.0.1\"",
+        "zh": "gitGraph\n    commit id: \"init\"\n    branch develop\n    commit id: \"model\"\n    branch feature-layout\n    commit id: \"layers\"\n    commit id: \"ports\"\n    checkout develop\n    branch feature-export\n    commit id: \"svg\"\n    commit id: \"theme\"\n    checkout develop\n    merge feature-layout id: \"merge-layout\"\n    merge feature-export id: \"merge-export\"\n    commit id: \"tests\"\n    checkout main\n    merge develop id: \"release\" tag: \"v1.0\"\n    branch hotfix\n    commit id: \"labels\"\n    checkout main\n    merge hotfix id: \"patch\" tag: \"v1.0.1\""
+      },
+      "symbol": "arrow.triangle.branch",
+      "titles": {
+        "en": "Git Graph · Complex Example",
+        "zh": "Git 分支图 · 复杂示例"
+      }
+    },
+    {
+      "id": "mindmap-complex",
+      "kind": "mindmap",
+      "sources": {
+        "en": "mindmap\n    root((Diagram product))\n        User experience\n            Source editing\n                Syntax hints\n                Error locations\n            Native interaction\n                Pan and zoom\n                Node selection\n        Diagram engine\n            Syntax parsing\n                Flow and interaction\n                Data and relationships\n            Layout computation\n                Automatic layering\n                Edge routing\n        Quality assurance\n            Unit tests\n            Visual regression\n            Performance analysis\n        Delivery\n            Documentation\n            Examples\n            Version release",
+        "zh": "mindmap\n    root((图表产品))\n        用户体验\n            源码编辑\n                语法提示\n                错误定位\n            原生交互\n                平移缩放\n                节点选择\n        图形引擎\n            语法解析\n                流程与交互\n                数据与关系\n            布局计算\n                自动分层\n                连线避障\n        质量保证\n            单元测试\n            视觉回归\n            性能分析\n        交付\n            文档\n            示例\n            版本发布"
+      },
+      "symbol": "brain",
+      "titles": {
+        "en": "Mind Map · Complex Example",
+        "zh": "思维导图 · 复杂示例"
+      }
+    },
+    {
+      "id": "timeline-complex",
+      "kind": "timeline",
+      "sources": {
+        "en": "timeline\n    title Product roadmap\n    section Discovery\n        January : User research : Requirements interviews\n        February : Technical validation : Prototype review\n    section Build\n        March : Parser : Scene model\n        April : Flowcharts : Sequence diagrams\n        May : Relationship diagrams : Subgraph layout\n    section Validation\n        June : Visual regression : Performance optimization\n        July : Internal trial : Bug fixes\n    section Delivery\n        August : Complete documentation : Launch",
+        "zh": "timeline\n    title 产品演进路线\n    section 探索\n        一月 : 用户调研 : 需求访谈\n        二月 : 技术验证 : 原型评审\n    section 构建\n        三月 : 解析器 : 场景模型\n        四月 : 流程图 : 时序图\n        五月 : 关系图 : 子图布局\n    section 验证\n        六月 : 视觉回归 : 性能优化\n        七月 : 内部试用 : 问题修复\n    section 交付\n        八月 : 文档完善 : 正式发布"
+      },
+      "symbol": "clock",
+      "titles": {
+        "en": "Timeline · Complex Example",
+        "zh": "时间线 · 复杂示例"
+      }
+    },
+    {
+      "id": "journey-complex",
+      "kind": "journey",
+      "sources": {
+        "en": "journey\n    title Team diagramming journey\n    section Preparation\n        Understand needs: 4: Product, Design\n        Gather resources: 3: Product\n        Confirm scope: 5: Product, Development\n    section Created\n        Write source: 4: Development\n        View preview: 5: Development, Design\n        Refine layout: 3: Development, Design\n    section Review\n        Share draft: 4: Product, Development\n        Collect feedback: 3: Product, Design\n        Complete revisions: 5: Development\n    section Delivery\n        Export diagram: 5: Development\n        Update documentation: 4: Product\n        Archive version: 5: Product, Development",
+        "zh": "journey\n    title 团队协作绘图旅程\n    section 准备\n        了解需求: 4: 产品, 设计\n        收集资料: 3: 产品\n        确认范围: 5: 产品, 开发\n    section 创建\n        编写源码: 4: 开发\n        查看预览: 5: 开发, 设计\n        调整布局: 3: 开发, 设计\n    section 评审\n        分享草稿: 4: 产品, 开发\n        收集意见: 3: 产品, 设计\n        完成修改: 5: 开发\n    section 交付\n        导出图表: 5: 开发\n        更新文档: 4: 产品\n        归档版本: 5: 产品, 开发"
+      },
+      "symbol": "figure.walk",
+      "titles": {
+        "en": "User Journey · Complex Example",
+        "zh": "用户旅程 · 复杂示例"
+      }
+    },
+    {
+      "id": "xychart-complex",
+      "kind": "xychart",
+      "sources": {
+        "en": "xychart-beta\n    title \"Annual diagram usage\"\n    x-axis [January, February, March, April, May, June, July, August, September, October, November, December]\n    y-axis \"Count\" 0 --> 240\n    bar \"Created\" [42, 55, 68, 75, 98, 115, 128, 146, 165, 184, 202, 225]\n    bar \"Shared\" [18, 24, 32, 40, 47, 59, 68, 82, 96, 108, 125, 146]\n    line \"Export\" [30, 38, 52, 61, 80, 92, 110, 125, 149, 162, 186, 210]",
+        "zh": "xychart-beta\n    title \"全年图表使用量\"\n    x-axis [一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]\n    y-axis \"数量\" 0 --> 240\n    bar \"新建\" [42, 55, 68, 75, 98, 115, 128, 146, 165, 184, 202, 225]\n    bar \"共享\" [18, 24, 32, 40, 47, 59, 68, 82, 96, 108, 125, 146]\n    line \"导出\" [30, 38, 52, 61, 80, 92, 110, 125, 149, 162, 186, 210]"
+      },
+      "symbol": "chart.xyaxis.line",
+      "titles": {
+        "en": "XY Chart · Complex Example",
+        "zh": "XY 坐标图 · 复杂示例"
+      }
+    },
+    {
+      "id": "requirement-complex",
+      "kind": "requirement",
+      "sources": {
+        "en": "requirementDiagram\n    direction TD\n    requirement Native {\n        id: REQ-001\n        text: Native rendering\n        risk: medium\n        verifymethod: test\n    }\n    requirement Export {\n        id: REQ-002\n        text: Vector export\n        risk: low\n        verifymethod: test\n    }\n    requirement Layout {\n        id: REQ-003\n        text: Adaptive layout\n        risk: high\n        verifymethod: demonstration\n    }\n    element Engine {\n        type: software\n    }\n    element SVG {\n        type: software\n    }\n    element Tests {\n        type: test\n    }\n    Native - contains -> Layout\n    Native - contains -> Export\n    Engine - satisfies -> Native\n    SVG - satisfies -> Export\n    Tests - verifies -> Native\n    Tests - verifies -> Layout",
+        "zh": "requirementDiagram\n    direction TD\n    requirement Native {\n        id: REQ-001\n        text: 原生渲染\n        risk: medium\n        verifymethod: test\n    }\n    requirement Export {\n        id: REQ-002\n        text: 矢量导出\n        risk: low\n        verifymethod: test\n    }\n    requirement Layout {\n        id: REQ-003\n        text: 自适应布局\n        risk: high\n        verifymethod: demonstration\n    }\n    element Engine {\n        type: software\n    }\n    element SVG {\n        type: software\n    }\n    element Tests {\n        type: test\n    }\n    Native - contains -> Layout\n    Native - contains -> Export\n    Engine - satisfies -> Native\n    SVG - satisfies -> Export\n    Tests - verifies -> Native\n    Tests - verifies -> Layout"
+      },
+      "symbol": "checklist",
+      "titles": {
+        "en": "Requirement Diagram · Complex Example",
+        "zh": "需求图 · 复杂示例"
+      }
+    },
+    {
+      "id": "c4-complex",
+      "kind": "c4",
+      "sources": {
+        "en": "C4Container\n    title Order platform\n    Person(customer, \"Customer\", \"Create and track orders\")\n    System_Boundary(platform, \"Order platform\") {\n        Container(web, \"User interface\", \"Swift\", \"Order entry point\")\n        Container(api, \"Order service\", \"Swift\", \"Process order requests\")\n        Container(stock, \"Stock service\", \"Swift\", \"Reserve and deduct items\")\n        Container(payment, \"Payment service\", \"Swift\", \"Create and confirm payments\")\n        ContainerDb(database, \"Order data\", \"SQLite\", \"Store orders and status\")\n    }\n    System_Ext(logistics, \"Delivery platform\", \"Track shipment status\")\n    Rel(customer, web, \"Use\")\n    Rel(web, api, \"Submit order\")\n    Rel(api, stock, \"Reserve stock\")\n    Rel(api, payment, \"Confirm payment\")\n    Rel(stock, database, \"Record stock\")\n    Rel(payment, database, \"Record payment\")\n    Rel(database, logistics, \"Send delivery task\")",
+        "zh": "C4Container\n    title 订单平台\n    Person(customer, \"客户\", \"创建与查询订单\")\n    System_Boundary(platform, \"订单平台\") {\n        Container(web, \"用户界面\", \"Swift\", \"订单操作入口\")\n        Container(api, \"订单服务\", \"Swift\", \"处理订单请求\")\n        Container(stock, \"库存服务\", \"Swift\", \"预留与扣减商品\")\n        Container(payment, \"支付服务\", \"Swift\", \"创建与确认支付\")\n        ContainerDb(database, \"订单数据\", \"SQLite\", \"保存订单与状态\")\n    }\n    System_Ext(logistics, \"配送平台\", \"追踪运输状态\")\n    Rel(customer, web, \"操作\")\n    Rel(web, api, \"提交订单\")\n    Rel(api, stock, \"预留库存\")\n    Rel(api, payment, \"确认支付\")\n    Rel(stock, database, \"记录库存\")\n    Rel(payment, database, \"记录支付\")\n    Rel(database, logistics, \"发送配送任务\")"
+      },
+      "symbol": "building.2",
+      "titles": {
+        "en": "C4 Diagram · Complex Example",
+        "zh": "C4 架构图 · 复杂示例"
+      }
+    },
+    {
+      "id": "sankey-complex",
+      "kind": "sankey",
+      "sources": {
+        "en": "sankey-beta\nSearch,Product page,34\nSearch,Documentation page,16\nCommunity,Product page,22\nCommunity,Documentation page,18\nReferrals,Product page,28\nReferrals,Documentation page,12\nProduct page,Sign up,54\nProduct page,Leave,30\nDocumentation page,Sign up,28\nDocumentation page,Leave,18\nSign up,Personal,50\nSign up,Team,32",
+        "zh": "sankey-beta\n搜索,产品页,34\n搜索,文档页,16\n社区,产品页,22\n社区,文档页,18\n推荐,产品页,28\n推荐,文档页,12\n产品页,注册,54\n产品页,离开,30\n文档页,注册,28\n文档页,离开,18\n注册,个人版,50\n注册,团队版,32"
+      },
+      "symbol": "arrow.triangle.merge",
+      "titles": {
+        "en": "Sankey Diagram · Complex Example",
+        "zh": "桑基图 · 复杂示例"
+      }
+    },
+    {
+      "id": "block-complex",
+      "kind": "block",
+      "sources": {
+        "en": "block-beta\n    columns 3\n    Input[Input data]:3\n    A[Text input] B[File import] C[Template selection]\n    D[Parsing] E[Validate] F[Layout]\n    G[Native preview] H[Vector export] I[Image export]\n    Output[Archive results]:3\n    Input --> A\n    Input --> B\n    Input --> C\n    A --> D\n    B --> E\n    C --> F\n    D --> G\n    E --> H\n    F --> I\n    G --> Output\n    H --> Output\n    I --> Output",
+        "zh": "block-beta\n    columns 3\n    Input[输入数据]:3\n    A[文本输入] B[文件导入] C[模板选择]\n    D[解析] E[校验] F[布局]\n    G[原生预览] H[矢量导出] I[图片导出]\n    Output[结果归档]:3\n    Input --> A\n    Input --> B\n    Input --> C\n    A --> D\n    B --> E\n    C --> F\n    D --> G\n    E --> H\n    F --> I\n    G --> Output\n    H --> Output\n    I --> Output"
+      },
+      "symbol": "rectangle.grid.3x2",
+      "titles": {
+        "en": "Block Diagram · Complex Example",
+        "zh": "块图 · 复杂示例"
+      }
+    },
+    {
+      "id": "packet-complex",
+      "kind": "packet",
+      "sources": {
+        "en": "packet-beta\n    title Extended message protocol\n    0-3: \"Version\"\n    4-7: \"Type\"\n    8-15: \"Flags\"\n    16-31: \"Length\"\n    32-63: \"Request ID\"\n    64-95: \"Source\"\n    96-127: \"Destination\"\n    128-191: \"Timestamp\"\n    192-223: \"Sequence\"\n    224-239: \"Format\"\n    240-255: \"Checksum\"\n    256-351: \"Payload\"\n    352-383: \"Trailer\"",
+        "zh": "packet-beta\n    title 扩展消息协议\n    0-3: \"Version\"\n    4-7: \"Type\"\n    8-15: \"Flags\"\n    16-31: \"Length\"\n    32-63: \"Request ID\"\n    64-95: \"Source\"\n    96-127: \"Destination\"\n    128-191: \"Timestamp\"\n    192-223: \"Sequence\"\n    224-239: \"Format\"\n    240-255: \"Checksum\"\n    256-351: \"Payload\"\n    352-383: \"Trailer\""
+      },
+      "symbol": "square.split.2x2",
+      "titles": {
+        "en": "Packet Diagram · Complex Example",
+        "zh": "数据包图 · 复杂示例"
+      }
+    },
+    {
+      "id": "kanban-complex",
+      "kind": "kanban",
+      "sources": {
+        "en": "kanban\n    backlog[Backlog]\n        a[Cross-platform rendering API]\n        b[More theme options]\n        c[Large diagram profiling]\n    ready[Ready]\n        d[Extend relationship syntax]\n        e[Improve error locations]\n        f[Organize documentation examples]\n    doing[In progress]\n        g[Complex data layout]\n        h[Native canvas interaction]\n        i[Export quality checks]\n        j[Accessibility]\n    review[In review]\n        k[Example comparison page]\n        l[System appearance support]\n    done[Done]\n        m[Basic parser]\n        n[Flowcharts and subgraphs]\n        o[System font measurement]",
+        "zh": "kanban\n    backlog[需求池]\n        a[跨平台渲染接口]\n        b[更多主题配置]\n        c[大图性能分析]\n    ready[待开始]\n        d[扩展关系语法]\n        e[完善错误定位]\n        f[整理文档示例]\n    doing[进行中]\n        g[复杂数据布局]\n        h[原生画布交互]\n        i[导出质量检查]\n        j[无障碍体验]\n    review[待评审]\n        k[示例对照页面]\n        l[系统外观适配]\n    done[已完成]\n        m[基础解析器]\n        n[流程与子图]\n        o[系统字体测量]"
+      },
+      "symbol": "rectangle.split.3x1",
+      "titles": {
+        "en": "Kanban · Complex Example",
+        "zh": "看板 · 复杂示例"
+      }
+    },
+    {
+      "id": "architecture-complex",
+      "kind": "architecture",
+      "sources": {
+        "en": "architecture-beta\n    service web(internet)[Client]\n    group app[Application services]\n    service api(server)[API gateway] in app\n    service orders(server)[Order service] in app\n    service payments(server)[Payment service] in app\n    group data[Data services]\n    service ordersDB(database)[Order data] in data\n    service paymentDB(database)[Payment data] in data\n    service backup(disk)[Backup] in data\n    web:R --> L:api\n    api:R --> L:orders\n    api:R --> L:payments\n    orders:R --> L:ordersDB\n    payments:R --> L:paymentDB\n    ordersDB:R --> L:backup",
+        "zh": "architecture-beta\n    service web(internet)[客户端]\n    group app[应用服务]\n    service api(server)[API 网关] in app\n    service orders(server)[订单服务] in app\n    service payments(server)[支付服务] in app\n    group data[数据服务]\n    service ordersDB(database)[订单数据] in data\n    service paymentDB(database)[支付数据] in data\n    service backup(disk)[备份] in data\n    web:R --> L:api\n    api:R --> L:orders\n    api:R --> L:payments\n    orders:R --> L:ordersDB\n    payments:R --> L:paymentDB\n    ordersDB:R --> L:backup"
+      },
+      "symbol": "server.rack",
+      "titles": {
+        "en": "Architecture Diagram · Complex Example",
+        "zh": "架构图 · 复杂示例"
+      }
+    },
+    {
+      "id": "radar-complex",
+      "kind": "radar",
+      "sources": {
+        "en": "radar-beta\n    title Release capabilities\n    axis Parsing, Layout, Drawing, Export, Interaction, Performance, Usability, Accessibility\n    curve stable[\"Stable\"]{8,7,9,8,9,7,8,8}\n    curve preview[\"Preview\"]{9,8,9,9,9,8,8,9}\n    curve target[\"Target\"]{10,10,10,10,10,10,10,10}\n    max 10",
+        "zh": "radar-beta\n    title 多版本能力对比\n    axis 解析, 布局, 绘制, 导出, 交互, 性能, 易用, 无障碍\n    curve stable[\"稳定版\"]{8,7,9,8,9,7,8,8}\n    curve preview[\"预览版\"]{9,8,9,9,9,8,8,9}\n    curve target[\"目标\"]{10,10,10,10,10,10,10,10}\n    max 10"
+      },
+      "symbol": "hexagon",
+      "titles": {
+        "en": "Radar Chart · Complex Example",
+        "zh": "雷达图 · 复杂示例"
+      }
+    },
+    {
+      "id": "treemap-complex",
+      "kind": "treemap",
+      "sources": {
+        "en": "treemap-beta\n    \"Product development\"\n        \"Native engine\"\n            \"Parsing\": 32\n            \"Layered layout\": 42\n            \"Edge routing\": 28\n            \"Text measurement\": 16\n        \"App experience\"\n            \"Editor\": 24\n            \"Canvas\": 26\n            \"Menus\": 8\n            \"Accessibility\": 10\n    \"Quality assurance\"\n        \"Unit tests\": 26\n        \"Visual regression\": 22\n        \"Performance tests\": 14\n        \"Edge cases\": 3\n    \"Delivery\"\n        \"Documentation\": 12\n        \"Examples\": 10\n        \"Release\": 6\n        \"Other\": 1",
+        "zh": "treemap-beta\n    \"产品开发\"\n        \"原生引擎\"\n            \"解析\": 32\n            \"分层布局\": 42\n            \"连线避障\": 28\n            \"文字测量\": 16\n        \"应用体验\"\n            \"编辑器\": 24\n            \"画布\": 26\n            \"菜单\": 8\n            \"无障碍\": 10\n    \"质量保证\"\n        \"单元测试\": 26\n        \"视觉回归\": 22\n        \"性能测试\": 14\n        \"边界用例\": 3\n    \"交付\"\n        \"文档\": 12\n        \"示例\": 10\n        \"发布\": 6\n        \"其他\": 1"
+      },
+      "symbol": "rectangle.3.group",
+      "titles": {
+        "en": "Treemap · Complex Example",
+        "zh": "矩形树图 · 复杂示例"
+      }
+    },
+    {
+      "id": "agentflow-complex",
+      "kind": "agentflow",
+      "sources": {
+        "en": "agentflow-beta TD\n    Request[User request] --> Plan[Plan tasks]\n    Plan --> Route{Choose route}\n    Route --> Research[Research agent]\n    Route --> Code[Coding agent]\n    Route --> Data[Data agent]\n    Research --> Sources[Organize sources]\n    Code --> Implement[Implement solution]\n    Data --> Analyze[Analyze data]\n    Sources --> Review[Cross-check]\n    Implement --> Review\n    Analyze --> Review\n    Review --> Quality{Result complete?}\n    Quality -->|Complete| Answer[Summarize answer]\n    Quality -->|Incomplete| FollowUp[Follow-up task]\n    FollowUp --> Draft[Revise draft]\n    Draft --> Answer",
+        "zh": "agentflow-beta TD\n    Request[用户请求] --> Plan[任务规划]\n    Plan --> Route{选择处理路径}\n    Route --> Research[研究智能体]\n    Route --> Code[编码智能体]\n    Route --> Data[数据智能体]\n    Research --> Sources[整理资料]\n    Code --> Implement[实现方案]\n    Data --> Analyze[分析数据]\n    Sources --> Review[交叉验证]\n    Implement --> Review\n    Analyze --> Review\n    Review --> Quality{结果完整？}\n    Quality -->|完整| Answer[汇总答复]\n    Quality -->|需补充| FollowUp[补充任务]\n    FollowUp --> Draft[生成修订稿]\n    Draft --> Answer"
+      },
+      "symbol": "sparkles",
+      "titles": {
+        "en": "Agent Flow · Complex Example",
+        "zh": "智能体流程 · 复杂示例"
+      }
+    },
+    {
+      "id": "usecase-complex",
+      "kind": "usecase",
+      "sources": {
+        "en": "usecase-beta\n    actor Customer[Customer]\n    actor Operator[Operator]\n    systemBoundary Store[Customer service]\n        Browse(Browse products)\n        Order(Create order)\n        Track(Track delivery)\n        Refund(Request refund)\n    end\n    systemBoundary Admin[Operations]\n        Review(Review refunds)\n        Manage(Manage products)\n    end\n    Customer --> Browse\n    Customer --> Order\n    Customer --> Track\n    Customer --> Refund\n    Operator --> Review\n    Operator --> Manage",
+        "zh": "usecase-beta\n    actor Customer[客户]\n    actor Operator[运营人员]\n    systemBoundary Store[客户服务]\n        Browse(浏览商品)\n        Order(创建订单)\n        Track(追踪配送)\n        Refund(申请退款)\n    end\n    systemBoundary Admin[运营服务]\n        Review(审核退款)\n        Manage(维护商品)\n    end\n    Customer --> Browse\n    Customer --> Order\n    Customer --> Track\n    Customer --> Refund\n    Operator --> Review\n    Operator --> Manage"
+      },
+      "symbol": "person.2",
+      "titles": {
+        "en": "Use Case Diagram · Complex Example",
+        "zh": "用例图 · 复杂示例"
+      }
+    },
+    {
+      "id": "railroad-complex",
+      "kind": "railroad",
+      "sources": {
+        "en": "railroad-ebnf-beta\n    document = header { statement } [ footer ] ;\n    header = \"diagram\" ( \"flow\" | \"sequence\" | \"state\" | \"class\" ) ;\n    statement = node | edge | group ;\n    node = identifier [ \"label\" text ] [ \"shape\" ( \"rect\" | \"circle\" | \"diamond\" ) ] ;\n    edge = identifier arrow identifier [ text ] ;\n    arrow = \"-->\" | \"-.->\" | \"==>\" ;\n    group = \"group\" identifier \"{\" { statement } \"}\" ;\n    footer = \"end\" [ text ] ;",
+        "zh": "railroad-ebnf-beta\n    document = header { statement } [ footer ] ;\n    header = \"diagram\" ( \"flow\" | \"sequence\" | \"state\" | \"class\" ) ;\n    statement = node | edge | group ;\n    node = identifier [ \"label\" text ] [ \"shape\" ( \"rect\" | \"circle\" | \"diamond\" ) ] ;\n    edge = identifier arrow identifier [ text ] ;\n    arrow = \"-->\" | \"-.->\" | \"==>\" ;\n    group = \"group\" identifier \"{\" { statement } \"}\" ;\n    footer = \"end\" [ text ] ;"
+      },
+      "symbol": "point.topleft.down.curvedto.point.bottomright.up",
+      "titles": {
+        "en": "Railroad Diagram · Complex Example",
+        "zh": "语法铁路图 · 复杂示例"
+      }
+    },
+    {
+      "id": "treeView-complex",
+      "kind": "treeView",
+      "sources": {
+        "en": "treeView-beta\n    NornaKit/\n        Sources/\n            NornaKit/\n                Parsing/\n                    FlowchartParser.swift\n                    SequenceParser.swift\n                Layout/\n                    LayeredLayout.swift\n                    CompoundRouter.swift\n                Drawing/\n                    ScenePainter.swift\n                    SVGExporter.swift\n            NornaStudio/\n                Views/\n                    StudioView.swift\n                    SourceEditor.swift\n                Models/\n                    StudioModel.swift\n        Tests/\n            ParserTests/\n            LayoutTests/\n            DrawingTests/\n        Resources/\n            Examples/\n            Baselines/\n        Package.swift\n        README.md",
+        "zh": "treeView-beta\n    NornaKit/\n        Sources/\n            NornaKit/\n                Parsing/\n                    FlowchartParser.swift\n                    SequenceParser.swift\n                Layout/\n                    LayeredLayout.swift\n                    CompoundRouter.swift\n                Drawing/\n                    ScenePainter.swift\n                    SVGExporter.swift\n            NornaStudio/\n                Views/\n                    StudioView.swift\n                    SourceEditor.swift\n                Models/\n                    StudioModel.swift\n        Tests/\n            ParserTests/\n            LayoutTests/\n            DrawingTests/\n        Resources/\n            Examples/\n            Baselines/\n        Package.swift\n        README.md"
+      },
+      "symbol": "folder",
+      "titles": {
+        "en": "Directory Tree · Complex Example",
+        "zh": "目录树 · 复杂示例"
+      }
+    },
+    {
+      "id": "venn-complex",
+      "kind": "venn",
+      "sources": {
+        "en": "venn-beta\n    title Team capability overlap\n    set Design[Design]: 60\n    set Dev[Development]: 60\n    set Product[Product]: 60\n    union Design,Dev[Collaboration]: 20\n    union Design,Product[Experience]: 20\n    union Dev,Product[Delivery]: 20\n    union Design,Dev,Product[Shared goals]: 8",
+        "zh": "venn-beta\n    title 团队能力交集\n    set Design[设计]: 60\n    set Dev[开发]: 60\n    set Product[产品]: 60\n    union Design,Dev[协作]: 20\n    union Design,Product[体验]: 20\n    union Dev,Product[交付]: 20\n    union Design,Dev,Product[共同目标]: 8"
+      },
+      "symbol": "circle.lefthalf.filled",
+      "titles": {
+        "en": "Venn Diagram · Complex Example",
+        "zh": "韦恩图 · 复杂示例"
+      }
+    },
+    {
+      "id": "swimlane-complex",
+      "kind": "swimlane",
+      "sources": {
+        "en": "swimlane-beta LR\n    subgraph Customer[Customer]\n        A[Submit order] --> B[Confirm payment]\n        B --> C[Receive items]\n    end\n    subgraph Sales[Order service]\n        D[Create order] --> E[Confirm stock]\n        E --> F[Update status]\n    end\n    subgraph Payment[Payment service]\n        G[Create payment] --> H[Confirm receipt]\n    end\n    subgraph Delivery[Delivery service]\n        I[Arrange shipment] --> J[Track delivery]\n    end\n    A --> D\n    E --> G\n    B --> H\n    H --> F\n    F --> I\n    J --> C",
+        "zh": "swimlane-beta LR\n    subgraph Customer[客户]\n        A[提交订单] --> B[确认支付]\n        B --> C[接收商品]\n    end\n    subgraph Sales[订单服务]\n        D[创建订单] --> E[确认库存]\n        E --> F[更新状态]\n    end\n    subgraph Payment[支付服务]\n        G[创建支付单] --> H[确认收款]\n    end\n    subgraph Delivery[配送服务]\n        I[安排发货] --> J[追踪配送]\n    end\n    A --> D\n    E --> G\n    B --> H\n    H --> F\n    F --> I\n    J --> C"
+      },
+      "symbol": "rectangle.split.2x1",
+      "titles": {
+        "en": "Swimlane Diagram · Complex Example",
+        "zh": "泳道图 · 复杂示例"
+      }
+    },
+    {
+      "id": "ishikawa-complex",
+      "kind": "ishikawa",
+      "sources": {
+        "en": "ishikawa-beta\n    Reduced diagram readability\n        Data\n            Too many nodes\n            Too many levels\n            Uneven weights\n        Text\n            Long labels\n            Large font size\n            Insufficient wrapping\n        Layout\n            Tight spacing\n            Unclear layers\n            Crowded groups\n        Edges\n            Crossing paths\n            Too many bends\n            Overlapping arrows\n        Appearance\n            Low contrast\n            Too many colors\n            Weak visual hierarchy\n        Validation\n            No complex examples\n            No narrow-width checks\n            No visual regression",
+        "zh": "ishikawa-beta\n    图表可读性下降\n        数据\n            节点过多\n            层级过深\n            权重悬殊\n        文字\n            标签过长\n            字号过大\n            换行不足\n        布局\n            间距过小\n            分层不清\n            分组拥挤\n        连线\n            路径交叉\n            转折过密\n            箭头重合\n        外观\n            对比度不足\n            颜色过多\n            层级不明显\n        验证\n            缺少复杂示例\n            缺少窄屏检查\n            缺少视觉回归"
+      },
+      "symbol": "fish",
+      "titles": {
+        "en": "Fishbone Diagram · Complex Example",
+        "zh": "鱼骨图 · 复杂示例"
+      }
+    },
+    {
+      "id": "eventmodeling-complex",
+      "kind": "eventmodeling",
+      "sources": {
+        "en": "eventmodeling\n    title Order event flow\n    tf 01 ui Product page\n    tf 02 cmd Create order\n    tf 03 evt Order created\n    tf 04 rmo Unpaid order\n    tf 05 ui Payment page\n    tf 06 cmd Confirm payment\n    tf 07 evt Payment completed\n    tf 08 rmo Order awaiting shipment\n    tf 09 pcr Delivery processing\n    tf 10 cmd Arrange delivery\n    tf 11 evt Items shipped\n    tf 12 rmo Delivery status\n    tf 13 ui Order details",
+        "zh": "eventmodeling\n    title 订单事件流\n    tf 01 ui 商品页面\n    tf 02 cmd 创建订单\n    tf 03 evt 订单已创建\n    tf 04 rmo 待支付订单\n    tf 05 ui 支付页面\n    tf 06 cmd 确认支付\n    tf 07 evt 支付已完成\n    tf 08 rmo 待发货订单\n    tf 09 pcr 配送处理\n    tf 10 cmd 安排配送\n    tf 11 evt 商品已发出\n    tf 12 rmo 配送进度\n    tf 13 ui 订单详情"
+      },
+      "symbol": "rectangle.3.group.bubble",
+      "titles": {
+        "en": "Event Modeling · Complex Example",
+        "zh": "事件建模 · 复杂示例"
+      }
+    }
+  ],
+  "groups": {
+    "advanced": [
+      "flow-advanced",
+      "sequence-sf-symbols",
+      "sequence-lifecycle",
+      "class-advanced",
+      "state-parallel"
+    ],
+    "catalog": [
+      "sequence",
+      "class",
+      "state",
+      "er",
+      "pie",
+      "gantt",
+      "gitGraph",
+      "mindmap",
+      "timeline",
+      "journey",
+      "xychart",
+      "quadrantChart",
+      "requirement",
+      "c4",
+      "sankey",
+      "block",
+      "packet",
+      "kanban",
+      "architecture",
+      "radar",
+      "treemap",
+      "info",
+      "agentflow",
+      "usecase",
+      "railroad",
+      "treeView",
+      "venn",
+      "cynefin",
+      "wardley",
+      "swimlane",
+      "ishikawa",
+      "eventmodeling"
+    ],
+    "flowcharts": [
+      "flowchart",
+      "sf-symbols",
+      "sf-symbols-wrapping",
+      "sf-symbols-color",
+      "rich-text",
+      "subgraphs",
+      "nested",
+      "groupLinks",
+      "shapes",
+      "pipeline",
+      "cycle",
+      "edges",
+      "unicode"
+    ]
+  },
+  "kinds": [
+    {
+      "category": "process",
+      "id": "flowchart",
+      "layoutNotes": {
+        "en": "More nodes require new layers, branch spacing and routes between groups.",
+        "zh": "节点增加后，分支、汇合与跨组连线需要重新分层和避障。"
+      },
+      "starterId": "flowchart",
+      "titles": {
+        "en": "Flowchart",
+        "zh": "流程图"
+      }
+    },
+    {
+      "category": "process",
+      "id": "sequence",
+      "layoutNotes": {
+        "en": "More participants and messages change lifeline spacing, frame height and message wrapping.",
+        "zh": "参与者与消息增加后，生命线间距、片段高度和消息换行随之变化。"
+      },
+      "starterId": "sequence",
+      "titles": {
+        "en": "Sequence Diagram",
+        "zh": "时序图"
+      }
+    },
+    {
+      "category": "relationships",
+      "id": "class",
+      "layoutNotes": {
+        "en": "More classes and relationships require additional layers, member sections and connection ports.",
+        "zh": "类和关系增加后，卡片分层、成员分区与关系端口更加明显。"
+      },
+      "starterId": "class",
+      "titles": {
+        "en": "Class Diagram",
+        "zh": "类图"
+      }
+    },
+    {
+      "category": "process",
+      "id": "state",
+      "layoutNotes": {
+        "en": "More states and transitions require room for nested regions and transition labels.",
+        "zh": "更多状态会增加转移通道，复合状态需要独立布局。"
+      },
+      "starterId": "state",
+      "titles": {
+        "en": "State Diagram",
+        "zh": "状态图"
+      }
+    },
+    {
+      "category": "relationships",
+      "id": "er",
+      "layoutNotes": {
+        "en": "More entities require larger attribute cards and clearer relationship routes.",
+        "zh": "实体数量和字段增加后，实体卡片的尺寸与关系分层随之扩展。"
+      },
+      "starterId": "er",
+      "titles": {
+        "en": "Entity Relationship",
+        "zh": "实体关系图"
+      }
+    },
+    {
+      "category": "charts",
+      "id": "pie",
+      "layoutNotes": {
+        "en": "More slices require space for labels and a balanced legend.",
+        "zh": "分类增加后，扇区变细，图例和标签更密集。"
+      },
+      "starterId": "pie",
+      "titles": {
+        "en": "Pie Chart",
+        "zh": "饼图"
+      }
+    },
+    {
+      "category": "planning",
+      "id": "gantt",
+      "layoutNotes": {
+        "en": "More tasks require additional rows, dependency routes and date labels.",
+        "zh": "更多任务和阶段会扩展时间跨度与任务行，窄画布需要更紧凑的时间轴。"
+      },
+      "starterId": "gantt",
+      "titles": {
+        "en": "Gantt Chart",
+        "zh": "甘特图"
+      }
+    },
+    {
+      "category": "development",
+      "id": "gitGraph",
+      "layoutNotes": {
+        "en": "More branches and commits require distinct lanes and spaced commit labels.",
+        "zh": "提交和分支增加后，会出现更多分支轨道、合并线与提交标签。"
+      },
+      "starterId": "gitGraph",
+      "titles": {
+        "en": "Git Graph",
+        "zh": "Git 分支图"
+      }
+    },
+    {
+      "category": "hierarchy",
+      "id": "mindmap",
+      "layoutNotes": {
+        "en": "More branches require balanced subtree spacing around the root.",
+        "zh": "分支和层级增加后，左右子树展开，父节点位置随子树高度调整。"
+      },
+      "starterId": "mindmap",
+      "titles": {
+        "en": "Mind Map",
+        "zh": "思维导图"
+      }
+    },
+    {
+      "category": "planning",
+      "id": "timeline",
+      "layoutNotes": {
+        "en": "More periods and events require additional sections and readable event labels.",
+        "zh": "阶段和事件增加后，横向时间线变长，窄画布会改为纵向排列。"
+      },
+      "starterId": "timeline",
+      "titles": {
+        "en": "Timeline",
+        "zh": "时间线"
+      }
+    },
+    {
+      "category": "planning",
+      "id": "journey",
+      "layoutNotes": {
+        "en": "More steps and actors require additional lanes and wrapped task labels.",
+        "zh": "更多阶段、步骤和参与者会扩展旅程，窄画布会重排步骤卡片。"
+      },
+      "starterId": "journey",
+      "titles": {
+        "en": "User Journey",
+        "zh": "用户旅程"
+      }
+    },
+    {
+      "category": "charts",
+      "id": "xychart",
+      "layoutNotes": {
+        "en": "More data requires readable axes, series spacing and a balanced legend.",
+        "zh": "数据点和系列增加后，柱宽、折线密度、刻度与图例排列随之变化。"
+      },
+      "starterId": "xychart",
+      "titles": {
+        "en": "XY Chart",
+        "zh": "XY 坐标图"
+      }
+    },
+    {
+      "category": "charts",
+      "id": "quadrantChart",
+      "layoutNotes": {
+        "en": "The four quadrant coordinate structure remains fixed as more points are added.",
+        "zh": "固定四象限坐标结构，增加数据点不改变分区方式，保留单例。"
+      },
+      "starterId": "quadrantChart",
+      "titles": {
+        "en": "Quadrant Chart",
+        "zh": "象限图"
+      }
+    },
+    {
+      "category": "relationships",
+      "id": "requirement",
+      "layoutNotes": {
+        "en": "More requirements require additional layers and readable relationship labels.",
+        "zh": "需求、实现和验证对象增加后，关系图会出现多层追踪路径。"
+      },
+      "starterId": "requirement",
+      "titles": {
+        "en": "Requirement Diagram",
+        "zh": "需求图"
+      }
+    },
+    {
+      "category": "architecture",
+      "id": "c4",
+      "layoutNotes": {
+        "en": "More elements require space for boundaries, cards and relationships.",
+        "zh": "人物、系统边界和服务增加后，跨边界关系和卡片布局更复杂。"
+      },
+      "starterId": "c4",
+      "titles": {
+        "en": "C4 Diagram",
+        "zh": "C4 架构图"
+      }
+    },
+    {
+      "category": "charts",
+      "id": "sankey",
+      "layoutNotes": {
+        "en": "More flows require additional layers and proportional flow spacing.",
+        "zh": "来源、流向与权重增加后，节点分层、条带宽度和流量分配随之变化。"
+      },
+      "starterId": "sankey",
+      "titles": {
+        "en": "Sankey Diagram",
+        "zh": "桑基图"
+      }
+    },
+    {
+      "category": "development",
+      "id": "block",
+      "layoutNotes": {
+        "en": "More blocks require additional rows, columns and connection routes.",
+        "zh": "块数量增加后会换行，跨列块与多行连接形成更丰富的网格。"
+      },
+      "starterId": "block",
+      "titles": {
+        "en": "Block Diagram",
+        "zh": "块图"
+      }
+    },
+    {
+      "category": "development",
+      "id": "packet",
+      "layoutNotes": {
+        "en": "More fields require additional bit rows and clearly bounded field labels.",
+        "zh": "字段和位宽增加后，字段跨越更多行，窄字段的标签显示也会变化。"
+      },
+      "starterId": "packet",
+      "titles": {
+        "en": "Packet Diagram",
+        "zh": "数据包图"
+      }
+    },
+    {
+      "category": "planning",
+      "id": "kanban",
+      "layoutNotes": {
+        "en": "More cards require taller columns and readable card labels.",
+        "zh": "列与卡片增加后，列宽、卡片换行和看板高度需要适应容器。"
+      },
+      "starterId": "kanban",
+      "titles": {
+        "en": "Kanban",
+        "zh": "看板"
+      }
+    },
+    {
+      "category": "architecture",
+      "id": "architecture",
+      "layoutNotes": {
+        "en": "More groups and services require additional layers and explicit connection ports.",
+        "zh": "服务与分组增加后，跨组连接、分支端口与图形中心对齐更加明显。"
+      },
+      "starterId": "architecture",
+      "titles": {
+        "en": "Architecture Diagram",
+        "zh": "架构图"
+      }
+    },
+    {
+      "category": "charts",
+      "id": "radar",
+      "layoutNotes": {
+        "en": "More axes and series require readable axis labels and a balanced legend.",
+        "zh": "维度与数据系列增加后，网格角度、曲线密度和图例布局随之变化。"
+      },
+      "starterId": "radar",
+      "titles": {
+        "en": "Radar Chart",
+        "zh": "雷达图"
+      }
+    },
+    {
+      "category": "charts",
+      "id": "treemap",
+      "layoutNotes": {
+        "en": "More values require proportional nested rectangles and readable labels.",
+        "zh": "更多层级与不均匀权重会改变矩形切分，小面积区域会减少标签。"
+      },
+      "starterId": "treemap",
+      "titles": {
+        "en": "Treemap",
+        "zh": "矩形树图"
+      }
+    },
+    {
+      "category": "development",
+      "id": "info",
+      "layoutNotes": {
+        "en": "The engine information display has a fixed structure and needs one example.",
+        "zh": "固定的引擎信息展示，无需按数据规模拆分示例。"
+      },
+      "starterId": "info",
+      "titles": {
+        "en": "Info Diagram",
+        "zh": "信息图"
+      }
+    },
+    {
+      "category": "architecture",
+      "id": "agentflow",
+      "layoutNotes": {
+        "en": "More agents and branches require additional layers and group routing.",
+        "zh": "更多智能体和任务分支会增加并行路径、汇合点与层级跨度。"
+      },
+      "starterId": "agentflow",
+      "titles": {
+        "en": "Agent Flow",
+        "zh": "智能体流程"
+      }
+    },
+    {
+      "category": "relationships",
+      "id": "usecase",
+      "layoutNotes": {
+        "en": "More actors and use cases require clear boundaries and readable relationship routes.",
+        "zh": "更多人物、边界与用例会扩展关联通道，需要避让不同分组和人物名称。"
+      },
+      "starterId": "usecase",
+      "titles": {
+        "en": "Use Case Diagram",
+        "zh": "用例图"
+      }
+    },
+    {
+      "category": "development",
+      "id": "railroad",
+      "layoutNotes": {
+        "en": "More grammar branches require additional tracks and nested branch spacing.",
+        "zh": "可选项、重复项与候选分支增加后，轨道会同时向横向和纵向展开。"
+      },
+      "starterId": "railroad",
+      "titles": {
+        "en": "Railroad Diagram",
+        "zh": "语法铁路图"
+      }
+    },
+    {
+      "category": "hierarchy",
+      "id": "treeView",
+      "layoutNotes": {
+        "en": "More nested entries require indentation and larger subtree spacing.",
+        "zh": "目录数量与嵌套深度增加后，缩进、分支线与画布高度随之扩展。"
+      },
+      "starterId": "treeView",
+      "titles": {
+        "en": "Directory Tree",
+        "zh": "目录树"
+      }
+    },
+    {
+      "category": "relationships",
+      "id": "venn",
+      "layoutNotes": {
+        "en": "More sets and intersections require distinct set labels and intersection labels.",
+        "zh": "从两个集合增加到三个集合后，圆的位置与多重交集区域会发生变化。"
+      },
+      "starterId": "venn",
+      "titles": {
+        "en": "Venn Diagram",
+        "zh": "韦恩图"
+      }
+    },
+    {
+      "category": "planning",
+      "id": "cynefin",
+      "layoutNotes": {
+        "en": "The five domain framework remains fixed as more entries are added.",
+        "zh": "固定五领域框架，增加条目不改变领域结构，保留单例。"
+      },
+      "starterId": "cynefin",
+      "titles": {
+        "en": "Cynefin Framework",
+        "zh": "Cynefin 框架"
+      }
+    },
+    {
+      "category": "planning",
+      "id": "wardley",
+      "layoutNotes": {
+        "en": "The value chain and evolution coordinate structure remains fixed as more components are added.",
+        "zh": "固定价值链与演化坐标，增加组件不改变坐标结构，保留单例。"
+      },
+      "starterId": "wardley",
+      "titles": {
+        "en": "Wardley Map",
+        "zh": "Wardley 地图"
+      }
+    },
+    {
+      "category": "process",
+      "id": "swimlane",
+      "layoutNotes": {
+        "en": "More lanes and steps require wider lanes and clear cross lane routes.",
+        "zh": "泳道、步骤和交接增加后，泳道尺寸与跨泳道的连线路径都会变化。"
+      },
+      "starterId": "swimlane",
+      "titles": {
+        "en": "Swimlane Diagram",
+        "zh": "泳道图"
+      }
+    },
+    {
+      "category": "planning",
+      "id": "ishikawa",
+      "layoutNotes": {
+        "en": "More causes require additional branches and readable nested cause labels.",
+        "zh": "主因和次因增加后，鱼骨数量、分支长度与画布高度会扩展。"
+      },
+      "starterId": "ishikawa",
+      "titles": {
+        "en": "Fishbone Diagram",
+        "zh": "鱼骨图"
+      }
+    },
+    {
+      "category": "architecture",
+      "id": "eventmodeling",
+      "layoutNotes": {
+        "en": "More events and commands require additional time frames and connection routes.",
+        "zh": "事件帧和引用增加后，横向时间顺序扩展，并出现更多跨泳道依赖。"
+      },
+      "starterId": "eventmodeling",
+      "titles": {
+        "en": "Event Modeling",
+        "zh": "事件建模"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

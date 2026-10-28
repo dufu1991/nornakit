@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <SupportedOSPlatformVersion>10.0.22000.0</SupportedOSPlatformVersion>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <Description>Windows native text layout, drawing and export for NornaKit.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IsPackable>true</IsPackable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CsWinRTAotOptimizerEnabled>OptIn</CsWinRTAotOptimizerEnabled>
+    <CsWinRTAotWarningLevel>1</CsWinRTAotWarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../PACKAGE.md" Pack="true" PackagePath="README.md" />
+    <None Include="../../../LICENSE" Pack="true" PackagePath="LICENSE" />
+    <None Include="../../build/WinUI.Publish.targets" Pack="true" PackagePath="buildTransitive/NornaKit.Windows.targets" />
+    <None Include="../../../THIRD_PARTY_NOTICES.md" Pack="true" PackagePath="" />
+    <InternalsVisibleTo Include="NornaKit.Windows.SmokeTests" />
+    <ProjectReference Include="../NornaKit.Core/NornaKit.Core.csproj" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" />
+    <PackageReference Include="Microsoft.Graphics.Win2D" />
+    <PackageReference Include="PDFsharp" />
+    <PackageReference Include="System.Security.Cryptography.Pkcs" />
+  </ItemGroup>
+</Project>

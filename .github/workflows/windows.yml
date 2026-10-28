@@ -1,0 +1,168 @@
+name: Windows native validation
+
+on:
+  push:
+    branches: [main]
+    paths: ['Windows/**', 'Sources/NornaExamples/Resources/*.json', 'Tests/NornaKitTests/Resources/*.json', 'website/dist/favicon.ico', '.github/workflows/windows.yml']
+  pull_request:
+    paths: ['Windows/**', 'Sources/NornaExamples/Resources/*.json', 'Tests/NornaKitTests/Resources/*.json', 'website/dist/favicon.ico', '.github/workflows/windows.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: windows-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  core:
+    name: Core contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: Windows
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: Windows/global.json
+      - run: dotnet restore tests/NornaKit.Core.Tests --locked-mode
+      - run: dotnet run --project tests/NornaKit.Core.Tests --no-restore --configuration Release
+
+  native:
+    name: Native exports (${{ matrix.platform }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-2025
+            platform: x64
+            rid: win-x64
+          - runner: windows-11-arm
+            platform: ARM64
+            rid: win-arm64
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: Windows
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: Windows/global.json
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Restore native dependencies
+        run: dotnet restore tests/NornaKit.Windows.SmokeTests -p:Platform=${{ matrix.platform }} --locked-mode
+      - name: Build self contained native harness
+        run: dotnet publish tests/NornaKit.Windows.SmokeTests --no-restore -c Release -p:Platform=${{ matrix.platform }} -o artifacts/smoke
+      - name: Run without creating a window
+        run: ./artifacts/smoke/NornaKit.Windows.SmokeTests.exe artifacts/native-smoke
+      - name: Inspect native formats and extract PDF text
+        run: |
+          python -m pip install --disable-pip-version-check Pillow==11.3.0 pypdf==6.1.1
+          python scripts/verify-native-smoke.py artifacts/native-smoke
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: windows-native-${{ matrix.platform }}
+          path: |
+            Windows/artifacts/native-smoke
+            !Windows/artifacts/native-smoke/diagrams/*.pdf
+          if-no-files-found: warn
+          retention-days: 7
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: windows-visuals-${{ matrix.platform }}
+          path: |
+            Windows/artifacts/native-smoke/diagrams/*.png
+            Windows/artifacts/native-smoke/diagrams/*.svg
+            Windows/artifacts/native-smoke/regression.json
+          retention-days: 7
+
+  studio:
+    name: Native workbench (${{ matrix.platform }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-2025
+            platform: x64
+          - runner: windows-11-arm
+            platform: ARM64
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: Windows
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: Windows/global.json
+      - name: Restore native workbench
+        run: dotnet restore src/NornaStudio -p:Platform=${{ matrix.platform }} --locked-mode
+      - name: Pack independent libraries
+        id: pack
+        run: |
+          dotnet pack src/NornaKit.Core -c Release --no-restore -p:Platform=${{ matrix.platform }} -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o artifacts/nuget
+          if ($LASTEXITCODE -ne 0) { throw 'Core packaging failed.' }
+          dotnet pack src/NornaKit.Windows -c Release --no-restore -p:Platform=${{ matrix.platform }} -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o artifacts/nuget
+          if ($LASTEXITCODE -ne 0) { throw 'Windows packaging failed.' }
+      - name: Build native workbench
+        run: dotnet publish src/NornaStudio --no-restore -c Release -p:Platform=${{ matrix.platform }} -o artifacts/studio
+      - name: Launch native workbench
+        run: |
+          $env:NORNA_STUDIO_SMOKE = Join-Path $pwd 'artifacts/studio-smoke'
+          $dumps = Join-Path $pwd 'artifacts/crash-dumps'
+          New-Item $dumps -ItemType Directory -Force | Out-Null
+          $key = 'HKLM:\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps\NornaStudio.exe'
+          New-Item $key -Force | Out-Null
+          New-ItemProperty $key -Name DumpFolder -Value $dumps -PropertyType ExpandString -Force | Out-Null
+          New-ItemProperty $key -Name DumpType -Value 2 -PropertyType DWord -Force | Out-Null
+          New-Item $env:NORNA_STUDIO_SMOKE -ItemType Directory -Force | Out-Null
+          Get-ChildItem artifacts/studio -Recurse -File | Where-Object { $_.Extension -in '.pri', '.xbf', '.xaml' } | Select-Object FullName, Length | Format-Table -AutoSize | Out-String -Width 240 | Set-Content "$env:NORNA_STUDIO_SMOKE/resources.txt"
+          Get-ChildItem src/NornaStudio/obj -Recurse -Filter 'App.g.i.cs' | ForEach-Object { Get-Content $_.FullName | Set-Content "$env:NORNA_STUDIO_SMOKE/application-init.cs" }
+          $started = Get-Date
+          $process = Start-Process './artifacts/studio/NornaStudio.exe' -PassThru
+          if (-not $process.WaitForExit(90000)) { $process.Kill(); throw 'Studio startup timed out.' }
+          if ($process.ExitCode -ne 0) {
+            New-Item $env:NORNA_STUDIO_SMOKE -ItemType Directory -Force | Out-Null
+            Get-WinEvent -FilterHashtable @{ LogName = 'Application'; StartTime = $started.AddSeconds(-1) } -ErrorAction SilentlyContinue | Where-Object { $_.Message -match 'NornaStudio' } | Format-List TimeCreated, Id, Message | Out-String | Set-Content "$env:NORNA_STUDIO_SMOKE/events.txt"
+            Get-ChildItem $dumps -Filter '*.dmp' | ForEach-Object { python scripts/inspect-native-crash.py $_.FullName | Set-Content "$env:NORNA_STUDIO_SMOKE/native-error.json" }
+            throw "Studio exited with $($process.ExitCode)."
+          }
+          if (-not (Test-Path "$env:NORNA_STUDIO_SMOKE/studio.json")) { throw 'Studio did not complete startup verification.' }
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: windows-studio-${{ matrix.platform }}
+          path: Windows/artifacts/studio-smoke
+          retention-days: 7
+      - name: Verify independent NuGet consumer
+        if: always() && steps.pack.outcome == 'success'
+        run: ./scripts/verify-packages.ps1 -Platform ${{ matrix.platform }}
+      - uses: actions/upload-artifact@v7
+        if: always() && steps.pack.outcome == 'success'
+        with:
+          name: windows-nuget-${{ matrix.platform }}
+          path: Windows/artifacts/nuget
+          retention-days: 7
+      - name: Install pinned installer compiler
+        run: ./scripts/install-inno.ps1
+      - name: Package installer and portable build
+        run: ./scripts/package-studio.ps1 -Platform ${{ matrix.platform }} -PublishDirectory artifacts/studio
+      - name: Verify installation, removal and portable startup
+        run: ./scripts/verify-install.ps1 -Platform ${{ matrix.platform }}
+      - uses: actions/upload-artifact@v7
+        with:
+          name: windows-packages-${{ matrix.platform }}
+          path: Windows/artifacts/packages
+          retention-days: 7

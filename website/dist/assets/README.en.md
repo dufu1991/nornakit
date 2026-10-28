@@ -8,10 +8,10 @@
 
 [https://nornakit.com](https://nornakit.com)
 
-**NornaKit** is a native diagram rendering library written in pure Swift. It parses Mermaid source, lays out diagrams, and renders them in macOS apps. Parsing, text measurement, layout, rendering, and export run natively, without a browser, JavaScript runtime, or network service.
+**NornaKit** is a native Mermaid diagram rendering library for macOS and Windows. The macOS implementation uses Swift and CoreGraphics; Windows uses C#, .NET 10, DirectWrite and Win2D. Parsing, text measurement, layout, rendering, and export run locally, without a browser, JavaScript runtime, or network service.
 
 - **NornaKit** provides parsing, layout, native drawing, and export. It is the primary focus of this project.
-- **Norna Studio** is a companion Mac demo and development tool for inspecting output, ad hoc rendering, debugging, and export. The library can be integrated without installing the app.
+- **Norna Studio** is the optional native workbench: SwiftUI on macOS, WinUI 3 on Windows. Integrating either library does not require installing the app.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/hero-en-dark.png">
@@ -19,7 +19,7 @@
   <img alt="A diagram rendered natively by NornaKit" src="website/dist/assets/hero-en-light.png">
 </picture>
 
-## Use NornaKit
+## Use NornaKit on macOS
 
 Requires **macOS 14 or later** and **Swift 6**, with no external package dependencies.
 
@@ -44,6 +44,25 @@ let svg = diagram.themedSVG(.appleLight)
 `diagram.scene` contains the native geometry. `CoreGraphicsDiagramPainter` draws into an AppKit graphics context, and `DiagramExporter` handles image and PDF output. More examples and extensions are documented in the [Chinese usage guide](Docs/GUIDE.md).
 
 ## Features
+
+### Windows integration
+
+The Windows solution is in [`Windows/`](Windows/README.md). It includes the independent `NornaKit.Core` and `NornaKit.Windows` libraries and the WinUI 3 workbench. It targets Windows 11 build 22000 or later on x64 and ARM64, with Windows SDK 26100 for builds.
+
+```csharp
+using NornaKit;
+using NornaKit.Windows;
+
+var renderer = WindowsDiagramRenderer.Create();
+var diagram = await renderer.RenderAsync(
+    "flowchart LR\n A[Source] --> B[Native diagram]",
+    new DiagramLayoutOptions(MaxWidth: 640), cancellationToken);
+var svg = SvgExporter.Export(diagram.Scene, WindowsPalette.Resolve());
+```
+
+Use project references until NuGet packages are published. The Kit runs without a visible window; `DiagramPreview` provides the optional WinUI control. See the [Windows guide](Docs/WINDOWS.md) for integration, export, platform differences and packaging. Windows downloads remain unavailable until an actual Windows release is published.
+
+### Shared capabilities
 
 - 33 diagram families, including flowcharts, sequence, class, state, ER, Gantt, mind maps, and data charts.
 - Mermaid parsing, native text measurement, adaptive layouts, and source error locations.
@@ -227,6 +246,25 @@ website/               Static website, published assets, and generation tools
 `Package.swift` defines the package. `project.yml` defines the XcodeGen project; `NornaKit.xcodeproj` is committed for direct use. After changing the project definition or adding, removing, or moving source files, run `xcodegen generate`. Editing the Studio version file does not require regeneration.
 
 Build output and local design archives are excluded from Git. App and website sources share this repository. See the [development guide, in Chinese](Docs/DEVELOPMENT.md), [website guide, in Chinese](website/README.md), and [brand guide, in Chinese](Branding/README.md).
+
+## Sponsor NornaKit
+
+If NornaKit helps you build native diagrams, consider supporting its development, documentation, and ongoing maintenance. Thank you for helping the project grow.
+
+[Buy Me a Coffee](https://buymeacoffee.com/dufu1991) · [PayPal](https://paypal.me/dufu1991)
+
+You can also scan a QR code with WeChat or Alipay:
+
+<table>
+  <tr>
+    <th>WeChat</th>
+    <th>Alipay</th>
+  </tr>
+  <tr>
+    <td align="center"><img src="website/dist/assets/sponsorship/wechat.png" alt="WeChat sponsorship QR code" width="200"></td>
+    <td align="center"><img src="website/dist/assets/sponsorship/alipay.png" alt="Alipay sponsorship QR code" width="200"></td>
+  </tr>
+</table>
 
 ## Attribution
 

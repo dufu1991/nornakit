@@ -1,6 +1,6 @@
 # NornaKit 介绍站
 
-简洁的静态站点，沿用 NornaKit 的标志与靛蓝配色，以纯 Swift 渲染库 NornaKit 的能力、示例和接入方式为主要内容。Norna Studio 作为配套的演示、渲染、调试与导出工具介绍。
+简洁的静态站点，沿用 NornaKit 的标志与靛蓝配色，以 Swift 与 C# 原生渲染库 NornaKit 的能力、示例和接入方式为主要内容。Norna Studio 作为配套的演示、渲染、调试与导出工具介绍。
 
 - 中英文默认使用浏览器首选语言，其他语言使用英文。可以手动切换并记住选择。
 - 浅深色默认跟随系统，也可以手动循环切换为浅色、深色与自动。
@@ -8,6 +8,20 @@
 - 工作台内置示例提供中英文源码。站点的首页、36 个示例及图标文档预览均提供中英文原生截图，源码、图片和下载随站点语言一起切换。
 - 文档使用当前真实的 NornaKit 包名与 NornaKit 模块名。
 - 源码仓库为 `https://github.com/dufu1991/nornakit`。首页与文档页顶部提供 GitHub 图标及仓库链接，在新标签页打开。文档页不提供 README 下载入口。顶部“工作台”入口使用 GitHub Releases 中最新工作台版本的 DMG 地址，首次发布成功后可下载。
+
+## 首页结构
+
+首页采用技术文档首页的排版：左对齐阅读流、吸顶导航，每个区块以标题加一句说明开头并带锚点。区块依次为：
+
+1. 首屏：版本与平台标签、一句话定位、Swift Package 与 Windows 项目引用两个安装标签页，以及完整比例的原生 hero 截图。
+2. `#start` 快速上手：三个步骤，配 Swift / C# 代码标签页。
+3. `#platforms` 平台对照：macOS 与 Windows 在语言、系统、排版、绘制、导出、行内图标、接入方式和配套工具上的对照表。
+4. `#features` 能力列表，后附支持范围说明。
+5. `#examples` 示例：由 `examples.json` 生成的图表类型索引、源码与截图面板、全部截图画廊。
+6. `#studio` Norna Studio：下载、Homebrew 命令与首次打开说明。
+7. `#resources` 资源链接与页脚。
+
+首页专属样式位于 `dist/home.css`，并以 `body.home` 限定范围；`style.css` 只保留文档页、Windows 页与首页共用的基础样式、截图外观、对话框与赞助弹窗。标签页共用一个复制按钮，复制当前可见面板中的代码。
 
 本地预览：
 
@@ -27,7 +41,11 @@ python3 website/scripts/prepare-assets.py
 
 ## 页面控件
 
-`dist/components.js` 与 `dist/components.css` 提供无框架依赖的轻量控件，包括语言选择、外观选择和可搜索的图形选择器。菜单支持方向键、首尾导航、回车确认、Esc 关闭、点击外部关闭、输入法组合输入，以及手机可视区域内的定位。按钮、折叠区与截图弹窗共享圆角、描边和靛蓝焦点样式。
+首页右上角与页脚的「赞助」入口打开原生弹窗，提供 Buy Me a Coffee、PayPal、微信赞赏与支付宝赞助。中英文文案随站点语言切换，二维码保留白色背景以便在浅深色外观下扫描。弹窗支持 Esc、关闭按钮和点击遮罩关闭，微信与支付宝二维码按需展开。
+
+赞助链接与二维码沿用 [Any TDF 官网](https://any-tdf.dev/) 的支持入口，收款账号为 `dufu1991`。原始二维码保存在 `dist/assets/sponsorship/`，分别来自 `https://any-tdf.dev/assets/fund/wp_code.png` 与 `https://any-tdf.dev/assets/fund/ap_code.png`，中英文 README 与首页共用本地资源。更换收款方式时，同步更新两份 README、`dist/index.html` 与二维码文件，再执行站点构建同步文档。
+
+`dist/components.js` 与 `dist/components.css` 提供无框架依赖的轻量控件，包括语言选择与外观选择，选择器也支持可搜索模式。菜单支持方向键、首尾导航、回车确认、Esc 关闭、点击外部关闭、输入法组合输入，以及手机可视区域内的定位。按钮、折叠区与截图弹窗共享圆角、描边和靛蓝焦点样式。
 
 已评估 Base UI 与 Web Awesome。前者面向 React，后者可用于静态站；本次站点只有少量简单控件，采用本地组件实现，避免引入框架和外部运行时资源。
 
@@ -41,7 +59,7 @@ python3 website/scripts/prepare-assets.py
 python3 website/scripts/verify-screenshots.py
 ```
 
-示例预览区提供一个可搜索的示例选择器，统一选择全部 36 个示例，搜索 SF Symbols 可定位图标、换行和时序消息示例。
+示例区顶部的图表类型索引列出全部 36 个示例，点击即切换下方的源码与截图；源码面板标题显示当前示例名称。手机宽度下索引改为单行横向滚动。
 
 截图预览弹窗支持上一张、下一张与键盘左右方向键，按示例集顺序循环浏览全部 36 个示例，并显示当前位置。切换后同步更新标题、下载链接和主预览区，继续使用当前外观对应的原生截图。
 
@@ -75,7 +93,9 @@ python3 website/scripts/sync-theme.py
 Native inline-content documentation uses the two built-in examples `sf-symbols-color` and `rich-text`. Their localized sources and light/dark previews live in `dist/assets/inline-*`. Run `scripts/render-inline-content.swift` against the current NornaKit build to generate `build/InlineContent`, then run `python3 website/scripts/sync-inline-content.py` from the native project. Validate the website with `python3 scripts/verify-inline-content.py` from this directory. The documentation follows the page language and appearance controls.
 
 
-顶部导航的 Mac 软件包地址统一配置在 `dist/download-config.js` 的 `workbenchDownloadURL`。当前指向 `https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg`，首页和文档页共用该地址。首次工作台发布成功前，下载地址暂不可用。中英文导航与提示随站点语言切换。
+Mac 软件包地址统一配置在 `dist/download-config.js` 的 `workbenchDownloadURL`，指向 `https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg`，首页的 Studio 区块和文档页共用该地址。GitHub 会把它重定向到最新正式发布中的同名 DMG，因此每个被标记为 Latest 的发布都必须附带该文件；Windows 工作台发布使用 `--latest=false`，不会占用 Latest。
+
+首页的版本标签和 Swift Package 安装代码中的版本号，加载时会读取 GitHub API 的 `releases/latest`。只有标签符合 `vX.Y.Z` 的 Kit 发布才会更新显示，版本标签同时链接到该发布页。请求失败或超出限额时，保留页面内置的版本号，发版时仍应与 `Configuration/Kit-Version.json` 同步更新。中英文导航与提示随站点语言切换。
 
 ## 工作台首次打开说明
 
@@ -103,3 +123,9 @@ xattr -dr com.apple.quarantine "/Applications/Norna Studio.app"
 ```sh
 python3 website/scripts/build-site.py
 ```
+
+## Windows 平台入口
+
+`dist/windows.html` 提供 Windows 原生 Kit 接入文档与工作台下载位置。Windows 使用独立的 C# 库、.NET 10、DirectWrite 与 Win2D；工作台使用 WinUI 3。首页与文档页继续以库为主，并链接 Windows 接入页。
+
+`dist/download-config.js` 的 `windowsStudioDownloads` 默认全部为空，页面保持禁用状态。只有在独立的 `studio-windows-vX.Y.Z` Release 真实发布并完成产物验证后，才能写入版本和对应架构的 EXE 地址。不得使用 macOS 的 `latest` 地址推导 Windows 下载。

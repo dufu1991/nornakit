@@ -36,6 +36,7 @@
 		479510C13A5BE2C8126286A7 /* EmbeddedDiagramRegressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA99EF571B040BC17900DD /* EmbeddedDiagramRegressionTests.swift */; };
 		56D372F3AEC23908BAE0B274 /* NornaExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9824919E00AB02D9BB488DDC /* NornaExamples.framework */; };
 		5762E1110A873AE70DF3F5E6 /* DiagramCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB36B918A900DB03627E55 /* DiagramCatalog.swift */; };
+		59D559F957E67EBA6DDCB8E0 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = B6439D9E8A0290594BEC4170 /* Resources */; };
 		5BCCF1A8C227AD6D1475CE4D /* NornaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50D10F47676D4A13196C0BE /* NornaKit.framework */; };
 		5BF215DA50F02D4658BD192B /* OfficialExampleCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC988290AB35036633482C1 /* OfficialExampleCatalog.swift */; };
 		5CECF50506DD17F58D69BEEF /* NornaExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9824919E00AB02D9BB488DDC /* NornaExamples.framework */; };
@@ -72,6 +73,7 @@
 		BD4E20B5EB47EB4521AEAC41 /* NativeFlowchartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4495754BE5FF752BFBE9E6F6 /* NativeFlowchartTests.swift */; };
 		C37192A018BFBBAC44C12236 /* InlineSymbolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B679B5C6F1DD8069F1F52974 /* InlineSymbolTests.swift */; };
 		C6623B068C009D9EC5815422 /* CompoundRoutingPropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D139A09FB24C5801DD0420 /* CompoundRoutingPropertyTests.swift */; };
+		C7690CEEF8A2DD81B918B922 /* SharedLayoutFixtureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8818B4A2360B3EFAE4430E /* SharedLayoutFixtureTests.swift */; };
 		CAE6912939BD107C75DEB55C /* NornaSculpted.icon in Resources */ = {isa = PBXBuildFile; fileRef = 2C9A2555D02DD367A9F73C0F /* NornaSculpted.icon */; };
 		D165C1091870C441203C34E0 /* AdaptiveLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7C1BA76D06E51BC092BDE /* AdaptiveLayoutTests.swift */; };
 		D34439E3846FAD56796D5D30 /* AppleAppearanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B53A12FD93639DE51D25B5 /* AppleAppearanceTests.swift */; };
@@ -217,11 +219,13 @@
 		A98F026D3F04696BC09CE51B /* PacketEventDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketEventDiagrams.swift; sourceTree = "<group>"; };
 		AAE9F6DFF752BD1D63CBE265 /* TextMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMeasurement.swift; sourceTree = "<group>"; };
 		AE925723A14FA7677437231D /* DiagramExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramExportTests.swift; sourceTree = "<group>"; };
+		B6439D9E8A0290594BEC4170 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = Tests/NornaKitTests/Resources; sourceTree = SOURCE_ROOT; };
 		B679B5C6F1DD8069F1F52974 /* InlineSymbolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineSymbolTests.swift; sourceTree = "<group>"; };
 		BD7C630A2BB12E0CD230ED25 /* CoreGraphicsDiagramPainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsDiagramPainter.swift; sourceTree = "<group>"; };
 		C3439918BDBEFD60A44F23C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0790FE57B0E743E5C683607 /* SourceEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditor.swift; sourceTree = "<group>"; };
 		D50D10F47676D4A13196C0BE /* NornaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NornaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA8818B4A2360B3EFAE4430E /* SharedLayoutFixtureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLayoutFixtureTests.swift; sourceTree = "<group>"; };
 		DA8F42C1346B07E0C3F2FF4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DBF89C08F096A9A5CF5FF17C /* NornaKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NornaKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD104243B8F918BF2C8BF0D7 /* DiagramExampleLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramExampleLanguage.swift; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 				EA2D6720543984E5FFA680E4 /* NativeInlineContentTests.swift */,
 				73050310F9CC6C4923733847 /* OfficialExampleTests.swift */,
 				F707DE411F6073886C5534B6 /* ScaleExampleTests.swift */,
+				DA8818B4A2360B3EFAE4430E /* SharedLayoutFixtureTests.swift */,
 				03EE2138E3E7A073F4573DC1 /* SubgraphTests.swift */,
 			);
 			name = NornaKitTests;
@@ -314,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				193FA0D3A1C629A2128CE911 /* Resources */,
+				B6439D9E8A0290594BEC4170 /* Resources */,
 				4ABB42A2BBC761C7828EB340 /* Configuration */,
 				A4B7A4ACE27670AF388D5F89 /* NornaExamples */,
 				C70032A89D6383CA5911AC9A /* NornaKit */,
@@ -505,6 +511,7 @@
 			buildConfigurationList = AC6214F3CF20C14CFCF0CBD6 /* Build configuration list for PBXNativeTarget "NornaKitTests" */;
 			buildPhases = (
 				444F1C8AEBD457550D1E02F5 /* Sources */,
+				AD346B8533DF486F890DD171 /* Resources */,
 				1E1052F9612BBADE69BACD49 /* Frameworks */,
 				FECB7FB5F649A04190E8F367 /* Embed Frameworks */,
 			);
@@ -645,6 +652,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AD346B8533DF486F890DD171 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59D559F957E67EBA6DDCB8E0 /* Resources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -670,6 +685,7 @@
 				FEA98F4E9A86C4DA59D81EE6 /* NativeInlineContentTests.swift in Sources */,
 				6E48A90FD2B0061AA404E856 /* OfficialExampleTests.swift in Sources */,
 				8063EC70D1B8EC00AF5C9797 /* ScaleExampleTests.swift in Sources */,
+				C7690CEEF8A2DD81B918B922 /* SharedLayoutFixtureTests.swift in Sources */,
 				F823E6BAA3DE33120EAB8BD4 /* SubgraphTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

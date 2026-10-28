@@ -1,0 +1,18 @@
+<Project>
+  <!-- Windows App SDK 2.5.1 can omit application XAML or use only the executable-named PRI in unpackaged publication. -->
+  <Target Name="NornaPublishWinUIResources" AfterTargets="Publish"
+          DependsOnTargets="Prep_ComputeProcessXamlFiles"
+          Condition="'$(UseWinUI)' == 'true' and '$(WindowsPackageType)' == 'None' and '$(WindowsAppSDKSelfContained)' == 'true' and '$(OutputType)' != 'Library' and '$(PublishSingleFile)' != 'true'">
+    <Error Condition="!Exists('$(TargetDir)resources.pri') and !Exists('$(TargetDir)$(TargetName).pri')"
+           Text="The WinUI application resource index was not generated. Enable MSIX tooling before publishing." />
+    <Copy SourceFiles="$(TargetDir)resources.pri" DestinationFiles="$(PublishDir)resources.pri"
+          Condition="Exists('$(TargetDir)resources.pri')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(TargetDir)$(TargetName).pri" DestinationFiles="$(PublishDir)resources.pri"
+          Condition="!Exists('$(TargetDir)resources.pri') and Exists('$(TargetDir)$(TargetName).pri')" SkipUnchangedFiles="true" />
+    <AssignTargetPath Files="@(GeneratedXamlSrc)" RootFolder="$(XamlGeneratedOutputPath)">
+      <Output TaskParameter="AssignedFiles" ItemName="_NornaPublishedXaml" />
+    </AssignTargetPath>
+    <Copy SourceFiles="@(_NornaPublishedXaml)" DestinationFiles="@(_NornaPublishedXaml->'$(PublishDir)%(TargetPath)')"
+          SkipUnchangedFiles="true" />
+  </Target>
+</Project>

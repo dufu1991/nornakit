@@ -76,7 +76,11 @@ targets:
     type: bundle.unit-test
     platform: macOS
     sources:
-      - Tests/NornaKitTests
+      - path: Tests/NornaKitTests
+        excludes: [Resources]
+      - path: Tests/NornaKitTests/Resources
+        type: folder
+        buildPhase: resources
     dependencies:
       - target: NornaKit
       - target: NornaExamples

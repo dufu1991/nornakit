@@ -14,7 +14,7 @@ let package = Package(
         .target(name: "NornaExamples", dependencies: ["NornaKit"], resources: [.copy("Resources")]),
         .executableTarget(name: "NornaStudio", dependencies: ["NornaKit", "NornaExamples"],
             exclude: ["Resources/Assets.xcassets", "Resources/NornaSculpted.icon"], resources: [.copy("Resources/NornaKit.icns"), .process("Resources/en.lproj"), .process("Resources/zh-Hans.lproj")]),
-        .testTarget(name: "NornaKitTests", dependencies: ["NornaKit", "NornaExamples"]),
+        .testTarget(name: "NornaKitTests", dependencies: ["NornaKit", "NornaExamples"], resources: [.copy("Resources")]),
         .testTarget(name: "NornaStudioTests", dependencies: ["NornaStudio", "NornaKit", "NornaExamples"])
     ],
     swiftLanguageModes: [.v5]

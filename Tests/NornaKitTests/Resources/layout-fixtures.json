@@ -1,0 +1,3484 @@
+[
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          52,
+          69,
+          4,
+          18
+        ],
+        "points": [
+          [
+            54,
+            54
+          ],
+          [
+            54,
+            102
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          52,
+          163,
+          4,
+          18
+        ],
+        "points": [
+          [
+            54,
+            148
+          ],
+          [
+            54,
+            196
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      }
+    ],
+    "groups": [],
+    "id": "chain-natural",
+    "nodes": [
+      {
+        "frame": [
+          12,
+          8,
+          84,
+          46
+        ],
+        "id": "A",
+        "label": "Source",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          8,
+          102,
+          92,
+          46
+        ],
+        "id": "B",
+        "label": "Process",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          12,
+          196,
+          84,
+          46
+        ],
+        "id": "C",
+        "label": "Output",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      108,
+      250
+    ],
+    "source": "flowchart TD\nA[Source] --> B[Process] --> C[Output]"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          52,
+          69,
+          4,
+          18
+        ],
+        "points": [
+          [
+            54,
+            54
+          ],
+          [
+            54,
+            102
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          52,
+          163,
+          4,
+          18
+        ],
+        "points": [
+          [
+            54,
+            148
+          ],
+          [
+            54,
+            196
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      }
+    ],
+    "groups": [],
+    "id": "chain-360",
+    "maxWidth": 360,
+    "nodes": [
+      {
+        "frame": [
+          12,
+          8,
+          84,
+          46
+        ],
+        "id": "A",
+        "label": "Source",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          8,
+          102,
+          92,
+          46
+        ],
+        "id": "B",
+        "label": "Process",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          12,
+          196,
+          84,
+          46
+        ],
+        "id": "C",
+        "label": "Output",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      108,
+      250
+    ],
+    "source": "flowchart TD\nA[Source] --> B[Process] --> C[Output]"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          52,
+          69,
+          4,
+          18
+        ],
+        "points": [
+          [
+            54,
+            54
+          ],
+          [
+            54,
+            102
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          52,
+          163,
+          4,
+          18
+        ],
+        "points": [
+          [
+            54,
+            148
+          ],
+          [
+            54,
+            196
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      }
+    ],
+    "groups": [],
+    "id": "chain-720",
+    "maxWidth": 720,
+    "nodes": [
+      {
+        "frame": [
+          12,
+          8,
+          84,
+          46
+        ],
+        "id": "A",
+        "label": "Source",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          8,
+          102,
+          92,
+          46
+        ],
+        "id": "B",
+        "label": "Process",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          12,
+          196,
+          84,
+          46
+        ],
+        "id": "C",
+        "label": "Output",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      108,
+      250
+    ],
+    "source": "flowchart TD\nA[Source] --> B[Process] --> C[Output]"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          82,
+          69,
+          4,
+          18
+        ],
+        "points": [
+          [
+            84,
+            54
+          ],
+          [
+            84,
+            102
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          55,
+          182,
+          4,
+          18
+        ],
+        "points": [
+          [
+            76,
+            162
+          ],
+          [
+            76,
+            191
+          ],
+          [
+            38,
+            191
+          ],
+          [
+            38,
+            215
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          111,
+          182,
+          4,
+          18
+        ],
+        "points": [
+          [
+            92,
+            162
+          ],
+          [
+            92,
+            191
+          ],
+          [
+            134,
+            191
+          ],
+          [
+            134,
+            215
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "D"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "C",
+        "label": "",
+        "labelFrame": [
+          55,
+          276,
+          4,
+          18
+        ],
+        "points": [
+          [
+            38,
+            261
+          ],
+          [
+            38,
+            285
+          ],
+          [
+            76,
+            285
+          ],
+          [
+            76,
+            309
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "E"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "D",
+        "label": "",
+        "labelFrame": [
+          111,
+          276,
+          4,
+          18
+        ],
+        "points": [
+          [
+            134,
+            261
+          ],
+          [
+            134,
+            285
+          ],
+          [
+            92,
+            285
+          ],
+          [
+            92,
+            309
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "E"
+      }
+    ],
+    "groups": [],
+    "id": "branch-natural",
+    "nodes": [
+      {
+        "frame": [
+          46,
+          8,
+          76,
+          46
+        ],
+        "id": "A",
+        "label": "Start",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          32,
+          102,
+          104,
+          65
+        ],
+        "id": "B",
+        "label": "Check",
+        "shape": "diamond"
+      },
+      {
+        "frame": [
+          8,
+          215,
+          60,
+          46
+        ],
+        "id": "C",
+        "label": "Yes",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          108,
+          215,
+          52,
+          46
+        ],
+        "id": "D",
+        "label": "No",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          50,
+          309,
+          68,
+          46
+        ],
+        "id": "E",
+        "label": "Done",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      168,
+      363
+    ],
+    "source": "flowchart TD\nA[Start] --> B{Check}\nB --> C[Yes]\nB --> D[No]\nC --> E[Done]\nD --> E"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          76,
+          69,
+          4,
+          18
+        ],
+        "points": [
+          [
+            78,
+            54
+          ],
+          [
+            78,
+            102
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          52,
+          182,
+          4,
+          18
+        ],
+        "points": [
+          [
+            70,
+            162
+          ],
+          [
+            70,
+            191
+          ],
+          [
+            38,
+            191
+          ],
+          [
+            38,
+            215
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          102,
+          182,
+          4,
+          18
+        ],
+        "points": [
+          [
+            86,
+            162
+          ],
+          [
+            86,
+            191
+          ],
+          [
+            122,
+            191
+          ],
+          [
+            122,
+            215
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "D"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "C",
+        "label": "",
+        "labelFrame": [
+          52,
+          276,
+          4,
+          18
+        ],
+        "points": [
+          [
+            38,
+            261
+          ],
+          [
+            38,
+            285
+          ],
+          [
+            70,
+            285
+          ],
+          [
+            70,
+            309
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "E"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "D",
+        "label": "",
+        "labelFrame": [
+          102,
+          276,
+          4,
+          18
+        ],
+        "points": [
+          [
+            122,
+            261
+          ],
+          [
+            122,
+            285
+          ],
+          [
+            86,
+            285
+          ],
+          [
+            86,
+            309
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "E"
+      }
+    ],
+    "groups": [],
+    "id": "branch-360",
+    "maxWidth": 360,
+    "nodes": [
+      {
+        "frame": [
+          40,
+          8,
+          76,
+          46
+        ],
+        "id": "A",
+        "label": "Start",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          26,
+          102,
+          104,
+          65
+        ],
+        "id": "B",
+        "label": "Check",
+        "shape": "diamond"
+      },
+      {
+        "frame": [
+          8,
+          215,
+          60,
+          46
+        ],
+        "id": "C",
+        "label": "Yes",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          96,
+          215,
+          52,
+          46
+        ],
+        "id": "D",
+        "label": "No",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          44,
+          309,
+          68,
+          46
+        ],
+        "id": "E",
+        "label": "Done",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      156,
+      363
+    ],
+    "source": "flowchart TD\nA[Start] --> B{Check}\nB --> C[Yes]\nB --> D[No]\nC --> E[Done]\nD --> E"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          82,
+          69,
+          4,
+          18
+        ],
+        "points": [
+          [
+            84,
+            54
+          ],
+          [
+            84,
+            102
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          55,
+          182,
+          4,
+          18
+        ],
+        "points": [
+          [
+            76,
+            162
+          ],
+          [
+            76,
+            191
+          ],
+          [
+            38,
+            191
+          ],
+          [
+            38,
+            215
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          111,
+          182,
+          4,
+          18
+        ],
+        "points": [
+          [
+            92,
+            162
+          ],
+          [
+            92,
+            191
+          ],
+          [
+            134,
+            191
+          ],
+          [
+            134,
+            215
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "D"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "C",
+        "label": "",
+        "labelFrame": [
+          55,
+          276,
+          4,
+          18
+        ],
+        "points": [
+          [
+            38,
+            261
+          ],
+          [
+            38,
+            285
+          ],
+          [
+            76,
+            285
+          ],
+          [
+            76,
+            309
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "E"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "D",
+        "label": "",
+        "labelFrame": [
+          111,
+          276,
+          4,
+          18
+        ],
+        "points": [
+          [
+            134,
+            261
+          ],
+          [
+            134,
+            285
+          ],
+          [
+            92,
+            285
+          ],
+          [
+            92,
+            309
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "E"
+      }
+    ],
+    "groups": [],
+    "id": "branch-720",
+    "maxWidth": 720,
+    "nodes": [
+      {
+        "frame": [
+          46,
+          8,
+          76,
+          46
+        ],
+        "id": "A",
+        "label": "Start",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          32,
+          102,
+          104,
+          65
+        ],
+        "id": "B",
+        "label": "Check",
+        "shape": "diamond"
+      },
+      {
+        "frame": [
+          8,
+          215,
+          60,
+          46
+        ],
+        "id": "C",
+        "label": "Yes",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          108,
+          215,
+          52,
+          46
+        ],
+        "id": "D",
+        "label": "No",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          50,
+          309,
+          68,
+          46
+        ],
+        "id": "E",
+        "label": "Done",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      168,
+      363
+    ],
+    "source": "flowchart TD\nA[Start] --> B{Check}\nB --> C[Yes]\nB --> D[No]\nC --> E[Done]\nD --> E"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          164,
+          73,
+          4,
+          18
+        ],
+        "points": [
+          [
+            84,
+            47
+          ],
+          [
+            108,
+            47
+          ],
+          [
+            108,
+            82
+          ],
+          [
+            224,
+            82
+          ],
+          [
+            224,
+            47
+          ],
+          [
+            248,
+            47
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          106,
+          22,
+          4,
+          18
+        ],
+        "points": [
+          [
+            84,
+            31
+          ],
+          [
+            132,
+            31
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          222,
+          22,
+          4,
+          18
+        ],
+        "points": [
+          [
+            200,
+            31
+          ],
+          [
+            248,
+            31
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      }
+    ],
+    "groups": [],
+    "id": "span-natural",
+    "nodes": [
+      {
+        "frame": [
+          8,
+          16,
+          76,
+          46
+        ],
+        "id": "A",
+        "label": "Input",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          248,
+          16,
+          84,
+          46
+        ],
+        "id": "C",
+        "label": "Output",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          132,
+          8,
+          68,
+          46
+        ],
+        "id": "B",
+        "label": "Work",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      340,
+      91
+    ],
+    "source": "flowchart LR\nA[Input] ---> C[Output]\nA --> B[Work]\nB --> C"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          164,
+          91,
+          4,
+          18
+        ],
+        "points": [
+          [
+            84,
+            71
+          ],
+          [
+            108,
+            71
+          ],
+          [
+            108,
+            100
+          ],
+          [
+            224,
+            100
+          ],
+          [
+            224,
+            71
+          ],
+          [
+            248,
+            71
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          94,
+          46,
+          4,
+          18
+        ],
+        "points": [
+          [
+            84,
+            55
+          ],
+          [
+            108,
+            55
+          ],
+          [
+            108,
+            31
+          ],
+          [
+            132,
+            31
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          210,
+          22,
+          4,
+          18
+        ],
+        "points": [
+          [
+            200,
+            31
+          ],
+          [
+            224,
+            31
+          ],
+          [
+            224,
+            55
+          ],
+          [
+            248,
+            55
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      }
+    ],
+    "groups": [],
+    "id": "span-360",
+    "maxWidth": 360,
+    "nodes": [
+      {
+        "frame": [
+          8,
+          40,
+          76,
+          46
+        ],
+        "id": "A",
+        "label": "Input",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          248,
+          40,
+          84,
+          46
+        ],
+        "id": "C",
+        "label": "Output",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          132,
+          8,
+          68,
+          46
+        ],
+        "id": "B",
+        "label": "Work",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      340,
+      109
+    ],
+    "source": "flowchart LR\nA[Input] ---> C[Output]\nA --> B[Work]\nB --> C"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          164,
+          73,
+          4,
+          18
+        ],
+        "points": [
+          [
+            84,
+            47
+          ],
+          [
+            108,
+            47
+          ],
+          [
+            108,
+            82
+          ],
+          [
+            224,
+            82
+          ],
+          [
+            224,
+            47
+          ],
+          [
+            248,
+            47
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          106,
+          22,
+          4,
+          18
+        ],
+        "points": [
+          [
+            84,
+            31
+          ],
+          [
+            132,
+            31
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          222,
+          22,
+          4,
+          18
+        ],
+        "points": [
+          [
+            200,
+            31
+          ],
+          [
+            248,
+            31
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      }
+    ],
+    "groups": [],
+    "id": "span-720",
+    "maxWidth": 720,
+    "nodes": [
+      {
+        "frame": [
+          8,
+          16,
+          76,
+          46
+        ],
+        "id": "A",
+        "label": "Input",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          248,
+          16,
+          84,
+          46
+        ],
+        "id": "C",
+        "label": "Output",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          132,
+          8,
+          68,
+          46
+        ],
+        "id": "B",
+        "label": "Work",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      340,
+      91
+    ],
+    "source": "flowchart LR\nA[Input] ---> C[Output]\nA --> B[Work]\nB --> C"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          72,
+          69,
+          4,
+          18
+        ],
+        "points": [
+          [
+            74,
+            54
+          ],
+          [
+            74,
+            102
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          158,
+          90.5,
+          4,
+          18
+        ],
+        "points": [
+          [
+            74,
+            148
+          ],
+          [
+            74,
+            176
+          ],
+          [
+            160,
+            176
+          ],
+          [
+            160,
+            23
+          ],
+          [
+            112,
+            23
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "A"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          20,
+          33.5,
+          4,
+          18
+        ],
+        "points": [
+          [
+            36,
+            42.5
+          ],
+          [
+            8,
+            42.5
+          ],
+          [
+            8,
+            19.5
+          ],
+          [
+            36,
+            19.5
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "A"
+      }
+    ],
+    "groups": [],
+    "id": "feedback-natural",
+    "nodes": [
+      {
+        "frame": [
+          36,
+          8,
+          76,
+          46
+        ],
+        "id": "A",
+        "label": "Start",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          40,
+          102,
+          68,
+          46
+        ],
+        "id": "B",
+        "label": "Work",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      169,
+      185
+    ],
+    "source": "flowchart TD\nA[Start] --> B[Work]\nB --> A\nA --> A"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          72,
+          69,
+          4,
+          18
+        ],
+        "points": [
+          [
+            74,
+            54
+          ],
+          [
+            74,
+            102
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          158,
+          90.5,
+          4,
+          18
+        ],
+        "points": [
+          [
+            74,
+            148
+          ],
+          [
+            74,
+            176
+          ],
+          [
+            160,
+            176
+          ],
+          [
+            160,
+            23
+          ],
+          [
+            112,
+            23
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "A"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          20,
+          33.5,
+          4,
+          18
+        ],
+        "points": [
+          [
+            36,
+            42.5
+          ],
+          [
+            8,
+            42.5
+          ],
+          [
+            8,
+            19.5
+          ],
+          [
+            36,
+            19.5
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "A"
+      }
+    ],
+    "groups": [],
+    "id": "feedback-360",
+    "maxWidth": 360,
+    "nodes": [
+      {
+        "frame": [
+          36,
+          8,
+          76,
+          46
+        ],
+        "id": "A",
+        "label": "Start",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          40,
+          102,
+          68,
+          46
+        ],
+        "id": "B",
+        "label": "Work",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      169,
+      185
+    ],
+    "source": "flowchart TD\nA[Start] --> B[Work]\nB --> A\nA --> A"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          72,
+          69,
+          4,
+          18
+        ],
+        "points": [
+          [
+            74,
+            54
+          ],
+          [
+            74,
+            102
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          158,
+          90.5,
+          4,
+          18
+        ],
+        "points": [
+          [
+            74,
+            148
+          ],
+          [
+            74,
+            176
+          ],
+          [
+            160,
+            176
+          ],
+          [
+            160,
+            23
+          ],
+          [
+            112,
+            23
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "A"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          20,
+          33.5,
+          4,
+          18
+        ],
+        "points": [
+          [
+            36,
+            42.5
+          ],
+          [
+            8,
+            42.5
+          ],
+          [
+            8,
+            19.5
+          ],
+          [
+            36,
+            19.5
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "A"
+      }
+    ],
+    "groups": [],
+    "id": "feedback-720",
+    "maxWidth": 720,
+    "nodes": [
+      {
+        "frame": [
+          36,
+          8,
+          76,
+          46
+        ],
+        "id": "A",
+        "label": "Start",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          40,
+          102,
+          68,
+          46
+        ],
+        "id": "B",
+        "label": "Work",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      169,
+      185
+    ],
+    "source": "flowchart TD\nA[Start] --> B[Work]\nB --> A\nA --> A"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          91.6508488420533,
+          29.825424421026653,
+          4,
+          18
+        ],
+        "points": [
+          [
+            69.6508488420533,
+            38.82542442102665
+          ],
+          [
+            117.6508488420533,
+            38.82542442102665
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          207.6508488420533,
+          29.825424421026653,
+          4,
+          18
+        ],
+        "points": [
+          [
+            185.6508488420533,
+            38.82542442102665
+          ],
+          [
+            233.6508488420533,
+            38.82542442102665
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "C",
+        "label": "",
+        "labelFrame": [
+          408.98418217538665,
+          29.825424421026653,
+          4,
+          18
+        ],
+        "points": [
+          [
+            386.98418217538665,
+            38.82542442102665
+          ],
+          [
+            434.98418217538665,
+            38.82542442102665
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "D"
+      }
+    ],
+    "groups": [],
+    "id": "shapes-natural",
+    "nodes": [
+      {
+        "frame": [
+          8,
+          8,
+          61.65084884205331,
+          61.65084884205331
+        ],
+        "id": "A",
+        "label": "Round",
+        "shape": "circle"
+      },
+      {
+        "frame": [
+          117.6508488420533,
+          9.825424421026653,
+          68,
+          58
+        ],
+        "id": "B",
+        "label": "Data",
+        "shape": "cylinder"
+      },
+      {
+        "frame": [
+          233.6508488420533,
+          11.825424421026653,
+          153.33333333333334,
+          54
+        ],
+        "id": "C",
+        "label": "Hexagon",
+        "shape": "hexagon"
+      },
+      {
+        "frame": [
+          434.98418217538665,
+          15.825424421026653,
+          99,
+          46
+        ],
+        "id": "D",
+        "label": "Finish",
+        "shape": "stadium"
+      }
+    ],
+    "size": [
+      541.9841821753866,
+      77.6508488420533
+    ],
+    "source": "flowchart LR\nA((Round)) --> B[(Data)] --> C{{Hexagon}} --> D([Finish])"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          82.66666666666667,
+          84.6508488420533,
+          4,
+          18
+        ],
+        "points": [
+          [
+            84.66666666666667,
+            69.6508488420533
+          ],
+          [
+            84.66666666666667,
+            117.6508488420533
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          82.66666666666667,
+          190.6508488420533,
+          4,
+          18
+        ],
+        "points": [
+          [
+            84.66666666666667,
+            175.6508488420533
+          ],
+          [
+            84.66666666666667,
+            223.6508488420533
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "C",
+        "label": "",
+        "labelFrame": [
+          82.66666666666667,
+          292.6508488420533,
+          4,
+          18
+        ],
+        "points": [
+          [
+            84.66666666666667,
+            277.6508488420533
+          ],
+          [
+            84.66666666666667,
+            325.6508488420533
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "D"
+      }
+    ],
+    "groups": [],
+    "id": "shapes-360",
+    "maxWidth": 360,
+    "nodes": [
+      {
+        "frame": [
+          53.84124224564002,
+          8,
+          61.65084884205331,
+          61.65084884205331
+        ],
+        "id": "A",
+        "label": "Round",
+        "shape": "circle"
+      },
+      {
+        "frame": [
+          50.66666666666667,
+          117.6508488420533,
+          68,
+          58
+        ],
+        "id": "B",
+        "label": "Data",
+        "shape": "cylinder"
+      },
+      {
+        "frame": [
+          8,
+          223.6508488420533,
+          153.33333333333334,
+          53.99999999999997
+        ],
+        "id": "C",
+        "label": "Hexagon",
+        "shape": "hexagon"
+      },
+      {
+        "frame": [
+          35.16666666666667,
+          325.6508488420533,
+          99,
+          46
+        ],
+        "id": "D",
+        "label": "Finish",
+        "shape": "stadium"
+      }
+    ],
+    "size": [
+      169.33333333333334,
+      379.6508488420533
+    ],
+    "source": "flowchart LR\nA((Round)) --> B[(Data)] --> C{{Hexagon}} --> D([Finish])"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          91.6508488420533,
+          29.825424421026653,
+          4,
+          18
+        ],
+        "points": [
+          [
+            69.6508488420533,
+            38.82542442102665
+          ],
+          [
+            117.6508488420533,
+            38.82542442102665
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          207.6508488420533,
+          29.825424421026653,
+          4,
+          18
+        ],
+        "points": [
+          [
+            185.6508488420533,
+            38.82542442102665
+          ],
+          [
+            233.6508488420533,
+            38.82542442102665
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "C",
+        "label": "",
+        "labelFrame": [
+          408.98418217538665,
+          29.825424421026653,
+          4,
+          18
+        ],
+        "points": [
+          [
+            386.98418217538665,
+            38.82542442102665
+          ],
+          [
+            434.98418217538665,
+            38.82542442102665
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "D"
+      }
+    ],
+    "groups": [],
+    "id": "shapes-720",
+    "maxWidth": 720,
+    "nodes": [
+      {
+        "frame": [
+          8,
+          8,
+          61.65084884205331,
+          61.65084884205331
+        ],
+        "id": "A",
+        "label": "Round",
+        "shape": "circle"
+      },
+      {
+        "frame": [
+          117.6508488420533,
+          9.825424421026653,
+          68,
+          58
+        ],
+        "id": "B",
+        "label": "Data",
+        "shape": "cylinder"
+      },
+      {
+        "frame": [
+          233.6508488420533,
+          11.825424421026653,
+          153.33333333333334,
+          54
+        ],
+        "id": "C",
+        "label": "Hexagon",
+        "shape": "hexagon"
+      },
+      {
+        "frame": [
+          434.98418217538665,
+          15.825424421026653,
+          99,
+          46
+        ],
+        "id": "D",
+        "label": "Finish",
+        "shape": "stadium"
+      }
+    ],
+    "size": [
+      541.9841821753866,
+      77.6508488420533
+    ],
+    "source": "flowchart LR\nA((Round)) --> B[(Data)] --> C{{Hexagon}} --> D([Finish])"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          214,
+          22,
+          4,
+          18
+        ],
+        "points": [
+          [
+            240,
+            31
+          ],
+          [
+            192,
+            31
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          98,
+          22,
+          4,
+          18
+        ],
+        "points": [
+          [
+            124,
+            31
+          ],
+          [
+            76,
+            31
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      }
+    ],
+    "groups": [],
+    "id": "reverse-natural",
+    "nodes": [
+      {
+        "frame": [
+          240,
+          8,
+          68,
+          46
+        ],
+        "id": "A",
+        "label": "开始",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          124,
+          8,
+          68,
+          46
+        ],
+        "id": "B",
+        "label": "处理",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          8,
+          8,
+          68,
+          46
+        ],
+        "id": "C",
+        "label": "结束",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      316,
+      62
+    ],
+    "source": "flowchart RL\nA[开始] --> B[处理] --> C[结束]"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          214,
+          22,
+          4,
+          18
+        ],
+        "points": [
+          [
+            240,
+            31
+          ],
+          [
+            192,
+            31
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          98,
+          22,
+          4,
+          18
+        ],
+        "points": [
+          [
+            124,
+            31
+          ],
+          [
+            76,
+            31
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      }
+    ],
+    "groups": [],
+    "id": "reverse-360",
+    "maxWidth": 360,
+    "nodes": [
+      {
+        "frame": [
+          240,
+          8,
+          68,
+          46
+        ],
+        "id": "A",
+        "label": "开始",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          124,
+          8,
+          68,
+          46
+        ],
+        "id": "B",
+        "label": "处理",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          8,
+          8,
+          68,
+          46
+        ],
+        "id": "C",
+        "label": "结束",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      316,
+      62
+    ],
+    "source": "flowchart RL\nA[开始] --> B[处理] --> C[结束]"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          214,
+          22,
+          4,
+          18
+        ],
+        "points": [
+          [
+            240,
+            31
+          ],
+          [
+            192,
+            31
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          98,
+          22,
+          4,
+          18
+        ],
+        "points": [
+          [
+            124,
+            31
+          ],
+          [
+            76,
+            31
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      }
+    ],
+    "groups": [],
+    "id": "reverse-720",
+    "maxWidth": 720,
+    "nodes": [
+      {
+        "frame": [
+          240,
+          8,
+          68,
+          46
+        ],
+        "id": "A",
+        "label": "开始",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          124,
+          8,
+          68,
+          46
+        ],
+        "id": "B",
+        "label": "处理",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          8,
+          8,
+          68,
+          46
+        ],
+        "id": "C",
+        "label": "结束",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      316,
+      62
+    ],
+    "source": "flowchart RL\nA[开始] --> B[处理] --> C[结束]"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "Start",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            132,
+            54
+          ],
+          [
+            132,
+            102
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "API"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            104,
+            163
+          ],
+          [
+            152,
+            163
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            194,
+            186
+          ],
+          [
+            194,
+            277
+          ],
+          [
+            166,
+            277
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "End"
+      }
+    ],
+    "groups": [
+      {
+        "depth": 0,
+        "frame": [
+          8,
+          102,
+          248,
+          104
+        ],
+        "id": "API",
+        "label": "Service",
+        "titleFrame": [
+          104,
+          110,
+          56,
+          22
+        ]
+      }
+    ],
+    "id": "compound-natural",
+    "nodes": [
+      {
+        "frame": [
+          94,
+          8,
+          76,
+          46
+        ],
+        "id": "Start",
+        "label": "Start",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          28,
+          140,
+          76,
+          46
+        ],
+        "id": "A",
+        "label": "Input",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          152,
+          140,
+          84,
+          46
+        ],
+        "id": "B",
+        "label": "Output",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          98,
+          254,
+          68,
+          46
+        ],
+        "id": "End",
+        "label": "Done",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      264,
+      308
+    ],
+    "source": "flowchart TD\nStart --> API\nsubgraph API[Service]\n direction LR\n A[Input] --> B[Output]\nend\nB --> End[Done]"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "Start",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            132,
+            54
+          ],
+          [
+            132,
+            102
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "API"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            104,
+            163
+          ],
+          [
+            152,
+            163
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            194,
+            186
+          ],
+          [
+            194,
+            277
+          ],
+          [
+            166,
+            277
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "End"
+      }
+    ],
+    "groups": [
+      {
+        "depth": 0,
+        "frame": [
+          8,
+          102,
+          248,
+          104
+        ],
+        "id": "API",
+        "label": "Service",
+        "titleFrame": [
+          104,
+          110,
+          56,
+          22
+        ]
+      }
+    ],
+    "id": "compound-360",
+    "maxWidth": 360,
+    "nodes": [
+      {
+        "frame": [
+          94,
+          8,
+          76,
+          46
+        ],
+        "id": "Start",
+        "label": "Start",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          28,
+          140,
+          76,
+          46
+        ],
+        "id": "A",
+        "label": "Input",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          152,
+          140,
+          84,
+          46
+        ],
+        "id": "B",
+        "label": "Output",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          98,
+          254,
+          68,
+          46
+        ],
+        "id": "End",
+        "label": "Done",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      264,
+      308
+    ],
+    "source": "flowchart TD\nStart --> API\nsubgraph API[Service]\n direction LR\n A[Input] --> B[Output]\nend\nB --> End[Done]"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "Start",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            132,
+            54
+          ],
+          [
+            132,
+            102
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "API"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            104,
+            163
+          ],
+          [
+            152,
+            163
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            194,
+            186
+          ],
+          [
+            194,
+            277
+          ],
+          [
+            166,
+            277
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "End"
+      }
+    ],
+    "groups": [
+      {
+        "depth": 0,
+        "frame": [
+          8,
+          102,
+          248,
+          104
+        ],
+        "id": "API",
+        "label": "Service",
+        "titleFrame": [
+          104,
+          110,
+          56,
+          22
+        ]
+      }
+    ],
+    "id": "compound-720",
+    "maxWidth": 720,
+    "nodes": [
+      {
+        "frame": [
+          94,
+          8,
+          76,
+          46
+        ],
+        "id": "Start",
+        "label": "Start",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          28,
+          140,
+          76,
+          46
+        ],
+        "id": "A",
+        "label": "Input",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          152,
+          140,
+          84,
+          46
+        ],
+        "id": "B",
+        "label": "Output",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          98,
+          254,
+          68,
+          46
+        ],
+        "id": "End",
+        "label": "Done",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      264,
+      308
+    ],
+    "source": "flowchart TD\nStart --> API\nsubgraph API[Service]\n direction LR\n A[Input] --> B[Output]\nend\nB --> End[Done]"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            86,
+            224
+          ],
+          [
+            86,
+            272
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            86,
+            92
+          ],
+          [
+            86,
+            124
+          ],
+          [
+            44,
+            124
+          ],
+          [
+            44,
+            201
+          ],
+          [
+            52,
+            201
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "C",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            86,
+            318
+          ],
+          [
+            86,
+            406
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "D"
+      }
+    ],
+    "groups": [
+      {
+        "depth": 0,
+        "frame": [
+          8,
+          8,
+          156,
+          350
+        ],
+        "id": "Outer",
+        "label": "System",
+        "titleFrame": [
+          62,
+          16,
+          48,
+          22
+        ]
+      },
+      {
+        "depth": 1,
+        "frame": [
+          28,
+          140,
+          116,
+          198
+        ],
+        "id": "Inner",
+        "label": "Worker",
+        "parentId": "Outer",
+        "titleFrame": [
+          62,
+          148,
+          48,
+          22
+        ]
+      }
+    ],
+    "id": "nested-natural",
+    "nodes": [
+      {
+        "frame": [
+          44,
+          46,
+          84,
+          46
+        ],
+        "id": "A",
+        "label": "Before",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          52,
+          178,
+          68,
+          46
+        ],
+        "id": "B",
+        "label": "Read",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          48,
+          272,
+          76,
+          46
+        ],
+        "id": "C",
+        "label": "Write",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          52,
+          406,
+          68,
+          46
+        ],
+        "id": "D",
+        "label": "Done",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      172,
+      460
+    ],
+    "source": "flowchart TD\nsubgraph Outer[System]\n A[Before]\n subgraph Inner[Worker]\n  B[Read] --> C[Write]\n end\n A --> B\nend\nC --> D[Done]"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            86,
+            224
+          ],
+          [
+            86,
+            272
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            86,
+            92
+          ],
+          [
+            86,
+            124
+          ],
+          [
+            44,
+            124
+          ],
+          [
+            44,
+            201
+          ],
+          [
+            52,
+            201
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "C",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            86,
+            318
+          ],
+          [
+            86,
+            406
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "D"
+      }
+    ],
+    "groups": [
+      {
+        "depth": 0,
+        "frame": [
+          8,
+          8,
+          156,
+          350
+        ],
+        "id": "Outer",
+        "label": "System",
+        "titleFrame": [
+          62,
+          16,
+          48,
+          22
+        ]
+      },
+      {
+        "depth": 1,
+        "frame": [
+          28,
+          140,
+          116,
+          198
+        ],
+        "id": "Inner",
+        "label": "Worker",
+        "parentId": "Outer",
+        "titleFrame": [
+          62,
+          148,
+          48,
+          22
+        ]
+      }
+    ],
+    "id": "nested-360",
+    "maxWidth": 360,
+    "nodes": [
+      {
+        "frame": [
+          44,
+          46,
+          84,
+          46
+        ],
+        "id": "A",
+        "label": "Before",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          52,
+          178,
+          68,
+          46
+        ],
+        "id": "B",
+        "label": "Read",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          48,
+          272,
+          76,
+          46
+        ],
+        "id": "C",
+        "label": "Write",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          52,
+          406,
+          68,
+          46
+        ],
+        "id": "D",
+        "label": "Done",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      172,
+      460
+    ],
+    "source": "flowchart TD\nsubgraph Outer[System]\n A[Before]\n subgraph Inner[Worker]\n  B[Read] --> C[Write]\n end\n A --> B\nend\nC --> D[Done]"
+  },
+  {
+    "edges": [
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "B",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            86,
+            224
+          ],
+          [
+            86,
+            272
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "C"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "A",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            86,
+            92
+          ],
+          [
+            86,
+            124
+          ],
+          [
+            44,
+            124
+          ],
+          [
+            44,
+            201
+          ],
+          [
+            52,
+            201
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "B"
+      },
+      {
+        "arrow": true,
+        "endMarker": "arrow",
+        "from": "C",
+        "label": "",
+        "labelFrame": [
+          0,
+          0,
+          4,
+          18
+        ],
+        "points": [
+          [
+            86,
+            318
+          ],
+          [
+            86,
+            406
+          ]
+        ],
+        "startMarker": "none",
+        "style": "solid",
+        "to": "D"
+      }
+    ],
+    "groups": [
+      {
+        "depth": 0,
+        "frame": [
+          8,
+          8,
+          156,
+          350
+        ],
+        "id": "Outer",
+        "label": "System",
+        "titleFrame": [
+          62,
+          16,
+          48,
+          22
+        ]
+      },
+      {
+        "depth": 1,
+        "frame": [
+          28,
+          140,
+          116,
+          198
+        ],
+        "id": "Inner",
+        "label": "Worker",
+        "parentId": "Outer",
+        "titleFrame": [
+          62,
+          148,
+          48,
+          22
+        ]
+      }
+    ],
+    "id": "nested-720",
+    "maxWidth": 720,
+    "nodes": [
+      {
+        "frame": [
+          44,
+          46,
+          84,
+          46
+        ],
+        "id": "A",
+        "label": "Before",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          52,
+          178,
+          68,
+          46
+        ],
+        "id": "B",
+        "label": "Read",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          48,
+          272,
+          76,
+          46
+        ],
+        "id": "C",
+        "label": "Write",
+        "shape": "rectangle"
+      },
+      {
+        "frame": [
+          52,
+          406,
+          68,
+          46
+        ],
+        "id": "D",
+        "label": "Done",
+        "shape": "rectangle"
+      }
+    ],
+    "size": [
+      172,
+      460
+    ],
+    "source": "flowchart TD\nsubgraph Outer[System]\n A[Before]\n subgraph Inner[Worker]\n  B[Read] --> C[Write]\n end\n A --> B\nend\nC --> D[Done]"
+  }
+]

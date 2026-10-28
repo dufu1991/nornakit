@@ -6,7 +6,7 @@
 
 `Sources/NornaKit` 是可独立使用的 Swift 图表库，按模型、语法、布局、绘制和导出分组。各图形专用的解析与布局集中在 `Diagrams/`，公共流程图布局和路由位于 `Layout/`。仅依赖 `NornaKit` 产品时，不编译或打包示例代码与资源。
 
-`Sources/NornaExamples` 是供 Studio 和回归测试使用的内部示例模块，保存示例模型、目录、双语源码与官方示例快照，不作为公开库产品发布。
+`Sources/NornaExamples` 是供 Studio 和回归测试使用的内部示例模块，保存示例模型、目录、双语源码与官方示例快照，不作为公开库产品发布。固定布局夹具位于 `Tests/NornaKitTests/Resources`，仅进入测试包。
 
 `Sources/NornaStudio` 是调用 NornaKit 的演示与调试工作台，按应用状态、编辑器、画布、导出和本地化分组。随应用分发的图标、强调色和字符串表保留在 `Resources/`。
 
@@ -23,6 +23,8 @@ xcodegen generate
 `website/` 与原生应用共用一个主仓库。`website/dist/` 是直接发布的静态站点，包含页面、样式、脚本及原生生成的示例图片；`website/scripts/` 保存资源生成和校验工具。这里的 `dist/` 是网站发布内容，需要提交。网站预览与更新步骤见[网站说明](../website/README.md)。
 
 ## 构建与验证
+
+Windows 工程独立位于 `Windows/`，包含 C# Core、Windows 原生库、WinUI 3 工作台和测试。两端使用 `Sources/NornaExamples/Resources/examples.json` 中的同一份双语示例，以及同一份官方语料与状态基线。Windows 构建、双架构验收和独立版本发布见 [Windows 指南](WINDOWS.md)。
 
 工作台仅面向 Apple Silicon Mac。Xcode 工程与发布脚本均只构建 `arm64` 架构。
 

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#fafaf9">
+  <meta name="description" content="Native C# diagram libraries for Windows 11, with .NET 10, Win2D and an optional WinUI 3 workbench.">
+  <title>Windows Kit — NornaKit</title>
+  <link rel="icon" href="favicon.ico"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="components.css">
+  <script src="preferences.js"></script>
+</head>
+<body data-page="windows">
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="header wrap">
+    <a class="brand" href="index.html"><span class="brand-symbol" aria-hidden="true"></span><span>NornaKit</span></a>
+    <nav aria-label="Main navigation" data-i18n-aria="navigation"><a href="index.html#examples" data-i18n="examples">Examples</a><a href="docs.html" data-i18n="docs">Docs</a><a href="https://github.com/dufu1991/nornakit" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
+    <div class="preferences"><div id="language-picker" class="ui-picker"></div><div id="theme-picker" class="ui-picker"></div></div>
+  </header>
+  <main class="docs-main" id="main">
+    <p class="eyebrow">C# · .NET 10 · WIN2D</p><h1 data-i18n="windowsTitle">Native diagrams for Windows.</h1>
+    <p data-i18n="windowsLead"></p><h2 data-i18n="requirementsTitle">Requirements</h2><p data-i18n="windowsRequirements"></p>
+    <h2 data-i18n="integrateTitle">Render a diagram</h2><p data-i18n="windowsIntegration"></p>
+    <pre><code>using NornaKit;
+using NornaKit.Windows;
+
+var renderer = WindowsDiagramRenderer.Create();
+var artifact = await renderer.RenderAsync(
+    "flowchart LR\n A[Source] --> B[Native diagram]",
+    new DiagramLayoutOptions(MaxWidth: 640));
+var svg = SvgExporter.Export(artifact.Scene, WindowsPalette.Resolve());</code></pre>
+    <p data-i18n="windowsExports"></p><p data-i18n="windowsIcons"></p>
+    <p><a href="https://github.com/dufu1991/nornakit/blob/main/Docs/WINDOWS.md" data-i18n="windowsSource">Read the Windows integration guide</a></p>
+    <h2 data-i18n="windowsDownloads">Windows workbench downloads</h2><p class="notice" data-windows-pending data-i18n="windowsPending"></p>
+    <p><a data-windows-download="x64" role="link" aria-disabled="true" data-i18n="windowsX64">Windows x64 installer</a></p>
+    <p><a data-windows-download="arm64" role="link" aria-disabled="true" data-i18n="windowsArm64">Windows ARM64 installer</a></p>
+    <p><a href="index.html" data-i18n="back">Back to NornaKit</a></p>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div><script type="module" src="app.js"></script>
+</body>
+</html>

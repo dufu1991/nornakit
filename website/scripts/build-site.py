@@ -13,6 +13,6 @@ for source, name in [
     ("THIRD_PARTY_NOTICES.md", "THIRD_PARTY_NOTICES.md"),
 ]:
     shutil.copyfile(root / source, site / "assets" / name)
-for script in ["verify-brand.py", "verify-screenshots.py", "verify-inline-content.py"]:
+for script in ["verify-brand.py", "verify-screenshots.py", "verify-inline-content.py", "verify-windows.py"]:
     subprocess.run([sys.executable, str(root / "website/scripts" / script)], check=True)
 print("NornaKit static site is ready in website/dist for https://nornakit.com.")
