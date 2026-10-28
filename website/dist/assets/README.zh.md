@@ -3,6 +3,7 @@
 [English](README.md) · [简体中文](README.zh-CN.md)
 
 [![CI](https://github.com/dufu1991/nornakit/actions/workflows/ci.yml/badge.svg)](https://github.com/dufu1991/nornakit/actions/workflows/ci.yml)
+[![Windows](https://github.com/dufu1991/nornakit/actions/workflows/windows.yml/badge.svg)](https://github.com/dufu1991/nornakit/actions/workflows/windows.yml)
 
 **让思路，清晰成形。**
 
@@ -23,9 +24,7 @@
 
 要求 **macOS 14 或更高版本**、**Swift 6**，没有外部包依赖。
 
-将本仓库添加为 Swift Package 依赖，链接 **NornaKit** 产品。渲染库版本与 Norna Studio 分开维护。依赖声明使用库版本：
-
-Mac 版库产品仅包含渲染引擎。示例目录与资源归内部 `NornaExamples` 模块所有，仅供 Studio 和回归测试使用。
+将本仓库添加为 Swift Package 依赖，链接 **NornaKit** 产品。渲染库版本（`vX.Y.Z` 标签）与 Norna Studio 分开维护，依赖声明使用库版本：
 
 ```swift
 .package(url: "https://github.com/dufu1991/nornakit.git", from: "0.2.0")
@@ -41,13 +40,11 @@ let diagram = try await NativeDiagramRenderer().render(
 let svg = diagram.themedSVG(.appleLight)
 ```
 
-`diagram.scene` 包含原生几何。`CoreGraphicsDiagramPainter` 可将场景绘制到 AppKit 图形上下文，`DiagramExporter` 负责图像与 PDF 导出。详细用法与扩展语法见[使用指南](Docs/GUIDE.md)。
+`diagram.scene` 包含原生几何。`CoreGraphicsDiagramPainter` 可将场景绘制到 AppKit 图形上下文，`DiagramExporter` 负责图像与 PDF 导出。库产品仅包含渲染引擎，示例目录归内部 `NornaExamples` 模块所有，仅供 Studio 和测试使用。详细用法与扩展语法见[使用指南](Docs/GUIDE.md)。
 
-## 功能
+## 集成 Windows 版 NornaKit
 
-### Windows 接入
-
-[`Windows/`](Windows/README.md) 解决方案包含独立的 `NornaKit.Core`、`NornaKit.Windows` 库，以及 WinUI 3 工作台。支持 Windows 11 初始版本及以上的 x64 和 ARM64，构建使用 Windows SDK 26100。
+要求 **Windows 11 build 22000 或更高版本**，支持 x64 与 ARM64。构建需要 .NET 10 SDK 与 Windows SDK 26100。[`Windows/`](Windows/README.md) 解决方案包含独立的 `NornaKit.Core`（纯 .NET 的解析、布局、场景与 SVG）和 `NornaKit.Windows`（DirectWrite、Win2D、主题、预览控件与导出）两个库，以及 WinUI 3 工作台。
 
 ```csharp
 using NornaKit;
@@ -60,15 +57,15 @@ var diagram = await renderer.RenderAsync(
 var svg = SvgExporter.Export(diagram.Scene, WindowsPalette.Resolve());
 ```
 
-NuGet 包发布前通过项目引用接入。解析、布局与离屏导出无须创建可见窗口，可按需使用 `DiagramPreview` 原生预览控件。完整接入、平台差异与打包说明见 [Windows 指南](Docs/WINDOWS.md)。Windows 下载入口在实际发布安装包后启用。
+NuGet 包尚未发布，目前请以项目引用方式接入 `Windows/src/NornaKit.Core` 与 `Windows/src/NornaKit.Windows`。解析、布局与导出无须创建可见窗口，可按需使用 `DiagramPreview` 原生预览控件。完整接入、平台差异与打包说明见 [Windows 指南](Docs/WINDOWS.md)。
 
-### 共同能力
+## 功能
 
 - 支持 33 类图形，覆盖流程图、时序图、类图、状态图、实体关系图、甘特图、思维导图与数据图表。
 - Mermaid 源码解析、原生文本测量、自适应布局与源码错误定位。
 - 可供宿主应用绘制的原生场景几何，以及中英文示例源码。
 - 系统浅色、深色与高对比度外观，以及可配置的图表配色。
-- 内联 SF Symbols 与原生富文本扩展。
+- 原生富文本扩展与内联图标：macOS 使用 SF Symbols，Windows 使用 Windows 图标标记。
 - PNG、JPEG、TIFF、SVG 和 PDF 导出。
 
 各类图形的语法支持程度不同，具体范围与限制见[支持矩阵](Docs/SUPPORT.md)。项目不宣称完整兼容 Mermaid 的全部语法。
@@ -159,13 +156,22 @@ swift test
 
 库源码位于 `Sources/NornaKit/`，测试与回归资料分别位于 `Tests/NornaKitTests/` 和 `Baselines/`。目录约定与开发命令见[开发指南](Docs/DEVELOPMENT.md)。
 
+Windows 在 `Windows/` 目录下执行（ARM64 使用 `-p:Platform=ARM64`）：
+
+```powershell
+dotnet restore NornaKit.slnx -p:Platform=x64 --locked-mode
+dotnet run --project tests/NornaKit.Core.Tests -c Release --no-restore
+```
+
+`Sources/NornaExamples/Resources/examples.json` 示例目录与 `Tests/NornaKitTests/Resources/` 布局夹具由 Swift 与 C# 测试共用。
+
 ## 配套工具：Norna Studio
 
 Norna Studio 调用同一套 NornaKit API，用于演示库能力、复现和调试渲染问题，以及临时将 Mermaid 源码渲染并导出为图片、SVG 或 PDF。工作台提供源码编辑、实时预览、画布平移缩放与中英文界面。
 
-### 下载与运行
+### 下载 macOS 版
 
-要求 **macOS 14 或更高版本**。仅支持 **Apple Silicon Mac**。
+要求 **macOS 14 或更高版本**，仅支持 **Apple Silicon Mac**。
 
 [下载 DMG](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg) · [全部版本](https://github.com/dufu1991/nornakit/releases)
 
@@ -175,7 +181,7 @@ Norna Studio 调用同一套 NornaKit API，用于演示库能力、复现和调
 
 ### 通过 Homebrew 安装
 
-配套工作台也通过个人 [dufu1991/tap](https://github.com/dufu1991/homebrew-tap) 仓库中的 Cask 分发：
+配套工作台也通过个人 [dufu1991/tap](https://github.com/dufu1991/homebrew-tap) 仓库中的 Cask 分发。使用完整名称安装时会自动添加 tap：
 
 ```sh
 brew install --cask dufu1991/tap/norna-studio
@@ -188,7 +194,11 @@ brew update
 brew upgrade --cask dufu1991/tap/norna-studio
 ```
 
-Norna Studio 的 Cask 发布到 tap 后，上述命令才会生效。Homebrew 安装的是 GitHub Releases 中的同一份应用，签名状态相同。NornaKit 渲染库仍通过 Swift Package Manager 集成。
+Cask 安装的是 GitHub Releases 中同一份 Apple Silicon DMG，签名状态相同，每次发布后自动同步。NornaKit 渲染库仍通过 Swift Package Manager 集成。
+
+### Windows 工作台
+
+在 `Windows/` 目录执行 `dotnet publish src/NornaStudio -c Release --no-restore -p:Platform=x64 -o artifacts/studio` 即可从源码构建 WinUI 3 工作台。Windows 安装包以 `studio-windows-vX.Y.Z` 单独发布，目前尚未发布。详见 [Windows 指南](Docs/WINDOWS.md)。
 
 ### 从源码运行
 
@@ -225,22 +235,27 @@ Apple Silicon 版 DMG 和 ZIP 位于 `build/release/`。打包命令不启动工
 | 工作台 Release 成功，且已配置 `HOMEBREW_TAP_TOKEN` | 立即更新 `dufu1991/homebrew-tap` 中的 Cask |
 | tap 仓库每小时执行，或手动运行同步工作流 | 校验最新工作台 Release 并同步 Cask，无须个人令牌 |
 | 推送渲染库的 `vX.Y.Z` 标签 | 不发布工作台应用 |
+| 推送或 PR 涉及 `Windows/` 或共用示例、夹具数据 | Windows x64 与 ARM64 构建、测试、导出校验与工作台启动 |
+| 手动运行 Windows 发布工作流 | 以 `studio-windows-vX.Y.Z` 发布安装包与 ZIP，不标记为最新版本 |
+| 手动运行 Windows NuGet 工作流 | 将 `NornaKit.Core` 与 `NornaKit.Windows` 发布到 NuGet |
 
-**NornaKit 是主要的库产品，工作台独立维护版本。** Kit 使用 `vX.Y.Z` 标签，发布说明以库更新为主，通常附带跟随更新的 Studio 构建。Studio 保留独立的应用版本和构建号，仅在工作台需要单独更新时发布 `studio-vX.Y.Z`。 单独发布工作台时，修改版本文件中的 `MARKETING_VERSION`，并递增 `CURRENT_PROJECT_VERSION`。包含该文件的首次推送也会触发发布。普通提交不创建新 Release，已发布的工作台版本不会被覆盖。配置和重试方式见[发布指南](Docs/RELEASING.md)。
+**NornaKit 是主要的库产品，工作台独立维护版本。** Kit 使用 `vX.Y.Z` 标签，发布说明以库更新为主，通常附带跟随更新的 Studio 构建。Studio 保留独立的应用版本和构建号，仅在工作台需要单独更新时发布 `studio-vX.Y.Z`。单独发布工作台时，修改版本文件中的 `MARKETING_VERSION`，并递增 `CURRENT_PROJECT_VERSION`。包含该文件的首次推送也会触发发布。普通提交不创建新 Release，已发布的工作台版本不会被覆盖。配置和重试方式见[发布指南](Docs/RELEASING.md)。
 
 ## 目录结构
 
 ```text
-Sources/NornaKit/       模型、解析、布局、绘制、导出与示例
+Sources/NornaKit/       模型、解析、布局、绘制与导出
+Sources/NornaExamples/  与 Windows 共用的双语示例目录
 Sources/NornaStudio/    原生应用、编辑器、画布、导出界面与本地化
-Tests/                 Swift 测试与发布自动化测试
+Windows/                C# 库、WinUI 3 工作台、测试与打包
+Tests/                 Swift 测试、共用夹具与发布自动化测试
 Baselines/             版本化参考源码、SVG 与回归快照
 Configuration/         应用元数据、权限与工作台版本
 Scripts/               开发工具与发布打包脚本
 Branding/              品牌源文件与规范
 Docs/                  使用、支持、开发与发布文档
 website/               静态网站、发布资源与生成工具
-.github/workflows/     CI 与工作台自动发布
+.github/workflows/     macOS 与 Windows CI、发布及 Homebrew 同步
 ```
 
 `Package.swift` 定义 Swift Package，`project.yml` 定义 XcodeGen 工程。生成的 `NornaKit.xcodeproj` 一并提交，便于直接使用。修改工程定义或增删、移动源码后，执行 `xcodegen generate`。单独修改工作台版本文件不需要重新生成工程。

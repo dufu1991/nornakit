@@ -3,6 +3,7 @@
 [English](README.md) · [简体中文](README.zh-CN.md)
 
 [![CI](https://github.com/dufu1991/nornakit/actions/workflows/ci.yml/badge.svg)](https://github.com/dufu1991/nornakit/actions/workflows/ci.yml)
+[![Windows](https://github.com/dufu1991/nornakit/actions/workflows/windows.yml/badge.svg)](https://github.com/dufu1991/nornakit/actions/workflows/windows.yml)
 
 **Native diagrams, clearly.**
 
@@ -23,9 +24,7 @@
 
 Requires **macOS 14 or later** and **Swift 6**, with no external package dependencies.
 
-Add this repository as a Swift Package dependency and link the **NornaKit** product. Library versions are maintained independently of Norna Studio. Use the library version in your package dependency:
-
-The macOS library product contains only the rendering engine. Example catalogs and resources belong to the internal `NornaExamples` module used by Studio and regression tests.
+Add this repository as a Swift Package dependency and link the **NornaKit** product. Library versions (`vX.Y.Z` tags) are maintained independently of Norna Studio, so depend on the library version:
 
 ```swift
 .package(url: "https://github.com/dufu1991/nornakit.git", from: "0.2.0")
@@ -41,13 +40,11 @@ let diagram = try await NativeDiagramRenderer().render(
 let svg = diagram.themedSVG(.appleLight)
 ```
 
-`diagram.scene` contains the native geometry. `CoreGraphicsDiagramPainter` draws into an AppKit graphics context, and `DiagramExporter` handles image and PDF output. More examples and extensions are documented in the [Chinese usage guide](Docs/GUIDE.md).
+`diagram.scene` contains the native geometry. `CoreGraphicsDiagramPainter` draws into an AppKit graphics context, and `DiagramExporter` handles image and PDF output. The library product contains only the rendering engine; example catalogs live in the internal `NornaExamples` module used by Studio and tests. More examples and extensions are documented in the [Chinese usage guide](Docs/GUIDE.md).
 
-## Features
+## Use NornaKit on Windows
 
-### Windows integration
-
-The Windows solution is in [`Windows/`](Windows/README.md). It includes the independent `NornaKit.Core` and `NornaKit.Windows` libraries and the WinUI 3 workbench. It targets Windows 11 build 22000 or later on x64 and ARM64, with Windows SDK 26100 for builds.
+Requires **Windows 11 build 22000 or later** on x64 or ARM64. Building needs the .NET 10 SDK and Windows SDK 26100. The [`Windows/`](Windows/README.md) solution contains the independent `NornaKit.Core` (pure .NET parsing, layout, scene and SVG) and `NornaKit.Windows` (DirectWrite, Win2D, themes, preview control and export) libraries, plus the WinUI 3 workbench.
 
 ```csharp
 using NornaKit;
@@ -60,15 +57,15 @@ var diagram = await renderer.RenderAsync(
 var svg = SvgExporter.Export(diagram.Scene, WindowsPalette.Resolve());
 ```
 
-Use project references until NuGet packages are published. The Kit runs without a visible window; `DiagramPreview` provides the optional WinUI control. See the [Windows guide](Docs/WINDOWS.md) for integration, export, platform differences and packaging. Windows downloads remain unavailable until an actual Windows release is published.
+NuGet packages are not published yet; reference `Windows/src/NornaKit.Core` and `Windows/src/NornaKit.Windows` as project references for now. Parsing, layout and export run without a visible window; `DiagramPreview` is the optional WinUI control. See the [Windows guide, in Chinese](Docs/WINDOWS.md) for integration, export, platform differences and packaging.
 
-### Shared capabilities
+## Features
 
 - 33 diagram families, including flowcharts, sequence, class, state, ER, Gantt, mind maps, and data charts.
 - Mermaid parsing, native text measurement, adaptive layouts, and source error locations.
 - Native scene geometry for drawing in host apps, with English and Simplified Chinese example sources.
 - System light, dark, and increased contrast appearances, with configurable diagram colors.
-- Inline SF Symbols and native rich text extensions.
+- Native rich text extensions with inline icons: SF Symbols on macOS, Windows icon tokens on Windows.
 - PNG, JPEG, TIFF, SVG, and PDF export.
 
 Syntax support varies by diagram family. See the [support matrix, in Chinese](Docs/SUPPORT.md) for supported constructs and current limits. NornaKit does not claim complete Mermaid compatibility.
@@ -159,13 +156,22 @@ swift test
 
 Library sources live in `Sources/NornaKit/`, with tests in `Tests/NornaKitTests/` and regression fixtures in `Baselines/`. See the [development guide, in Chinese](Docs/DEVELOPMENT.md) for conventions and commands.
 
+On Windows, run from the `Windows/` directory (use `-p:Platform=ARM64` on ARM64):
+
+```powershell
+dotnet restore NornaKit.slnx -p:Platform=x64 --locked-mode
+dotnet run --project tests/NornaKit.Core.Tests -c Release --no-restore
+```
+
+The example catalog in `Sources/NornaExamples/Resources/examples.json` and the layout fixtures in `Tests/NornaKitTests/Resources/` are shared by the Swift and C# test suites.
+
 ## Companion tool: Norna Studio
 
 Norna Studio uses the same NornaKit APIs to demonstrate library capabilities, reproduce and debug rendering issues, and render Mermaid source into images, SVG, or PDF for occasional use. It provides source editing, live previews, canvas pan and zoom, and English and Simplified Chinese interfaces.
 
-### Download and run
+### Download for macOS
 
-Requires **macOS 14 or later**. Supports **Apple Silicon Macs**.
+Requires **macOS 14 or later** on an **Apple Silicon Mac**.
 
 [Download DMG](https://github.com/dufu1991/nornakit/releases/latest/download/Norna-Studio-macOS-arm64.dmg) · [All releases](https://github.com/dufu1991/nornakit/releases)
 
@@ -175,7 +181,7 @@ Release notes identify the signing status. Until Apple credentials are configure
 
 ### Install with Homebrew
 
-The companion app is also distributed through the personal [dufu1991/tap](https://github.com/dufu1991/homebrew-tap) Cask repository:
+The companion app is also distributed through the personal [dufu1991/tap](https://github.com/dufu1991/homebrew-tap) Cask repository. Installing by full name adds the tap automatically:
 
 ```sh
 brew install --cask dufu1991/tap/norna-studio
@@ -188,7 +194,11 @@ brew update
 brew upgrade --cask dufu1991/tap/norna-studio
 ```
 
-These commands become available once the Norna Studio Cask is published to the tap. Homebrew installs the same app published on GitHub Releases, with the same signing status. NornaKit itself is integrated through Swift Package Manager.
+The Cask installs the same Apple Silicon DMG published on GitHub Releases, with the same signing status, and is synchronized automatically after each release. NornaKit itself is integrated through Swift Package Manager.
+
+### Windows workbench
+
+The WinUI 3 workbench can be built from source with `dotnet publish src/NornaStudio -c Release --no-restore -p:Platform=x64 -o artifacts/studio` in `Windows/`. Windows installers are published separately as `studio-windows-vX.Y.Z` releases; none has been published yet. See the [Windows guide, in Chinese](Docs/WINDOWS.md).
 
 ### Run from source
 
@@ -225,22 +235,27 @@ Apple Silicon DMG and ZIP packages are written to `build/release/`. Packaging do
 | Studio Release succeeds, with `HOMEBREW_TAP_TOKEN` configured | Immediately update the Cask in `dufu1991/homebrew-tap` |
 | Hourly or manual run in the tap repository | Verify the latest Studio Release and synchronize its Cask, without a personal token |
 | Push a library tag such as `vX.Y.Z` | Does not publish the Studio app |
+| Push or PR touching `Windows/` or shared example/fixture data | Windows x64 and ARM64 builds, tests, export checks and workbench launch |
+| Manual Windows release workflow | Publish the Windows installer and ZIP as `studio-windows-vX.Y.Z`, not marked as latest |
+| Manual Windows NuGet workflow | Publish `NornaKit.Core` and `NornaKit.Windows` to NuGet |
 
 **NornaKit is the primary library product; Studio is versioned independently.** Kit releases use `vX.Y.Z`, lead with library changes, and normally include a refreshed Studio companion build. Studio keeps its own app version and build number; separate `studio-vX.Y.Z` releases are reserved for app-specific updates. For a standalone app release, change `MARKETING_VERSION` and increment `CURRENT_PROJECT_VERSION` in the Studio version file. This also applies to the initial push containing that file. Ordinary commits do not create a new Release; published Studio versions are immutable. See [release setup and recovery](Docs/RELEASING.md).
 
 ## Repository layout
 
 ```text
-Sources/NornaKit/       Models, parsing, layouts, rendering, export, and examples
+Sources/NornaKit/       Models, parsing, layouts, rendering, and export
+Sources/NornaExamples/  Bilingual example catalog shared with Windows
 Sources/NornaStudio/    Native app, editor, canvas, export UI, and localization
-Tests/                 Swift tests and release automation tests
+Windows/                C# libraries, WinUI 3 workbench, tests, and packaging
+Tests/                 Swift tests, shared fixtures, and release automation tests
 Baselines/             Versioned reference sources, SVGs, and regression snapshots
 Configuration/         App metadata, entitlements, and Studio version
 Scripts/               Development tools and release packaging
 Branding/              Brand source assets and usage rules
 Docs/                  Usage, support, development, and release documentation
 website/               Static website, published assets, and generation tools
-.github/workflows/     CI and automatic Studio releases
+.github/workflows/     macOS and Windows CI, releases, and Homebrew sync
 ```
 
 `Package.swift` defines the package. `project.yml` defines the XcodeGen project; `NornaKit.xcodeproj` is committed for direct use. After changing the project definition or adding, removing, or moving source files, run `xcodegen generate`. Editing the Studio version file does not require regeneration.
