@@ -1,3 +1,9 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="website/dist/assets/brand/app-icon-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="website/dist/assets/brand/app-icon-light.png">
+  <img alt="NornaKit app icon" src="website/dist/assets/brand/app-icon-light.png" width="128" height="128">
+</picture>
+
 # NornaKit
 
 [English](README.md) · [简体中文](README.zh-CN.md)
