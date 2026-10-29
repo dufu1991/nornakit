@@ -84,7 +84,7 @@ The Cask installs only the companion app. It reads Studio's version and build fr
 
 [Publish Studio to Homebrew](../.github/workflows/homebrew.yml) accepts both Kit and standalone Studio releases. It reads the release-note manifest, downloads only the published DMG, validates the release tag and checksum, then generates the Cask with [homebrew.py](../Scripts/Release/homebrew.py). Older builds cannot replace newer builds, identical retries skip writes, and different content for the same app version/build is rejected.
 
-For immediate cross-repository synchronization, optionally configure `HOMEBREW_TAP_TOKEN` with Contents read/write permission for `dufu1991/homebrew-tap`. Without it, the tap's own **Sync Norna Studio** workflow checks the latest stable release hourly and can be dispatched manually, using its repository's own `GITHUB_TOKEN`.
+For immediate cross-repository synchronization, optionally configure `HOMEBREW_TAP_TOKEN` with Contents read/write permission for `dufu1991/homebrew-tap`. Without it, the tap's own **Sync Norna Studio** workflow checks the latest stable release every 6 hours and can be dispatched manually, using its repository's own `GITHUB_TOKEN`.
 
 The tap workflow accepts a Kit release with companion assets as well as legacy `studio-vX.Y.Z` releases. Keep its `Casks/norna-studio.rb`, README, and workflow consistent. Preserve existing local changes when updating a sibling tap checkout.
 

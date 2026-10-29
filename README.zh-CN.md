@@ -239,7 +239,7 @@ Apple Silicon 版 DMG 和 ZIP 位于 `build/release/`。打包命令不启动工
 | `main` 中的 `Configuration/Studio-Version.xcconfig` 发生变化 | 检查通过后打包，发布 `studio-vX.Y.Z` |
 | 在 `main` 手动运行工作流，并开启 `release` | 发布当前工作台版本，或恢复失败的发布草稿 |
 | 工作台 Release 成功，且已配置 `HOMEBREW_TAP_TOKEN` | 立即更新 `dufu1991/homebrew-tap` 中的 Cask |
-| tap 仓库每小时执行，或手动运行同步工作流 | 校验最新工作台 Release 并同步 Cask，无须个人令牌 |
+| tap 仓库每 6 小时执行，或手动运行同步工作流 | 校验最新工作台 Release 并同步 Cask，无须个人令牌 |
 | 推送渲染库的 `vX.Y.Z` 标签 | 不发布工作台应用 |
 | 推送或 PR 涉及 `Windows/` 或共用示例、夹具数据 | Windows x64 与 ARM64 构建、测试、导出校验与工作台启动 |
 | 手动运行 Windows 发布工作流 | 以 `studio-windows-vX.Y.Z` 发布安装包与 ZIP，不标记为最新版本 |
